@@ -1,0 +1,488 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T17:18:00Z",
+  "cell_review_ledger": [
+    {
+      "accepted": true,
+      "cell_id": "R10_STABILITY_NO_FIT__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R10_STABILITY_NO_FIT__F_EH",
+      "expected_state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R10_STABILITY_NO_FIT__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R10_STABILITY_NO_FIT__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R10_STABILITY_NO_FIT__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R10_STABILITY_NO_FIT__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R10_STABILITY_NO_FIT__F_QUADRATIC",
+      "expected_state": "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R1_DIMENSION__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R1_DIMENSION__F_EH",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R1_DIMENSION__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R1_DIMENSION__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R1_DIMENSION__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R1_DIMENSION__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R1_DIMENSION__F_QUADRATIC",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R2_METRIC_ONLY__F_CONNECTION_TORSION",
+      "expected_state": "VIOLATED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R2_METRIC_ONLY__F_EH",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R2_METRIC_ONLY__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R2_METRIC_ONLY__F_EXTRA_FIELD",
+      "expected_state": "VIOLATED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R2_METRIC_ONLY__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R2_METRIC_ONLY__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R2_METRIC_ONLY__F_QUADRATIC",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R3_LOCALITY__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R3_LOCALITY__F_EH",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R3_LOCALITY__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R3_LOCALITY__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R3_LOCALITY__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R3_LOCALITY__F_NONLOCAL",
+      "expected_state": "VIOLATED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R3_LOCALITY__F_QUADRATIC",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R4_DIFF_COVARIANCE__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R4_DIFF_COVARIANCE__F_EH",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R4_DIFF_COVARIANCE__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R4_DIFF_COVARIANCE__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R4_DIFF_COVARIANCE__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R4_DIFF_COVARIANCE__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R4_DIFF_COVARIANCE__F_QUADRATIC",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R5_CK_FIREWALL__F_CONNECTION_TORSION",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R5_CK_FIREWALL__F_EH",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R5_CK_FIREWALL__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R5_CK_FIREWALL__F_EXTRA_FIELD",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R5_CK_FIREWALL__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R5_CK_FIREWALL__F_NONLOCAL",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R5_CK_FIREWALL__F_QUADRATIC",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R6_LOCAL_VARIATION__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R6_LOCAL_VARIATION__F_EH",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R6_LOCAL_VARIATION__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R6_LOCAL_VARIATION__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R6_LOCAL_VARIATION__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R6_LOCAL_VARIATION__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R6_LOCAL_VARIATION__F_QUADRATIC",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_EH",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_QUADRATIC",
+      "expected_state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R8_NEWTON_POISSON__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R8_NEWTON_POISSON__F_EH",
+      "expected_state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R8_NEWTON_POISSON__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R8_NEWTON_POISSON__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R8_NEWTON_POISSON__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R8_NEWTON_POISSON__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R8_NEWTON_POISSON__F_QUADRATIC",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R9_MOMENTUM_CURRENT__F_CONNECTION_TORSION",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R9_MOMENTUM_CURRENT__F_EH",
+      "expected_state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R9_MOMENTUM_CURRENT__F_EQUIVALENCE_PROBE",
+      "expected_state": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R9_MOMENTUM_CURRENT__F_EXTRA_FIELD",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R9_MOMENTUM_CURRENT__F_FR",
+      "expected_state": "PARTIALLY_SATISFIED",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R9_MOMENTUM_CURRENT__F_NONLOCAL",
+      "expected_state": "NOT_TESTABLE_MISSING_DEFINITION",
+      "source_hashes_recomputed": true
+    },
+    {
+      "accepted": true,
+      "cell_id": "R9_MOMENTUM_CURRENT__F_QUADRATIC",
+      "expected_state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT",
+      "source_hashes_recomputed": true
+    }
+  ],
+  "consumed_result": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0",
+  "consumed_result_path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+  "consumed_result_sha256": "eee46245fd59f0ecc7b127030dca0dcbba61ab3dc4e45fa756bbfe9e1bb9c058",
+  "independent_findings": [
+    "All seventy cells reproduce the frozen ten-by-seven cross-product and use exactly one state from the closed eight-state vocabulary.",
+    "Einstein-Hilbert satisfies several baseline requirements but remains a known-physics comparator without native derivation.",
+    "Quadratic gravity remains a reference control; its accepted negative stability-domain result is applied to exactly one bounded cell and is not generalized.",
+    "R+alpha R^2 supplies only representative-level partial evidence and is never generalized to arbitrary f(R) or promoted as native.",
+    "The three verbal directions remain mostly untestable; their explicit metric-only or locality conflicts are recorded without inventing actions.",
+    "The equivalence probe receives ten not-applicable judgments because it is diagnostic machinery rather than a variational action.",
+    "Zero source-defined native action families are observed, but the formal Stage 5 eligibility verdict remains unmade and unauthorized."
+  ],
+  "independent_recomputation": {
+    "all_cell_source_hashes_recomputed": true,
+    "all_non_missing_judgments_have_path_hash_excerpt_and_domain": true,
+    "all_states_recomputed_independently": true,
+    "compatibility_cells_observed": 70,
+    "compatibility_cells_unique": 70,
+    "expected_family_count": 7,
+    "expected_requirement_count": 10,
+    "recomputed_state_counts": {
+      "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT": 1,
+      "NOT_APPLICABLE_NOT_AN_ACTION": 10,
+      "NOT_TESTABLE_MISSING_DEFINITION": 24,
+      "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT": 4,
+      "OUTSIDE_NATIVE_ROLE": 0,
+      "PARTIALLY_SATISFIED": 15,
+      "SATISFIED_BY_SOURCE_BOUND_EVIDENCE": 13,
+      "VIOLATED_BY_SOURCE_BOUND_EVIDENCE": 3
+    },
+    "unresolved_cell_count": 0
+  },
+  "nonclaim_boundary": [
+    "This review accepts the bounded compatibility survey, not a native action, principle, promotion, or empirical result.",
+    "No eligibility handoff decision is made; Stage 5 remains separately authorizable."
+  ],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "review_checks": {
+    "Einstein_Hilbert_not_promoted": true,
+    "accepted_negative_result_limited_to_exact_quadratic_domain": true,
+    "all_seventy_cells_independently_reviewed": true,
+    "equivalence_probe_not_treated_as_action": true,
+    "formal_satisfaction_not_treated_as_native_endorsement": true,
+    "general_f_R_not_inferred_from_representative": true,
+    "missing_definitions_not_treated_as_failures": true,
+    "missing_physics_not_invented": true,
+    "no_action_or_principle_selected": true,
+    "no_canonical_evidence_promoted": true,
+    "no_gravitational_calculation_executed": true,
+    "no_master_action_constructed_or_promoted": true,
+    "quadratic_gravity_not_promoted_or_reopened": true,
+    "result_bytes_hash_bound": true,
+    "source_hashes_recomputed": true,
+    "stage_5_not_authorized_or_opened": true,
+    "standard_GR_oracle_isolated": true,
+    "undefined_families_remain_undefined": true
+  },
+  "review_result": "ACCEPT_SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE_WITH_UNTESTABLE_FAMILIES",
+  "selected_next_target": "select_toe_gravitational_action_family_eligibility_handoff_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED",
+  "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY"
+}

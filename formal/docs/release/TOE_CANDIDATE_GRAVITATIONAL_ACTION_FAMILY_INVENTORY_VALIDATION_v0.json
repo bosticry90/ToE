@@ -1,0 +1,93 @@
+{
+  "artifact_id": "TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_VALIDATION_v0",
+  "captured_at_utc": "2026-07-31T14:31:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+  "attempt_sequence_number": 2,
+  "terminal_outcome": "ACTION_FAMILY_INVENTORY_COMPLETE_WITH_UNRESOLVED_MEANINGS",
+  "lifecycle_result": "PASSED",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+    "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCandidateGravitationalActionFamilyInventoryResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "artifact_hashes": {
+    "result_sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578",
+    "review_sha256": "511f66369a95cf7569adce004d6d0d5be64f4a892fc0c4329df1c220554c9a48",
+    "close_event_hash": "9ecc30e3426348565a26354e39b290a7f1f40da58702e0db9ada9d59b2c6aedc",
+    "close_event_sha256": "381e06e65c9ef629cce6109798c8c42746bafa825e12b198c3934a727f94cc8a"
+  },
+  "scientific_validation": {
+    "seven_family_rows_present_and_unique": true,
+    "family_ids_match_the_frozen_envelope": true,
+    "classification_counts_sum_to_seven": true,
+    "all_classifications_use_the_frozen_vocabulary": true,
+    "all_authorized_input_hashes_recomputed": true,
+    "all_supporting_source_hashes_recomputed": true,
+    "field_action_derivative_coefficient_symmetry_and_degree_content_present_for_every_row": true,
+    "limits_calculations_negative_results_and_missing_inputs_present_for_every_row": true,
+    "master_action_and_C_k_relationships_present_for_every_row": true,
+    "Einstein_Hilbert_remains_known_physics_baseline": true,
+    "quadratic_gravity_remains_REFERENCE_CONTROL_ONLY": true,
+    "equivalence_probe_remains_nonaction_control": true,
+    "outside_scope_is_not_treated_as_refutation": true,
+    "unresolved_meanings_and_historical_hash_drift_preserved": true,
+    "no_family_ranking_scoring_or_compatibility_judgment": true,
+    "no_gravitational_principle_or_action_selected": true,
+    "no_evidence_promoted": true,
+    "no_master_action_constructed_or_promoted": true,
+    "no_new_gravitational_calculation_executed": true,
+    "stage_3_not_authorized_or_opened": true
+  },
+  "focused_python": {
+    "status": "PASS",
+    "passed": 19,
+    "deselected": 2,
+    "elapsed_seconds": "8.33",
+    "deselected_assertions": [
+      "test_registry_records_preparation_before_later_installation",
+      "test_registry_projects_gravitational_survey_as_installed_unopened"
+    ],
+    "deselection_reason": "The assertions describe earlier proposal-only and installed-unopened checkpoints and are intentionally obsolete after Stage 1 and Stage 2 execution."
+  },
+  "focused_lean": {
+    "status": "PASS",
+    "modules": [
+      "ToeFormal.Derivation.ToeCandidateGravitationalActionFamilyInventoryResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "maximum_target_job_count": 6
+  },
+  "full_lean_aggregate": {
+    "status": "PASS",
+    "module_count": 1341,
+    "job_count": 9086
+  },
+  "deterministic_generation": {
+    "status": "PASS_PROJECTED_COMMITTED_FORM",
+    "working_tree_module_count": 1341,
+    "projected_committed_module_count": 1341,
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "temporary_working_tree_aggregate_removed": true
+  },
+  "governance_validation": {
+    "registry_extension_reconstruction": "PASS_PRECOMMIT",
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "reason": "The immutable CLOSE artifact has no introduction commit until the exact atomic CLOSE commit is created."
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS"
+  },
+  "status": "STAGE_2_ATOMIC_CLOSE_READY_FOR_COMMIT"
+}

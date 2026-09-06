@@ -1,0 +1,480 @@
+{
+  "accepted_conditional_physics": {
+    "Sigma": "3 alpha+beta",
+    "additional_spin2_residue": "NEGATIVE_ISOLATED_OR_PROJECTOR_RESOLVED",
+    "condition_selected_by_comparison": false,
+    "m0_squared": "-1/(2 Sigma)",
+    "m2_squared": "1/beta",
+    "scalar_residue": "POSITIVE_ISOLATED_OR_PROJECTOR_RESOLVED",
+    "stationary_00": "MASSLESS_PLUS_SCALAR_PLUS_ADDITIONAL_SPIN2",
+    "stationary_0i": "MASSLESS_PLUS_ADDITIONAL_SPIN2_SCALAR_ZERO",
+    "status": "FROZEN_ACCEPTED_COMPARISON_RESULT"
+  },
+  "authority": {
+    "authorized_execution_count": 1,
+    "consumed_execution_count": 1,
+    "consumed_packet_review_verdict": "ACCEPTED_AUTHORIZE_ONE_BOUNDED_CONDITIONAL_MODE_SELECTION_ENVELOPE_EXECUTION",
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "296344da12a0d51b14351b93dc8f0e0874ffc6565325d3eecdf2c3acf3b23483"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_PACKET_REVIEW_20260718_v0.json",
+        "sha256": "b767f872f2febf3026af9483032a8f3ec30a9b3ebe978c9c1bbd73bb41060348"
+      },
+      {
+        "relative_path": "formal/python/tools/post_quadratic_gravity_comparison_conditional_mode_selection_packet_review_v0.py",
+        "sha256": "b091a6601f2e7b7ea718fe2d5e9de322c0c14ce674e8e95d8584588b1b5130fb"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_quadratic_gravity_comparison_conditional_mode_selection_packet_review_v0.py",
+        "sha256": "ef6cc1f10f453e263ebca3f7fbfc7248445ce658e335434dca9c1ff88689b341"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostQuadraticGravityComparisonConditionalModeSelectionPacketReviewV0.lean",
+        "sha256": "49669a1823f39e712ed6d053511311a3a1022732461602c5f6cdbdab10b95d20"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_quadratic_gravity_comparison_conditional_mode_selection_envelope_v0.py",
+      "sha256": "c4f392ae54eefdb25277eb0513009380f7648f1308c85d7a2574b4c95f0f6888"
+    },
+    "human_execution": {
+      "relative_path": "formal/docs/lanes/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_ENVELOPE_20260718_v0.md",
+      "sha256": "a5b07ebad9594c5184a2708da87434c40601cdbee96a936b72e0e2e2db65ee4b"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_quadratic_gravity_comparison_conditional_mode_selection_envelope_v0.py",
+      "sha256": "75474945a6c4a8aec1fcb6fa08843b8c8a08f46029842533915545247c7dd154"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Authority-aware conditional classification only. No condition, branch, native principle, postulate, coupling, gravitational action, outside-family mechanism, dataset, empirical fit, matter sector, new metric variation, orbital transport, frame-dragging result, GR-pillar promotion, V2 cell, or master-action change is selected or authorized.",
+  "coincident_mass_status": {
+    "P2_P0s_orthogonal": true,
+    "cancellation": false,
+    "condition": "2 alpha+beta=0 with beta!=0",
+    "double_pole": false,
+    "ghost_repaired": false,
+    "mode_merger": false,
+    "pole_locations_coincide": true
+  },
+  "current_posture": {
+    "authoritative_V2_matrix": "0_OF_70",
+    "conditional_envelope_execution": "COMPLETED_ONCE",
+    "conditions_adopted": 0,
+    "frame_dragging": "NOT_RESUMED",
+    "gravitational_action": "NOT_SELECTED",
+    "native_branch_selectors": 0,
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "review_post_quadratic_gravity_comparison_conditional_mode_selection_envelope_v0_result",
+    "open_positions": "3_OF_3",
+    "result_status": "PENDING_INDEPENDENT_REVIEW",
+    "selector_adjudications": "10_OF_10"
+  },
+  "exact_empirical_current_classification": {
+    "dataset_imported": false,
+    "exact_beta_zero_from_finite_data_licensed": false,
+    "exact_theoretical_equality": "beta=0 within frozen family",
+    "finite_precision_observation": "parameter bound dependent on range source and uncertainty",
+    "metric_to_observable_transport_executed": false
+  },
+  "execution_controls": {
+    "control_count": 18,
+    "failure_count": 0,
+    "pass_count": 18,
+    "rows": [
+      {
+        "control_id": "EXEC_REVIEW_CUSTODY_EXACT",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_EXACT_AUTHORIZED_TARGET",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_SINGLE_AUTHORIZED_RUN_CONSUMED",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_TEN_CANONICAL_SELECTORS",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_SHARED_ADJUDICATION_PATH",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_ALL_SELECTORS_ADJUDICATED",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_ZERO_CONDITIONS_ADOPTED",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_R9_REMAINS_EVALUATION_ONLY",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_R10_REMAINS_THRESHOLD_FREE",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_S3_REMAINS_SUPPLIED",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_TACHYON_NOT_HEALTH",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_GHOST_AVOIDANCE_CONDITIONAL_ONLY",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_EXACT_EMPIRICAL_CURRENT_DISJOINT",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_COINCIDENT_MASS_NO_ESCAPE",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_THREE_POSITIONS_REMAIN_OPEN",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_EXACTLY_ONE_PRINCIPAL_OUTCOME",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_FIVE_SUBORDINATE_FINDINGS_NONADOPTIVE",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      },
+      {
+        "control_id": "EXEC_STOP_FOR_INDEPENDENT_RESULT_REVIEW",
+        "status": "PASSED",
+        "uses_shared_execution_path": true
+      }
+    ]
+  },
+  "position_map": {
+    "position_count": 3,
+    "rows": [
+      {
+        "authority_needed": "adopt supplied ghost-avoidance criterion or derive a native equivalent",
+        "position": "A_EXCLUDE_NEGATIVE_RESIDUE_SPIN2_ONLY",
+        "selected": false,
+        "status": "OPEN_NOT_SELECTED"
+      },
+      {
+        "authority_needed": "native justification for minimal gravitational spectrum",
+        "position": "B_REQUIRE_MINIMAL_MODE_CONTENT",
+        "selected": false,
+        "status": "OPEN_NOT_SELECTED"
+      },
+      {
+        "authority_needed": "fresh scientific target and mechanism-specific derivation",
+        "position": "C_CHANGE_THEORY_CLASS",
+        "selected": false,
+        "status": "OPEN_NOT_SELECTED_FRESH_TARGET_REQUIRED"
+      }
+    ],
+    "selected_count": 0
+  },
+  "principal_classification": {
+    "meaning": "All ten authority records are classified, and no current project-native condition selects a branch.",
+    "native_selector_count": 0,
+    "outcome": "CONDITIONAL_MODE_SELECTION_ENVELOPE_COMPLETE",
+    "outcome_count": 1
+  },
+  "schema_id": "POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_ENVELOPE_20260718_v0",
+  "scope": {
+    "GR_pillar_promoted": false,
+    "additional_execution_authorized": false,
+    "alpha_or_beta_selected": false,
+    "authoritative_V2_matrix_populated": false,
+    "authorized_execution_consumed": 1,
+    "branch_selected": false,
+    "condition_adopted": false,
+    "dataset_or_empirical_fit_imported": false,
+    "envelope_execution_completed": true,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "independent_result_review_required": true,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "new_metric_variation_executed": false,
+    "new_postulate_proposed_or_authorized": false,
+    "orbital_transport_executed": false,
+    "outside_family_mechanism_opened": false,
+    "principal_classification_issued": true,
+    "selector_adjudication_completed": true
+  },
+  "scope_firewall": {
+    "Gauss_Bonnet": "LOCAL_BULK_ONLY",
+    "background": "MINKOWSKI_LINEARIZED",
+    "dimension": 4,
+    "excluded_automatic_transports": [
+      "nonlocal gravity",
+      "degenerate theories",
+      "torsion",
+      "independent connection",
+      "additional gauge symmetry",
+      "extra-field constrained mixing",
+      "nonlinear or arbitrary-background spectra"
+    ],
+    "local_metric_quadratic_only": true,
+    "outside_family_transport_allowed": false,
+    "source": "CONSERVED_EXTERNAL_SOURCE"
+  },
+  "selected_next_target": "review_post_quadratic_gravity_comparison_conditional_mode_selection_envelope_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_CONDITIONAL_ENVELOPE_RESULT_REVIEW_ONLY",
+  "selector_adjudication": {
+    "adjudicated_count": 10,
+    "adopted_count": 0,
+    "rows": [
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "R9_MOMENTUM_CURRENT",
+          "authority_class": "PROJECT_BOUND_NATIVE_PRINCIPLE",
+          "authority_effect": "PROJECT_AUTHORITY_SUPPORTS_EVALUATION_ONLY"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "NONE_BY_ITSELF",
+        "consequence_kind": "NO_PARAMETER_SELECTION_EVALUATION_ONLY",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "UNRESTRICTED_WITHIN_FROZEN_FAMILY",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "represent conserved stationary momentum-current response",
+        "selector_id": "SEL_NATIVE_R9_CURRENT_REPRESENTABILITY",
+        "unresolved_scientific_obligation": [
+          "derive or compare the response under a selected action",
+          "do not strengthen representability into exact Einstein equality"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "R10_STABILITY_NO_FIT",
+          "authority_class": "PROJECT_BOUND_NATIVE_PRINCIPLE",
+          "authority_effect": "PROJECT_AUTHORITY_SUPPORTS_EVALUATION_ONLY"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "NONE_WITHOUT_AN_ACCEPTANCE_THRESHOLD",
+        "consequence_kind": "NO_PARAMETER_SELECTION_THRESHOLD_ABSENT",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "UNRESTRICTED_WITHIN_FROZEN_FAMILY",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "evaluate pole residue stability and no-fit recovery separately",
+        "selector_id": "SEL_NATIVE_R10_STABILITY_EVALUATION",
+        "unresolved_scientific_obligation": [
+          "state which stability notion supplies each threshold",
+          "do not conflate evaluation authority with native branch selection"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "STANDARD_LINEARIZED_STABILITY_CRITERION",
+          "authority_class": "SUPPLIED_STANDARD_PHYSICS_CRITERION",
+          "authority_effect": "SUPPLIED_CONDITIONAL_CRITERION_NONNATIVE"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "Sigma<0 and beta>0 when both extra poles are present",
+        "consequence_kind": "EXACT_CONDITIONAL_RESTRICTION_NOT_ADOPTED",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "MASSLESS_SPIN2_PLUS_SCALAR_PLUS_NEGATIVE_RESIDUE_SPIN2",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "all present additional poles have positive mass squared",
+        "selector_id": "SEL_NO_TACHYONIC_POLES",
+        "unresolved_scientific_obligation": [
+          "negative spin-2 residue remains",
+          "background and nonlinear stability remain unresolved"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "STANDARD_GHOST_AVOIDANCE_CRITERION",
+          "authority_class": "SUPPLIED_STANDARD_PHYSICS_CRITERION",
+          "authority_effect": "SUPPLIED_CONDITIONAL_CRITERION_NONNATIVE"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "beta=0",
+        "consequence_kind": "EXACT_CONDITIONAL_POLE_REMOVAL_NOT_ADOPTED",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "MASSLESS_SPIN2_PLUS_POSSIBLE_SCALAR",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "negative-residue additional spin-2 pole is absent",
+        "selector_id": "SEL_NO_NEGATIVE_RESIDUE_SPIN2",
+        "unresolved_scientific_obligation": [
+          "decide whether the scalar is permitted",
+          "test scalar coupling background stability range screening and data"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "COMPONENT_OF_S3_NO_EXTRA_GRAVITATIONAL_MODES",
+          "authority_class": "SUPPLIED_STANDARD_PHYSICS_CRITERION",
+          "authority_effect": "SUPPLIED_CONDITIONAL_CRITERION_NONNATIVE"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "Sigma=0",
+        "consequence_kind": "EXACT_CONDITIONAL_POLE_REMOVAL_NOT_ADOPTED",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "MASSLESS_SPIN2_PLUS_POSSIBLE_NEGATIVE_RESIDUE_SPIN2",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "additional scalar pole is absent",
+        "selector_id": "SEL_NO_EXTRA_SCALAR",
+        "unresolved_scientific_obligation": [
+          "exclude or otherwise address the beta-dependent spin-2 pole",
+          "do not count S3 as native selection"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "S3_NO_EXTRA_GRAVITATIONAL_MODES",
+          "authority_class": "SUPPLIED_STANDARD_PHYSICS_CRITERION",
+          "authority_effect": "SUPPLIED_CONDITIONAL_CRITERION_NONNATIVE"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "beta=0 and Sigma=0 implies alpha=beta=0",
+        "consequence_kind": "EXACT_CONDITIONAL_FAMILY_REDUCTION_NOT_ADOPTED",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "MASSLESS_SPIN2_ONLY",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "only the ordinary massless spin-2 mode propagates",
+        "selector_id": "SEL_MINIMAL_SPECTRUM",
+        "unresolved_scientific_obligation": [
+          "justify the minimal-mode antecedent natively before selection",
+          "retain comparison-only Einstein-Hilbert status"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "EXACT_STANDARD_GR_CURRENT_RESPONSE_COMPARATOR",
+          "authority_class": "SUPPLIED_STANDARD_PHYSICS_CRITERION",
+          "authority_effect": "SUPPLIED_CONDITIONAL_CRITERION_NONNATIVE"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "beta=0",
+        "consequence_kind": "EXACT_COMPARATOR_CONSEQUENCE_NOT_ADOPTED",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "MASSLESS_SPIN2_PLUS_POSSIBLE_SCALAR",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "exact Einstein stationary 0i response at all finite ranges for generic currents",
+        "selector_id": "SEL_EXACT_EINSTEIN_0I",
+        "unresolved_scientific_obligation": [
+          "R9 representability does not itself impose exact Einstein equality",
+          "the scalar remains unconstrained by this stationary current channel"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "FUTURE_DATASET_RANGE_AND_ERROR_MODEL_REQUIRED",
+          "authority_class": "EMPIRICAL_CONSTRAINT",
+          "authority_effect": "FUTURE_EMPIRICAL_BOUND_REQUIRES_DATA"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "bound or suppress m2 range; beta=0 not logically inferred",
+        "consequence_kind": "EMPIRICAL_BOUND_NOT_EXACT_IDENTITY",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "ADDITIONAL_SPIN2_MAY_REMAIN_HEAVY_OR_FINITE_RANGE",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "stationary current response agrees with data within declared tolerance and range",
+        "selector_id": "SEL_FINITE_PRECISION_0I",
+        "unresolved_scientific_obligation": [
+          "bind a dataset range source model and uncertainties",
+          "derive metric-to-observable transport before fitting"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "STANDARD_GR_LONG_RANGE_RECOVERY_COMPARATOR",
+          "authority_class": "SUPPLIED_STANDARD_PHYSICS_CRITERION",
+          "authority_effect": "SUPPLIED_CONDITIONAL_CRITERION_NONNATIVE"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "broad finite positive-mass or decoupling regions remain",
+        "consequence_kind": "ASYMPTOTIC_OR_DECOUPLING_COMPATIBILITY",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "EXTRA_FINITE_RANGE_MODES_MAY_REMAIN",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "Einstein response is recovered only in a declared long-range limit",
+        "selector_id": "SEL_LONG_RANGE_EINSTEIN",
+        "unresolved_scientific_obligation": [
+          "state the tested range and tolerance",
+          "do not infer unique action or exact pole absence"
+        ]
+      },
+      {
+        "adjudication_status": "AUTHORITY_CLASSIFIED_CONSEQUENCE_RECORDED_NOT_ADOPTED",
+        "adoption_status": "NOT_ADOPTED",
+        "canonical_provenance": {
+          "authority_binding": "HYPOTHETICAL_ONLY_NOT_AUTHORIZED_OR_ADOPTED",
+          "authority_class": "PROPOSED_NEW_POSTULATE",
+          "authority_effect": "HYPOTHETICAL_REQUIRES_FRESH_AUTHORITY"
+        },
+        "condition_adopted": false,
+        "conditional_parameter_consequence": "would imply alpha=beta=0 within the frozen family",
+        "consequence_kind": "HYPOTHETICAL_CONSEQUENCE_NO_POSTULATE_CREATED",
+        "native_branch_selection_authority": false,
+        "remaining_mode_content": "WOULD_BE_MASSLESS_SPIN2_ONLY",
+        "scope": "FROZEN_QUADRATIC_COMPARISON_SCOPE",
+        "selector_condition": "newly postulate that only the ordinary massless spin-2 mode may propagate",
+        "selector_id": "SEL_HYPOTHETICAL_MINIMAL_MODE_POSTULATE",
+        "unresolved_scientific_obligation": [
+          "obtain fresh explicit authority before proposal or adoption",
+          "supply a physical rationale and discriminator"
+        ]
+      }
+    ],
+    "selector_count": 10,
+    "shared_path": "resolve provenance -> reproduce consequence -> classify meaning -> record spectrum and obligation -> prohibit adoption"
+  },
+  "subordinate_findings": [
+    "NO_CURRENT_NATIVE_CONDITION_SELECTS_A_BRANCH",
+    "STANDARD_CONSISTENCY_CRITERIA_FAVOR_SCALAR_ONLY_OR_EH_BRANCHES",
+    "MINIMAL_MODE_CONDITION_WOULD_COLLAPSE_FAMILY_TO_EH",
+    "EMPIRICAL_CURRENT_CHANNEL_BOUNDS_BUT_DOES_NOT_EXACTLY_SELECT_BETA",
+    "OUTSIDE_FAMILY_MECHANISM_REQUIRES_FRESH_TARGET"
+  ],
+  "target": "execute_post_quadratic_gravity_comparison_conditional_mode_selection_envelope_v0",
+  "verdict": "CONDITIONAL_MODE_SELECTION_ENVELOPE_COMPLETE"
+}

@@ -1,0 +1,145 @@
+{
+  "schema_id": "VERIFIED_CALCULATOR_V1_IMPLEMENTATION_STATUS_v1",
+  "as_of": "2026-09-05",
+  "preservation_checkpoint": {
+    "commit": "404b36e0e747",
+    "artifact": "formal/docs/release/VERIFIED_CALCULATOR_REPAIR_CORPUS_PRESERVATION_20260905_v1.json",
+    "scope": "C03/RV repair modules and their pre-existing 228-test regression corpus"
+  },
+  "implemented_surfaces": [
+    "versioned computation, authority, challenge, receipt, and frozen-evidence contracts",
+    "bounded strict JSON parsing and content-addressed canonical serialization",
+    "canonical rational-function and profile-wide algebraic-field exact IR",
+    "typed hash-bound source resolution",
+    "semantic, index-space, representation, domain, dimension-quotient, and unit-convention checks",
+    "declarative exact DAG recomputation with per-output evidence",
+    "independent Julia/Nemo exact recomputation",
+    "Lean runtime-certificate parser, structural checks, non-promotion theorems, and independent certificate-file hash binding",
+    "graph-independent challenge specifications and frozen-baseline challenge packets",
+    "per-output mandatory and optional challenge coverage",
+    "exact-rational and directed-rounding decimal interval certificate checking in Python and Julia",
+    "declarative ODE/RGE crosschecking with SciPy and OrdinaryDiffEq",
+    "local-linear covariance and deterministic Sobol QMC uncertainty routes",
+    "unsafe candidate-only plugin execution with bounded live output capture",
+    "Python API, CLI, evidence freeze/replay, and authority attachment",
+    "generated transitive calculator dependency closure",
+    "Windows/Linux CI matrix definition for the calculator closure",
+    "synthetic non-physics extension profile test"
+  ],
+  "local_validation": {
+    "platform": "windows",
+    "python_test_result": "260 passed",
+    "new_calculator_tests": 32,
+    "preserved_repair_tests": 228,
+    "lean_target": "vpc_certificate_checker",
+    "lean_build": "PASSED",
+    "lean_version": "4.27.0-rc1",
+    "julia_version": "1.12.6",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204",
+    "dependency_closure_counts": {
+      "python_files": 54,
+      "julia_files": 5,
+      "lean_files": 4,
+      "fixed_contract_artifacts": 9
+    },
+    "unresolved_dynamic_imports": [],
+    "unresolved_runtime_requirements": [],
+    "manually_excluded_dependencies": []
+  },
+  "c03_rv_profile": {
+    "authoritative_roots": 16,
+    "source_nodes_censused": 31,
+    "derived_nodes_lowered_and_recomputed": 160,
+    "trusted_physics_operations_implemented": 19,
+    "mandatory_challenge_specifications": 10,
+    "mandatory_challenge_instances_passed": 373,
+    "derived_corruption_unexpected_survivors": [],
+    "accepted_falsifiers_unclassified": [],
+    "claim_authority_bindings": 16,
+    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED",
+    "exact_milestone_artifact": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_COMPUTATIONAL_MILESTONE_20260905_v1.json",
+    "frozen_bundle_artifact": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+    "frozen_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "independent_non_author_review": "COMPLETED_SUPPORTED_WITH_REQUIRED_AMENDMENTS",
+    "non_author_review_result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+    "non_author_review_repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v5.json"
+  },
+  "post_milestone_qualification": {
+    "linux_egress_denied_test": {
+      "status": "V1_INCONCLUSIVE__V2_INCONCLUSIVE__V3_INCONCLUSIVE__V4_INCONCLUSIVE__V5_FAIL",
+      "contract": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v5.json",
+      "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v5.md",
+      "workflow": ".github/workflows/verified-calculator-linux-egress-denied.yml",
+      "required_isolation": "FRESH_LINUX_NETWORK_NAMESPACE_SOCKET_AND_PROC_ONLY_LOOPBACK_NO_USABLE_IPV4_OR_IPV6_FORWARDING_DEFAULT_ROUTE_TWO_ACTIVE_PROBES_BLOCKED_BEFORE_AND_AFTER",
+      "prior_attempts": [
+        {
+          "version": 1,
+          "status": "INCONCLUSIVE",
+          "workflow_run_id": 34007693980,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v1.json",
+          "reason": "Inherited /sys/class/net was not a namespace-aware interface census; execution failed closed before trusted qualification."
+        },
+        {
+          "version": 2,
+          "status": "INCONCLUSIVE",
+          "workflow_run_id": 34008583231,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v2.json",
+          "reason": "The raw IPv6 prefix gate did not distinguish a non-forwarding unreachable default sentinel from a usable forwarding route; execution failed closed before trusted qualification."
+        },
+        {
+          "version": 3,
+          "status": "INCONCLUSIVE",
+          "workflow_run_id": 34009722386,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v3.json",
+          "reason": "Isolation passed, but a required frozen source profile was absent from the clean Git checkout; qualification stopped before graph execution."
+        },
+        {
+          "version": 4,
+          "status": "INCONCLUSIVE",
+          "workflow_run_id": 34010749703,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v4.json",
+          "reason": "The 25-file source-custody and isolation gates passed, but three required authority attachment records were absent from the clean Git checkout; no complete result or bundle was emitted."
+        },
+        {
+          "version": 5,
+          "status": "FAIL",
+          "workflow_run_id": 34012192493,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v5.json",
+          "reason": "The clean-commit frozen dependency-closure gate found that three Lean environment files had raw line-ending-sensitive frozen hashes different from their tested Git blobs. The first mismatch failed closed before network isolation or trusted qualification."
+        }
+      ],
+      "successful_result_artifact": null
+    },
+    "non_author_review": {
+      "status": "COMPLETED_SUPPORTED_WITH_REQUIRED_AMENDMENTS",
+      "request": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_COMPUTATION_NON_AUTHOR_REVIEW_REQUEST_20260905_v1.md",
+      "checklist": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_CHECKLIST_20260905_v1.md",
+      "evidence_matrix": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_EVIDENCE_MATRIX_20260905_v1.md",
+      "result_artifact": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+      "accepted_result_artifact": null,
+      "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v5.json",
+      "material_defects": [
+        "D-01_LEAN_CERTIFICATE_IDENTITY_NOT_INDEPENDENTLY_BOUND",
+        "D-02_COMPLETE_VALUE_TYPE_METADATA_NOT_ENFORCED"
+      ]
+    }
+  },
+  "milestones": {
+    "C03_RV_COMPUTATION_VERIFIED_EXACT_PRE_RELEASE": "EARNED",
+    "interval_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
+    "ode_rge_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
+    "uncertainty_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
+    "unsafe_plugin_boundary_frozen_acceptance": "NOT_YET_FROZEN",
+    "synthetic_profile_frozen_acceptance": "NOT_YET_FROZEN",
+    "product_v1": "NOT_RELEASED"
+  },
+  "remaining_release_work": [
+    "Implement the two material amendments required by the completed non-author review in a new exact-profile lineage, then regenerate and independently review the affected evidence; calculator-profile scientific requalification remains unearned.",
+    "Repair raw dependency-hash portability in a new versioned exact evidence lineage, regenerate from clean canonical Git bytes, independently review the affected closure and receipts, and only then repeat Linux egress-denied qualification; frozen v1 remains preserved and v5 remains FAIL.",
+    "Freeze interval, ODE/RGE, uncertainty, unsafe-plugin-boundary, and synthetic-profile subsystem acceptance records.",
+    "Assemble the all-or-nothing product release only after every remaining gate passes."
+  ],
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

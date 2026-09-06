@@ -1,0 +1,113 @@
+{
+  "artifact_id": "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_STAGE_2_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_STAGE_2_OPEN",
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+      "role": "accepted 97-source and 33-entry mathematical inventory",
+      "sha256": "9dbcc3402df99065d484cc83518c2d55916f3eacfbc98098bf64663028bcf0b4"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0.json",
+      "role": "independent Stage 1 result review and nonclaim boundary",
+      "sha256": "8974b4908e4cf73f48117432dfa7a380d39e7eb07afabbb0d56367cbadf51787"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_VALIDATION_v0.json",
+      "role": "Stage 1 scoped validation and disclosed legacy debt",
+      "sha256": "42fa104e0a5e9e74dc1fa8ec4128946f8a29b8e919f21cb879601aad285385a1"
+    },
+    {
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_CLOSE_v0.json",
+      "role": "immutable passed Stage 1 CLOSE event",
+      "sha256": "1470e70bc692aa90414efeaeab1a76e7e0eac05555d992dabfaf4121a76957d2"
+    }
+  ],
+  "authorized_inventory_boundary": {
+    "candidate_population_overflow_count": 0,
+    "conflicting_formulation_entry_count": 4,
+    "conflicting_formulation_entry_ids": [
+      "CCFT-MATH-021",
+      "CCFT-MATH-022",
+      "CCFT-MATH-024",
+      "CCFT-MATH-027"
+    ],
+    "mathematical_entry_count": 33,
+    "repository_claim_exhaustion_established": false,
+    "selected_source_count": 97,
+    "undefined_or_missing_dependency_entry_count": 5
+  },
+  "authorized_stage": {
+    "canonical_scope_hash": "f2b412494409a17fa3527481c43a993a99f5e56b863b60c427a2746535c37902",
+    "canonical_target": "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0",
+    "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+    "stage_number": 2
+  },
+  "captured_at_utc": "2026-07-31T22:52:00Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 2 scope",
+      "sha256": "12824e836f1f687317649b02d204dde17f01a074cb7818f46353e4fbd97469be"
+    }
+  ],
+  "permitted_relationship_classes": [
+    "EXACT_NOTATION_EQUIVALENCE",
+    "EQUIVALENT_AFTER_CONVENTION_MAPPING",
+    "RESCALED_OR_NONDIMENSIONALIZED_FORM",
+    "LIMIT_OR_APPROXIMATION_OF",
+    "REVISED_DESCENDANT",
+    "SUPERSEDED_FORMULATION",
+    "DOMAIN_SPECIFIC_ALTERNATIVE",
+    "PARALLEL_INDEPENDENT_FORMULATION",
+    "MATHEMATICALLY_INCOMPATIBLE",
+    "UNRESOLVED_RELATIONSHIP"
+  ],
+  "permitted_work": [
+    "reverify every consumed inventory entry source path hash location authority custody and documentary lineage",
+    "reconstruct primary revision summary review supersession conflict parallel-branch and unresolved edges among the 33 mathematical entries",
+    "compare variable definitions units dimensions signs normalizations domains scales initial data boundary assumptions dependent equations approximation levels and numerical implementations",
+    "test whether differing equations are notation changes convention mappings rescalings limits revisions domain-specific alternatives or genuine incompatibilities",
+    "record symbol-meaning changes and semantic-equivalence candidates without inferring equivalence from shared symbols or wording",
+    "preserve every unresolved relationship and the repository-wide unreviewed-overflow limitation",
+    "produce one independently reviewed atomic Stage 2 CLOSE result"
+  ],
+  "prohibited_work": [
+    "choose a preferred CCFT formulation or minimal core",
+    "repair incomplete equations or invent missing chi rotor coupling parameter unit or dependency definitions",
+    "merge formulations without source-bound derivation or convention evidence",
+    "assign operational or physical meaning to mathematical variables",
+    "construct or select a representation field action evolution law seam observable or discriminator",
+    "adopt or validate CCFT or claim that any inventoried equation describes nature",
+    "promote historical or local-only evidence into canonical evidence",
+    "claim repository-wide mathematical or scientific exhaustion",
+    "open Stage 3 automatically"
+  ],
+  "required_relationship_record_fields": [
+    "relationship_id",
+    "source_entry_id_path_hash_and_location",
+    "target_entry_id_path_hash_and_location",
+    "documentary_lineage",
+    "relationship_class",
+    "direction_of_revision_or_dependence",
+    "variable_definition_comparison",
+    "units_dimensions_sign_and_normalization_comparison",
+    "domain_scale_initial_and_boundary_assumption_comparison",
+    "dependent_equations_and_approximation_level",
+    "numerical_implementation_relationship",
+    "supporting_internal_reference_or_metadata",
+    "authority_and_custody_status",
+    "confidence",
+    "unresolved_alternatives",
+    "supersession_status",
+    "stage_3_eligibility"
+  ],
+  "schema_id": "toe.ccft_mathematical_lineage_and_conflict_reconciliation.stage_2_open_authority.v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_2_OPEN_ONLY",
+  "terminal_outcomes": [
+    "CCFT_MATHEMATICAL_LINEAGES_RECONCILED",
+    "CCFT_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS",
+    "CCFT_FORMULATIONS_CONFLICT",
+    "CCFT_LINEAGE_PROVENANCE_INSUFFICIENT"
+  ]
+}

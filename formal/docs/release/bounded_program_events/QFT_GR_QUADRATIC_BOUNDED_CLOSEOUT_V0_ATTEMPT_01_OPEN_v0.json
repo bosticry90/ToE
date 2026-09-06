@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 1,
+  "event_hash": "40acd16a141189d7542fd78cd5cceb9fb0a5e2fd6250f699ae393394bbd469c0",
+  "event_sequence_number": 1,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "8faa0b0fa049467750c3d1d90f4113fde4981256",
+  "previous_event_hash": null,
+  "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "registry_snapshot_hash": "1c12d37c152a32a3d274637206afe4ffd5362400751d87a56f25a8f32dfe1084",
+  "scope_hash": "a60e614e758e0d43b0a32ad4bcc58e3fb0510cf19d4a24b20c7cf32fc0fadcc8",
+  "semantic_stage_id": "STRICT_HARMONIC_GAUGE_JET_CONTRACT",
+  "target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0"
+}

@@ -1,0 +1,22 @@
+{
+  "review_id": "TOE_POST_CCFT_CORE_RECOVERY_DEVELOPMENT_ROUTE_SELECTION_AUTHORITY_REVIEW_v0",
+  "reviewed_at_utc": "2026-08-01T02:12:00Z",
+  "authority_path": "formal/docs/release/TOE_POST_CCFT_CORE_RECOVERY_DEVELOPMENT_ROUTE_SELECTION_AUTHORITY_v0.json",
+  "authority_sha256": "ff96066baed89698ca510543d579a627dc7638d24045ee2de294dc879b7656fd",
+  "review_result": "PASS",
+  "checks": {
+    "parent_is_terminal_ccft_core_closeout": true,
+    "exactly_three_routes_are_frozen": true,
+    "targeted_recovery_is_one_pass_and_exact_scope_only": true,
+    "automatic_second_archive_search_is_prohibited": true,
+    "theory_construction_requires_explicit_provenance_classes": true,
+    "cp_nlse_default_is_rebuttable_not_adopted": true,
+    "post_recovery_construction_handoff_may_be_bound_but_not_authorized": true,
+    "archive_traversal_and_model_construction_are_prohibited": true,
+    "no_program_is_prepared_installed_or_opened": true,
+    "prior_ccft_block_and_repository_nonexhaustion_are_preserved": true
+  },
+  "failed_checks": [],
+  "accepted": true,
+  "strict_conclusion": "POST_CCFT_CORE_RECOVERY_ROUTE_SELECTION_AUTHORIZED_AS_ONE_NONEXECUTING_DECISION_NO_ARCHIVE_SEARCH_MODEL_POSTULATE_PROGRAM_PREPARATION_INSTALLATION_OPEN_OR_AUTOMATIC_SUCCESSOR"
+}

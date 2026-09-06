@@ -1,0 +1,19 @@
+{
+  "schema_id": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260723_v0",
+  "captured_at_utc": "2026-07-23T02:48:20Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+    "PRESERVE_REASSESSMENT_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+  "target": "prepare_repository_qft_route_evidence_hash_identity_domain_adjudication_packet_v0",
+  "selection_basis": "The accepted baseline contains 218 fragmented missing-artifact outcomes but one concentrated 67-outcome QFT route-evidence hash root. Identity-domain adjudication offers greater bounded-cycle leverage than broad fixture scaling and must precede any hash refresh.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "c4f1be6e3092366655f3c88ef54a31d44ce9bce3b6c6abfccc2fc8e12bd85bf2",
+    "commit": "9aae6deb5778c3618b21647941d38dac9f06ac7c"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,40 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "adapted_norm_estimate_execution_authorized": false,
+    "auxiliary_harmonic_formulation_execution_authorized": false,
+    "physical_principal_block_execution_authorized": true,
+    "preserved_descendant_adoption_authorized": false,
+    "source_extension_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "bounded_replay_record_is_bound": true,
+    "coefficient_mapping_tracks_spin2_beta": true,
+    "coefficient_strata_are_separated": true,
+    "current_no_go_source_is_primary": true,
+    "older_results_are_bounded_comparators": true,
+    "packet_target_matches_authority": true,
+    "phase_b_c_and_sources_are_not_yet_authorized": true,
+    "preserved_candidate_is_byte_bound_and_not_adopted": true,
+    "prohibitions_preserve_unregularized_problem": true,
+    "regularized_formulation_is_excluded_comparator": true,
+    "vacuum_phase_a_is_frozen": true
+  },
+  "failed_checks": [],
+  "review_target": "review_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0_result",
+  "reviewed_packet": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_20260728_v0.json",
+    "sha256": "9eb7d675c45dd3709c0f19d8263155c1d07ee5eafa5909087e0b4f98d88c33dc"
+  },
+  "reviewer_independence": {
+    "imports_packet_generator": false,
+    "rechecks_domains_and_coefficient_mapping": true,
+    "rechecks_source_roles_and_claim_boundaries": true,
+    "recomputes_preserved_blob_hash": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "derive_qft_gr_quadratic_physical_spin2_principal_block_v0",
+  "verdict": "ACCEPT_FROZEN_VACUUM_THEORY_AUTHORIZE_PHASE_A_ONLY"
+}

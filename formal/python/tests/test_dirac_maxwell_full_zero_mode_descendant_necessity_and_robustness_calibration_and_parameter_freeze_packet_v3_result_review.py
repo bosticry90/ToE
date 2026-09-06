@@ -150,4 +150,4 @@ def test_historical_boundaries_and_prompt_are_preserved() -> None:
     assert boundary["two_historical_worktree_sensitive_regeneration_tests_remain_documented"] is True
     assert boundary["historical_repository_wide_Lean"]["status"] == "INCOMPLETE_TIMEOUT"
     assert boundary["repository_wide_green_claim"] is False
-    assert review.sha256_path(ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

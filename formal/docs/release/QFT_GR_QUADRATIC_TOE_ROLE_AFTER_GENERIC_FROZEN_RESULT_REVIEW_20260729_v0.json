@@ -1,0 +1,31 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "further_quadratic_science_authorized": false,
+    "native_program_authorization_target_selected": true,
+    "native_program_installed": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "historical_comparison_role_reproduced": true,
+    "mathematical_result_is_independent": true,
+    "native_program_requires_separate_authority": true,
+    "no_further_quadratic_work": true,
+    "no_native_or_effective_adoption": true,
+    "stages_4_and_5_unattempted": true,
+    "three_attempts_consumed_without_repair": true,
+    "toe_role_is_reference_control_only": true,
+    "unresolved_not_recast_as_refutation": true
+  },
+  "control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+  "failed_checks": [],
+  "quadratic_program_terminal": true,
+  "reviewed_result": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-TOE-ROLE-AFTER-GENERIC-FROZEN-RESULT-v0.json",
+    "sha256": "e9ac6cb7bd2b367d1897f28db9e0623d9a5663a109603925982455350dc1bce6"
+  },
+  "schema_id": "QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0",
+  "selected_next_target": "authorize_toe_native_surrogate_v0_bounded_program",
+  "toe_role": "REFERENCE_CONTROL_ONLY",
+  "verdict": "REFERENCE_CONTROL_ONLY_ACCEPTED_WITH_UNRESOLVED_BOUNDED_MATHEMATICAL_RESULT_QUADRATIC_PROGRAM_CLOSED_NATIVE_PROGRAM_REQUIRES_SEPARATE_AUTHORITY"
+}

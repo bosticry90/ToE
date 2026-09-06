@@ -1,0 +1,325 @@
+{
+  "adversarial_no_shortcut_probes": {
+    "failure_count": 0,
+    "pass_count": 10,
+    "probe_count": 10,
+    "rows": [
+      {
+        "attempted_shortcut": "advance a known supplement URL directly from IDENTIFIED to COMPLETE",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "IDENTIFIED_URL_TO_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "advance IDENTIFIED to ACQUIRED without all twelve custody fields",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "ACQUIRED_FILE_WITHOUT_CUSTODY_FIELDS",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "advance an acquired file directly to VERIFIED because its filename says supplement",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "ACQUIRED_FILE_TO_VERIFIED",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "advance parsed content to VERIFIED without matching an exact inventory item",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "INGESTED_CONTENT_WITHOUT_EXACT_MATCH",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "advance a verified partial component to COMPLETE",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "VERIFIED_PARTIAL_ITEM_TO_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "infer missing numerical values or priors from supporting dissertation prose",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "DISSERTATION_PROSE_SUBSTITUTION",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "bypass publisher access controls to obtain bytes",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "ACCESS_CONTROL_CIRCUMVENTION",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "contact an author or custodian during the authorized non-contact run",
+        "expected": "REJECT_AND_STOP_WITH_CONTACT_REQUIRED",
+        "observed": "REJECT_AND_STOP_WITH_CONTACT_REQUIRED",
+        "probe_id": "AUTHOR_CONTACT_DURING_ACQUISITION",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "run a synthetic sensitivity forecast inside evidence acquisition",
+        "expected": "REJECT",
+        "observed": "REJECT",
+        "probe_id": "SYNTHETIC_FORECAST_BYPASS",
+        "status": "PASS"
+      },
+      {
+        "attempted_shortcut": "execute a scalar likelihood immediately after one file appears complete",
+        "expected": "REJECT_AND_STOP_FOR_RESULT_REVIEW",
+        "observed": "REJECT_AND_STOP_FOR_RESULT_REVIEW",
+        "probe_id": "LIKELIHOOD_AFTER_COMPLETE_FILE",
+        "status": "PASS"
+      }
+    ]
+  },
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_PRIMARY_EVIDENCE_ACQUISITION_CONTRACT_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifact_count": 5,
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_PACKET_20260718_v0.md",
+        "sha256": "345a407a317ebd1967a72c3582a186b51d3347a1017d50d77325ba14db49510c"
+      },
+      {
+        "relative_path": "formal/docs/release/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_PACKET_20260718_v0.json",
+        "sha256": "ea10948408c2df5c49b8d83563d08dae37ce4edd7289a591055d367dff283477"
+      },
+      {
+        "relative_path": "formal/python/tools/eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0.py",
+        "sha256": "9db05478025f170b175fda6fc4aee95afe0578a68cc0997c73585184d0f29fcb"
+      },
+      {
+        "relative_path": "formal/python/tests/test_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0.py",
+        "sha256": "64fef151c14fd5cafe28fa4c671f8577d40c423364d199717f8012fd6c9153b4"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/Eotwash2020YukawaPrimaryEvidenceCustodyAcquisitionPacketV0.lean",
+        "sha256": "32124103d0abca29ddcbce689fde6f858d738d11ddd3669336c2761a0de4aa61"
+      }
+    ]
+  },
+  "authorized_acquisition": {
+    "access_control_circumvention_allowed": false,
+    "author_or_custodian_contact_authorized": false,
+    "execution_count": 1,
+    "execution_scope": "NON_CONTACT_PRIMARY_EVIDENCE_RETRIEVAL_INGESTION_AND_COMPLETENESS_CLASSIFICATION_ONLY",
+    "interactive_manual_download_allowed": true,
+    "interactive_manual_download_condition": "only legitimate normal access during the one authorized execution; no access-control circumvention",
+    "likelihood_execution_authorized": false,
+    "maximum_alternative_authenticated_mirrors": 2,
+    "maximum_attempts_per_concrete_url": 2,
+    "maximum_interactive_manual_download_sessions": 1,
+    "maximum_non_contact_source_tiers": 5,
+    "maximum_total_retrieval_attempts": 8,
+    "must_stop_at_result_review": true,
+    "published_constraint_reinterpretation_authorized": false,
+    "result_review_target": "review_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0_result",
+    "synthetic_forecast_authorized": false
+  },
+  "binding_execution_rules": [
+    "Use the six-tier hierarchy in order and only the first five non-contact tiers.",
+    "Record all twelve custody fields for every acquired object.",
+    "Advance custody states one step at a time and only after the state-specific condition is met.",
+    "Inspect contents against each of the six evidence inventory items.",
+    "Permit one principal acquisition outcome and up to six subordinate component findings.",
+    "Do not infer missing values from plots, screenshots, secondary sources, or dissertation prose.",
+    "Do not reconstruct an approximate apparatus model during acquisition.",
+    "Do not bypass access controls or use an unauthenticated file-sharing mirror.",
+    "If contact is required, issue AUTHORS_OR_CUSTODIAN_CONTACT_REQUIRED and stop without contact.",
+    "Do not run the Newtonian baseline, scalar likelihood, synthetic forecast, or published-limit reinterpretation.",
+    "Stop after eight retrieval attempts, exhaustion of five non-contact tiers, or the first principal outcome.",
+    "Stop at review_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0_result after the one bounded acquisition."
+  ],
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "The acquisition packet is accepted for one finite, legitimate, non-contact primary-evidence retrieval, custody, ingestion, and completeness-classification execution under the frozen source and attempt limits. No evidence is acquired during review. Author or custodian contact, access-control circumvention, synthetic forecasting, published-constraint reinterpretation, apparatus reconstruction, Newtonian or scalar likelihood execution, scalar-range or alpha bounds, branch adoption, native scalar bridge, native gravitational principle, gravitational action, orbital result, frame-dragging result, and master-action changes remain unauthorized.",
+  "current_posture": {
+    "acquisition_executed": "NO",
+    "acquisition_packet_review": "ACCEPTED_21_OF_21_GATES",
+    "alpha": "NOT_SELECTED",
+    "author_contact": "NOT_AUTHORIZED",
+    "authorized_acquisition_executions": 1,
+    "files_acquired": 0,
+    "gravitational_action": "NOT_SELECTED",
+    "likelihood": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "execute_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0",
+    "principal_outcome": "PRIMARY_EVIDENCE_ACQUISITION_CONTRACT_READY",
+    "published_reinterpretation": "NOT_AUTHORIZED",
+    "required_evidence_items": "0_OF_6_COMPLETE",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_range_bound": "NONE",
+    "synthetic_forecast": "NOT_AUTHORIZED"
+  },
+  "custody_state_machine_audit": {
+    "file_presence_implies_completeness": false,
+    "file_presence_implies_verification": false,
+    "ordered_states": [
+      "IDENTIFIED",
+      "ACQUIRED",
+      "INGESTED",
+      "VERIFIED",
+      "COMPLETE"
+    ],
+    "required_custody_field_count": 12,
+    "state_skipping_allowed": false
+  },
+  "independent_inventory_audit": {
+    "all_items_tied_to_operations": true,
+    "complete_item_count_now": 0,
+    "hidden_decision_bearing_input_found": false,
+    "inventory_item_count": 6,
+    "newtonian_baseline_location": "FORWARD_AND_STATISTICAL_SUFFICIENCY_OBLIGATIONS"
+  },
+  "principal_packet_review_outcome": "PRIMARY_EVIDENCE_ACQUISITION_CONTRACT_READY",
+  "result_review_target": "review_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0_result",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 21,
+    "pass_count": 21,
+    "rows": [
+      {
+        "finding": "Five packet artifacts match frozen SHA-256 custody and rotate to this review.",
+        "gate_id": "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "The experiment is suitable while the independent likelihood remains blocked.",
+        "gate_id": "G2_SUITABILITY_AND_EXECUTABILITY_REMAIN_SEPARATE",
+        "status": "PASS"
+      },
+      {
+        "finding": "All decision-bearing data, metadata, uncertainty, nuisance, forward-model, and coverage operations are mapped.",
+        "gate_id": "G3_SIX_ITEM_INVENTORY_COVERS_DECISION_BEARING_OPERATIONS",
+        "status": "PASS"
+      },
+      {
+        "finding": "The 95x3 vector requires units, ordering, identifiers, and selection flags.",
+        "gate_id": "G4_OBSERVATION_VECTOR_AND_PHYSICAL_ROW_MAPPING_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Configuration metadata cannot be hidden inside a generic supplement label.",
+        "gate_id": "G5_DISPLACEMENT_AND_CONFIGURATION_METADATA_SEPARATE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Pointwise errors, correlations, block structure, conditioning, units, and ordering are required.",
+        "gate_id": "G6_UNCERTAINTY_AND_COVARIANCE_CONTRACT_COMPLETE_IN_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "All five nuisance identities, numerical constraints, relations, and model entry points are mandatory.",
+        "gate_id": "G7_FIVE_NUISANCE_PRIOR_CONTRACTS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "The material must support executable Newtonian and fixed-strength three-harmonic predictions.",
+        "gate_id": "G8_EXTENDED_SOURCE_FORWARD_MODEL_CANNOT_BE_DESCRIPTIVE_ONLY",
+        "status": "PASS"
+      },
+      {
+        "finding": "A published confidence curve cannot replace the underlying boundary-aware calibration.",
+        "gate_id": "G9_BOUNDARY_COVERAGE_PROCEDURE_IS_DECISION_BEARING",
+        "status": "PASS"
+      },
+      {
+        "finding": "Five ordered non-contact source tiers precede the separately gated contact outcome.",
+        "gate_id": "G10_PRIMARY_AUTHENTICATED_SOURCE_HIERARCHY_FINITE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The dissertation and unauthenticated mirrors cannot fill missing numerical evidence.",
+        "gate_id": "G11_SUPPORTING_SOURCES_CANNOT_REPLACE_PRIMARY_NUMERICAL_EVIDENCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Every acquired object must carry source, method, timestamp, identity, hash, access, content, ingestion, and completeness fields.",
+        "gate_id": "G12_ALL_TWELVE_CUSTODY_FIELDS_MANDATORY",
+        "status": "PASS"
+      },
+      {
+        "finding": "IDENTIFIED, ACQUIRED, INGESTED, VERIFIED, and COMPLETE remain distinct ordered states.",
+        "gate_id": "G13_FIVE_CUSTODY_STATES_ORDERED_AND_NONSUBSTITUTABLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "A downloaded or parsed supplement can leave every scientific component incomplete.",
+        "gate_id": "G14_FILE_PRESENCE_CANNOT_CREATE_COMPLETENESS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Six executable obligations and Newtonian baseline reproduction precede scalar use.",
+        "gate_id": "G15_FORWARD_MODEL_SUFFICIENCY_TEST_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "File presence cannot replace likelihood, nuisance, coverage, and baseline validation.",
+        "gate_id": "G16_STATISTICAL_SUFFICIENCY_REQUIRES_BASELINE_PROFILING_AND_COVERAGE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The future acquisition has finite source, attempt, URL, mirror, and ingestion limits.",
+        "gate_id": "G17_RETRIEVAL_ATTEMPT_AND_MIRROR_LIMITS_FINITE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Acquisition must use legitimate access and stop rather than contact an author or custodian.",
+        "gate_id": "G18_ACCESS_CONTROL_AND_CONTACT_FIREWALLS_BINDING",
+        "status": "PASS"
+      },
+      {
+        "finding": "One principal status controls authority while component-level omissions remain visible.",
+        "gate_id": "G19_TERMINAL_OUTCOMES_SUPPORT_ONE_PRINCIPAL_AND_PARTIAL_FINDINGS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Synthetic forecasting and published-result reinterpretation require fresh authority.",
+        "gate_id": "G20_PARALLEL_COMPUTATIONAL_LANES_REMAIN_SEPARATE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Review performs no retrieval, contact, forecast, reinterpretation, likelihood, bound, or theory adoption.",
+        "gate_id": "G21_NO_ACQUISITION_FIT_OR_THEORY_ADOPTION_DURING_REVIEW",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "toe.eotwash_2020_yukawa_primary_evidence_custody_acquisition.packet_review.v0",
+  "scope": {
+    "access_control_circumvented": false,
+    "acquisition_executed_now": false,
+    "alpha_sign_or_value_adopted": false,
+    "author_or_custodian_contact_authorized": false,
+    "author_or_custodian_contact_executed": false,
+    "beta_zero_adopted": false,
+    "coverage_calibration_executable": false,
+    "forward_model_executable": false,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": true,
+    "likelihood_evaluated": false,
+    "likelihood_execution_authorized": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "one_bounded_acquisition_execution_authorized": true,
+    "orbital_or_light_propagation_analysis_executed": false,
+    "packet_accepted": true,
+    "primary_evidence_contract_complete": false,
+    "scalar_branch_adopted": false,
+    "supplement_downloaded_or_acquired_now": false,
+    "supplied_constraint_reinterpretation_authorized": false,
+    "synthetic_forward_model_lane_authorized": false
+  },
+  "selected_next_target": "execute_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0",
+  "selected_next_target_kind": "ONE_BOUNDED_LEGITIMATE_ACQUISITION_EXECUTION_THEN_INDEPENDENT_RESULT_REVIEW",
+  "target": "review_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0_result",
+  "verdict": "ACCEPTED_PRIMARY_EVIDENCE_ACQUISITION_CONTRACT_READY_FOR_ONE_BOUNDED_EXECUTION"
+}

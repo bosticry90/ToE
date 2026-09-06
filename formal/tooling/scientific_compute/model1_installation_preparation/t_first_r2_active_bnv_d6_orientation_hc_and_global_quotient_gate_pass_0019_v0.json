@@ -1,0 +1,1111 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_D6_ORIENTATION_HC_AND_GLOBAL_QUOTIENT_GATE_PASS_v0",
+  "pass_id": "T_FIRST_R2_ACTIVE_BNV_D6_ORIENTATION_HC_AND_GLOBAL_QUOTIENT_GATE_PASS_0019",
+  "date": "2026-08-22",
+  "status": "ALL_TWENTY_THREE_CANONICAL_D6_SKELETONS_HAVE_NOW_BEEN_AUDITED_WITH_AN_EXPLICIT_LORENTZ_AND_CONJUGATION_ORIENTATION_GRAMMAR_AND_THE_DELTA_B_PLUS_OR_MINUS_ONE_UNIVERSES_ARE_IN_EXACT_HERMITIAN_CONJUGATION_BIJECTION;_THE_TWO_PASS0018_X3_SIGNATURES_ARE_NONZERO_DISTINCT_HC_ORBITS_OUTSIDE_THE_LEADING_EOM_IMAGE_WITH_NO_TWO_FERMION_FIERZ_OR_FLAVOR_VANISHING_BUT_THE_FULL_QUOTIENT_RELATION_CERTIFICATE_AND_SECOND_OPERATOR_BY_OPERATOR_COMPONENT_SPAN_ARE_NOT_COMPLETE_SO_NO_GLOBAL_PHYSICAL_COUNT_IS_PROMOTED",
+  "authority": {
+    "raw_d6_field_orientation_enumeration": "AUTHORIZED_EXECUTED_AND_COMPLETE_WITHIN_THE_FROZEN_FOUR_DIMENSIONAL_FIELD_DOMAIN",
+    "hermitian_conjugation_canonicalization": "AUTHORIZED_EXECUTED_AND_COMPLETE_AT_RAW_FIELD_ORIENTATION_LEVEL",
+    "two_x3_signature_local_reduction": "AUTHORIZED_AND_EXECUTED_WITHIN_THE_FROZEN_LEADING_RENORMALIZABLE_EOM_SCOPE",
+    "global_corrected_physical_quotient": "EXECUTED_AS_A_PROMOTION_GATE_AND_FAILED_CLOSED_ON_MISSING_COMPLETE_RELATION_AND_INDEPENDENT_SPAN_CERTIFICATES",
+    "d6_basis_candidate": "REOPENED_INCOMPLETE",
+    "one_loop_closure_analysis": "UNAUTHORIZED",
+    "adm_calculation": "UNAUTHORIZED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "novelty": "UNKNOWN"
+  },
+  "frozen_inputs": [
+    {
+      "role": "HISTORICAL_PASS0009_CANONICAL_SKELETON_SCREEN_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_derivative_field_strength_screen_pass_0009_v0.json",
+      "bytes": 14767,
+      "sha256": "c54a187bdaa0fefae1a082da9b2d60f191740dd4cf2a9486e9a6468269a8a313"
+    },
+    {
+      "role": "HISTORICAL_PASS0017_COMPONENT_AND_EOM_REGISTRY_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_component_cg_phase_and_eom_target_closure_pass_0017_v0.json",
+      "bytes": 1177464,
+      "sha256": "e86d536ce2f028c418fa8711f7cf72941afb18c15333dcf052377943cbd448f8"
+    },
+    {
+      "role": "HISTORICAL_PASS0018_DISCREPANCY_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_clean_room_field_orientation_and_component_reconstruction_audit_pass_0018_v0.json",
+      "bytes": 120209,
+      "sha256": "3e4e37560e1b98abe7df4d220f5bfee9b7ea2a48e1a61e47016118d235287bed"
+    }
+  ],
+  "orientation_grammar": {
+    "unbarred_effective_chirality": "DISPLAYED_L_OR_R",
+    "barred_effective_chirality": "OPPOSITE_OF_THE_DISPLAYED_SOURCE_CHIRALITY",
+    "two_fermion_scalar_or_tensor": "EQUAL_EFFECTIVE_CHIRALITIES",
+    "two_fermion_vector": "OPPOSITE_EFFECTIVE_CHIRALITIES",
+    "four_fermion_scalar": "EVEN_NUMBER_OF_EACH_EFFECTIVE_WEYL_CHIRALITY",
+    "scalar_conjugates_explicit": true,
+    "barred_unbarred_charge_and_representation_reversal_explicit": true,
+    "canonical_field_order": [
+      "qL",
+      "uR",
+      "dR",
+      "lL",
+      "eR",
+      "barqL",
+      "baruR",
+      "bardR",
+      "barlL",
+      "bareR",
+      "H",
+      "Hdag",
+      "X",
+      "Xdag",
+      "rho3",
+      "rho8",
+      "Delta",
+      "Deltadag"
+    ]
+  },
+  "canonical_skeleton_orientation_audit": {
+    "canonical_dimension_solution_count": 23,
+    "all_solutions_dispositioned": true,
+    "psi4": {
+      "charge_admissible_orientation_count": 6,
+      "lorentz_admissible_orientation_count": 4,
+      "rows": [
+        {
+          "fields": [
+            "qL",
+            "qL",
+            "qL",
+            "lL"
+          ],
+          "canonical_signature": [
+            "qL",
+            "qL",
+            "qL",
+            "lL"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_lorentz_fierz_flavor_quotient": 2,
+          "lorentz_scalar_exists": true,
+          "disposition": "LORENTZ_ADMISSIBLE_REQUIRES_FULL_FIERZ_FLAVOR_QUOTIENT"
+        },
+        {
+          "fields": [
+            "qL",
+            "qL",
+            "uR",
+            "eR"
+          ],
+          "canonical_signature": [
+            "qL",
+            "qL",
+            "uR",
+            "eR"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L",
+            "R",
+            "R"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_lorentz_fierz_flavor_quotient": 1,
+          "lorentz_scalar_exists": true,
+          "disposition": "LORENTZ_ADMISSIBLE_REQUIRES_FULL_FIERZ_FLAVOR_QUOTIENT"
+        },
+        {
+          "fields": [
+            "qL",
+            "uR",
+            "dR",
+            "lL"
+          ],
+          "canonical_signature": [
+            "qL",
+            "uR",
+            "dR",
+            "lL"
+          ],
+          "effective_chiralities": [
+            "L",
+            "R",
+            "R",
+            "L"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_lorentz_fierz_flavor_quotient": 1,
+          "lorentz_scalar_exists": true,
+          "disposition": "LORENTZ_ADMISSIBLE_REQUIRES_FULL_FIERZ_FLAVOR_QUOTIENT"
+        },
+        {
+          "fields": [
+            "qL",
+            "dR",
+            "dR",
+            "barlL"
+          ],
+          "canonical_signature": [
+            "qL",
+            "dR",
+            "dR",
+            "barlL"
+          ],
+          "effective_chiralities": [
+            "L",
+            "R",
+            "R",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_lorentz_fierz_flavor_quotient": 1,
+          "lorentz_scalar_exists": false,
+          "disposition": "ZERO_NO_LORENTZ_SCALAR_ODD_LEFT_AND_RIGHT_WEYL_COUNTS"
+        },
+        {
+          "fields": [
+            "uR",
+            "uR",
+            "dR",
+            "eR"
+          ],
+          "canonical_signature": [
+            "uR",
+            "uR",
+            "dR",
+            "eR"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R",
+            "R",
+            "R"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_lorentz_fierz_flavor_quotient": 1,
+          "lorentz_scalar_exists": true,
+          "disposition": "LORENTZ_ADMISSIBLE_REQUIRES_FULL_FIERZ_FLAVOR_QUOTIENT"
+        },
+        {
+          "fields": [
+            "dR",
+            "dR",
+            "dR",
+            "bareR"
+          ],
+          "canonical_signature": [
+            "dR",
+            "dR",
+            "dR",
+            "bareR"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R",
+            "R",
+            "L"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_lorentz_fierz_flavor_quotient": 1,
+          "lorentz_scalar_exists": false,
+          "disposition": "ZERO_NO_LORENTZ_SCALAR_ODD_LEFT_AND_RIGHT_WEYL_COUNTS"
+        }
+      ]
+    },
+    "psi2_phi3": {
+      "charge_admissible_orientation_count": 19,
+      "nonzero_gauge_orientation_count": 16,
+      "gauge_multiplicity_total_before_identical_fermion_exchange_projection": 26,
+      "rows": [
+        {
+          "fields": [
+            "qL",
+            "qL",
+            "H",
+            "X",
+            "Deltadag"
+          ],
+          "canonical_signature": [
+            "qL",
+            "qL",
+            "H",
+            "X",
+            "Deltadag"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 3
+        },
+        {
+          "fields": [
+            "qL",
+            "qL",
+            "Hdag",
+            "X",
+            "rho3"
+          ],
+          "canonical_signature": [
+            "qL",
+            "qL",
+            "Hdag",
+            "X",
+            "rho3"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 3
+        },
+        {
+          "fields": [
+            "qL",
+            "qL",
+            "Hdag",
+            "X",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "qL",
+            "qL",
+            "Hdag",
+            "X",
+            "rho8"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 4
+        },
+        {
+          "fields": [
+            "qL",
+            "lL",
+            "X",
+            "X",
+            "rho3"
+          ],
+          "canonical_signature": [
+            "qL",
+            "lL",
+            "X",
+            "X",
+            "rho3"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "qL",
+            "lL",
+            "X",
+            "X",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "qL",
+            "lL",
+            "X",
+            "X",
+            "rho8"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 2
+        },
+        {
+          "fields": [
+            "qL",
+            "baruR",
+            "X",
+            "X",
+            "X"
+          ],
+          "canonical_signature": [
+            "qL",
+            "baruR",
+            "X",
+            "X",
+            "X"
+          ],
+          "effective_chiralities": [
+            "L",
+            "L"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "uR",
+            "uR",
+            "Hdag",
+            "X",
+            "Deltadag"
+          ],
+          "canonical_signature": [
+            "uR",
+            "uR",
+            "Hdag",
+            "X",
+            "Deltadag"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "uR",
+            "dR",
+            "H",
+            "X",
+            "Deltadag"
+          ],
+          "canonical_signature": [
+            "uR",
+            "dR",
+            "H",
+            "X",
+            "Deltadag"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "uR",
+            "dR",
+            "Hdag",
+            "X",
+            "rho3"
+          ],
+          "canonical_signature": [
+            "uR",
+            "dR",
+            "Hdag",
+            "X",
+            "rho3"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "uR",
+            "dR",
+            "Hdag",
+            "X",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "uR",
+            "dR",
+            "Hdag",
+            "X",
+            "rho8"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 2
+        },
+        {
+          "fields": [
+            "uR",
+            "eR",
+            "X",
+            "X",
+            "rho3"
+          ],
+          "canonical_signature": [
+            "uR",
+            "eR",
+            "X",
+            "X",
+            "rho3"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 0
+        },
+        {
+          "fields": [
+            "uR",
+            "eR",
+            "X",
+            "X",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "uR",
+            "eR",
+            "X",
+            "X",
+            "rho8"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "dR",
+            "dR",
+            "H",
+            "X",
+            "rho3"
+          ],
+          "canonical_signature": [
+            "dR",
+            "dR",
+            "H",
+            "X",
+            "rho3"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "dR",
+            "dR",
+            "H",
+            "X",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "dR",
+            "dR",
+            "H",
+            "X",
+            "rho8"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 2
+        },
+        {
+          "fields": [
+            "dR",
+            "dR",
+            "Hdag",
+            "X",
+            "Delta"
+          ],
+          "canonical_signature": [
+            "dR",
+            "dR",
+            "Hdag",
+            "X",
+            "Delta"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "dR",
+            "eR",
+            "X",
+            "X",
+            "Delta"
+          ],
+          "canonical_signature": [
+            "dR",
+            "eR",
+            "X",
+            "X",
+            "Delta"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity_before_fermion_exchange_projection": 0
+        },
+        {
+          "fields": [
+            "dR",
+            "barqL",
+            "X",
+            "X",
+            "X"
+          ],
+          "canonical_signature": [
+            "dR",
+            "barqL",
+            "X",
+            "X",
+            "X"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "dR",
+            "barlL",
+            "Hdag",
+            "X",
+            "X"
+          ],
+          "canonical_signature": [
+            "dR",
+            "barlL",
+            "Hdag",
+            "X",
+            "X"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "eR",
+            "barlL",
+            "X",
+            "X",
+            "X"
+          ],
+          "canonical_signature": [
+            "eR",
+            "barlL",
+            "X",
+            "X",
+            "X"
+          ],
+          "effective_chiralities": [
+            "R",
+            "R"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity_before_fermion_exchange_projection": 0
+        }
+      ]
+    },
+    "psi2_phi2_D": {
+      "charge_admissible_orientation_count": 3,
+      "nonzero_gauge_orientation_count": 3,
+      "gauge_multiplicity_total": 4,
+      "rows": [
+        {
+          "fields": [
+            "qL",
+            "uR",
+            "X",
+            "Deltadag"
+          ],
+          "canonical_signature": [
+            "qL",
+            "uR",
+            "X",
+            "Deltadag"
+          ],
+          "effective_chiralities": [
+            "L",
+            "R"
+          ],
+          "DeltaL": 1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "qL",
+            "dR",
+            "X",
+            "rho3"
+          ],
+          "canonical_signature": [
+            "qL",
+            "dR",
+            "X",
+            "rho3"
+          ],
+          "effective_chiralities": [
+            "L",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 1
+        },
+        {
+          "fields": [
+            "qL",
+            "dR",
+            "X",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "qL",
+            "dR",
+            "X",
+            "rho8"
+          ],
+          "effective_chiralities": [
+            "L",
+            "R"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity_before_fermion_exchange_projection": 2
+        }
+      ],
+      "result": "NO_MIXED_CONJUGATION_VECTOR_ORIENTATION_WAS_MISSING_FROM_PASS0009"
+    },
+    "psi2_phi_D2_and_psi2_phi_F": {
+      "charge_admissible_scalar_or_tensor_orientation_count": 0,
+      "result": "ZERO_BEFORE_GAUGE_OR_LORENTZ_CONTRACTION_AFTER_COMPLETE_ORIENTATION_CHARGE_SCREEN"
+    },
+    "psi2_D3_and_psi2_D_F": "ZERO_BY_BARYON_NUMBER_FOR_EVERY_FERMION_ORIENTATION",
+    "phi6": {
+      "charge_admissible_multiset_count": 8,
+      "nonzero_multiset_count": 3,
+      "gauge_multiplicity_total": 3,
+      "rows": [
+        {
+          "fields": [
+            "H",
+            "Hdag",
+            "Hdag",
+            "X",
+            "X",
+            "X"
+          ],
+          "canonical_signature": [
+            "H",
+            "Hdag",
+            "Hdag",
+            "X",
+            "X",
+            "X"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity": 0
+        },
+        {
+          "fields": [
+            "H",
+            "X",
+            "X",
+            "X",
+            "rho3",
+            "Deltadag"
+          ],
+          "canonical_signature": [
+            "H",
+            "X",
+            "X",
+            "X",
+            "rho3",
+            "Deltadag"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity": 0
+        },
+        {
+          "fields": [
+            "H",
+            "X",
+            "X",
+            "X",
+            "rho8",
+            "Deltadag"
+          ],
+          "canonical_signature": [
+            "H",
+            "X",
+            "X",
+            "X",
+            "rho8",
+            "Deltadag"
+          ],
+          "DeltaL": -1,
+          "gauge_multiplicity": 1
+        },
+        {
+          "fields": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "X",
+            "Xdag"
+          ],
+          "canonical_signature": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "X",
+            "Xdag"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity": 0
+        },
+        {
+          "fields": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "rho3",
+            "rho3"
+          ],
+          "canonical_signature": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "rho3",
+            "rho3"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity": 0
+        },
+        {
+          "fields": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "rho3",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "rho3",
+            "rho8"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity": 1
+        },
+        {
+          "fields": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "rho8",
+            "rho8"
+          ],
+          "canonical_signature": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "rho8",
+            "rho8"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity": 1
+        },
+        {
+          "fields": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "Delta",
+            "Deltadag"
+          ],
+          "canonical_signature": [
+            "Hdag",
+            "X",
+            "X",
+            "X",
+            "Delta",
+            "Deltadag"
+          ],
+          "DeltaL": -3,
+          "gauge_multiplicity": 0
+        }
+      ]
+    },
+    "phi5_D": "ZERO_NO_LORENTZ_SCALAR_FROM_ONE_UNPAIRED_VECTOR_DERIVATIVE",
+    "phi4_D2": "UNIQUE_POSITIVE_BARYON_MULTISET_X3_HDAG_WITH_THREE_NONZERO_DERIVATIVE_DECORATIONS_RETAINED",
+    "phi3_D3": "ZERO_BY_HYPERCHARGE",
+    "phi4_F_and_phi3_D_F": "ZERO_BY_LORENTZ_REPRESENTATION_AFTER_THE_UNIQUE_CHARGE_SCREENS",
+    "all_remaining_solutions": "ZERO_BY_BARYON_NUMBER"
+  },
+  "hermitian_conjugation_canonicalization": {
+    "psi4": {
+      "positive_orientation_count": 6,
+      "negative_orientation_count": 6,
+      "hc_image_equals_negative_orientation_set": true,
+      "missing_negative_signatures": [],
+      "extra_negative_signatures": [],
+      "representative_rule": "KEEP_DELTA_B_PLUS_ONE_AND_IMPLY_ITS_HERMITIAN_CONJUGATE_WITH_C_STAR"
+    },
+    "psi2_phi3_scalar_bilinear": {
+      "positive_orientation_count": 19,
+      "negative_orientation_count": 19,
+      "hc_image_equals_negative_orientation_set": true,
+      "missing_negative_signatures": [],
+      "extra_negative_signatures": [],
+      "representative_rule": "KEEP_DELTA_B_PLUS_ONE_AND_IMPLY_ITS_HERMITIAN_CONJUGATE_WITH_C_STAR"
+    },
+    "psi2_phi2_D_vector_bilinear": {
+      "positive_orientation_count": 3,
+      "negative_orientation_count": 3,
+      "hc_image_equals_negative_orientation_set": true,
+      "missing_negative_signatures": [],
+      "extra_negative_signatures": [],
+      "representative_rule": "KEEP_DELTA_B_PLUS_ONE_AND_IMPLY_ITS_HERMITIAN_CONJUGATE_WITH_C_STAR"
+    },
+    "psi2_phi_D2_or_psi2_phi_F_tensor_bilinear": {
+      "positive_orientation_count": 0,
+      "negative_orientation_count": 0,
+      "hc_image_equals_negative_orientation_set": true,
+      "missing_negative_signatures": [],
+      "extra_negative_signatures": [],
+      "representative_rule": "KEEP_DELTA_B_PLUS_ONE_AND_IMPLY_ITS_HERMITIAN_CONJUGATE_WITH_C_STAR"
+    },
+    "phi6": {
+      "positive_orientation_count": 8,
+      "negative_orientation_count": 8,
+      "hc_image_equals_negative_orientation_set": true,
+      "missing_negative_signatures": [],
+      "extra_negative_signatures": [],
+      "representative_rule": "KEEP_DELTA_B_PLUS_ONE_AND_IMPLY_ITS_HERMITIAN_CONJUGATE_WITH_C_STAR"
+    }
+  },
+  "pass0018_x3_signature_dispositions": [
+    {
+      "fields": [
+        "barqL",
+        "dR",
+        "X",
+        "X",
+        "X"
+      ],
+      "canonical_signature": [
+        "dR",
+        "barqL",
+        "X",
+        "X",
+        "X"
+      ],
+      "hermitian_conjugate_signature": [
+        "qL",
+        "bardR",
+        "Xdag",
+        "Xdag",
+        "Xdag"
+      ],
+      "hc_disposition": "DISTINCT_DELTA_B_PLUS_ONE_HC_ORBIT_REPRESENTATIVE_WITH_DELTA_B_MINUS_ONE_CONJUGATE_IMPLIED",
+      "eom_image_membership_in_COMPLETE_ORIENTATION_DERIVATIVE_SOURCE_UNIVERSE": false,
+      "eom_disposition": "NOT_IN_LEADING_RENORMALIZABLE_D6_EOM_RELATION_IMAGE_BY_EXACT_FIELD_SIGNATURE_BLOCK",
+      "fierz_disposition": "NO_TWO_FERMION_FIERZ_RELATION_FIERZ_RECOUPLING_REQUIRES_FOUR_SPINORS",
+      "flavor_disposition": "DISTINCT_FERMION_SPECIES_UNRESTRICTED_THREE_BY_THREE_COMPLEX_FLAVOR_TENSOR",
+      "three_flavor_component_count": 9,
+      "exact_gauge_component_span_rank": 1,
+      "tensor": {
+        "dims": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "nonzero_component_count": 180,
+        "norm_squared": "1",
+        "first_nonzero_component": {
+          "index": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(2)/24"
+        },
+        "phase_fingerprint_sha256": "371a53f789f38fe7cd5b73e245f9d7c3f13edff8a70911c7107b422e48d1c24f"
+      },
+      "local_physical_quotient_status": "INDEPENDENT_NONDERIVATIVE_ORIENTATION_CANDIDATE_WITHIN_THE_FROZEN_LEADING_EOM_SCOPE",
+      "global_physical_basis_promotion": "WITHHELD_UNTIL_GATES_B_AND_C_CLOSE_FOR_THE_ENTIRE_ATLAS"
+    },
+    {
+      "fields": [
+        "baruR",
+        "qL",
+        "X",
+        "X",
+        "X"
+      ],
+      "canonical_signature": [
+        "qL",
+        "baruR",
+        "X",
+        "X",
+        "X"
+      ],
+      "hermitian_conjugate_signature": [
+        "uR",
+        "barqL",
+        "Xdag",
+        "Xdag",
+        "Xdag"
+      ],
+      "hc_disposition": "DISTINCT_DELTA_B_PLUS_ONE_HC_ORBIT_REPRESENTATIVE_WITH_DELTA_B_MINUS_ONE_CONJUGATE_IMPLIED",
+      "eom_image_membership_in_COMPLETE_ORIENTATION_DERIVATIVE_SOURCE_UNIVERSE": false,
+      "eom_disposition": "NOT_IN_LEADING_RENORMALIZABLE_D6_EOM_RELATION_IMAGE_BY_EXACT_FIELD_SIGNATURE_BLOCK",
+      "fierz_disposition": "NO_TWO_FERMION_FIERZ_RELATION_FIERZ_RECOUPLING_REQUIRES_FOUR_SPINORS",
+      "flavor_disposition": "DISTINCT_FERMION_SPECIES_UNRESTRICTED_THREE_BY_THREE_COMPLEX_FLAVOR_TENSOR",
+      "three_flavor_component_count": 9,
+      "exact_gauge_component_span_rank": 1,
+      "tensor": {
+        "dims": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "nonzero_component_count": 180,
+        "norm_squared": "1",
+        "first_nonzero_component": {
+          "index": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(2)/24"
+        },
+        "phase_fingerprint_sha256": "371a53f789f38fe7cd5b73e245f9d7c3f13edff8a70911c7107b422e48d1c24f"
+      },
+      "local_physical_quotient_status": "INDEPENDENT_NONDERIVATIVE_ORIENTATION_CANDIDATE_WITHIN_THE_FROZEN_LEADING_EOM_SCOPE",
+      "global_physical_basis_promotion": "WITHHELD_UNTIL_GATES_B_AND_C_CLOSE_FOR_THE_ENTIRE_ATLAS"
+    }
+  ],
+  "promotion_contract": {
+    "A_enumeration_completeness": {
+      "complete": true,
+      "certificate": "TWENTY_THREE_INTEGER_SKELETON_SOLUTIONS_TIMES_THE_EXPLICIT_LORENTZ_ORIENTATION_GRAMMAR_WITH_EXACT_DELTA_B_PLUS_OR_MINUS_ONE_HC_BIJECTIONS"
+    },
+    "B_quotient_completeness": {
+      "complete": false,
+      "completed_local_parts": [
+        "HC_CANONICALIZATION_FOR_ALL_RAW_ORIENTATIONS",
+        "LEADING_EOM_IMAGE_MEMBERSHIP_FOR_THE_TWO_NEW_X3_SIGNATURES",
+        "TWO_FERMION_FIERZ_NONAPPLICABILITY_FOR_THE_TWO_NEW_X3_SIGNATURES",
+        "DISTINCT_SPECIES_FLAVOR_NONVANISHING_FOR_THE_TWO_NEW_X3_SIGNATURES"
+      ],
+      "blocker": "A_SINGLE_EXACT_FLAVOR_EXPANDED_RELATION_MATRIX_COVERING_THE_FULL_PSI4_FIERZ_FLAVOR_SECTOR_AND_ALL_PRIOR_DERIVATIVE_EOM_ROWS_HAS_NOT_BEEN_INDEPENDENTLY_REBUILT_FROM_THE_THEORY_DEFINITION"
+    },
+    "C_independent_span_equality": {
+      "complete": false,
+      "pass0018_overlap_control": "KNOWN_MIXED_CONJUGATION_SHADOW_REPRODUCED_WITH_OVERLAP_ONE_AND_ZERO_RESIDUAL",
+      "new_x3_exact_component_witnesses": "COMPLETE_RANK_ONE_EACH",
+      "blocker": "THE_SECOND_CONSTRUCTION_HAS_NOT_EMBEDDED_EVERY_PASS0017_CHANNEL_IN_A_COMMON_EXACT_COMPONENT_LORENTZ_AND_FLAVOR_VECTOR_SPACE_SO_GLOBAL_BIDIRECTIONAL_SPAN_EQUALITY_IS_NOT_CERTIFIED"
+    },
+    "promotion_rule": "A_AND_B_AND_C_MUST_ALL_BE_TRUE_BEFORE_D6_BASIS_CANDIDATE_COMPLETE_CAN_BECOME_TRUE",
+    "promotion_earned": false
+  },
+  "historical_disposition": {
+    "pass0009_canonical_dimension_skeleton_exhaustion": "RETAINED",
+    "pass0018_raw_field_orientation_incompleteness": "RESOLVED_BY_THE_GLOBAL_ORIENTATION_GRAMMAR_THIS_PASS",
+    "pass0016_derivative_rank_15_to_5": "RETAINED_WITHIN_ITS_DECLARED_SCOPE",
+    "pass0017_registered_EOM_recouplings": "RETAINED",
+    "global_physical_d6_basis_count": "UNDETERMINED_DO_NOT_PUBLISH_35_36_37_OR_38"
+  },
+  "milestones": {
+    "D6_RAW_FIELD_ORIENTATION_INVENTORY_COMPLETE": true,
+    "D6_HC_CANONICALIZATION_COMPLETE": true,
+    "D6_TWO_NEW_X3_SIGNATURE_LOCAL_DISPOSITION_COMPLETE": true,
+    "D6_GLOBAL_QUOTIENT_RELATION_CERTIFICATE_COMPLETE": false,
+    "D6_TWO_INDEPENDENT_FULL_COMPONENT_SPANS_AGREE": false,
+    "D6_BASIS_CANDIDATE_COMPLETE": false,
+    "ONE_LOOP_CLOSURE_AUTHORIZATION_EARNED": false,
+    "ADM_AUTHORIZATION_EARNED": false
+  },
+  "hard_nonclaims": {
+    "two_new_rows_promoted_to_global_physical_basis": false,
+    "physical_d6_family_count_published": false,
+    "thirty_five_through_thirty_eight_count_rehabilitated": false,
+    "one_loop_closure_started": false,
+    "one_loop_closure_authorized": false,
+    "adm_started": false,
+    "adm_authorized": false,
+    "parameter_evaluation_count": 0
+  },
+  "next_native_action": "BUILD_A_SECOND_EXACT_COMPONENT_LORENTZ_AND_FLAVOR_EMBEDDING_FOR_EVERY_ORIENTATION_COMPLETE_CHANNEL_FREEZE_THE_COMPLETE_GLOBAL_IBP_EOM_FIERZ_FLAVOR_RELATION_MATRIX_AND_COMPARE_THE_TWO_QUOTIENT_SPANS_BIDIRECTIONALLY_BEFORE_ANY_COUNT_OR_ONE_LOOP_PROMOTION"
+}

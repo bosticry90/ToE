@@ -1,0 +1,750 @@
+{
+  "artifact_id": "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0",
+  "attempt_sequence_number": 1,
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_classification_vocabulary": [
+    "PHYSICAL_ONTOLOGY_CLAIM",
+    "MATHEMATICAL_STRUCTURE_CLAIM",
+    "EFFECTIVE_MODEL_CLAIM",
+    "ANALOGY_OR_HEURISTIC",
+    "OBSERVATIONAL_CLAIM",
+    "UNRESOLVED_LANGUAGE"
+  ],
+  "claim_inventory": [
+    {
+      "claim_class": [
+        "PHYSICAL_ONTOLOGY_CLAIM",
+        "EFFECTIVE_MODEL_CLAIM"
+      ],
+      "claim_id": "COH-CLAIM-001",
+      "claimed_coherence_bearer": "UNSPECIFIED_CCFT_MESOSCOPIC_SYSTEM_OR_CONFIGURATION",
+      "conflicts": [
+        "COH-CONFLICT-001",
+        "COH-CONFLICT-003",
+        "COH-CONFLICT-005"
+      ],
+      "controlled_paraphrase": "CCFT is proposed, but not validated, as a mesoscopic layer intended to mediate coherence-related bridges inside the ToE program.",
+      "dependencies": [
+        "A physical possessor of coherence must be identified.",
+        "The meaning of a coherence change and zero coherence must be defined.",
+        "The mesoscopic scale range must be made operational.",
+        "A measurement-sensitive distinction from standard quantities must be supplied."
+      ],
+      "eligibility_for_stage_2": "ELIGIBLE_FOR_OPERATIONAL_TEST",
+      "exact_source_artifact": "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+      "fundamental_emergent_or_effective_status": "CANDIDATE_MESOSCOPIC_EFFECTIVE_OR_BRIDGE_LAYER_NOT_PROMOTED_AS_FUNDAMENTAL",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "NONE_SELECTED",
+      "observable_or_operational_content": "NONE_SPECIFIED; only a bridge role and mesoscopic scale label are present.",
+      "original_project_terms": [
+        "CCFT",
+        "candidate mesoscopic coherence bridge layer"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "CCFT: candidate mesoscopic coherence bridge layer.",
+      "scale_and_domain": "MESOSCOPIC; intended ToE bridge context; numerical or physical scale bounds absent.",
+      "source_authority_status": "PLANNING_ONLY_HYPOTHESIS_INDEX_WITH_EXPLICIT_NONCLAIM_BOUNDARY",
+      "source_date": "2026-07-02",
+      "source_location": "lines 3-14",
+      "supersession_status": "CURRENT_AS_A_CANDIDATE_CLAIM_ONLY",
+      "units_or_dimensional_status": "UNSPECIFIED"
+    },
+    {
+      "claim_class": [
+        "MATHEMATICAL_STRUCTURE_CLAIM",
+        "EFFECTIVE_MODEL_CLAIM",
+        "UNRESOLVED_LANGUAGE"
+      ],
+      "claim_id": "COH-CLAIM-002",
+      "claimed_coherence_bearer": "chi",
+      "conflicts": [
+        "COH-CONFLICT-001",
+        "COH-CONFLICT-003"
+      ],
+      "controlled_paraphrase": "The CCFT-to-ToE crosswalk lists chi as a possible auxiliary coherence channel and a future exchange candidate, without defining its physical semantics.",
+      "dependencies": [
+        "The physical meaning of chi must be supplied.",
+        "Its relation to any CCFT object must be proved rather than inferred from the symbol.",
+        "Its transformation law, units, and exchange law remain absent."
+      ],
+      "eligibility_for_stage_2": "BLOCKED_BY_DEFINITIONAL_AMBIGUITY",
+      "exact_source_artifact": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "fundamental_emergent_or_effective_status": "FUTURE_EFFECTIVE_EXCHANGE_CANDIDATE_ONLY",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "UNSPECIFIED_AUXILIARY_CHANNEL; no scalar, complex, vector, tensor, or nonfield type is selected.",
+      "observable_or_operational_content": "NONE",
+      "original_project_terms": [
+        "chi",
+        "auxiliary coherence channel",
+        "Future exchange candidate"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "chi | auxiliary coherence channel | Future exchange candidate",
+      "scale_and_domain": "CCFT-to-ToE candidate exchange surface; scale unspecified.",
+      "source_authority_status": "SELECTED_CROSSWALK_PACKET_MAPPING_POSSIBILITIES_ONLY",
+      "source_date": "2026-07-02",
+      "source_location": "lines 3-19",
+      "supersession_status": "NOT_SUPERSEDED_BUT_EXPLICITLY_UNRESOLVED_BY_LATER_BLOCKED_REVIEW",
+      "units_or_dimensional_status": "UNSPECIFIED"
+    },
+    {
+      "claim_class": [
+        "MATHEMATICAL_STRUCTURE_CLAIM",
+        "UNRESOLVED_LANGUAGE"
+      ],
+      "claim_id": "COH-CLAIM-003",
+      "claimed_coherence_bearer": "phi_OR_THE_LOCAL_PHI_ROUTE_IS_NOT_IDENTIFIED_AS_COHERENCE",
+      "conflicts": [
+        "COH-CONFLICT-002",
+        "COH-CONFLICT-003"
+      ],
+      "controlled_paraphrase": "The crosswalk aligns phi with a ToE phi surface and preserves a local source/bridge/transport theorem-linkage triad, but it does not identify phi as coherence or establish sector or seam closure.",
+      "dependencies": [
+        "The meaning of phi differs across candidate CCFT, scalar, and master-action contexts.",
+        "The local residual triad must not be promoted into an ontology claim."
+      ],
+      "eligibility_for_stage_2": "BLOCKED_BY_DEFINITIONAL_AMBIGUITY",
+      "exact_source_artifact": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "fundamental_emergent_or_effective_status": "LOCAL_THEOREM_LINKAGE_ONLY",
+      "local_or_relational_status": "LOCAL_RESIDUAL_LINKAGE",
+      "mathematical_structure_if_any": "C_source^phi = C_bridge^phi = C_transport^phi = 0 as indexed local links.",
+      "observable_or_operational_content": "NONE",
+      "original_project_terms": [
+        "phi",
+        "ToE phi surface",
+        "C_source^phi",
+        "C_bridge^phi",
+        "C_transport^phi"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "phi | ToE phi surface | Candidate alignment surface only",
+      "scale_and_domain": "Local phi theorem-linkage surface; no coherence scale assigned.",
+      "source_authority_status": "SELECTED_CROSSWALK_PACKET_WITH_LOCAL_LINKAGE_NONCLAIM",
+      "source_date": "2026-07-02",
+      "source_location": "lines 9-29",
+      "supersession_status": "CURRENT_LOCAL_LINKAGE_BOUNDARY; NOT_A_COHERENCE_REPRESENTATION",
+      "units_or_dimensional_status": "NOT_STATED_IN_AUTHORIZED_SOURCE"
+    },
+    {
+      "claim_class": [
+        "MATHEMATICAL_STRUCTURE_CLAIM",
+        "EFFECTIVE_MODEL_CLAIM"
+      ],
+      "claim_id": "COH-CLAIM-004",
+      "claimed_coherence_bearer": "rho_OR_A_STATISTICAL_DENSITY_SURFACE; IDENTITY_WITH_COHERENCE_NOT_ESTABLISHED",
+      "conflicts": [
+        "COH-CONFLICT-001",
+        "COH-CONFLICT-002"
+      ],
+      "controlled_paraphrase": "The crosswalk treats rho as a statistical or density object and a candidate hydrodynamic bridge surface, not as an established coherence measure.",
+      "dependencies": [
+        "A relation between rho and coherence must be stated.",
+        "Normalization, units, locality, and state space are absent."
+      ],
+      "eligibility_for_stage_2": "ELIGIBLE_ONLY_AS_BOUNDED_SURROGATE_CLAIM",
+      "exact_source_artifact": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "fundamental_emergent_or_effective_status": "CANDIDATE_HYDRODYNAMIC_OR_STATISTICAL_BRIDGE",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "STATISTICAL_OR_DENSITY_SURFACE",
+      "observable_or_operational_content": "NONE",
+      "original_project_terms": [
+        "rho",
+        "statistical / density surface",
+        "Candidate hydrodynamic bridge surface"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "rho | statistical / density surface | Candidate hydrodynamic bridge surface",
+      "scale_and_domain": "Statistical, hydrodynamic, or macro bridge candidate.",
+      "source_authority_status": "SELECTED_CROSSWALK_PACKET_MAPPING_POSSIBILITIES_ONLY",
+      "source_date": "2026-07-02",
+      "source_location": "lines 9-19",
+      "supersession_status": "CURRENT_CANDIDATE_MAPPING_ONLY",
+      "units_or_dimensional_status": "UNSPECIFIED"
+    },
+    {
+      "claim_class": [
+        "MATHEMATICAL_STRUCTURE_CLAIM",
+        "ANALOGY_OR_HEURISTIC"
+      ],
+      "claim_id": "COH-CLAIM-005",
+      "claimed_coherence_bearer": "R_AND_K_ROTOR_CURVATURE_STRUCTURES_OR_EFFECTIVE_METRIC_BEHAVIOR",
+      "conflicts": [
+        "COH-CONFLICT-002"
+      ],
+      "controlled_paraphrase": "R and K are mapped to candidate rotor-curvature analogue surfaces, and effective metric behavior is mapped to analogue geometry; neither mapping establishes identity with spacetime curvature or a gravitational metric.",
+      "dependencies": [
+        "The rotor variables and their transformation laws must be defined.",
+        "Analogue geometry must be distinguished from physical geometry."
+      ],
+      "eligibility_for_stage_2": "ANALOGY_NOT_PHYSICAL_CLAIM",
+      "exact_source_artifact": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "fundamental_emergent_or_effective_status": "ANALOGUE_OR_CANDIDATE_EFFECTIVE_STRUCTURE",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "ROTOR_CURVATURE_AND_EFFECTIVE_METRIC_ANALOGUE_SURFACES",
+      "observable_or_operational_content": "NONE",
+      "original_project_terms": [
+        "R",
+        "K",
+        "rotor-curvature structures",
+        "effective metric behavior",
+        "analogue geometry candidate"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "R, K | rotor-curvature structures | Candidate geometric analogue surfaces",
+      "scale_and_domain": "Candidate CCFT geometric analogue; no GR or QFT-GR closure.",
+      "source_authority_status": "SELECTED_CROSSWALK_PACKET_WITH_EXPLICIT_ANALOGUE_BOUNDARY",
+      "source_date": "2026-07-02",
+      "source_location": "lines 11-19",
+      "supersession_status": "CURRENT_ANALOGUE_CANDIDATE_ONLY",
+      "units_or_dimensional_status": "UNSPECIFIED"
+    },
+    {
+      "claim_class": [
+        "MATHEMATICAL_STRUCTURE_CLAIM"
+      ],
+      "claim_id": "COH-CLAIM-006",
+      "claimed_coherence_bearer": "NONE; C_k IS_A_BRIDGE_ADMISSIBILITY_FAMILY",
+      "conflicts": [
+        "COH-CONFLICT-004"
+      ],
+      "controlled_paraphrase": "C_k is currently an admissibility-only family for checking bridges, not a physical coherence field, an accepted action term, or a varied dynamical law.",
+      "dependencies": [
+        "Any future action role would require separate promotion and reconciliation."
+      ],
+      "eligibility_for_stage_2": "ANALOGY_NOT_PHYSICAL_CLAIM",
+      "exact_source_artifact": "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+      "fundamental_emergent_or_effective_status": "ADMISSIBILITY_ONLY",
+      "local_or_relational_status": "RELATES_BRIDGE_ENDPOINTS_AS_A_CHECKING_FAMILY",
+      "mathematical_structure_if_any": "C_k admissibility conditions and local residual-linkage families.",
+      "observable_or_operational_content": "NONE_AS_A_PHYSICAL_COHERENCE_QUANTITY",
+      "original_project_terms": [
+        "C_k",
+        "admissibility-only bridge-checking family"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "C_k: admissibility-only bridge-checking family.",
+      "scale_and_domain": "Cross-pillar bridge admissibility.",
+      "source_authority_status": "PLANNING_HYPOTHESIS_INDEX_WITH_EXPLICIT_NO_ACTION_AND_NO_VARIATION_BOUNDARY",
+      "source_date": "2026-07-02",
+      "source_location": "lines 5-14",
+      "supersession_status": "CURRENT_FIREWALL_BOUNDARY",
+      "units_or_dimensional_status": "NOT_A_SELECTED_PHYSICAL_QUANTITY"
+    },
+    {
+      "claim_class": [
+        "MATHEMATICAL_STRUCTURE_CLAIM",
+        "EFFECTIVE_MODEL_CLAIM",
+        "UNRESOLVED_LANGUAGE"
+      ],
+      "claim_id": "COH-CLAIM-007",
+      "claimed_coherence_bearer": "NO_EXPLICIT_COHERENCE_OBJECT_IN_THE_WORKING_ACTION; phi_AND_rho_HAVE_STRUCTURE_OR_STATISTICAL_ROLES",
+      "conflicts": [
+        "COH-CONFLICT-002",
+        "COH-CONFLICT-004"
+      ],
+      "controlled_paraphrase": "The noncanonical master-action sketch contains phi structure fields, a speculative rho statistical term, and C_k multipliers, but it neither names nor derives an accepted coherence object.",
+      "dependencies": [
+        "The object inventory must be reconciled with accepted CCFT semantics.",
+        "The C_k multiplier sketch conflicts with the later admissibility-only firewall.",
+        "The action is not canonical or executable native authority."
+      ],
+      "eligibility_for_stage_2": "BLOCKED_BY_CONFLICT",
+      "exact_source_artifact": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "fundamental_emergent_or_effective_status": "NONCANONICAL_WORKING_FORM",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "S_ToE[g, psi, A, phi, rho] with scalar, statistical, and seam-constraint terms.",
+      "observable_or_operational_content": "NONE_FOR_COHERENCE",
+      "original_project_terms": [
+        "phi",
+        "rho",
+        "C_k",
+        "scalar/structure term",
+        "statistical/information term",
+        "seam-constraint term"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "Let fields and objects be g, psi, A, phi, rho with seam constraints C_k.",
+      "scale_and_domain": "Candidate cross-pillar action surface.",
+      "source_authority_status": "P_POLICY_WORKING_FORM_EXPLICITLY_NONCANONICAL",
+      "source_date": "2026-04-04",
+      "source_location": "lines 6-20 and 32-87",
+      "supersession_status": "NOT_PROMOTED; ROLE_TENSION_RECORDED_BY_LATER_FRONTIER_SELECTION",
+      "units_or_dimensional_status": "NOT_A_COHERENCE_UNIT_ASSIGNMENT"
+    },
+    {
+      "claim_class": [
+        "EFFECTIVE_MODEL_CLAIM",
+        "MATHEMATICAL_STRUCTURE_CLAIM"
+      ],
+      "claim_id": "COH-CLAIM-008",
+      "claimed_coherence_bearer": "UNSELECTED_AMONG_phi_chi_R_K_AND_CCFT_FUNCTIONALS",
+      "conflicts": [
+        "COH-CONFLICT-001",
+        "COH-CONFLICT-002",
+        "COH-CONFLICT-003"
+      ],
+      "controlled_paraphrase": "A planning packet proposes future Lagrangian, Hamiltonian, phi, chi, rotor-curvature, source, transport, and exchange-balance derivation routes, but no action, field meaning, or exchange law has been derived.",
+      "dependencies": [
+        "An operational coherence claim and object mapping must precede variation.",
+        "The source and exchange terms remain targets rather than equations."
+      ],
+      "eligibility_for_stage_2": "BLOCKED_BY_DEFINITIONAL_AMBIGUITY",
+      "exact_source_artifact": "formal/docs/paper/CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0.md",
+      "fundamental_emergent_or_effective_status": "PRE_DERIVATION_PLANNING_ONLY",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "Candidate variational routes only; no accepted Lagrangian or Hamiltonian.",
+      "observable_or_operational_content": "NONE",
+      "original_project_terms": [
+        "phi-sector variational route",
+        "chi-sector variational route",
+        "R/K rotor-curvature variational route",
+        "C_exchange phi-chi exchange-balance"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "candidate mesoscopic coherence bridge layer only",
+      "scale_and_domain": "Mesoscopic candidate bridge planning.",
+      "source_authority_status": "PLANNING_PACKET_ONLY_NO_VARIATION_OR_ACTION_EMBEDDING",
+      "source_date": "2026-07-02",
+      "source_location": "lines 3-47",
+      "supersession_status": "CURRENT_AS_PLANNING_HISTORY_ONLY",
+      "units_or_dimensional_status": "UNSPECIFIED"
+    },
+    {
+      "claim_class": [
+        "OBSERVATIONAL_CLAIM",
+        "UNRESOLVED_LANGUAGE"
+      ],
+      "claim_id": "COH-CLAIM-009",
+      "claimed_coherence_bearer": "UNSPECIFIED_MEASURABLE_CCFT_SYSTEM",
+      "conflicts": [
+        "COH-CONFLICT-005"
+      ],
+      "controlled_paraphrase": "The project has a planning map for future measurable systems, observables, controls, baselines, failure modes, and falsifiers, but it contains no selected coherence observable or empirical result.",
+      "dependencies": [
+        "A physical coherence possessor and observable must be named.",
+        "A comparator, sensitivity, and falsifier must be instantiated."
+      ],
+      "eligibility_for_stage_2": "BLOCKED_BY_DEFINITIONAL_AMBIGUITY",
+      "exact_source_artifact": "formal/docs/paper/CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0.md",
+      "fundamental_emergent_or_effective_status": "EMPIRICAL_PLANNING_ONLY",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "NONE; target categories only.",
+      "observable_or_operational_content": "CATEGORIES_OF_FUTURE_CONTENT_ONLY; no actual measurement operation.",
+      "original_project_terms": [
+        "candidate measurable systems",
+        "candidate observables",
+        "candidate controls",
+        "candidate falsifiers"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "candidate measurable systems; candidate observables; candidate control variables",
+      "scale_and_domain": "Unspecified candidate empirical systems.",
+      "source_authority_status": "PLANNING_PACKET_ONLY_NO_EMPIRICAL_VALIDATION",
+      "source_date": "2026-07-02",
+      "source_location": "lines 3-35",
+      "supersession_status": "CURRENT_AS_UNEXECUTED_PLANNING_MAP",
+      "units_or_dimensional_status": "UNSPECIFIED"
+    },
+    {
+      "claim_class": [
+        "MATHEMATICAL_STRUCTURE_CLAIM",
+        "UNRESOLVED_LANGUAGE"
+      ],
+      "claim_id": "COH-CLAIM-010",
+      "claimed_coherence_bearer": "HISTORICAL_COMPLEX_FIELD_IN_UNAUTHORIZED_UNDERLYING_PROSE",
+      "conflicts": [
+        "COH-CONFLICT-001",
+        "COH-CONFLICT-002",
+        "COH-CONFLICT-003"
+      ],
+      "controlled_paraphrase": "The accepted frontier selector reports that historical CCFT prose assigned amplitude and phase-gradient roles to a complex field, while also recording that this material is not native scientific authority.",
+      "dependencies": [
+        "The underlying historical artifact is not an authorized Stage 1 input.",
+        "No amplitude or phase semantics may be imported beyond the accepted selector's bounded report."
+      ],
+      "eligibility_for_stage_2": "HISTORICAL_CONTEXT_ONLY",
+      "exact_source_artifact": "formal/output/CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0.json",
+      "fundamental_emergent_or_effective_status": "HISTORICAL_CANDIDATE_NOT_NATIVE_AUTHORITY",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "REPORTED_COMPLEX_FIELD_WITH_DISTINCT_AMPLITUDE_AND_PHASE_GRADIENT_ROLES",
+      "observable_or_operational_content": "NOT_ADMITTED_FROM_THE_UNDERLYING_HISTORICAL_SOURCE",
+      "original_project_terms": [
+        "historical CCFT candidate prose",
+        "amplitude",
+        "phase-gradient",
+        "complex field"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "The preserved complex-field description remains historical candidate material.",
+      "scale_and_domain": "Historical CCFT candidate context.",
+      "source_authority_status": "ACCEPTED_FRONTIER_SELECTOR_REPORTING_A_PROVENANCE_BOUNDARY",
+      "source_date": "2026-07-29",
+      "source_location": "lines 181-210",
+      "supersession_status": "HISTORICAL_CONTEXT_ONLY_NOT_ACCEPTED_NATIVE_AUTHORITY",
+      "units_or_dimensional_status": "NOT_ADMITTED"
+    },
+    {
+      "claim_class": [
+        "UNRESOLVED_LANGUAGE",
+        "MATHEMATICAL_STRUCTURE_CLAIM"
+      ],
+      "claim_id": "COH-CLAIM-011",
+      "claimed_coherence_bearer": "PROPOSED_RELATIVISTIC_REAL_SCALAR_chi",
+      "conflicts": [
+        "COH-CONFLICT-003"
+      ],
+      "controlled_paraphrase": "The earlier real-scalar coherence route failed closed because no accepted CCFT-to-continuum map or chi semantics justified the representation or its Z2 symmetry.",
+      "dependencies": [
+        "A new representation can arise only through this separately authorized ontology program.",
+        "The failed route supplies a negative boundary, not evidence against CCFT itself."
+      ],
+      "eligibility_for_stage_2": "HISTORICAL_CONTEXT_ONLY",
+      "exact_source_artifact": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json",
+      "fundamental_emergent_or_effective_status": "BLOCKED_SURROGATE_ATTEMPT",
+      "local_or_relational_status": "NOT_ESTABLISHED",
+      "mathematical_structure_if_any": "RELATIVISTIC_REAL_SCALAR_PROPOSAL_REJECTED_IN_V0_SCOPE",
+      "observable_or_operational_content": "NONE_ESTABLISHED",
+      "original_project_terms": [
+        "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED",
+        "chi semantics unresolved",
+        "BLOCKED_COHERENCE_Z2_UNJUSTIFIED"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "representation_outcome: BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED",
+      "scale_and_domain": "Closed native-surrogate v0 representation attempt.",
+      "source_authority_status": "ACCEPTED_BLOCKED_RESULT_REVIEW",
+      "source_date": "2026-07-29",
+      "source_location": "lines 4-31",
+      "supersession_status": "CLOSED_NEGATIVE_BOUNDARY_NOT_REOPENED",
+      "units_or_dimensional_status": "NOT_ESTABLISHED"
+    },
+    {
+      "claim_class": [
+        "EFFECTIVE_MODEL_CLAIM",
+        "UNRESOLVED_LANGUAGE"
+      ],
+      "claim_id": "COH-CLAIM-012",
+      "claimed_coherence_bearer": "CCFT_LANE_NOT_OPERATIONALLY_DEFINED",
+      "conflicts": [
+        "COH-CONFLICT-005",
+        "COH-CONFLICT-006"
+      ],
+      "controlled_paraphrase": "The current readiness authority keeps the CCFT lane paused because open-system, decoherence, mapping, units, assumptions, source-validation, and baseline-equation prerequisites are missing or partial.",
+      "dependencies": [
+        "Open-system QM object",
+        "QM-STAT decoherence bridge",
+        "SCQED EM-QM mapping",
+        "Validated variable, unit, and assumption maps",
+        "Source validation criteria",
+        "Adopted baseline equation family"
+      ],
+      "eligibility_for_stage_2": "HISTORICAL_CONTEXT_ONLY",
+      "exact_source_artifact": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "fundamental_emergent_or_effective_status": "PAUSED_UPSTREAM_PREREQUISITES",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "READINESS_GATE_SET",
+      "observable_or_operational_content": "NONE_ACCEPTED",
+      "original_project_terms": [
+        "paused_upstream_prerequisites",
+        "validated_variable_map",
+        "validated_unit_map",
+        "adopted_baseline_equation_family"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "ccft_lane_status: paused_upstream_prerequisites",
+      "scale_and_domain": "Current science-sprint readiness authority.",
+      "source_authority_status": "CURRENT_SCIENCE_SPRINT_READINESS_AUTHORITY_AT_CAPTURE_DATE",
+      "source_date": "2026-07-09",
+      "source_location": "lines 2-50",
+      "supersession_status": "PRESERVED_READINESS_SNAPSHOT; NOT_COMPLETION_EVIDENCE",
+      "units_or_dimensional_status": "VALIDATED_UNIT_MAP_MISSING"
+    },
+    {
+      "claim_class": [
+        "PHYSICAL_ONTOLOGY_CLAIM",
+        "UNRESOLVED_LANGUAGE"
+      ],
+      "claim_id": "COH-CLAIM-013",
+      "claimed_coherence_bearer": "UNSELECTED",
+      "conflicts": [
+        "COH-CONFLICT-001",
+        "COH-CONFLICT-003",
+        "COH-CONFLICT-005"
+      ],
+      "controlled_paraphrase": "The selected native hypothesis is only that at least one preserved coherence claim may admit an operational meaning and minimal representation without preselecting a scalar, field, fundamental object, or action term.",
+      "dependencies": [
+        "Stage 1 must select one source-faithful claim.",
+        "Stage 2 must adjudicate operational meaning.",
+        "Representation selection is prohibited before Stage 4."
+      ],
+      "eligibility_for_stage_2": "PROGRAM_HYPOTHESIS_CONTEXT_ONLY",
+      "exact_source_artifact": "formal/output/CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0.json",
+      "fundamental_emergent_or_effective_status": "OPEN_NATIVE_HYPOTHESIS_NOT_SELECTED_AS_TRUE",
+      "local_or_relational_status": "UNRESOLVED",
+      "mathematical_structure_if_any": "NONE_PRESELECTED",
+      "observable_or_operational_content": "TO_BE_TESTED",
+      "original_project_terms": [
+        "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+        "controlled operational meaning",
+        "minimal mathematical representation"
+      ],
+      "original_wording_or_tightly_bounded_excerpt": "At least one central preserved ToE coherence claim may admit a controlled operational meaning.",
+      "scale_and_domain": "Bounded native-hypothesis adjudication.",
+      "source_authority_status": "ACCEPTED_FRONTIER_SELECTION_RESULT_NOT_A_PHYSICAL_TRUTH_CLAIM",
+      "source_date": "2026-07-29",
+      "source_location": "lines 299-307",
+      "supersession_status": "CURRENT_PROGRAM_HYPOTHESIS",
+      "units_or_dimensional_status": "UNRESOLVED_BY_DESIGN"
+    }
+  ],
+  "classification_summary": {
+    "analogy_or_heuristic_claim_count": 1,
+    "bounded_surrogate_only_count": 1,
+    "claim_count": 13,
+    "effective_model_claim_count": 6,
+    "eligible_for_operational_test_count": 1,
+    "historical_context_only_count": 3,
+    "mathematical_structure_claim_count": 9,
+    "observational_claim_count": 1,
+    "physical_ontology_claim_count": 2,
+    "unresolved_language_claim_count": 8
+  },
+  "dependency_artifact": {
+    "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json",
+    "sha256": "2bcce2cbde4d0e94f47735e163482c1d05a1d0677ccfce29b89d1f72a6507cda"
+  },
+  "exactly_one_claim_selected_for_stage_2_or_failed_closed": {
+    "claim_id": "COH-CLAIM-001",
+    "claim_selected_as_true": false,
+    "field_or_representation_selected": false,
+    "reason": "This is the only repeated, source-explicit candidate claim that names both a proposed role and a scale class. Its possessor, change, zero, units, and observable are unresolved, making it suitable for operational testing rather than acceptance.",
+    "selected_claim": "CCFT is a candidate mesoscopic coherence bridge layer for the ToE program.",
+    "selected_next_target_after_separate_open": "test_toe_native_coherence_claim_operational_definition_v0",
+    "stage_2_opened": false
+  },
+  "execution_target": "inventory_toe_native_controlled_coherence_claims_v0",
+  "inventory_status": "CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS",
+  "legacy_UEFM_context_admissibility_record": {
+    "admissible_direct_claim_count": 0,
+    "authorized_UEFM_source_artifacts": [],
+    "decision": "LEGACY_UEFM_CONTEXT_NOT_ADMISSIBLE_AS_A_DIRECT_STAGE_1_CLAIM_SOURCE",
+    "reason": "No UEFM artifact appears in the immutable Stage 1 authorized-input inventory. No UEFM term or symbol was used to define, merge, or promote a current coherence claim."
+  },
+  "native_hypothesis_tested": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+  "nonclaims": [
+    "No CCFT validation.",
+    "No claim that coherence is fundamental.",
+    "No real scalar, complex scalar, phase field, density-current pair, tensor, rotor, functional, relation, or nonfield representation selected.",
+    "No master action or action term selected or promoted.",
+    "No pillar or seam closure.",
+    "No observable validated or empirical claim made.",
+    "No closed quadratic or native-surrogate program reopened."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "provenance_and_conflict_ledger": [
+    {
+      "affected_claim_ids": [
+        "COH-CLAIM-001",
+        "COH-CLAIM-002",
+        "COH-CLAIM-008",
+        "COH-CLAIM-010"
+      ],
+      "conflict_id": "COH-CONFLICT-001",
+      "description": "The repository alternates among a mesoscopic layer, an auxiliary chi channel, candidate variational objects, and a historical complex field without an accepted equivalence map.",
+      "resolution_in_stage_1": "PRESERVED_UNRESOLVED; no object identity inferred."
+    },
+    {
+      "affected_claim_ids": [
+        "COH-CLAIM-003",
+        "COH-CLAIM-004",
+        "COH-CLAIM-005",
+        "COH-CLAIM-007",
+        "COH-CLAIM-010"
+      ],
+      "conflict_id": "COH-CONFLICT-002",
+      "description": "phi, rho, R/K, effective-metric behavior, and historical amplitude/phase language have different declared roles; symbolic or thematic similarity does not establish one coherence object.",
+      "resolution_in_stage_1": "PRESERVED_AS_DISTINCT_CANDIDATE_SURFACES."
+    },
+    {
+      "affected_claim_ids": [
+        "COH-CLAIM-001",
+        "COH-CLAIM-002",
+        "COH-CLAIM-003",
+        "COH-CLAIM-008",
+        "COH-CLAIM-010",
+        "COH-CLAIM-011",
+        "COH-CLAIM-013"
+      ],
+      "conflict_id": "COH-CONFLICT-003",
+      "description": "A prior real-scalar route failed, historical complex-field language remains nonauthoritative, and chi has unresolved semantics; no mathematical type is accepted.",
+      "resolution_in_stage_1": "NO_REPRESENTATION_SELECTED; negative boundaries preserved."
+    },
+    {
+      "affected_claim_ids": [
+        "COH-CLAIM-006",
+        "COH-CLAIM-007"
+      ],
+      "conflict_id": "COH-CONFLICT-004",
+      "description": "The historical master-action sketch displays C_k multipliers, while later accepted policy restricts C_k to admissibility-only status and prohibits action variation.",
+      "resolution_in_stage_1": "LATER_ADMISSIBILITY_FIREWALL_CONTROLS; historical action entry remains schematic and nonexecutable."
+    },
+    {
+      "affected_claim_ids": [
+        "COH-CLAIM-001",
+        "COH-CLAIM-009",
+        "COH-CLAIM-012",
+        "COH-CLAIM-013"
+      ],
+      "conflict_id": "COH-CONFLICT-005",
+      "description": "The project calls coherence distinctive and potentially empirical, but no accepted bearer, operation, unit, observable, or baseline equation family exists.",
+      "resolution_in_stage_1": "COH-CLAIM-001_ADVANCES_TO_OPERATIONAL_TEST_WITHOUT_ACCEPTANCE."
+    },
+    {
+      "affected_claim_ids": [
+        "COH-CLAIM-012"
+      ],
+      "conflict_id": "COH-CONFLICT-006",
+      "description": "The 2026-07-09 readiness snapshot pauses CCFT while the later native frontier authorizes ontology adjudication only; this is a scope change, not evidence that the older missing scientific gates were discharged.",
+      "resolution_in_stage_1": "READINESS_DEBT_PRESERVED; ontology inventory does not resume empirical or seam work."
+    }
+  ],
+  "schema_id": "toe.native_coherence.controlled_claim_inventory.result.v0",
+  "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+  "source_bound_claim_inventory": [
+    {
+      "artifact_id": "frontier_selection",
+      "claim_ids": [
+        "COH-CLAIM-010",
+        "COH-CLAIM-013"
+      ],
+      "path": "formal/output/CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0.json",
+      "sha256": "83df6a3f5844d27702ee099830e8e64a29d3176c45e467a6ec73841a12aa9d1a",
+      "source_authority_status": "ACCEPTED_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_CALCULATION",
+      "source_date": "2026-07-29"
+    },
+    {
+      "artifact_id": "frontier_selection_review",
+      "claim_ids": [],
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "2bcce2cbde4d0e94f47735e163482c1d05a1d0677ccfce29b89d1f72a6507cda",
+      "source_authority_status": "ACCEPTED_INDEPENDENT_SELECTION_REVIEW_AND_STAGE_DEPENDENCY",
+      "source_date": "2026-07-29",
+      "zero_claim_reason": "Establishes authority and nonclaim boundaries rather than an additional coherence ontology claim."
+    },
+    {
+      "artifact_id": "coherence_admissibility_hypothesis",
+      "claim_ids": [
+        "COH-CLAIM-001",
+        "COH-CLAIM-006"
+      ],
+      "path": "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+      "sha256": "1603011e475595cce40f6e36310198952aa48b2fe351cba129ff065caf05b5ec",
+      "source_authority_status": "PLANNING_ONLY_HYPOTHESIS_INDEX",
+      "source_date": "2026-07-02"
+    },
+    {
+      "artifact_id": "ccft_to_toe_object_crosswalk",
+      "claim_ids": [
+        "COH-CLAIM-002",
+        "COH-CLAIM-003",
+        "COH-CLAIM-004",
+        "COH-CLAIM-005"
+      ],
+      "path": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "sha256": "d833bbe2933de80effb2ee425e59d9c29078532c8f8ab65663327e5f0d9a96ce",
+      "source_authority_status": "SELECTED_CROSSWALK_PACKET_MAPPING_POSSIBILITIES_ONLY",
+      "source_date": "2026-07-02"
+    },
+    {
+      "artifact_id": "candidate_master_action",
+      "claim_ids": [
+        "COH-CLAIM-007"
+      ],
+      "path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867",
+      "source_authority_status": "P_POLICY_WORKING_FORM_EXPLICITLY_NONCANONICAL",
+      "source_date": "2026-04-04"
+    },
+    {
+      "artifact_id": "ccft_variational_program",
+      "claim_ids": [
+        "COH-CLAIM-008"
+      ],
+      "path": "formal/docs/paper/CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0.md",
+      "sha256": "1320659c003c12776ca0d650d39ff2c54043b4c6ba9438fbb7a6dda80216db52",
+      "source_authority_status": "PLANNING_PACKET_ONLY",
+      "source_date": "2026-07-02"
+    },
+    {
+      "artifact_id": "ccft_discriminator_map",
+      "claim_ids": [
+        "COH-CLAIM-009"
+      ],
+      "path": "formal/docs/paper/CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0.md",
+      "sha256": "dc2d78bc9c663d5e4d87e3d3922798ec940849581f46a0ffc25712e91e44d2ac",
+      "source_authority_status": "PLANNING_PACKET_ONLY",
+      "source_date": "2026-07-02"
+    },
+    {
+      "artifact_id": "pillar_seam_readiness",
+      "claim_ids": [
+        "COH-CLAIM-012"
+      ],
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1",
+      "source_authority_status": "CURRENT_SCIENCE_SPRINT_READINESS_AUTHORITY_AT_CAPTURE_DATE",
+      "source_date": "2026-07-09"
+    },
+    {
+      "artifact_id": "closed_real_scalar_review",
+      "claim_ids": [
+        "COH-CLAIM-011"
+      ],
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "4d6271e5688352a96ce9b7ab1abadd669e167394d337f1b5db37d5dd3934ec38",
+      "source_authority_status": "ACCEPTED_BLOCKED_RESULT_REVIEW",
+      "source_date": "2026-07-29"
+    },
+    {
+      "artifact_id": "closed_native_surrogate",
+      "claim_ids": [],
+      "path": "formal/output/CALC-TOE-NATIVE-SURROGATE-V0-BOUNDED-CLOSEOUT-v0.json",
+      "sha256": "ec270a6e7f23f06dd66162c5f4deee4e654e931bf158fde4db1444e4a578f3e9",
+      "source_authority_status": "CLOSED_PROGRAM_TERMINAL_RECORD",
+      "source_date": "2026-07-29",
+      "zero_claim_reason": "Confirms the blocked review is closed and cannot be repaired; it adds no new coherence meaning."
+    },
+    {
+      "artifact_id": "bounded_governance_validator",
+      "claim_ids": [],
+      "path": "formal/python/tools/bounded_program_governance.py",
+      "sha256": "1ba7998ad58301435bca6523aff01e450a406ad14abc7504c10bfd733fbb1619",
+      "source_authority_status": "GOVERNANCE_VALIDATOR_NOT_A_SCIENTIFIC_CLAIM_SOURCE",
+      "source_date": "2026-07-29",
+      "zero_claim_reason": "Used only to validate the bounded OPEN/CLOSE lifecycle."
+    },
+    {
+      "artifact_id": "quadratic_closed_program_manifest",
+      "claim_ids": [],
+      "path": "formal/docs/release/bounded_program_manifests/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_MANIFEST_v1.json",
+      "sha256": "b4ea5f2ba014c47b4b66adb49ea70661c95a1a5915d1ebc428ee115588df4f54",
+      "source_authority_status": "CLOSED_CONTROL_PROGRAM_MANIFEST",
+      "source_date": "2026-07-29",
+      "zero_claim_reason": "Used only to prove the closed quadratic lane was not reopened."
+    },
+    {
+      "artifact_id": "native_surrogate_closed_program_manifest",
+      "claim_ids": [],
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_SURROGATE_V0_MANIFEST_v1.json",
+      "sha256": "35eecf20a82ac68b4fcd59ddd41cc71df09fa0845b5d3eeced85ecef0d7ea3af",
+      "source_authority_status": "CLOSED_NATIVE_SURROGATE_PROGRAM_MANIFEST",
+      "source_date": "2026-07-29",
+      "zero_claim_reason": "Used only to preserve the closed real-scalar route and zero-repair boundary."
+    }
+  ],
+  "symbolic_similarity_meaning_transport_firewall": {
+    "denied_transports": [
+      "CCFT phi is not identified with the master-action phi or the prior provisional matter scalar.",
+      "The chi auxiliary channel is not identified with a relativistic real scalar.",
+      "rho is not identified with coherence merely because it is a statistical or density surface.",
+      "R and K rotor-curvature structures are not identified with spacetime curvature.",
+      "Effective metric behavior is not identified with the physical gravitational metric.",
+      "C_k admissibility checks are not identified with physical coherence dynamics.",
+      "The local phi theorem-linkage triad is not identified with CCFT or seam closure.",
+      "Historical complex-field language is not accepted as a current representation.",
+      "A planned observable category is not an observed coherence effect."
+    ],
+    "rule": "Tokens, symbols, equations, and shared vocabulary carry only the meaning assigned by their exact authorized source. Identity or transport requires an explicit accepted crosswalk.",
+    "transported_equivalences_accepted_in_stage_1": []
+  },
+  "terminal_outcome": "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE",
+  "verdict": "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS_EXACTLY_ONE_CANDIDATE_CLAIM_SELECTED_FOR_SEPARATE_OPERATIONAL_TEST"
+}

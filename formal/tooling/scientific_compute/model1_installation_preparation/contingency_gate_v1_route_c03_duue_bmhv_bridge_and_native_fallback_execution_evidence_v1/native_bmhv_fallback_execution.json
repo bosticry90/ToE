@@ -1,0 +1,1255 @@
+{
+  "activation_basis": "BRIDGE_PROVED_INCOMPATIBLE__VERSIONED_NATIVE_PATH_ACTIVATED",
+  "artifact_sha256": "fbc757532a32a6b10b99515f6412ab35f9ccdfded3477ff7e49059dbe7b7c18e",
+  "bridge_execution_sha256": "3b6f3b1cf6e8a66d82a9b4e764c92ee9ec48d79732cb8a6024f3f95527c857a1",
+  "case_id": "ROUTE-C-03",
+  "f1_request_ledger_sha256": "a7555bd2ec9d969220664425a0de410366acd13581468a8546a8774631f16961",
+  "f4_checks_sha256": "a07320915b5bf9b1ee5176d93eb61f10b4e8597396654b235438831cb457a703",
+  "fallback_contract_sha256": "6f2954d76eea2b15ada64519fcad72bfa4a500fc77148e4b6ca3f84b76190b5e",
+  "fallback_provider_id": "DUUE_NATIVE_BMHV_RECOUPLING_WITH_TYPED_FIERZ_DEFECTS_v2",
+  "first_failed_closed_stage": "N7",
+  "historical_or_modern_duue_projection_consumed": false,
+  "implementation_status": "PARTIALLY_EXECUTED__N0_THROUGH_N6_COMPLETE__N7_FAILED_CLOSED",
+  "mixed_request_execution": {
+    "all_four_have_p4_zero_typed_defects": true,
+    "count": 4,
+    "diagonal_generic_d_formula_used": false,
+    "physical_coefficients": [
+      "0",
+      "0",
+      "4",
+      "4"
+    ]
+  },
+  "open_index_request_totality": "38/38",
+  "ordered_stage_results": [
+    {
+      "name": "CUSTODY",
+      "requirement": "Bind the frozen BMHV scheme and 38 source requests answer-blind.",
+      "stage_id": "N0",
+      "status": "PASS"
+    },
+    {
+      "name": "OPEN_SPINOR_CARRIER",
+      "requirement": "Represent every request as an exact four-open-spinor-index BMHV tensor before choosing a bilinear pairing view.",
+      "stage_id": "N1",
+      "status": "PASS"
+    },
+    {
+      "name": "P4_EXECUTION",
+      "requirement": "Apply the frozen P4 map to the open-index tensor without any generic-d Fierz identity.",
+      "stage_id": "N2",
+      "status": "PASS"
+    },
+    {
+      "name": "FOUR_DIMENSIONAL_RECOUPLING",
+      "requirement": "Apply the independently frozen exact four-dimensional Fierz map only after P4, with pairing and Grassmann signs explicit.",
+      "stage_id": "N3",
+      "status": "PASS"
+    },
+    {
+      "name": "PHYSICAL_LIFT",
+      "requirement": "Lift the recoupled four-dimensional physical representative back into the barred BMHV subspace.",
+      "stage_id": "N4",
+      "status": "PASS"
+    },
+    {
+      "name": "NATIVE_FIERZ_DEFECT",
+      "requirement": "Define and freeze E_F[T;q]=T_open(d)-Lift(F4_q(P4(T_open(d)))) as a typed, non-eliminated evanescent defect in a common open-index carrier.",
+      "stage_id": "N5",
+      "status": "PASS"
+    },
+    {
+      "name": "MIXED_REQUESTS",
+      "requirement": "Execute the same construction for all four (0,2) requests without diagonal-gamma extrapolation.",
+      "stage_id": "N6",
+      "status": "PASS"
+    },
+    {
+      "finding": "THE_38_TYPED_DEFECTS_EXIST_BUT_EXACT_EQUALITY_DEPENDENCE_AND_ALL_PROVIDER_TRANSITION_RULES_ARE_NOT_YET_DERIVED__EPSILON_TIMES_PHYSICAL_TERMS_FROM_d_DEPENDENT_CLIFFORD_TRANSITIONS_REMAIN_EXPLICIT",
+      "name": "DEFECT_EQUALITY_AND_RELATIONS",
+      "requirement": "Derive exact equality, zero, dependence, and provider-transition rules for request-local defect generators while retaining source pairing and orbit.",
+      "stage_id": "N7",
+      "status": "FAILED_CLOSED"
+    },
+    {
+      "finding": "NO_NATIVE_DUAL_OR_RESIDUAL_CLOSURE_MAY_BE_CLAIMED_BEFORE_THE_DEFECT_RELATION_ALGEBRA_CLOSES",
+      "name": "PROJECTOR_AND_RESIDUAL",
+      "requirement": "Construct native physical/defect dual actions sufficient for the actual Route-C03 residue and require zero unexplained residual; no completeness beyond the proved request-local domain.",
+      "stage_id": "N8",
+      "status": "NOT_EXECUTED__BLOCKED_BY_N7"
+    },
+    {
+      "finding": "NO_NATIVE_DUAL_OR_RESIDUAL_CLOSURE_MAY_BE_CLAIMED_BEFORE_THE_DEFECT_RELATION_ALGEBRA_CLOSES",
+      "name": "ADVERSARIAL_REPLAY_FREEZE",
+      "requirement": "Run independent controls, mutations, deterministic replay, and freeze before historical/modern comparison.",
+      "stage_id": "N9",
+      "status": "NOT_EXECUTED__BLOCKED_BY_N7"
+    }
+  ],
+  "physical_lift": {
+    "deterministic": true,
+    "disputed_answer_independent": true,
+    "epsilon_times_physical_admixture_in_canonical_lift": false,
+    "p4_compose_lift": "IDENTITY_ON_THE_ONE_DIMENSIONAL_Q_DUUE_PHYSICAL_CODOMAIN",
+    "rule": "EMBED_Q_DUUE_IN_THE_BARRED_BMHV_SUBSPACE_WITH_IDENTICAL_FIELD_GAUGE_FLAVOR_AND_GRASSMANN_ORDER"
+  },
+  "projector_coordinates_emitted": false,
+  "provider_ladder_effect": "NONE__REMAINS_3_OF_6",
+  "qualification_status": "NOT_QUALIFIED",
+  "request_partition": {
+    "mixed_0_2": 4,
+    "relation_required_lower_rank": 4,
+    "relation_required_tree": 2,
+    "source_generated": 32
+  },
+  "route_c03_receipts_effect": "NONE__REMAINS_6_OF_18",
+  "route_c03_residual_claimed_zero": false,
+  "schema_id": "STRICT_MODEL1_ROUTE_C03_DUUE_NATIVE_BMHV_FALLBACK_EXECUTION_v1",
+  "scientific_saturation_authorized": false,
+  "stages_passed": 7,
+  "status": "NATIVE_BMHV_FALLBACK_EXECUTED_THROUGH_TYPED_DEFECT_CONSTRUCTION__N7_RELATION_ALGEBRA_FAILED_CLOSED__NO_CREDIT",
+  "typed_defect_count": 38,
+  "typed_defects": [
+    {
+      "defect_id": "DUUE-NATIVE-EF-ac362a1fa93459e95baae6a372984137fcdd419a9c6a418ad6ecb961cb317a81",
+      "definition": "T_open(d)-(1)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            0,
+            0
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "DUUE-V3-BMHV-304bc283bc136e5707f15528028d95427b8e1c32b573460457e409bedd9ac735",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "1",
+      "request_id": "328c300b420031db95df5b20319d9940c61881e58df326251f134678683a1367"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-e086deda0efa3dce39998c83f0139506d439db485e87261d5cca35d2c289d567",
+      "definition": "T_open(d)-(4)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            0,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "DUUE-V3-BMHV-4af2da6b8a92aa756656b44bda4b13575d52e4447f160e87ae811cf5d98c99ed",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "4",
+      "request_id": "f05814e4f0a3c6c06be213e440a92f1e4b0bbacd9500aa2854c5bafc6f690ac7"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-b5d5dd472417aa8ec68e5023b38e9ec8af07c9ff9374907a99d25826bbdbff5c",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            0,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "DUUE-V3-BMHV-547607567b569ab066eb0ebe7da743f66dc0164e023ac2d142e070096ccb2dec",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "d205659c83eb97f3d9dcd76afac94352b676777a845c870c85c3cdb8a3aca4d5"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-38385d7aceb965876367472b835056703610c573db4c9a349d53d9b6f4d971bc",
+      "definition": "T_open(d)-(1)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            0,
+            0
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "DUUE-V3-BMHV-5fd98c54ab2ff2833771bd9460ff2e569dc31760a90b2948b3b8f57858c542d5",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "1",
+      "request_id": "bd172cf6c6044358cf0ff05ba6afe8cb7c32f7756b28650c3d226ff7ca84039f"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-6ee20094e32e387dcd51097b45a11f773b633e0228a9c7840f5b74e18b6fe2fa",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            0,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "DUUE-V3-BMHV-daf3f89430551e54ae36db31bddeb5ecb29408afdf8236301057aa6341ad1f5f",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "2f063f1f7ed8629af78d9bdc5f21aafea1b7085e63bb972ae301104ebf13a3f3"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-f08e4a72173071c2ef3c2f847a6437d29cc01daf4a550c9da89caaf9f85620c3",
+      "definition": "T_open(d)-(4)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            0,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "DUUE-V3-BMHV-f64628ef9510dc6d08e6ee230a742b654475b201d1c58b9e997218225439813c",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "4",
+      "request_id": "4aca7735de00e12c33ac46a28f4a5fb77f60b6825ac195b28a2218010a74dcf3"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-8b8a0831d158306804086d87b3e1a309e50f80401f7980e15eb08d51f2426345",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-0d62a4c3a9e7789f38e5f9eeef320ee540864028ae81713461528f6bdb97d6b2",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "8436207c7a8ff0e4c7b32869c9ad6cd1322efdc68a09db0a6a916252a6dce407"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-79178b7ac09fd2bed0a564608e2a5e30d7e44faa305d271d157daf6f414dd1cf",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-1175bbbb0085c70777d6b76a4b31887c55cc24e971ac79165272b09bfaef5f5e",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "90112a06809e5e862fd44daefb0d1bc8f5a437da741671748201694e8e326680"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-87df5a70375b194c7ba50c3f919134a1f685c4bbdd9f61b750ba82d1ddde33f3",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-1f09d76e7fb1c90b1d76a591efea5adcee9563261f8cd88325c221e694e84e78",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "c65eebc3d6fea7d07030c6d03c6fe5cce8ba5ebc74fa44ee6abe48228c0c89c5"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-537f23bf91393d1af85cf7f6e983d37b4ff81ae5945d2bcb1a61be06781fd6b9",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-30e221e18d21e610226af615a5a177e1ae33dc073f9f8b7aa3fe22054ab5e11d",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "17ac61cb48c4d865d0a86a5cb3f3eed20644d262bc73faa885b3c8763cd8f659"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-81b8a3a1e565e6c62e45f8b2b65185d05ef7b83ea714d5a6be03b4dc4d5211b6",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-3ed6300d6250182a2a86e3282620a3886859fe4929eb713f850d22f053926d22",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "c275e71711c32484f1464c6adcbff74fd831cbd2599b1f66bc318874f881f3ec"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-a3b275a36e931fc40fae2bb8ce22c34672baef1f0828c32aaf5ca44781d777f6",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-412692aa3f9101579ab07641f378bc807aa4d8fd2c4af2323eb7ec4aed470345",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "53664efa221aa00d14cdd8e39dedae82548ee3da387086cf4cb1ac86e4162cf0"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-bbbdefe13d1dac98d3607985c7a2e0bbc69f06192eb8267209f5ff3894f4d7fe",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-4ee8e68ccf09eb868886d9a648618d657cdb3c0be245cfccc1672497fa171284",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "6ef23e3724ea86e358e16fd6365c0ef09c696b53beb626d699adcfc8e3163be1"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-5a0d66f704cdde230c71611a21f5d615d2b4379ad944bf651c85ef49bc9e689e",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-53e2eeb594adceeec783a5b897d937411201bffad24a7c48f996513a8e77de0f",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "7a0b250b18f225e0473087e209abdee0564462a9e36e64c5a4aa9b9021ba8265"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-ce0f0cab302310ce1d36a26576e43b124d1d220e18e9e1b728041203c51ba599",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-5524132590566ca5e622d42c8f48214423282601b1c2efc794f34a6da74994f0",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "6e195d21581cecd9dc0ba059cf898f7c8c8f57002b9aa545f440e5b3a75c86ef"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-b97e2442d9245e11daa0459c705f09a5dbb51260674138fd3455ed6d08294d00",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-61b89474e34c97ed6f199a0a94651b3452c52177b67a49bb0440c9d937041a56",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "60835dc3b0c79f4b9f3c2cedc0e1b8ddc6e22573632de3973e8cbeca1b11a882"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-074b558fb7ec8451301e45ea2d637008dd39575a80ba267a4506d62559f268a3",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-63d12a46480c005a7bb035691d4c4c6666071935dc95e63a33fba72de828fc46",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "ebdc6f57fde809ab65797e890d294db3af784e7caaf21cb0863404d91f333a20"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-942a4d292c73248869cd48c26510db422d1207a8da20800c161428cd8cf9a752",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-719704fc8f08bf21dd648a6d8dc4ea34f82b1a00b73e5cc08c51ee7852a713d9",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "e3687f2690c7ecaff2fb9c8bacd0ef905cd74c250c66d9fb0a8e7aea2a7b94e4"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-31bca059c3a029deab48d138890397b1247a39009c6352ecd283baa871ac43fd",
+      "definition": "T_open(d)-(8)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7a59e5ba4969d338786a7608982e30420bc518909e74e1399d6676a14a3cde80",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "8",
+      "request_id": "a4224c9c9e042ab8129e93dcfe26e3aedaacfc295641e19ebf8d9ddd767a9ea1"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-c23bb97c98a0386fea6f0c022a8c91f7f483f2c388fa541f0a769265629183f7",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7e759ccf2ad6d501189234b1468c5832b6d5cf875457f5bb17e6ec70fe5ed701",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "5197c4632762db64dc1b03ed88f9e936d5d96f12f55714142809b4912ce1094e"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-b37918d59b4a02797785ac84b904e8b03c7cc674f0079427d2ac8e656bd3d645",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7f996c738f648a2b62cd815b474956ce33ccee37b0f90402dffc51658121bfa7",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "abe1f55c383b170a77c8d85fea6145ee3297b674dfae953a814d0feefd2346e7"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-38a2fb42646dcdad95f72dc054f9782d8eb714c8f7c2821de8de6542b18c907a",
+      "definition": "T_open(d)-(16)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-81f6fb6e643c61431854dde2d65efa64b2f893de4a408beea365d84e7a411035",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "16",
+      "request_id": "6a8c8b5fdf0af0226c8e98e788635ab667ac24ca9d1ce081b11f5cf0f420120f"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-fcd1b083a220d4116aee554007000d96ca14cdd5129631d4d3ca1c36cc86e684",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-8c0f27c15549f131bc117e935f054629c11dd325166621b74becd40bb625e6d2",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "f1844f7a82d2133792933279202cca9d50851b59f966536a7ea0fa0f98741b18"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-fc9bc6fe966d9bd0427188ca1311d46d60e199ff588e959a405e7cac56467ce7",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-9103364d4dd2bc790e21582e87dfcfbebb2783dfb5e6c253b8ccda6f2fffdd97",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "7827aa2bf5f0f9662d860f26cf7c871d46363c35daf867a3c1ef62bb1285045c"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-b198cfbb116a3adbf6c6f26e43bf9f5564b941c85b79c1e24129cce1058212f5",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-95986cecdac319a40f72008eede2adf7145cfe3b42c8bec9eee9f3cf03f7f283",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "0061c0f5f89efd5c87aadd261dca577aad21dfa2b877a50c1f69ca2b6c4058ef"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-0b825134edc0e1299d2f8843b8ad8ce80ba1a7c2a7c0a8e741133d0fd674eeb5",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-a691a4064299ceff91754f89cf9c91bf8cbd028c8be50c833d11ea0ac2cba005",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "ab28089fca159cc072eb09ccc04a61d3601fdd173eeeec3835caa0ddd3684ced"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-9cf7e723f6a95dae5b3f3f23af4071c523f5ab158a9d130d6cee12879ef7f381",
+      "definition": "T_open(d)-(8)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-b7b8e4966f0fa9f0f6eee64aa2a47fe7618fb11e3f0381dcf1d85a469ccc7c94",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "8",
+      "request_id": "f66cc1acf2b3706f8bee1957d4b2118e0edb6b1c9c88b9aeeaf1df5a3f38645c"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-6425db920d1862c2fea1bee64d73b37ac5d82d1f812e632792073a91f009a18c",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-bccec3eef0118d1eb5fdd30c9f6b0923537bc3eaefae4f551514957672e4c0cd",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "a1ef1ff37fbea953d8c51b6c2206074b2810400d5906e1b61d813ed649be8f4e"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-1ffd4d1c47b1474201e92b689fb335ef56964dacf805cfab4d6db432cc009860",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-bef92f25430cffedf3ab45e36bc20b0959e524fabf9c0cf146da41de6ae1f76a",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "c9787021dbcc726916a1cd6e8e5093065d143dbd338c5dc4c2effa5a2381cc8d"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-45bca81d76a72da4b72fc9ef3690cdd99257911916b3b99c4a3551819cd65b98",
+      "definition": "T_open(d)-(16)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 0,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-c6ff1ece9037e2e428ac3e578e9ce3d4a10e2ee0acf2913811a8f6a70882ac77",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "16",
+      "request_id": "dc00b4ef599090b854e9eea2b07db7361991db595c52267b3eeeb36c72bfc024"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-35ed398c797a2d8cb917990644c371852ca529f3b8baecdc2d69192e3b2d578b",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AT_GAUGE_AND_PROPAGATOR",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-caa65974bb8c868976426003cfb778f65721bce12a53118a8c6367b1a03f87d3",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "8736134d202d205ab7e4d1ea867f4dade756bc6befef3203c4177bc98803ee5f"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-1b197d49d732e403cc93e19c335c877d011ee9a2c2df7f8a143a1ea80d1b85e3",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-cf0b2e284e4c0ddbb5c4a42aa49bab7d9330ae9d80937448767907b9a5b1e293",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "fa56f5fc50186fd2aeecd3befa27918ef5e02b35d007abec90c528ff9a275a6c"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-27945efa0616c0df356bdea920c404f79fffe844457f0046995d10d1e31d5b9d",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-d5ae39ca9efe811abe2a71fe453813e4dbe3bdcc77fa2496c8d9ffd354f5ff0e",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "58f0c367952d7d19dffbc5d30c76d885dc3c8e8da8b852ef0356097475090618"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-55b964d4609a6969ed030a982edfddf8f93d355c8004cb7d1862318fb7161363",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-ddfe384adc37ecfb8123377ff198bc2dda1487c0dc63f73b05e6cb33bedddc6c",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "5004d9db0ce98ba845e1bd4dc4bbd8a253154855283f8300cdb50b411ef8e829"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-94371619786874fd4109895386490b85a5de225c0f00c5f36a1f103343e85407",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 2,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "9c829bfde99642788c404059af4ddd837374e20dc358e9cb8ff5c1faa277971b",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_B_DU2__U1E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-e51e6b569227a42158dd05a707018b75df285e30690f371300e20c059bb622b7",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTICAL_UR_EXCHANGE"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "b15162281ee68a0d142dbf0ce5aea628a3cea2c0c5d30cf2e6826106840a6752"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-1a1bb2dc787baebffc2b6d207346f53d0b0a925c2e7686b6b21210d0771e6d38",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_WITHIN_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-e8561fb5b6183d205453312f91156f4647279fa558e78e0942fad75ca170ccb4",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "586afde507a871274ec0fbda8640e724068a8cdf1ded47fbbd60abb268f1e81c"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-cffc6bb05ec7e6ac6811ad7ee7a0bfc7596e4f74465e9eb1ce0c93ce66dd94ab",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_PARALLEL_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-ed38fd6a6a724151bbdf39655a4a1934e714378a132e38fc0db4784562e9060b",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "4ffcc36738d684792cd34add5c790e4bcba54ac75c685cc957333e471f82a9d2"
+    },
+    {
+      "defect_id": "DUUE-NATIVE-EF-61964dcf64b63367391075d19e1f8de589730716001e148dc150c517aa978832",
+      "definition": "T_open(d)-(0)*Lift(Q_duue)",
+      "evanescent_classified_not_deleted": true,
+      "identity_key": {
+        "angular_topology": "AL_CROSSED_ACROSS_CHAINS",
+        "bar_hat_signature": {
+          "hat_rank": 1,
+          "per_chain_gamma_rank": [
+            2,
+            2
+          ]
+        },
+        "charge_conjugation_and_chirality": "C_TIMES_CHAIN_TIMES_P_R",
+        "exchange_history_fingerprint": "d855f43bf2b5adc0618a307cd764ccda3168f277101ebcd22fd8c80d60cea8b0",
+        "four_dimensional_fierz_rule_hash": "ef5cf6de2cb8e9e318a68a88bbb28582227036394c1c030dd383e1abf5cba5f0",
+        "input_and_output_pairing_views": [
+          "PAIRING_A_DU1__U2E",
+          "PAIRING_C_DE__U1U2"
+        ],
+        "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-fa048261a48bce8a51cf1853d6e7a7ff022c11ff117922a20c4d4941619bab02",
+        "lift_rule_hash": "3ac2cd12713dea6ce403a9139ace669a1b99f799aaaff9f212bb25c4eac895d6",
+        "p4_rule_hash": "77d53ee8bdf437df092bc1600172cbd13d93e1a41e909fb8641dfa56d4a85cbb",
+        "source_orbit": "IDENTITY"
+      },
+      "p4_of_defect": "0",
+      "p4_zero_proved_by": "P4_T_MINUS_LIFT_OF_EXACT_F4_P4_T__WITH_P4_COMPOSE_LIFT_EQUALS_ID",
+      "physical_q_duue_coefficient": "0",
+      "request_id": "6da968283686030e25e5868218a95e2d751eeaae0b380434b5ff57e0262eee18"
+    }
+  ]
+}

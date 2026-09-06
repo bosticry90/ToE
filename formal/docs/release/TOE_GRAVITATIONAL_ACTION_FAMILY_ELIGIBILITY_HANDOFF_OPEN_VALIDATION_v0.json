@@ -1,0 +1,45 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_OPEN_v0.json",
+    "formal/python/tools/toe_gravitational_action_family_eligibility_handoff_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 5,
+  "authority_decision": "AUTHORIZE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_STAGE_5_OPEN",
+  "captured_at_utc": "2026-07-31T18:25:00Z",
+  "event_hash": "a79db55c2367fe8ecd9b984e0657b7431eb6d3d6419a453d079134c4da351b40",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_OPEN_v0.json",
+  "event_sequence_number": 9,
+  "event_sha256": "eb288de2dd8beb60c3aa8b1664f4dc6e00d97339b4d093e9cb5f8103af70896f",
+  "opened_from_commit": "2213b9e77c389d6684be38fa353e8b0f78e5e5ca",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "registry_snapshot_hash": "49674c1ed7d7756f6f71e45aef1c672b9245f7915c021b731397cd5ca4a8082d",
+  "schema_id": "toe.gravitational_action_family_eligibility_handoff.stage_5_open_validation.v0",
+  "scientific_output_at_open": {
+    "eligibility_classifications_made": 0,
+    "gravitational_actions_selected": 0,
+    "native_gravitational_principles_selected": 0,
+    "post_eligibility_routes_selected": 0,
+    "scientific_result_created": false,
+    "successor_programs_authorized": 0
+  },
+  "scope_hash": "aec6355853132543dff1bf7c4aa90e65718ab1b192d56340efc9d5d584bd6dd8",
+  "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+  "status": "STAGE_5_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "select_toe_gravitational_action_family_eligibility_handoff_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "route_vocabulary_is_nonexecuting": true,
+    "successor_remains_unauthorized": true
+  }
+}

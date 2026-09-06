@@ -1,0 +1,37 @@
+{
+  "artifact_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_PROPOSAL_PREPARATION_ONLY",
+  "authorized_target": "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0",
+  "captured_at_utc": "2026-07-31T18:55:00Z",
+  "consumed_terminal_checkpoint": {
+    "closeout_commit": "4665b86959587aa95c7cf3114a78b77dae3f566a",
+    "selected_route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "survey_closeout_result_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "survey_closeout_result_sha256": "4e065860ede6ac9955260fb223c802072ce4c8d9e6558890a673def13c7580b7",
+    "survey_closeout_review_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+    "survey_closeout_review_sha256": "1c0dfe17b96f1ccd2bb72df416e5165dbbf165f63acb926a3844405f90cc29fe",
+    "survey_terminal_result": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS"
+  },
+  "permitted_work": [
+    "prepare a bounded five-stage positive native gravitational-principle derivation program proposal",
+    "freeze source, workload, stage, review, terminal-outcome, and mandatory-exit contracts",
+    "distinguish principle recovery and derivation from action construction or postulation",
+    "independently review the proposal for boundedness, source discipline, and nonpromotion",
+    "prepare registry and Lean authority mirrors for the proposal checkpoint"
+  ],
+  "prohibited_work": [
+    "install the proposed program",
+    "open any scientific stage",
+    "inventory or adjudicate candidate principles scientifically",
+    "derive, select, postulate, construct, or vary a gravitational action",
+    "select or endorse a native gravitational principle",
+    "promote the master action, Einstein-Hilbert gravity, quadratic gravity, or archived evidence",
+    "treat the C_k firewall as a physical action term",
+    "perform a gravitational calculation",
+    "authorize or open a scientific successor"
+  ],
+  "schema_id": "toe.positive_native_gravitational_principle_derivation.bounded_program_preparation_authority.v0",
+  "status": "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED",
+  "user_authority": "EXPLICIT_CURRENT_REQUEST",
+  "zero_scientific_execution": true
+}

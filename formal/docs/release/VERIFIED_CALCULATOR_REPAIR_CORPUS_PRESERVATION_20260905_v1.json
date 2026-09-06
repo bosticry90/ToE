@@ -1,0 +1,36 @@
+{
+  "schema_id": "VERIFIED_CALCULATOR_REPAIR_CORPUS_PRESERVATION_v1",
+  "created_on": "2026-09-05",
+  "scope": "Only the pre-existing C03/RV repair modules and their 228-test regression corpus; unrelated repository changes are excluded.",
+  "test_command": ".venv/Scripts/python.exe -m pytest -q formal/python/tests/test_typed_provenance_kernel_v1.py formal/python/tests/test_runner_provenance_verifier_v4.py formal/python/tests/test_c03_normalization_v1.py formal/python/tests/test_seven_record_source_candidate_v4.py formal/python/tests/test_rv_source_derivation_v2.py formal/python/tests/test_c03_physical_dag_v1.py",
+  "test_result": {
+    "passed": 228,
+    "failed": 0
+  },
+  "sha256": {
+    "formal/python/toe/generic_runner/typed_provenance_kernel_v1.py": "96829adb8c95760f8dad7e608e3f42bb25d806320a989127932c3c3d5bd864d6",
+    "formal/python/toe/generic_runner/provenance_verifier_v4.py": "b96cb42187c5c75392518924468a1b7e46619963cdcd75af49f148e7ab58fa2d",
+    "formal/python/toe/generic_runner/c03_normalization_v1.py": "57c9e3108d41042b6f29865021b28f22ddbe08fd2695ec3cbfb8310e53f04325",
+    "formal/python/toe/generic_runner/c03_source_derivation_v1.py": "2b23b63c1d922ba59f981b40d5c26ce4160d8028a7a5f2a9efbd151630f64e30",
+    "formal/python/toe/generic_runner/c03_native_projection_v1.py": "650ce873e8b95f7f8b1d4a15c04e24df97029568c605328a583e5bf72d9e04db",
+    "formal/python/toe/generic_runner/c03_physical_dag_candidate_v1.py": "5705781d4893e82b7af7605b409c1dcf280cb72a58606edaa6db2821d9c15999",
+    "formal/python/toe/generic_runner/c03_physical_dag_profile_v1.py": "f050f899ae58ae5d3fa828e88000db6edf1b0c270a42685685021c23d414454a",
+    "formal/python/toe/generic_runner/c03_physical_dag_verifier_v1.py": "e13b576bad5b2efe6651b934fb4e001ff9e1a4cda84f82a0d9fbae56ce38dd73",
+    "formal/python/toe/generic_runner/rv_source_derivation_v2.py": "9e9452d04d18e46be11fc137e690fa76fbf9e25071660aa74508d1f5f7f4f1b4",
+    "formal/python/toe/generic_runner/seven_record_source_candidate_v4.py": "d3e389580c322c972e0d8183f196b1a90ded0cb4f57d5b7e21dd4d7c537257be",
+    "formal/python/toe/generic_runner/seven_record_source_candidate_v5.py": "59b700d20954424f02616deea0031b780b1e511e33477c9b776cdd425de61490",
+    "formal/python/toe/generic_runner/seven_record_c03_checked_candidate_v1.py": "351205d74f29018a9795b9287534432651aebf62e6cec0cd3a78e4bef24584f3",
+    "formal/python/toe/generic_runner/fine_verification_profile_v1.py": "c6d2a9b4699f044f264f2cfe46c03fed376a4b55ca1f6100661320aa7c92bc16",
+    "formal/python/toe/generic_runner/native_e_operation_checker_v1.py": "9b5185dba7004485270e636a9318aaeffb725c504aaa834c543f6b678c4c47d9",
+    "formal/python/toe/generic_runner/rv_operation_checker_v1.py": "ca3828321eae58f84b5530149f102c2e41e130b828c3c4748cac8dab5ac85874",
+    "formal/python/tests/test_typed_provenance_kernel_v1.py": "bcb52ac7952b4551859ac57cfd965e26683e740b76cdeb901d1e2f1e8b685324",
+    "formal/python/tests/test_runner_provenance_verifier_v4.py": "c63dc425bc27c13eab4a5a7e7c0916379cd31fd09d4cf58749167876181f88ae",
+    "formal/python/tests/test_c03_normalization_v1.py": "7a6d321f361ed48ffa04efd1f41003bf48b828d0d614a833cacea0d077858a99",
+    "formal/python/tests/test_seven_record_source_candidate_v4.py": "20bf8ad61c8bc0e694fff5d21c2089b51655839cf9cf5b88634cc744122bffce",
+    "formal/python/tests/test_rv_source_derivation_v2.py": "91cd8ef490e07e14427af36cf9ca5d3ec78b79358f4fbc3456d9513b68cede5c",
+    "formal/python/tests/test_c03_physical_dag_v1.py": "056bbdb7b3603712e78d8d054ccff24cb9c98a27708d6130d4da6b2a1b24bfa5"
+  },
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

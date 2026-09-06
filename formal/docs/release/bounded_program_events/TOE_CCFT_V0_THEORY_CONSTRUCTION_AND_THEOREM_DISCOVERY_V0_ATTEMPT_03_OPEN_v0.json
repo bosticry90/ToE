@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 3,
+  "event_hash": "770b3dd74b80d0afb8613d79e7ba2e1ce286146e0d92c5c10c9ebf3e082e9caf",
+  "event_sequence_number": 5,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "ab7a31241c213fb1ad8042782af492c174322ded",
+  "previous_event_hash": "a7eb509c34cde7e0da18ec83d15dc35ddce3fdf636bc575e66032b9ac3e485b9",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "registry_snapshot_hash": "9b31549f60499b1affe70c49fd08b9f24e21ae829e9d2e76b3f9745d5eb3027c",
+  "scope_hash": "b0db245201d0fdc6edc15a8ac6028c01725ef4a0e2e87c53f9835094df1fe506",
+  "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION",
+  "target": "prepare_toe_ccft_v0_primary_theorem_or_counterexample_packet_v0"
+}

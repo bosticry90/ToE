@@ -1,0 +1,43 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_STAGE_1_DEPENDENCY_IMPACT_CHECK_20260730_v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "current_dependency_surface_checks": {
+    "batch_aggregation_and_coverage": "PASSED",
+    "bounded_program_open_close_governance": "PASSED",
+    "deterministic_artifact_and_aggregate_generation": "PASSED",
+    "duplicate_candidate_detection": "PASSED",
+    "git_blob_retrieval_and_object_id_cache": "PASSED",
+    "local_archive_hashing_and_cache_invalidation_primitives": "PASSED_ON_SYNTHETIC_INPUTS",
+    "passive_file_parsing_and_active_content_nonexecution": "PASSED_ON_SYNTHETIC_INPUTS",
+    "path_escape_symlink_junction_and_reparse_controls": "PASSED_OR_HOST_CAPABILITY_SKIPPED_FAIL_CLOSED",
+    "provenance_fields_and_nonauthoritative_trial_classification": "PASSED",
+    "registry_authority_and_current_surface_parity": "PASSED",
+    "repository_traversal_primitives": "PASSED_ON_SYNTHETIC_INPUTS",
+    "source_root_initial_final_snapshotting": "PASSED_ON_SYNTHETIC_INPUTS"
+  },
+  "exhaustive_python_debt": {
+    "errors": 10,
+    "exhaustive_passage_established": false,
+    "failed": 147,
+    "last_reported_passed": 14739,
+    "not_rerun_for_this_check": true,
+    "raw_failing_node_inventory_canonically_available": false,
+    "skipped": 598
+  },
+  "impact_conclusion": "KNOWN_EXHAUSTIVE_FAILURES_DO_NOT_REACH_CENSUS_DEPENDENCIES",
+  "limitations": [
+    "This is a dependency-impact decision based on current census-critical surface tests, not an exhaustive Python pass.",
+    "The historical aggregate counts do not include a canonical raw failing-node inventory, so this result does not classify or retire every historical failure.",
+    "Any newly identified failure reaching traversal, hashing, parsing, snapshotting, duplicate detection, batching, governance, or generation must block Stage 1 producer execution.",
+    "Synthetic safety tests establish infrastructure behavior but do not characterize the scientific archive corpus."
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "scientific_stage_1_authorized": false,
+  "scoped_validation": {
+    "failed": 0,
+    "passed": 88,
+    "scope": "census indexer, legacy intake determinism, governance, registry, current authority, canonical text, and aggregate coverage"
+  },
+  "stage_1_open_permitted_by_dependency_check": true,
+  "status": "CENSUS_CRITICAL_DEPENDENCY_SURFACES_PASS_EXHAUSTIVE_DEBT_REMAINS_DISCLOSED"
+}

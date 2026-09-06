@@ -1,0 +1,26 @@
+{
+  "accepted": true,
+  "captured_at_utc": "2026-07-23T22:20:30Z",
+  "independent_review": {
+    "accepted_lineage_verified": true,
+    "automatic_successor_authority_absent": true,
+    "dirty_main_write_authority_absent": true,
+    "exact_frozen_inventory_count": 13756,
+    "exact_frozen_inventory_sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf",
+    "lean_authority_absent": true,
+    "measurement_only": true,
+    "prior_526_outcome_ledger_verified": true,
+    "repair_authority_absent": true,
+    "scientific_authority_absent": true,
+    "source_tree_output_authority_absent": true,
+    "test_or_source_mutation_authority_absent": true
+  },
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_PACKET_20260723_v0.json",
+    "sha256": "869edc4cf81bc437d7b62071fc54eb447ef9ff0d4801efc1d01fdc56110454bd"
+  },
+  "schema_id": "REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260723_v0",
+  "scientific_posture": "B-BLOCKED",
+  "selected_target": "execute_bounded_post_qft_route_identity_repair_baseline_reassessment_v0",
+  "verdict": "ACCEPT_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT"
+}

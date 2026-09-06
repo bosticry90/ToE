@@ -1,0 +1,222 @@
+{
+  "authority": {
+    "frozen_prior_selector_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+        "sha256": "8dae576859d54df29a7ffa82e08d6cacd0558de068b505cdfc180a7ca813d392"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.json",
+        "sha256": "d931bc44cad65caae6994ac88931cc3af1e32864ec61cbc0b4c77c04758592d3"
+      },
+      {
+        "relative_path": "formal/python/tools/post_eotwash_2020_yukawa_primary_evidence_custody_acquisition_scientific_response_selection_v0.py",
+        "sha256": "7a1354f6935bda276270df1b0f5e12a367a767a0d0501f9785fb267c6866f1e3"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_eotwash_2020_yukawa_primary_evidence_custody_acquisition_scientific_response_selection_v0.py",
+        "sha256": "7f3451c12e307b5757e7e5d4aceb447b978e4cf08ab94489a3a4f5f3de99425e"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostEotwash2020YukawaPrimaryEvidenceCustodyAcquisitionScientificResponseSelectionV0.lean",
+        "sha256": "1436a30c8781af703a8821c0e15f9f8be64a1bfe435fd54c07af477c1de2ecef"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/eotwash_2020_outbound_research_contact_scope_closure_and_internal_route_selection_v0.py",
+      "sha256": "ab725c3c657a86f8dbaf34e0202e60c501f94ff4397038d583ae2d2a3db372f3"
+    },
+    "human_closure": {
+      "relative_path": "formal/docs/lanes/EOTWASH_2020_OUTBOUND_RESEARCH_CONTACT_SCOPE_CLOSURE_AND_INTERNAL_ROUTE_SELECTION_20260718_v0.md",
+      "sha256": "9f0b6bb669dfde8c5eb23173c3d3488b8534bf0eeff790b069be99cf78d627e7"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/Eotwash2020OutboundResearchContactScopeClosureAndInternalRouteSelectionV0.lean",
+      "sha256": "b87680da4c1677338037ea56918989b8c9b16c923f7c83680a9c972ddc6abcc9"
+    },
+    "standing_policy": {
+      "relative_path": "formal/docs/lanes/OUTBOUND_RESEARCH_CONTACT_AND_PRIVATE_DATA_POLICY_20260718_v0.md",
+      "sha256": "591a7034fa548635b63444f4474a25107bfc1919bb5d1f9cf26a22ec1fefbe7b"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_eotwash_2020_outbound_research_contact_scope_closure_and_internal_route_selection_v0.py",
+      "sha256": "2d9df62f7961c449e2c10685411fc6245c61020637d8f4bb0eabce2311f001f3"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "Explicit user scope closes outbound research contact and selects preparation only of an internal scalar-only Yukawa synthetic forward-model and sensitivity-forecast packet. No contact packet, recipient, message, communication, private-data dependency, forecast execution, published-result reinterpretation, likelihood, empirical bound, scalar-branch adoption, native gravitational principle, gravitational action, frame-dragging result, or master-action change is prepared, executed, computed, selected, or claimed.",
+  "closure_gates": {
+    "failure_count": 0,
+    "gate_count": 16,
+    "pass_count": 16,
+    "rows": [
+      {
+        "gate_id": "PRIOR_SELECTOR_ARTIFACTS_HASH_FROZEN_AND_EXACT_TARGET_CONSUMED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXPLICIT_USER_SCOPE_OVERRIDE_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTACT_PACKET_PREPARATION_WITHDRAWN_BEFORE_PREPARATION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_RECIPIENT_MESSAGE_OR_CONTACT_CREATED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "OUTBOUND_RESEARCH_CONTACT_DISALLOWED_UNTIL_EXPLICIT_REOPENING",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRIVATE_OR_RESTRICTED_DATA_DEPENDENCE_DISALLOWED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THIRD_PARTY_COOPERATION_WAITING_DISALLOWED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PUBLIC_PAPERS_AND_OPEN_DATA_REMAIN_PERMITTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "INTERNAL_THEORY_SIMULATION_AND_SYNTHETIC_TESTING_PERMITTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EOTWASH_SUITABILITY_AND_ACCEPTED_CUSTODY_RESULT_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EOTWASH_INDEPENDENT_FIT_ROUTE_CLOSED_WITH_ZERO_OF_SIX_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYNTHETIC_ROUTE_CLASSIFIED_NONEMPIRICAL",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYNTHETIC_PACKET_PREPARATION_ONLY_AUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PUBLISHED_LIMIT_REINTERPRETATION_NOT_AUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_LIKELIHOOD_BOUND_BRANCH_OR_THEORY_ADOPTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXPLICIT_FUTURE_USER_INSTRUCTION_REQUIRED_TO_REOPEN_CONTACT",
+        "status": "PASS"
+      }
+    ]
+  },
+  "consumed_target": "prepare_eotwash_2020_yukawa_author_or_custodian_contact_packet_v0",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "eotwash_independent_fit_route": "CLOSED_BLOCKED_ON_INACCESSIBLE_INPUTS",
+    "gravitational_action": "NOT_SELECTED",
+    "likelihood": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "prepare_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v0",
+    "outbound_contact": "PROHIBITED_UNTIL_EXPLICITLY_REOPENED",
+    "primary_next_route": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+    "published_reinterpretation": "NOT_AUTHORIZED",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_range_bound": "NONE",
+    "synthetic_forecast": "NOT_EXECUTED",
+    "targeted_author_contact_preparation": "WITHDRAWN_BY_USER_SCOPE"
+  },
+  "deferred_public_evidence_route": {
+    "candidate_id": "SUPPLIED_PUBLISHED_EOTWASH_LIMIT_REINTERPRETATION",
+    "claim_classification_if_later_authorized": "SUPPLIED_PUBLISHED_CONSTRAINT_NOT_INDEPENDENTLY_REPRODUCED",
+    "status": "NOT_AUTHORIZED"
+  },
+  "historical_selector": {
+    "live_contact_route_withdrawn": true,
+    "scientific_ranking_retracted": false,
+    "selected_contact_route": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+    "selection_stability": "FIRST_IN_24_OF_24_VARIANTS",
+    "withdrawal_reason": "EXPLICIT_USER_PROJECT_SCOPE"
+  },
+  "retained_empirical_posture": {
+    "alpha_constraint": "NONE",
+    "evidence_component_count": 6,
+    "evidence_components_complete": 0,
+    "experiment": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+    "experiment_suitable": true,
+    "fixed_signal": "A_Y=1/3",
+    "independent_fit_route": "CLOSED_BLOCKED_ON_INACCESSIBLE_INPUTS",
+    "independent_likelihood_executable": false,
+    "likelihood": "NOT_EXECUTED",
+    "non_contact_acquisition": "COMPLETED_AND_ACCEPTED",
+    "scalar_range_bound": "NONE"
+  },
+  "schema_id": "toe.eotwash_2020.outbound_research_contact_scope_closure_and_internal_route_selection.v0",
+  "scope": {
+    "author_or_custodian_contact_authorized": false,
+    "author_or_custodian_contact_executed": false,
+    "contact_message_drafted": false,
+    "contact_packet_prepared": false,
+    "contact_preparation_withdrawn": true,
+    "contact_recipient_selected": false,
+    "eotwash_independent_fit_route_closed": true,
+    "explicit_user_reopening_required": true,
+    "explicit_user_scope_override": true,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "internal_synthetic_research_permitted": true,
+    "likelihood_executed": false,
+    "likelihood_preparation_authorized": false,
+    "master_action_mutated": false,
+    "native_gravitational_principle_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "outbound_research_contact_disallowed": true,
+    "private_restricted_data_dependence_disallowed": true,
+    "public_open_evidence_permitted": true,
+    "published_constraint_reinterpretation_authorized": false,
+    "scalar_branch_adopted": false,
+    "scope_closure_executed": true,
+    "synthetic_forecast_executed": false,
+    "synthetic_packet_preparation_authorized": true,
+    "synthetic_packet_prepared_now": false,
+    "third_party_waiting_disallowed": true
+  },
+  "selected_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+  "selected_internal_route": {
+    "candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+    "classification": "SYNTHETIC_FORECAST_NOT_EOTWASH_EMPIRICAL_REANALYSIS_NOT_MEASURED_CONSTRAINT",
+    "future_packet_obligations": [
+      "derive fixed-strength Yukawa force and torque response",
+      "freeze analytic benchmark geometries",
+      "define explicitly approximate public-method apparatus model",
+      "prepare synthetic observations and injection-recovery controls",
+      "study covariance nuisance and geometry sensitivity",
+      "forecast detectability under explicit assumptions",
+      "stop before real-data empirical inference"
+    ],
+    "selection_reason": "EXPLICIT_USER_INTERNAL_ONLY_SCOPE",
+    "status": "PACKET_PREPARATION_AUTHORIZED_NOT_PREPARED",
+    "target": "prepare_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v0",
+    "target_kind": "PREPARATION_ONLY_INTERNAL_SYNTHETIC_FORECAST_NO_EMPIRICAL_REANALYSIS"
+  },
+  "selected_next_target": "prepare_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_INTERNAL_SYNTHETIC_FORECAST_NO_EMPIRICAL_REANALYSIS",
+  "selection_basis": "EXPLICIT_USER_SCOPE_OVERRIDE",
+  "standing_internal_research_policy": {
+    "dependence_on_private_or_restricted_data": "DISALLOWED",
+    "internal_theory_simulation_and_synthetic_testing": "PERMITTED",
+    "outbound_research_contact": "DISALLOWED_UNLESS_USER_EXPLICITLY_REOPENS",
+    "public_papers_and_openly_available_data": "PERMITTED",
+    "reopening_authority": "EXPLICIT_FUTURE_USER_INSTRUCTION_ONLY",
+    "waiting_on_third_party_cooperation": "DISALLOWED"
+  },
+  "target": "prepare_eotwash_2020_yukawa_author_or_custodian_contact_packet_v0",
+  "verdict": "USER_SCOPE_WITHDRAWS_CONTACT_AND_SELECTS_SYNTHETIC_FORECAST_PACKET_PREPARATION"
+}

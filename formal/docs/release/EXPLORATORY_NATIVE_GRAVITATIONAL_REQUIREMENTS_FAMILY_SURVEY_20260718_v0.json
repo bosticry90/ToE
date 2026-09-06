@@ -1,0 +1,1958 @@
+{
+  "authority": {
+    "accepted_packet_review_verdict": "ACCEPTED_FOR_ONE_BOUNDED_MANUAL_EXPLORATORY_SURVEY",
+    "authorized_execution_count": 1,
+    "execution_consumed_count": 1,
+    "frozen_review_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "2fd17a03cd7f53aea1e278675aca827c98c8a8c1ee30adbf90944e15e39c2e4a"
+      },
+      {
+        "relative_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_REVIEW_20260718_v0.json",
+        "sha256": "a58991c81c2047ef242d13e7cfad0e4e195d09a2c166015b2729428b2515f498"
+      },
+      {
+        "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_packet_review_v0.py",
+        "sha256": "2c7327e8695c53527cceea9ba1c28f5b5d430f7aa7415c54074bb0216d6f34bc"
+      },
+      {
+        "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_packet_review_v0.py",
+        "sha256": "c7e009d8a553c4562609ebd0908243d4a4537db992fed9697a43513ba3f0eb2b"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ExploratoryNativeGravitationalRequirementsFamilySurveyPacketReviewV0.lean",
+        "sha256": "8c907da3819f91a9af43e19ce8ed32db2b02c7d7870b1fddd4fec3f9287b0bf3"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_v0.py",
+      "sha256": "7e7769baf18121172efed51e5f4b354d45834a1f0a7edb3964163e40aaf0b3ab"
+    },
+    "human_survey": {
+      "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_20260718_v0.md",
+      "sha256": "4cea838ee30866cfa6926bb26c199f62c6591d8f5c9543dbfb391280f7dddc3b"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_v0.py",
+      "sha256": "3f457c7ee20466bcf2c862197f6752d1e07581a58f1d4a0e00bdfe2c71d3702c"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_boundary": {
+    "V2_population_permitted": false,
+    "authoritative_family_judgments_made": false,
+    "automated_selector_present": false,
+    "exploratory": true,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected_or_proposed": false,
+    "labels_are_research_judgments_only": true,
+    "labels_map_to_V2_statuses": false,
+    "manual_judgment_visible": true,
+    "metric_variation_executed": false,
+    "native_principle_identified": false,
+    "nonauthoritative": true
+  },
+  "current_posture": {
+    "NOT_SURVEYED_cells": "48_OF_70",
+    "authoritative_V2_matrix": "0_OF_70",
+    "automated_action_selection_tooling": "CLOSED",
+    "decision_critical_questions": "8_ANSWERED_PROVISIONALLY",
+    "exploratory_survey_contract": "ACCEPTED_8_OF_8_GATES",
+    "gravitational_action": "NOT_SELECTED",
+    "manual_exploratory_survey": "COMPLETED_NONAUTHORITATIVE_OPPORTUNITY_MAP_PENDING_INDEPENDENT_REVIEW",
+    "metric_variation": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "review_exploratory_native_gravitational_requirements_family_survey_v0_result",
+    "surveyed_provisional_cells": "22_OF_70"
+  },
+  "decision_critical_question_register": {
+    "answered_question_count": 8,
+    "question_count": 8,
+    "rows": [
+      {
+        "assumptions": [
+          "Frozen local metric representatives",
+          "Constant scalar couplings"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Whether R4 distinguishes the three primary local metric families.",
+        "priority_rank": 7,
+        "provisional_answer": "No obvious discrimination: all three admit covariant scalar-density actions.",
+        "question_id": "DQ1_DIFF_COVARIANCE_DISCRIMINATION",
+        "reasoning_basis_types": [
+          "DIRECT_MATHEMATICAL_REASONING",
+          "ESTABLISHED_LITERATURE"
+        ],
+        "resolving_work": "No R4-only derivation; derive the shared Noether identity with R7.",
+        "source_ids": [
+          "P1_MINIMAL_CONTRACT",
+          "E1_IYER_WALD_1994"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R4_DIFF_COVARIANCE__F_EH",
+          "EXP_R4_DIFF_COVARIANCE__F_FR",
+          "EXP_R4_DIFF_COVARIANCE__F_QUADRATIC"
+        ],
+        "uncertainty": "Covariance alone does not decide coupling, modes, recovery, or stability."
+      },
+      {
+        "assumptions": [
+          "No hidden Ck-dependent comparator coefficients"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Whether R5 fixes curvature dependence or controls only project architecture.",
+        "priority_rank": 5,
+        "provisional_answer": "Architecture only on current authority; no Ck-to-action map was found.",
+        "question_id": "DQ2_CK_FIREWALL_ACTION_RELEVANCE",
+        "reasoning_basis_types": [
+          "DIRECT_MATHEMATICAL_REASONING"
+        ],
+        "resolving_work": "Supply an accepted seam-to-Lagrangian map or a discriminating counterexample.",
+        "source_ids": [
+          "P2_CK_STATUS"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R5_CK_FIREWALL__F_EH",
+          "EXP_R5_CK_FIREWALL__F_FR",
+          "EXP_R5_CK_FIREWALL__F_QUADRATIC"
+        ],
+        "uncertainty": "A future accepted seam law could create action leverage."
+      },
+      {
+        "assumptions": [
+          "Covariant matter action",
+          "Matter equations hold",
+          "No anomalous external source"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Whether R7 distinguishes primary metric families after matter coupling is explicit.",
+        "priority_rank": 6,
+        "provisional_answer": "Probably not by itself under ordinary covariant on-shell matter coupling.",
+        "question_id": "DQ3_SOURCE_COMPATIBILITY_DISCRIMINATION",
+        "reasoning_basis_types": [
+          "DIRECT_MATHEMATICAL_REASONING",
+          "ESTABLISHED_LITERATURE"
+        ],
+        "resolving_work": "Derive a shared metric-matter diffeomorphism Ward identity.",
+        "source_ids": [
+          "P3_STRESS_POLICY",
+          "P4_MATTER_PACKET",
+          "E1_IYER_WALD_1994"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R7_SOURCE_COMPATIBILITY__F_EH",
+          "EXP_R7_SOURCE_COMPATIBILITY__F_FR",
+          "EXP_R7_SOURCE_COMPATIBILITY__F_QUADRATIC"
+        ],
+        "uncertainty": "The project has policy, not a native continuum matter variation tied to a selected action."
+      },
+      {
+        "assumptions": [
+          "Stationary weak field about Minkowski",
+          "Shared source normalization",
+          "No whole-family extrapolation"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Whether exact Newton-Poisson recovery separates nonlinear and quadratic curvature from EH without tuning.",
+        "priority_rank": 2,
+        "provisional_answer": "Existence of a Newtonian regime is probably nonselective; exact no-fit recovery may discriminate.",
+        "question_id": "DQ4_NEWTONIAN_RECOVERY_DISCRIMINATION",
+        "reasoning_basis_types": [
+          "KNOWN_COMPARATOR_BEHAVIOR",
+          "ESTABLISHED_LITERATURE"
+        ],
+        "resolving_work": "Derive the shared source-normalized stationary 00 Green function.",
+        "source_ids": [
+          "P5_DISCRETE_POISSON",
+          "E2_BERRY_GAIR_2011",
+          "E6_STELLE_1978",
+          "E9_CAPOZZIELLO_STABILE_TROISI_2007"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R8_NEWTON_POISSON__F_EH",
+          "EXP_R8_NEWTON_POISSON__F_FR",
+          "EXP_R8_NEWTON_POISSON__F_QUADRATIC"
+        ],
+        "uncertainty": "Masses, coefficients, boundary conditions, and analytic form vary across families."
+      },
+      {
+        "assumptions": [
+          "Minkowski linearization",
+          "Conserved stationary source",
+          "Shared gauge conventions"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Whether stationary 0i momentum-current response adds information beyond the 00 sector.",
+        "priority_rank": 1,
+        "provisional_answer": "Provisionally yes; 0i probes propagating spin content not fixed by a scalar/static limit.",
+        "question_id": "DQ5_MOMENTUM_CURRENT_INDEPENDENCE",
+        "reasoning_basis_types": [
+          "DIRECT_MATHEMATICAL_REASONING",
+          "ESTABLISHED_LITERATURE"
+        ],
+        "resolving_work": "Derive the stationary conserved-source 0i Green function and its coupled poles.",
+        "source_ids": [
+          "P6_0I_BLOCK",
+          "E2_BERRY_GAIR_2011",
+          "E3_CHIBA_2003",
+          "E6_STELLE_1978"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R8_NEWTON_POISSON__F_EH",
+          "EXP_R8_NEWTON_POISSON__F_FR",
+          "EXP_R8_NEWTON_POISSON__F_QUADRATIC",
+          "EXP_R9_MOMENTUM_CURRENT__F_EH",
+          "EXP_R9_MOMENTUM_CURRENT__F_FR",
+          "EXP_R9_MOMENTUM_CURRENT__F_QUADRATIC"
+        ],
+        "uncertainty": "No native continuum 0i equation or common family calculation exists."
+      },
+      {
+        "assumptions": [
+          "Local metric theories near Minkowski",
+          "Ordinary propagator interpretation",
+          "No observational coefficient fitting"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Which precise R10 calculation has the greatest family-discriminating power.",
+        "priority_rank": 3,
+        "provisional_answer": "Pole, residue, and stability analysis has the strongest visible leverage.",
+        "question_id": "DQ6_STABILITY_NO_FIT_DISCRIMINATION",
+        "reasoning_basis_types": [
+          "ESTABLISHED_LITERATURE",
+          "DIRECT_MATHEMATICAL_REASONING"
+        ],
+        "resolving_work": "Compute poles, residues, and tachyon/ghost conditions for the bounded alpha-beta representative.",
+        "source_ids": [
+          "E4_FARAONI_2006",
+          "E5_DOLGOV_KAWASAKI_2003",
+          "E6_STELLE_1978",
+          "E7_LINDBLAD_RODNIANSKI_2004"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R10_STABILITY_NO_FIT__F_EH",
+          "EXP_R10_STABILITY_NO_FIT__F_FR",
+          "EXP_R10_STABILITY_NO_FIT__F_QUADRATIC"
+        ],
+        "uncertainty": "Linear, nonlinear, matter, and phenomenological stability are distinct."
+      },
+      {
+        "assumptions": [
+          "Only accepted source-bound project commitments count",
+          "Method rules are not physical postulates"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Whether accepted ToE-specific commitments constrain the gravitational Lagrangian.",
+        "priority_rank": 4,
+        "provisional_answer": "None was found; current seam/admissibility rules do not select curvature dependence.",
+        "question_id": "DQ7_NATIVE_SEAM_LAGRANGIAN_CONSTRAINT",
+        "reasoning_basis_types": [
+          "EXPERT_JUDGMENT",
+          "DIRECT_MATHEMATICAL_REASONING"
+        ],
+        "resolving_work": "After the shared derivation, test whether an accepted cross-pillar law fixes derivative order, poles, or coupling.",
+        "source_ids": [
+          "P1_MINIMAL_CONTRACT",
+          "P2_CK_STATUS",
+          "P3_STRESS_POLICY",
+          "P5_DISCRETE_POISSON",
+          "P6_0I_BLOCK"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R5_CK_FIREWALL__F_EH",
+          "EXP_R5_CK_FIREWALL__F_FR",
+          "EXP_R5_CK_FIREWALL__F_QUADRATIC",
+          "EXP_R7_SOURCE_COMPATIBILITY__F_EH",
+          "EXP_R7_SOURCE_COMPATIBILITY__F_FR",
+          "EXP_R7_SOURCE_COMPATIBILITY__F_QUADRATIC"
+        ],
+        "uncertainty": "This is an authority-surface absence finding, not proof that no principle can be formulated."
+      },
+      {
+        "assumptions": [
+          "Smooth fields",
+          "Exact identity or proved boundary/topological relation",
+          "Frozen compact-support bulk domain"
+        ],
+        "authority": "EXPLORATORY_NONAUTHORITATIVE",
+        "issue": "Which properties may be transported across a boundary, algebraic, or topological relation.",
+        "priority_rank": 8,
+        "provisional_answer": "Only the exact proved property; compact-support local bulk equivalence does not transport global or physical properties automatically.",
+        "question_id": "DQ8_PROPERTY_SCOPED_EQUIVALENCE",
+        "reasoning_basis_types": [
+          "DIRECT_MATHEMATICAL_REASONING",
+          "ESTABLISHED_LITERATURE"
+        ],
+        "resolving_work": "Require transformation, domain, inverse, boundary conditions, and property-by-property proof for each future claim.",
+        "source_ids": [
+          "P1_MINIMAL_CONTRACT",
+          "E1_IYER_WALD_1994"
+        ],
+        "status": "ANSWERED_PROVISIONAL",
+        "supporting_cell_ids": [
+          "EXP_R6_LOCAL_VARIATION__F_EQUIVALENCE_PROBE"
+        ],
+        "uncertainty": "No real-family property-transport proof or merge is asserted."
+      }
+    ]
+  },
+  "mode": "MANUAL_EXPLORATORY_NONAUTHORITATIVE",
+  "opportunity_map": {
+    "best_bounded_no_go_or_counterexample_test": {
+      "authority": "EXPLORATORY_TEST_RECOMMENDATION_ONLY",
+      "conjecture": "For generic beta!=0 under ordinary local metric kinetic assumptions, the negative-residue massive spin-2 pole cannot be removed while retaining the intended local source response except through an explicit degeneracy, limit, or assumption change.",
+      "theorem_established": false
+    },
+    "broadly_nonselective_hypotheses": [
+      "R4 among the three primary metric-local families",
+      "R5 while it remains an architecture/admissibility firewall only",
+      "R7 under ordinary covariant on-shell matter coupling",
+      "R8 if it requires only existence of some Newtonian regime"
+    ],
+    "deferred_without_current_leverage_loss": [
+      "remaining 48 cells",
+      "physics inside out-of-envelope families",
+      "global and boundary equivalence observables",
+      "observational coefficient fitting",
+      "matter-sector choice",
+      "metric variation of a selected action",
+      "frame-dragging recovery"
+    ],
+    "dependency_hypotheses": [
+      "R4 and R7 are linked by Noether identities, but R7 also carries matter-source content.",
+      "R8 and R9 remain independent until derived from one shared tensor equation and convention.",
+      "R5 becomes selective only if an accepted seam law maps admissibility to an action property.",
+      "R10 must be split into spectrum, linear stability, nonlinear stability, recovery, and no-fit obligations."
+    ],
+    "future_postulate_leverage_locations": [
+      "derivative order",
+      "propagating pole content",
+      "gravitational source coupling",
+      "accepted cross-sector dynamical relation"
+    ],
+    "highest_value_next_bounded_derivation": {
+      "authority": "EXPLORATORY_RECOMMENDATION_ONLY",
+      "comparison_instrument": "S = integral sqrt(-g) [R + alpha R^2 + beta R_mn R^mn] + S_m",
+      "project_action_proposal": false,
+      "question_ids_addressed": [
+        "DQ4_NEWTONIAN_RECOVERY_DISCRIMINATION",
+        "DQ5_MOMENTUM_CURRENT_INDEPENDENCE",
+        "DQ6_STABILITY_NO_FIT_DISCRIMINATION"
+      ],
+      "tasks": [
+        "derive the conserved-source linearized propagator or equivalent equations",
+        "derive stationary 00 and 0i Green functions under one convention",
+        "list poles, residues, and propagating modes",
+        "display alpha=beta=0, beta=0, and generic beta!=0 cases",
+        "state every limiting regime or coefficient choice needed for recovery"
+      ]
+    },
+    "native_discriminator_absence_scope": "No accepted seam-to-Lagrangian map was found in the frozen sources; this is not a proof of impossibility.",
+    "native_discriminator_found": false,
+    "probable_discriminators": [
+      "R9 stationary momentum-current response",
+      "R10 separated pole, residue, and stability obligations"
+    ],
+    "scope_filters_not_dynamics_selectors": [
+      "R1",
+      "R2",
+      "R3",
+      "R6"
+    ],
+    "supplied_assumption_dependency": {
+      "native_project_principle": false,
+      "observation": "Second-order equations or no extra modes would strongly narrow the primary envelope.",
+      "source_ids": [
+        "E8_LOVELOCK_1971",
+        "E2_BERRY_GAIR_2011",
+        "E6_STELLE_1978"
+      ]
+    }
+  },
+  "result_controls": {
+    "control_count": 8,
+    "descriptive_label_tally": {
+      "CLEARLY COMPATIBLE": 6,
+      "CLEARLY INCOMPATIBLE": 0,
+      "LIKELY COMPATIBLE": 7,
+      "LIKELY INCOMPATIBLE": 1,
+      "OUTSIDE FROZEN SCOPE": 3,
+      "UNRESOLVED": 5
+    },
+    "failure_count": 0,
+    "pass_count": 8,
+    "rows": [
+      {
+        "control_id": "CTRL_AUTHORIZED_ONCE_AND_REVIEW_ACCEPTED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_EIGHT_QUESTIONS_ANSWERED_PROVISIONALLY",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_EXACT_22_SURVEYED_AND_48_NOT_SURVEYED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_DESCRIPTIVE_LABEL_TALLY",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_ALL_REFERENCED_SOURCES_DECLARED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_ONLY_QUESTION_SUPPORT_OR_EXPLICIT_CONTEXT_CELLS_SURVEYED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_NO_V2_CELL_OR_SELECTOR_FIELDS",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_NEXT_STEP_IS_REVIEW_NOT_SCIENTIFIC_EXECUTION",
+        "passed": true
+      }
+    ],
+    "structural_disposition_tally": {
+      "INCOMPLETE_SURVEY_ENTRY": 0,
+      "VALID_NOT_SURVEYED": 48,
+      "VALID_PROVISIONAL_ENTRY": 22
+    }
+  },
+  "schema_id": "EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_20260718_v0",
+  "scope": {
+    "NOT_SURVEYED_cells_retained": 48,
+    "authoritative_V2_matrix_cells_computed": 0,
+    "authoritative_family_judgments_made": false,
+    "authoritative_survivor_computation_executed": false,
+    "automated_action_selection_lane_reopened": false,
+    "automatic_V3_authorized": false,
+    "decision_critical_questions_answered": 8,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected_or_proposed": false,
+    "manual_exploratory_survey_executed": true,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "provisional_survey_cells_completed": 22,
+    "real_family_equivalence_established": false,
+    "tensor_field_equation_derived": false
+  },
+  "selected_next_target": "review_exploratory_native_gravitational_requirements_family_survey_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_EXPLORATORY_SURVEY_RESULT_REVIEW_ONLY",
+  "source_register": {
+    "custody_confers_scientific_relevance": false,
+    "retrieval_date": "2026-07-18",
+    "rows": [
+      {
+        "reference": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+        "source_id": "P1_MINIMAL_CONTRACT",
+        "source_kind": "PROJECT_AUTHORITY",
+        "title": "Minimal native continuum gravitational-sector contract"
+      },
+      {
+        "reference": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "source_id": "P2_CK_STATUS",
+        "source_kind": "PROJECT_AUTHORITY",
+        "title": "Ck-family status synthesis"
+      },
+      {
+        "reference": "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+        "source_id": "P3_STRESS_POLICY",
+        "source_kind": "PROJECT_AUTHORITY",
+        "title": "Native stress-energy definition policy result review"
+      },
+      {
+        "reference": "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json",
+        "source_id": "P4_MATTER_PACKET",
+        "source_kind": "PROJECT_AUTHORITY",
+        "title": "QFT/GR matter-field candidate packet"
+      },
+      {
+        "reference": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+        "source_id": "P5_DISCRETE_POISSON",
+        "source_kind": "PROJECT_FORMAL_SURFACE",
+        "title": "Discrete weak-field Poisson structural theorem"
+      },
+      {
+        "reference": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+        "source_id": "P6_0I_BLOCK",
+        "source_kind": "PROJECT_AUTHORITY",
+        "title": "Gravitomagnetic recovery packet review"
+      },
+      {
+        "reference": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0.json",
+        "source_id": "P7_STABILITY_OBLIGATION",
+        "source_kind": "PROJECT_AUTHORITY",
+        "title": "Native gravitational-principle response selection"
+      },
+      {
+        "reference": "https://arxiv.org/abs/gr-qc/9403028",
+        "source_id": "E1_IYER_WALD_1994",
+        "source_kind": "PRIMARY_THEORETICAL_LITERATURE",
+        "title": "Some Properties of Noether Charge and a Proposal for Dynamical Black Hole Entropy"
+      },
+      {
+        "reference": "https://arxiv.org/abs/1104.0819",
+        "source_id": "E2_BERRY_GAIR_2011",
+        "source_kind": "PRIMARY_THEORETICAL_LITERATURE",
+        "title": "Linearized f(R) Gravity: Gravitational Radiation and Solar System Tests"
+      },
+      {
+        "reference": "https://arxiv.org/abs/astro-ph/0307338",
+        "source_id": "E3_CHIBA_2003",
+        "source_kind": "PRIMARY_THEORETICAL_LITERATURE",
+        "title": "1/R Gravity and Scalar-Tensor Gravity"
+      },
+      {
+        "reference": "https://arxiv.org/abs/astro-ph/0610734",
+        "source_id": "E4_FARAONI_2006",
+        "source_kind": "PRIMARY_THEORETICAL_LITERATURE",
+        "title": "Matter instability in modified gravity"
+      },
+      {
+        "reference": "https://arxiv.org/abs/astro-ph/0307285",
+        "source_id": "E5_DOLGOV_KAWASAKI_2003",
+        "source_kind": "PRIMARY_THEORETICAL_LITERATURE",
+        "title": "Can modified gravity explain accelerated cosmic expansion?"
+      },
+      {
+        "reference": "https://doi.org/10.1007/BF00760427",
+        "source_id": "E6_STELLE_1978",
+        "source_kind": "PRIMARY_THEORETICAL_LITERATURE",
+        "title": "Classical Gravity with Higher Derivatives"
+      },
+      {
+        "reference": "https://arxiv.org/abs/math/0411109",
+        "source_id": "E7_LINDBLAD_RODNIANSKI_2004",
+        "source_kind": "PRIMARY_MATHEMATICAL_LITERATURE",
+        "title": "Global Existence for the Einstein Vacuum Equations in Wave Coordinates"
+      },
+      {
+        "reference": "https://doi.org/10.1063/1.1665613",
+        "source_id": "E8_LOVELOCK_1971",
+        "source_kind": "PRIMARY_MATHEMATICAL_LITERATURE",
+        "title": "The Einstein Tensor and Its Generalizations"
+      },
+      {
+        "reference": "https://arxiv.org/abs/0708.0723",
+        "source_id": "E9_CAPOZZIELLO_STABILE_TROISI_2007",
+        "source_kind": "PRIMARY_THEORETICAL_LITERATURE",
+        "title": "Newtonian limit of f(R) gravity"
+      }
+    ],
+    "source_count": 16,
+    "special_case_generalizes_to_family": false
+  },
+  "survey_form_contract": {
+    "explicit_NOT_SURVEYED_cell_ids": [
+      "EXP_R1_DIMENSION__F_EH",
+      "EXP_R1_DIMENSION__F_FR",
+      "EXP_R1_DIMENSION__F_QUADRATIC",
+      "EXP_R1_DIMENSION__F_EXTRA_FIELD",
+      "EXP_R1_DIMENSION__F_NONLOCAL",
+      "EXP_R1_DIMENSION__F_CONNECTION_TORSION",
+      "EXP_R1_DIMENSION__F_EQUIVALENCE_PROBE",
+      "EXP_R2_METRIC_ONLY__F_EH",
+      "EXP_R2_METRIC_ONLY__F_FR",
+      "EXP_R2_METRIC_ONLY__F_QUADRATIC",
+      "EXP_R2_METRIC_ONLY__F_NONLOCAL",
+      "EXP_R2_METRIC_ONLY__F_EQUIVALENCE_PROBE",
+      "EXP_R3_LOCALITY__F_EH",
+      "EXP_R3_LOCALITY__F_FR",
+      "EXP_R3_LOCALITY__F_QUADRATIC",
+      "EXP_R3_LOCALITY__F_EXTRA_FIELD",
+      "EXP_R3_LOCALITY__F_CONNECTION_TORSION",
+      "EXP_R3_LOCALITY__F_EQUIVALENCE_PROBE",
+      "EXP_R4_DIFF_COVARIANCE__F_EXTRA_FIELD",
+      "EXP_R4_DIFF_COVARIANCE__F_NONLOCAL",
+      "EXP_R4_DIFF_COVARIANCE__F_CONNECTION_TORSION",
+      "EXP_R4_DIFF_COVARIANCE__F_EQUIVALENCE_PROBE",
+      "EXP_R5_CK_FIREWALL__F_EXTRA_FIELD",
+      "EXP_R5_CK_FIREWALL__F_NONLOCAL",
+      "EXP_R5_CK_FIREWALL__F_CONNECTION_TORSION",
+      "EXP_R5_CK_FIREWALL__F_EQUIVALENCE_PROBE",
+      "EXP_R6_LOCAL_VARIATION__F_EH",
+      "EXP_R6_LOCAL_VARIATION__F_FR",
+      "EXP_R6_LOCAL_VARIATION__F_QUADRATIC",
+      "EXP_R6_LOCAL_VARIATION__F_EXTRA_FIELD",
+      "EXP_R6_LOCAL_VARIATION__F_NONLOCAL",
+      "EXP_R6_LOCAL_VARIATION__F_CONNECTION_TORSION",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_EXTRA_FIELD",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_NONLOCAL",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_CONNECTION_TORSION",
+      "EXP_R7_SOURCE_COMPATIBILITY__F_EQUIVALENCE_PROBE",
+      "EXP_R8_NEWTON_POISSON__F_EXTRA_FIELD",
+      "EXP_R8_NEWTON_POISSON__F_NONLOCAL",
+      "EXP_R8_NEWTON_POISSON__F_CONNECTION_TORSION",
+      "EXP_R8_NEWTON_POISSON__F_EQUIVALENCE_PROBE",
+      "EXP_R9_MOMENTUM_CURRENT__F_EXTRA_FIELD",
+      "EXP_R9_MOMENTUM_CURRENT__F_NONLOCAL",
+      "EXP_R9_MOMENTUM_CURRENT__F_CONNECTION_TORSION",
+      "EXP_R9_MOMENTUM_CURRENT__F_EQUIVALENCE_PROBE",
+      "EXP_R10_STABILITY_NO_FIT__F_EXTRA_FIELD",
+      "EXP_R10_STABILITY_NO_FIT__F_NONLOCAL",
+      "EXP_R10_STABILITY_NO_FIT__F_CONNECTION_TORSION",
+      "EXP_R10_STABILITY_NO_FIT__F_EQUIVALENCE_PROBE"
+    ],
+    "forms": [
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R1_DIMENSION__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R1_DIMENSION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "R2 is applied as a frozen survey-envelope filter, not a physical no-go"
+        ],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_EXTRA_FIELD",
+        "concise_rationale": "The family contains an additional fundamental gravitational scalar, vector, or tensor.",
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": "No physical assessment of extra-field gravity was attempted.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "CONTEXTUAL",
+        "provisional_classification": "OUTSIDE FROZEN SCOPE",
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": "Revisit only under fresh authority that relaxes R2.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P1_MINIMAL_CONTRACT",
+            "scope_note": "Defines the metric-only envelope."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "R2 is a scope filter",
+          "No judgment of physical viability"
+        ],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_CONNECTION_TORSION",
+        "concise_rationale": "An independent connection or torsion violates the frozen metric-only field-content envelope.",
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": "Palatini and torsion subclasses were not surveyed.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "CONTEXTUAL",
+        "provisional_classification": "OUTSIDE FROZEN SCOPE",
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": "Revisit only under fresh authority that relaxes the field-content envelope.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P1_MINIMAL_CONTRACT",
+            "scope_note": "Defines the metric-only envelope."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R2_METRIC_ONLY__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R2_METRIC_ONLY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "R3 is a scope filter",
+          "No judgment of physical viability"
+        ],
+        "cell_id": "EXP_R3_LOCALITY__F_NONLOCAL",
+        "concise_rationale": "The family is explicitly nonlocal while R3 freezes a local scalar-density envelope.",
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": "No nonlocal kernel or effective-local expansion was assessed.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "CONTEXTUAL",
+        "provisional_classification": "OUTSIDE FROZEN SCOPE",
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": "Revisit only under fresh authority that relaxes locality.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P1_MINIMAL_CONTRACT",
+            "scope_note": "Defines the local action envelope."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R3_LOCALITY__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R3_LOCALITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "Local four-dimensional metric action",
+          "Constant scalar couplings"
+        ],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_EH",
+        "concise_rationale": "The Einstein-Hilbert integrand is a diffeomorphism scalar density.",
+        "family_id": "F_EH",
+        "main_uncertainty": "Covariance alone does not establish source coupling, stability, or recovery.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "CLEARLY COMPATIBLE",
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": "No R4-only calculation is needed; derive a shared Noether identity only with R7.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P1_MINIMAL_CONTRACT",
+            "scope_note": "Binds R4 and the frozen local metric scope."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E1_IYER_WALD_1994",
+            "scope_note": "Supports the general covariant-Lagrangian/Noether structure, not viability."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Metric formalism",
+          "Local scalar f(R)",
+          "Purely linear representative excluded"
+        ],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_FR",
+        "concise_rationale": "A metric f(R) integrand is covariant when f is a scalar function of R.",
+        "family_id": "F_FR",
+        "main_uncertainty": "This limited symmetry result does not generalize a special f(R) model's viability.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "CLEARLY COMPATIBLE",
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": "No R4-only work; retain model-specific questions for R8-R10.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P1_MINIMAL_CONTRACT",
+            "scope_note": "Binds R4."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E1_IYER_WALD_1994",
+            "scope_note": "Applies to covariant metric Lagrangians; it does not cover every model property."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Metric formalism",
+          "Covariant local curvature invariants",
+          "Constant coefficients"
+        ],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_QUADRATIC",
+        "concise_rationale": "Local contractions of quadratic curvature invariants are diffeomorphism scalars.",
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": "The statement does not establish equivalence among different invariants or stability.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "CLEARLY COMPATIBLE",
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": "No R4-only work; compare spectrum and source response under R9-R10.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P1_MINIMAL_CONTRACT",
+            "scope_note": "Binds R4."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E1_IYER_WALD_1994",
+            "scope_note": "Supports only the common diffeomorphism-invariant structure."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R4_DIFF_COVARIANCE__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "No hidden Ck-dependent coupling in the comparison action"
+        ],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_EH",
+        "concise_rationale": "The comparator can be written with no Ck embedding, multiplier, or variation.",
+        "family_id": "F_EH",
+        "main_uncertainty": "A later project embedding could introduce a hidden Ck-dependent coefficient.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY COMPATIBLE",
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": "Audit any future embedding; an explicit seam-to-action map would be needed for selection.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P2_CK_STATUS",
+            "scope_note": "Makes Ck admissibility-only and supplies no action embedding."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "The frozen f(R) comparator has no Ck-dependent coefficients"
+        ],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_FR",
+        "concise_rationale": "Curvature nonlinearity does not by itself require a Ck action embedding.",
+        "family_id": "F_FR",
+        "main_uncertainty": "No accepted source proves that every future project f(R) embedding remains Ck-independent.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY COMPATIBLE",
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": "Require an explicit Ck-to-curvature map before treating R5 as discriminating.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P2_CK_STATUS",
+            "scope_note": "Architecture-only Ck rule; no f(R)-specific statement."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "The frozen quadratic comparator has constant, Ck-independent coefficients"
+        ],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_QUADRATIC",
+        "concise_rationale": "Quadratic curvature invariants do not by themselves require Ck embedding or variation.",
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": "Future coefficient construction could create a Ck dependence not present in the comparator.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY COMPATIBLE",
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": "Require an accepted seam-to-coefficient law or counterexample before selection.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P2_CK_STATUS",
+            "scope_note": "Architecture-only Ck rule; no quadratic-action selection."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R5_CK_FIREWALL__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R5_CK_FIREWALL",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_EH",
+        "concise_rationale": null,
+        "family_id": "F_EH",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_FR",
+        "concise_rationale": null,
+        "family_id": "F_FR",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_QUADRATIC",
+        "concise_rationale": null,
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "Smooth fields",
+          "Compactly supported bulk metric variation",
+          "Exact algebraic, boundary, or topological relation"
+        ],
+        "cell_id": "EXP_R6_LOCAL_VARIATION__F_EQUIVALENCE_PROBE",
+        "concise_rationale": "Exact boundary or four-dimensional topological variants can preserve compact-support local bulk variation.",
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": "Boundary observables, global charges, matter coupling, modes, and stability are not transported automatically.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "CONTEXTUAL",
+        "provisional_classification": "CLEARLY COMPATIBLE",
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "resolving_calculation_or_theorem": "For every future equivalence claim, prove preservation separately for each property and domain.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P1_MINIMAL_CONTRACT",
+            "scope_note": "Defines the compact-support local-bulk domain."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E1_IYER_WALD_1994",
+            "scope_note": "Supports boundary-sensitive covariant variational structure; no real-family merge is inferred."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Diffeomorphism-invariant matter action",
+          "Matter equations hold",
+          "No anomalous external source"
+        ],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_EH",
+        "concise_rationale": "Covariant matter variation and the diffeomorphism identity support on-shell source conservation.",
+        "family_id": "F_EH",
+        "main_uncertainty": "The project has not executed a native continuum matter variation coupled to this family.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY COMPATIBLE",
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": "Derive the shared metric-matter Ward identity with all equations and boundary terms explicit.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P3_STRESS_POLICY",
+            "scope_note": "Fixes the project stress-energy definition policy but does not derive it from a selected action."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E1_IYER_WALD_1994",
+            "scope_note": "Supports the relevant Noether structure."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Metric f(R)",
+          "Explicitly covariant matter coupling",
+          "Matter equations hold"
+        ],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_FR",
+        "concise_rationale": "A covariant metric f(R) action can use the same variational matter source and on-shell identity.",
+        "family_id": "F_FR",
+        "main_uncertainty": "Nonminimal couplings and family-wide matter choices can change the bookkeeping.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY COMPATIBLE",
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": "Derive the identity for one bounded f(R) representative and the frozen matter representative.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "EXPERT_JUDGMENT",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P4_MATTER_PACKET",
+            "scope_note": "Records matter candidates but not a family-wide gravitational coupling derivation."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E1_IYER_WALD_1994",
+            "scope_note": "General covariant-Lagrangian identity only."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Covariant local quadratic metric action",
+          "Covariant matter action",
+          "Compact-support bulk variation"
+        ],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_QUADRATIC",
+        "concise_rationale": "Higher derivatives do not remove the generalized diffeomorphism identity for a covariant metric action.",
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": "Exact boundary terms, field-equation order, and matter coupling remain unspecified.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY COMPATIBLE",
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": "Derive a shared quadratic metric-matter Ward identity in the bounded representative.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E1_IYER_WALD_1994",
+            "scope_note": "Supports generalized Noether identities, not a complete source-coupling proof."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R7_SOURCE_COMPATIBILITY__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "Minkowski background",
+          "Zero or locally negligible cosmological term",
+          "Standard source normalization"
+        ],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_EH",
+        "concise_rationale": "The zero-Lambda Einstein-Hilbert standard comparator has the Newton-Poisson weak-field limit.",
+        "family_id": "F_EH",
+        "main_uncertainty": "This is supplied comparator behavior and does not establish native ToE recovery or every Lambda choice.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "CLEARLY COMPATIBLE",
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": "Reproduce it as the alpha=beta=0 control in the shared linearized 00 derivation.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "DIRECT_MATHEMATICAL_REASONING",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P5_DISCRETE_POISSON",
+            "scope_note": "Project theorem is discrete and structural, not a continuum EH derivation."
+          },
+          {
+            "basis_type": "KNOWN_COMPARATOR_BEHAVIOR",
+            "pointer_role": "SUPPLIED_STANDARD_PHYSICS_COMPARATOR_ONLY",
+            "reference": "E9_CAPOZZIELLO_STABILE_TROISI_2007",
+            "scope_note": "Used only to orient the standard comparator against modified weak-field potentials."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Analytic metric f(R) near a Minkowski background",
+          "Conserved weak source",
+          "No whole-family inference from one f"
+        ],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_FR",
+        "concise_rationale": "Analytic representatives can yield Newtonian plus scalar/Yukawa response and can approximate GR in restricted regimes.",
+        "family_id": "F_FR",
+        "main_uncertainty": "Mass scale, boundary conditions, analytic form, and coefficient choices vary across the family.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "UNRESOLVED",
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": "Derive the source-normalized 00 Green function for R+alpha R^2 as a bounded representative.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E2_BERRY_GAIR_2011",
+            "scope_note": "Covers analytic linearized representatives and an extra scalar response."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E9_CAPOZZIELLO_STABILE_TROISI_2007",
+            "scope_note": "Shows parameter- and regime-dependent Newtonian potentials; not all f(R)."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Local metric R+alpha R^2+beta Ricci^2 representative",
+          "Minkowski background",
+          "Conserved stationary source"
+        ],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_QUADRATIC",
+        "concise_rationale": "Generic representatives produce Newtonian plus massive-mode corrections, so exact no-fit recovery is coefficient-dependent.",
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": "Special coefficient ratios, source normalization, and boundary conditions prevent a whole-family label.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "UNRESOLVED",
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": "Derive the shared 00 Green function and state which recovery requires a limit or fitted range.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E6_STELLE_1978",
+            "scope_note": "Supports generic massive modes and Yukawa-corrected static response in the stated representative."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R8_NEWTON_POISSON__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R8_NEWTON_POISSON",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "Linearized GR about Minkowski",
+          "Conserved stationary source",
+          "Shared gauge and normalization"
+        ],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_EH",
+        "concise_rationale": "Standard linearized Einstein gravity has a stationary momentum-current response.",
+        "family_id": "F_EH",
+        "main_uncertainty": "No native tensor equation or project 0i derivation exists.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "CLEARLY COMPATIBLE",
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": "Recover the EH response as the alpha=beta=0 control of the shared 0i derivation.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "KNOWN_COMPARATOR_BEHAVIOR",
+            "pointer_role": "PROJECT_AUTHORITY_REQUIREMENT_SOURCE",
+            "reference": "P6_0I_BLOCK",
+            "scope_note": "Records that the project has not derived the continuum 0i equation; comparator behavior remains supplied."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Analytic metric f(R) about Minkowski",
+          "Conserved stationary T_0i",
+          "No generalization beyond cited representatives"
+        ],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_FR",
+        "concise_rationale": "Simple analytic f(R) representatives add a scalar, but no whole-family stationary 0i result was established.",
+        "family_id": "F_FR",
+        "main_uncertainty": "Gauge conventions, scalar/vector decomposition, and nonanalytic models remain open.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "UNRESOLVED",
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": "Derive the conserved-source 0i Green function for the beta=0 representative.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E2_BERRY_GAIR_2011",
+            "scope_note": "Establishes the extra scalar in an analytic linearized class, not a full stationary 0i theorem."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E3_CHIBA_2003",
+            "scope_note": "Supports scalar-tensor representation in its domain; not a family-wide 0i calculation."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Generic local quadratic representative about Minkowski",
+          "Conserved stationary source"
+        ],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_QUADRATIC",
+        "concise_rationale": "The additional massive spin-2 sector can modify momentum-current transport independently of the scalar 00 response.",
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": "Which poles couple to T_0i under the project conventions has not been calculated.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "UNRESOLVED",
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": "Derive and decompose the stationary 0i Green function in the shared representative.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E6_STELLE_1978",
+            "scope_note": "Supports the massive spin-2 content; the exact project 0i normalization remains to be derived."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R9_MOMENTUM_CURRENT__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [
+          "Small-data asymptotically flat vacuum or stated Einstein-matter domain",
+          "Near-Minkowski background"
+        ],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_EH",
+        "concise_rationale": "Small asymptotically flat perturbations of Minkowski have rigorous stability support in Einstein gravity.",
+        "family_id": "F_EH",
+        "main_uncertainty": "This does not cover all backgrounds, cosmological terms, matter choices, or the full no-fit obligation.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY COMPATIBLE",
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": "Use EH as the pole/residue and weak-field control, without upgrading limited stability to a universal claim.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E7_LINDBLAD_RODNIANSKI_2004",
+            "scope_note": "Limited to its small-data wave-coordinate theorem domain."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Metric f(R)",
+          "Model- and background-specific stability analysis",
+          "No extrapolation from one model"
+        ],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_FR",
+        "concise_rationale": "Metric f(R) contains both stable and unstable model sectors, so no whole-family stability label is justified.",
+        "family_id": "F_FR",
+        "main_uncertainty": "Tachyon, matter, nonlinear, and phenomenological stability are distinct obligations.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "UNRESOLVED",
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": "Compute scalar pole mass/residue and state stability inequalities for the bounded beta=0 representative.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E4_FARAONI_2006",
+            "scope_note": "Gives stability conditions and exclusions in a stated class."
+          },
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E5_DOLGOV_KAWASAKI_2003",
+            "scope_note": "Concrete instability counterexample only."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [
+          "Local metric quadratic representative",
+          "Minkowski linearization",
+          "Ordinary propagator interpretation",
+          "Generic beta not zero"
+        ],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_QUADRATIC",
+        "concise_rationale": "Generic standard-sign quadratic gravity contains a negative-energy or negative-residue massive spin-2 excitation.",
+        "family_id": "F_QUADRATIC",
+        "main_uncertainty": "Degenerate coefficients, nonstandard quantization, and other assumption changes prevent a blanket whole-family theorem.",
+        "manual_adjudicator_id": "CODEX_MANUAL_EXPLORATORY_SURVEY_20260718",
+        "manual_review_status": "PENDING_INDEPENDENT_RESULT_REVIEW",
+        "priority_role": "DECISION_CRITICAL",
+        "provisional_classification": "LIKELY INCOMPATIBLE",
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": "Compute poles and residues and prove or refute removal of the bad spin-2 pole without changing stated assumptions.",
+        "source_or_derivation_pointers": [
+          {
+            "basis_type": "ESTABLISHED_LITERATURE",
+            "pointer_role": "PRIMARY_MATHEMATICAL_OR_THEORETICAL_SOURCE",
+            "reference": "E6_STELLE_1978",
+            "scope_note": "Supports the generic massive spin-2 instability concern and special-ratio caveats."
+          }
+        ],
+        "workflow_state": "SURVEYED_PROVISIONAL"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_EXTRA_FIELD",
+        "concise_rationale": null,
+        "family_id": "F_EXTRA_FIELD",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_NONLOCAL",
+        "concise_rationale": null,
+        "family_id": "F_NONLOCAL",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_CONNECTION_TORSION",
+        "concise_rationale": null,
+        "family_id": "F_CONNECTION_TORSION",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      },
+      {
+        "assumptions_and_domain": [],
+        "cell_id": "EXP_R10_STABILITY_NO_FIT__F_EQUIVALENCE_PROBE",
+        "concise_rationale": null,
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "main_uncertainty": null,
+        "manual_adjudicator_id": null,
+        "manual_review_status": "NOT_REVIEWED",
+        "priority_role": "UNASSIGNED",
+        "provisional_classification": null,
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "resolving_calculation_or_theorem": null,
+        "source_or_derivation_pointers": [],
+        "workflow_state": "NOT_SURVEYED"
+      }
+    ],
+    "incomplete_entry_count": 0,
+    "not_surveyed_count": 48,
+    "possible_relationship_count": 70,
+    "surveyed_provisional_count": 22
+  },
+  "target": "conduct_exploratory_native_gravitational_requirements_family_survey_v0",
+  "verdict": "COMPLETED_NONAUTHORITATIVE_OPPORTUNITY_MAP_PENDING_INDEPENDENT_REVIEW"
+}

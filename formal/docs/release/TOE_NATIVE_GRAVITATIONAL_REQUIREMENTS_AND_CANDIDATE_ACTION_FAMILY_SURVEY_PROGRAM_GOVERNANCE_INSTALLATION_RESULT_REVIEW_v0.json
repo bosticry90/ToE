@@ -1,0 +1,56 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0",
+  "attempted_stage_count": 0,
+  "captured_at_utc": "2026-07-31T12:30:00Z",
+  "checks": {
+    "all_five_canonical_stage_ids_targets_and_scope_hashes_match_the_prepared_proposal": true,
+    "authorized_stage_count_is_five": true,
+    "bounded_program_history_reconstructs_from_immutable_manifests_and_events": true,
+    "candidate_family_inventory_is_seven_without_family_selection": true,
+    "current_scientific_target_is_preserved": true,
+    "installation_commit_has_the_exact_manifest_bound_ten_path_envelope": true,
+    "installation_commit_parent_matches_installed_from_commit": true,
+    "mandatory_exit_target_is_preserved": true,
+    "manifest_hash_and_all_scope_hashes_reproduce": true,
+    "native_requirement_inventory_is_ten_without_requirement_adjudication": true,
+    "no_open_or_close_event_was_created": true,
+    "no_scientific_output_or_compatibility_cell_was_created": true,
+    "registry_projects_zero_attempts_and_unopened_state": true,
+    "repair_attempt_count_is_zero": true
+  },
+  "compatibility_cells_created": 0,
+  "evidence_promoted": false,
+  "exhaustive_python_passage_established": false,
+  "gravitational_action_selected": false,
+  "gravitational_calculation_started": false,
+  "installation_commit": "e30e5364804772004e9225f2c4233830273db74e",
+  "manifest": {
+    "manifest_hash": "0ba846d6e9f389fb3563e87e16efc78d2d30dc6678b5d2c188d17701d5626cae",
+    "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json",
+    "sha256": "a6062c810927fde39c4c54d5d22009ccd0f4d33d04fb7e001ffda01293fccf19"
+  },
+  "native_gravitational_principle_selected": false,
+  "next_permitted_decision": "AUTHORIZE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_STAGE_1_OPEN",
+  "next_prohibited_work": [
+    "Stage_1_execution_without_separate_scientific_authority",
+    "candidate_action_family_comparison",
+    "compatibility_cell_population",
+    "evidence_promotion",
+    "gravitational_action_selection_or_adoption",
+    "native_gravitational_principle_derivation",
+    "gravitational_calculation",
+    "automatic_successor_authorization"
+  ],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "program_state": "UNOPENED",
+  "reviewed_installation": {
+    "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+    "sha256": "f7b3d2113ccad0eebd0ea72c7d446289b11108cebe1a7e75fcee13b89bdea635"
+  },
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.program_governance_installation_review.v0",
+  "scientific_execution_authorized": false,
+  "scientific_output_created": false,
+  "stage_1_opened": false,
+  "status": "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+}

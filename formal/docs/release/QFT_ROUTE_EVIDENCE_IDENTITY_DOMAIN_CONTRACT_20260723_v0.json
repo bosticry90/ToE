@@ -1,0 +1,134 @@
+{
+  "contract_id": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_CONTRACT_20260723_v0",
+  "current_authority_effect": "NONE",
+  "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+  "historical_contracts_preserved": [
+    "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_v0",
+    "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_v1"
+  ],
+  "identities": [
+    {
+      "artifact_id": "DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "fa8e2fc10feb1709682512ec8deee30012a6a4a0",
+        "sha256": "964d863ce9b6e3c912aa85d4b05c4c7c313a92eb1d4d50b07df7a90d9778ec4d"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "3ae26471ac6b7fb0f422fc9310eab8641554f16bdcff4979e096998f87286ddc"
+      },
+      "path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "049e855ea2bf8e5b660964992cc60a9f6f6c5400",
+        "sha256": "a3b068a09cb55022a75c0c709cfa7e34b84e61aa744c42d0c35453e8f8a87e5c"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67"
+      },
+      "path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "24691f951d142512c8b4267af0b3598dc5a29d3c",
+        "sha256": "0898e05d18821d2901390dffc42b959bcdbf83964c49eecae598191316576c4a"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc"
+      },
+      "path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "1d846f8be72b1b8fb46e531eaf9eb5d38de8a33d",
+        "sha256": "9384b90b87a97ec8b2a3ac427f203792b8bdcb3e9cec04ea4fffe3b61816e341"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "524b1471880b3bef74e213fb65ee8a2f5b8033ffe3b8adee151cef08631b9f77"
+      },
+      "path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+        "sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9"
+      },
+      "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "3878eb2e6c7bdb2e44ff2038675b7ec8ea929afb",
+        "sha256": "21cf0d71a6e6e3bcfdd9c1bac5c9dd334193e5a506ef161b2a584bd1772ec72b"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "c57729dfbf52040538bab1e1b73ce55ce5dee2c554fc8bffb050259c43fc3206"
+      },
+      "path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md"
+    },
+    {
+      "artifact_id": "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "358e9dcf626fba06bd1b2e7d22bf0a340eeaff66",
+        "sha256": "1a7d657e0434957c146caaf27f1f8f9759eaf4081ec6f12c9103c6af1b08b804"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "edce7363ad0bbe98b8c29193762d9782d7e931cd65cfc059d609a023feafeb00"
+      },
+      "path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md"
+    },
+    {
+      "artifact_id": "FULL_PILLAR_TARGET_MAP_REBASE_v0",
+      "current_identity": {
+        "domain": "FROZEN_GIT_BLOB_SHA256",
+        "git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
+        "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25"
+      },
+      "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md"
+    },
+    {
+      "artifact_id": "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0",
+      "current_identity": {
+        "domain": "CANONICAL_ARTIFACT_SHA256",
+        "git_blob_oid": "bde76bc1b6e3ef27e74971a7a16e781dfa9034cf",
+        "sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544"
+      },
+      "historical_identity": {
+        "domain": "HISTORICAL_RAW_WORKING_TREE_SHA256",
+        "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+      },
+      "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json"
+    }
+  ],
+  "identity_count": 9,
+  "registry_rotated": false,
+  "schema_id": "toe.qft_route_evidence_identity_domain_contract.v0",
+  "scientific_content_changed": false,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment_authorized": false
+}

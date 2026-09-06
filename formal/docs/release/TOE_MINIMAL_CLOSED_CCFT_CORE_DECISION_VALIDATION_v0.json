@@ -1,0 +1,86 @@
+{
+  "artifact_hashes": {
+    "close_event_hash": "e384be2256d6c3494966ad2d6acf3e5bc8fb6ed875aa5992fbd5dc6582165a88",
+    "close_event_sha256": "da182d9d62e1dc6ad3a95903911445a9361fb9157b219bfc28ecd493555c96f4",
+    "result_sha256": "b731508223914d3c2172bd7e6a60c43f1bb85c7c2653c1775f2d63fff09a69bd",
+    "review_sha256": "641140aa550df9689ac01800b82b973850d07302afddb5f551152641201fc326"
+  },
+  "artifact_id": "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_VALIDATION_v0",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0.json",
+    "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeMinimalClosedCCFTCoreDecisionResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-08-01T01:11:05Z",
+  "deterministic_generation": {
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "status": "PASS_WORKING_TREE_PRECOMMIT",
+    "working_tree_module_count": 1385
+  },
+  "focused_lean": {
+    "jobs": 6,
+    "modules": [
+      "ToeFormal.Derivation.ToeMinimalClosedCCFTCoreDecisionResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "status": "PASS"
+  },
+  "focused_python": {
+    "passed": 41,
+    "status": "PASS",
+    "test_surfaces": [
+      "test_toe_minimal_closed_ccft_core_decision_stage_4_authority.py",
+      "test_bounded_program_governance.py",
+      "test_bounded_program_governance_enforcement_adversarial.py"
+    ]
+  },
+  "full_lean_aggregate": {
+    "job_count": 9130,
+    "module_count": 1385,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "precommit_full_history_validator_result": "EXPECTED_SINGLE_FAILURE_CLOSE_ARTIFACT_HAS_ZERO_INTRODUCTION_COMMITS",
+    "registry_extension_reconstruction": "PASS_PRECOMMIT",
+    "reason": "The immutable CLOSE artifact cannot have an introduction commit until the exact atomic CLOSE commit is created."
+  },
+  "lifecycle_result": "BLOCKED",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "repository_validation": {
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "git_diff_check": "REQUIRED_BEFORE_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT"
+  },
+  "scientific_validation": {
+    "all_24_closure_cells_accounted_for": true,
+    "all_input_hashes_match": true,
+    "both_candidates_assessed_separately": true,
+    "combined_wave_rotor_model_not_constructed": true,
+    "cp_nlse_distinctive_nonlinear_closure_not_overclaimed": true,
+    "cp_nlse_linear_comparator_not_selected_as_native_core": true,
+    "evidence_not_promoted": true,
+    "interaction_frequency_and_chi_conflicts_not_repaired": true,
+    "lcrd_missing_data_parameter_and_reproducibility_contracts_preserved": true,
+    "minimal_core_not_selected": true,
+    "new_postulate_not_inserted": true,
+    "no_action_seam_observable_or_viability_test_created": true,
+    "no_physical_ccft_model_claimed": true,
+    "repository_claim_exhaustion_not_established": true,
+    "stage_5_not_authorized": true,
+    "terminal_outcome_maps_to_blocked": true,
+    "zero_repair_rule_preserved": true
+  },
+  "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+  "status": "STAGE_4_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "terminal_outcome": "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED"
+}

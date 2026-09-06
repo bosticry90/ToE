@@ -1,0 +1,43 @@
+{
+  "addendum_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_EXECUTION_CUSTODY_ADDENDUM_20260719_v1",
+  "canonical_execution_result_sha256": "86d9c3a2b93ccf3ec480264522d532e9c3924536459e897fc74bf154abd64a13",
+  "completed_canonical_execution_count": 1,
+  "execution_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_EXECUTION_20260719_v1",
+  "independent_review_requirement": "The independent result reviewer must adjudicate this launch recovery together with the scientific-control failure. This addendum does not accept the execution or authorize another run.",
+  "launch_attempt_count": 3,
+  "launch_attempts": [
+    {
+      "attempt": 1,
+      "canonical_outputs_written": false,
+      "forward_model_called": false,
+      "status": "FAILED_BEFORE_AUTHORITY_CHECK",
+      "technical_cause": "The file-path launch did not expose the repository root as a Python package, producing ModuleNotFoundError before production-module import completed."
+    },
+    {
+      "attempt": 2,
+      "canonical_outputs_written": false,
+      "forward_model_called": true,
+      "scientific_outputs_exposed_or_inspected": false,
+      "status": "FAILED_DURING_PRECOMMIT_CANONICAL_SERIALIZATION",
+      "technical_cause": "json.dumps rejected a NumPy int64 while assembling execution_core.json after one in-memory deterministic compute pass."
+    },
+    {
+      "attempt": 3,
+      "canonical_outputs_written": true,
+      "internal_deterministic_compute_pass_count": 2,
+      "internal_repeat_byte_identical": true,
+      "status": "CANONICAL_EXECUTION_COMPLETED"
+    }
+  ],
+  "production_compute_pass_count_across_all_attempts": 3,
+  "recovery_change": {
+    "changed_scientific_parameter_or_threshold": false,
+    "changed_production_kernel_or_geometry": false,
+    "description": "Canonical JSON serialization was extended to convert NumPy bool, integer, floating, and array values to native JSON-compatible values, with non-finite floating values rejected.",
+    "post_recovery_executor_sha256": "ec0209a433027d8e8523d9e0f21ba3662ccec559de33ea042cb0a765b64571ae",
+    "production_module_sha256": "4995c467f766466583c53c7904e2f1bb35b7c02970aece4a20e2315403ed8cac"
+  },
+  "schema_id": "toe.scalar_only_yukawa.deterministic_torsion_balance_forward_model_validation.execution_custody_addendum.v1",
+  "single_execution_authority_consumed": true,
+  "status": "DISCLOSED_PENDING_INDEPENDENT_RESULT_REVIEW"
+}

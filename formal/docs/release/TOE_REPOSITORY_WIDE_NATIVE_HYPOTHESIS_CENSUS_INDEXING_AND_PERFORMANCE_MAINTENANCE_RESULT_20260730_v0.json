@@ -1,0 +1,64 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_RESULT_20260730_v0",
+  "authoritative_census_index_generated": false,
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "active_content_execution_disabled": true,
+    "archive_mutation_comparison_implemented": true,
+    "batch_union_overlap_and_omission_checks_implemented": true,
+    "cache_hint_never_replaces_final_hash_verification": true,
+    "cache_reuse_and_invalidation_tested": true,
+    "committed_git_blob_identity_implemented": true,
+    "deterministic_versioned_schema_generated": true,
+    "exact_duplicate_candidates_preserve_every_path": true,
+    "filename_normalization_collisions_fail_closed": true,
+    "legacy_archive_index_not_overwritten": true,
+    "local_file_sha256_identity_implemented": true,
+    "network_and_recursive_archive_expansion_disabled": true,
+    "parser_size_text_nesting_record_and_timeout_limits_bound": true,
+    "path_traversal_and_root_escape_rejected": true,
+    "scientific_archive_roots_refused_by_maintenance_cli": true,
+    "special_symlink_junction_and_reparse_objects_not_followed": true,
+    "synthetic_profile_completed": true
+  },
+  "dependency_impact_result": "KNOWN_EXHAUSTIVE_FAILURES_DO_NOT_REACH_CENSUS_DEPENDENCIES",
+  "maintenance_target": "prepare_toe_repository_wide_native_hypothesis_census_indexing_and_performance_maintenance_v0",
+  "outputs": [
+    {
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_SCHEMA_V1.json",
+      "sha256": "d0aa73c9e2287356115bed179b53503072dd2dd4507dde248097b70f93b21664"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_V1_SYNTHETIC_PERFORMANCE_PROFILE_20260730_v0.json",
+      "sha256": "834bc80bd6fbb98c9c53fab2247abddf0fbb7a2db9a15d980af691e8bb314f83"
+    },
+    {
+      "path": "formal/python/tools/native_hypothesis_census_index_v1.py",
+      "sha256": "84503bafb33fd7450e2c42302d21be3303481f5eaab62c47c0b17f8d5530b133"
+    },
+    {
+      "path": "formal/python/tools/native_hypothesis_census_index_v1_profile.py",
+      "sha256": "6fd425693eea177ff9785eba54783dcce4824488029f0f5c09cb24d233be2903"
+    }
+  ],
+  "parser_implementation_boundary": {
+    "containers_media_and_binaries": "METADATA_ONLY_NO_RECURSIVE_EXTRACTION",
+    "office_and_pdf": "METADATA_ONLY_IN_MAINTENANCE_V1_NO_ACTIVE_CONTENT",
+    "text_structured_tabular_and_notebook": "BOUNDED_PASSIVE_TEXT_EXTRACTION",
+    "unsupported": "UNSUPPORTED_FORMAT_PRESERVED"
+  },
+  "performance_result": {
+    "bottleneck": "CPU_OR_PROCESS_OVERHEAD_DOMINANT_ON_SYNTHETIC_CORPUS",
+    "cold_verified_files": 512,
+    "final_verified_files": 512,
+    "recommended_maintenance_worker_count": 1,
+    "warm_cache_reused_files": 512
+  },
+  "preserved_program_state": "INSTALLED_UNOPENED",
+  "preserved_scientific_target": "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "scientific_archive_traversed": false,
+  "scientific_stage_1_authorized": false,
+  "schema_id": "toe.repository_wide_native_hypothesis_census.indexing_and_performance_maintenance_result.v0",
+  "status": "MAINTENANCE_INFRASTRUCTURE_READY_FOR_SEPARATE_STAGE_1_AUTHORITY_DECISION"
+}

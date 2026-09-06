@@ -1,0 +1,559 @@
+{
+  "anti_rabbit_hole_boundary": {
+    "automatic_v2_authorized": false,
+    "prerequisite_is_separate_and_kernel_agnostic": true,
+    "prerequisite_result_cannot_automatically_reopen_replacement_lane": true,
+    "retirement_deferral_or_closure_remain_available_after_fresh_selection": true,
+    "v1_remains_final_automatic_replacement_contract_repair": true
+  },
+  "authority": {
+    "consumed_review_verdict": "BLOCKED_ANALYTIC_KERNEL_REPLACEMENT_CONTRACT_INCOMPLETE",
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_REVIEW_20260719_v1.md",
+        "sha256": "6dd8637582f1812caa66b9dfab00acde43e717c29ec74ad5911ca8ae251dffc1"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_REVIEW_20260719_v1.json",
+        "sha256": "6de58c24afa929b6e0fc4bc2b7be3d49edee670d692be7f0c0176292cf8efa8b"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_review_v1.py",
+        "sha256": "80a0adc2251f93eac0e9faa56a498adadbd4a8586d8dcd7d983ae000abfa3b7c"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_review_v1.py",
+        "sha256": "ad7c0993e69567732840e1f28d247dd144e8c4e8cedbb0994078c9a0ad1cc3c4"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelReplacementPacketReviewV1.lean",
+        "sha256": "c2157f0d977158ff7c8fc4de2c0fafb2e503fc1dc099e207c3b4ebecb9aecb5b"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1_review_scientific_response_selection_v0.py",
+      "sha256": "c26fde79b39246344c668b83d0c4846e08cf498d23707f49348a73d427c5877e"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_V1_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+      "sha256": "2b558dbb51879614f4233fc1844d48a63d8820251e942ee693e6c0837c2d3477"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaAnalyticSphereKernelReplacementPacketV1ReviewScientificResponseSelectionV0.lean",
+      "sha256": "ad60723a1777ba6572a6909548fba168f88ad5ce71eac1e41e80595d9cb627e8"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1_review_scientific_response_selection_v0.py",
+      "sha256": "578dabce9ce6569e3602ae9f573bb6772ef1f36e2e851a5f41ac25f87ca87a7f"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This selector chooses preparation of one separate kernel-agnostic validation infrastructure prerequisite. It does not repair V1, create V2, implement or execute a kernel, run real regressions or probes, change production, call or adjudicate cubature, compute torque, DFT, vector, Jacobian, SVD, or identifiability, rerun Stage A, or authorize Stage B.",
+  "current_posture": {
+    "analytic_formula_oracle_and_frozen_gates": "PRESERVED",
+    "candidate_kernel": "NOT_CREATED_NOT_AUTHORIZED",
+    "historical_cubature": "UNADJUDICATED",
+    "next_authority": "prepare_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0",
+    "replacement_contract_v1": "FINAL_REVIEW_BLOCKED",
+    "replacement_contract_v2": "PROHIBITED",
+    "stage_a": "NOT_REOPENED",
+    "stage_b": "NOT_AUTHORIZED",
+    "validation_infrastructure_prerequisite": "AUTHORIZED_FOR_PACKET_PREPARATION_ONLY"
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "disposition": "SELECTED_AS_SEPARATE_PREREQUISITE_NOT_REPLACEMENT_PACKET_V2",
+        "scores": {
+          "accepted_surface_leverage": 5,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "forward_model_recovery": 5,
+          "no_v2_boundary_integrity": 5,
+          "schema_executability": 5,
+          "surviving_block_resolution": 5,
+          "validation_independence": 5
+        },
+        "target": "prepare_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0",
+        "weighted_score": 240
+      },
+      {
+        "candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "disposition": "RUNNER_UP_RETAINS_TRUSTED_ORACLE_BUT_ABANDONS_RECOVERY_PATH",
+        "scores": {
+          "accepted_surface_leverage": 5,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "forward_model_recovery": 0,
+          "no_v2_boundary_integrity": 5,
+          "schema_executability": 1,
+          "surviving_block_resolution": 2,
+          "validation_independence": 5
+        },
+        "target": "select_scalar_only_yukawa_analytic_oracle_only_lane_posture_v0",
+        "weighted_score": 185
+      },
+      {
+        "candidate_id": "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE",
+        "disposition": "DEFERRED_CLOSURE_PREMATURE_BEFORE_ONE_GENERIC_INFRASTRUCTURE_TEST",
+        "scores": {
+          "accepted_surface_leverage": 4,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "forward_model_recovery": 0,
+          "no_v2_boundary_integrity": 5,
+          "schema_executability": 0,
+          "surviving_block_resolution": 3,
+          "validation_independence": 5
+        },
+        "target": "close_scalar_only_yukawa_synthetic_torsion_balance_lane_v0",
+        "weighted_score": 180
+      },
+      {
+        "candidate_id": "DEFER_SYNTHETIC_TORSION_BALANCE_LANE_INDEFINITELY",
+        "disposition": "DEFERRED_DOES_NOT_TEST_WHETHER_GENERIC_INFRASTRUCTURE_IS_CHEAP",
+        "scores": {
+          "accepted_surface_leverage": 5,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "forward_model_recovery": 0,
+          "no_v2_boundary_integrity": 5,
+          "schema_executability": 0,
+          "surviving_block_resolution": 1,
+          "validation_independence": 5
+        },
+        "target": "select_scalar_only_yukawa_synthetic_torsion_balance_lane_deferral_v0",
+        "weighted_score": 175
+      }
+    ],
+    "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+    "runner_up_score": 185,
+    "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+    "selected_score": 240,
+    "winning_margin": 55
+  },
+  "review_interpretation": {
+    "accepted_regression_or_derivative_data_reopened": false,
+    "accepted_v1_repair_count": 6,
+    "analytic_formula_refuted": false,
+    "candidate_or_production_execution": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "failed_review_gate_ids": [
+      "R35_VALIDATION_ONLY_HOOK_ENFORCEMENT_EXECUTABLE",
+      "R41_LIMIT_AND_BOUNDARY_PROBES_NUMERIC",
+      "R43_MUTATION_ROUTES_COMPLETE",
+      "R44_MUTATION_DETECTION_PREDICATES_NUMERIC",
+      "R52_CANONICAL_SERIALIZATION_SCHEMA_EXACT"
+    ],
+    "frozen_gate_count": 51,
+    "principal_block": "BLOCKED_REPLACEMENT_VALIDATION_INDEPENDENCE",
+    "review_verdict": "BLOCKED_ANALYTIC_KERNEL_REPLACEMENT_CONTRACT_INCOMPLETE",
+    "secondary_blocks": [
+      "BLOCKED_REPLACEMENT_DOMAIN_COVERAGE",
+      "BLOCKED_REPLACEMENT_INTERFACE_IDENTITY"
+    ]
+  },
+  "schema_id": "toe.post_scalar_only_yukawa.analytic_sphere_kernel_replacement_packet_v1_review.scientific_response_selection.v0",
+  "scope": {
+    "automatic_return_to_replacement_lane_authorized": false,
+    "candidate_kernel_creation_authorized": false,
+    "candidate_kernel_execution_authorized": false,
+    "fifty_one_accepted_gates_preserved": true,
+    "final_v1_review_frozen": true,
+    "five_failed_gates_interpreted_as_infrastructure_prerequisites": true,
+    "jacobian_or_identifiability_authorized": false,
+    "old_cubature_adjudicated": false,
+    "old_cubature_called": false,
+    "prerequisite_packet_prepared_now": false,
+    "production_source_or_dispatch_change_authorized": false,
+    "replacement_packet_v2_authorized": false,
+    "scientific_response_selection_executed": true,
+    "shadow_qualification_authorized": false,
+    "silent_v1_correction_authorized": false,
+    "six_completed_repairs_preserved": true,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "torque_or_dft_authorized": false,
+    "validation_infrastructure_prerequisite_packet_preparation_authorized": true
+  },
+  "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+  "selected_next_target": "prepare_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_KERNEL_AGNOSTIC_VALIDATION_INFRASTRUCTURE_NO_V2_NO_CANDIDATE",
+  "selected_route": "ISOLATE_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE",
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 24,
+    "pass_count": 24,
+    "rows": [
+      {
+        "gate_id": "EXACT_FINAL_V1_REVIEW_AUTHORITY_AND_HASH_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FIFTY_ONE_FROZEN_GATES_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SIX_V1_REPAIRS_ACCEPTED_AND_NOT_REOPENED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_FIVE_SURVIVING_GATE_FAILURES_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BLOCK_IS_VALIDATION_INFRASTRUCTURE_NOT_ANALYTIC_PHYSICS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_FOUR_BOUNDED_RESPONSE_CANDIDATES",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_TEN_WEIGHTED_CRITERIA",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SELECTION_STABLE_IN_THIRTY_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PREREQUISITE_IS_NOT_REPLACEMENT_PACKET_V2",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PREREQUISITE_MAY_DEFINE_CAPABILITY_PROTOCOL_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PREREQUISITE_MAY_DEFINE_TYPED_PREDICATE_SCHEMA_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PREREQUISITE_MAY_DEFINE_DEPENDENCY_SCANNER_CONTRACT_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PREREQUISITE_MAY_DEFINE_RECURSIVE_RESULT_SCHEMA_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYNTHETIC_FIXTURES_ONLY_NO_ANALYTIC_KERNEL",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_REAL_REGRESSION_OR_BOUNDARY_PROBE_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_CANDIDATE_KERNEL_CREATION_OR_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PRODUCTION_SOURCE_OR_DISPATCH_CHANGE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_OLD_CUBATURE_CALL_OR_ADJUDICATION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_AUTOMATIC_RETURN_TO_REPLACEMENT_LANE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_AUTOMATIC_V2",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FRESH_REVIEW_REQUIRED_BEFORE_INFRASTRUCTURE_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FRESH_SELECTOR_REQUIRED_AFTER_ANY_PREREQUISITE_RESULT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_TORQUE_DFT_STAGE_A_IDENTIFIABILITY_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CURRENT_AUTHORITY_ROTATES_TO_PREREQUISITE_PACKET_PREPARATION_ONLY",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_id": "POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_V1_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0",
+  "selection_policy": {
+    "candidate_count": 4,
+    "criteria_weights": {
+      "accepted_surface_leverage": 5,
+      "anti_rabbit_hole_control": 5,
+      "authority_clarity": 5,
+      "boundedness": 5,
+      "computational_economy": 4,
+      "forward_model_recovery": 4,
+      "no_v2_boundary_integrity": 5,
+      "schema_executability": 5,
+      "surviving_block_resolution": 5,
+      "validation_independence": 5
+    },
+    "criterion_count": 10,
+    "criterion_scale": "0_TO_5_PRIORITY_SCORE_NOT_TRUTH_PROBABILITY",
+    "tie_break_rule": "LEXICOGRAPHIC_CANDIDATE_ID"
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 35,
+    "rows": [
+      {
+        "runner_up_candidate_id": "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE",
+        "runner_up_score": 160,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_accepted_surface_leverage"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 175,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_surviving_block_resolution"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 160,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_no_v2_boundary_integrity"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 160,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_validation_independence"
+      },
+      {
+        "runner_up_candidate_id": "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_schema_executability"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 185,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 220,
+        "variant": "omit_forward_model_recovery"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 160,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 165,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 220,
+        "variant": "omit_computational_economy"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 160,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 160,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 215,
+        "variant": "omit_anti_rabbit_hole_control"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "accepted_surface_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 190,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "accepted_surface_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 183,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "surviving_block_resolution_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 187,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "surviving_block_resolution_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "no_v2_boundary_integrity_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 190,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "no_v2_boundary_integrity_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "validation_independence_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 190,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "validation_independence_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 184,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "schema_executability_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 186,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "schema_executability_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 185,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "forward_model_recovery_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 185,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "forward_model_recovery_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 190,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "computational_economy_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 190,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "computational_economy_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 190,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 180,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 235,
+        "variant": "anti_rabbit_hole_control_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_REPLACEMENT_IMPLEMENTATION_AND_PRESERVE_ANALYTIC_ORACLE_ONLY",
+        "runner_up_score": 190,
+        "selected_candidate_id": "KERNEL_AGNOSTIC_VALIDATION_HARNESS_AND_SCHEMA_PREREQUISITE_V0",
+        "selected_score": 245,
+        "variant": "anti_rabbit_hole_control_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 30
+  },
+  "target": "select_post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1_review_scientific_response_v0",
+  "validation_infrastructure_prerequisite_contract": {
+    "allowed_contract_surfaces": [
+      "PROCESS_SCOPED_CAPABILITY_ISSUER_AND_PRIVATE_CALL_PROTOCOL",
+      "TYPED_NUMERIC_EXCEPTION_AND_RELATIONAL_PREDICATE_SCHEMA",
+      "MUTATION_CALL_ROUTE_AND_ADJUDICATOR_SCHEMA",
+      "AST_IMPORT_AND_CALL_GRAPH_DEPENDENCY_SCANNER_CONTRACT",
+      "RECURSIVE_CANONICAL_RESULT_SCHEMAS_ENUMS_AND_DUPLICATE_KEY_PARSER",
+      "KERNEL_FREE_SYNTHETIC_FIXTURES_FOR_INFRASTRUCTURE_QUALIFICATION"
+    ],
+    "completion_consequence": "FRESH_SELECTOR_REQUIRED_NO_AUTOMATIC_REOPENING_OF_REPLACEMENT_IMPLEMENTATION",
+    "forbidden_contract_surfaces": [
+      "ANALYTIC_OR_NEWTONIAN_OR_YUKAWA_KERNEL_IMPLEMENTATION",
+      "V1_PACKET_EDIT_OR_V2_REPLACEMENT_PACKET",
+      "REAL_ORACLE_REGRESSION_BOUNDARY_OR_MUTATION_EXECUTION",
+      "PRODUCTION_IMPORT_DISPATCH_OR_CALLER_CHANGE"
+    ],
+    "is_replacement_packet_v2": false,
+    "kernel_agnostic": true,
+    "status": "PACKET_PREPARATION_AUTHORIZED_NOT_PREPARED",
+    "surviving_gate_context": [
+      "R35_VALIDATION_ONLY_HOOK_ENFORCEMENT_EXECUTABLE",
+      "R41_LIMIT_AND_BOUNDARY_PROBES_NUMERIC",
+      "R43_MUTATION_ROUTES_COMPLETE",
+      "R44_MUTATION_DETECTION_PREDICATES_NUMERIC",
+      "R52_CANONICAL_SERIALIZATION_SCHEMA_EXACT"
+    ]
+  },
+  "verdict": "SELECTED_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PREPARATION"
+}

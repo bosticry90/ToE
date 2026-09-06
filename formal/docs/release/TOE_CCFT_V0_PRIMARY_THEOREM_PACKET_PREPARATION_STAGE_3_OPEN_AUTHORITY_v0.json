@@ -1,0 +1,143 @@
+{
+  "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN_AUTHORITY_v0",
+  "schema_id": "toe.ccft_v0.primary_theorem_packet_preparation.stage_3_open_authority.v0",
+  "captured_at_utc": "2026-08-02T05:37:45Z",
+  "authority_commit_exact_path_set": [
+    "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN_AUTHORITY_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN_AUTHORITY_v0.json",
+    "formal/python/tests/test_toe_ccft_v0_primary_theorem_packet_stage_3_authority.py",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0PrimaryTheoremPacketStage3OpenAuthorityReviewV0.lean",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0PrimaryTheoremPacketStage3OpenAuthorityV0.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "authority_decision": "AUTHORIZE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN",
+  "authorized_stage": {
+    "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+    "stage_number": 3,
+    "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION",
+    "canonical_target": "prepare_toe_ccft_v0_primary_theorem_or_counterexample_packet_v0",
+    "canonical_scope_hash": "b0db245201d0fdc6edc15a8ac6028c01725ef4a0e2e87c53f9835094df1fe506"
+  },
+  "evidence_bindings": [
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1",
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1.json",
+      "sha256": "e0e89f235f1f80ab6f44f5db0bfff6adbaf1fa7679f0f5198b0ef4f371728eb6"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0.json",
+      "sha256": "4f3a7031960522f91d9a1988bc4c290a56505b5f71e84e815da3bd46f21d959a"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0.json",
+      "sha256": "c57b2a5a3649deaba3be237da014992663f62e544c898bed89cfecbd35498556"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_VALIDATION_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_VALIDATION_v0.json",
+      "sha256": "812fb132ca8aa349a6e246d000f0d6c0a2a003a04c348ec63f6e9e2dff30c255"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_CLOSE_v0",
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_CLOSE_v0.json",
+      "sha256": "b8a4264f23b66fb1846b7265fbd27896a9741b1df23e90ad82e3b99a787d551d"
+    }
+  ],
+  "frozen_model_binding": {
+    "model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "state_space": "H1_per(T_L; C)",
+    "governing_equation": "i partial_t psi = -(1/2) partial_xx psi + kappa (|psi|^2-1) psi",
+    "domain": "T_L = R/(L Z)",
+    "parameter_contract": "L>0 and kappa in [0,1]",
+    "new_postulate_count": 5,
+    "model_mutation_authorized": false
+  },
+  "primary_packet_refinement": {
+    "packet_id": "CCFT_V0_GAUGE_EQUIVALENCE_AND_BACKGROUND_RESOLVED_DISPERSION_PACKET_v0",
+    "title": "CCFT-v0 gauge-equivalence and background-resolved dispersion theorem packet",
+    "packet_count": 1,
+    "compound_claim_count": 4,
+    "rationale": "Gauge equivalence and both background linearizations are logically coupled and jointly determine whether the historical frequency formulas concern one conflict, different backgrounds, different gauges, or different conventions.",
+    "status_at_authority": "PROPOSED_PACKET_SCOPE_NOT_A_THEOREM_RESULT"
+  },
+  "authorized_claim_obligations": [
+    {
+      "claim_id": "CLAIM_1_EXACT_GAUGE_EQUIVALENCE",
+      "proposed_statement": "The map phi(t,x)=exp(-i kappa t) psi(t,x) is a bijection between sufficiently regular periodic solutions of the frozen CCFT-v0 equation and the standard defocusing cubic NLSE i phi_t=-(1/2)phi_xx+kappa|phi|^2phi with corresponding periodic data.",
+      "required_packet_work": "Freeze exact regularity, time interval, data map, inverse map, proposition, formal negation, allowed lemmas, and forbidden physical conclusion.",
+      "epistemic_status": "TO_BE_PREPARED_NOT_PROVED"
+    },
+    {
+      "claim_id": "CLAIM_2_UNIT_BACKGROUND_DISPERSION",
+      "proposed_statement": "Linearization of the frozen equation about psi=1 under a frozen Fourier convention yields the candidate relation omega^2=(q^2/2)(q^2/2+2 kappa)=q^4/4+kappa q^2 for q=2 pi n/L.",
+      "required_packet_work": "Freeze perturbation variables, linearized system, Fourier and frequency signs, proposition, formal negation, and symbolic and numerical regression contracts.",
+      "epistemic_status": "TO_BE_PREPARED_NOT_DERIVED"
+    },
+    {
+      "claim_id": "CLAIM_3_ZERO_BACKGROUND_DISPERSION",
+      "proposed_statement": "Linearization of the frozen equation about psi=0 under the convention exp(i(qx-omega t)) yields the candidate relation omega=q^2/2-kappa.",
+      "required_packet_work": "Freeze the zero background, phase and frequency convention, proposition, formal negation, and convention-reversal mapping.",
+      "epistemic_status": "TO_BE_PREPARED_NOT_DERIVED"
+    },
+    {
+      "claim_id": "CLAIM_4_HISTORICAL_FORMULA_CLASSIFICATION",
+      "proposed_statement": "Classify the bound historical squared and additive formulas only after Claims 1-3 are adjudicated.",
+      "required_packet_work": "Bind each formula to its source, background, gauge, perturbation variable, and sign convention and freeze the classification decision rule.",
+      "epistemic_status": "TO_BE_PREPARED_NO_CLASSIFICATION_SELECTED"
+    }
+  ],
+  "historical_formula_classification_vocabulary": [
+    "SAME_MODEL_DIFFERENT_BACKGROUND",
+    "SAME_MODEL_DIFFERENT_GAUGE",
+    "EQUIVALENT_AFTER_CONVENTION_MAPPING",
+    "VALID_SPECIAL_LIMITS",
+    "GENUINELY_INCOMPATIBLE",
+    "HISTORICAL_CONTEXT_INSUFFICIENT"
+  ],
+  "required_packet_components": [
+    "research_director_theorem_decision_packet",
+    "exact definitions domains regularity and assumptions",
+    "target proposition and formal negation for every linked claim",
+    "assumption and dependency ledger",
+    "allowed lemmas forbidden conclusions known examples and known counterexamples",
+    "symbolic test contract without symbolic result generation",
+    "numerical regression contract without numerical theorem-result generation",
+    "Lean theorem signatures without Lean proofs",
+    "physical claim boundary"
+  ],
+  "canonical_terminal_outcomes": [
+    "PRIMARY_THEOREM_PACKET_FROZEN",
+    "THEOREM_PACKET_UNDERDEFINED",
+    "THEOREM_TARGET_LACKS_DECISION_VALUE"
+  ],
+  "scientific_limits": {
+    "maximum_primary_theorem_packets": 1,
+    "frozen_model_mutation_authorized": false,
+    "proof_execution_authorized": false,
+    "disproof_execution_authorized": false,
+    "construction_execution_authorized": false,
+    "counterexample_execution_authorized": false,
+    "symbolic_theorem_result_generation_authorized": false,
+    "numerical_theorem_result_generation_authorized": false,
+    "Lean_theorem_proof_authorized": false,
+    "norm_or_energy_theorem_packet_authorized_in_this_stage": false,
+    "physical_interpretation_or_promotion_authorized": false,
+    "stage_4_authorized": false
+  },
+  "scientific_output_at_authority": {
+    "frozen_model_count": 1,
+    "primary_theorem_packets_frozen": 0,
+    "formal_propositions_frozen": 0,
+    "formal_negations_frozen": 0,
+    "theorems_proved": 0,
+    "counterexamples_found": 0,
+    "gauge_equivalence_result": "NONE",
+    "unit_background_dispersion_result": "NONE",
+    "zero_background_dispersion_result": "NONE",
+    "historical_formula_classification": "NONE",
+    "physical_interpretation": "NONE"
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_3_OPEN_ONLY"
+}

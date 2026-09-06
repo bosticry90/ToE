@@ -1,0 +1,1630 @@
+{
+  "authority": {
+    "consumed_selector_route": "ISOLATE_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE",
+    "consumed_selector_verdict": "SELECTED_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PREPARATION",
+    "frozen_selector_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_V1_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+        "sha256": "2b558dbb51879614f4233fc1844d48a63d8820251e942ee693e6c0837c2d3477"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_V1_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.json",
+        "sha256": "b848cf2da1f7d5493ecfdf496c379872df10a78fec4d7c311cfd497509074b61"
+      },
+      {
+        "relative_path": "formal/python/tools/post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1_review_scientific_response_selection_v0.py",
+        "sha256": "c26fde79b39246344c668b83d0c4846e08cf498d23707f49348a73d427c5877e"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1_review_scientific_response_selection_v0.py",
+        "sha256": "578dabce9ce6569e3602ae9f573bb6772ef1f36e2e851a5f41ac25f87ca87a7f"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaAnalyticSphereKernelReplacementPacketV1ReviewScientificResponseSelectionV0.lean",
+        "sha256": "ad60723a1777ba6572a6909548fba168f88ad5ce71eac1e41e80595d9cb627e8"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0.py",
+      "sha256": "e7f606eea02b383377933571c1d4d77ba1788eaa77e8a97634f23450749a960e"
+    },
+    "human_packet": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_20260719_v0.md",
+      "sha256": "b019219a3c2ccee06bbb5628a9104995d38938d1b46321e2f7cc1950671ad1e4"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaKernelReplacementValidationInfrastructurePrerequisitePacketV0.lean",
+      "sha256": "cde67ee5988a8325aac3d6339768fccdf3f2f3a7185d727998913399653b29fd"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0.py",
+      "sha256": "1f2548d15e906f455ab9ad91329543514d1431c7896f17107cb8b08651fff45b"
+    }
+  },
+  "capability_protocol_v0": {
+    "ambient_environment_or_global_validation_mode": "FORBIDDEN",
+    "authentication_order": [
+      "TOKEN_TYPE_AND_EXACT_SCHEMA",
+      "HMAC_COMPARE_DIGEST",
+      "PID",
+      "RUN_ID",
+      "REVIEW_SHA256",
+      "FIXTURE_ID",
+      "MUTATION_ID",
+      "ISSUED_NOT_IN_FUTURE",
+      "NOT_EXPIRED",
+      "NONCE_NOT_REPLAYED",
+      "INSERT_NONCE_THEN_DISPATCH"
+    ],
+    "error_behavior": "raise PermissionError with exact enum string and no fixture output",
+    "error_enum": [
+      "CAPABILITY_REQUIRED",
+      "CAPABILITY_SCHEMA_INVALID",
+      "CAPABILITY_MAC_INVALID",
+      "CAPABILITY_WRONG_PROCESS",
+      "CAPABILITY_WRONG_RUN",
+      "CAPABILITY_WRONG_REVIEW",
+      "CAPABILITY_WRONG_FIXTURE",
+      "CAPABILITY_WRONG_MUTATION",
+      "CAPABILITY_FUTURE_ISSUE",
+      "CAPABILITY_EXPIRED",
+      "CAPABILITY_REPLAYED"
+    ],
+    "expiry_rule": "expires_ns=issued_ns+30_000_000_000_AND_monotonic_ns<=expires_ns",
+    "issuer_entrypoint": "ValidationHarnessSession.issue_capability(fixture_id,mutation_id)",
+    "issuer_visibility": "SESSION_PRIVATE_TO_QUALIFICATION_CHILD_NOT_EXPORTED_FROM_PACKAGE___all__",
+    "launcher_secret": "secrets.token_bytes(32)_WRITTEN_ONCE_THROUGH_INHERITED_ANONYMOUS_PIPE_NEVER_SERIALIZED",
+    "mac_rule": "HMAC_SHA256_PROCESS_SECRET_OVER_CANONICAL_TOKEN_FIELDS_EXCLUDING_mac_hex",
+    "manifest_schema": {
+      "additional_fields": "FORBIDDEN",
+      "field_order_for_human_display": [
+        "schema_id",
+        "run_id",
+        "child_pid",
+        "review_sha256",
+        "allowed_bindings",
+        "issued_ns",
+        "expires_ns"
+      ],
+      "fields": [
+        {
+          "name": "schema_id",
+          "required": true,
+          "type": "ENUM:QualificationLaunchManifestV0"
+        },
+        {
+          "name": "run_id",
+          "required": true,
+          "type": "LOWERCASE_UUID4"
+        },
+        {
+          "name": "child_pid",
+          "required": true,
+          "type": "POSITIVE_INTEGER"
+        },
+        {
+          "name": "review_sha256",
+          "required": true,
+          "type": "LOWERCASE_SHA256"
+        },
+        {
+          "name": "allowed_bindings",
+          "required": true,
+          "type": "SORTED_UNIQUE_FIXTURE_MUTATION_PAIR_ARRAY"
+        },
+        {
+          "name": "issued_ns",
+          "required": true,
+          "type": "NONNEGATIVE_INTEGER"
+        },
+        {
+          "name": "expires_ns",
+          "required": true,
+          "type": "NONNEGATIVE_INTEGER"
+        }
+      ],
+      "schema_id": "QualificationLaunchManifestV0"
+    },
+    "out_of_scope": "MALICIOUS_ARBITRARY_CODE_WITH_READ_ACCESS_TO_PROCESS_MEMORY",
+    "pipe_frame": "UINT32_BIG_ENDIAN_MANIFEST_BYTE_LENGTH_THEN_CANONICAL_MANIFEST_UTF8_THEN_EXACTLY_32_SECRET_BYTES_THEN_EOF",
+    "pipe_read_rule": "READ_EXACT_FRAME_REJECT_TRUNCATION_TRAILING_BYTES_NONCANONICAL_MANIFEST_OR_PID_MISMATCH",
+    "private_entrypoint_signature": "_evaluate_mutated_fixture(fixture_id,input_record_id,mutation_id,*,capability)->FixtureResultV0",
+    "public_entrypoint_signature": "evaluate_fixture(fixture_id,input_record_id)->FixtureResultV0",
+    "session_constructor": "ValidationHarnessSession.from_anonymous_pipe(read_fd,canonical_manifest_bytes)",
+    "single_use_rule": "nonce_hex_INSERTED_IN_PROCESS_LOCAL_REPLAY_SET_BEFORE_MUTATED_CALL_AND_SECOND_USE_REJECTED",
+    "threat_model": "PREVENT_ORDINARY_PUBLIC_CALLS_ACCIDENTAL_AMBIENT_MODE_AND_REPLAY_FROM_ACCESSING_MUTATED_PRIVATE_PATH",
+    "token_schema": {
+      "additional_fields": "FORBIDDEN",
+      "field_order_for_human_display": [
+        "schema_id",
+        "run_id",
+        "pid",
+        "fixture_id",
+        "mutation_id",
+        "review_sha256",
+        "nonce_hex",
+        "issued_ns",
+        "expires_ns",
+        "mac_hex"
+      ],
+      "fields": [
+        {
+          "name": "schema_id",
+          "required": true,
+          "type": "ENUM:CapabilityTokenV0"
+        },
+        {
+          "name": "run_id",
+          "required": true,
+          "type": "LOWERCASE_UUID4"
+        },
+        {
+          "name": "pid",
+          "required": true,
+          "type": "NONNEGATIVE_INTEGER"
+        },
+        {
+          "name": "fixture_id",
+          "required": true,
+          "type": "FIXTURE_ID_V0"
+        },
+        {
+          "name": "mutation_id",
+          "required": true,
+          "type": "MUTATION_ID_V0"
+        },
+        {
+          "name": "review_sha256",
+          "required": true,
+          "type": "LOWERCASE_SHA256"
+        },
+        {
+          "name": "nonce_hex",
+          "required": true,
+          "type": "LOWERCASE_HEX_32_BYTES"
+        },
+        {
+          "name": "issued_ns",
+          "required": true,
+          "type": "NONNEGATIVE_INTEGER"
+        },
+        {
+          "name": "expires_ns",
+          "required": true,
+          "type": "NONNEGATIVE_INTEGER"
+        },
+        {
+          "name": "mac_hex",
+          "required": true,
+          "type": "LOWERCASE_HMAC_SHA256"
+        }
+      ],
+      "schema_id": "CapabilityTokenV0"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This packet specifies reusable kernel-agnostic validation infrastructure only. It implements or executes no infrastructure or synthetic fixture, contains no scientific kernel, edits no replacement packet, creates or executes no candidate, changes no production source or dispatch, calls or adjudicates no cubature, reruns no Stage A work, computes no torque, DFT, vector, Jacobian, SVD, or identifiability, and authorizes no Stage B. It has one terminal review and no repair successor.",
+  "dependency_scanner_contract_v0": {
+    "alias_rule": "TRACK_IMPORT_AND_IMPORTFROM_ALIASES_THROUGH_DOTTED_ATTRIBUTE_CALLS_WITHIN_ONE_MODULE",
+    "dynamic_import_rule": "__import___AND_importlib.import_module_ALWAYS_VIOLATIONS",
+    "entrypoint_signature": "scan_python_dependency_contract(source_roots,forbidden_modules,forbidden_call_targets)->DependencyScanResultV0",
+    "expected_bad_source_violations": [
+      "FORBIDDEN_CALL:forbidden_oracle.evaluate",
+      "FORBIDDEN_IMPORT:forbidden_oracle"
+    ],
+    "file_order": "LEXICOGRAPHIC_SOURCE_ROOT_URI",
+    "forbidden_call_targets": [
+      "forbidden_oracle.evaluate",
+      "forbidden_cubature.integrate"
+    ],
+    "forbidden_modules": [
+      "forbidden_oracle",
+      "forbidden_cubature"
+    ],
+    "parse_or_unknown_ast_failure": "SCANNER_FAIL_CLOSED_WITH_PARSE_OR_UNSUPPORTED_NODE_VIOLATION",
+    "recognized_ast_nodes": [
+      "Module",
+      "Import",
+      "ImportFrom",
+      "alias",
+      "Expr",
+      "Call",
+      "Name",
+      "Load",
+      "Attribute",
+      "Constant"
+    ],
+    "source_roots": [
+      "virtual://synthetic/good.py",
+      "virtual://synthetic/bad.py"
+    ],
+    "violation_order": "LEXICOGRAPHIC_VIOLATION_ID",
+    "virtual_sources": {
+      "virtual://synthetic/bad.py": "import forbidden_oracle\nforbidden_oracle.evaluate()\n",
+      "virtual://synthetic/good.py": "import math\nvalue = math.sqrt(4.0)\n"
+    }
+  },
+  "future_exploratory_sandbox_risk_tier": {
+    "authorized_now": false,
+    "eligible_work_if_later_selected": "ISOLATED_CANDIDATE_AND_EIGHT_FROZEN_REGRESSION_CASES_ONLY",
+    "ineligible_claims": [
+      "PRODUCTION_REPLACEMENT",
+      "CUBATURE_ADJUDICATION",
+      "STAGE_A_VALIDATION",
+      "IDENTIFIABILITY",
+      "SENSITIVITY_OR_BOUND"
+    ],
+    "labels_exact": [
+      "EXPLORATORY_IMPLEMENTATION_RESULT",
+      "NON_PRODUCTION",
+      "NON_ADJUDICATIVE",
+      "NO_SCIENTIFIC_CLAIM"
+    ],
+    "may_change_production_or_issue_scientific_verdict": false,
+    "may_create_isolated_candidate_if_freshly_selected_after_ready_review": true
+  },
+  "mutation_routing_contract_v0": {
+    "all_routes_mandatory": true,
+    "baseline_must_pass_before_capability_issuance": true,
+    "missing_duplicate_failed_or_out_of_order_route": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+    "one_mutation_per_process": true,
+    "route_count": 8,
+    "route_order": [
+      "ROUTE_M01_SCALE_BY_TWO",
+      "ROUTE_M02_FLIP_SIGN",
+      "ROUTE_M03_SUPPRESS_EXCEPTION",
+      "ROUTE_M04_CAST_FLOAT32",
+      "ROUTE_M05_BYPASS_CAPABILITY",
+      "ROUTE_M06_INSERT_FORBIDDEN_IMPORT",
+      "ROUTE_M07_DUPLICATE_KEY_INPUT",
+      "ROUTE_M08_UNKNOWN_ENUM_INPUT"
+    ],
+    "route_rows": [
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F01_LINEAR_PAIR",
+          "mutation_id": "M01_SCALE_BY_TWO",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F01_LINEAR_PAIR",
+        "injection_point": {
+          "operation": "multiply return by 2.0",
+          "point": "RETURN_VALUE",
+          "symbol": "synthetic_fixtures._linear_pair_mutated"
+        },
+        "input_record_id": "I01_LINEAR_PAIR",
+        "mutation_id": "M01_SCALE_BY_TWO",
+        "predicate_id": "P02_SCALE_MUTATION",
+        "private_mutated_call": "synthetic_fixtures._linear_pair_mutated",
+        "public_baseline_call": "synthetic_fixtures.linear_pair",
+        "route_id": "ROUTE_M01_SCALE_BY_TWO"
+      },
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F02_NEGATIVE_SQUARE",
+          "mutation_id": "M02_FLIP_SIGN",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F02_NEGATIVE_SQUARE",
+        "injection_point": {
+          "operation": "multiply return by -1.0",
+          "point": "RETURN_VALUE",
+          "symbol": "synthetic_fixtures._negative_square_mutated"
+        },
+        "input_record_id": "I02_NEGATIVE_SQUARE",
+        "mutation_id": "M02_FLIP_SIGN",
+        "predicate_id": "P03_SIGN_FLIP",
+        "private_mutated_call": "synthetic_fixtures._negative_square_mutated",
+        "public_baseline_call": "synthetic_fixtures.negative_square",
+        "route_id": "ROUTE_M02_FLIP_SIGN"
+      },
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F03_REQUIRED_EXCEPTION",
+          "mutation_id": "M03_SUPPRESS_EXCEPTION",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F03_REQUIRED_EXCEPTION",
+        "injection_point": {
+          "operation": "return +0.0 instead of raising",
+          "point": "ZERO_DENOMINATOR_BRANCH",
+          "symbol": "synthetic_fixtures._reciprocal_mutated"
+        },
+        "input_record_id": "I03_ZERO_DENOMINATOR",
+        "mutation_id": "M03_SUPPRESS_EXCEPTION",
+        "predicate_id": "P04_EXCEPTION_SUPPRESSED",
+        "private_mutated_call": "synthetic_fixtures._reciprocal_mutated",
+        "public_baseline_call": "synthetic_fixtures.reciprocal",
+        "route_id": "ROUTE_M03_SUPPRESS_EXCEPTION"
+      },
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F04_ARRAY_IDENTITY",
+          "mutation_id": "M04_CAST_FLOAT32",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F04_ARRAY_IDENTITY",
+        "injection_point": {
+          "operation": "cast return array to numpy.float32",
+          "point": "RETURN_ARRAY_DTYPE",
+          "symbol": "synthetic_fixtures._array_identity_mutated"
+        },
+        "input_record_id": "I04_ARRAY",
+        "mutation_id": "M04_CAST_FLOAT32",
+        "predicate_id": "P05_ARRAY_DTYPE",
+        "private_mutated_call": "synthetic_fixtures._array_identity_mutated",
+        "public_baseline_call": "synthetic_fixtures.float64_array_identity",
+        "route_id": "ROUTE_M04_CAST_FLOAT32"
+      },
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F05_PRIVATE_CAPABILITY",
+          "mutation_id": "M05_BYPASS_CAPABILITY",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F05_PRIVATE_CAPABILITY",
+        "injection_point": {
+          "operation": "invoke with capability=None; guard must remain and raise",
+          "point": "AUTHENTICATION_GUARD",
+          "symbol": "synthetic_fixtures._private_capability_echo"
+        },
+        "input_record_id": "I05_ECHO",
+        "mutation_id": "M05_BYPASS_CAPABILITY",
+        "predicate_id": "P06_UNAUTHORIZED_PRIVATE_CALL",
+        "private_mutated_call": "synthetic_fixtures._private_capability_echo",
+        "public_baseline_call": "synthetic_fixtures.private_capability_echo",
+        "route_id": "ROUTE_M05_BYPASS_CAPABILITY"
+      },
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F06_DEPENDENCY_SCAN",
+          "mutation_id": "M06_INSERT_FORBIDDEN_IMPORT",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F06_DEPENDENCY_SCAN",
+        "injection_point": {
+          "operation": "insert exact source import forbidden_oracle\\nforbidden_oracle.evaluate()\\n",
+          "point": "VIRTUAL_SOURCE_TEXT",
+          "symbol": "dependency_scanner._scan_virtual_source"
+        },
+        "input_record_id": "I06_FORBIDDEN_IMPORT",
+        "mutation_id": "M06_INSERT_FORBIDDEN_IMPORT",
+        "predicate_id": "P07_FORBIDDEN_DEPENDENCY",
+        "private_mutated_call": "dependency_scanner._scan_virtual_source",
+        "public_baseline_call": "dependency_scanner.scan_python_dependency_contract",
+        "route_id": "ROUTE_M06_INSERT_FORBIDDEN_IMPORT"
+      },
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F07_DUPLICATE_JSON",
+          "mutation_id": "M07_DUPLICATE_KEY_INPUT",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F07_DUPLICATE_JSON",
+        "injection_point": {
+          "operation": "replace baseline with exact bytes {\"a\":1,\"a\":2}",
+          "point": "JSON_INPUT_BYTES",
+          "symbol": "synthetic_fixtures._loads_strict_mutated"
+        },
+        "input_record_id": "I07_UNIQUE_KEY_BASELINE",
+        "mutation_id": "M07_DUPLICATE_KEY_INPUT",
+        "predicate_id": "P08_DUPLICATE_KEY",
+        "private_mutated_call": "synthetic_fixtures._loads_strict_mutated",
+        "public_baseline_call": "canonical_codec.loads_strict",
+        "route_id": "ROUTE_M07_DUPLICATE_KEY_INPUT"
+      },
+      {
+        "adjudicator_entrypoint": "validation_infrastructure.adjudicate_v0",
+        "capability_binding": {
+          "fixture_id": "F08_UNKNOWN_ENUM",
+          "mutation_id": "M08_UNKNOWN_ENUM_INPUT",
+          "single_use": true
+        },
+        "execution_order": [
+          "PUBLIC_BASELINE",
+          "ISSUE_BOUND_CAPABILITY",
+          "ONE_PRIVATE_MUTATED_CALL",
+          "ONE_ADJUDICATOR_CALL"
+        ],
+        "failure_consequence": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER",
+        "fixture_id": "F08_UNKNOWN_ENUM",
+        "injection_point": {
+          "operation": "replace COMPLETE with exact ASCII UNKNOWN",
+          "point": "ENUM_FIELD_STATUS",
+          "symbol": "synthetic_fixtures._validate_run_status_mutated"
+        },
+        "input_record_id": "I08_VALID_ENUM_BASELINE",
+        "mutation_id": "M08_UNKNOWN_ENUM_INPUT",
+        "predicate_id": "P09_UNKNOWN_ENUM",
+        "private_mutated_call": "synthetic_fixtures._validate_run_status_mutated",
+        "public_baseline_call": "synthetic_fixtures.validate_run_status",
+        "route_id": "ROUTE_M08_UNKNOWN_ENUM_INPUT"
+      }
+    ]
+  },
+  "packet_gates": {
+    "failure_count": 0,
+    "gate_count": 50,
+    "pass_count": 50,
+    "rows": [
+      {
+        "gate_id": "EXACT_SELECTOR_AUTHORITY_AND_HASH_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PACKET_IS_KERNEL_AGNOSTIC_AND_NOT_REPLACEMENT_V2",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V0_ONLY_NO_REPAIR_VERSION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PREREQUISITE_TO_THE_PREREQUISITE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TWO_TERMINAL_REVIEW_OUTCOMES_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "READY_REVIEW_LEADS_TO_TWO_OPTION_SELECTOR_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FAILED_REVIEW_LEADS_TO_RETIRE_OR_DEFER_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THREAT_MODEL_AND_NON_GOALS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANONYMOUS_PIPE_SECRET_ISSUANCE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PROCESS_RUN_FIXTURE_MUTATION_BINDING_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "HMAC_SHA256_TOKEN_FIELDS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXPIRY_AND_SINGLE_USE_REPLAY_GUARD_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PUBLIC_CALL_HAS_NO_CAPABILITY_OR_MUTATION_ARGUMENT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRIVATE_CALL_SIGNATURE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CAPABILITY_AUTHENTICATION_ORDER_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CAPABILITY_ERROR_ENUM_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_AMBIENT_ENVIRONMENT_OR_GLOBAL_MODE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FOUR_TYPED_PREDICATE_SCHEMAS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ADJUDICATION_RESULT_SCHEMA_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NUMERIC_COMPARATOR_ALGORITHMS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "JSON_POINTER_SUBSET_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DECIMAL_AND_FLOAT_CONVERSION_RULES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EIGHT_KERNEL_FREE_FIXTURES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EIGHT_COMPLETE_MUTATION_ROUTES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EVERY_ROUTE_BINDS_FIXTURE_CALL_CAPABILITY_INJECTION_AND_ADJUDICATOR",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DEPENDENCY_SCANNER_ENTRYPOINT_AND_SOURCE_ROOTS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DEPENDENCY_SCANNER_AST_ALIAS_AND_DYNAMIC_IMPORT_RULES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DEPENDENCY_SCANNER_PARSE_FAILURE_FAILS_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RECURSIVE_ROOT_AND_SEVEN_NESTED_SCHEMAS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_ENUMS_EXACT_AND_UNKNOWN_VALUES_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DUPLICATE_KEY_PARSER_ALGORITHM_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CANONICAL_UTF8_JSON_ENCODING_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BINARY64_HEX_AND_DECIMAL_ENCODING_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MISSING_UNKNOWN_NONFINITE_AND_DUPLICATE_VALUES_FAIL_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TWELVE_SYNTHETIC_CONTROLS_MANDATORY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SIXTY_SECOND_256_MIB_FUTURE_ENVELOPE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYNTHETIC_CONTROLS_NOT_EXECUTED_DURING_PREPARATION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXPLORATORY_SANDBOX_RISK_TIER_DEFINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SANDBOX_LABELS_NONPRODUCTION_NONADJUDICATIVE_NO_CLAIM",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SANDBOX_NOT_AUTHORIZED_BY_THIS_PACKET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_ANALYTIC_NEWTONIAN_OR_YUKAWA_KERNEL_CONTENT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_REAL_ORACLE_REGRESSION_OR_BOUNDARY_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_CANDIDATE_KERNEL_CREATION_OR_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PRODUCTION_SOURCE_IMPORT_CALLER_OR_DISPATCH_CHANGE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_CUBATURE_CALL_OR_ADJUDICATION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_STAGE_A_TORQUE_DFT_IDENTIFIABILITY_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CURRENT_AUTHORITY_ROTATES_ONLY_TO_ONE_TERMINAL_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANY_REVIEW_RESULT_STOPS_FOR_GOVERNED_SELECTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_AUTOMATIC_RETURN_TO_REPLACEMENT_LANE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RETIREMENT_DEFERRAL_REMAINS_MANDATORY_ON_FAILURE",
+        "status": "PASS"
+      }
+    ]
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_20260719_v0",
+  "packet_review_outcomes": [
+    "VALIDATION_INFRASTRUCTURE_PREREQUISITE_READY",
+    "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER"
+  ],
+  "recursive_canonical_schema_contract_v0": {
+    "array_order": "SCHEMA_SPECIFIC_AND_NEVER_SORTED_UNLESS_FIELD_TYPE_SAYS_SORTED_UNIQUE",
+    "binary64_rule": "LOWERCASE_float.hex_STRINGS_ONLY",
+    "canonical_encoder": "json.dumps(object,sort_keys=True,ensure_ascii=True,allow_nan=False,separators=(',',':'))+'\\n'",
+    "decimal_rule": "UPPERCASE_NORMALIZED_DECIMAL_STRINGS_ONLY",
+    "duplicate_pair_algorithm": "iterate_pairs_in_input_order_raise_DuplicateKeyError_on_second_occurrence_before_dict_construction",
+    "encoding": "UTF_8_NO_BOM_EXACTLY_ONE_TRAILING_LF",
+    "enum_registry": {
+      "ADJUDICATION_FAILURE_CODE_V0": [
+        "MISSING_POINTER",
+        "TYPE_MISMATCH",
+        "UNKNOWN_ENUM",
+        "PREDICATE_FALSE"
+      ],
+      "CAPABILITY_ERROR_V0": [
+        "CAPABILITY_REQUIRED",
+        "CAPABILITY_SCHEMA_INVALID",
+        "CAPABILITY_MAC_INVALID",
+        "CAPABILITY_WRONG_PROCESS",
+        "CAPABILITY_WRONG_RUN",
+        "CAPABILITY_WRONG_REVIEW",
+        "CAPABILITY_WRONG_FIXTURE",
+        "CAPABILITY_WRONG_MUTATION",
+        "CAPABILITY_FUTURE_ISSUE",
+        "CAPABILITY_EXPIRED",
+        "CAPABILITY_REPLAYED"
+      ],
+      "FIXTURE_STATUS_V0": [
+        "RETURNED",
+        "RAISED"
+      ],
+      "RUN_STATUS_V0": [
+        "COMPLETE",
+        "FAILED"
+      ],
+      "SERIALIZATION_ERROR_V0": [
+        "DUPLICATE_KEY",
+        "MISSING_FIELD",
+        "UNKNOWN_FIELD",
+        "NONFINITE",
+        "UNKNOWN_ENUM",
+        "TYPE_MISMATCH"
+      ],
+      "TERMINAL_OUTCOME_V0": [
+        "VALIDATION_INFRASTRUCTURE_CONTROLS_PASSED",
+        "VALIDATION_INFRASTRUCTURE_CONTROLS_FAILED"
+      ]
+    },
+    "hash_rule": "LOWERCASE_SHA256_OF_EXACT_CANONICAL_UTF8_BYTES",
+    "integer_rule": "JSON_INTEGER_NOT_BOOLEAN",
+    "schema_registry": {
+      "CapabilityResultV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "control_id",
+          "expected_error",
+          "observed_error",
+          "passed"
+        ],
+        "fields": [
+          {
+            "name": "control_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "expected_error",
+            "required": true,
+            "type": "CAPABILITY_ERROR_V0_OR_NULL"
+          },
+          {
+            "name": "observed_error",
+            "required": true,
+            "type": "CAPABILITY_ERROR_V0_OR_NULL"
+          },
+          {
+            "name": "passed",
+            "required": true,
+            "type": "BOOLEAN"
+          }
+        ],
+        "schema_id": "CapabilityResultV0"
+      },
+      "DependencyScanResultV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "source_id",
+          "parsed",
+          "violation_ids",
+          "passed"
+        ],
+        "fields": [
+          {
+            "name": "source_id",
+            "required": true,
+            "type": "SOURCE_ID_V0"
+          },
+          {
+            "name": "parsed",
+            "required": true,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "violation_ids",
+            "required": true,
+            "type": "SORTED_UNIQUE_ASCII_STRING_ARRAY"
+          },
+          {
+            "name": "passed",
+            "required": true,
+            "type": "BOOLEAN"
+          }
+        ],
+        "schema_id": "DependencyScanResultV0"
+      },
+      "ExceptionRecordV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "type",
+          "message"
+        ],
+        "fields": [
+          {
+            "name": "type",
+            "required": true,
+            "type": "QUALIFIED_PYTHON_EXCEPTION_NAME"
+          },
+          {
+            "name": "message",
+            "required": true,
+            "type": "ASCII_STRING"
+          }
+        ],
+        "schema_id": "ExceptionRecordV0"
+      },
+      "FixtureResultV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "fixture_id",
+          "input_record_id",
+          "status",
+          "output",
+          "exception"
+        ],
+        "fields": [
+          {
+            "name": "fixture_id",
+            "required": true,
+            "type": "FIXTURE_ID_V0"
+          },
+          {
+            "name": "input_record_id",
+            "required": true,
+            "type": "INPUT_RECORD_ID_V0"
+          },
+          {
+            "name": "status",
+            "required": true,
+            "type": "FIXTURE_STATUS_V0"
+          },
+          {
+            "name": "output",
+            "required": true,
+            "type": "CANONICAL_OBJECT_OR_NULL"
+          },
+          {
+            "name": "exception",
+            "required": true,
+            "type": "ExceptionRecordV0_OR_NULL"
+          }
+        ],
+        "schema_id": "FixtureResultV0"
+      },
+      "MutationResultV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "route_id",
+          "mutation_id",
+          "fixture_id",
+          "predicate_id",
+          "detected"
+        ],
+        "fields": [
+          {
+            "name": "route_id",
+            "required": true,
+            "type": "MUTATION_ROUTE_ID_V0"
+          },
+          {
+            "name": "mutation_id",
+            "required": true,
+            "type": "MUTATION_ID_V0"
+          },
+          {
+            "name": "fixture_id",
+            "required": true,
+            "type": "FIXTURE_ID_V0"
+          },
+          {
+            "name": "predicate_id",
+            "required": true,
+            "type": "PREDICATE_ID_V0"
+          },
+          {
+            "name": "detected",
+            "required": true,
+            "type": "BOOLEAN"
+          }
+        ],
+        "schema_id": "MutationResultV0"
+      },
+      "QualificationResultV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "schema_id",
+          "run",
+          "capability_results",
+          "fixture_results",
+          "predicate_results",
+          "mutation_results",
+          "scanner_results",
+          "serialization_results",
+          "terminal_outcome"
+        ],
+        "fields": [
+          {
+            "name": "schema_id",
+            "required": true,
+            "type": "ENUM:QualificationResultV0"
+          },
+          {
+            "name": "run",
+            "required": true,
+            "type": "RunRecordV0"
+          },
+          {
+            "name": "capability_results",
+            "required": true,
+            "type": "CapabilityResultV0_ARRAY"
+          },
+          {
+            "name": "fixture_results",
+            "required": true,
+            "type": "FixtureResultV0_ARRAY"
+          },
+          {
+            "name": "predicate_results",
+            "required": true,
+            "type": "AdjudicationResultV0_ARRAY"
+          },
+          {
+            "name": "mutation_results",
+            "required": true,
+            "type": "MutationResultV0_ARRAY"
+          },
+          {
+            "name": "scanner_results",
+            "required": true,
+            "type": "DependencyScanResultV0_ARRAY"
+          },
+          {
+            "name": "serialization_results",
+            "required": true,
+            "type": "SerializationResultV0_ARRAY"
+          },
+          {
+            "name": "terminal_outcome",
+            "required": true,
+            "type": "TERMINAL_OUTCOME_V0"
+          }
+        ],
+        "schema_id": "QualificationResultV0"
+      },
+      "RunRecordV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "run_id",
+          "pid",
+          "review_sha256",
+          "started_ns",
+          "finished_ns",
+          "status"
+        ],
+        "fields": [
+          {
+            "name": "run_id",
+            "required": true,
+            "type": "LOWERCASE_UUID4"
+          },
+          {
+            "name": "pid",
+            "required": true,
+            "type": "NONNEGATIVE_INTEGER"
+          },
+          {
+            "name": "review_sha256",
+            "required": true,
+            "type": "LOWERCASE_SHA256"
+          },
+          {
+            "name": "started_ns",
+            "required": true,
+            "type": "NONNEGATIVE_INTEGER"
+          },
+          {
+            "name": "finished_ns",
+            "required": true,
+            "type": "NONNEGATIVE_INTEGER"
+          },
+          {
+            "name": "status",
+            "required": true,
+            "type": "RUN_STATUS_V0"
+          }
+        ],
+        "schema_id": "RunRecordV0"
+      },
+      "SerializationResultV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "control_id",
+          "canonical_sha256",
+          "error_code",
+          "passed"
+        ],
+        "fields": [
+          {
+            "name": "control_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "canonical_sha256",
+            "required": true,
+            "type": "LOWERCASE_SHA256_OR_NULL"
+          },
+          {
+            "name": "error_code",
+            "required": true,
+            "type": "SERIALIZATION_ERROR_V0_OR_NULL"
+          },
+          {
+            "name": "passed",
+            "required": true,
+            "type": "BOOLEAN"
+          }
+        ],
+        "schema_id": "SerializationResultV0"
+      }
+    },
+    "strict_parser": "json.loads(text,object_pairs_hook=reject_duplicate_pairs,parse_constant=reject_nonfinite)",
+    "validator_order": [
+      "EXACT_SCHEMA_ID",
+      "REQUIRED_FIELDS",
+      "NO_UNKNOWN_FIELDS",
+      "FIELD_TYPES",
+      "ENUM_VALUES",
+      "RECURSE",
+      "CROSS_FIELD_INVARIANTS"
+    ]
+  },
+  "review_consequence": {
+    "automatic_implementation_or_replacement_return": "PROHIBITED",
+    "failed": "FRESH_RETIRE_OR_DEFER_SELECTOR_REQUIRED",
+    "new_prerequisite": "PROHIBITED",
+    "packet_repair": "PROHIBITED",
+    "ready": "FRESH_TWO_OPTION_SELECTOR_REQUIRED_SANDBOX_OR_RETIRE_DEFER"
+  },
+  "schema_id": "toe.scalar_only_yukawa.kernel_replacement.validation_infrastructure_prerequisite_packet.v0",
+  "scope": {
+    "candidate_kernel_created": false,
+    "candidate_kernel_executed": false,
+    "independent_terminal_review_authorized": true,
+    "infrastructure_implementation_created": false,
+    "jacobian_or_identifiability_authorized": false,
+    "kernel_agnostic_contract_only": true,
+    "old_cubature_adjudicated": false,
+    "old_cubature_called": false,
+    "prerequisite_packet_prepared": true,
+    "prerequisite_repair_version_authorized": false,
+    "prerequisite_to_prerequisite_authorized": false,
+    "production_source_or_dispatch_changed": false,
+    "replacement_packet_v2_authorized": false,
+    "replacement_packet_v2_created": false,
+    "selector_authority_verified": true,
+    "shadow_qualification_authorized": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "synthetic_fixture_execution_performed": false,
+    "torque_or_dft_authorized": false
+  },
+  "selected_next_target": "review_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_TERMINAL_PREREQUISITE_REVIEW_ONLY_NO_EXECUTION_OR_REPAIR",
+  "status": "PREPARED_PENDING_ONE_TERMINAL_INDEPENDENT_REVIEW_NO_EXECUTION",
+  "synthetic_fixture_contract_v0": {
+    "all_values_are_synthetic": true,
+    "fixture_count": 8,
+    "fixture_execution_order": [
+      "F01_LINEAR_PAIR",
+      "F02_NEGATIVE_SQUARE",
+      "F03_REQUIRED_EXCEPTION",
+      "F04_ARRAY_IDENTITY",
+      "F05_PRIVATE_CAPABILITY",
+      "F06_DEPENDENCY_SCAN",
+      "F07_DUPLICATE_JSON",
+      "F08_UNKNOWN_ENUM"
+    ],
+    "fixture_rows": [
+      {
+        "baseline_contract": "return_float64_hex(x+2.0*y)",
+        "entrypoint": "synthetic_fixtures.linear_pair",
+        "expected": {
+          "value_float_hex": "0x1.0000000000000p-2"
+        },
+        "fixture_id": "F01_LINEAR_PAIR",
+        "input_record_id": "I01_LINEAR_PAIR",
+        "inputs": {
+          "x_float_hex": "0x1.4000000000000p+0",
+          "y_float_hex": "-0x1.0000000000000p-1"
+        }
+      },
+      {
+        "baseline_contract": "return_float64_hex(-(x*x))",
+        "entrypoint": "synthetic_fixtures.negative_square",
+        "expected": {
+          "value_float_hex": "-0x1.0000000000000p+2"
+        },
+        "fixture_id": "F02_NEGATIVE_SQUARE",
+        "input_record_id": "I02_NEGATIVE_SQUARE",
+        "inputs": {
+          "x_float_hex": "0x1.0000000000000p+1"
+        }
+      },
+      {
+        "baseline_contract": "raise ZeroDivisionError with exact message synthetic zero denominator",
+        "entrypoint": "synthetic_fixtures.reciprocal",
+        "expected": {
+          "exception_type": "builtins.ZeroDivisionError",
+          "message": "synthetic zero denominator"
+        },
+        "fixture_id": "F03_REQUIRED_EXCEPTION",
+        "input_record_id": "I03_ZERO_DENOMINATOR",
+        "inputs": {
+          "x_float_hex": "0x0.0p+0"
+        }
+      },
+      {
+        "baseline_contract": "return new C-contiguous numpy float64 array with shape [2]",
+        "entrypoint": "synthetic_fixtures.float64_array_identity",
+        "expected": {
+          "dtype": "float64",
+          "shape": [
+            2
+          ],
+          "values_float_hex": [
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+1"
+          ]
+        },
+        "fixture_id": "F04_ARRAY_IDENTITY",
+        "input_record_id": "I04_ARRAY",
+        "inputs": {
+          "values_float_hex": [
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+1"
+          ]
+        }
+      },
+      {
+        "baseline_contract": "ordinary public call returns echo and exposes no mutation or capability argument",
+        "entrypoint": "synthetic_fixtures.private_capability_echo",
+        "expected": {
+          "value_ascii": "echo"
+        },
+        "fixture_id": "F05_PRIVATE_CAPABILITY",
+        "input_record_id": "I05_ECHO",
+        "inputs": {
+          "value_ascii": "echo"
+        }
+      },
+      {
+        "baseline_contract": "scan inline bad source and report exact violation",
+        "entrypoint": "dependency_scanner.scan_python_dependency_contract",
+        "expected": {
+          "violation_ids": [
+            "FORBIDDEN_IMPORT:forbidden_oracle"
+          ]
+        },
+        "fixture_id": "F06_DEPENDENCY_SCAN",
+        "input_record_id": "I06_FORBIDDEN_IMPORT",
+        "inputs": {
+          "virtual_source_id": "SYNTHETIC_BAD_IMPORT_V0"
+        }
+      },
+      {
+        "baseline_contract": "return object with exact integer field a=1",
+        "entrypoint": "canonical_codec.loads_strict",
+        "expected": {
+          "object": {
+            "a": 1
+          }
+        },
+        "fixture_id": "F07_DUPLICATE_JSON",
+        "input_record_id": "I07_UNIQUE_KEY_BASELINE",
+        "inputs": {
+          "json_ascii": "{\"a\":1}"
+        }
+      },
+      {
+        "baseline_contract": "return exact ASCII COMPLETE after RUN_STATUS_V0 validation",
+        "entrypoint": "synthetic_fixtures.validate_run_status",
+        "expected": {
+          "status": "COMPLETE"
+        },
+        "fixture_id": "F08_UNKNOWN_ENUM",
+        "input_record_id": "I08_VALID_ENUM_BASELINE",
+        "inputs": {
+          "status": "COMPLETE"
+        }
+      }
+    ],
+    "kernel_or_physics_imports": "FORBIDDEN"
+  },
+  "synthetic_qualification_controls_v0": {
+    "all_controls_mandatory": true,
+    "control_order": [
+      "C01_PUBLIC_API_HAS_NO_MUTATION_OR_CAPABILITY_ARGUMENT",
+      "C02_FORGED_MAC_REJECTED",
+      "C03_WRONG_PID_REJECTED",
+      "C04_EXPIRED_TOKEN_REJECTED",
+      "C05_REPLAY_REJECTED",
+      "C06_WRONG_FIXTURE_OR_MUTATION_BINDING_REJECTED",
+      "C07_NUMERIC_RELATIONAL_AND_EXCEPTION_PREDICATES_DETECT",
+      "C08_ALL_EIGHT_MUTATION_ROUTES_DETECT",
+      "C09_GOOD_SOURCE_SCANNER_PASSES",
+      "C10_BAD_SOURCE_SCANNER_FAILS",
+      "C11_DUPLICATE_MISSING_UNKNOWN_NONFINITE_AND_ENUM_CASES_FAIL",
+      "C12_CANONICAL_ROUND_TRIP_BYTES_AND_SHA256_STABLE"
+    ],
+    "execution_authorized_by_this_packet": false,
+    "memory_mib_max": 256,
+    "partial_result_classification": "FORBIDDEN",
+    "process_group_termination": "MANDATORY",
+    "total_wall_clock_seconds_max": 60
+  },
+  "target": "prepare_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0",
+  "terminal_governance_boundary": {
+    "automatic_return_to_replacement_lane": "PROHIBITED",
+    "failed_review_next_selector_options_exact": [
+      "RETIRE_ANALYTIC_REPLACEMENT_LANE",
+      "DEFER_ANALYTIC_REPLACEMENT_LANE"
+    ],
+    "new_governance_abstraction_after_failure": "PROHIBITED",
+    "packet_version": "V0_ONLY",
+    "prerequisite_to_prerequisite": "PROHIBITED",
+    "ready_review_next_selector_options_exact": [
+      "AUTHORIZE_ISOLATED_NON_DECISION_BEARING_SANDBOX_IMPLEMENTATION",
+      "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE"
+    ],
+    "repair_version": "PROHIBITED",
+    "review_outcomes": [
+      "VALIDATION_INFRASTRUCTURE_PREREQUISITE_READY",
+      "VALIDATION_INFRASTRUCTURE_PREREQUISITE_FAILED_RETIRE_OR_DEFER"
+    ]
+  },
+  "typed_adjudicator_contract_v0": {
+    "decimal_context": "precision=100_rounding=ROUND_HALF_EVEN_traps_InvalidOperation_DivisionByZero_Overflow",
+    "decimal_conversion": "Decimal.from_float(float.fromhex(value_float_hex))",
+    "json_pointer_subset": "RFC6901_ABSOLUTE_POINTER_OBJECT_KEYS_AND_NONNEGATIVE_ARRAY_INDICES_ONLY_NO_DASH_TOKEN",
+    "missing_pointer_unknown_enum_or_type_mismatch": "FAIL_WITH_TYPED_ADJUDICATION_ERROR_NO_BOOLEAN_RESULT",
+    "numeric_algorithms": {
+      "ABS_REL_LE": "abs(observed-reference)<=abs_tol+rel_tol*abs(reference)",
+      "EXACT_FLOAT_HEX": "lowercase_float_hex_observed==lowercase_float_hex_reference",
+      "RELATIVE_DIFFERENCE_GE": "abs(observed-reference)/max(abs(reference),abs_tol)>=rel_tol"
+    },
+    "numeric_comparator_enum": [
+      "ABS_REL_LE",
+      "RELATIVE_DIFFERENCE_GE",
+      "EXACT_FLOAT_HEX"
+    ],
+    "predicate_kind_enum": [
+      "NUMERIC",
+      "EXCEPTION",
+      "RELATIONAL",
+      "DEPENDENCY"
+    ],
+    "predicate_rows": [
+      {
+        "absolute_tolerance_decimal": "0E+0",
+        "comparator": "ABS_REL_LE",
+        "kind": "NUMERIC",
+        "observed_pointer": "/baseline/value_float_hex",
+        "predicate_id": "P01_LINEAR_BASELINE",
+        "reference_decimal": "2.5E-1",
+        "reference_pointer": null,
+        "relative_tolerance_decimal": "0E+0",
+        "schema_id": "NumericPredicateV0"
+      },
+      {
+        "absolute_tolerance_decimal": "0E+0",
+        "comparator": "RELATIVE_DIFFERENCE_GE",
+        "kind": "NUMERIC",
+        "observed_pointer": "/mutation/value_float_hex",
+        "predicate_id": "P02_SCALE_MUTATION",
+        "reference_decimal": null,
+        "reference_pointer": "/baseline/value_float_hex",
+        "relative_tolerance_decimal": "1E+0",
+        "schema_id": "NumericPredicateV0"
+      },
+      {
+        "kind": "RELATIONAL",
+        "left_pointer": "/mutation/value_float_hex",
+        "operator": "GT",
+        "predicate_id": "P03_SIGN_FLIP",
+        "right_literal": "0x0.0p+0",
+        "right_pointer": null,
+        "schema_id": "RelationalPredicateV0"
+      },
+      {
+        "kind": "RELATIONAL",
+        "left_pointer": "/mutation/returned",
+        "operator": "EQ",
+        "predicate_id": "P04_EXCEPTION_SUPPRESSED",
+        "right_literal": true,
+        "right_pointer": null,
+        "schema_id": "RelationalPredicateV0"
+      },
+      {
+        "kind": "RELATIONAL",
+        "left_pointer": "/mutation/dtype",
+        "operator": "NE",
+        "predicate_id": "P05_ARRAY_DTYPE",
+        "right_literal": "float64",
+        "right_pointer": null,
+        "schema_id": "RelationalPredicateV0"
+      },
+      {
+        "call_id": "C06_PRIVATE_WITHOUT_CAPABILITY",
+        "exception_type": "builtins.PermissionError",
+        "kind": "EXCEPTION",
+        "message": "CAPABILITY_REQUIRED",
+        "message_match": "EXACT",
+        "predicate_id": "P06_UNAUTHORIZED_PRIVATE_CALL",
+        "schema_id": "ExceptionPredicateV0"
+      },
+      {
+        "expected_violation_ids": [
+          "FORBIDDEN_IMPORT:forbidden_oracle"
+        ],
+        "kind": "DEPENDENCY",
+        "predicate_id": "P07_FORBIDDEN_DEPENDENCY",
+        "scan_result_pointer": "/scanner/violation_ids",
+        "schema_id": "DependencyPredicateV0"
+      },
+      {
+        "call_id": "C08_LOAD_DUPLICATE",
+        "exception_type": "validation_infrastructure.DuplicateKeyError",
+        "kind": "EXCEPTION",
+        "message": "duplicate key: a",
+        "message_match": "EXACT",
+        "predicate_id": "P08_DUPLICATE_KEY",
+        "schema_id": "ExceptionPredicateV0"
+      },
+      {
+        "call_id": "C09_VALIDATE_UNKNOWN_ENUM",
+        "exception_type": "validation_infrastructure.SchemaValidationError",
+        "kind": "EXCEPTION",
+        "message": "/status:UNKNOWN_ENUM_VALUE",
+        "message_match": "EXACT",
+        "predicate_id": "P09_UNKNOWN_ENUM",
+        "schema_id": "ExceptionPredicateV0"
+      }
+    ],
+    "relational_operator_enum": [
+      "EQ",
+      "NE",
+      "LT",
+      "LE",
+      "GT",
+      "GE"
+    ],
+    "schema_registry": {
+      "AdjudicationResultV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "predicate_id",
+          "kind",
+          "passed",
+          "observed_canonical",
+          "reference_canonical",
+          "difference_decimal",
+          "envelope_decimal",
+          "failure_code"
+        ],
+        "fields": [
+          {
+            "name": "predicate_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "kind",
+            "required": true,
+            "type": "PREDICATE_KIND_V0"
+          },
+          {
+            "name": "passed",
+            "required": true,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "observed_canonical",
+            "required": true,
+            "type": "CANONICAL_SCALAR_OR_NULL"
+          },
+          {
+            "name": "reference_canonical",
+            "required": true,
+            "type": "CANONICAL_SCALAR_OR_NULL"
+          },
+          {
+            "name": "difference_decimal",
+            "required": true,
+            "type": "UPPERCASE_DECIMAL_OR_NULL"
+          },
+          {
+            "name": "envelope_decimal",
+            "required": true,
+            "type": "UPPERCASE_DECIMAL_OR_NULL"
+          },
+          {
+            "name": "failure_code",
+            "required": true,
+            "type": "ADJUDICATION_FAILURE_CODE_V0_OR_NULL"
+          }
+        ],
+        "schema_id": "AdjudicationResultV0"
+      },
+      "DependencyPredicateV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "predicate_id",
+          "kind",
+          "scan_result_pointer",
+          "expected_violation_ids"
+        ],
+        "fields": [
+          {
+            "name": "predicate_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "kind",
+            "required": true,
+            "type": "ENUM:DEPENDENCY"
+          },
+          {
+            "name": "scan_result_pointer",
+            "required": true,
+            "type": "JSON_POINTER_V0"
+          },
+          {
+            "name": "expected_violation_ids",
+            "required": true,
+            "type": "SORTED_UNIQUE_ASCII_STRING_ARRAY"
+          }
+        ],
+        "schema_id": "DependencyPredicateV0"
+      },
+      "ExceptionPredicateV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "predicate_id",
+          "kind",
+          "call_id",
+          "exception_type",
+          "message_match",
+          "message"
+        ],
+        "fields": [
+          {
+            "name": "predicate_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "kind",
+            "required": true,
+            "type": "ENUM:EXCEPTION"
+          },
+          {
+            "name": "call_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "exception_type",
+            "required": true,
+            "type": "QUALIFIED_PYTHON_EXCEPTION_NAME"
+          },
+          {
+            "name": "message_match",
+            "required": true,
+            "type": "ENUM:EXACT"
+          },
+          {
+            "name": "message",
+            "required": true,
+            "type": "ASCII_STRING"
+          }
+        ],
+        "schema_id": "ExceptionPredicateV0"
+      },
+      "NumericPredicateV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "predicate_id",
+          "kind",
+          "observed_pointer",
+          "reference_pointer",
+          "reference_decimal",
+          "comparator",
+          "absolute_tolerance_decimal",
+          "relative_tolerance_decimal"
+        ],
+        "fields": [
+          {
+            "name": "predicate_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "kind",
+            "required": true,
+            "type": "ENUM:NUMERIC"
+          },
+          {
+            "name": "observed_pointer",
+            "required": true,
+            "type": "JSON_POINTER_V0"
+          },
+          {
+            "name": "reference_pointer",
+            "required": true,
+            "type": "JSON_POINTER_V0_OR_NULL"
+          },
+          {
+            "name": "reference_decimal",
+            "required": true,
+            "type": "UPPERCASE_DECIMAL_OR_NULL"
+          },
+          {
+            "name": "comparator",
+            "required": true,
+            "type": "NUMERIC_COMPARATOR_V0"
+          },
+          {
+            "name": "absolute_tolerance_decimal",
+            "required": true,
+            "type": "UPPERCASE_NONNEGATIVE_DECIMAL"
+          },
+          {
+            "name": "relative_tolerance_decimal",
+            "required": true,
+            "type": "UPPERCASE_NONNEGATIVE_DECIMAL"
+          }
+        ],
+        "schema_id": "NumericPredicateV0"
+      },
+      "RelationalPredicateV0": {
+        "additional_fields": "FORBIDDEN",
+        "field_order_for_human_display": [
+          "predicate_id",
+          "kind",
+          "left_pointer",
+          "operator",
+          "right_pointer",
+          "right_literal"
+        ],
+        "fields": [
+          {
+            "name": "predicate_id",
+            "required": true,
+            "type": "NONEMPTY_ASCII_STRING"
+          },
+          {
+            "name": "kind",
+            "required": true,
+            "type": "ENUM:RELATIONAL"
+          },
+          {
+            "name": "left_pointer",
+            "required": true,
+            "type": "JSON_POINTER_V0"
+          },
+          {
+            "name": "operator",
+            "required": true,
+            "type": "RELATIONAL_OPERATOR_V0"
+          },
+          {
+            "name": "right_pointer",
+            "required": true,
+            "type": "JSON_POINTER_V0_OR_NULL"
+          },
+          {
+            "name": "right_literal",
+            "required": true,
+            "type": "CANONICAL_SCALAR_OR_NULL"
+          }
+        ],
+        "schema_id": "RelationalPredicateV0"
+      }
+    }
+  },
+  "verdict": "PREPARED_SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_V0"
+}

@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 2,
+  "event_hash": "8915d1640b9eaabb4f9931f0465f54588d2cbbcbba9cb809a61dd9f0d83b9fd9",
+  "event_sequence_number": 3,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "f93d609cfc7f369df06a3118f53a3c1be2020cf0",
+  "previous_event_hash": "912d075f243e417aa3bfc7292b7e4ad5d31c206cfe66e1084c41e397cd9f2d6c",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "registry_snapshot_hash": "27087f5214c92821953599eb5da5ef58f7f17a182391baaac50ec81f84c23940",
+  "scope_hash": "bf5a69abf0b8c49b1f5806afa6483a205201103126921af60fef6476348bb0e0",
+  "semantic_stage_id": "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION",
+  "target": "extract_toe_targeted_ccft_closure_contracts_v0"
+}

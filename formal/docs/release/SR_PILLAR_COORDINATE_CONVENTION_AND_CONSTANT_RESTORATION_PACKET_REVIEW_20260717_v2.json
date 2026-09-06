@@ -1,0 +1,283 @@
+{
+  "adversarial_control_atomicity_audit": {
+    "all_adversarial_controls_atomic": false,
+    "atomic_single_premise_count": 8,
+    "forced_summary_actual_changed_premises": 2,
+    "reported_control_count": 10,
+    "rows": [
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_WRONG_SI_ORACLE",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_REQUIRED_MAP_REMOVED",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_OBJECT_MAP_MUTATED",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_PUBLIC_ENTRY_WITHOUT_MANUAL_PREFLIGHT",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_T_PSI_REPLACED_BY_T_MATTER",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_INVALID_ADAPTER",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": false,
+        "independently_observed_changed_premise_count": 2,
+        "mutation_id": "ADV_FORCED_PASS_SUMMARY",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_SUPPRESS_STORED_TARGET_WITHOUT_LINEAGE",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": true,
+        "independently_observed_changed_premise_count": 1,
+        "mutation_id": "ADV_QUANTUM_HBAR_OMITTED",
+        "reported_changed_premise_count": 1,
+        "role": "atomic_negative_mutation"
+      },
+      {
+        "atomic_single_premise": false,
+        "independently_observed_changed_premise_count": 0,
+        "mutation_id": "ADV_ALL_SIX_VALID_PRODUCTION_PATHS",
+        "reported_changed_premise_count": 0,
+        "role": "positive_control_not_adversarial_mutation"
+      }
+    ],
+    "zero_mutation_positive_row_counted_as_adversarial": true
+  },
+  "blocking_findings": {
+    "all_confirmed": true,
+    "count": 3,
+    "findings": [
+      {
+        "confirmed": true,
+        "evidence": "Product normalization sorts every factor, including Indexed operator-like objects; gamma^mu D_mu and D_mu gamma^mu canonicalize identically.",
+        "finding_id": "CANONICALIZER_ERASES_NONCOMMUTATIVE_OPERATOR_ORDER",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "A manually constructed public TransformResult, whose digest was recomputed from public fields without calling restore, was accepted by suppress.",
+        "finding_id": "FORWARD_LINEAGE_FORGEABLE_FROM_PUBLIC_RESULT_FIELDS",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "Only 8/10 reported adversarial rows are one-premise mutations: the forced-pass row also changes the oracle, while the all-six-valid row changes no premise.",
+        "finding_id": "PRODUCTION_ADVERSARIAL_CONTROL_ATOMICITY_MISREPORTED",
+        "materiality": "BLOCKING"
+      }
+    ]
+  },
+  "canonicalization_soundness_audit": {
+    "canonical_gamma_D_equals_canonical_D_gamma": true,
+    "normalizer_sort_statement_present": true,
+    "passed": false,
+    "passed_count": 5,
+    "raw_gamma_D_differs_from_raw_D_gamma": true,
+    "required_count": 6,
+    "safety_checks": {
+      "derivative_kind_preserved": true,
+      "index_variance_preserved": true,
+      "missing_hbar_preserved": true,
+      "object_identity_preserved": true,
+      "operator_order_preserved": false,
+      "sign_preserved": true
+    }
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "V2 independently computes the six intended forward and inverse examples and enforces their declared maps and preflight, but it does not yet prove semantic identity because operator order is canonicalized away and forward origin is forgeable.",
+  "first_diagnostic": "CANONICALIZER_ERASES_NONCOMMUTATIVE_OPERATOR_ORDER",
+  "forward_lineage_origin_audit": {
+    "forward_restore_called": false,
+    "lineage_reconstructed_from_public_fields": true,
+    "manual_result_accepted_by_suppress": true,
+    "manual_result_inverse_passed": true,
+    "observed_first_diagnostic": "NO_DIAGNOSTIC",
+    "origin_authentication_passed": false,
+    "public_transform_result_constructor_used": true
+  },
+  "hard_stop": {
+    "migration_authorized": false,
+    "next_action": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v3",
+    "packet_accepted": false,
+    "restoration_authorized": false,
+    "successor_scope": "ONE_BOUNDED_v3_CANONICALIZATION_LINEAGE_AND_CONTROL_ATOMICITY_REPAIR_ONLY"
+  },
+  "retained_findings": {
+    "T_psi_exact_object_route_retained": true,
+    "authoritative_equations_unchanged": true,
+    "exact_source_content_bindings_audit": {
+      "passed": true,
+      "passed_count": 6,
+      "required_count": 6,
+      "rows": [
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "SR_INTERVAL_INVARIANCE",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "SR_MASS_SHELL",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "CURRENT_CONSERVATION",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "SOURCED_MAXWELL",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "MATTER_STRESS_ENERGY_EXCHANGE",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "GAUGE_STRESS_ENERGY_NORMALIZATION",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        }
+      ]
+    },
+    "oracle_map_and_shared_path_audit": {
+      "actual_production_functions_called": [
+        "restore",
+        "suppress"
+      ],
+      "convention_preflight_controls": {
+        "all_failed_before_output": true,
+        "passed_count": 8,
+        "required_count": 8
+      },
+      "map_enforcement": {
+        "inapplicable_extra_map_diagnostic": "REQUIRED_OBJECT_MAP_MISSING",
+        "missing_map_diagnostic": "REQUIRED_OBJECT_MAP_MISSING",
+        "mutated_map_diagnostic": "EXPECTED_TARGET_MISMATCH",
+        "mutation_rejected": true,
+        "overapplication_rejected": true,
+        "underapplication_rejected": true
+      },
+      "oracle_independence": {
+        "computed_ast_unchanged": true,
+        "wrong_target_rejected": true
+      },
+      "valid_production_round_trips": {
+        "all_use_forward_lineage": true,
+        "passed_count": 6,
+        "required_count": 6
+      }
+    },
+    "physical_convention": "x^0=c t; (+,-,-,-); SI",
+    "physical_convention_reconsidered": false
+  },
+  "review_authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_20260717_v2.json",
+        "sha256": "1d94f4c8cab0337322eb537feebe32aeb344369e5b402164a03987b7b56c1b05"
+      },
+      {
+        "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_v2.py",
+        "sha256": "affdd8146f966282e0e84b5cc44bb5cf45d4cd006253d4893c5e79b4a0cf1f8c"
+      },
+      {
+        "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_v2.py",
+        "sha256": "d62d692353473f510ad2e87272b3c80d6efb70f2cc707a27a1bb32503a82c34f"
+      }
+    ],
+    "review_test": {
+      "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v2.py",
+      "sha256": "4f211cf401611feea97961ddde3bcb647b5c032b83f919eb1b757b37dee15aa3"
+    },
+    "reviewer": {
+      "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v2.py",
+      "sha256": "d3d269e2465315bd542964697b1cc5405c6762316aa30729601c1feefba6da58"
+    }
+  },
+  "schema_id": "SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v2",
+  "scope_and_authorization": {
+    "authoritative_equation_restoration_executed": false,
+    "automation_created": false,
+    "bounded_six_surface_restoration_authorized": false,
+    "external_comparator_activated": false,
+    "historical_artifacts_modified": false,
+    "only_bounded_v3_packet_preparation_authorized": true,
+    "packet_v2_accepted": false,
+    "physical_convention_reopened": false,
+    "r13_reopened": false,
+    "repository_wide_migration_authorized": false,
+    "scientific_equation_migration_executed": false
+  },
+  "selected_next_target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v3",
+  "target": "review_sr_pillar_coordinate_convention_and_constant_restoration_packet_v2_result",
+  "v3_contract": [
+    "Preserve operator order by default for operator-bearing products; introduce commutative normalization only for objects explicitly typed as commuting, and prove gamma^mu D_mu differs from D_mu gamma^mu.",
+    "Replace the forgeable public-field lineage digest with an opaque restore-issued custody token bound to equation, source, computed AST, adapter, binding, and applied rules; reject manually constructed, cross-binding, and mutated results.",
+    "Move the zero-mutation all-six-valid row to a positive-control section and make every counted adversarial control an independently verified one-premise mutation.",
+    "Split the forced-summary test so one control mutates only an untrusted summary on a valid result and a separate atomic wrong-oracle control proves target mismatch.",
+    "Repeat the six source bindings, wrong-oracle, missing/mutated/extra-map, quantum hbar, exact T_psi, and lineage probes without adding equations or performing restoration or migration."
+  ],
+  "verdict": "BLOCKED_CANONICALIZATION_AND_LINEAGE_CONTRACT_UNSOUND"
+}

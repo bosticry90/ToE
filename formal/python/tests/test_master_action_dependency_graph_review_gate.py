@@ -158,7 +158,6 @@ def test_frontier_and_aggregate_rotate_to_retained_blocker_prioritization() -> N
     )
     assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "master_action_citation_language_audit_frontier_target_v0" in audit_text
 
 

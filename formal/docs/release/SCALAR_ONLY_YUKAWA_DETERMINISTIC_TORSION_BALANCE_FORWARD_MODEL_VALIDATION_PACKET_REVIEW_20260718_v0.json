@@ -1,0 +1,307 @@
+{
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_DETERMINISTIC_FORWARD_MODEL_VALIDATION_CONTRACT_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260718_v0.md",
+        "sha256": "29b6051dc6a0f880eab0bc4734e304f896b45d82aecd4aeda9e3246af05aabab"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260718_v0.json",
+        "sha256": "ab5e555f857d883aa12346411d294f411b5228193f103d7dd91c4392fc66790e"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0.py",
+        "sha256": "ef7da3401505dc92072a6bdabbc6a52173d03f18a903c3d2c558e1a9f0d75f96"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0.py",
+        "sha256": "31bfb665c9004ea4de3ff5aeeb5eb3da98c1568fe6b9c5923b511fa6cdcf29f4"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketV0.lean",
+        "sha256": "d63ac40f4aadf54e7703ae09143fa4a060b352fa4370a2030008622be9f603f7"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_review_v0.py",
+      "sha256": "85c3c4d6d5bd611a07446bdfda666344022fda684c8c3ee9262fcebbdb95f08e"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_REVIEW_20260718_v0.md",
+      "sha256": "2621c5a7eb159ff0bc7a1ebab86d9c9900cacf54371561223142aaeb46614e27"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketReviewV0.lean",
+      "sha256": "0ae07220ac0a7044b499db6f3ae41896bd5a4b53c38acd088cd996a8184e05b3"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_review_v0.py",
+      "sha256": "6ea11629d0e3cd574ab8cc4ba0b1a5dd92be44d34981e415cce994f670c09ba5"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "The review verifies the deterministic harmonic, kernel, torque, benchmark, mutation, symmetry, perturbation, degeneracy, and serialization surface while blocking execution on four underdefined Jacobian-identifiability interfaces. It does not evaluate physical identifiability and authorizes no repair, execution, stochastic work, forecast, empirical claim, parameter result, or theory adoption.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "deterministic_execution": "NOT_AUTHORIZED",
+    "deterministic_vectors": 0,
+    "empirical_constraint": "NONE",
+    "jacobian": "NOT_COMPUTED",
+    "next_authority": "select_post_scalar_only_yukawa_deterministic_forward_model_packet_review_scientific_response_v0",
+    "packet_review": "COMPLETED",
+    "principal_outcome": "BLOCKED_PARAMETER_IDENTIFIABILITY",
+    "scalar_branch": "NOT_ADOPTED",
+    "stage_b": "DEFERRED_NOT_AUTHORIZED",
+    "work_packages": "0_OF_10_EXECUTED"
+  },
+  "diagnostics": [
+    "JACOBIAN_FINITE_DIFFERENCE_BASE_STEPS_NOT_FROZEN",
+    "RANK_DEFICIENT_NUISANCE_PROJECTOR_POLICY_INCOMPLETE",
+    "TRANSITION_DOMAIN_NOT_EXACTLY_DEFINED",
+    "IDENTIFIABILITY_REFINEMENT_ACCEPTANCE_TOLERANCES_INCOMPLETE"
+  ],
+  "execution_readiness": "NOT_READY",
+  "independent_geometry_and_torque_review": {
+    "complete": true,
+    "energy": "2*sum_q(u(r_q))",
+    "energy_even": true,
+    "energy_pi_periodic": true,
+    "equal_body_label_swap_invariant": true,
+    "pair_distance_derivative": "q*L_D*L_A*sin(theta)/r_q",
+    "pair_distance_squared": "L_D^2+L_A^2+z^2-2*q*L_D*L_A*cos(theta)",
+    "torque": "-2*sum_q(u_prime(r_q)*q*L_D*L_A*sin(theta)/r_q)",
+    "torque_odd": true
+  },
+  "independent_harmonic_review": {
+    "a_n_relation": "a_n=2*Re(c_n)",
+    "b_n_relation": "b_n=-2*Im(c_n)",
+    "coefficient": "c_n=(1/(2*pi))*integral(tau*exp(-i*n*theta),theta=0..2*pi)",
+    "complete": true,
+    "real_vector_length": 150,
+    "real_vector_order": "GAP_MAJOR_2RE_2IM_4RE_4IM_6RE_6IM",
+    "unit": "N_m"
+  },
+  "jacobian_contract_review": {
+    "column_count": 17,
+    "complete": false,
+    "numeric_base_steps_complete": false,
+    "parameter_order_complete": true,
+    "physical_identifiability_evaluated": false,
+    "rank_deficient_projector_policy_complete": false,
+    "refinement_acceptance_tolerances_complete": false,
+    "row_count": 150,
+    "transition_domain_complete": false
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_REVIEW_20260718_v0",
+  "perturbation_review": {
+    "complete": true,
+    "composition_order_complete": true,
+    "count": 16,
+    "exact_amplitude_degeneracy": [
+      "TORQUE_CALIBRATION",
+      "SOURCE_DENSITY_SCALE",
+      "DETECTOR_DENSITY_SCALE"
+    ],
+    "separately_data_identifiable": false
+  },
+  "principal_packet_review_outcome": "BLOCKED_PARAMETER_IDENTIFIABILITY",
+  "production_and_control_review": {
+    "benchmark_count": 4,
+    "complete": true,
+    "independent_torque_cross_check_count": 2,
+    "mutation_count": 5,
+    "production_side_shared": true,
+    "reference_density_cubature_independent": true,
+    "shared_function_count": 6,
+    "symmetry_phase_control_count": 7
+  },
+  "review_gates": {
+    "failure_count": 4,
+    "gate_count": 24,
+    "pass_count": 20,
+    "rows": [
+      {
+        "finding": "Five packet artifacts match frozen SHA-256 values.",
+        "gate_id": "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "The packet is pending this review and executed no Stage A work.",
+        "gate_id": "G2_PENDING_REVIEW_STATUS_AND_NO_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "Noise, covariance, Monte Carlo, likelihood, forecast, and Stage B remain excluded.",
+        "gate_id": "G3_STAGE_A_ONLY_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "A_Y, SI constants, bodies, centers, gaps, and scalar-range grid are exact.",
+        "gate_id": "G4_FIXED_COMPARISON_AND_APPARATUS_GEOMETRY",
+        "status": "PASS"
+      },
+      {
+        "finding": "Continuous and discrete coefficient definitions, angle, torque sign, and phase origin agree.",
+        "gate_id": "G5_HARMONIC_NORMALIZATION_PHASE_AND_SIGN",
+        "status": "PASS"
+      },
+      {
+        "finding": "25 gaps times three complex harmonics gives the exact gap-major real-150 N m vector.",
+        "gate_id": "G6_REAL_150_VECTOR_ORDER_AND_UNITS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Newtonian and Yukawa terms share distance, energy, torque, harmonic, and vector functions.",
+        "gate_id": "G7_ONE_SHARED_PRODUCTION_FUNCTION_CHAIN",
+        "status": "PASS"
+      },
+      {
+        "finding": "The non-overlap form factor and scaled H representation are algebraically coherent.",
+        "gate_id": "G8_UNIFORM_SPHERE_KERNEL_AND_STABLE_FORM_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "finding": "The frozen torque follows from -dU/dtheta with the stated pair-distance derivative.",
+        "gate_id": "G9_ANALYTIC_ENERGY_DERIVATIVE_TORQUE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Direct force/lever and five-point energy differentiation do not reuse the analytic torque.",
+        "gate_id": "G10_TWO_GENUINELY_INDEPENDENT_TORQUE_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Point, Yukawa, sphere, and apparatus checks have formulas or convergence targets.",
+        "gate_id": "G11_FOUR_BENCHMARKS_HAVE_EXACT_TARGETS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Sign, fixed amplitude, form factor, torque sign, and DFT normalization mutations are decision-bearing.",
+        "gate_id": "G12_FIVE_SCIENTIFIC_MUTATIONS_ROUTE_TO_CONTROLS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Parity, periodicity, rigid shift, label swaps, and symmetry zeros follow from the frozen equal-pair geometry.",
+        "gate_id": "G13_SYMMETRY_PHASE_SWAP_AND_ZERO_CONTROLS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Symmetry-protected channels use the frozen 1e-22 N m floor.",
+        "gate_id": "G14_NEAR_ZERO_ABSOLUTE_FLOOR",
+        "status": "PASS"
+      },
+      {
+        "finding": "Units, nominals, ranges, exact transformations, and composition order are frozen.",
+        "gate_id": "G15_SIXTEEN_PERTURBATION_MAPS_AND_ORDER",
+        "status": "PASS"
+      },
+      {
+        "finding": "Calibration and the two density scales are correctly registered as one exact amplitude direction.",
+        "gate_id": "G16_EXPECTED_AMPLITUDE_DEGENERACY_DISCLOSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The real 150 by 17 surface and parameter order are exact.",
+        "gate_id": "G17_JACOBIAN_DIMENSIONS_AND_PARAMETER_ORDER",
+        "status": "PASS"
+      },
+      {
+        "finding": "No numeric base-step table is assigned to log lambda and nonlinear geometry columns.",
+        "gate_id": "G18_JACOBIAN_FINITE_DIFFERENCE_STEPS",
+        "status": "FAIL"
+      },
+      {
+        "finding": "Column standardization intent, output scale, rank threshold, correlations, and eta thresholds are frozen.",
+        "gate_id": "G19_DIMENSIONLESS_SVD_THRESHOLDS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Projector construction, cutoff, zero-mode failures, and reconstruction tolerances are incomplete.",
+        "gate_id": "G20_RANK_DEFICIENT_NUISANCE_PROJECTOR",
+        "status": "FAIL"
+      },
+      {
+        "finding": "The five-contiguous-points rule refers to an undefined transition domain.",
+        "gate_id": "G21_TRANSITION_DOMAIN_EXACTNESS",
+        "status": "FAIL"
+      },
+      {
+        "finding": "No numerical acceptance limits govern refined singular values, eta, rank, or classification changes.",
+        "gate_id": "G22_IDENTIFIABILITY_REFINEMENT_STABILITY",
+        "status": "FAIL"
+      },
+      {
+        "finding": "CSV, JSON, float format, ordering, hashing, and byte-repeat requirements are exact.",
+        "gate_id": "G23_CANONICAL_SERIALIZATION_AND_DETERMINISM",
+        "status": "PASS"
+      },
+      {
+        "finding": "No stochastic work, result, parameter choice, branch adoption, contact, or private data is authorized.",
+        "gate_id": "G24_STAGE_B_EMPIRICAL_AND_THEORY_FIREWALL",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "toe.scalar_only_yukawa.deterministic_torsion_balance_forward_model_validation.packet_review.v0",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "benchmark_executed": false,
+    "benchmark_mutation_and_symmetry_contract_verified": true,
+    "covariance_used": false,
+    "deterministic_execution_authorized": false,
+    "deterministic_execution_performed": false,
+    "deterministic_perturbation_maps_verified": true,
+    "deterministic_vector_produced": false,
+    "empirical_constraint_claimed": false,
+    "exact_amplitude_degeneracy_verified": true,
+    "gaussian_noise_used": false,
+    "gravitational_action_selected": false,
+    "harmonic_and_real_150_contract_verified": true,
+    "independent_packet_review_executed": true,
+    "jacobian_computed": false,
+    "measured_evidence_used": false,
+    "monte_carlo_executed": false,
+    "mutation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "outbound_contact_authorized": false,
+    "packet_execution_ready": false,
+    "packet_repair_authorized": false,
+    "private_data_dependency_created": false,
+    "profile_likelihood_executed": false,
+    "scalar_branch_adopted": false,
+    "sensitivity_forecast_produced": false,
+    "shared_kernel_and_torque_contract_verified": true,
+    "stochastic_packet_preparation_authorized": false,
+    "synthetic_dataset_generated": false
+  },
+  "selected_next_target": "select_post_scalar_only_yukawa_deterministic_forward_model_packet_review_scientific_response_v0",
+  "selected_next_target_kind": "SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_PACKET_REPAIR_OR_DETERMINISTIC_EXECUTION",
+  "target": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0_result",
+  "unblock_requirements": [
+    {
+      "requirement": "freeze numeric base and half steps for log lambda and every nonlinear perturbation with domain behavior",
+      "requirement_id": "U1",
+      "satisfied": false
+    },
+    {
+      "requirement": "freeze parameter standardization and a rank-deficient nuisance projector algorithm cutoff reconstruction tolerance and condition-number rule",
+      "requirement_id": "U2",
+      "satisfied": false
+    },
+    {
+      "requirement": "define the transition domain by exact scalar-grid indices or a frozen mathematical predicate",
+      "requirement_id": "U3",
+      "satisfied": false
+    },
+    {
+      "requirement": "freeze quantitative refinement tolerances for singular values rank correlations eta projector residuals and classifications",
+      "requirement_id": "U4",
+      "satisfied": false
+    }
+  ],
+  "verdict": "BLOCKED_PARAMETER_IDENTIFIABILITY"
+}

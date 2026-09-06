@@ -1,0 +1,99 @@
+{
+  "schema_id": "REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_PACKET_20260723_v0",
+  "captured_at_utc": "2026-07-23T03:11:43Z",
+  "target": "execute_repository_em_route_source_pin_provenance_and_authority_review_v0_once",
+  "status": "AUTHORIZED_ONE_READ_ONLY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW",
+  "accepted_lineage": {
+    "commit": "e1219237d083bdd6fe1805a3b36c853814b73725",
+    "adjudication_result": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260723_v0.json",
+    "adjudication_result_sha256": "1b76ceae7eb8e8af1f0f80963fc5c020ecd0bda421654db2bb1519a91b61ea2e",
+    "adjudication_result_review": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260723_v0.json",
+    "adjudication_result_review_sha256": "aa26118dabb54b6e0009bedd6c5a108df7ed6f013c6cd9d6c1f859d455947568"
+  },
+  "bound_identity": {
+    "route_capture_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
+    "source_path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "pinned_sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+    "current_git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+    "current_git_blob_sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c",
+    "current_crlf_checkout_sha256": "4e8ef8441c7102f9d943c6e634a3011eb775506207cb276c1f0dbabc4c84c44e",
+    "adjudicated_status": "PINNED_BYTES_ABSENT_FROM_ALL_REACHABLE_REPOSITORY_STATES"
+  },
+  "required_review_scope": [
+    "first appearance of the pinned EM SHA-256",
+    "every packet, test, tool, result, and review containing the pin",
+    "claimed source path and target",
+    "generator logs or manifests that may have produced the identity",
+    "pre-registry and post-registry commits",
+    "ignored or untracked custody artifacts",
+    "patches, bundles, execution logs, and historical snapshots",
+    "whether the pin refers to source bytes, generated evidence, or an obsolete intermediate representation",
+    "whether the referenced EM artifact was scientifically or governably authorized"
+  ],
+  "permitted_terminal_outcomes": [
+    "EM_SOURCE_PIN_PROVENANCE_VERIFIED",
+    "EM_SOURCE_PIN_REBINDING_JUSTIFIED",
+    "EM_SOURCE_PIN_HISTORICAL_NONCURRENT",
+    "EM_SOURCE_PIN_PROVENANCE_UNRESOLVED"
+  ],
+  "terminal_outcome_requirements": {
+    "EM_SOURCE_PIN_PROVENANCE_VERIFIED": "Recover the exact pinned bytes and a complete authority chain.",
+    "EM_SOURCE_PIN_REBINDING_JUSTIFIED": "Prove the old identity obsolete and bind a specific frozen Git-blob or canonical-artifact identity to the original governing authority.",
+    "EM_SOURCE_PIN_HISTORICAL_NONCURRENT": "Prove the identity belonged only to a historical or unenrolled chain and should be removed or demoted from current route validation.",
+    "EM_SOURCE_PIN_PROVENANCE_UNRESOLVED": "Record that no defensible pinned identity, rebind authority, or historical-noncurrent disposition can be established."
+  },
+  "authorized_cycle": {
+    "read_only_provenance_review_executions": 1,
+    "independent_result_reviews": 1,
+    "hash_modifications": 0,
+    "test_or_tool_modifications": 0,
+    "artifact_regenerations": 0,
+    "source_or_scientific_modifications": 0,
+    "registry_or_v2_actions": 0,
+    "lean_actions": 0,
+    "automatic_successor_actions": 0
+  },
+  "evidence_rules": {
+    "reachable_git_history": "AUTHORITATIVE_FOR_REPOSITORY_PROVENANCE",
+    "accepted_custody_records": "CORROBORATING_PROVENANCE_ONLY_UNLESS_AUTHORITY_CHAIN_IS_EXPLICIT",
+    "dirty_main_ignored_or_untracked_content": "READ_ONLY_NONAUTHORITATIVE_LEAD_ONLY",
+    "unsupported_current_byte_substitution": "PROHIBITED",
+    "absence_of_evidence": "MUST_NOT_BE_RECAST_AS_REBINDING_AUTHORITY"
+  },
+  "acceptance_requirements": {
+    "required_scope_exhaustively_searched": true,
+    "all_pin_occurrences_mapped": true,
+    "source_generated_or_intermediate_identity_domain_assessed": true,
+    "scientific_and_governance_authority_assessed": true,
+    "terminal_outcome_restricted_to_permitted_values": true,
+    "hashes_modified": 0,
+    "tests_tools_or_artifacts_modified": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "validation_checkout": "CLEAN",
+    "dirty_main": "BYTE_UNCHANGED",
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "refreshing or substituting the EM route pin",
+    "modifying the route table, consumers, tests, source, generators, or artifacts",
+    "treating dirty-main or ignored bytes as canonical merely because they match",
+    "manufacturing an authority claim for current EM bytes",
+    "repairing any of the 67 QFT-route outcomes",
+    "registry rotation",
+    "V2 enrollment",
+    "Lean work",
+    "scientific execution",
+    "automatic successor cycle"
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/em-route-source-pin-provenance-authority-review-v0",
+    "canonical_worktree_writes": "AUTHORITY_AND_RESULT_RECORDS_ONLY",
+    "test_source_tool_artifact_and_report_writes": "PROHIBITED"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

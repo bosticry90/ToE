@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 1,
+  "closed_from_commit": "3cddf2ef88261944803bf04a58918f0fa5fe5163",
+  "event_hash": "d2194a5765ec714e23d7764637747769af0971fc0b9dfc4160de0c7f4522e76b",
+  "event_sequence_number": 2,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "61c0032f2755ddec053607d8d1744473818da59c6bee346156aebdf947cdcd89",
+  "previous_event_hash": "61c0032f2755ddec053607d8d1744473818da59c6bee346156aebdf947cdcd89",
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "result_artifact_hash": "91b2fb9a275232b96604db77e0d862c9edbdde1a5daf703bed798d8d717f894b",
+  "result_artifact_path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+  "review_artifact_hash": "a2e9603c35c4a32e4f2f83bdbd3e2c41959ec2489f4800744e82c9c7b8afe2ef",
+  "review_artifact_path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json",
+  "terminal_result": "PASSED"
+}

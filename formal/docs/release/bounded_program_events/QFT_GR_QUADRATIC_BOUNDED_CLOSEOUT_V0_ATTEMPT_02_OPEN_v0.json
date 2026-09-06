@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 2,
+  "event_hash": "e154c04548138950b66630fc2d3b4a206162c7ca4a42ea26545b7182118cd7fe",
+  "event_sequence_number": 3,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "c092a1bf2677d519055212a43ab160f835b54e2c",
+  "previous_event_hash": "94bfb60e31922385cdde1ca2119ee6cd1c90f534dbda53e1b3739c658c923a99",
+  "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "registry_snapshot_hash": "b64a309a1f030365d4a38a849967e56b2a881af2eb7197970b65631b682e3555",
+  "scope_hash": "aca1c71c2cfa81b7e6da772a0dcbdad149172b2b8960736fb47c19c13f92feda",
+  "semantic_stage_id": "COMPONENT_EXPANDED_LINEARIZATION",
+  "target": "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1"
+}

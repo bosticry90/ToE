@@ -63,7 +63,7 @@ Record (computed)
     ],
     "status": "established"
   },
-  "fingerprint": "34e6c6c6c0a7598a316273eba3295999632e36bc36442a6993de89859884d2db",
+  "fingerprint": "0b276096106346a765777eb53f45fe89d13fd8519f66d607921e8a983ec0d066",
   "notes": "This audit does not assert physical comparability. It reports locked derived outputs and explicitly pins a unit conversion chain + numeric criterion. Cross-lane comparison is only computed when an explicit Bragg\u2194Sound pairing exists.",
   "observable_id": "OV-BR-SND-03",
   "rows": [
@@ -153,7 +153,7 @@ Record (computed)
           }
         },
         "regime": {
-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
+          "fingerprint": "e95e203290fe6c046ae6fe43377ca5925e9334c4512fcb92663b803d0dd7f17a",
           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
           "schema": "OV-BR-02/v1"
         },
@@ -259,7 +259,7 @@ Record (computed)
           }
         },
         "regime": {
-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
+          "fingerprint": "e95e203290fe6c046ae6fe43377ca5925e9334c4512fcb92663b803d0dd7f17a",
           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
           "schema": "OV-BR-02/v1"
         },
@@ -365,7 +365,7 @@ Record (computed)
           }
         },
         "regime": {
-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
+          "fingerprint": "e95e203290fe6c046ae6fe43377ca5925e9334c4512fcb92663b803d0dd7f17a",
           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
           "schema": "OV-BR-02/v1"
         },
@@ -470,7 +470,7 @@ Record (computed)
           }
         },
         "regime": {
-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
+          "fingerprint": "e95e203290fe6c046ae6fe43377ca5925e9334c4512fcb92663b803d0dd7f17a",
           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
           "schema": "OV-BR-02/v1"
         },
@@ -542,4 +542,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `34e6c6c6c0a7598a316273eba3295999632e36bc36442a6993de89859884d2db`
+Record fingerprint: `0b276096106346a765777eb53f45fe89d13fd8519f66d607921e8a983ec0d066`

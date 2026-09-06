@@ -1,0 +1,116 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_STAGE_5_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_STAGE_5_OPEN",
+  "authorized_stage": {
+    "canonical_scope_hash": "aec6355853132543dff1bf7c4aa90e65718ab1b192d56340efc9d5d584bd6dd8",
+    "canonical_target": "select_toe_gravitational_action_family_eligibility_handoff_v0",
+    "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+    "stage_number": 5
+  },
+  "captured_at_utc": "2026-07-31T18:00:00Z",
+  "eligibility_classification_vocabulary": [
+    "ELIGIBLE_FOR_SEPARATE_ACTION_SELECTION",
+    "PROVISIONAL_BASELINE_ONLY",
+    "REFERENCE_CONTROL_ONLY",
+    "NOT_APPLICABLE_NOT_AN_ACTION",
+    "BLOCKED_BY_MISSING_DEFINITION",
+    "BLOCKED_BY_MISSING_DERIVATION",
+    "BLOCKED_BY_UNRESOLVED_CONFLICT",
+    "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT"
+  ],
+  "eligibility_contract": {
+    "all_seven_families_receive_exactly_one_classification": true,
+    "compatibility_is_not_native_eligibility": true,
+    "defined_baseline_is_not_native_derivation": true,
+    "empty_eligible_pool_is_a_valid_result": true,
+    "family_role_changes_are_prohibited": true,
+    "handoff_selection_creates_no_successor_authority": true,
+    "missing_definition_is_not_scientific_refutation": true,
+    "route_selection_is_not_action_or_principle_adoption": true
+  },
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 5 scope",
+      "sha256": "a6062c810927fde39c4c54d5d22009ccd0f4d33d04fb7e001ffda01293fccf19"
+    },
+    {
+      "path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+      "role": "closed seventy-cell source-bound compatibility result",
+      "sha256": "eee46245fd59f0ecc7b127030dca0dcbba61ab3dc4e45fa756bbfe9e1bb9c058"
+    },
+    {
+      "path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_REVIEW_v0.json",
+      "role": "accepted independent Stage 4 review",
+      "sha256": "2dd8819c4733aaab749f64036e9e17af309db8ebdadb497a55b0090d7518f310"
+    },
+    {
+      "path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_VALIDATION_v0.json",
+      "role": "Stage 4 validation and nonclaim boundary",
+      "sha256": "bf55fe65dd354db57828eaa5147354ba9eafdab81a59a673a513a5d55ee75157"
+    },
+    {
+      "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_CLOSE_v0.json",
+      "role": "immutable Stage 4 CLOSE event",
+      "sha256": "3e10351827896acc1d6f3247ce540c5f8d9007f4fb4ee52bc0349eeb6b04c29a"
+    }
+  ],
+  "family_ids": [
+    "F_EH",
+    "F_FR",
+    "F_QUADRATIC",
+    "F_EXTRA_FIELD",
+    "F_NONLOCAL",
+    "F_CONNECTION_TORSION",
+    "F_EQUIVALENCE_PROBE"
+  ],
+  "permitted_work": [
+    "classify all seven preserved families for later action-selection eligibility using only the closed Stage 4 evidence",
+    "preserve Einstein-Hilbert as a known-physics baseline and distinguish provisional use from native derivation",
+    "preserve quadratic gravity as REFERENCE_CONTROL_ONLY with its accepted negative limitation",
+    "preserve R+alpha R^2 as a nonnative comparison representative rather than a general f(R) action",
+    "preserve the equivalence probe as nonaction diagnostic machinery",
+    "record exact definition derivation conflict evidence and role blockers for every ineligible family",
+    "select at most one non-executing post-survey route or conclude that no route is ready",
+    "emit exactly one manifest terminal outcome and one atomic Stage 5 CLOSE result"
+  ],
+  "post_eligibility_route_vocabulary": [
+    "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "PREPARE_BOUNDED_NEW_ACTION_POSTULATE",
+    "USE_EINSTEIN_HILBERT_AS_PROVISIONAL_BASELINE",
+    "DEFER_NATIVE_GRAVITY_PENDING_REQUIRED_INPUTS",
+    "NO_GRAVITATIONAL_ACTION_SELECTION_ROUTE_READY"
+  ],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "prohibited_work": [
+    "invent derive or adopt a native gravitational principle",
+    "invent construct vary or adopt a gravitational action",
+    "select Einstein-Hilbert as native gravity or treat provisional use as derivation",
+    "promote quadratic gravity or reopen its closed calculations",
+    "generalize R+alpha R^2 to arbitrary f(R)",
+    "convert the equivalence probe into an action",
+    "complete undefined extra-field nonlocal connection or torsion families",
+    "promote historical or canonical evidence",
+    "construct or promote a master action",
+    "perform a gravitational calculation",
+    "authorize prepare install or open a successor program automatically",
+    "change the Stage 4 compatibility cells or family roles",
+    "claim empirical validation or a uniquely testable ToE gravity law"
+  ],
+  "scientific_output_at_authority_checkpoint": {
+    "eligibility_classifications_made": 0,
+    "gravitational_actions_selected": 0,
+    "native_gravitational_principles_selected": 0,
+    "post_eligibility_routes_selected": 0,
+    "successor_programs_authorized": 0
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_5_OPEN_ONLY",
+  "terminal_outcomes": [
+    "ONE_OR_MORE_ACTION_FAMILIES_READY_FOR_SELECTION",
+    "ALL_CANDIDATES_REQUIRE_ONE_DEFINITION",
+    "ALL_CANDIDATES_REQUIRE_ONE_DERIVATION",
+    "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+    "GRAVITATIONAL_REQUIREMENTS_CONFLICT",
+    "SOURCE_EVIDENCE_INSUFFICIENT"
+  ]
+}

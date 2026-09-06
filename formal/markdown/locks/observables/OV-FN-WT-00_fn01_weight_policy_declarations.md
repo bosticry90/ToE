@@ -14,11 +14,11 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "d3dd4f6ec5b6d4e6e4016c124db48c4f29afd1e2b1252952fb6a427c14c1bb87",
+  "fingerprint": "cb2cf59a7de8db8989c70ffa3a2f079292ef5f0ec192b56a55ed45c667a826bf",
   "inputs": {
     "declarations": {
-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
+      "expected_path": "formal/python/toe/bridges/fnwt01_weight_policy_declarations.json",
+      "path": "formal/python/toe/bridges/fnwt01_weight_policy_declarations.json",
       "present": true,
       "raw_sha256": "6991ce7aacdb0221b5e8846003a42817640523db7d96f0a23b43df6bdeeee32e",
       "schema": "FNWT01_weight_policy_declarations/v1",
@@ -77,4 +77,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `d3dd4f6ec5b6d4e6e4016c124db48c4f29afd1e2b1252952fb6a427c14c1bb87`
+Record fingerprint: `cb2cf59a7de8db8989c70ffa3a2f079292ef5f0ec192b56a55ed45c667a826bf`

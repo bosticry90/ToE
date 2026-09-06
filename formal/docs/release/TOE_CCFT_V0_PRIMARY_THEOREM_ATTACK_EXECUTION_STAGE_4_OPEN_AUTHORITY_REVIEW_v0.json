@@ -1,0 +1,32 @@
+{
+  "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_OPEN_AUTHORITY_REVIEW_v0",
+  "schema_id": "toe.ccft_v0.primary_theorem_attack_execution.stage_4_open_authority_review.v0",
+  "captured_at_utc": "2026-08-03T00:49:20Z",
+  "authority_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_OPEN_AUTHORITY_v0.json",
+  "authority_sha256": "cf4988697954f356eb1ce7379dc7bfa042a69b3c9c8cc9f6666218529034596a",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "stage_number": 4,
+  "accepted": true,
+  "checks": {
+    "stage_3_packet_result_review_validation_and_close_are_bound": true,
+    "manifest_stage_target_scope_and_terminal_vocabulary_match": true,
+    "one_packet_and_four_linked_claim_caps_are_preserved": true,
+    "frozen_model_equation_domain_parameter_and_postulate_count_match": true,
+    "frozen_packet_claim_negation_execution_and_Lean_signature_counts_match": true,
+    "gauge_equivalence_unit_background_zero_background_and_historical_classification_are_all_unadjudicated": true,
+    "proof_disproof_construction_and_counterexample_lanes_are_independently_authorized": true,
+    "symbolic_numerical_and_faithful_Lean_execution_are_authorized": true,
+    "Claims_1_through_3_precede_historical_classification": true,
+    "failed_or_conditional_results_cannot_be_repaired_by_model_or_packet_mutation": true,
+    "new_postulates_and_archive_reopening_are_prohibited": true,
+    "norm_energy_well_posedness_stability_and_novelty_expansion_are_outside_stage_4": true,
+    "mathematical_result_cannot_be_promoted_to_physical_truth": true,
+    "matter_gravity_seam_master_action_and_empirical_work_are_prohibited": true,
+    "Stage_5_and_all_successors_remain_unauthorized": true,
+    "authority_contains_no_proof_refutation_counterexample_symbolic_numerical_or_Lean_result": true
+  },
+  "decision": "ACCEPT_STAGE_4_OPEN_AUTHORITY_AWAIT_IMMUTABLE_OPEN_EVENT",
+  "stage_4_authorized": true,
+  "stage_5_authorized": false,
+  "status": "PASS"
+}

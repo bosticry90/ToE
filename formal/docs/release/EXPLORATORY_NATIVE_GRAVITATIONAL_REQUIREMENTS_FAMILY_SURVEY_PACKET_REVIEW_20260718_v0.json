@@ -1,0 +1,396 @@
+{
+  "V2_firewall_audit": {
+    "V2_repair_or_V3_authorized": false,
+    "gate_id": "G8_CLOSED_V2_FIREWALL",
+    "status": "PASS",
+    "survey_labels_are_V2_statuses": false,
+    "survey_results_may_populate_V2_matrix": false,
+    "v2_evaluator_called": false
+  },
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_20260718_v0.md",
+        "sha256": "47956a32c8f833277c6a7d004900e7af63a2e3674a3585aca0351311047c52a5"
+      },
+      {
+        "relative_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_20260718_v0.json",
+        "sha256": "8cfbb0ce0129638fd688d255911ef8e076c6a1d48bb6736e49705dd266a92ac2"
+      },
+      {
+        "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_packet_v0.py",
+        "sha256": "d2e403aae4c2047a9816a28dc797a04b3a0997775a2d56b7f8e2a41e2ecdc305"
+      },
+      {
+        "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_packet_v0.py",
+        "sha256": "49494d1829544aa73d0c277f729050b21a0151915bfa5550b27510ed226d1a15"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ExploratoryNativeGravitationalRequirementsFamilySurveyPacketV0.lean",
+        "sha256": "5bbc9ef36e8d49d6d33425bc1a188a76b4ef718dec7e9db043469886f2f2c891"
+      },
+      {
+        "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "2fd17a03cd7f53aea1e278675aca827c98c8a8c1ee30adbf90944e15e39c2e4a"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_packet_review_v0.py",
+      "sha256": "2c7327e8695c53527cceea9ba1c28f5b5d430f7aa7415c54074bb0216d6f34bc"
+    },
+    "prepared_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "test": {
+      "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_packet_review_v0.py",
+      "sha256": "c7e009d8a553c4562609ebd0908243d4a4537db992fed9697a43513ba3f0eb2b"
+    }
+  },
+  "authorization_boundary": {
+    "V2_matrix_population_authorized": false,
+    "V2_scientific_outcome_authorized": false,
+    "authoritative_equivalence_set_authorized": false,
+    "authoritative_survivor_set_authorized": false,
+    "automated_selector_reopening_authorized": false,
+    "automatic_V3_authorized": false,
+    "family_envelope_expansion_authorized": false,
+    "frame_dragging_authorized": false,
+    "gravitational_action_selection_or_proposal_authorized": false,
+    "literature_supported_comparisons_authorized": true,
+    "manual_provisional_judgments_authorized": true,
+    "matter_sector_selection_authorized": false,
+    "metric_variation_authorized": false,
+    "native_principle_claim_authorized": false,
+    "new_postulate_adoption_authorized": false,
+    "next_scientific_investigation_recommendation_authorized": true,
+    "no_go_theorem_claim_authorized": false,
+    "standard_GR_adoption_authorized": false,
+    "transparent_mathematical_reasoning_authorized": true,
+    "unresolved_and_not_surveyed_entries_authorized": true
+  },
+  "authorized_execution": {
+    "all_seventy_cells_required": false,
+    "execution_count": 1,
+    "independent_result_review_required": true,
+    "mode": "NONAUTHORITATIVE_MANUALLY_ADJUDICATED_EXPLORATION_ONLY",
+    "one_next_scientific_investigation_may_be_recommended": true,
+    "phase_1": "ANSWER_EIGHT_DECISION_CRITICAL_QUESTIONS",
+    "phase_2": "POPULATE_ONLY_SUPPORTING_CELLS",
+    "phase_3": "PRODUCE_SCIENTIFIC_OPPORTUNITY_MAP_AND_STOP"
+  },
+  "binding_manual_entry_contract": {
+    "basis_record_fields": [
+      "basis_type",
+      "pointer_role",
+      "reference",
+      "scope_note"
+    ],
+    "complete_entry_remains_scientifically_provisional": true,
+    "incomplete_entry_disposition": "INCOMPLETE_SURVEY_ENTRY",
+    "not_surveyed_workflow_state": "NOT_SURVEYED",
+    "permitted_provisional_labels": [
+      "CLEARLY COMPATIBLE",
+      "LIKELY COMPATIBLE",
+      "LIKELY INCOMPATIBLE",
+      "CLEARLY INCOMPATIBLE",
+      "UNRESOLVED",
+      "OUTSIDE FROZEN SCOPE"
+    ],
+    "reasoning_basis_types": [
+      "ESTABLISHED_LITERATURE",
+      "DIRECT_MATHEMATICAL_REASONING",
+      "KNOWN_COMPARATOR_BEHAVIOR",
+      "ANALOGY",
+      "PROJECT_HYPOTHESIS",
+      "EXPERT_JUDGMENT"
+    ],
+    "required_nonblank_fields": [
+      "provisional_classification",
+      "concise_rationale",
+      "assumptions_and_domain",
+      "source_or_derivation_pointers",
+      "main_uncertainty",
+      "resolving_calculation_or_theorem",
+      "priority_role",
+      "manual_adjudicator_id",
+      "manual_review_status"
+    ],
+    "structural_completeness_certifies_scientific_correctness": false,
+    "surveyed_workflow_state": "SURVEYED_PROVISIONAL"
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "current_posture": {
+    "authoritative_scientific_matrix": "0_OF_70",
+    "automated_action_selection_V2": "BLOCKED_PROJECT_EVIDENCE_SEMANTICS_UNSOUND",
+    "automated_tooling_lane": "CLOSED",
+    "blank_forms": 70,
+    "decision_critical_questions": "8_UNANSWERED",
+    "exploratory_survey_packet_V0": "ACCEPTED_FOR_ONE_BOUNDED_MANUAL_SURVEY",
+    "gravitational_action": "NOT_SELECTED",
+    "manual_exploratory_survey": "NOT_EXECUTED",
+    "metric_variation": "NOT_EXECUTED",
+    "minimal_gravitational_sector_contract": "ACCEPTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "provisional_judgments": 0
+  },
+  "decision_critical_question_audit": {
+    "all_seventy_cells_required": false,
+    "answered_question_count": 0,
+    "decision_critical_questions_first": true,
+    "gate_id": "G6_DECISION_CRITICAL_QUESTIONS_CONTROL_WORK_ORDER",
+    "question_count": 8,
+    "rows": [
+      {
+        "answered": false,
+        "capabilities": [
+          "REVEAL_REQUIREMENT_SELECTION_POWER",
+          "DISTINGUISH_MULTIPLE_FAMILIES"
+        ],
+        "question_id": "DQ1_DIFF_COVARIANCE_DISCRIMINATION",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      },
+      {
+        "answered": false,
+        "capabilities": [
+          "SHOW_TOE_SPECIFIC_CONSTRAINT_OR_ARCHITECTURE_ONLY"
+        ],
+        "question_id": "DQ2_CK_FIREWALL_ACTION_RELEVANCE",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      },
+      {
+        "answered": false,
+        "capabilities": [
+          "DISTINGUISH_MULTIPLE_FAMILIES",
+          "IDENTIFY_TRACTABLE_DERIVATION"
+        ],
+        "question_id": "DQ3_SOURCE_COMPATIBILITY_DISCRIMINATION",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      },
+      {
+        "answered": false,
+        "capabilities": [
+          "REVEAL_REQUIREMENT_SELECTION_POWER",
+          "EXPOSE_SPECIAL_LIMIT_DEPENDENCE"
+        ],
+        "question_id": "DQ4_NEWTONIAN_RECOVERY_DISCRIMINATION",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      },
+      {
+        "answered": false,
+        "capabilities": [
+          "DISTINGUISH_MULTIPLE_FAMILIES",
+          "IDENTIFY_TRACTABLE_DERIVATION"
+        ],
+        "question_id": "DQ5_MOMENTUM_CURRENT_INDEPENDENCE",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      },
+      {
+        "answered": false,
+        "capabilities": [
+          "DISTINGUISH_MULTIPLE_FAMILIES",
+          "IDENTIFY_TRACTABLE_THEOREM_OR_COUNTEREXAMPLE"
+        ],
+        "question_id": "DQ6_STABILITY_NO_FIT_DISCRIMINATION",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      },
+      {
+        "answered": false,
+        "capabilities": [
+          "SHOW_TOE_SPECIFIC_CONSTRAINT_OR_ARCHITECTURE_ONLY",
+          "LOCATE_POSSIBLE_NATIVE_PRINCIPLE"
+        ],
+        "question_id": "DQ7_NATIVE_SEAM_LAGRANGIAN_CONSTRAINT",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      },
+      {
+        "answered": false,
+        "capabilities": [
+          "DISTINGUISH_PHYSICAL_FROM_REPRESENTATIONAL_DIFFERENCE",
+          "IDENTIFY_TRACTABLE_THEOREM_OR_COUNTEREXAMPLE"
+        ],
+        "question_id": "DQ8_PROPERTY_SCOPED_EQUIVALENCE",
+        "references_only_frozen_families": true,
+        "references_only_frozen_requirements": true
+      }
+    ],
+    "status": "PASS"
+  },
+  "family_envelope_audit": {
+    "all_family_rows_comparison_only": true,
+    "expansion_authorized": false,
+    "family_count": 7,
+    "gate_id": "G7_FAMILY_ENVELOPE_IS_BOUNDED_AND_COMPARATIVE",
+    "material_omission_may_be_recorded_for_future_target": true,
+    "presented_as_exhaustive": false,
+    "status": "PASS"
+  },
+  "label_interpretations": {
+    "CLEARLY COMPATIBLE": "Strong preliminary reasoning or established comparison evidence supports compatibility in the stated domain.",
+    "CLEARLY INCOMPATIBLE": "A direct definitional or mathematical conflict is visible in the frozen scope.",
+    "LIKELY COMPATIBLE": "Compatibility appears plausible, but assumptions or derivations remain incomplete.",
+    "LIKELY INCOMPATIBLE": "A probable conflict is visible, but a decisive proof or calculation is absent.",
+    "OUTSIDE FROZEN SCOPE": "The family or question lies outside the selected local metric-only envelope.",
+    "UNRESOLVED": "The relationship was examined and the available reasoning does not decide it."
+  },
+  "no_alternate_selector_audit": {
+    "defined_functions": [
+      "_sha256",
+      "_load_object",
+      "_validate_authority",
+      "_frozen_catalogs",
+      "_blank_cell",
+      "_blank_survey_forms",
+      "_question_rows",
+      "_preparation_controls",
+      "build_packet",
+      "artifact_bytes",
+      "main"
+    ],
+    "evaluate_analysis_call_present": false,
+    "forbidden_form_fields_present": [],
+    "gate_id": "G1_NO_ALTERNATE_AUTOMATED_SELECTOR",
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import hashlib",
+      "import json",
+      "from pathlib import Path",
+      "from typing import Any"
+    ],
+    "observed_import_roots": [
+      "__future__",
+      "argparse",
+      "hashlib",
+      "json",
+      "pathlib",
+      "typing"
+    ],
+    "status": "PASS",
+    "v2_evaluator_module_import_present": false
+  },
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 8,
+    "pass_count": 8,
+    "rows": [
+      {
+        "gate": 1,
+        "name": "no alternate automated selector",
+        "status": "PASS"
+      },
+      {
+        "gate": 2,
+        "name": "NOT_SURVEYED distinct from UNRESOLVED",
+        "status": "PASS"
+      },
+      {
+        "gate": 3,
+        "name": "nonblank entries expose complete reasoning",
+        "status": "PASS"
+      },
+      {
+        "gate": 4,
+        "name": "sources support exact limited judgments",
+        "status": "PASS"
+      },
+      {
+        "gate": 5,
+        "name": "confidence separable from reasoning-basis authority",
+        "status": "PASS"
+      },
+      {
+        "gate": 6,
+        "name": "decision-critical questions control work order",
+        "status": "PASS"
+      },
+      {
+        "gate": 7,
+        "name": "family envelope remains comparative",
+        "status": "PASS"
+      },
+      {
+        "gate": 8,
+        "name": "survey cannot feed V2 automatically",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_REVIEW_20260718_v0",
+  "scope": {
+    "automated_action_selection_tooling_lane_reopened": false,
+    "automatic_V3_authorized": false,
+    "automation_created": false,
+    "blank_survey_forms_retained": 70,
+    "decision_critical_questions_answered": 0,
+    "family_envelope_expanded": false,
+    "gravitational_action_proposed_or_selected": false,
+    "gravitomagnetic_route_reopened": false,
+    "independent_packet_review_executed": true,
+    "manual_exploratory_survey_executed": false,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "packet_accepted": true,
+    "provisional_survey_classifications_made": 0,
+    "real_equivalence_class_established": false,
+    "real_family_judgment_made": false,
+    "real_matrix_cells_computed": 0,
+    "real_scientific_outcome_selected": false,
+    "real_survivor_matrix_computed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "tensor_field_equation_derived": false
+  },
+  "selected_next_target": "conduct_exploratory_native_gravitational_requirements_family_survey_v0",
+  "selected_next_target_kind": "NONAUTHORITATIVE_MANUALLY_ADJUDICATED_SURVEY_EXECUTION_ONLY",
+  "source_scope_and_reasoning_basis_audit": {
+    "basis_authority_selects_confidence_label": false,
+    "binding_basis_record_fields": [
+      "basis_type",
+      "pointer_role",
+      "reference",
+      "scope_note"
+    ],
+    "confidence_upgrades_basis_authority": false,
+    "gate_id": "G4_G5_LIMITED_SOURCE_SCOPE_AND_SEPARATE_REASONING_BASIS",
+    "reasoning_basis_types": [
+      "ESTABLISHED_LITERATURE",
+      "DIRECT_MATHEMATICAL_REASONING",
+      "KNOWN_COMPARATOR_BEHAVIOR",
+      "ANALOGY",
+      "PROJECT_HYPOTHESIS",
+      "EXPERT_JUDGMENT"
+    ],
+    "recovery_limit_generalization_prohibited": true,
+    "source_custody_confers_relevance": false,
+    "special_case_generalization_prohibited": true,
+    "status": "PASS"
+  },
+  "state_and_completeness_audit": {
+    "binding_structural_dispositions": [
+      "VALID_NOT_SURVEYED",
+      "VALID_PROVISIONAL_ENTRY",
+      "INCOMPLETE_SURVEY_ENTRY"
+    ],
+    "canonical_UNRESOLVED_count": 0,
+    "canonical_blank_form_count": 70,
+    "gate_id": "G2_G3_STATE_DISTINCTION_AND_REASONING_COMPLETENESS",
+    "observed": {
+      "canonical_not_surveyed": [
+        "VALID_NOT_SURVEYED"
+      ],
+      "incomplete_nonblank": "INCOMPLETE_SURVEY_ENTRY",
+      "partial_blank": "INCOMPLETE_SURVEY_ENTRY",
+      "valid_unresolved": "VALID_PROVISIONAL_ENTRY"
+    },
+    "status": "PASS"
+  },
+  "target": "review_exploratory_native_gravitational_requirements_family_survey_packet_v0_result",
+  "verdict": "ACCEPTED_FOR_ONE_BOUNDED_MANUAL_EXPLORATORY_SURVEY"
+}

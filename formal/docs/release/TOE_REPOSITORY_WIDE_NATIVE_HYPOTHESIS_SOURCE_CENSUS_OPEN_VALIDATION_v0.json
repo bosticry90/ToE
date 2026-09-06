@@ -1,0 +1,52 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_path_count": 8,
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_OPEN_v0.json",
+    "formal/python/tools/toe_repository_wide_native_hypothesis_source_census_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 1,
+  "authority_decision": "AUTHORIZE_REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1_OPEN",
+  "bounded_program_state_after_open": "OPEN",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "event_hash": "a48b6eb80d143cd6ca4e6133a6abdb03a8cc9a60b0e81abb40f773dad7bf746c",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_OPEN_v0.json",
+  "event_sequence_number": 1,
+  "event_sha256": "79b83ac61394871afd744feb89ab6ebdf15cf68cb47edf8da724c30a9e3e8da7",
+  "exhaustive_python_passage_claimed": false,
+  "opened_from_commit": "1558326fec54255f58f63ee66ca97902382d93f4",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "registry_snapshot_hash": "c74277ea7440dc0bc6f460511caaab6f47c728b42af08c9aca2a9dc8a7000969",
+  "schema_id": "toe.repository_wide_native_hypothesis_source_census.stage_1_open_validation.v0",
+  "scientific_output_at_open": {
+    "archive_scientifically_traversed": false,
+    "authoritative_census_index_generated": false,
+    "claim_extraction_performed": false,
+    "evidence_promoted": false,
+    "lineage_conclusion_produced": false,
+    "native_frontier_selected": false,
+    "stage_2_output_produced": false
+  },
+  "scope_hash": "be877b7daf4bb24fa5fa9c49c75891394d8bb16ddf6e2658d7e7360fba94da64",
+  "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+  "status": "STAGE_1_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "inventory_toe_repository_wide_native_hypothesis_sources_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "dependency_impact_check_permits_open": true,
+    "eight_batches_bound": true,
+    "event_and_registry_projection_match": true,
+    "exhaustive_python_debt_disclosed": true,
+    "open_checkpoint_contains_no_census_output": true,
+    "program_attempt_count_is_one": true,
+    "program_state_is_open": true,
+    "reddit_excluded": true
+  }
+}

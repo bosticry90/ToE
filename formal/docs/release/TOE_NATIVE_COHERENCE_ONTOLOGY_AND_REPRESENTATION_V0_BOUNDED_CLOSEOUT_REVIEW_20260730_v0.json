@@ -1,0 +1,36 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0",
+  "automatic_successor_selected": false,
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "ccft_neither_validated_nor_rejected": true,
+    "event_chain_has_two_matched_open_close_attempts": true,
+    "mandatory_exit_completed": true,
+    "no_action_model_or_calculation_constructed": true,
+    "no_representation_selected": true,
+    "program_closed": true,
+    "separate_new_program_and_substantive_input_required": true,
+    "stage_1_inventory_preserved": true,
+    "stage_2_block_preserved": true,
+    "stages_3_through_5_unattempted": true,
+    "two_attempts_consumed": true,
+    "zero_repair": true
+  },
+  "failed_checks": [],
+  "program_terminal": true,
+  "reviewed_result": {
+    "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0.json",
+    "sha256": "be08cef68004565430e7393c78e96f5aa80c11959d7c5ddb87ff10eedd07450e"
+  },
+  "schema_id": "toe.native_coherence_ontology_and_representation.bounded_closeout_review.v0",
+  "scientific_success_claimed": false,
+  "terminal_scientific_status": {
+    "calculation_status": "NOT_REACHED",
+    "native_model_status": "NOT_CONSTRUCTED",
+    "operational_result": "COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL",
+    "program_result": "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+    "representation_status": "NOT_REACHED"
+  },
+  "verdict": "ACCEPT_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_TERMINAL_CLOSEOUT_NO_REPAIR_NO_AUTOMATIC_SUCCESSOR"
+}

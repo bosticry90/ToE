@@ -1,0 +1,79 @@
+{
+  "artifact_id": "TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_STAGE_2_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_STAGE_2_OPEN",
+  "authorized_stage": {
+    "canonical_scope_hash": "8dc24a87cd882d67123278bc2da416a4efffe29866f96bbecc4dd7af7a7942ea",
+    "canonical_target": "inventory_toe_candidate_gravitational_action_families_v0",
+    "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+    "stage_number": 2
+  },
+  "captured_at_utc": "2026-07-31T13:26:16Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 2 scope",
+      "sha256": "a6062c810927fde39c4c54d5d22009ccd0f4d33d04fb7e001ffda01293fccf19"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "role": "closed source-bound Stage 1 requirement inventory",
+      "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+      "role": "accepted independent Stage 1 review",
+      "sha256": "3e6f8c74fe74d3c8a7bd177c025b1f722d386b493aaa177b06db2866b592705c"
+    },
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+      "role": "prepared seven-family comparison envelope",
+      "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+    },
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.json",
+      "role": "family-status and source-evidence cautions",
+      "sha256": "c7cbf6997b5414a83524a82c105e33e44426dd07f5b2a703d3f68e123795fa9c"
+    },
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.json",
+      "role": "closed automated matrix and independent-evidence boundary",
+      "sha256": "1faacbd470ef5feed6aebb4dfad34e2e5a9214fa2e31a79d57c375a08f4d9051"
+    }
+  ],
+  "family_ids": [
+    "F_EH",
+    "F_FR",
+    "F_QUADRATIC",
+    "F_EXTRA_FIELD",
+    "F_NONLOCAL",
+    "F_CONNECTION_TORSION",
+    "F_EQUIVALENCE_PROBE"
+  ],
+  "permitted_work": [
+    "bind exact source artifacts and hashes for each of seven prepared family IDs",
+    "record documentary lineage and current native effective control historical or unresolved status",
+    "record exact or verbal action form field content derivative order free coefficients provenance and symmetries",
+    "record claimed degrees of freedom known-physics limits calculations reviews negative results and missing inputs",
+    "record relationship to the master-action framework and C_k firewall without promotion",
+    "produce an independent review and one atomic CLOSE result"
+  ],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "prohibited_work": [
+    "rank score or select a winning gravitational action family",
+    "judge family compatibility against the ten Stage 1 requirements",
+    "invent missing fields coefficients action terms or provenance",
+    "treat unknown or not-yet-testable requirements as family failures",
+    "promote historical or external actions into canonical evidence",
+    "perform new hyperbolicity stability recovery or phenomenology calculations",
+    "construct or promote a new master action",
+    "expand the frozen seven-family envelope",
+    "open Stage 3 automatically"
+  ],
+  "schema_id": "toe.candidate_gravitational_action_family_inventory.stage_2_open_authority.v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_2_OPEN_ONLY",
+  "terminal_outcomes": [
+    "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_COMPLETE",
+    "ACTION_FAMILY_INVENTORY_COMPLETE_WITH_UNRESOLVED_MEANINGS",
+    "ACTION_FAMILY_SOURCE_EVIDENCE_INSUFFICIENT"
+  ]
+}

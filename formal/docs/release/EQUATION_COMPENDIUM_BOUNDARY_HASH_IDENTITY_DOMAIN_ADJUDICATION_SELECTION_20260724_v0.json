@@ -1,0 +1,19 @@
+{
+  "schema_id": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_SELECTION_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:04:17Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+    "PRESERVE_POST_QFT_ROUTE_REASSESSMENT_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+  "target": "prepare_repository_equation_compendium_boundary_hash_identity_domain_adjudication_packet_v0",
+  "selection_basis": "The accepted 462-outcome baseline identifies one concentrated 50-outcome equation-compendium boundary-hash root. Read-only identity-domain adjudication is required before any hash repair and has higher bounded-cycle leverage than the fragmented 218-outcome missing-artifact family.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04",
+    "commit": "ed1c78734bc0a58a432b55a5fd3b0b9ccb66bd6d"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

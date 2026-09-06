@@ -1,0 +1,63 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedExecutionResultV2",
+  "as_of": "2026-09-05",
+  "attempt": {
+    "disposition": "INCONCLUSIVE",
+    "qualification_earned": false,
+    "failure_stage": "INITIAL_NETWORK_ROUTE_CLASSIFICATION_BEFORE_TRUSTED_QUALIFICATION",
+    "failure_code": "LINUX_NETWORK_NAMESPACE_INITIAL_IPV6_DEFAULT_ROUTE",
+    "failure_detail": "The v2 driver classified every ::/0 row in /proc/net/ipv6_route as usable egress. A fresh network namespace can contain a reject/unreachable ::/0 sentinel whose semantics are to discard traffic and return an unreachable error.",
+    "classification_reason": "Both namespace-aware interface censuses reported only loopback and agreed. The driver then failed closed before qualify() executed because its raw IPv6-prefix test did not distinguish an unreachable route type from a forwarding route. The attempt therefore established neither a Linux scientific PASS nor a scientific mismatch.",
+    "trusted_calculation_started": false,
+    "fallback_connected_execution_used": false
+  },
+  "github": {
+    "pull_request": 2,
+    "pull_request_url": "https://github.com/bosticry90/ToE/pull/2",
+    "workflow_run_id": 34008583231,
+    "workflow_run_url": "https://github.com/bosticry90/ToE/actions/runs/34008583231",
+    "job_id": 101420210496,
+    "job_url": "https://github.com/bosticry90/ToE/actions/runs/34008583231/job/101420210496",
+    "source_commit": "536ef5ba2d25fdac798ac475e5371582ff6c8688",
+    "pull_request_merge_commit": "11864088b4d27fce59a01de0e784e2b7d589c1d3",
+    "started_at_utc": "2026-09-06T03:16:34Z",
+    "completed_at_utc": "2026-09-06T03:29:29Z"
+  },
+  "frozen_reference": {
+    "bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204",
+    "modified": false
+  },
+  "provisioning": {
+    "completed": true,
+    "captured_at_utc": "2026-09-06T03:29:26.660391Z",
+    "manifest_hash": "3443faeb078b4aa53ef2a4c76550c8ad893002574d544b6475f70d3b64449366",
+    "manifest_sha256": "c7f2f253b662981e1bc2a655fc5a4deb2741540bc4c08511a46be6c2c2bb4035"
+  },
+  "preserved_artifact": {
+    "github_artifact_id": 9981899413,
+    "github_artifact_name": "verified-calculator-linux-egress-denied-v2-11864088b4d27fce59a01de0e784e2b7d589c1d3",
+    "github_artifact_size_bytes": 13154,
+    "archive_sha256": "1d92f43e723bca348ed7a38e2e2fd5a2953cb51ff2015eeccc88a82c151618b4",
+    "local_explicit_preservation_path": "formal/output/verified_calculator_linux_egress_denied_run_34008583231/artifact.zip",
+    "files": {
+      "attempt.json": "aca79b483db81271614214c17177aea366b804cc8c78283d8dd2bdb69db5e423",
+      "execution.stderr.log": "5ff047142a014752ba57fcf2153be86dcb13e3e394f3a40558553d41c572f8c5",
+      "execution_exit_code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "failure.json": "778d3eac4ace9ef635669845f86cee4005d3c3d2857e741983acb96f71d5b98d",
+      "provisioning.json": "c7f2f253b662981e1bc2a655fc5a4deb2741540bc4c08511a46be6c2c2bb4035",
+      "result.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "workflow_disposition.json": "4ebe79f860e635c83caf00d4616ad4ba6cfcce3a66d94026c8867037680d527d"
+    }
+  },
+  "repair_lineage": {
+    "required": true,
+    "next_test_id": "C03_RV_EXACT_LINUX_KERNEL_EGRESS_DENIED_REPRODUCTION_v3",
+    "repair_scope": "Persist pre-assertion network evidence and classify kernel routes by route type through local iproute2 JSON. Reject every usable forwarding default route; permit only explicitly non-forwarding unreachable, blackhole, prohibit, or throw sentinels, while retaining loopback-only interface gates and active failed egress probes.",
+    "reference_packet_repair_required": false
+  },
+  "result_record_hash": "a3ee7fc37faa13ae545b0d929832d8154333de9953d8a1d5d2e1bad68397b61f",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

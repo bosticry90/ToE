@@ -1,0 +1,57 @@
+{
+  "schema_id": "RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_RESULT_REVIEW_20260725_v0",
+  "verdict": "RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_PASS_ACCEPTED",
+  "reviewed_result": {
+    "path": "formal/docs/release/RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_RESULT_20260725_v0.json",
+    "sha256": "8c3688d6045f7f1df4a92edf22b851fc5914e6fd9e779ae671a287f2929fc2e4",
+    "commit": "ff3252b1c3bb7ef5437e01569ddff857cf8e8b05",
+    "tree": "2611ce5402276f8352fd23333d445cf610d6eb45"
+  },
+  "independent_review": {
+    "checkout": "C:/toe-lean-review-v0",
+    "checkout_commit": "ff3252b1c3bb7ef5437e01569ddff857cf8e8b05",
+    "checkout_tree": "2611ce5402276f8352fd23333d445cf610d6eb45",
+    "recomputation": {
+      "path": ".toe-recovery/custody-v0/recovery-lineage-lean-v0/independent_review_recomputation_v0.json",
+      "sha256": "e87c25c2a2a57ede9eaa7b7f86c60a9dd1f51ea166875c02fcb06adfe6bfdb3b",
+      "size_bytes": 2162,
+      "checks": "18 / 18 PASS"
+    },
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "toolchain_retrieval": "COMPLETE",
+    "dependency_retrieval": "COMPLETE",
+    "complete_frozen_graph_jobs": 8874,
+    "complete_graph_execution": "PASS",
+    "committed_modules_expected": 1127,
+    "committed_modules_compiled": 1127,
+    "missing_committed_modules": 0,
+    "ToeFormal_build": "PASS",
+    "ToeFormalAll_aggregate": "PASS",
+    "declared_axioms": 59,
+    "declared_axiom_files": 14,
+    "unexpected_sorry_or_admit": 0,
+    "post_build_harness": "13 / 13 PASS",
+    "validation_mutations": 0,
+    "dirty_main_byte_preserved": true
+  },
+  "accepted_boundary": {
+    "recovery_lineage_lean": "CLEANLY_REPRODUCIBLE_UNDER_DECLARED_ASSUMPTIONS",
+    "axioms_discharged_by_this_gate": 0,
+    "physical_truth_established": false,
+    "current_control_plane": "GREEN",
+    "historical_debt": "ISOLATED_VISIBLE_AND_COMPLETE_WITH_RECORDED_FAILURES",
+    "dirty_main_terminal_dispositions": "NOT_YET_COMPLETE",
+    "integration_candidate": "NOT_YET_CONSTRUCTED",
+    "integration_candidate_lean": "NOT_YET_EXECUTED",
+    "recovery_control_plane_complete": false
+  },
+  "required_next_gate": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITIONS",
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_or_seam_rows": "0 / 12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

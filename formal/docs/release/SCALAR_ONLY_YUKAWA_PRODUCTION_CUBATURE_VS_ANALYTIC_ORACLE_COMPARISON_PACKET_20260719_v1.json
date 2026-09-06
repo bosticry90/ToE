@@ -1,0 +1,1763 @@
+{
+  "authority": {
+    "consumed_selector_verdict": "SELECTED_NARROW_PRODUCTION_COMPARISON_CONTRACT_REPAIR_PACKET_PREPARATION",
+    "frozen_selector_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+        "sha256": "c290298752ba076543146884ac107527707814510bb522ecc9d5203ba06c9da5"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.json",
+        "sha256": "122fe8d12036f73c43e100e38511998d6e1f23adc4b5e18a0d10a5b3d1bae1a2"
+      },
+      {
+        "relative_path": "formal/python/tools/post_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_scientific_response_selection_v0.py",
+        "sha256": "fc89fb19cc8fc00584afb075513cc9dd28d53ed874a1609e12ac22c0968b45ca"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_scientific_response_selection_v0.py",
+        "sha256": "7d3e34c46222f6ad9f3fb2a5d08ef2206d0c05f9106d836d8b066821e541c9a0"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketReviewScientificResponseSelectionV0.lean",
+        "sha256": "cf4b49ee62ca0bf27e29b93be760284756fd6371a3e99af237212a5c5b8da9da"
+      }
+    ],
+    "frozen_v0_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v0.md",
+        "sha256": "255208335825d75616f27cd76df09f7743092ffc2b8a766e484d041c89acea1c"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v0.json",
+        "sha256": "e8a3a610b60749386758c7b666cd20f3f80dd96fb3571a99250055fedb7062a7"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v0.py",
+        "sha256": "87313c439a7841af21828b26483a74daa00d25e4487c4c9765de7c58aed09193"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v0.py",
+        "sha256": "52558c1d185698800260f45e2401342763872da36bd9807621faf5242a65ef29"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketV0.lean",
+        "sha256": "67a5ae19cc0c300bd6d47546f14f073f514962147cd96cd010fb46b10acf11a8"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1.py",
+      "sha256": "0725d3d09b7e6c4f350c1b31a5ba87feec99ecbf951946d433ba9229cd23b6ec"
+    },
+    "human_packet": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v1.md",
+      "sha256": "42ab8162052180b58362cc5049cd7fe523aba82ee0859785b3d4f06c638f4e0f"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketV1.lean",
+      "sha256": "ec26f5f00621eed218c8825c31c4f67f20d3ce7ad91b730c2c0bfe3c8b85e3fc"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1.py",
+      "sha256": "3c6f1e837473a76aa9fe9831df6f1a7fb7b127cac0abd266d20c8da856a0dac6"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This V1 artifact prepares a comparison contract for independent review only. It computes no production or oracle energy, executes none of the 96 cells or eleven controls, adjudicates no cubature, changes no kernel, computes no torque, DFT, real-150 vector, Jacobian, SVD, or identifiability result, reruns no Stage A execution, and authorizes no Stage B activity.",
+  "classification_contract_v1": {
+    "evidence_scope_rules": {
+      "extension_claim": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION_ONLY",
+      "full_matrix_label": "MUST_SAY_HYBRID_96_CELL_COMPARISON_SCOPE",
+      "historical_claim": "ONLY_HISTORICAL_STAGE_A_YUKAWA_ROWS",
+      "newtonian_claim": "MIRROR_NEWTONIAN_COMPANION_ONLY",
+      "scope_omission": "BLOCKED_METRIC_OR_CLASSIFICATION_CONTRACT"
+    },
+    "favorable_rounding": "FORBIDDEN",
+    "post_result_change": "FORBIDDEN",
+    "preserved_predicates": {
+      "FIXED_ORDER_CUBATURE_INADEQUATE": "at least one required component-case fails at order48 and, over orders 24,32,40,48, errors either increase by >=5% once or have two q_n>=0.95",
+      "NEAR_CONTACT_OR_TRANSITION_REGIME_UNDERSAMPLED": "REGIME_DEPENDENT_PRODUCTION_FAILURE holds, every failing small-gap or transition case has q_40>=0.95 or q_48>=0.95, and at least one wide long-range case passes orders 32,40,48",
+      "PRODUCTION_COMPARISON_TIMEOUT": "the total, per-stage, per-case, or per-order work cap is exceeded or any required atomic comparison cell is missing",
+      "PRODUCTION_CUBATURE_VALIDATED_ON_TESTED_CASES": "both components pass accuracy_rule for every case at orders 32,40,48 and abs(P48-P40)<=1e-36+1e-6*abs(oracle)",
+      "PRODUCTION_FAILURE_NOT_LOCALIZED": "one or more component-cases fail accuracy but no other registered root-cause predicate is fully satisfied",
+      "REGIME_DEPENDENT_PRODUCTION_FAILURE": "the same component passes orders 32,40,48 in at least one frozen regime and fails all three orders in at least one other frozen regime"
+    },
+    "scientific_labels_exact": [
+      "FIXED_ORDER_CUBATURE_INADEQUATE",
+      "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED",
+      "NEAR_CONTACT_OR_TRANSITION_REGIME_UNDERSAMPLED",
+      "PRODUCTION_COMPARISON_TIMEOUT",
+      "PRODUCTION_CUBATURE_VALIDATED_ON_TESTED_CASES",
+      "PRODUCTION_FAILURE_NOT_LOCALIZED",
+      "REGIME_DEPENDENT_PRODUCTION_FAILURE",
+      "SLOW_BUT_CONVERGENT_AND_ECONOMICALLY_INFERIOR",
+      "YUKAWA_SPECIFIC_IMPLEMENTATION_DEFECT_INDICATED"
+    ],
+    "slow_convergence_fit": {
+      "already_accurate_case_runtime": "MEASURED_ORDER48_SECONDS",
+      "candidate_prerequisite": "FAILS_ACCURACY_AT_ORDER48_AND_ERRORS_POSITIVE_FINITE_STRICTLY_DECREASE_AT_16_24_32_40_48_AND_EVERY_Q_LT_0P95",
+      "economic_inferiority_rule": "ANY_PROJECTED_CASE_SECONDS_GT_60_OR_PROJECTED_TOTAL_SECONDS_GT_1200",
+      "error_fit_family": "OLS_NATURAL_LOG_ERROR_EQUALS_A_MINUS_P_NATURAL_LOG_ORDER",
+      "full_fit_orders": [
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "label_rule": "ALL_CANDIDATE_AND_FIT_STABILITY_RULES_PASS_AND_ECONOMIC_INFERIORITY_RULE_TRUE",
+      "maximum_admissible_extrapolated_order": 192,
+      "maximum_relative_exponent_difference": 0.2,
+      "minimum_r_squared_each_fit": 0.98,
+      "minimum_required_order_for_label": 49,
+      "near_threshold_behavior": "PRODUCTION_FAILURE_NOT_LOCALIZED_NO_FAVORABLE_ROUNDING",
+      "nonfinite_or_nonpositive_error_behavior": "FIT_INVALID_PRODUCTION_FAILURE_NOT_LOCALIZED",
+      "nonmonotone_error_behavior": "SLOW_LABEL_FORBIDDEN_EVALUATE_OTHER_FROZEN_LABELS",
+      "outside_extrapolation_behavior": "SLOW_LABEL_FORBIDDEN_PRODUCTION_FAILURE_NOT_LOCALIZED_UNLESS_ANOTHER_LABEL_HOLDS",
+      "per_case_projected_seconds_formula": "EXP(B_CASE+S_CASE*LOG(MAX_REQUIRED_COMPONENT_ORDER_FOR_CASE))",
+      "projected_total_seconds_formula": "SUM_OVER_8_CASES_OF_PER_CASE_PROJECTED_SECONDS_WITH_COMPONENTS_NOT_DOUBLE_COUNTED",
+      "required_order_formula": "CEIL(EXP((A_FULL-LOG(1E-36+1E-6*ABS(U_ORACLE)))/P_FULL))",
+      "required_positive_exponent_each_fit": true,
+      "runtime_fit_family": "PER_CASE_OLS_NATURAL_LOG_SECONDS_EQUALS_B_PLUS_S_NATURAL_LOG_ORDER",
+      "runtime_fit_minimum_r_squared": 0.95,
+      "runtime_fit_orders": [
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "runtime_fit_positive_exponent_required": true,
+      "runtime_fit_positive_finite_required": true,
+      "tail_fit_orders": [
+        24,
+        32,
+        40,
+        48
+      ],
+      "zero_error_behavior": "NOT_A_SLOW_FIT_CANDIDATE_ALREADY_ACCURATE_AT_THAT_ORDER"
+    },
+    "systematic_bias": {
+      "finite_and_oracle_floor_required": true,
+      "grouping": "SEPARATELY_PER_COMPONENT_NEVER_MIX_NEWTONIAN_AND_YUKAWA",
+      "historical_scope_limitation": "CANNOT_TRIGGER_FROM_THREE_LEGACY_CASES_ALONE_MINIMUM_IS_FOUR",
+      "label": "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED",
+      "location": "MEDIAN_OF_ALL_COMPONENT_GROUP_RATIO_ENTRIES",
+      "maximum_relative_spread": 0.005,
+      "minimum_absolute_median_bias": 0.001,
+      "minimum_qualifying_cases_per_component": 4,
+      "orders": [
+        32,
+        40,
+        48
+      ],
+      "qualifying_case_rule": "CASE_FAILS_ACCURACY_AT_ALL_THREE_FINAL_ORDERS",
+      "ratio_entry": "U_PRODUCTION/U_ORACLE",
+      "ratio_vector_order": "FROZEN_CASE_ORDER_THEN_32_40_48",
+      "relative_spread": "(MAX_RATIO-MIN_RATIO)/MAX(ABS(MEDIAN_RATIO),1E-300)",
+      "same_sign_required": true
+    },
+    "yukawa_mutation_fingerprint": {
+      "all_entries_finite_required": true,
+      "case_order": [
+        "LEGACY_STAGE_A_00_LARGE_X",
+        "LEGACY_STAGE_A_01_TRANSITION",
+        "LEGACY_STAGE_A_02_LONG_RANGE",
+        "SMALL_X_UNEQUAL_WIDE",
+        "MIXED_X_UNEQUAL",
+        "SMALL_GAP_LARGE_X",
+        "EXTREME_X_1000_UNEQUAL",
+        "LONG_RANGE_UNEQUAL_WIDE"
+      ],
+      "entry": "SIGNED_RATIO_MINUS_1",
+      "label": "YUKAWA_SPECIFIC_IMPLEMENTATION_DEFECT_INDICATED",
+      "maximum_entrywise_absolute_difference": 0.1,
+      "maximum_relative_l2_distance": 0.05,
+      "minimum_nonzero_sign_agreement_count": 23,
+      "newtonian_prerequisite": "NEWTONIAN_PASSES_ALL_8_CASES_AT_32_40_48",
+      "observed_component": "YUKAWA",
+      "order_within_case": [
+        32,
+        40,
+        48
+      ],
+      "reference_control": "C02_MISSING_A_Y_ONE_THIRD",
+      "reference_l2_norm_minimum": 0.001,
+      "relative_l2_distance": "NORM2(F_OBS-F_C02)/MAX(NORM2(F_C02),1E-300)",
+      "required_sign_comparison_count": 24,
+      "unmatched_behavior": "YUKAWA_SPECIFIC_LABEL_FORBIDDEN_EVALUATE_OTHER_FROZEN_LABELS",
+      "vector_length": 24,
+      "yukawa_prerequisite": "AT_LEAST_ONE_YUKAWA_CASE_FAILS_ALL_32_40_48"
+    }
+  },
+  "completion_and_precedence_contract": {
+    "completed_subset_classification": "FORBIDDEN",
+    "duplicate_cell_behavior": "BLOCKED_INCOMPLETE_RECORD_PRECEDENCE",
+    "exclusive_precedence": [
+      {
+        "condition": "CUSTODY_OR_ORACLE_HASH_OR_C00_PATH_IDENTITY_FAILURE",
+        "exclusive_outcome": "BLOCKED_PRODUCTION_PATH_IDENTITY_OR_CUSTODY",
+        "priority": 1
+      },
+      {
+        "condition": "ANY_TIMEOUT_WORK_CAP_MISSING_DUPLICATE_OR_NONFINITE_SCIENTIFIC_CELL",
+        "exclusive_outcome": "PRODUCTION_COMPARISON_TIMEOUT",
+        "priority": 2
+      },
+      {
+        "condition": "ANY_OF_C01_THROUGH_C10_FAILS",
+        "exclusive_outcome": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS",
+        "priority": 3
+      },
+      {
+        "condition": "ALL_PRECONDITIONS_PASS",
+        "exclusive_outcome": "EVALUATE_EXACT_NINE_SCIENTIFIC_LABELS",
+        "priority": 4
+      }
+    ],
+    "missing_or_nonfinite_cell_behavior": "PRODUCTION_COMPARISON_TIMEOUT",
+    "partial_atomic_cells": "CUSTODY_EVIDENCE_ONLY_NOT_SCIENTIFIC_EVIDENCE",
+    "required_mandatory_controls": 11,
+    "required_source_count_by_scope": {
+      "HISTORICAL_STAGE_A_YUKAWA": 18,
+      "MIRROR_NEWTONIAN_COMPANION": 48,
+      "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION": 30
+    },
+    "required_unique_scientific_cells": 96,
+    "scientific_classification_precondition": "EXACTLY_96_UNIQUE_COMPLETE_FINITE_SOURCE_VALID_CELLS_AND_ALL_11_CONTROLS_PASS_AND_ALL_CUSTODY_GATES_PASS",
+    "scientific_labels_on_priority_1_2_or_3": "FORBIDDEN_EMPTY_LIST_REQUIRED"
+  },
+  "final_attempt_boundary": {
+    "automatic_v2_authorized": false,
+    "new_foundational_review_block_requires_fresh_selector": true,
+    "v1_is_last_automatic_comparison_contract_repair": true
+  },
+  "frozen_v0_surfaces": {
+    "accepted_inputs": {
+      "analytic_oracle": "QUALIFIED_AND_ACCEPTED",
+      "oracle_maximum_relative_difference": "9.193531120982082907226642222031001562304493826767069136682815822591035E-15",
+      "production_cubature": "UNADJUDICATED",
+      "stage_a_order16_vs_order24_error": 0.4202776018628042,
+      "stage_a_production_vs_order24_error": 0.06867902041407599,
+      "stage_a_uniform_sphere_validation": "FAILED"
+    },
+    "accepted_review_gate_count": 33,
+    "comparison_domain": {
+      "case_count": 8,
+      "case_ids": [
+        "LEGACY_STAGE_A_00_LARGE_X",
+        "LEGACY_STAGE_A_01_TRANSITION",
+        "LEGACY_STAGE_A_02_LONG_RANGE",
+        "SMALL_X_UNEQUAL_WIDE",
+        "MIXED_X_UNEQUAL",
+        "SMALL_GAP_LARGE_X",
+        "EXTREME_X_1000_UNEQUAL",
+        "LONG_RANGE_UNEQUAL_WIDE"
+      ],
+      "component_count": 2,
+      "components": [
+        "NEWTONIAN",
+        "YUKAWA"
+      ],
+      "orders": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48
+      ],
+      "post_result_case_or_order_change": "FORBIDDEN",
+      "required_atomic_scientific_cells": 96,
+      "rows": [
+        {
+          "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+          "center_distance_m": 0.011,
+          "comparison_role": "EXACT_STAGE_A_FAILURE_REPLAY",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 10.0,
+          "lambda_m": 0.0001,
+          "radius_1_m": 0.005,
+          "radius_2_m": 0.005,
+          "roles": [
+            "FAILED_STAGE_A_CONFIGURATION",
+            "EQUAL_RADII",
+            "LARGE_X"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 0.001,
+          "x_1": 50.0,
+          "x_2": 50.0
+        },
+        {
+          "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+          "center_distance_m": 0.03,
+          "comparison_role": "EXACT_STAGE_A_FAILURE_REPLAY",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 4.0,
+          "lambda_m": 0.005,
+          "radius_1_m": 0.005,
+          "radius_2_m": 0.005,
+          "roles": [
+            "FAILED_STAGE_A_CONFIGURATION",
+            "EQUAL_RADII",
+            "X_NEAR_ONE",
+            "WIDE_SEPARATION"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 0.02,
+          "x_1": 1.0,
+          "x_2": 1.0
+        },
+        {
+          "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+          "center_distance_m": 0.08,
+          "comparison_role": "EXACT_STAGE_A_FAILURE_REPLAY",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 0.7,
+          "lambda_m": 0.1,
+          "radius_1_m": 0.005,
+          "radius_2_m": 0.005,
+          "roles": [
+            "FAILED_STAGE_A_CONFIGURATION",
+            "EQUAL_RADII",
+            "SMALL_X",
+            "WIDE_SEPARATION"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 0.07,
+          "x_1": 0.05,
+          "x_2": 0.05
+        },
+        {
+          "case_id": "SMALL_X_UNEQUAL_WIDE",
+          "center_distance_m": 0.024,
+          "comparison_role": "QUALIFIED_ORACLE_STRATUM",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 0.02,
+          "lambda_m": 1.0,
+          "radius_1_m": 0.001,
+          "radius_2_m": 0.003,
+          "roles": [
+            "UNEQUAL_RADII",
+            "SMALL_X",
+            "POINT_PARTICLE_LIMIT",
+            "WIDE_SEPARATION"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 0.02,
+          "x_1": 0.001,
+          "x_2": 0.003
+        },
+        {
+          "case_id": "MIXED_X_UNEQUAL",
+          "center_distance_m": 0.012,
+          "comparison_role": "QUALIFIED_ORACLE_STRATUM",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 0.5,
+          "lambda_m": 0.004,
+          "radius_1_m": 0.002,
+          "radius_2_m": 0.008,
+          "roles": [
+            "UNEQUAL_RADII",
+            "MIXED_X",
+            "TRANSITION_DOMAIN"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 0.002,
+          "x_1": 0.5,
+          "x_2": 2.0
+        },
+        {
+          "case_id": "SMALL_GAP_LARGE_X",
+          "center_distance_m": 0.01001,
+          "comparison_role": "QUALIFIED_ORACLE_STRATUM",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 1.0,
+          "lambda_m": 1e-05,
+          "radius_1_m": 0.005,
+          "radius_2_m": 0.005,
+          "roles": [
+            "EQUAL_RADII",
+            "SMALL_POSITIVE_GAP",
+            "LARGE_X"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 1e-05,
+          "x_1": 500.0,
+          "x_2": 500.0
+        },
+        {
+          "case_id": "EXTREME_X_1000_UNEQUAL",
+          "center_distance_m": 0.0075049999999999995,
+          "comparison_role": "QUALIFIED_ORACLE_STRATUM",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 1.0,
+          "lambda_m": 5e-06,
+          "radius_1_m": 0.005,
+          "radius_2_m": 0.0025,
+          "roles": [
+            "UNEQUAL_RADII",
+            "SMALL_POSITIVE_GAP",
+            "X_MAX_1000"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 5e-06,
+          "x_1": 1000.0,
+          "x_2": 500.0
+        },
+        {
+          "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+          "center_distance_m": 0.060000000000000005,
+          "comparison_role": "QUALIFIED_ORACLE_STRATUM",
+          "density_1_kg_m3": 19250.0,
+          "density_2_kg_m3": 19250.0,
+          "g_over_lambda": 0.1,
+          "lambda_m": 0.5,
+          "radius_1_m": 0.002,
+          "radius_2_m": 0.008,
+          "roles": [
+            "UNEQUAL_RADII",
+            "SMALL_X",
+            "LONG_RANGE",
+            "WIDE_SEPARATION"
+          ],
+          "strictly_nonoverlapping": true,
+          "surface_gap_m": 0.05,
+          "x_1": 0.004,
+          "x_2": 0.016
+        }
+      ]
+    },
+    "metric_contract": {
+      "absolute_error_J": "abs(U_production_n-U_oracle)",
+      "accuracy_absolute_tolerance_J": 1e-36,
+      "accuracy_is_component_case_and_order_specific": true,
+      "accuracy_relative_tolerance": 1e-06,
+      "accuracy_rule": "absolute_error_J<=1e-36+1e-6*abs(U_oracle)",
+      "combined_energy_may_decide_component_accuracy": false,
+      "convergence_ratio": "q_n=epsilon_n/epsilon_previous_when_epsilon_previous_gt_0",
+      "oracle_floor_J": 1e-36,
+      "order_48_is_never_a_reference": true,
+      "relative_error": "abs(U_production_n-U_oracle)/max(abs(U_oracle),U_floor_J)",
+      "signed_ratio": "U_production_n/U_oracle_when_abs_U_oracle_gt_U_floor_J"
+    },
+    "oracle_path_identity": {
+      "energy_function": "_uy_stable_float",
+      "module": "scalar_only_yukawa_analytic_sphere_oracle_qualification_execution_v0.py",
+      "oracle_values_read_only": true,
+      "production_import_into_oracle": "FORBIDDEN",
+      "radial_function": "_radial_h"
+    },
+    "resource_and_custody_contract": {
+      "budget_exhaustion_behavior": "FAIL_CLOSED_PRODUCTION_COMPARISON_TIMEOUT",
+      "maximum_memory_mib": 4096,
+      "maximum_total_wall_clock_seconds": 1200,
+      "per_case_order_component_atomic_records": "REQUIRED",
+      "per_order_cell_caps_seconds": {
+        "16": 5,
+        "24": 10,
+        "32": 20,
+        "40": 40,
+        "48": 60,
+        "8": 2
+      },
+      "process_group_termination": "MANDATORY",
+      "raw_launcher_transcript": "PRESERVED",
+      "result_dependent_budget_change": "FORBIDDEN",
+      "stage_caps": [
+        {
+          "cap_seconds": 20,
+          "stage_id": "P1_CUSTODY_AND_STATIC_IDENTITY"
+        },
+        {
+          "cap_seconds": 120,
+          "stage_id": "P2_TEN_PRODUCTION_PATH_CONTROLS"
+        },
+        {
+          "cap_seconds": 300,
+          "stage_id": "P3_ORDERS_8_16_24"
+        },
+        {
+          "cap_seconds": 600,
+          "stage_id": "P4_ORDERS_32_40_48"
+        },
+        {
+          "cap_seconds": 60,
+          "stage_id": "P5_METRICS_AND_CLASSIFICATION"
+        },
+        {
+          "cap_seconds": 20,
+          "stage_id": "P6_ATOMIC_SERIALIZATION_AND_FIREWALL"
+        }
+      ],
+      "sum_of_stage_caps_seconds": 1120,
+      "timeout_and_child_termination_timestamps": "REQUIRED",
+      "zero_surviving_processes": "REQUIRED"
+    },
+    "scientific_label_set": [
+      "FIXED_ORDER_CUBATURE_INADEQUATE",
+      "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED",
+      "NEAR_CONTACT_OR_TRANSITION_REGIME_UNDERSAMPLED",
+      "PRODUCTION_COMPARISON_TIMEOUT",
+      "PRODUCTION_CUBATURE_VALIDATED_ON_TESTED_CASES",
+      "PRODUCTION_FAILURE_NOT_LOCALIZED",
+      "REGIME_DEPENDENT_PRODUCTION_FAILURE",
+      "SLOW_BUT_CONVERGENT_AND_ECONOMICALLY_INFERIOR",
+      "YUKAWA_SPECIFIC_IMPLEMENTATION_DEFECT_INDICATED"
+    ],
+    "semantic_change": "FORBIDDEN",
+    "ten_mutation_control_ids": [
+      "C01_POINT_EQUIVALENT_NEWTONIAN",
+      "C02_MISSING_A_Y_ONE_THIRD",
+      "C03_GAP_FOR_CENTER_DISTANCE",
+      "C04_RADIUS_AS_DIAMETER",
+      "C05_ONE_DIMENSION_UNREFINED",
+      "C06_WEIGHT_NORMALIZATION_BIAS",
+      "C07_COMPONENT_CHANNEL_SWAP",
+      "C08_ORDER_METADATA_OVERCLAIM",
+      "C09_ORACLE_OVERWRITE",
+      "C10_CONSTANT_MULTIPLICATIVE_BIAS"
+    ]
+  },
+  "historical_path_equivalence_contract": {
+    "absolute_tolerance_J": 1e-36,
+    "acceptance_rule": "ABS(H-M)<=1E-36+5E-14*MAX(ABS(H),ABS(M))_FOR_ALL_NINE_PAIRS",
+    "case_ids": [
+      "LEGACY_STAGE_A_00_LARGE_X",
+      "LEGACY_STAGE_A_01_TRANSITION",
+      "LEGACY_STAGE_A_02_LONG_RANGE"
+    ],
+    "components": [
+      "YUKAWA"
+    ],
+    "control_id": "C00_HISTORICAL_MIRROR_EQUIVALENCE",
+    "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER;_HISTORICAL_FIRST_THEN_MIRROR_ORDINARY",
+    "failure_consequence": "BLOCKED_PRODUCTION_PATH_IDENTITY_AND_STOP_BEFORE_MUTATIONS_OR_96_CELLS",
+    "historical_function": "reduced_four_dimensional_density_integral_yukawa_energy",
+    "injection_point": "NONE",
+    "kind": "MANDATORY_PATH_IDENTITY_PREFLIGHT_NOT_ONE_OF_TEN_MUTATIONS",
+    "mirror_function": "_fixed_density_integral(summation='ORDINARY')",
+    "orders": [
+      8,
+      16,
+      24
+    ],
+    "relative_tolerance": 5e-14,
+    "required_detection": "EXACT_HISTORICAL_TO_MIRROR_ORDINARY_EQUIVALENCE"
+  },
+  "mandatory_control_contract": {
+    "all_use_live_record_metric_classifier_or_firewall_path": true,
+    "any_failure_suppresses_scientific_classification": true,
+    "control_records_are_not_part_of_96_scientific_cells": true,
+    "frozen_mutation_control_count": 10,
+    "path_identity_preflight_count": 1,
+    "rows": [
+      {
+        "absolute_tolerance_J": 1e-36,
+        "acceptance_rule": "ABS(H-M)<=1E-36+5E-14*MAX(ABS(H),ABS(M))_FOR_ALL_NINE_PAIRS",
+        "case_ids": [
+          "LEGACY_STAGE_A_00_LARGE_X",
+          "LEGACY_STAGE_A_01_TRANSITION",
+          "LEGACY_STAGE_A_02_LONG_RANGE"
+        ],
+        "components": [
+          "YUKAWA"
+        ],
+        "control_id": "C00_HISTORICAL_MIRROR_EQUIVALENCE",
+        "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER;_HISTORICAL_FIRST_THEN_MIRROR_ORDINARY",
+        "failure_consequence": "BLOCKED_PRODUCTION_PATH_IDENTITY_AND_STOP_BEFORE_MUTATIONS_OR_96_CELLS",
+        "historical_function": "reduced_four_dimensional_density_integral_yukawa_energy",
+        "injection_point": "NONE",
+        "kind": "MANDATORY_PATH_IDENTITY_PREFLIGHT_NOT_ONE_OF_TEN_MUTATIONS",
+        "mirror_function": "_fixed_density_integral(summation='ORDINARY')",
+        "orders": [
+          8,
+          16,
+          24
+        ],
+        "relative_tolerance": 5e-14,
+        "required_detection": "EXACT_HISTORICAL_TO_MIRROR_ORDINARY_EQUIVALENCE"
+      },
+      {
+        "acceptance_rule": "ALL_THREE_RECORDS_PASS_FROZEN_ACCURACY_RULE",
+        "case_ids": [
+          "SMALL_X_UNEQUAL_WIDE"
+        ],
+        "components": [
+          "NEWTONIAN"
+        ],
+        "control_id": "C01_POINT_EQUIVALENT_NEWTONIAN",
+        "execution_order": "ASCENDING_ORDER",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "NONE_MIRROR_NEWTONIAN_COMPANION_PATH",
+        "kind": "FROZEN_V0_CONTROL",
+        "orders": [
+          32,
+          40,
+          48
+        ],
+        "required_detection": "POINT_EQUIVALENT_NEWTONIAN_ACCURACY"
+      },
+      {
+        "absolute_tolerance": 1e-12,
+        "acceptance_rule": "ALL_24_MUTATED_TO_UNMUTATED_RATIOS_EQUAL_3_WITH_ABS_REL_TOL_1E-12_AND_FINGERPRINT_LENGTH_24",
+        "case_ids": [
+          "LEGACY_STAGE_A_00_LARGE_X",
+          "LEGACY_STAGE_A_01_TRANSITION",
+          "LEGACY_STAGE_A_02_LONG_RANGE",
+          "SMALL_X_UNEQUAL_WIDE",
+          "MIXED_X_UNEQUAL",
+          "SMALL_GAP_LARGE_X",
+          "EXTREME_X_1000_UNEQUAL",
+          "LONG_RANGE_UNEQUAL_WIDE"
+        ],
+        "components": [
+          "YUKAWA"
+        ],
+        "control_id": "C02_MISSING_A_Y_ONE_THIRD",
+        "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "SET_A_Y_FROM_1_OVER_3_TO_1_IMMEDIATELY_AFTER_RAW_YUKAWA_DENSITY_INTEGRAL",
+        "kind": "FROZEN_V0_CONTROL",
+        "orders": [
+          32,
+          40,
+          48
+        ],
+        "relative_tolerance": 1e-12,
+        "required_detection": "YUKAWA_SPECIFIC_IMPLEMENTATION_DEFECT_INDICATED_ON_CONTROL_FIXTURE"
+      },
+      {
+        "acceptance_rule": "EVERY_MUTATED_RECORD_DIFFERS_FROM_UNMUTATED_BY_RELATIVE_AT_LEAST_1E-3",
+        "case_ids": [
+          "LEGACY_STAGE_A_01_TRANSITION",
+          "SMALL_GAP_LARGE_X"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C03_GAP_FOR_CENTER_DISTANCE",
+        "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER_THEN_COMPONENT_ORDER",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "REPLACE_D_WITH_G_AT_KERNEL_DENOMINATOR_AND_EXPONENTIAL_ARGUMENT",
+        "kind": "FROZEN_V0_CONTROL",
+        "minimum_relative_change": 0.001,
+        "orders": [
+          24,
+          48
+        ],
+        "required_detection": "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED_ON_CONTROL_FIXTURE"
+      },
+      {
+        "acceptance_rule": "STRICT_NONOVERLAP_RECHECK_PASSES_AND_EVERY_MUTATED_RECORD_CHANGES_BY_RELATIVE_AT_LEAST_0P1",
+        "case_ids": [
+          "LEGACY_STAGE_A_02_LONG_RANGE",
+          "SMALL_X_UNEQUAL_WIDE"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C04_RADIUS_AS_DIAMETER",
+        "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER_THEN_COMPONENT_ORDER",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "REPLACE_EACH_RADIUS_R_WITH_2R_BEFORE_NODE_AND_VOLUME_WEIGHT_CONSTRUCTION",
+        "kind": "FROZEN_V0_CONTROL",
+        "minimum_relative_change": 0.1,
+        "orders": [
+          16,
+          32
+        ],
+        "required_detection": "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED_ON_CONTROL_FIXTURE"
+      },
+      {
+        "acceptance_rule": "EXECUTED_DIMENSION_VECTOR_EQUALS_[N,N,N,8]_AND_CLASSIFIER_EMITS_FIXED_ORDER_CUBATURE_INADEQUATE",
+        "case_ids": [
+          "LEGACY_STAGE_A_00_LARGE_X",
+          "SMALL_GAP_LARGE_X"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C05_ONE_DIMENSION_UNREFINED",
+        "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER_THEN_COMPONENT_ORDER",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "SET_MU2_ORDER_TO_8_WHILE_R1_MU1_R2_USE_RECORDED_ORDER",
+        "kind": "FROZEN_V0_CONTROL",
+        "metadata_tolerance": "EXACT",
+        "orders": [
+          24,
+          32,
+          40,
+          48
+        ],
+        "required_detection": "FIXED_ORDER_CUBATURE_INADEQUATE_ON_CONTROL_FIXTURE"
+      },
+      {
+        "absolute_tolerance": 1e-12,
+        "acceptance_rule": "ALL_24_MUTATED_TO_UNMUTATED_RATIOS_EQUAL_1P01_WITH_ABS_REL_TOL_1E-12_AND_BOTH_COMPONENT_GROUPS_TRIGGER_SYSTEMATIC_BIAS",
+        "case_ids": [
+          "LEGACY_STAGE_A_00_LARGE_X",
+          "LEGACY_STAGE_A_01_TRANSITION",
+          "LEGACY_STAGE_A_02_LONG_RANGE",
+          "SMALL_X_UNEQUAL_WIDE"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C06_WEIGHT_NORMALIZATION_BIAS",
+        "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER_THEN_COMPONENT_ORDER",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "MULTIPLY_ACCUMULATED_QUADRATURE_WEIGHT_PRODUCT_BY_1P01_BEFORE_G_AND_A_Y",
+        "kind": "FROZEN_V0_CONTROL",
+        "orders": [
+          32,
+          40,
+          48
+        ],
+        "relative_tolerance": 1e-12,
+        "required_detection": "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED_ON_CONTROL_FIXTURE"
+      },
+      {
+        "acceptance_rule": "COMPONENT_SOURCE_AND_ORACLE_COMPONENT_HASH_MISMATCH_REJECTS_RECORD_BEFORE_METRICS",
+        "case_ids": [
+          "LEGACY_STAGE_A_01_TRANSITION"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C07_COMPONENT_CHANNEL_SWAP",
+        "execution_order": "NEWTONIAN_THEN_YUKAWA",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "SWAP_COMPONENT_IDS_AT_ATOMIC_RECORD_SERIALIZATION",
+        "kind": "FROZEN_V0_CONTROL",
+        "orders": [
+          16
+        ],
+        "required_detection": "CHANNEL_IDENTITY_FIREWALL",
+        "tolerance": "EXACT_HASH_AND_ENUM_IDENTITY"
+      },
+      {
+        "acceptance_rule": "EXECUTED_NODE_COUNT_AND_RULE_HASH_MISMATCH_REJECTS_RECORD_BEFORE_COMMIT",
+        "case_ids": [
+          "LEGACY_STAGE_A_01_TRANSITION"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C08_ORDER_METADATA_OVERCLAIM",
+        "execution_order": "NEWTONIAN_THEN_YUKAWA",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "WRITE_RECORDED_ORDER_48_AFTER_EXECUTING_ORDER_40",
+        "kind": "FROZEN_V0_CONTROL",
+        "orders": [
+          40
+        ],
+        "required_detection": "ORDER_CUSTODY_FIREWALL",
+        "tolerance": "EXACT_INTEGER_AND_SHA256_IDENTITY"
+      },
+      {
+        "acceptance_rule": "PRE_AND_POST_ORACLE_ARTIFACT_AND_VALUE_HASH_MISMATCH_REJECTS_WRITE_AND_RECORD",
+        "case_ids": [
+          "LEGACY_STAGE_A_01_TRANSITION"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C09_ORACLE_OVERWRITE",
+        "execution_order": "NEWTONIAN_THEN_YUKAWA",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "ATTEMPT_TO_WRITE_PRODUCTION_VALUE_INTO_READ_ONLY_ORACLE_FIELD_AT_SERIALIZATION",
+        "kind": "FROZEN_V0_CONTROL",
+        "orders": [
+          16
+        ],
+        "required_detection": "ORACLE_IMMUTABILITY_FIREWALL",
+        "tolerance": "EXACT_SHA256_IDENTITY"
+      },
+      {
+        "absolute_tolerance": 1e-12,
+        "acceptance_rule": "ALL_24_MUTATED_TO_UNMUTATED_RATIOS_EQUAL_1P02_WITH_ABS_REL_TOL_1E-12_AND_BOTH_COMPONENT_GROUPS_TRIGGER_SYSTEMATIC_BIAS",
+        "case_ids": [
+          "LEGACY_STAGE_A_00_LARGE_X",
+          "LEGACY_STAGE_A_01_TRANSITION",
+          "LEGACY_STAGE_A_02_LONG_RANGE",
+          "SMALL_X_UNEQUAL_WIDE"
+        ],
+        "components": [
+          "NEWTONIAN",
+          "YUKAWA"
+        ],
+        "control_id": "C10_CONSTANT_MULTIPLICATIVE_BIAS",
+        "execution_order": "CASE_ORDER_AS_LISTED_THEN_ASCENDING_ORDER_THEN_COMPONENT_ORDER",
+        "failure_consequence": "BLOCKED_PRODUCTION_COMPARISON_CONTROLS_AND_SUPPRESS_ALL_SCIENTIFIC_LABELS",
+        "injection_point": "MULTIPLY_PRODUCTION_COMPONENT_BY_1P02_AFTER_INTEGRATION_BEFORE_METRICS",
+        "kind": "FROZEN_V0_CONTROL",
+        "orders": [
+          32,
+          40,
+          48
+        ],
+        "relative_tolerance": 1e-12,
+        "required_detection": "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED_ON_CONTROL_FIXTURE"
+      }
+    ],
+    "total_mandatory_control_count": 11
+  },
+  "packet_gates": {
+    "failure_count": 0,
+    "gate_count": 46,
+    "pass_count": 46,
+    "rows": [
+      {
+        "gate_id": "SELECTOR_AUTHORITY_HASHES_MATCH",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V0_PACKET_HASHES_MATCH",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_THIRTY_THREE_ACCEPTED_REVIEW_GATES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_SEVEN_FAILED_REVIEW_GATES_REPAIRED_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EIGHT_CASES_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SIX_ORDERS_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TWO_COMPONENTS_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NINETY_SIX_SCIENTIFIC_CELLS_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ORACLE_CUSTODY_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BASE_METRICS_AND_ACCURACY_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RESOURCE_ENVELOPE_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "HISTORICAL_YUKAWA_FUNCTION_DIRECT_FOR_EIGHTEEN_CELLS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NEWTONIAN_COMPANION_SCOPE_EXPLICIT_FOR_FORTY_EIGHT_CELLS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MIRROR_YUKAWA_EXTENSION_SCOPE_EXPLICIT_FOR_THIRTY_CELLS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_SOURCE_MAP_FOR_ALL_NINETY_SIX_CELLS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "LEGACY_EQUIVALENCE_CASES_ORDERS_AND_SEQUENCE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "LEGACY_EQUIVALENCE_TOLERANCE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "LEGACY_EQUIVALENCE_FAILURE_STOPS_BEFORE_SCIENCE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MIRROR_ONLY_RESULTS_CANNOT_SUPPORT_HISTORICAL_CLAIMS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SLOW_ERROR_FIT_FAMILY_AND_ORDER_SUBSETS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SLOW_FIT_NONMONOTONE_AND_ZERO_HANDLING_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SLOW_FIT_STABILITY_THRESHOLDS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RUNTIME_FIT_AND_REQUIRED_ORDER_FORMULAE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ECONOMIC_INFERIORITY_THRESHOLD_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYSTEMATIC_BIAS_GROUPING_PER_COMPONENT_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYSTEMATIC_BIAS_RATIO_VECTOR_AND_SPREAD_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "YUKAWA_FINGERPRINT_VECTOR_ORDER_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "YUKAWA_FINGERPRINT_DISTANCE_AND_TOLERANCE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEN_V0_MUTATION_CONTROLS_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ONE_MANDATORY_PATH_IDENTITY_PREFLIGHT_ADDED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_ELEVEN_CONTROL_CASE_ROUTES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_ELEVEN_CONTROL_ORDER_ROUTES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_ELEVEN_INJECTION_POINTS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_ELEVEN_ACCEPTANCE_RULES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_ELEVEN_FAILURE_CONSEQUENCES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FULL_NINETY_SIX_CELL_COMPLETENESS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_MANDATORY_CONTROLS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ADMINISTRATIVE_OUTCOME_PRECEDENCE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PARTIAL_CELLS_CANNOT_SUPPORT_SCIENTIFIC_LABELS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_NINE_SCIENTIFIC_LABELS_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PACKET_EXECUTION_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_KERNEL_REPAIR_OR_REPLACEMENT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_TORQUE_DFT_VECTOR_OR_IDENTIFIABILITY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_STAGE_A_RERUN_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "INDEPENDENT_V1_PACKET_REVIEW_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "AUTOMATIC_V2_PROHIBITED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v1",
+  "packet_review_outcomes": [
+    "PRODUCTION_COMPARISON_CONTRACT_READY",
+    "BLOCKED_PRODUCTION_PATH_IDENTITY",
+    "BLOCKED_METRIC_OR_CLASSIFICATION_CONTRACT",
+    "BLOCKED_MUTATION_ROUTING",
+    "BLOCKED_INCOMPLETE_RECORD_PRECEDENCE"
+  ],
+  "production_source_and_attribution_contract": {
+    "every_scientific_label_must_serialize_evidence_scope": true,
+    "execution_order": "CASE_ORDER_AS_FROZEN_THEN_ASCENDING_ORDER_THEN_NEWTONIAN_BEFORE_YUKAWA",
+    "full_matrix_claim": "HYBRID_CONTRACT_SCOPE_NOT_RETROACTIVE_STAGE_A_OUTPUT",
+    "historical_decision_bearing_case_ids": [
+      "LEGACY_STAGE_A_00_LARGE_X",
+      "LEGACY_STAGE_A_01_TRANSITION",
+      "LEGACY_STAGE_A_02_LONG_RANGE"
+    ],
+    "historical_decision_bearing_component": "YUKAWA_ONLY",
+    "historical_function_called_directly": true,
+    "mirror_default_summation": "PAIRWISE_NUMPY_BINARY64",
+    "mirror_extension_case_ids": [
+      "SMALL_X_UNEQUAL_WIDE",
+      "MIXED_X_UNEQUAL",
+      "SMALL_GAP_LARGE_X",
+      "EXTREME_X_1000_UNEQUAL",
+      "LONG_RANGE_UNEQUAL_WIDE"
+    ],
+    "newtonian_historical_claim": "FORBIDDEN_COMPANION_DIAGNOSTIC_ONLY",
+    "source_counts": {
+      "HISTORICAL_STAGE_A_YUKAWA": 18,
+      "MIRROR_NEWTONIAN_COMPANION": 48,
+      "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION": 30
+    },
+    "source_rows": [
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 8,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 16,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 24,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 32,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 40,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 48,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 8,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 16,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 24,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 32,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 40,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 48,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 8,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 16,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 24,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 32,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 40,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "component": "YUKAWA",
+        "evidence_scope": "HISTORICAL_STAGE_A_YUKAWA",
+        "order": 48,
+        "production_source": "EXACT_HISTORICAL_STAGE_A_YUKAWA_FUNCTION"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "MIXED_X_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "SMALL_GAP_LARGE_X",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 8,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 16,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 24,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 32,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 40,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "NEWTONIAN",
+        "evidence_scope": "MIRROR_NEWTONIAN_COMPANION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_NEWTONIAN"
+      },
+      {
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "component": "YUKAWA",
+        "evidence_scope": "PARAMETERIZED_MIRROR_YUKAWA_EXTENSION",
+        "order": 48,
+        "production_source": "PARAMETERIZED_MIRROR_PAIRWISE_YUKAWA"
+      }
+    ],
+    "unequal_radius_historical_claim": "FORBIDDEN"
+  },
+  "schema_id": "toe.scalar_only_yukawa.production_cubature_vs_analytic_oracle.comparison_packet.v1",
+  "scope": {
+    "automatic_v2_authorized": false,
+    "comparison_contract_accepted": false,
+    "comparison_execution_authorized": false,
+    "comparison_execution_performed": false,
+    "final_real_150_vector_authorized": false,
+    "independent_v1_packet_review_authorized": true,
+    "jacobian_or_identifiability_authorized": false,
+    "production_cubature_adjudicated": false,
+    "production_kernel_repair_authorized": false,
+    "production_kernel_replacement_authorized": false,
+    "scientific_comparison_cells_computed": false,
+    "selector_authority_verified": true,
+    "seven_failed_review_gates_repaired_in_contract": true,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "thirty_three_accepted_review_gates_frozen": true,
+    "torque_or_dft_authorized": false,
+    "v0_packet_hash_frozen": true,
+    "v1_packet_prepared": true,
+    "v1_packet_review_performed": false
+  },
+  "selected_next_target": "review_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1_result",
+  "selected_next_target_kind": "INDEPENDENT_PACKET_REVIEW_ONLY_NO_COMPARISON_EXECUTION",
+  "status": "PREPARED_PENDING_INDEPENDENT_REVIEW_NO_EXECUTION",
+  "target": "prepare_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1",
+  "v1_repair_scope": {
+    "all_other_review_gates": "FROZEN",
+    "automatic_v2": "PROHIBITED",
+    "repaired_review_gate_count": 7,
+    "repaired_review_gates": [
+      "R12_HISTORICAL_AND_MIRROR_ACCUMULATION_IDENTICAL",
+      "R13_HISTORICAL_AND_MIRROR_DECISION_SCOPE_SEPARATED",
+      "R14_LEGACY_EQUIVALENCE_RULE_EXECUTABLE",
+      "R24_SLOW_CONVERGENCE_FIT_AND_COST_RULE_EXECUTABLE",
+      "R25_SYSTEMATIC_BIAS_AND_FINGERPRINT_RULES_EXECUTABLE",
+      "R31_CONTROL_CASE_ORDER_AND_TOLERANCE_ROUTING",
+      "R36_INCOMPLETE_RECORDS_SUPPRESS_SCIENTIFIC_CLASSIFICATION"
+    ]
+  },
+  "verdict": "PREPARED_SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_V1"
+}

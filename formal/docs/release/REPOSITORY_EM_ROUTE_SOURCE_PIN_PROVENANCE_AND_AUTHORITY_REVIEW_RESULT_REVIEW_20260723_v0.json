@@ -1,0 +1,85 @@
+{
+  "schema_id": "REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_REVIEW_20260723_v0",
+  "captured_at_utc": "2026-07-23T03:44:04Z",
+  "review_basis": "INDEPENDENT_DETACHED_CHECKOUT_BYTE_IDENTITY_GIT_BLOB_AUTHORITY_LINEAGE_OCCURRENCE_CUSTODY_SCOPE_AND_NONMUTATION_REVIEW",
+  "review_checkout": {
+    "mode": "DETACHED_INDEPENDENT_WORKTREE",
+    "reviewed_commit": "caabb2b59a75e4d0a4f5682f5dea4c3f2bdc1c57",
+    "worktree_status": "CLEAN"
+  },
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_20260723_v0.json",
+    "sha256": "4b1a6683819eb22a98b4f6deb0e04df8036119b088662c3c696f489076353b55",
+    "claimed_terminal_outcome": "EM_SOURCE_PIN_REBINDING_JUSTIFIED"
+  },
+  "reviewed_external_ledger": {
+    "path": ".toe-recovery/custody-v0/em-route-source-pin-provenance-authority-review-v0/EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_LEDGER_20260723_v0.json",
+    "sha256": "eae43b9a5b0848326b19358e005525530a96d787a3cede8b351e2ebf44db9641",
+    "json_valid": true
+  },
+  "checks": {
+    "accepted_adjudication_base_and_authorization_commit_bound": true,
+    "result_hash_matches_pending_authority_binding": true,
+    "old_pin_exactly_recomputed_from_preserved_dirty_main": true,
+    "old_pin_bytes_are_92151_with_one_cr_at_offset_92149": true,
+    "lf_normalization_recomputes_0a977bd4_git_blob_sha256": true,
+    "route_capture_commit_and_frozen_v2_commit_share_blob_c255a820": true,
+    "source_content_unchanged_between_route_capture_and_frozen_v2": true,
+    "first_pin_appearance_recomputed_as_5d111960": true,
+    "authorization_commit_pin_paths_recomputed_as_12": true,
+    "authorization_commit_pin_occurrences_recomputed_as_17": true,
+    "v2_manifest_em_identity_matches_direct_git_cat_file_recomputation": true,
+    "v2_result_binding_matches_direct_git_cat_file_recomputation": true,
+    "accepted_nonhermetic_diagnosis_hash_and_verdict_match": true,
+    "accepted_hash_and_tracked_blob_identity_repair_hash_and_verdict_match": true,
+    "checkout_bytes_explicitly_nonauthoritative_in_accepted_repair": true,
+    "no_competing_untracked_ignored_patch_log_bundle_or_snapshot_authority_found": true,
+    "external_ledger_hash_matches_result_binding": true,
+    "terminal_outcome_is_one_of_four_permitted_values": true,
+    "provenance_verified_not_overclaimed": true,
+    "historical_noncurrent_not_overclaimed_for_current_em_planning_surface": true,
+    "base_to_result_diff_contains_exactly_five_release_governance_paths": true,
+    "test_tool_output_paper_formal_scientific_and_registry_content_changes_zero": true,
+    "dirty_main_preserved_at_7_tracked_plus_622_untracked": true,
+    "dirty_main_em_raw_sha256_unchanged": true,
+    "scientific_posture_preserved_b_blocked": true,
+    "v2_enrollment_and_scientific_resumption_not_authorized": true,
+    "automatic_successor_forbidden": true
+  },
+  "bookkeeping_correction_before_verdict": {
+    "initial_declared_occurrences": 18,
+    "independently_recomputed_occurrences": 17,
+    "corrected_result_commit": "caabb2b59a75e4d0a4f5682f5dea4c3f2bdc1c57",
+    "substantive_identity_or_authority_conclusion_changed": false,
+    "review_restarted_from_corrected_clean_commit": true
+  },
+  "accepted_terminal_outcome": "EM_SOURCE_PIN_REBINDING_JUSTIFIED",
+  "accepted_rebind_identity": {
+    "identity_type": "GIT_BLOB_SHA256",
+    "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+    "sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c"
+  },
+  "accepted_interpretation": {
+    "old_pin": "EXACTLY_RECOVERED_NONAUTHORITATIVE_MIXED_EOL_WORKING_TREE_SERIALIZATION",
+    "underlying_em_source": "CURRENT_BOUNDED_PLANNING_NONCLAIM",
+    "proper_identity": "ALREADY_ACCEPTED_FROZEN_GIT_BLOB_IDENTITY",
+    "scientific_authority_effect": "NONE",
+    "repair_effect": "NONE"
+  },
+  "boundary": {
+    "v0_or_v1_hash_modified": false,
+    "route_table_modified": false,
+    "consumer_test_modified": false,
+    "artifact_regenerated": false,
+    "route_map_accepted": false,
+    "first_unit_selected": false,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "scientific_execution_authorized": false,
+    "automatic_successor_authorized": false,
+    "fresh_selector_required_for_any_repair": true
+  },
+  "verdict": "ACCEPT_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+}

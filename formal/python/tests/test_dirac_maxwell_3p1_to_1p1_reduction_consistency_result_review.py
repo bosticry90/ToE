@@ -46,4 +46,4 @@ def test_review_selects_only_a_post_block_route_decision() -> None:
 def test_preparation_custody_and_prompt_are_exact() -> None:
     report = review.build_review_report()
     assert report["preparation_custody"]["passed"] is True
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

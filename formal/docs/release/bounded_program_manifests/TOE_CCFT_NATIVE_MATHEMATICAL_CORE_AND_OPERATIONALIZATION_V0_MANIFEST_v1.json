@@ -1,0 +1,564 @@
+{
+  "authorized_stage_count": 5,
+  "deep_review_selection_contract": {
+    "desired_physical_interpretation_may_not_affect_selection": true,
+    "desired_representation_or_action_may_not_affect_selection": true,
+    "overflow_population_and_unreviewed_counts_required": true,
+    "priority_order": [
+      "current canonical primary CCFT mathematical sources",
+      "archived primary CCFT lineage heads",
+      "earliest primary source for each CCFT mathematical lineage",
+      "sources containing unique explicit equations variables operators boundary data conservation laws numerical results or units",
+      "sources containing accepted negative results conflicts corrections or supersession",
+      "derived summaries only when the primary source is unavailable",
+      "deterministic stratified overflow sample by source class and lineage"
+    ],
+    "tie_breaking_rule": "normalized custody-relative path then verified content hash"
+  },
+  "installation_envelope": {
+    "commit_exact_path_set": [
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+      "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+      "formal/python/tests/test_toe_ccft_core_program_governance_installation.py",
+      "formal/python/tools/bounded_program_governance.py",
+      "formal/python/tools/toe_ccft_core_program_governance_installation.py",
+      "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+      "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+      "formal/toe_formal/ToeFormal/Release/ToeCCFTCoreProgramGovernanceInstallationV0.lean",
+      "formal/toe_formal/ToeFormalAll.lean"
+    ],
+    "installed_from_commit": "672c70550ccba03ab45be00f68a2de7dc01322a1"
+  },
+  "mandatory_exit": {
+    "target": "close_toe_ccft_native_mathematical_core_and_operationalization_v0_after_bounded_result_v0",
+    "terminal_outcomes": [
+      "MINIMAL_SOURCE_BOUND_CCFT_CORE_READY_FOR_VIABILITY_TEST",
+      "CCFT_CORE_READY_ONLY_AS_BOUNDED_SURROGATE",
+      "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE",
+      "CCFT_FORMULATIONS_CONFLICT",
+      "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+      "SOURCE_EVIDENCE_INSUFFICIENT"
+    ]
+  },
+  "manifest_hash": "a4ea23f9b98265e60ecff1df450d2dfb0ea7631fe1bd71ef73bc5e594f4b11f5",
+  "manifest_mode": "PROSPECTIVE_STATIC",
+  "mathematical_content_vocabulary": [
+    "EXPLICIT_CCFT_MATHEMATICS",
+    "PARTIAL_MATHEMATICAL_STRUCTURE",
+    "HEURISTIC_OR_ANALOGY",
+    "CONFLICTING_CCFT_FORMULATION",
+    "UNDEFINED_SYMBOL_OR_TERM",
+    "CONTROL_OR_KNOWN_PHYSICS_IMPORT"
+  ],
+  "native_hypothesis_tested": "HYP_TOE_CCFT_MINIMAL_NATIVE_MATHEMATICAL_CORE_OPERATIONALIZATION_v0",
+  "native_relevance": {
+    "kind": "DIRECT_NATIVE_TEST",
+    "statement": "Tests whether the broader source-bound CCFT evidence supplies a recoverable, operationalizable, minimal mathematical core before any field, action, seam, observable, or viability claim."
+  },
+  "no_subsidiary_scientific_targets": true,
+  "operationalization_questions": [
+    "what physical system possesses or instantiates the object",
+    "what its value and zero value mean",
+    "what units or dimensions it has",
+    "whether it is local relational statistical emergent or effective",
+    "what scale and domain it covers",
+    "how it can be prepared changed transported maintained or destroyed",
+    "how it differs from correlation phase coherence synchronization low entropy and ordinary order parameters",
+    "what operation measurement or inference channel responds to it",
+    "what result would falsify the adequacy of the interpretation"
+  ],
+  "passive_content_contract": {
+    "archived_code_import_execution_or_compilation": false,
+    "macros_or_embedded_objects_executed": false,
+    "metadata_only_documents": "CONTENT_NOT_EXTRACTED_METADATA_ONLY",
+    "network_retrieval_from_source_content": false,
+    "parser_failures_are_visible_not_irrelevant": true,
+    "parser_versions_and_resource_limits_must_be_frozen_at_installation": true,
+    "symlink_junction_reparse_or_path_escape_allowed": false,
+    "unsupported_formats": "UNSUPPORTED_FORMAT_PRESERVED"
+  },
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "program_terminal_outcomes": [
+    "MINIMAL_SOURCE_BOUND_CCFT_CORE_READY_FOR_VIABILITY_TEST",
+    "CCFT_CORE_READY_ONLY_AS_BOUNDED_SURROGATE",
+    "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE",
+    "CCFT_FORMULATIONS_CONFLICT",
+    "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+    "SOURCE_EVIDENCE_INSUFFICIENT"
+  ],
+  "repair_attempt_count": 0,
+  "result_state_mapping": {
+    "CCFT_CORE_READY_ONLY_AS_BOUNDED_SURROGATE": "PASS",
+    "CCFT_FORMULATIONS_CONFLICT": "BLOCKED",
+    "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE": "BLOCKED",
+    "DETERMINISTIC_ARTIFACT_GENERATION_FAILED": "FAILED",
+    "MINIMAL_SOURCE_BOUND_CCFT_CORE_READY_FOR_VIABILITY_TEST": "PASS",
+    "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED": "BLOCKED",
+    "SOURCE_EVIDENCE_INSUFFICIENT": "BLOCKED"
+  },
+  "schema_id": "toe.bounded_program.immutable_manifest.v1",
+  "source_scope_contract": {
+    "archive_bytes_remain_read_only": true,
+    "candidate_source_population": "Sources attached to CCFT_COHERENCE claims plus source-bound CCFT mathematical artifacts reached through established documentary edges; no unrestricted keyword expansion is permitted.",
+    "discovery_base": "The Stage 3 bounded claim inventory, Stage 2 documentary lineages, Stage 4 reconciliation graph, earlier controlled coherence evidence, and the Stage 1 custody index are the only discovery surfaces.",
+    "local_only_sources_remain_nonportable": true,
+    "repository_claim_exhaustion_may_be_claimed": false,
+    "scientific_adoption_from_discovery": false,
+    "unreviewed_overflow_must_be_reported": true
+  },
+  "stages": [
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0",
+          "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0",
+          "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0",
+          "TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0",
+          "CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0"
+        ],
+        "dependency_artifact_ids": [
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "normalized_scientific_question": "What explicit source-bound CCFT variables, equations, operators, domains, data, units, conservation relations, calculations, and missing definitions occur in the deterministically selected evidence?",
+        "prohibited_claims": [
+          "CCFT validation or empirical confirmation",
+          "coherence declared fundamental or physically real",
+          "real scalar or any other representation assumed in advance",
+          "CCFT action or evolution law construction outside a passed core decision",
+          "matter gravity or scale seam selection",
+          "observable or discriminator derivation",
+          "master action promotion or QFT-gravity closure",
+          "canonical evidence promotion",
+          "automatic successor authorization",
+          "scientific truth or authority from source presence",
+          "semantic merging from shared symbols or vocabulary",
+          "physical interpretation not explicit in the source",
+          "representation field action seam or observable selection"
+        ],
+        "required_outputs": [
+          "deterministically_selected_source_ledger_with_overflow",
+          "source_bound_mathematical_object_equation_operator_and_data_inventory",
+          "explicit_partial_heuristic_conflict_undefined_and_import_classification",
+          "units_boundary_conditions_conservation_numerical_and_negative_result_ledger"
+        ],
+        "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY",
+        "terminal_outcome_vocabulary": [
+          "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_COMPLETE",
+          "CCFT_MATHEMATICAL_INVENTORY_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+          "CCFT_MATHEMATICAL_SOURCE_EVIDENCE_INSUFFICIENT",
+          "CCFT_SOURCE_CONTENT_UNREADABLE_WITHIN_BUDGET"
+        ]
+      },
+      "canonical_scope_hash": "e348568927073147b6353de85f14a13c2e332f217677d8e7c16a0cc7cac0d53e",
+      "canonical_target": "inventory_toe_source_bound_ccft_mathematical_structures_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_COMPLETE",
+        "CCFT_MATHEMATICAL_INVENTORY_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+        "CCFT_MATHEMATICAL_SOURCE_EVIDENCE_INSUFFICIENT",
+        "CCFT_SOURCE_CONTENT_UNREADABLE_WITHIN_BUDGET"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTSourceBoundMathematicalInventoryResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_source_bound_mathematical_inventory_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTSourceBoundMathematicalInventoryAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY",
+      "stage_number": 1
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0",
+          "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0",
+          "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0",
+          "TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0",
+          "CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0"
+        ],
+        "dependency_artifact_ids": [
+          "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY"
+        ],
+        "normalized_scientific_question": "How do the inventoried CCFT mathematical formulations descend, revise, conflict, change symbol meaning, or remain unresolved?",
+        "prohibited_claims": [
+          "CCFT validation or empirical confirmation",
+          "coherence declared fundamental or physically real",
+          "real scalar or any other representation assumed in advance",
+          "CCFT action or evolution law construction outside a passed core decision",
+          "matter gravity or scale seam selection",
+          "observable or discriminator derivation",
+          "master action promotion or QFT-gravity closure",
+          "canonical evidence promotion",
+          "automatic successor authorization",
+          "scientific truth from documentary descent",
+          "silent harmonization of incompatible formulations",
+          "semantic equivalence from textual or symbolic similarity alone"
+        ],
+        "required_outputs": [
+          "mathematical_formulation_lineage_graph",
+          "primary_revision_summary_result_and_negative_result_edges",
+          "symbol_meaning_change_and_semantic_equivalence_ledger",
+          "supersession_conflict_parallel_branch_and_unresolved_relationship_ledger"
+        ],
+        "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+        "terminal_outcome_vocabulary": [
+          "CCFT_MATHEMATICAL_LINEAGES_RECONCILED",
+          "CCFT_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS",
+          "CCFT_FORMULATIONS_CONFLICT",
+          "CCFT_LINEAGE_PROVENANCE_INSUFFICIENT"
+        ]
+      },
+      "canonical_scope_hash": "f2b412494409a17fa3527481c43a993a99f5e56b863b60c427a2746535c37902",
+      "canonical_target": "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "CCFT_MATHEMATICAL_LINEAGES_RECONCILED",
+        "CCFT_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS",
+        "CCFT_FORMULATIONS_CONFLICT",
+        "CCFT_LINEAGE_PROVENANCE_INSUFFICIENT"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTMathematicalLineageAndConflictReconciliationResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_mathematical_lineage_and_conflict_reconciliation_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+      "stage_number": 2
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0",
+          "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0",
+          "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0",
+          "TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0",
+          "CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0"
+        ],
+        "dependency_artifact_ids": [
+          "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION"
+        ],
+        "normalized_scientific_question": "Can each retained CCFT mathematical object receive a controlled physical bearer, value, zero, units, scale, operation, comparator, measurement channel, and adequacy-failure condition?",
+        "prohibited_claims": [
+          "CCFT validation or empirical confirmation",
+          "coherence declared fundamental or physically real",
+          "real scalar or any other representation assumed in advance",
+          "CCFT action or evolution law construction outside a passed core decision",
+          "matter gravity or scale seam selection",
+          "observable or discriminator derivation",
+          "master action promotion or QFT-gravity closure",
+          "canonical evidence promotion",
+          "automatic successor authorization",
+          "declaring coherence fundamental or physically real",
+          "assuming a real scalar complex scalar phase current tensor rotor or nonlocal representation",
+          "supplying missing meanings without a NEW_POSTULATE label",
+          "action seam observable or empirical claim"
+        ],
+        "required_outputs": [
+          "operational_answer_ledger_for_every_retained_object",
+          "physical_bearer_value_zero_units_scale_operations_and_measurement_map",
+          "standard_physics_comparator_and_relabeling_audit",
+          "source_supported_bounded_surrogate_and_new_postulate_distinction"
+        ],
+        "semantic_stage_id": "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION",
+        "terminal_outcome_vocabulary": [
+          "CCFT_RETAINED_OBJECTS_OPERATIONALIZED",
+          "CCFT_OBJECTS_OPERATIONALIZED_ONLY_AS_BOUNDED_SURROGATES",
+          "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE",
+          "CCFT_OPERATIONALIZATION_CONFLICTS_WITH_RETAINED_MATHEMATICS"
+        ]
+      },
+      "canonical_scope_hash": "fe74ad24a6b899c00fccc0e5c10219f6a59c9f079349a893beaffc682c4d1b99",
+      "canonical_target": "operationalize_toe_retained_ccft_mathematical_objects_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "CCFT_RETAINED_OBJECTS_OPERATIONALIZED",
+        "CCFT_OBJECTS_OPERATIONALIZED_ONLY_AS_BOUNDED_SURROGATES",
+        "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE",
+        "CCFT_OPERATIONALIZATION_CONFLICTS_WITH_RETAINED_MATHEMATICS"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_03_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTMathematicalObjectOperationalizationResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_03_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_03_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_mathematical_object_operationalization_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTMathematicalObjectOperationalizationAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_03_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION",
+      "stage_number": 3
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0",
+          "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0",
+          "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0",
+          "TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0",
+          "CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0"
+        ],
+        "dependency_artifact_ids": [
+          "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION"
+        ],
+        "normalized_scientific_question": "Does a smallest retained CCFT system close its state, evolution, exchange, data, scale, interpretation, and operational-output contract without inventing missing physics?",
+        "prohibited_claims": [
+          "CCFT validation or empirical confirmation",
+          "coherence declared fundamental or physically real",
+          "real scalar or any other representation assumed in advance",
+          "CCFT action or evolution law construction outside a passed core decision",
+          "matter gravity or scale seam selection",
+          "observable or discriminator derivation",
+          "master action promotion or QFT-gravity closure",
+          "canonical evidence promotion",
+          "automatic successor authorization",
+          "inventing missing dynamics coefficients fields or couplings",
+          "internal viability stability causality or empirical validation",
+          "matter gravity or master_action embedding",
+          "CCFT validation or uniqueness"
+        ],
+        "required_outputs": [
+          "bounded_candidate_core_comparison",
+          "state_evolution_exchange_initial_boundary_scale_and_operational_output_closure_matrix",
+          "source_supported_versus_new_postulate_ledger",
+          "exactly_one_minimal_core_selection_or_explicit_rejection"
+        ],
+        "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+        "terminal_outcome_vocabulary": [
+          "MINIMAL_SOURCE_BOUND_CCFT_CORE_IDENTIFIED",
+          "MINIMAL_CCFT_CORE_IDENTIFIED_ONLY_AS_BOUNDED_SURROGATE",
+          "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+          "CCFT_CORE_SELECTION_BLOCKED_BY_CONFLICT"
+        ]
+      },
+      "canonical_scope_hash": "e8bd8faac099a9b1c9e759bfae544bbe8eb56ad631959b369dc595b9f9901adf",
+      "canonical_target": "select_or_reject_toe_minimal_closed_ccft_core_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "MINIMAL_SOURCE_BOUND_CCFT_CORE_IDENTIFIED",
+        "MINIMAL_CCFT_CORE_IDENTIFIED_ONLY_AS_BOUNDED_SURROGATE",
+        "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+        "CCFT_CORE_SELECTION_BLOCKED_BY_CONFLICT"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0.json",
+          "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeMinimalClosedCCFTCoreDecisionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_OPEN_v0.json",
+          "formal/python/tools/toe_minimal_closed_ccft_core_decision_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeMinimalClosedCCFTCoreDecisionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+      "stage_number": 4
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0",
+          "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0",
+          "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0",
+          "TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0",
+          "CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0"
+        ],
+        "dependency_artifact_ids": [
+          "MINIMAL_CLOSED_CCFT_CORE_DECISION"
+        ],
+        "normalized_scientific_question": "What exact terminal outcome follows from the core decision, and is a separately authorized internal-viability program preparation handoff justified without opening it automatically?",
+        "prohibited_claims": [
+          "CCFT validation or empirical confirmation",
+          "coherence declared fundamental or physically real",
+          "real scalar or any other representation assumed in advance",
+          "CCFT action or evolution law construction outside a passed core decision",
+          "matter gravity or scale seam selection",
+          "observable or discriminator derivation",
+          "master action promotion or QFT-gravity closure",
+          "canonical evidence promotion",
+          "automatic successor authorization",
+          "executing dimensional symmetry hyperbolicity stability energy or numerical tests",
+          "selecting a matter or gravity seam",
+          "deriving an observable or discriminator",
+          "automatic successor preparation installation or OPEN"
+        ],
+        "required_outputs": [
+          "exactly_one_program_terminal_outcome",
+          "selected_core_scope_and_omissions_if_any",
+          "viability_test_requirements_and_failure_conditions",
+          "separately_authorizable_viability_program_preparation_target_or_explicit_no_handoff"
+        ],
+        "semantic_stage_id": "CCFT_VIABILITY_TEST_HANDOFF_DECISION",
+        "terminal_outcome_vocabulary": [
+          "MINIMAL_SOURCE_BOUND_CCFT_CORE_READY_FOR_VIABILITY_TEST",
+          "CCFT_CORE_READY_ONLY_AS_BOUNDED_SURROGATE",
+          "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE",
+          "CCFT_FORMULATIONS_CONFLICT",
+          "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+          "SOURCE_EVIDENCE_INSUFFICIENT"
+        ]
+      },
+      "canonical_scope_hash": "91d16bd2d0a180ea6a9a8555c60d0ab92480bfb80fd57638d1e0fc2eb62efc05",
+      "canonical_target": "select_toe_ccft_core_viability_testing_handoff_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "MINIMAL_SOURCE_BOUND_CCFT_CORE_READY_FOR_VIABILITY_TEST",
+        "CCFT_CORE_READY_ONLY_AS_BOUNDED_SURROGATE",
+        "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE",
+        "CCFT_FORMULATIONS_CONFLICT",
+        "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+        "SOURCE_EVIDENCE_INSUFFICIENT"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_VIABILITY_TEST_HANDOFF_DECISION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CCFT_VIABILITY_TEST_HANDOFF_DECISION_RESULT_v0.json",
+          "formal/docs/release/TOE_CCFT_VIABILITY_TEST_HANDOFF_DECISION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_05_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTViabilityTestHandoffDecisionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_05_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CCFT_VIABILITY_TEST_HANDOFF_DECISION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_05_OPEN_v0.json",
+          "formal/python/tools/toe_ccft_viability_test_handoff_decision_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCCFTViabilityTestHandoffDecisionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_05_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CCFT_VIABILITY_TEST_HANDOFF_DECISION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CCFT_VIABILITY_TEST_HANDOFF_DECISION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CCFT_VIABILITY_TEST_HANDOFF_DECISION",
+      "stage_number": 5
+    }
+  ],
+  "status": "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST",
+  "workload_caps": {
+    "maximum_attempt_count_proposed": 5,
+    "maximum_documentary_lineage_components": 64,
+    "maximum_explicit_equations_or_relations": 512,
+    "maximum_extracted_mathematical_statements": 1024,
+    "maximum_minimal_core_candidates": 12,
+    "maximum_operationalization_candidates": 128,
+    "maximum_parser_failures": 16,
+    "maximum_preserved_formulation_conflicts": 128,
+    "maximum_retained_mathematical_objects": 256,
+    "maximum_source_artifacts_for_deep_review": 160,
+    "maximum_total_bounded_source_excerpt_words": 40000,
+    "maximum_total_deep_review_source_bytes": 536870912,
+    "maximum_total_extracted_text_bytes": 67108864,
+    "maximum_unresolved_lineage_relationships": 64,
+    "maximum_unsupported_format_files": 64
+  }
+}

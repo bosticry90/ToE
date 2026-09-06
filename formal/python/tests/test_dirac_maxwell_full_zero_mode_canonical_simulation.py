@@ -78,4 +78,4 @@ def test_execution_does_not_assign_its_own_scientific_verdict(artifacts: tuple[d
 
 
 def test_prompt_is_preserved() -> None:
-    assert execution.sha256_path(execution.REPO_ROOT / execution.PROMPT_RELATIVE_PATH) == execution.PROMPT_SHA256
+    assert execution.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

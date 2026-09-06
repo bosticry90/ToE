@@ -1,0 +1,15 @@
+{
+  "atomic_partial_results_recoverable": false,
+  "authorized_command": ".\\py.ps1 -m formal.python.tools.scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0 --execute",
+  "canonical_output_directory_existed_at_timeout": false,
+  "canonical_report_existed_at_timeout": false,
+  "cap_excess_seconds": 4.1,
+  "contract_rule_applied": "FAIL_CLOSED_REFERENCE_ORACLE_INADEQUATE",
+  "frozen_total_wall_clock_cap_seconds": 3600,
+  "launcher_exit_code": 124,
+  "launcher_reported_wall_time_seconds": 3604.1,
+  "post_timeout_scientific_calculation_performed": false,
+  "scientific_rerun_performed": false,
+  "surviving_matching_python_process_count_after_enforcement": 0,
+  "surviving_matching_python_process_count_before_enforcement": 2
+}

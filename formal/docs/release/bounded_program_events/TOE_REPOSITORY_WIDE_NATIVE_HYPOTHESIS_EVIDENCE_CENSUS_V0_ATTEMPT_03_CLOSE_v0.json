@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 3,
+  "closed_from_commit": "cbe575ed6c934191631a62f47429c9a723cd66ef",
+  "event_hash": "82dcf21785a749f92f42c23651beec44151e4fb1924cf43eb23040c798961a17",
+  "event_sequence_number": 6,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "5d238fc2ef7e2015f381355cf8566e2505ca24775b31ec9d628b96a36820d001",
+  "previous_event_hash": "5d238fc2ef7e2015f381355cf8566e2505ca24775b31ec9d628b96a36820d001",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "result_artifact_hash": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+  "result_artifact_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+  "review_artifact_hash": "242d912f58c556257651df934f27e518f873b4ee8198eadaac16555fc7fe09da",
+  "review_artifact_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

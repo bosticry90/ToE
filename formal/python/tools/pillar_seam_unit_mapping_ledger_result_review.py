@@ -15,6 +15,10 @@ from pathlib import Path
 from typing import Any, Callable
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.historical_artifact_currency_identity import (
+    historical_compendium_sha256_for_path,
+    verify_binding,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -179,6 +183,17 @@ def _sha256(raw: bytes) -> str:
 
 def _sha256_path(path: Path) -> str:
     return _sha256(path.read_bytes())
+
+
+def _historical_input_sha256(role: str, path: Path) -> str:
+    if role == "compendium":
+        return historical_compendium_sha256_for_path(
+            path,
+            expected_historical_sha256=EXPECTED_INPUT_HASHES[
+                "compendium_sha256"
+            ],
+        )
+    return _sha256_path(path)
 
 
 def canonical_json_bytes(payload: dict[str, Any]) -> bytes:
@@ -389,7 +404,7 @@ def independent_reconstruct_source_rows(
             == EXPECTED_INPUT_HASHES["readiness_sha256"]
             and _sha256_path(scalar_review_path)
             == EXPECTED_INPUT_HASHES["scalar_review_sha256"]
-            and _sha256_path(compendium_path)
+            and _historical_input_sha256("compendium", compendium_path)
             == EXPECTED_INPUT_HASHES["compendium_sha256"]
             and _sha256_path(qcd_context_path)
             == EXPECTED_INPUT_HASHES["qcd_context_sha256"]
@@ -721,6 +736,17 @@ def _git_bytes(commit: str, relative_path: str) -> bytes:
 
 
 @functools.lru_cache(maxsize=1)
+def review_time_authority_binding() -> dict[str, Any]:
+    return verify_binding(
+        "PAC-017",
+        expected_path="formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+        expected_sha256=EXPECTED_EXECUTION_CUSTODY_HASHES[
+            "maintenance_authority_sha256"
+        ],
+    )
+
+
+@functools.lru_cache(maxsize=1)
 def _execution_time_custody() -> dict[str, Any]:
     paths = {
         "registry": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
@@ -734,6 +760,7 @@ def _execution_time_custody() -> dict[str, Any]:
     parent = {name: _git_bytes(EXECUTION_PARENT, path) for name, path in paths.items()}
     v2 = json.loads(current["maintenance_v2_review"].decode("utf-8"))
     authorization = v2["authorization"]
+    review_time_authority = review_time_authority_binding()
     return {
         "execution_commit": EXECUTION_COMMIT,
         "execution_parent": EXECUTION_PARENT,
@@ -757,7 +784,7 @@ def _execution_time_custody() -> dict[str, Any]:
             "versioned_v3_successor_required"
         ],
         "review_time_maintenance_authority_unchanged": (
-            _sha256_path(MAINTENANCE_AUTHORITY_PATH)
+            review_time_authority["sha256"]
             == EXPECTED_EXECUTION_CUSTODY_HASHES["maintenance_authority_sha256"]
         ),
         "review_time_maintenance_v2_evidence_unchanged": (
@@ -770,8 +797,10 @@ def _execution_time_custody() -> dict[str, Any]:
 _REPRO_SOURCE_PATHS = (
     "State_of_the_Theory.md",
     "formal/python/meta/repo_environment.py",
+    "formal/python/tools/equation_compendium_identity.py",
     "formal/python/tools/pillar_seam_unit_mapping_ledger_reports.py",
     "formal/python/tools/pillar_seam_unit_mapping_ledger_execution.py",
+    "formal/docs/release/EQUATION_COMPENDIUM_IDENTITY_DOMAIN_CONTRACT_20260724_v0.json",
     "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_GUARDRAIL_PACKET_20260710_v0.json",
     "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
     "formal/docs/release/SCALAR_STRESS_ENERGY_COVARIANT_DIVERGENCE_IDENTITY_MULTI_BACKGROUND_ROBUSTNESS_CALCULATION_RESULT_REVIEW_20260710_v0.json",
@@ -795,6 +824,14 @@ def _stage_and_run_reproduction(root: Path) -> tuple[dict[str, bytes], str]:
     env = os.environ.copy()
     env["PYTHONPATH"] = str(root)
     env["PYTHONNOUSERSITE"] = "1"
+    env["GIT_DIR"] = subprocess.run(
+        ["git", "rev-parse", "--absolute-git-dir"],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    env["GIT_WORK_TREE"] = str(root)
     completed = subprocess.run(
         [
             sys.executable,
@@ -924,7 +961,7 @@ def _verify_execution_result(
     for role, path in input_paths.items():
         key = f"{role}_sha256"
         try:
-            actual = _sha256_path(path)
+            actual = _historical_input_sha256(role, path)
         except OSError:
             actual = None
         actual_input_hashes[key] = actual

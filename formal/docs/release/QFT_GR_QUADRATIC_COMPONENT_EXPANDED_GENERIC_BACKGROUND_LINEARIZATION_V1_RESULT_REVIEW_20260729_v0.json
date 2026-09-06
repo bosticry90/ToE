@@ -1,0 +1,73 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE",
+    "OFF_SHELL_FORM_COMPLETE",
+    "ON_SHELL_REDUCTION_COMPLETE",
+    "GAUGE_COMPATIBLE_FORM_COMPLETE",
+    "MINKOWSKI_SPECIALIZATION_REPRODUCED"
+  ],
+  "authority_rotation": {
+    "stage_2_result_accepted": true,
+    "stage_3_exact_companion_operator_authorized": true,
+    "stage_4_constraint_quotient_authorized": false,
+    "stage_5_propagator_growth_authorized": false,
+    "subsidiary_scientific_target_authorized": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "Minkowski_128_state_224_entry_control_is_exact": true,
+    "accepted_stage_1_contract_is_byte_bound": true,
+    "all_ten_trace_charts_share_the_same_future_classification": true,
+    "bounded_stage_2_open_event_consumed": true,
+    "component_graph_is_closed_acyclic_and_placeholder_free": true,
+    "component_identity_certificates_cover_required_families": true,
+    "independent_64_equation_inventory_is_recomputed": true,
+    "off_shell_on_shell_and_gauge_forms_are_separate": true,
+    "only_bounded_stage_3_is_selected": true,
+    "stage_2_claim_ceiling_is_respected": true
+  },
+  "failed_checks": [],
+  "independent_graph_checks": {
+    "ledger_hash_matches": true,
+    "node_count_matches": true,
+    "node_ids_are_unique": true,
+    "reference_closure": true,
+    "topologically_ordered": true,
+    "unnamed_placeholders_absent": true
+  },
+  "independent_inventory_checks": {
+    "common_inventory_is_55": true,
+    "each_tracefree_chart_has_nine_equations": true,
+    "independent_inventory_is_64_per_chart": true,
+    "ten_tracefree_charts_cover_all_pivots": true
+  },
+  "not_established": [
+    "EXACT_GENERIC_FROZEN_COMPANION_OPERATOR",
+    "GENERIC_CHARACTERISTIC_ROOT_ASYMPTOTICS",
+    "CONSTRAINT_TANGENT_PROJECTOR",
+    "GENERIC_FINITE_SOBOLEV_LOSS",
+    "VARIABLE_COEFFICIENT_LINEAR_ESTIMATE",
+    "QUASILINEAR_OR_LOCAL_WELL_POSEDNESS",
+    "QUADRATIC_GRAVITY_PHYSICAL_VIABILITY"
+  ],
+  "review_target": "review_qft_gr_quadratic_component_expanded_generic_background_linearization_v1_result",
+  "reviewed_calculation": {
+    "canonical_bytes_match": true,
+    "canonical_sha256_recomputed": "18988cbd2708848fa50b08694bb2f46a7e17537e8b1d77b4275352c7568cd4ad",
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-COMPONENT-EXPANDED-GENERIC-BACKGROUND-LINEARIZATION-v1.json",
+    "sha256": "18988cbd2708848fa50b08694bb2f46a7e17537e8b1d77b4275352c7568cd4ad"
+  },
+  "reviewer_independence": {
+    "audits_form_separation_and_claim_ceiling": true,
+    "imports_calculation_module": false,
+    "recomputes_Minkowski_sparse_hash": true,
+    "recomputes_component_inventory": true,
+    "recomputes_graph_reference_closure_and_topological_order": true,
+    "recomputes_node_ledger_hash": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0",
+  "selected_next_target": "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1",
+  "terminal_result": "PASSED",
+  "verdict": "ACCEPT_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_AUTHORIZE_BOUNDED_STAGE_3_ONLY"
+}

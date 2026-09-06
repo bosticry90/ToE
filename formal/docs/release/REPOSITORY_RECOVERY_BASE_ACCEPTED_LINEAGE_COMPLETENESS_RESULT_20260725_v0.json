@@ -1,0 +1,107 @@
+{
+  "schema_id": "REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T03:06:35Z",
+  "status": "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "authorization": {
+    "source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+    "selector": {
+      "path": "formal/docs/release/CURRENT_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_SELECTION_20260725_v0.json",
+      "sha256": "bad6230f856185b59c698639d05f4d2447f222618e3ac3693b2e805ef718ec79"
+    },
+    "packet": {
+      "path": "formal/docs/release/REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_PACKET_20260725_v0.json",
+      "sha256": "3e40d824c758318220e799548698734d12ead82d9d1ddf92354439084daccaff"
+    },
+    "ambiguous_current_maintenance_authority_used": false
+  },
+  "proposed_base_identity": {
+    "commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+    "tree": "a04c1c6dda56b25d3b4308841cf71ea3edf642eb",
+    "accepted_result_manifest_root": "b54209b3676646a594c3fa358696790060e6dee58aab5dcbd2eb3df485fafce6",
+    "accepted_review_manifest_root": "baedcb06d4e8a8d991a6cf2d8c2acc98410c504972bf10576e34833fa523c613",
+    "protected_invariant_manifest_root": "1cf1cb7094af4d849d5e83490a510acb93c9f9ccbfbabe1dd56b517a2473f026"
+  },
+  "lineage": {
+    "recovery_start_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "commit_count": 80,
+    "linear": true,
+    "branch_joins": 0,
+    "accepted_repair_cycles_with_protected_invariants": 8,
+    "accepted_commits_outside_proposed_base": 0,
+    "later_reverts_or_weakened_protected_invariants": 0
+  },
+  "evidence": {
+    "contract": {
+      "path": "formal/docs/release/RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v0.json",
+      "sha256": "747127512f8a28f868ef8548203de0fbc212e6d0d921c22127874b05167380bf"
+    },
+    "manifest": {
+      "path": "formal/docs/release/RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v0.json",
+      "sha256": "f3a257ebcefaff1f2f59a22ace051020f1bc925565cf28e45f9f454163578ae5",
+      "bytes": 81078
+    },
+    "protected_invariant_guards": {
+      "path": ".toe-recovery/custody-v0/recovery-base-accepted-lineage-completeness-v0/PROTECTED_INVARIANT_GUARDS_v0.xml",
+      "sha256": "535efca7b83722ffe46968e619d3b48bd0c7a935e65e4cca0eb44f891c4ca0d2",
+      "tests": 43,
+      "passed": 43,
+      "failed": 0,
+      "errors": 0
+    },
+    "release_inventory": {
+      "selectors": 26,
+      "packets": 27,
+      "results": 25,
+      "reviews": 44
+    }
+  },
+  "preserved_bundles": [
+    {
+      "path": ".toe-recovery/bundles/broad-python-first-cause-clustering-v0.bundle",
+      "sha256": "ef0c0a95cfee558f8aa680420df6f78826fb7dee3f3d4b8621148b6f4d77f6fa",
+      "head": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+      "head_is_ancestor": true
+    },
+    {
+      "path": ".toe-recovery/bundles/line-ending-identity-mapping-repair-v0.bundle",
+      "sha256": "862567f5989651b53b231749e8d78579540aff15f1ac157b512f6ec0085d6134",
+      "head": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+      "head_is_ancestor": true
+    },
+    {
+      "path": ".toe-recovery/bundles/post-prompt-decoupling-baseline-reassessment-v0.bundle",
+      "sha256": "c6411287b61ace3bed103a06c92868ea938021b1f1b6090babfa6c53d5a9ca68",
+      "head": "06f0ab649ff31c6983a42daeedfb9ad1a696cadd",
+      "head_is_ancestor": true
+    },
+    {
+      "path": ".toe-recovery/bundles/prompt-dependency-role-decoupling-v0.bundle",
+      "sha256": "a0a3bdbda99679837a5718a374508c4e12bffa9b25285096b00a346b59758260",
+      "head": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+      "head_is_ancestor": true
+    },
+    {
+      "path": ".toe-recovery/bundles/toe-control-plane-nonhermetic-root-cause-authorization-v0.bundle",
+      "sha256": "da6747be2899d93224fa8660418ad4ef4ea96c14d01d383b082b25e14af6f609",
+      "head": "2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "head_is_ancestor": true
+    },
+    {
+      "path": ".toe-recovery/bundles/toe-control-plane-recovery-v0.bundle",
+      "sha256": "12d4c84b3b9ba7c2bcc887eb800214202e60ac0b7e7a6d858c27c954be1be4d6",
+      "head": "291010c22bf6db3869c16898e04038ccbd3a15e9",
+      "head_is_ancestor": true
+    }
+  ],
+  "custody": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_paths": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_mutated": false
+  },
+  "terminal_outcome": "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE",
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

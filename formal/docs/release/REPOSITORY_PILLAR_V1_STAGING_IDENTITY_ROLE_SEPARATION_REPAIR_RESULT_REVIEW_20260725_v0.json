@@ -1,0 +1,58 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T05:34:00Z",
+  "status": "PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_ACCEPTED",
+  "accepted": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_20260725_v0.json",
+    "sha256": "0c258dafef9ec86681a0d27479a7b989bb9636f934acd37daa6de63ad2483f32",
+    "implementation_commit": "09c7080c759f0314b79413c614f251a5ebf15842",
+    "implementation_tree": "57bdbb1c1c9dd3ddd6b0028ccd7350b6daf0de28",
+    "result_commit": "c35ec18da19249519244d96e79ce0fd62fd9d047",
+    "result_tree": "86fb226620ece921082d195e690cc63c9ec880ff"
+  },
+  "independent_detached_review": {
+    "checkout": "pillar-v1-staging-repair-review-v0",
+    "head": "c35ec18da19249519244d96e79ce0fd62fd9d047",
+    "tree": "86fb226620ece921082d195e690cc63c9ec880ff",
+    "tests": 15,
+    "passed": 15,
+    "failed": 0,
+    "errors": 0,
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "staged_dependencies": 23,
+    "historical_source_pins": "PRESERVED",
+    "canonical_artifact_identities": "COMMIT_RELATIVE_AND_TYPED",
+    "historical_runtime_custody": "BOUND_TO_PREPARATION_COMMIT",
+    "live_byte_equality": "REMOVED",
+    "isolated_generation": "TWO_RUNS_BYTE_IDENTICAL",
+    "historical_decisions": "25 / 26 REPRODUCED",
+    "sole_failed_decision": "supporting_sources_have_authorized_bounded_class",
+    "affected_outcomes": "13 / 13 PASS",
+    "masked_secondary_roots": 0,
+    "scientific_content_changed": false
+  },
+  "checkout_matrix": {
+    "implementation": "15 / 15 PASS_AND_CLEAN",
+    "fresh_lf": "15 / 15 PASS_AND_CLEAN",
+    "actual_crlf_working_bytes": "15 / 15 PASS_THEN_RESTORED_CLEAN",
+    "detached_review": "15 / 15 PASS_AND_CLEAN"
+  },
+  "scope": {
+    "baseline_reassessment_performed": false,
+    "dirty_main_reads": 0,
+    "historical_pins_refreshed": 0,
+    "original_authority_class_mismatch_repaired": false,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "automatic_successor": false
+  },
+  "terminal_result": "PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_ACCEPTED",
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

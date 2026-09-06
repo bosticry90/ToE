@@ -1,0 +1,2592 @@
+{
+  "artifact_id": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0",
+  "attempt_sequence_number": 4,
+  "captured_at_utc": "2026-07-31T17:05:00Z",
+  "compatibility_matrix": [
+    {
+      "cell_id": "R1_DIMENSION__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+          "domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+          "locator": "requirement_ledger[R1_DIMENSION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R1_DIMENSION",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R1_DIMENSION__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+          "domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+          "locator": "requirement_ledger[R1_DIMENSION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R1_DIMENSION",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R1_DIMENSION__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+          "domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+          "locator": "requirement_ledger[R1_DIMENSION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R1_DIMENSION",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R1_DIMENSION__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+          "domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+          "locator": "requirement_ledger[R1_DIMENSION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R1_DIMENSION",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R1_DIMENSION__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+          "domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+          "locator": "requirement_ledger[R1_DIMENSION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R1_DIMENSION",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R1_DIMENSION__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+          "domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+          "locator": "requirement_ledger[R1_DIMENSION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R1_DIMENSION",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R1_DIMENSION__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+          "domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+          "locator": "requirement_ledger[R1_DIMENSION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R1_DIMENSION",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R2_METRIC_ONLY__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+          "domain": "Local continuum metric-action candidates.",
+          "locator": "requirement_ledger[R2_METRIC_ONLY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R2_METRIC_ONLY",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R2_METRIC_ONLY__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+          "domain": "Local continuum metric-action candidates.",
+          "locator": "requirement_ledger[R2_METRIC_ONLY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R2_METRIC_ONLY",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R2_METRIC_ONLY__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+          "domain": "Local continuum metric-action candidates.",
+          "locator": "requirement_ledger[R2_METRIC_ONLY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R2_METRIC_ONLY",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R2_METRIC_ONLY__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+          "domain": "Local continuum metric-action candidates.",
+          "locator": "requirement_ledger[R2_METRIC_ONLY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The family label requires additional gravitational field content and therefore violates the frozen metric-only envelope.",
+      "requirement_id": "R2_METRIC_ONLY",
+      "state": "VIOLATED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R2_METRIC_ONLY__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+          "domain": "Local continuum metric-action candidates.",
+          "locator": "requirement_ledger[R2_METRIC_ONLY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R2_METRIC_ONLY",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R2_METRIC_ONLY__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+          "domain": "Local continuum metric-action candidates.",
+          "locator": "requirement_ledger[R2_METRIC_ONLY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The family label requires an independent connection or torsion sector and therefore violates the frozen metric-only envelope.",
+      "requirement_id": "R2_METRIC_ONLY",
+      "state": "VIOLATED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R2_METRIC_ONLY__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+          "domain": "Local continuum metric-action candidates.",
+          "locator": "requirement_ledger[R2_METRIC_ONLY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R2_METRIC_ONLY",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R3_LOCALITY__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded route compares actions built from local scalar densities.",
+          "domain": "Local classical continuum theory.",
+          "locator": "requirement_ledger[R3_LOCALITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R3_LOCALITY",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R3_LOCALITY__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded route compares actions built from local scalar densities.",
+          "domain": "Local classical continuum theory.",
+          "locator": "requirement_ledger[R3_LOCALITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R3_LOCALITY",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R3_LOCALITY__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded route compares actions built from local scalar densities.",
+          "domain": "Local classical continuum theory.",
+          "locator": "requirement_ledger[R3_LOCALITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R3_LOCALITY",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R3_LOCALITY__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded route compares actions built from local scalar densities.",
+          "domain": "Local classical continuum theory.",
+          "locator": "requirement_ledger[R3_LOCALITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R3_LOCALITY",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R3_LOCALITY__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded route compares actions built from local scalar densities.",
+          "domain": "Local classical continuum theory.",
+          "locator": "requirement_ledger[R3_LOCALITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The family is explicitly nonlocal and therefore violates the frozen local-action envelope.",
+      "requirement_id": "R3_LOCALITY",
+      "state": "VIOLATED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R3_LOCALITY__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded route compares actions built from local scalar densities.",
+          "domain": "Local classical continuum theory.",
+          "locator": "requirement_ledger[R3_LOCALITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R3_LOCALITY",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R3_LOCALITY__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The bounded route compares actions built from local scalar densities.",
+          "domain": "Local classical continuum theory.",
+          "locator": "requirement_ledger[R3_LOCALITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R3_LOCALITY",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R4_DIFF_COVARIANCE__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+          "domain": "Local continuum gravitational action.",
+          "locator": "requirement_ledger[R4_DIFF_COVARIANCE]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R4_DIFF_COVARIANCE__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+          "domain": "Local continuum gravitational action.",
+          "locator": "requirement_ledger[R4_DIFF_COVARIANCE]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R4_DIFF_COVARIANCE__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+          "domain": "Local continuum gravitational action.",
+          "locator": "requirement_ledger[R4_DIFF_COVARIANCE]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R4_DIFF_COVARIANCE__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+          "domain": "Local continuum gravitational action.",
+          "locator": "requirement_ledger[R4_DIFF_COVARIANCE]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R4_DIFF_COVARIANCE__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+          "domain": "Local continuum gravitational action.",
+          "locator": "requirement_ledger[R4_DIFF_COVARIANCE]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R4_DIFF_COVARIANCE__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+          "domain": "Local continuum gravitational action.",
+          "locator": "requirement_ledger[R4_DIFF_COVARIANCE]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R4_DIFF_COVARIANCE__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+          "domain": "Local continuum gravitational action.",
+          "locator": "requirement_ledger[R4_DIFF_COVARIANCE]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R5_CK_FIREWALL__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+          "domain": "All candidate gravitational actions and master-action relations.",
+          "locator": "requirement_ledger[R5_CK_FIREWALL]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R5_CK_FIREWALL",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R5_CK_FIREWALL__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+          "domain": "All candidate gravitational actions and master-action relations.",
+          "locator": "requirement_ledger[R5_CK_FIREWALL]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R5_CK_FIREWALL",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R5_CK_FIREWALL__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+          "domain": "All candidate gravitational actions and master-action relations.",
+          "locator": "requirement_ledger[R5_CK_FIREWALL]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R5_CK_FIREWALL",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R5_CK_FIREWALL__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+          "domain": "All candidate gravitational actions and master-action relations.",
+          "locator": "requirement_ledger[R5_CK_FIREWALL]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved architecture keeps C_k external, but no exact action exists for a complete family-level audit.",
+      "requirement_id": "R5_CK_FIREWALL",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R5_CK_FIREWALL__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+          "domain": "All candidate gravitational actions and master-action relations.",
+          "locator": "requirement_ledger[R5_CK_FIREWALL]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved architecture keeps C_k external, but no exact action exists for a complete family-level audit.",
+      "requirement_id": "R5_CK_FIREWALL",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R5_CK_FIREWALL__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+          "domain": "All candidate gravitational actions and master-action relations.",
+          "locator": "requirement_ledger[R5_CK_FIREWALL]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved architecture keeps C_k external, but no exact action exists for a complete family-level audit.",
+      "requirement_id": "R5_CK_FIREWALL",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R5_CK_FIREWALL__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+          "domain": "All candidate gravitational actions and master-action relations.",
+          "locator": "requirement_ledger[R5_CK_FIREWALL]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R5_CK_FIREWALL",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R6_LOCAL_VARIATION__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+          "domain": "Local bulk variation; global boundary theory excluded.",
+          "locator": "requirement_ledger[R6_LOCAL_VARIATION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R6_LOCAL_VARIATION__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+          "domain": "Local bulk variation; global boundary theory excluded.",
+          "locator": "requirement_ledger[R6_LOCAL_VARIATION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R6_LOCAL_VARIATION__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+          "domain": "Local bulk variation; global boundary theory excluded.",
+          "locator": "requirement_ledger[R6_LOCAL_VARIATION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R6_LOCAL_VARIATION__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+          "domain": "Local bulk variation; global boundary theory excluded.",
+          "locator": "requirement_ledger[R6_LOCAL_VARIATION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R6_LOCAL_VARIATION__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+          "domain": "Local bulk variation; global boundary theory excluded.",
+          "locator": "requirement_ledger[R6_LOCAL_VARIATION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R6_LOCAL_VARIATION__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+          "domain": "Local bulk variation; global boundary theory excluded.",
+          "locator": "requirement_ledger[R6_LOCAL_VARIATION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R6_LOCAL_VARIATION__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+          "domain": "Local bulk variation; global boundary theory excluded.",
+          "locator": "requirement_ledger[R6_LOCAL_VARIATION]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+          "domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+          "locator": "requirement_ledger[R7_SOURCE_COMPATIBILITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "A provisional classical source witness supports compatibility, while native matter and the final source seam remain unselected.",
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+          "domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+          "locator": "requirement_ledger[R7_SOURCE_COMPATIBILITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+          "domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+          "locator": "requirement_ledger[R7_SOURCE_COMPATIBILITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The action-level structure is present, but the required matter, source, convention, threshold, scale, or empirical input is not selected.",
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT"
+    },
+    {
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+          "domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+          "locator": "requirement_ledger[R7_SOURCE_COMPATIBILITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+          "domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+          "locator": "requirement_ledger[R7_SOURCE_COMPATIBILITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+          "domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+          "locator": "requirement_ledger[R7_SOURCE_COMPATIBILITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R7_SOURCE_COMPATIBILITY__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+          "domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+          "locator": "requirement_ledger[R7_SOURCE_COMPATIBILITY]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R8_NEWTON_POISSON__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+          "domain": "Stationary weak-field Newtonian regime.",
+          "locator": "requirement_ledger[R8_NEWTON_POISSON]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The frozen requirement and family inventories directly bind this property within the stated comparison domain.",
+      "requirement_id": "R8_NEWTON_POISSON",
+      "state": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+    },
+    {
+      "cell_id": "R8_NEWTON_POISSON__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+          "domain": "Stationary weak-field Newtonian regime.",
+          "locator": "requirement_ledger[R8_NEWTON_POISSON]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R8_NEWTON_POISSON",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R8_NEWTON_POISSON__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+          "domain": "Stationary weak-field Newtonian regime.",
+          "locator": "requirement_ledger[R8_NEWTON_POISSON]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The defined control contains an EH-like lower-curvature sector, but native recovery and coefficient selection are not established.",
+      "requirement_id": "R8_NEWTON_POISSON",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R8_NEWTON_POISSON__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+          "domain": "Stationary weak-field Newtonian regime.",
+          "locator": "requirement_ledger[R8_NEWTON_POISSON]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R8_NEWTON_POISSON",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R8_NEWTON_POISSON__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+          "domain": "Stationary weak-field Newtonian regime.",
+          "locator": "requirement_ledger[R8_NEWTON_POISSON]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R8_NEWTON_POISSON",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R8_NEWTON_POISSON__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+          "domain": "Stationary weak-field Newtonian regime.",
+          "locator": "requirement_ledger[R8_NEWTON_POISSON]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R8_NEWTON_POISSON",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R8_NEWTON_POISSON__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+          "domain": "Stationary weak-field Newtonian regime.",
+          "locator": "requirement_ledger[R8_NEWTON_POISSON]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R8_NEWTON_POISSON",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R9_MOMENTUM_CURRENT__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+          "domain": "Stationary weak-field rotating-source regime.",
+          "locator": "requirement_ledger[R9_MOMENTUM_CURRENT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The action-level structure is present, but the required matter, source, convention, threshold, scale, or empirical input is not selected.",
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT"
+    },
+    {
+      "cell_id": "R9_MOMENTUM_CURRENT__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+          "domain": "Stationary weak-field rotating-source regime.",
+          "locator": "requirement_ledger[R9_MOMENTUM_CURRENT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R9_MOMENTUM_CURRENT__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+          "domain": "Stationary weak-field rotating-source regime.",
+          "locator": "requirement_ledger[R9_MOMENTUM_CURRENT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The action-level structure is present, but the required matter, source, convention, threshold, scale, or empirical input is not selected.",
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT"
+    },
+    {
+      "cell_id": "R9_MOMENTUM_CURRENT__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+          "domain": "Stationary weak-field rotating-source regime.",
+          "locator": "requirement_ledger[R9_MOMENTUM_CURRENT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R9_MOMENTUM_CURRENT__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+          "domain": "Stationary weak-field rotating-source regime.",
+          "locator": "requirement_ledger[R9_MOMENTUM_CURRENT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R9_MOMENTUM_CURRENT__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+          "domain": "Stationary weak-field rotating-source regime.",
+          "locator": "requirement_ledger[R9_MOMENTUM_CURRENT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R9_MOMENTUM_CURRENT__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+          "domain": "Stationary weak-field rotating-source regime.",
+          "locator": "requirement_ledger[R9_MOMENTUM_CURRENT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    {
+      "cell_id": "R10_STABILITY_NO_FIT__F_EH",
+      "evidence_bindings": [
+        {
+          "bounded_support": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+          "domain": "Candidate-dependent weak-field and recovery regimes.",
+          "locator": "requirement_ledger[R10_STABILITY_NO_FIT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=KNOWN_PHYSICS_BASELINE; definition=STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION; field_content=one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_EH]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EH]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EH",
+      "family_role": "DEFINED_KNOWN_PHYSICS_BASELINE_NOT_NATIVE_DERIVED",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "KNOWN_PHYSICS_BASELINE_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The action-level structure is present, but the required matter, source, convention, threshold, scale, or empirical input is not selected.",
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "state": "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT"
+    },
+    {
+      "cell_id": "R10_STABILITY_NO_FIT__F_FR",
+      "evidence_bindings": [
+        {
+          "bounded_support": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+          "domain": "Candidate-dependent weak-field and recovery regimes.",
+          "locator": "requirement_ledger[R10_STABILITY_NO_FIT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_FR]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+          "domain": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_FR]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_FR",
+      "family_role": "ONLY_R_PLUS_ALPHA_R_SQUARED_REPRESENTATIVE_DEFINED_INSIDE_NONNATIVE_QUADRATIC_LINEAGE",
+      "generalization_prohibited": true,
+      "independent_review_required": true,
+      "judgment_scope": "R_PLUS_ALPHA_R_SQUARED_COMPARISON_REPRESENTATIVE_ONLY_WHERE_EVIDENCE_EXISTS",
+      "native_endorsement_created": false,
+      "rationale": "Only the comparison-only R+alpha R^2 representative supplies this evidence; it cannot establish the general f(R) family or native status.",
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "state": "PARTIALLY_SATISFIED"
+    },
+    {
+      "cell_id": "R10_STABILITY_NO_FIT__F_QUADRATIC",
+      "evidence_bindings": [
+        {
+          "bounded_support": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+          "domain": "Candidate-dependent weak-field and recovery regimes.",
+          "locator": "requirement_ledger[R10_STABILITY_NO_FIT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=MATHEMATICAL_CONTROL_ACTION; field_content=one spacetime metric in four dimensions; source sector deferred in the frozen control",
+          "domain": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+          "locator": "family_ledger[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+          "domain": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+          "locator": "action_family_lineage_graph[F_QUADRATIC]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_QUADRATIC",
+      "family_role": "DEFINED_REFERENCE_CONTROL_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "DEFINED_QUADRATIC_REFERENCE_CONTROL_ONLY",
+      "native_endorsement_created": false,
+      "rationale": "The accepted quadratic-control record identifies a physical higher-derivative obstruction and an unresolved bounded closeout in this stability domain.",
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "state": "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT"
+    },
+    {
+      "cell_id": "R10_STABILITY_NO_FIT__F_EXTRA_FIELD",
+      "evidence_bindings": [
+        {
+          "bounded_support": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+          "domain": "Candidate-dependent weak-field and recovery regimes.",
+          "locator": "requirement_ledger[R10_STABILITY_NO_FIT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric plus an unspecified scalar, vector, tensor, or combination",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_EXTRA_FIELD]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EXTRA_FIELD",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R10_STABILITY_NO_FIT__F_NONLOCAL",
+      "evidence_bindings": [
+        {
+          "bounded_support": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+          "domain": "Candidate-dependent weak-field and recovery regimes.",
+          "locator": "requirement_ledger[R10_STABILITY_NO_FIT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric with unspecified nonlocal operators or kernels",
+          "domain": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+          "locator": "family_ledger[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_NONLOCAL]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_NONLOCAL",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R10_STABILITY_NO_FIT__F_CONNECTION_TORSION",
+      "evidence_bindings": [
+        {
+          "bounded_support": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+          "domain": "Candidate-dependent weak-field and recovery regimes.",
+          "locator": "requirement_ledger[R10_STABILITY_NO_FIT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=INSUFFICIENTLY_DEFINED; definition=ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY; field_content=metric or tetrad plus an unspecified independent connection and possibly torsion",
+          "domain": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+          "locator": "family_ledger[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+          "domain": "VERBAL_DIRECTION_ONLY",
+          "locator": "action_family_lineage_graph[F_CONNECTION_TORSION]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_CONNECTION_TORSION",
+      "family_role": "VERBAL_DIRECTION_ONLY",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "VERBAL_DIRECTION_WITHOUT_EXACT_ACTION",
+      "native_endorsement_created": false,
+      "rationale": "The preserved family label lacks an exact action, variables, coefficients, or domain sufficient to evaluate this requirement.",
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "state": "NOT_TESTABLE_MISSING_DEFINITION"
+    },
+    {
+      "cell_id": "R10_STABILITY_NO_FIT__F_EQUIVALENCE_PROBE",
+      "evidence_bindings": [
+        {
+          "bounded_support": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+          "domain": "Candidate-dependent weak-field and recovery regimes.",
+          "locator": "requirement_ledger[R10_STABILITY_NO_FIT]",
+          "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+        },
+        {
+          "bounded_support": "classification=REFERENCE_CONTROL; definition=CONTROL_CLASS_WITHOUT_STANDALONE_ACTION; field_content=inherits the field content of the representative being probed",
+          "domain": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+          "locator": "family_ledger[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+        },
+        {
+          "bounded_support": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+          "domain": "NO_DEFINITION_RECOVERED",
+          "locator": "action_family_lineage_graph[F_EQUIVALENCE_PROBE]",
+          "path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5"
+        }
+      ],
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "family_role": "NONACTION_DIAGNOSTIC_CONTROL",
+      "generalization_prohibited": false,
+      "independent_review_required": true,
+      "judgment_scope": "NONACTION_DIAGNOSTIC_CONTROL",
+      "native_endorsement_created": false,
+      "rationale": "The equivalence probe is a diagnostic control with no standalone variational action, so an action requirement is not applicable.",
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "state": "NOT_APPLICABLE_NOT_AN_ACTION"
+    }
+  ],
+  "compatibility_state_counts": {
+    "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT": 1,
+    "NOT_APPLICABLE_NOT_AN_ACTION": 10,
+    "NOT_TESTABLE_MISSING_DEFINITION": 24,
+    "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT": 4,
+    "OUTSIDE_NATIVE_ROLE": 0,
+    "PARTIALLY_SATISFIED": 15,
+    "SATISFIED_BY_SOURCE_BOUND_EVIDENCE": 13,
+    "VIOLATED_BY_SOURCE_BOUND_EVIDENCE": 3
+  },
+  "compatibility_state_vocabulary": [
+    "SATISFIED_BY_SOURCE_BOUND_EVIDENCE",
+    "VIOLATED_BY_SOURCE_BOUND_EVIDENCE",
+    "PARTIALLY_SATISFIED",
+    "NOT_TESTABLE_MISSING_DEFINITION",
+    "NOT_TESTABLE_MISSING_DOWNSTREAM_INPUT",
+    "NOT_APPLICABLE_NOT_AN_ACTION",
+    "OUTSIDE_NATIVE_ROLE",
+    "BLOCKED_BY_ACCEPTED_NEGATIVE_RESULT"
+  ],
+  "family_count": 7,
+  "family_ids": [
+    "F_EH",
+    "F_FR",
+    "F_QUADRATIC",
+    "F_EXTRA_FIELD",
+    "F_NONLOCAL",
+    "F_CONNECTION_TORSION",
+    "F_EQUIVALENCE_PROBE"
+  ],
+  "family_role_assessments": [
+    {
+      "family_id": "F_EH",
+      "native_selection_observation": "OUTSIDE_NATIVE_ROLE",
+      "reason": "No preserved native ToE principle derives or uniquely selects the comparator action.",
+      "role": "KNOWN_PHYSICS_BASELINE"
+    },
+    {
+      "family_id": "F_FR",
+      "native_selection_observation": "NOT_TESTABLE_MISSING_DEFINITION",
+      "reason": "R+alpha R^2 is comparison-only and the general f(R) function family remains undefined.",
+      "role": "PARTIAL_NONNATIVE_COMPARISON_REPRESENTATIVE"
+    },
+    {
+      "family_id": "F_QUADRATIC",
+      "native_selection_observation": "OUTSIDE_NATIVE_ROLE",
+      "reason": "The bounded closeout fixes REFERENCE_CONTROL_ONLY and preserves accepted negative limitations.",
+      "role": "REFERENCE_CONTROL"
+    },
+    {
+      "family_id": "F_EXTRA_FIELD",
+      "native_selection_observation": "NOT_TESTABLE_MISSING_DEFINITION",
+      "reason": "No field, kinetic term, coupling, constraints, coefficients, or exact action are preserved.",
+      "role": "VERBAL_DIRECTION_ONLY"
+    },
+    {
+      "family_id": "F_NONLOCAL",
+      "native_selection_observation": "NOT_TESTABLE_MISSING_DEFINITION",
+      "reason": "No kernel, form factor, causal prescription, boundary treatment, or exact action is preserved.",
+      "role": "VERBAL_DIRECTION_ONLY"
+    },
+    {
+      "family_id": "F_CONNECTION_TORSION",
+      "native_selection_observation": "NOT_TESTABLE_MISSING_DEFINITION",
+      "reason": "No common variables, gauge structure, invariant basis, matter coupling, or exact action is preserved.",
+      "role": "VERBAL_DIRECTION_ONLY"
+    },
+    {
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "native_selection_observation": "NOT_APPLICABLE_NOT_AN_ACTION",
+      "reason": "The probe audits equivalence properties and intentionally has no standalone action.",
+      "role": "NONACTION_DIAGNOSTIC_CONTROL"
+    }
+  ],
+  "lifecycle_result": "PASSED",
+  "nonclaim_boundary": [
+    "The survey does not select or endorse a native gravitational action or principle.",
+    "Satisfied cells for Einstein-Hilbert gravity describe a known-physics baseline, not a native derivation.",
+    "Quadratic-gravity cells remain reference-control evidence and do not reopen the closed control program.",
+    "R+alpha R^2 evidence is representative-specific and does not define or validate arbitrary f(R).",
+    "Undefined family labels are not completed by inference, analogy, or standard formulations absent from the bound sources.",
+    "The Stage 4 observation of zero source-defined native candidates is an input to Stage 5, not a Stage 5 eligibility verdict."
+  ],
+  "observed_defined_native_action_family_count": 0,
+  "open_event": {
+    "event_hash": "584a9759c86d063c9db50ac0f9e2b0f9e58348cf61c70ae88417ad422941d799",
+    "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_OPEN_v0.json",
+    "sha256": "5e9b1bf2119f75aaab675f8d3a76166a7c9eb1f84b7da8464c1be0d2f8f9ae43"
+  },
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "requirement_count": 10,
+  "requirement_ids": [
+    "R1_DIMENSION",
+    "R2_METRIC_ONLY",
+    "R3_LOCALITY",
+    "R4_DIFF_COVARIANCE",
+    "R5_CK_FIREWALL",
+    "R6_LOCAL_VARIATION",
+    "R7_SOURCE_COMPATIBILITY",
+    "R8_NEWTON_POISSON",
+    "R9_MOMENTUM_CURRENT",
+    "R10_STABILITY_NO_FIT"
+  ],
+  "scientific_conclusion": "COMPATIBILITY_SURVEY_COMPLETE_WITH_UNTESTABLE_FAMILIES; NO_SOURCE_DEFINED_NATIVE_ACTION_FAMILY_OBSERVED_FOR_STAGE_5_ELIGIBILITY_REVIEW",
+  "scientific_target": "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0",
+  "scope_hash": "e81613ed69adbe5c5586a2b9fcb22217f721923758f7af0d85a71cce84a51c51",
+  "selected_next_target": "select_toe_gravitational_action_family_eligibility_handoff_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED",
+  "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+  "stage_5_eligibility_verdict_made": false,
+  "stage_5_opened": false,
+  "standard_gr_oracle_isolation_audit": {
+    "Einstein_Hilbert_promoted_to_native": false,
+    "Einstein_Hilbert_used_as_known_physics_baseline_only": true,
+    "Einstein_Hilbert_used_to_infer_other_family_cells": false
+  },
+  "survey_boundary": {
+    "action_families_invented": 0,
+    "canonical_evidence_promoted": false,
+    "compatibility_cells_populated": 70,
+    "gravitational_actions_selected": 0,
+    "master_action_constructed_or_promoted": false,
+    "native_gravitational_principles_derived_or_postulated": 0,
+    "new_gravitational_calculations_executed": 0,
+    "quadratic_control_reopened": false
+  },
+  "terminal_outcome": "SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE",
+  "uncertainty_conflict_and_missing_derivation_ledger": {
+    "accepted_negative_result_cells": 1,
+    "missing_definition_cells": 24,
+    "missing_downstream_input_cells": 4,
+    "representative_only_partial_cells": 10,
+    "unknown_information_treated_as_failure": false,
+    "unresolved_cell_count": 0
+  }
+}

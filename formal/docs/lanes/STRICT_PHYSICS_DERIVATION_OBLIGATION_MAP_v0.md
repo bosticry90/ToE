@@ -12,6 +12,36 @@ Non-claim boundary:
 - This document does not claim physics completion, canonical master-action promotion, global seam closure, Standard Model recovery, interacting-QFT completion, or empirical validation.
 - This document is a strict physics work map, not a release-governance expansion surface.
 
+Current strict native-hypothesis obligation (2026-07-30):
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`
+- `ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`
+- `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
+- `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED`
+- Current obligation status: the closed coherence program remains terminal after a Stage 2 block. Its 13 authorized sources were insufficient, but archive-wide and repository-wide evidence sufficiency were not tested. A separate five-stage, zero-repair repository-wide native-hypothesis evidence-census program is installed under bounded governance but remains unopened with zero attempts and no scientific execution authority; installation adopts no archive material or scientific hypothesis.
+- Maintenance status: versioned passive indexing, identity caching, source-root mutation detection, hostile-path controls, deterministic batching, synthetic profiling, and census-critical dependency-impact review are complete. No scientific archive traversal or authoritative index occurred. The next decision is a separate Stage 1 scientific authorization.
+- Supplemental source obligation: if separately installed and opened, Stage 1 must canonically reindex the read-only roots `archive/ToE_Project` and `archive/ToE_Project_Starter_2025-09-24`, which postdate the legacy 7,331-file archive index. Until then their scientific content is unadjudicated, no claim is promoted, and the proposal remains nonexecuting.
+- Pre-installation obligation: retain the existing five semantic-stage IDs and mandatory closeout target; enforce the frozen workload/parser budgets, initial/final source-root snapshots, deterministic domain/lineage/conflict allocation, passive-content boundary, committed-blob/local-byte distinction, versioned index/cache contract, atomic CLOSE batch coverage, terminal-state map, and separate promotion authority. Exact archive-root ignore rules are maintenance protection only. The program remains uninstalled and unopened, and no index, cache, classification, extraction, reconciliation, or frontier calculation has run.
+- Accepted predecessor: the generic physical spin-2 block is weakly hyperbolic; strong and symmetric hyperbolicity are refuted for the frozen generic sector.
+- Accepted reduced system: the exact generalized-harmonic vacuum wave system is closed for `U=(g_mn,R,r_a,c_mna,S_mn)` with no implicit lower-order placeholder and no added physical mode.
+- Accepted subsidiary result: the exact zero-addition extension closes a finite homogeneous hierarchy whose 69 independent wave components have a complete light-cone basis; equivalence in the metric variables loses one derivative.
+- Accepted principal result: the adapted auxiliary pencil is uniformly wave-diagonal, while the metric-equivalence pencil has 64 algebraic and 50 geometric modes at each light-cone root and remains physically defective.
+- Accepted preparation: equal-order auxiliary, natural metric, adapted auxiliary, metric-equivalence, and constraint-compatible energies are frozen; every chain in `4J_3+6J_2+40J_1` is ledgered.
+- Accepted frozen calculation: the pure-principal 128-state companion has zero auxiliary loss, quadratic-frequency unrestricted metric-equivalence growth, and linear-frequency physical TT growth. The block-order screen has no positive return cycle, but the complete generic frozen subprincipal operator was not constructed.
+- Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic background operator is not closed.
+- Accepted fail-closed linearization result: metric-dependent `H(x,g)` needs an unfrozen third gauge-source jet in the differentiated metric block; the generic rank-nine trace-free tangent chart and on-shell substitution order are also absent. The Minkowski control remains preserved and was not called generic.
+- Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets, the regular trace-free atlas, separate regularity ledgers, and a declared decreasing rewrite order structurally preserve the prior contract; executable confluence, unique normalization, and idempotence remain uncertified.
+- Accepted bounded Stage 2: a structurally closed 3,950-node strict-harmonic component graph records 64 equations per trace chart and a stored Minkowski-control relationship; entrywise generic-DAG specialization and generic tensor identities were not independently certified.
+- Accepted bounded Stage 3: the generic 128-state operator is not closed because the component artifact does not fix a unique off-constraint wave-slot map and its trace charts retain dependent jets.
+- Accepted role gate: `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal.
+- Non-advancing certificate qualification: the Stage 1 gauge/atlas/jet contract is structurally preserved with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; the Stage 2 generic component DAG is structurally complete with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. No missing proof or Program B repair is authorized.
+- Program N Stage 1 closed blocked. The missing real-scalar continuum crosswalk and unjustified `phi`/`chi` `Z2` gates prohibit Stage 2 and require v0 closeout with `NO_UNIQUE_TOE_DISCRIMINATOR_V0`.
+- No variable-coefficient estimate or adapted-norm local well-posedness result is claimed. Fixed loss, iteration closure, uniqueness, and continuous dependence remain unproved.
+- No source extension, regulator/fiducial mode, order reduction, preserved-descendant adoption, or Yukawa work is authorized.
+
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
 POST_TRANSLATION_SELECTION_OUTCOME_v0: POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION
 POST_TRANSLATION_SELECTION_CATEGORY_v0: post_translation_next_target_selected

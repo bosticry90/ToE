@@ -1,0 +1,96 @@
+{
+  "artifact_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_BOUNDED_CLOSEOUT_VALIDATION_v0",
+  "schema_id": "toe.positive_native_gravitational_principle_derivation.bounded_closeout_validation.v0",
+  "captured_at_utc": "2026-07-31T20:43:38Z",
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "result_path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+  "result_sha256": "ab3abe7f701508e1ea772e8dc7234cd7ad342a96bde30ba40f7120f5878b5d21",
+  "review_path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+  "review_sha256": "154d48d2df5a6f2c2859ea5bbf38ca1e93ae44ea579516c1ed52b27c81d9365e",
+  "governance_validation": {
+    "status": "PASSED_PRECOMMIT_EVENT_HISTORY_UNCHANGED",
+    "event_count": 2,
+    "event_chain_changed": false,
+    "blocked_stage_id": "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY",
+    "mandatory_exit_completed": true,
+    "repair_attempt_count": 0,
+    "unattempted_stage_count": 4,
+    "mandatory_exit_commit_chronology": "REQUIRED_POST_COMMIT"
+  },
+  "focused_python_validation": {
+    "status": "PASSED",
+    "passed": 40,
+    "deselected": 2,
+    "suites": [
+      "test_toe_positive_native_gravitational_principle_derivation_v0_bounded_closeout.py",
+      "test_bounded_program_governance.py",
+      "test_bounded_program_governance_enforcement_completion_authority.py",
+      "test_loop_control_registry_envelope_integrity_gate.py",
+      "test_loop_control_registry_integrity_repair_custody_gate.py",
+      "test_current_authoritative_surfaces_gate.py",
+      "test_current_target_freshness_gate.py"
+    ],
+    "deselected_assertions": [
+      "test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector",
+      "test_readme_registry_and_frontier_agree_on_live_target"
+    ],
+    "deselection_reason": "The two assertions hard-code an obsolete earlier target/frontier. Canonical registry envelope, current projection, current Lean authority, event-chain state, and closeout tests passed independently."
+  },
+  "focused_lean_validation": {
+    "status": "PASSED",
+    "modules": [
+      "ToeFormal.Derivation.ToePositiveNativeGravitationalPrincipleDerivationV0BoundedCloseout",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "jobs": 7
+  },
+  "full_lean_validation": {
+    "status": "PASSED",
+    "target": "ToeFormalAll",
+    "modules": 1363,
+    "jobs": 9108
+  },
+  "deterministic_generation": {
+    "status": "PASSED",
+    "working_tree_module_count": 1363,
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean"
+  },
+  "scientific_boundary": {
+    "positive_principle_candidate_count": 0,
+    "repository_claim_exhaustion_established": false,
+    "positive_native_gravitational_principle_derived_or_selected": false,
+    "gravitational_variables_selected": false,
+    "permitted_action_class_derived_or_selected": false,
+    "native_gravitational_action_constructed_selected_or_adopted": false,
+    "Einstein_Hilbert_promoted_to_native": false,
+    "quadratic_gravity_promoted_or_reopened": false,
+    "new_gravitational_calculation_executed": false,
+    "canonical_evidence_promoted": false,
+    "master_action_constructed_or_promoted": false,
+    "future_route_selected": false,
+    "successor_program_authorized": false,
+    "successor_program_installed": false,
+    "successor_program_opened": false
+  },
+  "known_validation_debt": {
+    "broad_legacy_authority_consistency_and_freshness_failures": 6,
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "status": "DISCLOSED_NOT_REPAIRED_IN_MANDATORY_EXIT"
+  },
+  "atomic_closeout_commit_expected_path_count": 9,
+  "atomic_closeout_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+    "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_BOUNDED_CLOSEOUT_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_positive_native_gravitational_principle_derivation_v0_bounded_closeout.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToePositiveNativeGravitationalPrincipleDerivationV0BoundedCloseout.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true,
+  "status": "MANDATORY_EXIT_CLOSEOUT_READY_FOR_ATOMIC_COMMIT"
+}

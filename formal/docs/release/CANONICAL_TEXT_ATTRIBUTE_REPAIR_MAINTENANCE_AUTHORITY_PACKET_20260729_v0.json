@@ -1,0 +1,25 @@
+{
+  "artifact_id": "CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_AUTHORITY_PACKET_20260729_v0",
+  "authorized_scope": {
+    "attribute_policy_change": ".gitattributes only",
+    "effective_attribute_map_preservation_required": true,
+    "historical_index_object_preservation_required": true,
+    "maintenance_result_review_required": true,
+    "narrow_explicit_allowlist_required": true,
+    "prechange_custody_manifest_required": true,
+    "repository_wide_renormalization_authorized": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "maintenance_target": "execute_canonical_text_attribute_policy_repair_v0",
+  "prohibitions": [
+    "No scientific target rotation.",
+    "No scientific artifact modification.",
+    "No historical path renormalization.",
+    "No new physics.",
+    "No automatic maintenance successor."
+  ],
+  "required_result_review_target": "review_canonical_text_attribute_policy_repair_result_v0",
+  "schema_id": "toe.canonical_text_attribute_repair.maintenance_authority_packet.v0",
+  "scientific_target_preserved": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+  "status": "AUTHORIZED_MAINTENANCE_ONLY"
+}

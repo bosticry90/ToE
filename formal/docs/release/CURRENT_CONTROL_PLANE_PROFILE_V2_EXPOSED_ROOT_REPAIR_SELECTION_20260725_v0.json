@@ -1,0 +1,28 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION_PHASE_6",
+  "selected": "AUTHORIZE_BOUNDED_CURRENT_PROFILE_V2_EXPOSED_ROOT_REPAIR",
+  "target": "repair_current_lineage_and_prompt_contracts_and_retest_lean_dependency_acquisition_v0_once",
+  "permitted_roots": [
+    "ACCEPTED_LINEAGE_FIXED_BASE_NOT_VERSIONED_THROUGH_ACCEPTED_SUCCESSORS",
+    "PROMPT_REPAIR_BROAD_FORMAL_OUTPUT_SNAPSHOT_SUPERSEDED_BY_VALIDATION_PROFILE_ARTIFACTS",
+    "LEAN_DEPENDENCY_CHECKOUT_CORRUPTED_BY_OVERLAPPING_VALIDATION_LAUNCHES"
+  ],
+  "permitted": {
+    "versioned_lineage_contract_and_manifest": true,
+    "prompt_guard_current_historical_role_split": true,
+    "clean_isolated_lean_dependency_retry": true,
+    "current_profile_regeneration": true
+  },
+  "prohibited": {
+    "historical_record_rewrite": true,
+    "scientific_content_change": true,
+    "registry_or_v2_change": true,
+    "dirty_main_mutation": true,
+    "automatic_successor": true,
+    "scientific_execution": true
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

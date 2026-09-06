@@ -14,23 +14,23 @@ Record (computed)
     "extraction_rule": "collect FunctionDef names with prefix; sorted lexicographically",
     "function_prefix": "BR01_",
     "kind": "python_ast",
-    "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_candidates.py"
+    "path": "formal/python/toe/bridges/br01_candidates.py"
   },
   "date": "2026-01-25",
-  "fingerprint": "c302f9469e151d2c93d4837684c08fee4a64d648f9da648c37c509569dbb5d24",
+  "fingerprint": "fa3f2311cc4656147310dd129568d084c5431ff92c93d8750a0153c36165aa36",
   "inputs": {
     "OV-BR-05": {
-      "locked_fingerprint": "093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md",
+      "locked_fingerprint": "c33a1ad86ab13ca03f4d06f63eff8971d4f1dcccb0870f3b5cba44fbe5527fbb",
+      "path": "formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md",
       "present": true,
-      "record_fingerprint": "093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1",
+      "record_fingerprint": "c33a1ad86ab13ca03f4d06f63eff8971d4f1dcccb0870f3b5cba44fbe5527fbb",
       "schema": "OV-BR-05_bragg_lowk_slope_summary/v1"
     },
     "OV-DR-BR-00": {
-      "locked_fingerprint": "9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md",
+      "locked_fingerprint": "8a8ac0bbb690f6536dca4435e1014594d3ad20023e4c11e940002eefbe813dc0",
+      "path": "formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md",
       "present": true,
-      "record_fingerprint": "9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764",
+      "record_fingerprint": "8a8ac0bbb690f6536dca4435e1014594d3ad20023e4c11e940002eefbe813dc0",
       "schema": "OV-DR-BR-00_br01_prediction_declarations/v1"
     }
   },
@@ -111,4 +111,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `c302f9469e151d2c93d4837684c08fee4a64d648f9da648c37c509569dbb5d24`
+Record fingerprint: `fa3f2311cc4656147310dd129568d084c5431ff92c93d8750a0153c36165aa36`

@@ -1,0 +1,21 @@
+{
+  "artifact_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_20260729_v0",
+  "authorized_stage_count": 5,
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "immutable_manifest": {
+    "manifest_hash": "1b2d3bdcdb246019d03d185ebb296bdf24cd564fcf473008f544163685c198d5",
+    "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_MANIFEST_v1.json"
+  },
+  "installed_program_state": "UNOPENED",
+  "maintenance_authority": "install_toe_native_coherence_ontology_and_representation_bounded_program_governance_v0",
+  "mandatory_exit_target": "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+  "native_hypothesis_tested": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+  "no_subsidiary_scientific_targets": true,
+  "preserved_scientific_target": "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "repair_attempt_count": 0,
+  "schema_id": "toe.native_coherence_ontology_program.governance_installation.v0",
+  "scientific_execution_authorized": false,
+  "stage_1_opened": false,
+  "status": "PROGRAM_GOVERNANCE_INSTALLED_UNOPENED_NO_SCIENTIFIC_ROTATION"
+}

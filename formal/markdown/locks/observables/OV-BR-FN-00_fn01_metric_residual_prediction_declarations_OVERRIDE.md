@@ -10,19 +10,19 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195",
+  "fingerprint": "c2bc73fdf9a3d2341b68f549db4a6a789dc2eddeab8c5b4a786c8ae102d862e4",
   "inputs": {
     "candidate_source": {
       "extraction_rule": "collect FunctionDef names matching prefix+suffix; sorted lexicographically",
       "function_prefix": "fn01_make_",
       "function_suffix": "_artifact",
       "kind": "python_ast",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\constraints\\fn01_artifact.py"
+      "path": "formal/python/toe/constraints/fn01_artifact.py"
     },
     "declarations": {
-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
+      "expected_path": "formal/python/toe/bridges/brfn01_prediction_declarations.json",
       "extra_candidate_ids": [],
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
+      "path": "formal/python/toe/bridges/brfn01_prediction_declarations.json",
       "present": true,
       "raw_sha256": "2406e3f837778030f5a466530c08b6857cc4a3ac4d1fc2b5007bce821fef304d",
       "schema": "BRFN01_prediction_declarations/v1",
@@ -84,4 +84,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195`
+Record fingerprint: `c2bc73fdf9a3d2341b68f549db4a6a789dc2eddeab8c5b4a786c8ae102d862e4`

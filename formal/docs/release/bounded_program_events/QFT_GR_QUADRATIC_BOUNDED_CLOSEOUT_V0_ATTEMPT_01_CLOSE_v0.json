@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 1,
+  "closed_from_commit": "5043513c39e0e20bce4b4b08e085378b6c76654e",
+  "event_hash": "94bfb60e31922385cdde1ca2119ee6cd1c90f534dbda53e1b3739c658c923a99",
+  "event_sequence_number": 2,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "40acd16a141189d7542fd78cd5cceb9fb0a5e2fd6250f699ae393394bbd469c0",
+  "previous_event_hash": "40acd16a141189d7542fd78cd5cceb9fb0a5e2fd6250f699ae393394bbd469c0",
+  "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "result_artifact_hash": "f3e73a52a9c8a311eb49675fdf6b786a5bce32bba3ffa58264c1e977837eaae2",
+  "result_artifact_path": "formal/output/CALC-QFT-GR-QUADRATIC-GENERIC-BACKGROUND-LINEARIZATION-GAUGE-AND-JET-CONTRACT-v0.json",
+  "review_artifact_hash": "f452a8ed7304c4afacee5a4bd092f6955f6246726eaf3c8548df66d5774383d0",
+  "review_artifact_path": "formal/docs/release/QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0.json",
+  "terminal_result": "PASSED"
+}

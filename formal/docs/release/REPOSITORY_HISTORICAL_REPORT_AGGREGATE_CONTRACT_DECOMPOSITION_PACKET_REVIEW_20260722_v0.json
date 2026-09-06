@@ -1,0 +1,27 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_PACKET_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:19:24Z",
+  "review_basis": "INDEPENDENT_AGGREGATE_SOURCE_IDENTITY_PARTITION_SCOPE_AND_CONTAINMENT_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_PACKET_20260722_v0.json",
+    "sha256": "cd0feb3dc2f4078114cbce0a2625bb51ec73e3a026f7919f164c3defdd6e65d9"
+  },
+  "checks": {
+    "accepted_pilot_result_and_commit_bound": true,
+    "accepted_adjudication_ledger_bound": true,
+    "aggregate_test_blob_hash_and_tests_tree_bound": true,
+    "exactly_two_aggregate_outcomes_selected": true,
+    "exactly_nineteen_ordered_dependencies_required": true,
+    "fifteen_absent_ignored_and_four_committed_identities_distinguished": true,
+    "identity_local_and_aggregate_obligations_separated": true,
+    "generator_producer_consumer_distinction_required": true,
+    "latent_generator_input_chain_resolution_required": true,
+    "dirty_main_report_content_access_forbidden": true,
+    "fixture_generation_and_report_tree_writes_forbidden": true,
+    "test_and_generator_modification_forbidden": true,
+    "scientific_registry_v2_lean_and_scale_actions_forbidden": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

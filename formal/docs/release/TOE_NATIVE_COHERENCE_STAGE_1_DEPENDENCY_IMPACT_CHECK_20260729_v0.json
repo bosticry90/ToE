@@ -1,0 +1,37 @@
+{
+  "artifact_id": "TOE_NATIVE_COHERENCE_STAGE_1_DEPENDENCY_IMPACT_CHECK_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "current_dependency_surface_checks": {
+    "artifact_parsing_and_manifest_scope_hashing": "PASSED",
+    "authority_resolution_and_current_surface_parity": "PASSED",
+    "bounded_program_governance_and_adversarial_enforcement": "PASSED",
+    "current_registry_integrity_and_envelope": "PASSED",
+    "file_and_claim_input_path_discovery": "PASSED_FOR_DECLARED_STAGE_1_INPUT_ENVELOPE",
+    "Lean_aggregate_generation_and_inventory": "PASSED",
+    "scoped_test_count": 74
+  },
+  "exhaustive_python_debt": {
+    "errors": 10,
+    "exhaustive_passage_established": false,
+    "failed": 147,
+    "last_reported_passed": 14739,
+    "not_rerun_for_this_check": true,
+    "skipped": 598
+  },
+  "historical_stage_state_test_boundary": {
+    "current_post_install_run": "12 historical preparation tests reject the now-installed program because they encode the earlier pre-install state",
+    "classification": "HISTORICAL_STAGE_STATE_ASSUMPTION_NOT_CURRENT_STAGE_1_DEPENDENCY",
+    "preserved_calculation_rewritten": false,
+    "stage_1_input_or_governance_dependency": false
+  },
+  "impact_conclusion": "NO_KNOWN_EXHAUSTIVE_FAILURE_REACHES_THE_CURRENT_STAGE_1_GOVERNANCE_AUTHORITY_PARSING_GENERATION_OR_DECLARED_INPUT_DISCOVERY_SURFACES",
+  "limitations": [
+    "This is a dependency-impact check, not an exhaustive Python pass.",
+    "It does not retire, rewrite, or infer passage of historical tests.",
+    "Any newly identified failure reaching a current Stage 1 dependency must block producer execution."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "schema_id": "toe.native_coherence.stage_1_dependency_impact_check.v0",
+  "stage_1_open_permitted_by_dependency_check": true,
+  "status": "CURRENT_STAGE_1_DEPENDENCY_SURFACES_PASS_EXHAUSTIVE_DEBT_REMAINS_DISCLOSED"
+}

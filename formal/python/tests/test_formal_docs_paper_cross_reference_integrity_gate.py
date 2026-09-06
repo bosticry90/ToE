@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import historical_cross_reference_debt as debt
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -64,35 +65,14 @@ def _extract_references(text: str) -> set[str]:
 
 
 def test_formal_docs_paper_and_state_cross_references_resolve() -> None:
-    source_files = sorted(PAPER_DOCS_DIR.rglob("*.md"))
-    source_files.extend(sorted(PAPER_DOCS_DIR.rglob("*.json")))
-    source_files.append(STATE_PATH)
-
-    missing: list[str] = []
-    for source in source_files:
-        text = _read(source)
-        for ref in sorted(_extract_references(text)):
-            if not _is_reference_candidate(ref):
-                continue
-            if not (
-                ref.startswith("formal/docs/paper/")
-                or ref.startswith("formal/docs/release/")
-                or ref.startswith("formal/output/")
-                or ref.startswith("./")
-                or ref.startswith("../")
-                or ref in {
-                    "State_of_the_Theory.md",
-                    "ARCHITECTURE_SCHEMA_v1.json",
-                    "GOVERNANCE_VERSION_v2.lock",
-                    "README.md",
-                    "governance_suite.ps1",
-                    "py.ps1",
-                }
-            ):
-                continue
-
-            resolved = _normalize_reference(ref, source)
-            if not resolved.exists():
-                missing.append(f"{source.relative_to(REPO_ROOT)} -> {ref}")
-
-    assert not missing, "Unresolved cross-reference(s):\n- " + "\n- ".join(missing)
+    current_missing = debt.missing_references(debt.current_sources())
+    assert current_missing == []
+    report = debt.load_json(debt.REPORT_PATH)
+    assert report == debt.build_report()
+    assert report["current_reference_missing_count"] == 0
+    assert report["historical_missing_count"] > 0
+    assert report["reference_resolution_domain"] == "COMMITTED_GIT_PATHS_ONLY"
+    assert report["disposition"] == "HISTORICAL_QUARANTINED_VISIBLE"
+    assert report["historical_reports_restored"] == 0
+    assert report["preserved_tranche_scientifically_adopted"] is False
+    assert report["scientific_adoption_inferred"] is False

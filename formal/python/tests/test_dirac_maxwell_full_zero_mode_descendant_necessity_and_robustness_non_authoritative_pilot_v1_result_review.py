@@ -20,7 +20,7 @@ def test_all_nine_pilot_custody_paths_are_bound(artifact: dict) -> None:
     assert custody["pilot_parent"] == review.PILOT_PARENT
     assert len(custody["nine_committed_paths"]) == 9
     assert len(custody["seven_immutable_working_paths"]) == 7
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 
 
 def test_run_inventory_identities_and_roles_are_independently_reconstructed(

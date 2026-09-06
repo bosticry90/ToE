@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 1,
+  "closed_from_commit": "fc567eeff74b2c3c8d72a7cde36d8907775f45fd",
+  "event_hash": "912d075f243e417aa3bfc7292b7e4ad5d31c206cfe66e1084c41e397cd9f2d6c",
+  "event_sequence_number": 2,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "6bf67032efaf1d36bb4715936dfdef12b3a65bbb2c20ea319f3c6c12e15cbc9f",
+  "previous_event_hash": "6bf67032efaf1d36bb4715936dfdef12b3a65bbb2c20ea319f3c6c12e15cbc9f",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "result_artifact_hash": "2c4a32b16dd35d798d95a14a3a0ac466b4fff5dbafd7ae0a70e0755cef9bb81f",
+  "result_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_v0.json",
+  "review_artifact_hash": "b402ae4d6871490ab1cc64a5867b203784684dcdf8e514b918d649f5912a2a24",
+  "review_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

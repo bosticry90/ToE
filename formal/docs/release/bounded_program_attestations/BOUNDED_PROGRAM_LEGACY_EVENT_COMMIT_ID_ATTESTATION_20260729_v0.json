@@ -1,0 +1,31 @@
+{
+  "attestation_hash": "22931d9efd96755d24cbe47f580362fd99f7cb4123bea8b6f1c7be50c3835745",
+  "captured_from_commit": "a1b6ccbbdae8456aad4af7d355ecfc781fc227ce",
+  "entries": [
+    {
+      "field": "opened_from_commit",
+      "git_object_type": "commit",
+      "legacy_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_OPEN_v0.json",
+      "resolved_full_commit_id": "43df2c47f330a0907a9ab1f5718a964e4ee10590",
+      "stored_abbreviated_id": "43df2c47",
+      "uniqueness_candidate_count": 1,
+      "uniqueness_candidates": [
+        "43df2c47f330a0907a9ab1f5718a964e4ee10590"
+      ]
+    },
+    {
+      "field": "closed_from_commit",
+      "git_object_type": "commit",
+      "legacy_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_SURROGATE_V0_ATTEMPT_01_CLOSE_v0.json",
+      "resolved_full_commit_id": "77c18d977635b24426e393d912dee3c2dc5f4313",
+      "stored_abbreviated_id": "77c18d97",
+      "uniqueness_candidate_count": 1,
+      "uniqueness_candidates": [
+        "77c18d977635b24426e393d912dee3c2dc5f4313"
+      ]
+    }
+  ],
+  "future_event_commit_id_policy": "lowercase full 40-character commit IDs required",
+  "schema_id": "toe.bounded_program.legacy_event_commit_id_attestation.v0",
+  "status": "IMMUTABLE_LEGACY_IDENTIFIER_CUSTODY_ATTESTATION"
+}

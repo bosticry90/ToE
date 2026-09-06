@@ -1,0 +1,47 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_PROFILE_V4_RESULT_REVIEW_20260725_v0",
+  "verdict": "CURRENT_CONTROL_PLANE_PROFILE_V4_PASS_ACCEPTED",
+  "reviewed_result": {
+    "path": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V4_RESULT_20260725_v0.json",
+    "sha256": "330ecd406db3d6f048e222a21de84073d7a927e085cf74f876d956b9640d25f7",
+    "commit": "5f97d1d8a111db147972fbd52fd15188b4682b07",
+    "tree": "f84218a730a7791a0221c4ee546cd9b1834ebbfb"
+  },
+  "independent_review": {
+    "checkout": "C:/toe-lean-rv0",
+    "checkout_mode": "DETACHED_SHORT_PATH",
+    "checkout_commit": "5f97d1d8a111db147972fbd52fd15188b4682b07",
+    "lineage_and_profile_guards": "8 / 8 PASS",
+    "duration_seconds": 87.74,
+    "junit": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v4/current_profile_v4_independent_review.junit.xml",
+      "sha256": "103a135ebda7a81a8f24a42ecccd122cf61bff7aea9cb6ea8370d2d028d7a905",
+      "size_bytes": 1588
+    },
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "complete_current_inventory_reconciled": true,
+    "profile_membership_frozen_before_execution": true,
+    "profile_state_unchanged_during_execution": true,
+    "unknown_current_reachability": 0,
+    "current_control_plane_passed": true,
+    "historical_nonpassing_not_deleted": true,
+    "root_level_repair_stop_rule_reached": true,
+    "dirty_main_preserved": true,
+    "scientific_or_authority_state_changed": false
+  },
+  "accepted_boundary": {
+    "current_control_plane": "GREEN",
+    "historical_debt_isolation": "NOT_YET_PROVEN",
+    "recovery_lineage_complete_lean_graph": "NOT_YET_EXECUTED",
+    "dirty_main_terminal_dispositions": "NOT_YET_COMPLETE",
+    "integration_candidate": "NOT_YET_CONSTRUCTED",
+    "recovery_control_plane_complete": false
+  },
+  "required_next_gate": "PROVE_STRUCTURAL_HISTORICAL_ISOLATION",
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

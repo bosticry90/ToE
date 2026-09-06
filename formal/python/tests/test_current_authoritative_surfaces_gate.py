@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import hashlib
+import json
+import subprocess
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
@@ -17,6 +20,27 @@ INDEX_PATH = (
     / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+COHERENCE_INVENTORY_RESULT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json"
+)
+COHERENCE_INVENTORY_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json"
+)
+COHERENCE_INVENTORY_OPEN_AUTHORITY_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN_AUTHORITY_20260729_v0.json"
+)
 FRONTIER_PATH = (
     REPO_ROOT
     / "formal"
@@ -305,19 +329,122 @@ def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def _sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _source_hash_is_preserved(path: Path, expected_sha256: str) -> bool:
+    if _sha256(path) == expected_sha256:
+        return True
+    relative_path = path.relative_to(REPO_ROOT).as_posix()
+    commits = subprocess.run(
+        ["git", "log", "--format=%H", "--", relative_path],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    for commit in commits:
+        blob = subprocess.run(
+            ["git", "show", f"{commit}:{relative_path}"],
+            cwd=REPO_ROOT,
+            check=True,
+            capture_output=True,
+        ).stdout
+        if hashlib.sha256(blob).hexdigest() == expected_sha256:
+            return True
+    return False
+
+
+def test_controlled_coherence_claim_inventory_is_source_bound_and_nonpromotional() -> None:
+    result = json.loads(_read(COHERENCE_INVENTORY_RESULT_PATH))
+    review = json.loads(_read(COHERENCE_INVENTORY_REVIEW_PATH))
+    authority = json.loads(_read(COHERENCE_INVENTORY_OPEN_AUTHORITY_PATH))
+
+    authorized = {row["artifact_id"]: row for row in authority["authorized_inputs"]}
+    inventoried = {
+        row["artifact_id"]: row for row in result["source_bound_claim_inventory"]
+    }
+    assert inventoried.keys() == authorized.keys()
+    for artifact_id, expected in authorized.items():
+        row = inventoried[artifact_id]
+        assert row["path"] == expected["path"]
+        assert row["sha256"] == expected["sha256"]
+        assert _source_hash_is_preserved(
+            REPO_ROOT / row["path"], row["sha256"]
+        )
+
+    required = {
+        "claim_id",
+        "exact_source_artifact",
+        "source_location",
+        "source_date",
+        "source_authority_status",
+        "original_wording_or_tightly_bounded_excerpt",
+        "controlled_paraphrase",
+        "original_project_terms",
+        "claim_class",
+        "claimed_coherence_bearer",
+        "scale_and_domain",
+        "local_or_relational_status",
+        "fundamental_emergent_or_effective_status",
+        "mathematical_structure_if_any",
+        "units_or_dimensional_status",
+        "observable_or_operational_content",
+        "dependencies",
+        "conflicts",
+        "supersession_status",
+        "eligibility_for_stage_2",
+    }
+    claims = result["claim_inventory"]
+    assert len(claims) == 13
+    assert len({claim["claim_id"] for claim in claims}) == len(claims)
+    assert all(required <= claim.keys() for claim in claims)
+
+    selected = result["exactly_one_claim_selected_for_stage_2_or_failed_closed"]
+    eligible = [
+        claim
+        for claim in claims
+        if claim["eligibility_for_stage_2"] == "ELIGIBLE_FOR_OPERATIONAL_TEST"
+    ]
+    assert [claim["claim_id"] for claim in eligible] == ["COH-CLAIM-001"]
+    assert selected["claim_id"] == "COH-CLAIM-001"
+    assert selected["claim_selected_as_true"] is False
+    assert selected["field_or_representation_selected"] is False
+    assert selected["stage_2_opened"] is False
+    assert result["terminal_outcome"] == (
+        "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE"
+    )
+    assert result["legacy_UEFM_context_admissibility_record"]["admissible_direct_claim_count"] == 0
+    assert result["symbolic_similarity_meaning_transport_firewall"][
+        "transported_equivalences_accepted_in_stage_1"
+    ] == []
+
+    assert review["accepted"] is True
+    assert not review["failed_checks"]
+    assert all(review["checks"].values())
+    assert review["reviewed_result"]["sha256"] == _sha256(
+        COHERENCE_INVENTORY_RESULT_PATH
+    )
+    assert review["stage_2_open_authorized_by_this_review"] is False
+
+
 def test_current_authoritative_surfaces_index_records_live_authority_chain() -> None:
     text = _read(INDEX_PATH)
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result",
-        "ACTIVE_LANE_v0: prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
-        "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
-        "CURRENT_LIVE_TARGET_OUTCOME_v0: PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH",
-        "CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
-        "CURRENT_LIVE_TARGET_KIND_v0: pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+            "CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+            "PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+            "ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+            "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean",
+            "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json",
+            "CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED",
+            "CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR",
+            "CURRENT_LIVE_TARGET_KIND_v0: toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0",
+            "CURRENT_BOUNDED_PROGRAM_ID_v0: NONE_NEW_PROGRAM_INSTALLED",
+            "CURRENT_BOUNDED_PROGRAM_STATE_v0: NONE_NEW_PROGRAM_INSTALLED",
+            "CURRENT_TARGET_PHASE_v0: PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY",
         "Higher-Dimensional Curved-Background Scalar Guardrail",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_CRITICIZABILITY_ONLY_PACKET_AND_AUTHORIZES_READINESS_ADJUDICATION_EXECUTION_ONLY",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTED_WITH_NO_RELEASE_ASSEMBLY_OR_PROMOTION",
@@ -406,13 +533,13 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_SOURCE_MAP_CLOSED_NONBLOCKING_STATUS_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARATION_ONLY",
         "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARED_AFTER_TRANCHE_004_MOVEMENT_WITH_NO_RELEASE_READINESS_OR_SEAM_PROMOTION",
         "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_ALL_TRANCHES_DOCUMENTED_NONBLOCKING_AND_AUTHORIZES_RELEASE_READINESS_ADJUDICATION_PREPARATION_ONLY",
-            "CURRENT_LIVE_NEXT_TARGET_v0: prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
-            "PREVIOUS_LIVE_NEXT_TARGET_v0: review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result",
-            "ACTIVE_LANE_v0: prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+                "CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+                "PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+                "ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-            "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
-            "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
+                "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean",
+                "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",

@@ -1,0 +1,26 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_STAGE_3_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-08-02T01:19:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_the_passed_stage_2_result_review_validation_and_close_event": true,
+    "authority_binds_all_23_records_all_18_checklists_and_the_seven_exact_candidates": true,
+    "authority_freezes_completeness_conflict_generality_provenance_portability_and_postulate_reduction_criteria": true,
+    "authority_preserves_all_three_cp_nlse_conflict_sets_without_selection_or_repair": true,
+    "authority_forbids_new_source_search_overflow_substitution_and_numerical_default_promotion": true,
+    "authority_does_not_construct_select_validate_or_physically_interpret_ccft_v0": true,
+    "authority_does_not_open_theorem_discovery_or_attempt_new_mathematics": true,
+    "authority_preserves_repository_nonexhaustion_and_stage_4_as_separately_authorized": true,
+    "authority_requires_all_four_manifest_outputs_independent_review_and_atomic_close": true,
+    "source_hashes_reproduce": true
+  },
+  "contract_adjudication_performed": false,
+  "decision": "AUTHORIZE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_STAGE_3_OPEN",
+  "failed_checks": [],
+  "model_or_theorem_work_authorized": false,
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "scientific_result_created": false,
+  "stage_4_authorized": false,
+  "status": "STAGE_3_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}

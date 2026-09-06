@@ -1,0 +1,450 @@
+{
+  "authority": {
+    "consumed_result_review_verdict": "ACCEPTED_CONDITIONAL_MODE_SELECTION_ENVELOPE_RESULT",
+    "consumed_review_gate_count": 16,
+    "frozen_result_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_ENVELOPE_RESULT_REVIEW_20260718_v0.md",
+        "sha256": "452377d5ee5a6022ec778908a025530a2861a1dfbfa8211a3628a4d3aaff8685"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_ENVELOPE_RESULT_REVIEW_20260718_v0.json",
+        "sha256": "5770911342b5713be8bbe40d91d7fb639524a50c65d4ead8137a7e662988a2e6"
+      },
+      {
+        "relative_path": "formal/python/tools/post_quadratic_gravity_comparison_conditional_mode_selection_envelope_result_review_v0.py",
+        "sha256": "601f5d2a6fff22e44d7aaed3b20e2fb774ed75a5e8caef51a3e35405eba5e6aa"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_quadratic_gravity_comparison_conditional_mode_selection_envelope_result_review_v0.py",
+        "sha256": "e2b5282472a861d35b8a803b48da6e8f23146123631af1aa5b55570544e897bf"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostQuadraticGravityComparisonConditionalModeSelectionEnvelopeResultReviewV0.lean",
+        "sha256": "440a7d96f72ee4e9bb6b8cb5bb99c99f52bce7575b299544270a4f95e2c1310b"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_quadratic_gravity_conditional_mode_selection_envelope_scientific_response_selection_v0.py",
+      "sha256": "1940fd3e6a6b0ef8eedac86d97cb99366e67cb6b714702344b323720eb5e9c79"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_QUADRATIC_GRAVITY_CONDITIONAL_MODE_SELECTION_ENVELOPE_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+      "sha256": "370550b372a911bdcc44723403b3ca819b60d7612ea07012fed4336bc3a3fd20"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_quadratic_gravity_conditional_mode_selection_envelope_scientific_response_selection_v0.py",
+      "sha256": "d3b4f1ff1743bc66724a715d76e1dd27bee75ad5832d9e6e70a905f9e78526f3"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Scientific-response selection and preparation authorization only. No beta=0 law, scalar branch, alpha value, R+alpha R^2 action, scalar viability claim, native principle, postulate, matter action, outside-family mechanism, empirical fit, orbital transport, frame-dragging result, GR-pillar promotion, V2 cell, or master-action change is selected, established, executed, or authorized here.",
+  "current_posture": {
+    "conditional_envelope": "COMPLETED_AND_ACCEPTED",
+    "conditions_adopted": 0,
+    "frame_dragging": "NOT_RESUMED",
+    "gravitational_action": "NOT_SELECTED",
+    "native_branch_selectors": 0,
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "prepare_scalar_only_quadratic_gravity_viability_and_native_relevance_packet_v0",
+    "quadratic_comparison": "COMPLETED_AND_ACCEPTED",
+    "selected_packet_prepared": false,
+    "selected_response": "PREPARE_SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET"
+  },
+  "preparation_gates": {
+    "failure_count": 0,
+    "gate_count": 14,
+    "pass_count": 14,
+    "rows": [
+      {
+        "gate_id": "ACCEPTED_ENVELOPE_REVIEW_CUSTODY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_FOUR_AUTHORIZED_ROUTES_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_CONDITION_OR_BRANCH_ADOPTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BETA_ZERO_IS_STUDY_CONDITION_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALPHA_REMAINS_SYMBOLIC_AND_UNSELECTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SCALAR_VIABILITY_NOT_PRELOADED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NATIVE_RELEVANCE_REMAINS_AN_OPEN_TEST",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXTERNAL_SOURCE_AND_NO_MATTER_ACTION_IMPORT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MINIMAL_MODE_ROUTE_DEFERRED_NOT_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "OUTSIDE_FAMILY_ROUTE_DEFERRED_UNTIL_NARROWED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "0I_TO_ORBIT_ROUTE_DEFERRED_AS_DOWNSTREAM_COMPARATOR",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RANKING_CRITERIA_AND_SCORES_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "WINNER_STABLE_UNDER_24_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PACKET_PREPARATION_ONLY_AND_INDEPENDENT_REVIEW_STOP",
+        "status": "PASS"
+      }
+    ]
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "disposition": "SELECTED_FOR_PACKET_PREPARATION_ONLY",
+        "kind": "PACKET_PREPARATION_ONLY",
+        "scientific_endpoint": "Determine whether the conditionally remaining R+alpha R^2 comparison subfamily merits deeper study and whether any accepted ToE concept supplies native relevance, without adopting beta=0 or the subfamily.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "decisive_scientific_yield": 5,
+          "direct_use_of_accepted_result": 5,
+          "information_gain_about_missing_principle": 5,
+          "non_circularity": 5,
+          "scope_containment": 5,
+          "stopping_rule_precision": 5
+        },
+        "target": "prepare_scalar_only_quadratic_gravity_viability_and_native_relevance_packet_v0",
+        "weighted_score": 110
+      },
+      {
+        "candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "POSTULATE_REQUIREMENTS_ANALYSIS",
+        "scientific_endpoint": "Test whether minimal mode content can be justified without assuming the Einstein spectrum it would conditionally select.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 4,
+          "decisive_scientific_yield": 4,
+          "direct_use_of_accepted_result": 4,
+          "information_gain_about_missing_principle": 5,
+          "non_circularity": 2,
+          "scope_containment": 5,
+          "stopping_rule_precision": 4
+        },
+        "target": "prepare_minimal_mode_gravitational_postulate_requirements_analysis_packet_v0",
+        "weighted_score": 90
+      },
+      {
+        "candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR_TRANSPORT",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "DOWNSTREAM_COMPARISON_TRANSPORT",
+        "scientific_endpoint": "Transport the supplied current response to an orbital comparator without claiming native gravity or resolving scalar-mode authority.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "decisive_scientific_yield": 3,
+          "direct_use_of_accepted_result": 4,
+          "information_gain_about_missing_principle": 2,
+          "non_circularity": 5,
+          "scope_containment": 5,
+          "stopping_rule_precision": 5
+        },
+        "target": "prepare_supplied_quadratic_gravity_0i_to_orbit_comparator_packet_v0",
+        "weighted_score": 89
+      },
+      {
+        "candidate_id": "OUTSIDE_FAMILY_GHOST_AVOIDANCE_MECHANISM_SURVEY",
+        "disposition": "DEFERRED_UNTIL_ONE_MECHANISM_IS_NAMED_NOT_REJECTED",
+        "kind": "THEORY_CLASS_OPPORTUNITY_SURVEY",
+        "scientific_endpoint": "Identify one mechanism outside local quadratic metric gravity before authorizing any derivation or theory-family expansion.",
+        "scores": {
+          "authority_clarity": 3,
+          "boundedness": 1,
+          "decisive_scientific_yield": 4,
+          "direct_use_of_accepted_result": 3,
+          "information_gain_about_missing_principle": 4,
+          "non_circularity": 4,
+          "scope_containment": 1,
+          "stopping_rule_precision": 2
+        },
+        "target": "prepare_bounded_outside_family_ghost_avoidance_mechanism_survey_packet_v0",
+        "weighted_score": 64
+      }
+    ],
+    "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+    "runner_up_score": 90,
+    "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+    "selected_score": 110
+  },
+  "retained_conditional_facts": {
+    "Sigma": "3 alpha+beta",
+    "beta_zero_consequence": "additional negative-residue spin-2 pole absent within frozen family",
+    "facts_adopt_beta_zero_or_scalar_branch": false,
+    "non_tachyonic_scalar_on_beta_zero": "alpha<0 under frozen conventions",
+    "scalar_mass_on_beta_zero": "m0^2=-1/(6 alpha)"
+  },
+  "schema_id": "POST_QUADRATIC_GRAVITY_CONDITIONAL_MODE_SELECTION_ENVELOPE_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0",
+  "scope": {
+    "GR_pillar_promoted": false,
+    "alpha_selected": false,
+    "authoritative_V2_population_authorized": false,
+    "beta_zero_adopted": false,
+    "empirical_fit_authorized": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "master_action_mutated": false,
+    "matter_action_imported": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_proposed_or_authorized": false,
+    "orbital_transport_authorized": false,
+    "outside_family_mechanism_opened": false,
+    "scalar_branch_adopted": false,
+    "scalar_viability_execution_authorized": false,
+    "scalar_viability_packet_preparation_authorized": true,
+    "scalar_viability_packet_prepared_now": false,
+    "scientific_response_selection_executed": true
+  },
+  "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+  "selected_next_target": "prepare_scalar_only_quadratic_gravity_viability_and_native_relevance_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_COMPARISON_SUBFAMILY_NO_BRANCH_ADOPTION",
+  "selected_packet_contract": {
+    "alpha_status": "SYMBOLIC_UNSELECTED",
+    "beta_status": "beta=0 STUDY_CONDITION_FROM_SUPPLIED_GHOST_AVOIDANCE_NOT_ADOPTED",
+    "comparison_subfamily": "R+alpha R^2",
+    "execution_authorized": false,
+    "independent_packet_review_required": true,
+    "non_tachyonic_stratum": "alpha<0 under frozen conventions; stratum to assess, not a selected coupling",
+    "questions": [
+      "selected-background stability beyond the accepted Minkowski result",
+      "coupling to the externally supplied source trace",
+      "source compatibility and conservation assumptions",
+      "symbolic scalar range and parameter strata",
+      "screening or decoupling obligations without preloading a mechanism",
+      "source channels and prospective discriminating observables",
+      "whether any accepted ToE concept supplies native scalar relevance",
+      "best next derivation or localized obstruction"
+    ],
+    "source_status": "EXTERNALLY_SUPPLIED_CONSERVED_COMPARISON_SOURCE_NO_NATIVE_MATTER_ACTION",
+    "status": "SUPPLIED_COMPARISON_SUBFAMILY_CONDITIONALLY_MOTIVATED_NOT_SELECTED"
+  },
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_count": 8,
+    "criterion_scale": "0..5_RESEARCH_PRIORITY_NOT_TRUTH_PROBABILITY",
+    "maximum_weighted_score": 110,
+    "weights": {
+      "authority_clarity": 2,
+      "boundedness": 3,
+      "decisive_scientific_yield": 3,
+      "direct_use_of_accepted_result": 3,
+      "information_gain_about_missing_principle": 4,
+      "non_circularity": 3,
+      "scope_containment": 2,
+      "stopping_rule_precision": 2
+    }
+  },
+  "selection_rationale": [
+    "directly downstream of the accepted comparison and envelope",
+    "tests the only modified branch remaining after conditional spin-2 exclusion",
+    "can yield either a viability map or a localized obstruction",
+    "informs whether a future principle must exclude all extra modes or only spin-2",
+    "narrower than an unconstrained outside-family survey",
+    "less circular than beginning with minimal Einstein mode content",
+    "addresses principle formation more directly than orbital comparator transport"
+  ],
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 9,
+    "rows": [
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 78,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 95,
+        "variant": "omit_direct_use_of_accepted_result"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR_TRANSPORT",
+        "runner_up_score": 81,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 90,
+        "variant": "omit_information_gain_about_missing_principle"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 78,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 95,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 84,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 95,
+        "variant": "omit_non_circularity"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR_TRANSPORT",
+        "runner_up_score": 80,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 95,
+        "variant": "omit_decisive_scientific_yield"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 80,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 100,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 80,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 100,
+        "variant": "omit_scope_containment"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 82,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 100,
+        "variant": "omit_stopping_rule_precision"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 86,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "direct_use_of_accepted_result_-1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 94,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "direct_use_of_accepted_result_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR_TRANSPORT",
+        "runner_up_score": 87,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "information_gain_about_missing_principle_-1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 95,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "information_gain_about_missing_principle_+1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 86,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 94,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 88,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "non_circularity_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR_TRANSPORT",
+        "runner_up_score": 94,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "non_circularity_+1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 86,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "decisive_scientific_yield_-1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 94,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "decisive_scientific_yield_+1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 85,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 95,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 85,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "scope_containment_-1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 95,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "scope_containment_+1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 86,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 105,
+        "variant": "stopping_rule_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "MINIMAL_MODE_POSTULATE_REQUIREMENTS_ANALYSIS",
+        "runner_up_score": 94,
+        "selected_candidate_id": "SCALAR_ONLY_VIABILITY_AND_NATIVE_RELEVANCE",
+        "selected_score": 115,
+        "variant": "stopping_rule_precision_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_post_quadratic_gravity_conditional_mode_selection_envelope_scientific_response_v0",
+  "verdict": "SELECTED_SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_PREPARATION"
+}

@@ -1,0 +1,319 @@
+{
+  "C_k_firewall": {
+    "action_embedding_authorized": false,
+    "multiplier_or_penalty_dynamics_authorized": false,
+    "packet_rewrites_action": false,
+    "preparation_finding": "REGISTERED_SOURCE_POLICY_CONFLICT",
+    "required_review_diagnostic_if_unresolved": "CK_FIREWALL_ACTION_SOURCE_CONFLICT",
+    "retained_policy": "ADMISSIBILITY_AUDIT_ONLY",
+    "selected_source_contains_displayed_C_k_multiplier_term": true,
+    "source_contribution_authorized": false,
+    "variation_authorized": false
+  },
+  "Rep32_relationship": {
+    "analytic_first_variation_from_actionRep32_available": false,
+    "classification": "SEPARATE_STRUCTURAL_MODEL_CONTINUUM_RELATION_UNESTABLISHED",
+    "convergence_theorem_available": false,
+    "discretization_theorem_available": false,
+    "prior_transport_result": "GR_TRANSPORT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT",
+    "reduction_theorem_available": false,
+    "shared_action_terminology_grants_continuum_authority": false
+  },
+  "authority": {
+    "consumed_selection_verdict": "SELECTED_GR_NATIVE_CONTINUUM_METRIC_VARIATION_SURFACE_PREPARATION",
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/GR_FIELD_EQUATION_SURFACE_FAILURE_RESPONSE_SELECTION_20260717_v0.json",
+        "sha256": "314f50857a2f6378b97d60449d518591e504193690100a9b9f543af3e26f3efa"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/ActionRep32Def.lean",
+        "sha256": "da375e85850deb5d32da8a60c24d2fd7021c95143f8da036973d9575bd398458"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/FirstVariationRep32Def.lean",
+        "sha256": "8c7a6a3f3aa74f240945e3d2ac23a05c6e5fa6fa310977ba9c03db89f456d920"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/QFT/DocumentMasterActionMapping.lean",
+        "sha256": "56ad40bfe0443a27b1c35142c52ae2430958dace2b8e62eef8e4e14e31e54ddf"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+        "sha256": "fdadf7cb74401fd1d994841c9dbbbce5f6333e86d967d0aa349ed8987c183e8f"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json",
+        "sha256": "7232643ab971c1f647421c81bb52ef37f0a636262bc172d3fffc73ed1c6a4d54"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+      },
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v1.json",
+        "sha256": "2c6ea6800243635b05da4e89847f177987de6b9ccaeb6bbbe8c8e769a2a1a183"
+      },
+      {
+        "relative_path": "formal/output/reports/gr_master_action_transport_attack_retry_packet_20260412_v0.json",
+        "sha256": "9e9e9d3436526346186873a3dd4bbfab2114db7914349c3a81cf36eb3a197267"
+      },
+      {
+        "relative_path": "formal/docs/lanes/GR_NATIVE_CONTINUUM_METRIC_VARIATION_AND_TENSOR_SURFACE_PACKET_20260717_v0.md",
+        "sha256": "35b0de6f6f9b41ffdbf9e6544a65392ff2a2964589eb3d4dc3401f4ade7767c2"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/gr_native_continuum_metric_variation_and_tensor_surface_packet_v0.py",
+      "sha256": "fba104dbbd18fcbfe17b90f88cb4474435a1dd4578a62702e201d98943253a52"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_gr_native_continuum_metric_variation_and_tensor_surface_packet_v0.py",
+      "sha256": "115e84f2438593b7d1c50dc71437c7593a6ed362a88aab87f647667ed074b0ec"
+    }
+  },
+  "boundary_contract": {
+    "GHY_term_added": false,
+    "finite_boundary_variational_principle_claimed": false,
+    "future_finite_boundary_route_requires_separate_authority": true,
+    "purpose": "make total-divergence terms vanish in the local bulk field-equation test",
+    "selected_route": "LOCAL_BULK_COMPACT_SUPPORT",
+    "silent_boundary_term_discard_allowed": false,
+    "variation": "delta e^a_mu in C_c^infinity(interior(M))"
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Prepared existence-and-variation-contract packet only. One exact candidate action, a proposed tetrad route, complete readiness gates, five terminal outcomes, and strict nonclaims are frozen for independent review. No continuum tensor field surface, stress tensor, Einstein equation, GR recovery, seam closure, master-action promotion, empirical result, or automation is created.",
+  "continuum_domain_and_units_gate": {
+    "constant_insertion_or_field_rescaling_during_review_allowed": false,
+    "dimensionful_target": "SI",
+    "missing_closure_outcome": "BLOCKED_INCOMPLETE_CONTINUUM_ACTION_CONTRACT",
+    "required_domain": "oriented four-dimensional Lorentzian manifold M",
+    "required_field_data": [
+      "tetrad and metric differentiability/nondegeneracy class",
+      "field bundles and admissible configurations",
+      "one common action-unit convention",
+      "dimensionally homogeneous retained integrand terms"
+    ],
+    "retained_signature": "(+,-,-,-)",
+    "retained_temporal_coordinate": "x^0=c t",
+    "source_unit_posture": "NATURAL_UNIT_LIKE_SHORTHAND_NOT_EXPLICITLY_CLOSED"
+  },
+  "excluded_or_comparator_surfaces": {
+    "required_count": 5,
+    "rows": [
+      {
+        "classification": "STRUCTURAL_SCAFFOLD",
+        "forbidden_inference": "continuum metric-action authority",
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/ActionRep32Def.lean",
+        "surface_id": "ACTION_REP32"
+      },
+      {
+        "classification": "DECLARED_COMPARISON_PAIRING",
+        "forbidden_inference": "analytic first variation derived from actionRep32",
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/FirstVariationRep32Def.lean",
+        "surface_id": "FIRST_VARIATION_REP32"
+      },
+      {
+        "classification": "BOUNDED_FREE_SCALAR_TRANSLATION",
+        "forbidden_inference": "global candidate metric variation",
+        "relative_path": "formal/toe_formal/ToeFormal/QFT/DocumentMasterActionMapping.lean",
+        "surface_id": "DOCUMENT_MASTER_ACTION_MAPPING"
+      },
+      {
+        "classification": "PROVISIONAL_STANDARD_GR_SANDBOX",
+        "forbidden_inference": "ToE-native Einstein equation",
+        "relative_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "surface_id": "PROVISIONAL_EINSTEIN_SCALAR_ROUTE"
+      },
+      {
+        "classification": "STANDARD_GR_SUPPLIED_SECTOR",
+        "forbidden_inference": "full-candidate or emergent ToE gravity",
+        "surface_id": "STANDALONE_EINSTEIN_HILBERT_SECTOR"
+      }
+    ]
+  },
+  "gravitational_variable_contract": {
+    "formulation": "SECOND_ORDER_TORSION_FREE_TETRAD",
+    "full_candidate_variable": "covariant tetrad e^a_mu",
+    "metric_only_bosonic_subaction_may_equal_full_candidate": false,
+    "metric_relation": "g_mu_nu=eta_ab e^a_mu e^b_nu",
+    "metric_symbol_only_full_candidate_variation_allowed": false,
+    "missing_contract_diagnostic": "BLOCKED_SPINOR_METRIC_VARIATION_SURFACE",
+    "required_structures": [
+      "invertible oriented tetrad",
+      "spin structure and spinor bundle",
+      "fixed flat gamma matrices gamma^a",
+      "curved gamma matrices gamma^mu=e_a^mu gamma^a",
+      "local Lorentz covariance",
+      "exact fields held fixed under tetrad variation",
+      "real Hermitian Dirac action density"
+    ],
+    "route_authorized_as_complete_before_review": false,
+    "spin_connection": "omega_mu^ab(e), metric compatible and not independently varied"
+  },
+  "hard_stop": {
+    "accepted_ready_review_does_not_establish_tensor_equation": true,
+    "accepted_ready_review_may_authorize": "one separate bounded local bulk tetrad-variation attempt",
+    "only_independent_packet_review_next": true,
+    "stopping_rule": "Freeze one exact candidate, one proposed tetrad-route contract, complete dependency and boundary gates, five outcomes, and stop for independent review.",
+    "variation_authorized_now": false
+  },
+  "independent_review_protocol": {
+    "acceptance_criteria": [
+      "sole action source and exclusions reproduce byte-exactly",
+      "no action-source blending occurs",
+      "covariant tetrad route is complete and project-authorized",
+      "all retained sectors close field, domain, unit, and tetrad dependence",
+      "compact-support boundary contract suffices for the claimed local bulk scope",
+      "stress energy is generated by the selected variational definition",
+      "C_k source-policy conflict is resolved by pre-existing authority, not packet editing",
+      "Rep32 remains within structural authority",
+      "Einstein equation and provisional sandbox never enter as native inputs",
+      "no metric/tetrad variation or downstream GR calculation occurred"
+    ],
+    "allowed_outcomes": [
+      "NATIVE_CONTINUUM_METRIC_VARIATION_CONTRACT_READY",
+      "BLOCKED_INCOMPLETE_CONTINUUM_ACTION_CONTRACT",
+      "NO_NATIVE_CONTINUUM_METRIC_ACTION_SURFACE",
+      "SUPPLIED_STANDARD_GR_VARIATIONAL_COMPARATOR_ONLY",
+      "BLOCKED_SPINOR_METRIC_VARIATION_SURFACE"
+    ],
+    "diagnostics_in_order": [
+      "ACTION_SOURCE_IDENTITY_FAILURE",
+      "ACTION_SOURCE_BLENDING_FAILURE",
+      "CK_FIREWALL_ACTION_SOURCE_CONFLICT",
+      "ACTION_DIMENSION_AND_CONSTANT_CLOSURE_FAILURE",
+      "CONTINUUM_DOMAIN_AND_FIELD_BUNDLE_FAILURE",
+      "BLOCKED_SPINOR_METRIC_VARIATION_SURFACE",
+      "HIDDEN_METRIC_DEPENDENCE_FAILURE",
+      "BOUNDARY_VARIATION_CONTRACT_FAILURE",
+      "STRESS_ENERGY_VARIATIONAL_DEFINITION_FAILURE",
+      "REP32_CONTINUUM_RELATIONSHIP_FAILURE",
+      "EINSTEIN_EQUATION_IMPORT_OR_ORACLE_LEAKAGE"
+    ],
+    "exactly_one_terminal_outcome_required": true,
+    "fail_fast": true,
+    "passing_later_gate_repairs_earlier_failure": false
+  },
+  "matter_source_contract": {
+    "consistency_target": "tau_a^mu=T^mu_nu e_a_nu",
+    "local_Lorentz_and_symmetry_obligations_required": true,
+    "metric_subroute_definition": "T_mu_nu=-(2/sqrt(-g)) delta S_m/delta g^mu_nu",
+    "previous_stress_tensor_may_replace_variation": false,
+    "retained_T_A_T_psi_T_total_classification": "COMPARISON_POLICIES_NOT_VARIATION_DERIVED",
+    "selected_tetrad_definition": "tau_a^mu=(1/e) delta S_m/delta e^a_mu"
+  },
+  "metric_dependency_ledger": {
+    "hidden_dependency_allowed": false,
+    "required_count": 6,
+    "rows": [
+      {
+        "preparation_finding": "Einstein-Hilbert-shaped term is present; continuum domain, regularity, boundary, and common-unit contracts remain review obligations.",
+        "required_dependencies": [
+          "e=sqrt(-g)",
+          "R[e,omega(e)]",
+          "Lambda",
+          "curvature regularity"
+        ],
+        "sector": "geometry"
+      },
+      {
+        "preparation_finding": "The source shorthand does not select a spin structure, tetrad/spin connection contract, or exact Hermitian density.",
+        "required_dependencies": [
+          "e",
+          "gamma^mu(e)",
+          "omega_mu^ab(e)",
+          "spinor adjoint",
+          "gauge-plus-spin covariant derivative",
+          "real Hermitian action density"
+        ],
+        "sector": "Dirac"
+      },
+      {
+        "preparation_finding": "The contraction is named; bundle, domain, and common action-unit normalization are not fixed by the source.",
+        "required_dependencies": [
+          "e",
+          "inverse metric contractions in F_mu_nu F^mu_nu",
+          "gauge bundle and field domain",
+          "SI or natural-unit normalization"
+        ],
+        "sector": "gauge"
+      },
+      {
+        "preparation_finding": "The kinetic and potential shapes are named; field inventory, potential, regularity, and common units remain incomplete.",
+        "required_dependencies": [
+          "e",
+          "inverse metric",
+          "scalar derivative",
+          "field inventory",
+          "potential and regularity"
+        ],
+        "sector": "scalar"
+      },
+      {
+        "preparation_finding": "The term is explicitly speculative and underdefined.",
+        "required_dependencies": [
+          "e",
+          "rho scalar-versus-density type",
+          "dimensionless logarithm argument",
+          "reference measure or density scale"
+        ],
+        "sector": "statistical"
+      },
+      {
+        "preparation_finding": "The selected source displays multiplier action embedding, while later accepted policy forbids C_k action embedding and variation.",
+        "required_dependencies": [
+          "none permitted under current admissibility-only policy"
+        ],
+        "sector": "C_k"
+      }
+    ],
+    "stress_tensor_substitution_for_missing_dependency_allowed": false
+  },
+  "schema_id": "GR_NATIVE_CONTINUUM_METRIC_VARIATION_AND_TENSOR_SURFACE_PACKET_20260717_v0",
+  "scientific_question": "Does the project possess one sufficiently defined, project-authorized continuum gravitational action whose genuine gravitational-variable variation can produce a tensor field equation without importing the Einstein equation as an assumption?",
+  "scope": {
+    "C_k_action_embedding_executed": false,
+    "C_k_variation_executed": false,
+    "Einstein_equation_derived": false,
+    "Einstein_equation_imported": false,
+    "GR_pillar_completed": false,
+    "automation_created": false,
+    "candidate_action_rewritten": false,
+    "empirical_analysis_executed": false,
+    "gravitomagnetic_calculation_executed": false,
+    "master_action_promoted": false,
+    "metric_variation_executed": false,
+    "packet_preparation_only": true,
+    "repository_migration_executed": false,
+    "rotating_source_lane_reopened": false,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_calculated": false,
+    "tetrad_variation_executed": false,
+    "weak_field_reduction_executed": false
+  },
+  "selected_next_target": "review_gr_native_continuum_metric_variation_and_tensor_surface_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_PACKET_REVIEW_ONLY",
+  "sole_action_candidate": {
+    "byte_exact_source_required": true,
+    "current_authority": "WORKING_FORM_NONCANONICAL_UNPROMOTED",
+    "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+    "source_blending_allowed": false,
+    "source_classification": "TOE_NATIVE_CANDIDATE",
+    "source_id": "TOE_CANDIDATE_MASTER_ACTION_v0",
+    "term_insertion_removal_or_reclassification_allowed": false,
+    "variational_readiness": "UNADJUDICATED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "target": "prepare_gr_native_continuum_metric_variation_and_tensor_surface_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

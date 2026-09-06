@@ -12,10 +12,10 @@ Record (computed)
   "fingerprint": "8cc81ee1864625af421a5f632f4311d49c38e81ac0432edc7032bb32a7d67a16",
   "inputs": {
     "OV-FN-WT-01": {
-      "locked_fingerprint": "edcf08aa416b68811b86f7399ca57f663eb6d07c3d88207a951b24c048f90d0d",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md",
+      "locked_fingerprint": "a86cd0d18626f2e8715da72a37df325553fceb2831023fcc6a9f67360471be8c",
+      "path": "formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md",
       "present": true,
-      "record_fingerprint": "edcf08aa416b68811b86f7399ca57f663eb6d07c3d88207a951b24c048f90d0d",
+      "record_fingerprint": "a86cd0d18626f2e8715da72a37df325553fceb2831023fcc6a9f67360471be8c",
       "schema": "OV-FN-WT-01_fn01_weight_policy_pruning_table/v1"
     }
   },

@@ -3,9 +3,10 @@ A Formal Research Hypothesis Toward a Unified Physical Framework
 
 ## Start here
 
-- Public introduction: [PUBLIC_OVERVIEW.md](PUBLIC_OVERVIEW.md)
-- Repository setup and architecture: [TECHNICAL_REPOSITORY_GUIDE.md](TECHNICAL_REPOSITORY_GUIDE.md)
-- Maxwell–Dirac result and robustness status: [MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md](MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md)
+- Project orientation and authority map: [PROJECT_ENTRY_GUIDE.md](PROJECT_ENTRY_GUIDE.md)
+- Plain-language scientific-status boundary: [formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md](formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md)
+- Repository setup and validation: [DEVELOPMENT.md](DEVELOPMENT.md)
+- Accepted historical Maxwell–Dirac robustness review: [formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json](formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CANONICAL_RESULT_REVIEW_20260715_v0.json)
 
 Compact developer setup and validation: `DEVELOPMENT.md`.
 
@@ -15,8 +16,52 @@ Latest nonauthoritative engineering audit:
 CURRENT-AUTHORITY NOTE
 The dated status narratives below are append-only checkpoint history. For the live target and release/blocker posture, read `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` (`current_projection_v0` and the uppercase `CURRENT_LIVE_*` authority tokens) together with `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`. The large `current_target_state` object is a compatibility container; only the keys named by `current_target_state_authority_contract_v0` are authoritative. Historical prose and other flattened fields do not override the current projection.
 
+CURRENT SCIENTIFIC CHECKPOINT (2026-07-30)
+- Route: `BOUNDED_RECONCILIATION_OR_REPLAY`; no preserved July 13–19 or post-recovery descendant was automatically adopted.
+- Accepted result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED` for the generic physical spin-2 block of the frozen vacuum quadratic action.
+- Accepted reduced system: `U=(g_mn,R,r_a,c_mna,S_mn)` with exact wave equations and algebraic equivalence to the fourth-order metric equation only on the full constraint surface.
+- Accepted constraint result: the exact zero-addition off-constraint extension has a finite homogeneous subsidiary hierarchy; its normalized 69-component independent pencil is `(1-lambda^2) I_69`, while equivalence to the metric formulation carries one derivative of loss.
+- Accepted principal result: the equal-order and adapted auxiliary pencils normalize to `(1-lambda^2) I_64`, but the metric-equivalence grading is triangular and defective with one derivative of loss; its light-cone roots have algebraic multiplicity 64 and geometric multiplicity 50.
+- Accepted energy preparation: all 50 Jordan chains at each root are ledgered as `4J_3+6J_2+40J_1`; the one-derivative equivalence-map shift is established, but the actual frozen propagator loss remains unresolved between one and two derivatives.
+- Accepted frozen-growth result: the exact pure-principal 128-state chain companion gives zero auxiliary loss, quadratic-frequency growth in the unrestricted metric-equivalence grading when `2alpha+beta != 0`, and linear-frequency growth in the physical TT sector. The block-order graph has no positive return cycle, but it is not the complete background-jet subprincipal matrix; the generic frozen metric loss and the constraint-restricted minimum therefore remain blocked.
+- Accepted exact-operator closure result: the complete 128-state Minkowski control operator is explicit and placeholder-free with 224 nonzero entries. The generic background operator is not closed because the accepted predecessor leaves `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet unexpanded.
+- Accepted component-linearization result: the generic expansion fails closed. Linearizing the differentiated metric block for the accepted metric-dependent `H(x,g)` gauge family requires a third gauge-source jet although only `C2` is frozen; the generic rank-nine trace-free tangent chart and the nonredundant on-shell substitution order are also absent. The 128-state/224-entry Minkowski control remains preserved but was not rederived from a nonexistent generic form.
+- Accepted bounded Stage 1: strict harmonic gauge, zero gauge-source jets and constraint additions, the ten-chart trace-free atlas, compact regular strata, separate regularity ledgers, and a declared decreasing rewrite order are frozen. Complete overlap enumeration, confluence, unique normalization, and idempotence are not executably established.
+- Accepted bounded Stage 2: the strict-harmonic generic-background linearization is structurally represented by a closed 3,950-node component graph with 64 inventoried equations in each trace chart. The stored Minkowski-control relationship remains evidence, but entrywise generic-DAG specialization and the generic tensor identities were not independently recomputed.
+- Accepted bounded Stage 3: `GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`. The component artifact does not determine a unique generic off-constraint 128-state wave-slot map, and every trace chart retains dependent spin-component jets. The zero-repair rule prohibits Stages 4–5 and requires the role gate.
+- Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY`; its mathematical `control_result` is independently `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`. Program B is terminal.
+- Corrective certification boundary: Stage 1 remains structurally preserved, but rewrite confluence is not executably established. Stage 2's generic component DAG remains structurally complete, but its generic algebraic identities and generic-DAG-to-Minkowski specialization are not independently certified. These qualifications do not reopen Program B or change its terminal role/result.
+- Program N authorization accepted: five semantic stages, zero repairs, and no subsidiary scientific targets.
+- Native Stage 1 is closed `BLOCKED`: no accepted CCFT-to-relativistic-real-scalar map exists, and neither required independent `Z2` gate is justified.
+- Program N v0 is terminal after one attempted stage and zero repairs; Stages 2–5 were never opened, no portal action or classical sandbox was constructed, and no automatic v1 is authorized.
+- Native frontier selection: `HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0` remains the selected native hypothesis because coherence ontology is the earliest unresolved dependency shared by native field-content, action, seam, native-theory pillar adjudication, and discriminator work. Ordinary known-physics pillar baselines remain parallel controls.
+- Installed bounded program: `TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0` has five semantic stages, zero repairs, no subsidiary scientific targets, and a mandatory bounded exit.
+- Scope qualification: the closed coherence program tested 13 authorized sources only. Those sources were insufficient, but archive-wide and repository-wide evidence sufficiency remain `NOT_TESTED`; the closed result and event history are unchanged.
+- Installed next program: a five-stage, zero-repair repository-wide native-hypothesis evidence census covering ontology, pillars, seams, master-action variants, bridge conditions, gravity, matter, emergence, thermodynamics, predictions, and falsification. The program is installed but unopened; it has no attempt, event, or scientific output.
+- Supplemental archive scope: `archive/ToE_Project` and `archive/ToE_Project_Starter_2025-09-24` are explicit read-only Stage 1 inputs. They postdate the legacy 7,331-file archive index, require canonical reindexing if the program is installed, and remain scientifically unadjudicated and unadopted.
+- The installed immutable manifest retains the canonical stage IDs and mandatory exit and binds workload budgets, two-pass root snapshots, deterministic overflow selection, passive parser limits, committed-blob identity, local-cache distrust, atomic CLOSE batching, lifecycle mappings, and post-census-only promotion. Exact `.gitignore` rules protect the two local roots and `archive/custody_bundles/` without hiding the broader tracked archive.
+- Indexing/performance maintenance is complete. A versioned passive scanner, Git-blob/local-SHA cache rules, snapshot mutation detection, eight-batch aggregation, hostile-path controls, and a synthetic performance profile are validated without reading the scientific archive. The dependency-impact result is `KNOWN_EXHAUSTIVE_FAILURES_DO_NOT_REACH_CENSUS_DEPENDENCIES`; exhaustive Python passage remains unclaimed.
+- Exact live target: `prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`.
+- Stage state: Attempt 1 is `CLOSED/PASSED`; Attempt 2 is `CLOSED/BLOCKED` because `COH-CLAIM-001` lacks the bearer, scale, quantity, operation, bridge-input/output, dimensional, comparator, observable, and failure-boundary definitions required for an operational physical claim.
+- Program result: `EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`; operational result: `COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL`.
+- Evidence: `formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean`.
+- Report: `formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json`.
+- Boundary: the coherence program remains terminal after its mandatory exit. The census program is installed under governance and its scanner maintenance is complete, but Stage 1 is not authorized or open; no archive has been scientifically traversed, no authoritative census index has been generated, no current claim is promoted, and no representation, field, action, seam, observable, or automatic successor follows.
+- Validation debt: exhaustive Python passage is not established; the last reported exhaustive run remains `14,739 passed, 147 failed, 10 errors, 598 skipped` and requires separate classification. This does not override the focused authority and preparation checks.
+
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
+CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR
+CURRENT_LIVE_TARGET_KIND_v0: toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0
+
 CURRENT-MAINTENANCE NOTE
-Operational maintenance is separate from scientific authority. Its bounded current surface is `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json`; the current maintenance target is `prepare_loop_control_registry_sharding_and_current_projection_packet_v0`, while the scientific target is `prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2`. The registry-sharding packet is a preparation contract only: no production projection, index, shard, consumer migration, or monolith retirement is authorized or executed.
+Operational maintenance is separate from scientific authority. Resolve its bounded current surface through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`; it selects the completed `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json` record for target `execute_july_16_19_repository_integration_and_live_authority_repair_v0`. The scientific target embedded in that maintenance record is the immutable closeout-time snapshot, not live scientific authority. Maintenance integration did not adopt the preserved July 16–19 scientific chain, authorize new physics, or authorize a Yukawa rerun.
 
 INDEPENDENT REGISTRY-GUARDRAIL REVIEW
 The independent review in `formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_INDEPENDENT_REVIEW_20260711_v0.json` accepts the frozen debt counts and identity sets, subject to versioned source-hash and statement-line-hash corrections, and accepts the v0 packet only as preparation evidence. It rejects migration-execution readiness because byte-identical JSONL reconstruction and fail-closed external authority/history binding were not demonstrated. The versioned v1 corrective guardrail is recommended but not selected; both current targets remain unchanged and registry migration remains unauthorized.

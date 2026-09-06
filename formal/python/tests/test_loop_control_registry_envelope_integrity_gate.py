@@ -10,6 +10,7 @@ from formal.python.tools.loop_control_registry_integrity import (
     CURRENT_STATE_AUTHORITY_CONTRACT_SCHEMA_ID,
     CURRENT_STATE_AUTHORITY_KEYS,
     REGISTRY_SCHEMA_ID,
+    REGISTRY_SCHEMA_VERSION,
     REGISTRY_STATUS,
     RegistryIntegrityError,
     atomic_write_registry,
@@ -93,6 +94,7 @@ def test_registry_envelope_and_current_projection_are_canonical() -> None:
     target = state["live_next_target"]
 
     assert registry["schema_id"] == REGISTRY_SCHEMA_ID
+    assert registry["schema_version"] == REGISTRY_SCHEMA_VERSION
     assert registry["status"] == REGISTRY_STATUS
     assert registry["ACTIVE_LANE_v0"] == target
     assert registry["CURRENT_LIVE_NEXT_TARGET_v0"] == target

@@ -1,3 +1,165 @@
+## CURRENT SCIENTIFIC CHECKPOINT (2026-07-30)
+
+Scientific authority selected bounded reconciliation/replay without automatically
+adopting preserved descendants. The frozen vacuum quadratic action has now passed
+an independent Phase A result review: its physical spin-2 principal pencil is
+`-beta (lambda^2 - 1)^2 I_2`, with algebraic multiplicity four and geometric
+multiplicity two at each light-cone root. Generic strong and symmetric
+hyperbolicity are therefore refuted in the tested physical block.
+
+The exact generalized-harmonic auxiliary system has now been derived for
+`U=(g_mn,R,r_a,c_mna,S_mn)`. Its trace/trace-free kinetic map is invertible for
+`beta != 0` and `3 alpha + beta != 0`, and its equivalence to the original
+fourth-order metric equation is accepted only on the complete constraint
+surface.
+
+The exact zero-addition off-constraint extension has now yielded a finite
+homogeneous subsidiary hierarchy. Its 69 independent wave components have a
+complete light-cone basis, but translating auxiliary equality back to the
+metric formulation requires one additional metric derivative. This healthy
+constraint subsystem does not repair the physical spin-2 defect.
+
+The complete reduced principal structure is now classified. The equal-order
+and adapted auxiliary pencils have a uniform complete wave basis, while the
+metric-equivalence grading is triangular and defective: each light-cone root
+has algebraic multiplicity 64 and geometric multiplicity 50. The physical
+spin-2 block remains defective and the equivalence map loses one derivative.
+
+The energy hierarchy and all 50 Jordan chains at each light-cone root are now
+frozen. The eigenvector deficit splits into two physical TT deficiencies,
+eight deficiencies from four length-three reconstruction chains, and four
+non-TT length-two deficiencies. The one-derivative equivalence-map shift is
+not a propagator theorem.
+
+The exact pure-principal 128-state frozen companion now gives zero loss in the
+auxiliary grading, quadratic-frequency growth in the unrestricted
+metric-equivalence grading away from the internal `2alpha+beta=0` control, and
+linear-frequency growth in the physical TT sector. The block-order graph has
+no positive-frequency return cycle, but it is not the complete generic
+background-jet subprincipal matrix. The complete generic frozen metric loss
+therefore remains blocked, as does the constraint-compatible minimum because
+no explicit 128-state tangent projector has yet been constructed.
+
+The exact generic frozen-operator attempt now supplies a complete,
+placeholder-free 128-state Minkowski control with 224 nonzero matrix entries.
+It does not close the generic background operator. The accepted predecessor
+still names `Q^H`, the tensor-box remainder, and differentiated right-hand
+sides without component expansion, and it does not freeze the independent
+prescribed-gauge or on-shell background jet needed for their Jacobians.
+
+The component-linearization execution has now failed closed at a sharper
+boundary. The accepted metric-dependent `H(x,g)` family is only `C2`, while
+linearizing the differentiated metric block requires a third gauge-source
+jet. The predecessor also has no generic rank-nine trace-free tangent chart
+and no nonredundant on-shell background substitution order. Selecting a
+field-independent gauge branch, reusing the flat trace chart, or choosing an
+on-shell chart silently would change the subprincipal coefficients being
+tested. None was manufactured. The Minkowski control remains preserved.
+
+The bounded closeout's first semantic stage has now passed. Strict harmonic
+gauge fixes `H^mu=delta H^mu=0`, all required gauge-source jets vanish, no
+constraint addition is present, the ten-chart trace-free atlas covers the
+regular strata, and the reduced and metric-equivalence regularity ledgers are
+separate. The declared rewrite ranks decrease, but complete overlap
+enumeration, confluence,
+unique normalization, and idempotence are not executably established. Stage 2
+preserves a structurally complete 3,950-node/64-equation component DAG and its
+stored Minkowski-control relationship, but no independent entrywise
+generic-DAG specialization or generic tensor-identity proof is certified.
+
+The exact live target is
+`close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`.
+The mandatory role gate records quadratic gravity as `REFERENCE_CONTROL_ONLY`
+with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; Program B is terminal. Program N is
+authorized with five stages, zero repairs, and no subsidiary targets. Its first
+scientific stage closed blocked: the repository contains no accepted
+CCFT-to-relativistic-real-scalar crosswalk, and the required independent
+`Z2` symmetries are unjustified. V0 therefore closes without a unique
+discriminator and without advancing to its action stage.
+
+The selector compared four native-frontier paths and selected
+`HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0`. Coherence ontology is the
+earliest unresolved dependency shared by native field-content, action, seam,
+native-theory pillar adjudication, and discriminator work; ordinary
+known-physics pillar baselines remain parallel controls. The five-stage,
+zero-repair program was installed and attempted twice. Stage 1
+`CONTROLLED_COHERENCE_CLAIM_INVENTORY` is `CLOSED/PASSED`: 13 source-bound claim
+records preserve six conflict classes. Stage 2
+`COHERENCE_OPERATIONAL_DEFINITION_TEST` is `CLOSED/BLOCKED`: the sole eligible
+claim, `COH-CLAIM-001`, lacks all nine required operational elements. The
+mandatory exit is complete with
+`EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`; Stages 3–5 remain
+unattempted. No representation, calculation, native model, automatic
+successor, empirical claim, CCFT validation, or CCFT rejection has been
+selected. Any future coherence route requires a separately authorized program
+and new substantive input. Programs B and N remain closed. This closeout is
+now explicitly scope-qualified: it tested 13 authorized sources, not the
+entire archive or repository. Archive-wide and repository-wide evidence
+sufficiency remain untested, and the original result is unchanged.
+
+A separate five-stage, zero-repair repository-wide native-hypothesis evidence
+census is now installed under bounded governance. If separately opened, it
+would inventory ontology, pillars, seams, master-action
+variants, bridge conditions, gravity, matter, emergence, thermodynamics,
+predictions, and falsification across current and historical material. The
+program is unopened, has zero attempts, and has no scientific execution
+authority. No archive material, scientific hypothesis, field, action, seam,
+or observable has been adopted or selected.
+The newly available `archive/ToE_Project` and
+`archive/ToE_Project_Starter_2025-09-24` trees are now explicit read-only
+inputs to the proposed first stage. They are not covered by the legacy
+7,331-file archive index, so a future authorized Stage 1 must canonically
+reindex them before assessment. Their scientific content remains
+unadjudicated and unadopted.
+The immutable program manifest binds the pre-installation controls without
+opening the program. These retain the prepared semantic-stage identifiers and
+mandatory closeout target, impose a 640-file/1-GiB deep-review ceiling plus
+claim and parser budgets, require initial/final root snapshots, prohibit
+manual overflow selection and active archive content, distinguish committed
+Git blob identity from worktree and local bytes, and require atomic final
+batch custody at CLOSE. Exact tracked ignore rules protect the two local
+archive roots and future custody bundles from accidental staging. No census
+index, hash cache, source classification, claim extraction, or evidence
+promotion has been generated.
+
+The indexing/performance maintenance tranche is now complete on generated
+nonauthoritative inputs. It provides a versioned passive scanner, committed
+Git-blob and local SHA-256 identity rules, cache invalidation, initial/final
+snapshot comparison, hostile-path and active-content controls, deterministic
+eight-batch aggregation, and a synthetic performance profile. The bounded
+dependency-impact result is
+`KNOWN_EXHAUSTIVE_FAILURES_DO_NOT_REACH_CENSUS_DEPENDENCIES`; this is not an
+exhaustive Python pass. The census remains `INSTALLED_UNOPENED`, with zero
+attempts and no scientific archive traversal or authoritative index.
+
+Focused validation covers the proposal and current authority surfaces.
+Exhaustive Python passage is not established: the last reported exhaustive
+result remains `14,739 passed, 147 failed, 10 errors, 598 skipped` pending a
+separate validation-debt classification.
+
+A non-advancing custody correction now qualifies two intermediate quadratic
+certificates without reopening Program B. Stage 1 preserves its gauge, atlas,
+jet, and regularity contracts, but executable rewrite confluence has not been
+established. Stage 2 preserves a structurally closed generic component DAG and
+its equation inventory, but the generic tensor identities and entrywise
+generic-DAG-to-Minkowski specialization remain independently uncertified. The
+quadratic role and unresolved bounded result are unchanged.
+
+Variable-coefficient estimates, loss nonaccumulation, local well-posedness, source extensions,
+preserved-descendant adoption, Maxwell–Dirac execution, and Yukawa work remain
+unestablished or unauthorized.
+
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
+CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR
+CURRENT_LIVE_TARGET_KIND_v0: toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0
+
 ## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)
 
 Project posture:
@@ -11879,7 +12041,7 @@ Exit-row promotion token:
 
 Criteria evidence artifact token:
 - `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_full_derivation_discharge_criteria_cycle10_v0`
-- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1`
+- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3dddcb3e5928507fe04bb7427d39838af8363395a9d9a8f2a52480d8c031f13a`
 
 Criteria evidence artifact pointer:
 - `formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json`
@@ -12036,7 +12198,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: aefe5054b14554a3e3ec1607f27558002e2faab8a6e0b06bd13b90329ecf83e8`
+- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3194a26af1303fe260c23b01d4cf4d6ab226de31abe30ac4cc556ff288d7cb97`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
@@ -12147,7 +12309,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
-- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00`
+- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: c22c204617236a3a68ef852e13a9daac0f471061d68582835ba4c995e5d9bf71`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
@@ -12247,7 +12409,7 @@ Integrated discharge criteria rows (cycle-010 pinned):
 
 Integrated criteria evidence artifact token:
 - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
-- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4`
+- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 7e3cdb5b36164c7394fffdb4ed7081c4a192c5f1e852278a0d4c1f58e82f5a45`
 
 Integrated criteria evidence artifact pointer:
 - `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`

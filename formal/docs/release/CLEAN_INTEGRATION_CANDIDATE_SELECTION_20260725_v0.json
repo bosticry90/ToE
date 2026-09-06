@@ -1,0 +1,44 @@
+{
+  "schema_id": "CLEAN_INTEGRATION_CANDIDATE_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION_PHASE_10",
+  "selected": "CONSTRUCT_AND_VALIDATE_CLEAN_INTEGRATION_CANDIDATE",
+  "accepted_recovery_lineage": {
+    "commit": "9f8a06e185c9084fdc720d3efa5f9719ee64298c",
+    "tree": "f8bdbc58521ec653df1da958525f0def96675c94",
+    "recovery_lineage_lean_review": "formal/docs/release/RECOVERY_LINEAGE_LEAN_REPRODUCIBILITY_RESULT_REVIEW_20260725_v0.json",
+    "dirty_main_custody_review": "formal/docs/release/DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "custody_import": {
+    "approved_for_clean_integration": 0,
+    "paths_to_import": 0,
+    "dirty_main_wholesale_merge": false,
+    "integration_base": "ACCEPTED_RECOVERY_LINEAGE_ONLY"
+  },
+  "required_validation": [
+    "CURRENT_CONTROL_PLANE_PROFILE_PASS",
+    "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES_OR_ACCEPTED_FALLBACK",
+    "LF_CHECKOUT_PASS_AND_CLEAN",
+    "CRLF_CHECKOUT_PASS_AND_CLEAN",
+    "DETACHED_INDEPENDENT_REVIEW_PASS_AND_CLEAN",
+    "LINUX_CI_PASS",
+    "SECOND_COMPLETE_LEAN_GRAPH_PASS",
+    "AUTHORITY_FIELD_OWNERSHIP_AND_MIRRORS_AGREE"
+  ],
+  "prohibited": {
+    "scientific_content_change": true,
+    "scientific_authority_rotation": true,
+    "v2_enrollment": true,
+    "scientific_target_selection": true,
+    "scientific_execution": true,
+    "dirty_main_mutation": true,
+    "historical_debt_deletion": true,
+    "automatic_successor_authority": true
+  },
+  "terminal_outcomes": [
+    "RECOVERY_CONTROL_PLANE_COMPLETE",
+    "RECOVERY_BLOCKED_INTEGRATION_VALIDATION"
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

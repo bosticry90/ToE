@@ -1,0 +1,62 @@
+{
+  "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0",
+  "atomic_review_commit_expected_path_count": 7,
+  "atomic_review_commit_expected_paths": [
+    "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_ccft_core_program_governance_installation.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTCoreProgramGovernanceInstallationResultReviewV0.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-07-31T22:00:00Z",
+  "focused_python_validation": {
+    "passed": 56,
+    "status": "PASSED",
+    "suites": [
+      "test_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_preparation_authority.py",
+      "test_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_preparation.py",
+      "test_toe_ccft_core_program_governance_installation.py",
+      "test_bounded_program_governance.py",
+      "test_bounded_program_governance_enforcement_completion_authority.py",
+      "test_bounded_program_governance_enforcement_adversarial.py"
+    ]
+  },
+  "full_lean_validation": {
+    "jobs": 9114,
+    "modules": 1369,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "governance_validation": {
+    "attempted_stage_count": 0,
+    "event_count": 0,
+    "program_state": "UNOPENED",
+    "scientific_event_created": false,
+    "status": "PASSED"
+  },
+  "installation_commit": "6b9b9b16418d5e709870d4079918abad53b8526a",
+  "legacy_validation_debt": {
+    "broad_exhaustive_python_pass_claimed": false,
+    "legacy_authority_parser_and_freshness_debt_preserved": true
+  },
+  "manifest_path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+  "manifest_sha256": "12824e836f1f687317649b02d204dde17f01a074cb7818f46353e4fbd97469be",
+  "nonclaim_boundary": {
+    "ccft_action_or_evolution_law_constructed": false,
+    "ccft_mathematical_core_recovered": false,
+    "ccft_model_or_physical_claim_established": false,
+    "ccft_representation_or_field_selected": false,
+    "ccft_seam_observable_or_discriminator_selected": false,
+    "evidence_promoted": false,
+    "operational_coherence_definition_established": false,
+    "scientific_stage_opened": false,
+    "successor_authorized": false
+  },
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "schema_id": "toe.ccft_native_mathematical_core_and_operationalization.program_governance_installation_validation.v0",
+  "status": "PROGRAM_INSTALLATION_REVIEWED_AND_VALIDATED_UNOPENED",
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true
+}

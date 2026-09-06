@@ -1,0 +1,352 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+        "sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+        "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+      },
+      {
+        "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_v0.py",
+        "sha256": "d25634e5ad6bd59ec85dd25e321bda5ffeff7529557c1419634185d87efc3f9b"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_v0.py",
+        "sha256": "5282518d483a33aed986a3babf37061058f8e4a680dcaf3ad8882c3d69ae5c3b"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeGravitationalPrincipleRequirementsAndActionSelectionPacketV0.lean",
+        "sha256": "40c6e0b41d37ee977d4836c437bc7116efb7150056c95853e833b2a82cce0371"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0.json",
+        "sha256": "e2468ea98384383654efe73dd054f5149beb6d4a62db45123109d962999dea66"
+      },
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "7c17a967d719f0dabf887cf5fb98b7ccaf1d3dbc34f19d8b5f6368d66f2ac7ea"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_review_v0.py",
+      "sha256": "56004b43c82b3f6f2826b5776ffe834f1264164d5a79f3b02f8d1d1e1352388b"
+    },
+    "reviewed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "test": {
+      "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_review_v0.py",
+      "sha256": "cf2672d4926e86e7f2b2a9f5b6897aaaca5a89e6f11ee65e02b90803b3c12b3b"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Independent packet review only. Ten source bindings, seven comparison families, standard-GR isolation, and conservative local-bulk equivalence are retained. V0 is blocked by missing per-row statement classes, a missing epistemic-undecidability matrix state, overlapping native-selection and standard-GR-collapse predicates, and no executable shared control path. No survivor analysis, family judgment, principle, postulate, action, matter sector, variation, GR result, tooling lane, or automation is created.",
+  "control_path_audit": {
+    "declared_control_count": 8,
+    "diagnostic": "CONTROL_ANALYSIS_PATH_NOT_EXECUTABLE",
+    "end_to_end_control_count": 0,
+    "public_packet_callables": [
+      "artifact_bytes",
+      "build_packet",
+      "main"
+    ],
+    "recognized_analysis_entry_points": [],
+    "status": "FAIL"
+  },
+  "equivalence_audit": {
+    "allowed_rule_count": 5,
+    "forbidden_rule_count": 7,
+    "local_bulk_scope_preserved": true,
+    "physically_distinct_dynamics_merged": false,
+    "status": "PASS"
+  },
+  "family_envelope_audit": {
+    "adequate_for_first_selection_power_test": true,
+    "bounded_catalog": true,
+    "exhaustive_claimed": false,
+    "family_adopted_count": 0,
+    "family_count": 7,
+    "status": "PASS"
+  },
+  "findings": {
+    "blocking_count": 4,
+    "finding_count": 4,
+    "rows": [
+      {
+        "diagnostic": "REQUIREMENT_STATEMENT_CLASS_BINDING_MISSING",
+        "finding": "All ten requirement rows omit statement_class; authority_status values are not members of, and have no total frozen mapping to, the declared three-way statement-class vocabulary.",
+        "order": 1,
+        "severity": "BLOCKING"
+      },
+      {
+        "diagnostic": "MATRIX_UNDECIDABLE_STATE_MISSING",
+        "finding": "The matrix cannot distinguish a completed but epistemically undecidable comparison from NOT_EVALUATED or an affirmative SURVIVES result.",
+        "order": 2,
+        "severity": "BLOCKING"
+      },
+      {
+        "diagnostic": "OUTCOME_PREDICATE_OVERLAP",
+        "finding": "A unique nondistinctive F_EH survivor selected without supplied uniqueness premises satisfies both native-selection and standard-GR-collapse gates; the earlier gate makes the intended collapse classification unreachable.",
+        "order": 3,
+        "severity": "BLOCKING"
+      },
+      {
+        "diagnostic": "CONTROL_ANALYSIS_PATH_NOT_EXECUTABLE",
+        "finding": "The packet module exposes construction and static validation but no shared matrix classifier, decision evaluator, or control entry point through which the eight promised mutations can execute end to end.",
+        "order": 4,
+        "severity": "BLOCKING"
+      }
+    ]
+  },
+  "matrix_vocabulary_audit": {
+    "current_values": [
+      "SURVIVES",
+      "ELIMINATED",
+      "OUTSIDE_ENVELOPE",
+      "EQUIVALENT_REPRESENTATIVE",
+      "REQUIRES_SUPPLIED_ASSUMPTION",
+      "NOT_EVALUATED"
+    ],
+    "diagnostic": "MATRIX_UNDECIDABLE_STATE_MISSING",
+    "not_evaluated_is_equivalent_to_undecidable": false,
+    "required_completed_analysis_state": "NOT_DECIDABLE_FROM_REQUIREMENT",
+    "required_state_present": false,
+    "status": "FAIL",
+    "survives_is_equivalent_to_undecidable": false
+  },
+  "outcome_overlap_audit": {
+    "diagnostic": "OUTCOME_PREDICATE_OVERLAP",
+    "first_match_result_under_v0_order": "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+    "intended_specific_classification": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+    "matching_outcome_count": 2,
+    "matching_outcomes": [
+      "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+      "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR"
+    ],
+    "status": "FAIL",
+    "witness": {
+      "consistent": true,
+      "project_specific_distinctiveness_demonstrated": false,
+      "supplied_uniqueness_assumption_used": false,
+      "unique_survivor": "F_EH"
+    }
+  },
+  "primary_diagnostic": "REQUIREMENT_STATEMENT_CLASS_BINDING_MISSING",
+  "required_v1_repairs": [
+    "bind one exact three-way statement_class to every requirement and optional premise",
+    "add a completed-analysis NOT_DECIDABLE_FROM_REQUIREMENT matrix state",
+    "make all six outcome predicates disjoint and test zero overlap",
+    "provide one bounded table-analysis entry point shared by valid analysis and all eight controls",
+    "preserve all ten sources seven families standard-GR isolation equivalence rules and nonclaims"
+  ],
+  "requirement_source_audit": {
+    "pass_count": 10,
+    "requirement_count": 10,
+    "rows": [
+      {
+        "requirement_id": "R1_DIMENSION",
+        "scope_boundary_present": true,
+        "source_binding_count": 1,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R2_METRIC_ONLY",
+        "scope_boundary_present": true,
+        "source_binding_count": 1,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R3_LOCALITY",
+        "scope_boundary_present": true,
+        "source_binding_count": 1,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "scope_boundary_present": true,
+        "source_binding_count": 1,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R5_CK_FIREWALL",
+        "scope_boundary_present": true,
+        "source_binding_count": 1,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "scope_boundary_present": true,
+        "source_binding_count": 1,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "scope_boundary_present": true,
+        "source_binding_count": 3,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R8_NEWTON_POISSON",
+        "scope_boundary_present": true,
+        "source_binding_count": 2,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "scope_boundary_present": true,
+        "source_binding_count": 2,
+        "status": "PASS"
+      },
+      {
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "scope_boundary_present": true,
+        "source_binding_count": 1,
+        "status": "PASS"
+      }
+    ]
+  },
+  "retained_results": {
+    "comparison_family_envelope": "7_OF_7_RETAINED",
+    "local_bulk_equivalence_scope": "RETAINED",
+    "minimal_gravitational_contract": "ACCEPTED",
+    "native_candidate_readiness": "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "requirement_source_bindings": "10_OF_10_RETAINED",
+    "standard_GR_isolation": "RETAINED"
+  },
+  "review_answer": "The ten requirement sources and seven-family comparison envelope are retained, but v0 is not executable as a safe action-selection analysis. Requirement rows do not bind the declared statement class; the matrix lacks an epistemic-undecidability state; native-selection and standard-GR collapse predicates overlap; and the controls have no shared executable analysis path.",
+  "review_controls": {
+    "all_single_mutation": true,
+    "control_count": 4,
+    "rows": [
+      {
+        "control_id": "REVIEW_DROP_AUTHORITY_STATUS_AND_QUERY_STATEMENT_CLASS",
+        "mutation_count": 1,
+        "observed_diagnostic": "REQUIREMENT_STATEMENT_CLASS_BINDING_MISSING"
+      },
+      {
+        "control_id": "REVIEW_REQUIRE_COMPLETED_UNDECIDABLE_MATRIX_CELL",
+        "mutation_count": 1,
+        "observed_diagnostic": "MATRIX_UNDECIDABLE_STATE_MISSING"
+      },
+      {
+        "control_id": "REVIEW_UNIQUE_NONDISTINCTIVE_EH_WITNESS",
+        "mutation_count": 1,
+        "observed_diagnostic": "OUTCOME_PREDICATE_OVERLAP"
+      },
+      {
+        "control_id": "REVIEW_LOCATE_SHARED_CONTROL_ANALYSIS_ENTRY_POINT",
+        "mutation_count": 1,
+        "observed_diagnostic": "CONTROL_ANALYSIS_PATH_NOT_EXECUTABLE"
+      }
+    ]
+  },
+  "review_gates": {
+    "failure_count": 4,
+    "gate_count": 10,
+    "pass_count": 6,
+    "rows": [
+      {
+        "gate": "custody and deterministic reproduction",
+        "order": 1,
+        "status": "PASS"
+      },
+      {
+        "gate": "ten requirement source bindings",
+        "order": 2,
+        "status": "PASS"
+      },
+      {
+        "gate": "three-way statement class bound per row",
+        "order": 3,
+        "status": "FAIL"
+      },
+      {
+        "gate": "bounded comparison-family adequacy",
+        "order": 4,
+        "status": "PASS"
+      },
+      {
+        "gate": "matrix epistemic-state completeness",
+        "order": 5,
+        "status": "FAIL"
+      },
+      {
+        "gate": "local-bulk equivalence conservatism",
+        "order": 6,
+        "status": "PASS"
+      },
+      {
+        "gate": "independence and redundancy vocabulary",
+        "order": 7,
+        "status": "PASS"
+      },
+      {
+        "gate": "standard-GR oracle isolation",
+        "order": 8,
+        "status": "PASS"
+      },
+      {
+        "gate": "six-outcome mutual exclusivity",
+        "order": 9,
+        "status": "FAIL"
+      },
+      {
+        "gate": "eight end-to-end atomic controls",
+        "order": 10,
+        "status": "FAIL"
+      }
+    ]
+  },
+  "schema_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0",
+  "scope": {
+    "C_k_embedded_or_varied": false,
+    "GR_pillar_completed": false,
+    "action_family_eliminated_or_adopted": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "general_symbolic_or_theory_enumeration_tooling_created": false,
+    "gravitational_action_proposed_or_selected": false,
+    "gravitomagnetic_route_reopened": false,
+    "independent_review_executed": true,
+    "master_action_promoted": false,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "packet_block_recorded": true,
+    "requirements_selection_analysis_executed": false,
+    "scientific_outcome_selected": false,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "survivor_matrix_computed": false,
+    "tensor_field_equation_derived": false,
+    "v1_packet_prepared_now": false
+  },
+  "selected_next_target": "prepare_native_gravitational_principle_requirements_and_action_selection_packet_v1",
+  "selected_next_target_kind": "PREPARATION_ONLY_REQUIREMENTS_ACTION_SELECTION_PACKET_V1_REPAIR",
+  "standard_GR_isolation_audit": {
+    "Einstein_equation_used_as_selection_premise": false,
+    "comparator_activated": false,
+    "oracle_role": "COMPARISON_ORACLE_ONLY",
+    "status": "PASS",
+    "supplied_second_order_assumption_counted_native": false
+  },
+  "statement_class_audit": {
+    "authority_status_is_statement_class": false,
+    "declared_classes": [
+      "ACCEPTED_PROJECT_REQUIREMENT",
+      "NEW_PROPOSED_POSTULATE",
+      "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION"
+    ],
+    "diagnostic": "REQUIREMENT_STATEMENT_CLASS_BINDING_MISSING",
+    "missing_statement_class_count": 10,
+    "requirement_count": 10,
+    "status": "FAIL",
+    "valid_bound_statement_class_count": 0
+  },
+  "target": "review_native_gravitational_principle_requirements_and_action_selection_packet_v0_result",
+  "verdict": "BLOCKED_REQUIREMENTS_ACTION_SELECTION_CONTRACT_INCOMPLETE"
+}

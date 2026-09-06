@@ -1,0 +1,34 @@
+{
+  "artifact_id": "QFT_GR_QUADRATIC_CERTIFICATION_STATUS_INDEX_20260729_v0",
+  "authority": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORITY_PACKET_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "consumption_policy": {
+    "original_artifacts": "IMMUTABLE_HISTORICAL_RECORDS",
+    "priority_rule": "The addenda supersede only certification language and downstream proof status; they do not replace original bytes or alter historical stage progression.",
+    "program_reopened": false,
+    "scientific_success_added": false
+  },
+  "preserved_program_outcomes": {
+    "native_surrogate_v0": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+    "quadratic_control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "quadratic_toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "schema_id": "toe.qft_gr.quadratic.certification_status_index.v0",
+  "stage_certification": [
+    {
+      "addendum_path": "formal/docs/release/QFT_GR_QUADRATIC_STAGE_1_REWRITE_CERTIFICATE_STATUS_ADDENDUM_20260729_v0.json",
+      "addendum_sha256": "6f713263e3ebce3aaa8ba768e09fcc4b7cf2b6adcdd69e2667418d181c05c4bd",
+      "certificate_status": "REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED",
+      "semantic_stage_id": "STRICT_HARMONIC_GAUGE_JET_CONTRACT",
+      "structural_status": "GAUGE_ATLAS_AND_JET_CONTRACT_STRUCTURALLY_PRESERVED"
+    },
+    {
+      "addendum_path": "formal/docs/release/QFT_GR_QUADRATIC_STAGE_2_ALGEBRAIC_CERTIFICATE_STATUS_ADDENDUM_20260729_v0.json",
+      "addendum_sha256": "346cccf5146c1228f5604c04eeb819a5a2a9165f28e550338e0ad6267cb561f5",
+      "certificate_status": "ALGEBRAIC_CERTIFICATION_INCOMPLETE",
+      "semantic_stage_id": "COMPONENT_EXPANDED_LINEARIZATION",
+      "structural_status": "GENERIC_COMPONENT_DAG_STRUCTURALLY_COMPLETE"
+    }
+  ],
+  "status": "CURRENT_QUADRATIC_STAGE_1_2_CERTIFICATION_DEPENDENCY_SURFACE"
+}

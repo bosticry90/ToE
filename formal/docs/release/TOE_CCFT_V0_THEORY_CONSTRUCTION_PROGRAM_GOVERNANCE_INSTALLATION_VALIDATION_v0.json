@@ -1,0 +1,57 @@
+{
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0",
+  "captured_at_utc": "2026-08-02T03:54:43Z",
+  "deterministic_generation": {
+    "module_count": 1414,
+    "scope": "working-tree",
+    "status": "PASS"
+  },
+  "exhaustive_python": "NOT_CLAIMED",
+  "focused_python": {
+    "passed": 49,
+    "status": "PASS"
+  },
+  "full_lean": {
+    "jobs": 9159,
+    "modules": 1414,
+    "status": "PASS"
+  },
+  "governance_reconstruction": {
+    "postcommit_history_validation": "REQUIRED",
+    "registry_integrity_aliases": 227,
+    "static_registry_status": "PASS",
+    "status": "PRECOMMIT_PASS"
+  },
+  "installation_exact_path_set": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_manifests/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1.json",
+    "formal/python/tests/test_toe_ccft_v0_theory_construction_program_governance_installation.py",
+    "formal/python/tools/bounded_program_governance.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0TheoryConstructionProgramGovernanceInstallation.lean",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0TheoryConstructionProgramGovernanceInstallationReview.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "installation_result_sha256": "3f42486324f3f48b561a958b313dca7bac6c1cff728b0017c18af615eddb8921",
+  "installation_review_sha256": "913e036d5363a5994a0920e0e9005c7c83f5f3d630b6b4e3a3953435b4d43655",
+  "manifest_hash": "520ce352a1697367bed93d2d1af0458efee65dccf6097488ef2de456ea574700",
+  "manifest_sha256": "e0e89f235f1f80ab6f44f5db0bfff6adbaf1fa7679f0f5198b0ef4f371728eb6",
+  "reddit": "UNTRACKED_AND_UNTOUCHED",
+  "schema_id": "toe.ccft_v0.theory_construction.program_governance_installation_validation.v0",
+  "scientific_boundary": {
+    "branch_selected": false,
+    "events": 0,
+    "installed_unopened": true,
+    "model_constructed": false,
+    "physical_interpretation_established": false,
+    "scientific_attempts": 0,
+    "theorem_attempted": false,
+    "theorem_packet_prepared": false
+  },
+  "status": "INSTALLATION_PRECOMMIT_VALIDATED_POSTCOMMIT_HISTORY_REQUIRED",
+  "tracked_checkout_after_commit": "REQUIRED_POST_COMMIT"
+}

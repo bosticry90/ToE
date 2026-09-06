@@ -1,0 +1,138 @@
+{
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-PHYSICAL-SPIN2-PRINCIPAL-BLOCK-v0",
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "claim_boundary": {
+    "adapted_norm_local_well_posedness_established": false,
+    "historical_harmonic_auxiliary_results_refuted": false,
+    "interpretation": "The same-order metric-derivative strong-hyperbolicity estimate is unavailable in the generic spin-2 sector. A distinct auxiliary-variable or derivative-loss theorem remains a separate question.",
+    "phase_b_or_c_executed": false,
+    "smooth_existence_refuted": false,
+    "source_extension_executed": false
+  },
+  "coefficient_controls": {
+    "3alpha_plus_beta_eq_0": {
+      "effect": "removes or degenerates scalar quadratic mode; physical spin-2 block is unchanged when beta != 0",
+      "spin2_obstruction_remains": true
+    },
+    "alpha_eq_beta_eq_0": {
+      "control_pencil": "(lambda^2-1) I_2",
+      "effect": "returns Einstein second-order principal structure",
+      "light_cone_algebraic_multiplicity": 2,
+      "light_cone_geometric_multiplicity": 2
+    },
+    "beta_eq_0": {
+      "effect": "removes fourth-order physical spin-2 block",
+      "generic_result_applies": false
+    },
+    "c_Lambda": {
+      "effect": "lower order; no fourth-order principal effect"
+    },
+    "c_R_eq_0": {
+      "effect": "pure-quadratic rather than Einstein-connected sector; fourth-order physical spin-2 principal block unchanged",
+      "spin2_obstruction_remains_when_beta_nonzero": true
+    }
+  },
+  "conclusions": {
+    "complete_eigenbasis": false,
+    "obstruction": "PHYSICAL_SPIN2_REPEATED_ROOT_DEFECT",
+    "real_characteristics": true,
+    "strong_hyperbolicity": false,
+    "symmetric_hyperbolicity": false,
+    "terminal_outcome": "GENERIC_STRONG_HYPERBOLICITY_REFUTED"
+  },
+  "consumed_source_review": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_RESULT_REVIEW_20260728_v0.json",
+    "sha256": "c3cb4a1d75aa7dfb0abd8e8f10aedd558774234d2eae784144e387772c46c18e"
+  },
+  "execution_target": "derive_qft_gr_quadratic_physical_spin2_principal_block_v0",
+  "metric_equations": {
+    "curvature_convention_bound_in_source_packet": true,
+    "equation": "c_R G_mn - (1/2)c_Lambda g_mn + alpha[2 R R_mn - (1/2)g_mn R^2 + 2(g_mn Box - nabla_m nabla_n)R] + beta[2 R_mrns R^rs - (1/2)g_mn R_rs R^rs + Box R_mn + (1/2)g_mn Box R - nabla_m nabla_n R] = 0",
+    "fourth_order_derivative_terms": "2 alpha (g_mn Box - nabla_m nabla_n)R + beta(Box R_mn + (1/2)g_mn Box R - nabla_m nabla_n R)"
+  },
+  "multiplicity_criterion": {
+    "algebraic": "order of the root in det(P_phys(lambda))",
+    "failure": "At each light-cone root, algebraic multiplicity 4 exceeds geometric multiplicity 2.",
+    "geometric": "dimension of ker(P_phys(lambda_root))",
+    "strong_hyperbolicity_requirement": "Each real characteristic root must have a complete physical eigenspace with a uniformly bounded diagonalizer."
+  },
+  "physical_block_invariance": {
+    "assumption_boundary": "The additions must be genuine gauge fixing or constraint addition; changing the physical equations, adding regulator fields, or order reducing is excluded.",
+    "constraint_additions": "Additions proportional to the principal constraints vanish on the principal constraint kernel and therefore induce the same physical quotient map.",
+    "gauge_fixing": "Gauge-sector additions factor through gauge generators and vanish after projection to the physical TT quotient.",
+    "physical_block_alterable_within_boundary": false,
+    "quotient": "principal constraint kernel modulo principal gauge image"
+  },
+  "physical_pencil": {
+    "all_characteristic_roots_real": true,
+    "block_present": true,
+    "complete_eigenbasis": false,
+    "determinant": "beta**2*(lambda - 1)**4*(lambda + 1)**4",
+    "matrix": [
+      [
+        "-beta*(lambda**2 - 1)**2",
+        "0"
+      ],
+      [
+        "0",
+        "-beta*(lambda**2 - 1)**2"
+      ]
+    ],
+    "polarization_count": 2,
+    "repeated_wave_power": 2,
+    "roots": [
+      {
+        "algebraic_multiplicity": 4,
+        "complete_at_root": false,
+        "geometric_multiplicity": 2,
+        "lambda": -1
+      },
+      {
+        "algebraic_multiplicity": 4,
+        "complete_at_root": false,
+        "geometric_multiplicity": 2,
+        "lambda": 1
+      }
+    ],
+    "scalar_factor": "-beta*(lambda - 1)**2*(lambda + 1)**2",
+    "strongly_hyperbolic_physical_block": false,
+    "symmetrically_hyperbolic_physical_block": false
+  },
+  "physical_tt_projection": {
+    "alpha_R2_spin2_principal_contribution": "0",
+    "beta_Ricci2_spin2_principal_contribution": "-(beta/2) Box^2 h_mn",
+    "conditions": [
+      "trace(h)=0",
+      "ell^m h_mn=0",
+      "h_mn is represented in the physical gauge quotient"
+    ],
+    "linearized_ricci_principal": "delta R_mn = -(1/2) Box h_mn",
+    "linearized_scalar_curvature_principal": "delta R = 0",
+    "normalization": "Multiply the physical equation by 2; a nonzero scalar multiple does not change roots or multiplicities.",
+    "polarizations": 2
+  },
+  "principal_covector": {
+    "box_symbol": "1-lambda^2",
+    "definition": "ell_mu = lambda n_mu + k_mu, n.n=-1, k.k=1, n.k=0",
+    "spatial_covector_scope": "arbitrary nonzero k, normalized to k.k=1 by homogeneity"
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_PHYSICAL_SPIN2_PRINCIPAL_BLOCK_v0",
+  "selected_next_target": "review_qft_gr_quadratic_physical_spin2_principal_block_v0_result",
+  "theory_and_domain": {
+    "G_Stelle": [
+      "beta != 0",
+      "3 alpha + beta != 0",
+      "c_R != 0"
+    ],
+    "G_principal": [
+      "beta != 0",
+      "3 alpha + beta != 0"
+    ],
+    "action_density": "sqrt(-g) [c_R R + c_Lambda + alpha R^2 + beta R_mn R^mn]",
+    "source": "VACUUM",
+    "spin2_obstruction_minimal_domain": [
+      "beta != 0"
+    ]
+  },
+  "verdict": "PHASE_A_GENERIC_PHYSICAL_SPIN2_WEAK_HYPERBOLICITY_OBSTRUCTION_REPRODUCED"
+}

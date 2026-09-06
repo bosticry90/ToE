@@ -10,12 +10,12 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764",
+  "fingerprint": "8a8ac0bbb690f6536dca4435e1014594d3ad20023e4c11e940002eefbe813dc0",
   "inputs": {
     "declarations": {
-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
+      "expected_path": "formal/python/toe/bridges/br01_prediction_declarations.json",
       "extra_candidate_ids": [],
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
+      "path": "formal/python/toe/bridges/br01_prediction_declarations.json",
       "present": true,
       "raw_sha256": "eb39789ec5ecb386b898c96531037363915490857f0726946d5234e4d4a502f2",
       "schema": "BR01_prediction_declarations/v1",
@@ -115,4 +115,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764`
+Record fingerprint: `8a8ac0bbb690f6536dca4435e1014594d3ad20023e4c11e940002eefbe813dc0`

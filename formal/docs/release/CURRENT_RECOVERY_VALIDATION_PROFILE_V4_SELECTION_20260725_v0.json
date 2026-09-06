@@ -1,0 +1,37 @@
+{
+  "schema_id": "CURRENT_RECOVERY_VALIDATION_PROFILE_V4_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION_PHASES_5_AND_6",
+  "selected": "AUTHORIZE_CURRENT_ACCEPTANCE_PROFILE_V4_FREEZE_AND_EXECUTION",
+  "accepted_predecessor": {
+    "review": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_RESULT_REVIEW_20260725_v0.json",
+    "commit": "2006ed411b0669f4de8ba10db1787207050affd3"
+  },
+  "diagnostic_predecessor": {
+    "result": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V3_RESULT_20260725_v0.json",
+    "exposed_root_outcomes": 3
+  },
+  "repair_predecessor": {
+    "commit": "89d272e25886c63549dbb3b7d765750716bc9f4c",
+    "repair": "VERSION_ACCEPTED_LINEAGE_THROUGH_PROFILE_REPAIR_REVIEW"
+  },
+  "target": "freeze_and_execute_current_control_plane_profile_v4_once",
+  "permitted": {
+    "collect_complete_non_lean_inventory": true,
+    "freeze_current_acceptance_inventory": true,
+    "freeze_obligation_and_profile_manifests": true,
+    "execute_current_control_plane_once": true,
+    "use_short_windows_checkout_for_lean_backed_guards": true
+  },
+  "prohibited": {
+    "membership_change_based_on_test_outcome": true,
+    "historical_failure_deletion": true,
+    "scientific_content_change": true,
+    "registry_or_v2_change": true,
+    "dirty_main_mutation": true,
+    "automatic_successor": true,
+    "scientific_execution": true
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

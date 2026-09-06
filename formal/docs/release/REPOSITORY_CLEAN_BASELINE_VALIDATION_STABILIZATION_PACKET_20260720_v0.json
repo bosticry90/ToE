@@ -1,0 +1,99 @@
+{
+  "authorized_work": [
+    "PRESERVE_PHASE_A_RESULT_AND_REVIEW_SURFACES",
+    "PRESERVE_EXTERNAL_CUSTODY_REFERENCES_AND_HASHES",
+    "PRESERVE_CLEAN_CLONE_MUTATION_PATCH",
+    "CONTAIN_ALL_TRACKED_SOURCE_MUTATION_DURING_VALIDATION",
+    "REMOVE_CLONE_ROOTS_FROM_CANONICAL_CONTENT",
+    "ADD_POST_VALIDATION_CLEAN_DIFF_GATE",
+    "ISOLATE_FIRST_CAUSES_AND_CLASSIFY_SECONDARY_CASCADES",
+    "PREVENT_CROSS_MODULE_VALIDATION_CONTAMINATION",
+    "RESTORE_THIN_LEAN_MIRRORS_TO_REGISTRY_DERIVED_AUTHORITY",
+    "ADD_EVIDENCE_IDENTITY_AND_UNTRACKED_IMPORT_CHECKS",
+    "RECONCILE_CONFTEST_IMPLEMENTATION_WITH_APPROVED_PROTOCOL",
+    "ADD_CUSTODY_AWARE_ARTIFACT_STATES",
+    "REPLACE_SUBSTRING_ARCHIVE_MATCHING_WITH_TYPED_PATH_CLASSIFICATION",
+    "SPLIT_COMMITTED_AND_WORKING_TREE_LEAN_AGGREGATES",
+    "FREEZE_CLEAN_LEAN_BOOTSTRAP_SEQUENCE_AND_FAILURE_CLASSES",
+    "DIAGNOSE_EIGHT_V2_DETERMINISTIC_FAILURES_WITHOUT_SCIENTIFIC_CHANGE"
+  ],
+  "cycle_limit": {
+    "failed_result_auto_repair_authorized": false,
+    "fresh_clone_validation_cycles": 1,
+    "implementation_cycles": 1
+  },
+  "failure_classes": [
+    "PRIMARY_COMMITTED_DEFECT",
+    "SECONDARY_CASCADE",
+    "ORDER_DEPENDENT_CONTAMINATION",
+    "PATH_DEPENDENT_CANONICALIZATION",
+    "STALE_EXPECTATION",
+    "TOOLCHAIN_BOOTSTRAP_FAILURE",
+    "UNRESOLVED"
+  ],
+  "lean_failure_classes": [
+    "LEAN_SOURCE_OR_BUILD_FAILURE",
+    "LEAN_CACHE_BOOTSTRAP_FAILURE",
+    "LEAN_BUILD_TIMEOUT",
+    "LEAN_TEST_HARNESS_FAILURE"
+  ],
+  "maintenance_target": "prepare_repository_clean_baseline_validation_stabilization_packet_v0",
+  "prohibited_work": [
+    "NO_SCIENTIFIC_REGISTRY_ROTATION",
+    "NO_V2_ENROLLMENT",
+    "NO_V2_SCIENTIFIC_REGENERATION",
+    "NO_FIRST_UNIT_SELECTOR_EXECUTION",
+    "NO_SCALAR_YUKAWA_RESUMPTION",
+    "NO_MAXWELL_DIRAC_RESUMPTION",
+    "NO_UNIT_OR_SEAM_RESOLUTION",
+    "NO_MASTER_ACTION_PROMOTION",
+    "NO_PHASE_2_ACTIVITY",
+    "NO_PUBLIC_FACING_WORK"
+  ],
+  "schema_id": "REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_20260720_v0",
+  "scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
+    "current_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH",
+    "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
+    "current_target_strict_outcome": "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+    "empirical_validation_established": false,
+    "master_action_promoted": false,
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "selector": {
+    "path": "formal/docs/release/POST_REPOSITORY_RECOVERY_PHASE_A_BLOCKED_BASELINE_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0.json",
+    "sha256": "7d7fc03e6f7a378b27db216dc202805b206fe9710515aa972e3fdbb0f94e62d2"
+  },
+  "source_cleanliness_invariant": {
+    "after_every_validation_phase": "TRACKED_SOURCE_DIFF_EMPTY",
+    "canonical_content_may_embed_clone_root": false,
+    "generation_mode": "CHECK_ONLY_OR_ISOLATED_TEMPORARY_OUTPUT"
+  },
+  "status": "PREPARED_PENDING_INDEPENDENT_STABILIZATION_REVIEW",
+  "terminal_outcomes": [
+    "BASELINE_STABILIZATION_READY_FOR_INDEPENDENT_REVIEW",
+    "BASELINE_STABILIZATION_FAILED_SOURCE_VALIDATION",
+    "BASELINE_STABILIZATION_FAILED_LEAN_BOOTSTRAP",
+    "BASELINE_STABILIZATION_FAILED_AUTHORITY_IDENTITY",
+    "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION"
+  ],
+  "v2_boundary": {
+    "enrollment_authorized": false,
+    "permitted_corrections": [
+      "CUSTODY",
+      "GENERATOR",
+      "CANONICALIZATION",
+      "PATH_INDEPENDENCE"
+    ],
+    "regeneration_authorized": false,
+    "scientific_content_may_change": false
+  }
+}

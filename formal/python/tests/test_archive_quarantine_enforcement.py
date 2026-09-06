@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import configparser
 import sys
 from pathlib import Path
@@ -93,30 +94,48 @@ def test_pytest_config_norecursedirs_includes_archive() -> None:
     assert "archive" in toks, "pytest.ini must include 'archive' in norecursedirs"
 
 
-def test_tools_only_reference_archive_in_allowlisted_quarantine_tools() -> None:
+def _archive_import_edges(path: Path) -> list[str]:
+    tree = ast.parse(path.read_text(encoding="utf-8", errors="ignore"), filename=str(path))
+    edges: list[str] = []
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            edges.extend(
+                alias.name
+                for alias in node.names
+                if alias.name == "archive" or alias.name.startswith("archive.")
+            )
+        elif isinstance(node, ast.ImportFrom):
+            module = node.module or ""
+            if module == "archive" or module.startswith("archive."):
+                edges.append(module)
+        elif isinstance(node, ast.Call):
+            function = node.func
+            name = (
+                function.id
+                if isinstance(function, ast.Name)
+                else function.attr
+                if isinstance(function, ast.Attribute)
+                else ""
+            )
+            if name not in {"__import__", "import_module"} or not node.args:
+                continue
+            first = node.args[0]
+            if isinstance(first, ast.Constant) and isinstance(first.value, str):
+                module = first.value
+                if module == "archive" or module.startswith("archive."):
+                    edges.append(module)
+    return sorted(set(edges))
+
+
+def test_tools_have_no_typed_import_edge_into_archive() -> None:
     repo_root = _repo_root_from_test_file(Path(__file__))
     tools_root = repo_root / "formal" / "python" / "tools"
 
-    allowlist = {
-        tools_root / "legacy_archive_triage_report.py",
-        tools_root / "archive_intake_index.py",
-        tools_root / "archive_dossier_propose.py",
-        tools_root / "crft_claims_extract.py",
-        tools_root / "repo_hygiene_snapshot.py",
+    offenders = {
+        path.relative_to(repo_root).as_posix(): _archive_import_edges(path)
+        for path in tools_root.rglob("*.py")
+        if _archive_import_edges(path)
     }
-
-    offenders: list[Path] = []
-
-    for path in tools_root.rglob("*.py"):
-        if path in allowlist:
-            continue
-
-        text = path.read_text(encoding="utf-8", errors="ignore")
-
-        # Disallow hard-coded archive path references in non-quarantine tools.
-        if "archive/" in text or "\\archive\\" in text:
-            offenders.append(path.relative_to(repo_root))
-
-    assert not offenders, "Non-quarantine tool references archive paths:\n" + "\n".join(
-        f"- {p.as_posix()}" for p in offenders
+    assert not offenders, "Tool import edges enter archive quarantine:\n" + "\n".join(
+        f"- {path}: {', '.join(edges)}" for path, edges in sorted(offenders.items())
     )

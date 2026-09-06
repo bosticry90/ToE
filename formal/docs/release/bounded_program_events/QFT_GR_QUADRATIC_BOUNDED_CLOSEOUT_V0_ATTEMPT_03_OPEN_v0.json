@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 3,
+  "event_hash": "8d9e78caf322ecc6e17875099b92441d2c3752df9d0a21bc5c40d34270cb4c40",
+  "event_sequence_number": 5,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "c9c301d183cab7ee0db995d3376651a86a2cf2cf",
+  "previous_event_hash": "f902a205eab6924c647ea9490b3d8bf2ecf80d49f3efc3d4908b758f98e5b97d",
+  "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "registry_snapshot_hash": "5662845c1481f85ca2e3dd04f60ccb53cf935076c1554c887aad7bd4c67514e4",
+  "scope_hash": "4be3cf0d115145eef2057e96c02ed9215908b2cc18f65a469308237e6c92775d",
+  "semantic_stage_id": "EXACT_FROZEN_COMPANION_OPERATOR",
+  "target": "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1"
+}

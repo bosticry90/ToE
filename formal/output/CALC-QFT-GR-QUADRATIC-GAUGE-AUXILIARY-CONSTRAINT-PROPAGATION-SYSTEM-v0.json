@@ -1,0 +1,366 @@
+{
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-GAUGE-AUXILIARY-CONSTRAINT-PROPAGATION-SYSTEM-v0",
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "claim_boundary": {
+    "adapted_energy_estimate_established": false,
+    "auxiliary_equivalence_preserved_conditionally": true,
+    "constraint_preservation_conditional_on_reduced_solution": true,
+    "constraint_system_strongly_hyperbolic": true,
+    "finite_homogeneous_subsidiary_system_derived": true,
+    "full_reduced_system_principal_symbol_classified": false,
+    "local_well_posedness_established": false,
+    "minimum_regularities_proved_optimal": false,
+    "off_constraint_extension_frozen": true,
+    "ordinary_metric_strong_hyperbolicity_restored": false,
+    "picard_iteration_closed": false,
+    "source_extension_executed": false
+  },
+  "conditional_propagation_statement": {
+    "auxiliary_equivalence_preserved": true,
+    "conclusion": "all independent and derived constraints vanish in the local domain of dependence",
+    "full_reduced_solution_existence_assumed_not_proved": true,
+    "hypotheses": [
+      "a solution U of the frozen reduced equations exists with the displayed subsidiary regularity",
+      "the independent initial constraints and their nonredundant normal data vanish",
+      "uniqueness holds for the strongly hyperbolic subsidiary wave system on the fixed U background"
+    ]
+  },
+  "constraint_classification": [
+    {
+      "classification": "INDEPENDENT_INITIAL_CONSTRAINT",
+      "id": "C_H^a",
+      "initial_data": "C_H|Sigma=0 and n.nabla C_H|Sigma=0"
+    },
+    {
+      "classification": "DEFINITION_CONSTRAINT",
+      "id": "Phi^a_b",
+      "initial_data": "derived from C_H and its first derivatives; not independently prescribed"
+    },
+    {
+      "classification": "INDEPENDENT_INITIAL_CONSTRAINT",
+      "id": "V_H_n",
+      "initial_data": "V_H|Sigma=0; its normal derivative is redundant after the geometric projections and reduced equations"
+    },
+    {
+      "classification": "DEFINITION_CONSTRAINT",
+      "id": "C_r_a",
+      "initial_data": "value and compatible normal derivative"
+    },
+    {
+      "classification": "DEFINITION_CONSTRAINT",
+      "id": "C_c_mna",
+      "initial_data": "value and compatible normal derivative"
+    },
+    {
+      "classification": "INTEGRABILITY_CONSEQUENCE",
+      "id": "I_R_ab",
+      "initial_data": "derived from C_r"
+    },
+    {
+      "classification": "INTEGRABILITY_CONSEQUENCE",
+      "id": "I_g_mnab",
+      "initial_data": "derived from C_c"
+    },
+    {
+      "classification": "DEFINITION_CONSTRAINT",
+      "id": "T",
+      "initial_data": "value and compatible normal derivative"
+    },
+    {
+      "classification": "EVOLUTION_CONSEQUENCE",
+      "id": "D_n",
+      "initial_data": "reconstructed from V_H,V_c,C_r,nabla T"
+    },
+    {
+      "classification": "EVOLUTION_CONSEQUENCE",
+      "id": "C_R",
+      "initial_data": "reconstructed from T and K_tot"
+    },
+    {
+      "classification": "EVOLUTION_CONSEQUENCE",
+      "id": "C_S_mn",
+      "initial_data": "reconstructed from T and K_tot"
+    },
+    {
+      "classification": "INDEPENDENT_INITIAL_CONSTRAINT",
+      "id": "C_Hamiltonian",
+      "initial_data": "normal-normal projection of the original equation"
+    },
+    {
+      "classification": "INDEPENDENT_INITIAL_CONSTRAINT",
+      "id": "C_momentum_i",
+      "initial_data": "normal-tangential projections of the original equation"
+    },
+    {
+      "classification": "REDUNDANT_BY_BIANCHI_IDENTITY",
+      "id": "normal_derivative_of_V_H",
+      "initial_data": "follows from E_g^H,E_R,E_S and the Hamiltonian/momentum projections on a noncharacteristic Sigma"
+    }
+  ],
+  "consumed_authority": {
+    "accepted": true,
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0.json",
+    "sha256": "81433959a62309603276b46eac119b457e19533d7e56e4b97511a095c3b1c3fb"
+  },
+  "consumed_reduced_system": {
+    "equations": [
+      "E_g^H",
+      "E_R",
+      "E_r",
+      "E_c",
+      "E_S"
+    ],
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-AUXILIARY-HARMONIC-REDUCED-SYSTEM-v0.json",
+    "sha256": "a0b1d73895ed9f9c92ea523117ecc17421b0b03b32736258f144cf23370f1390",
+    "unknown_vector": [
+      "g_mn",
+      "R",
+      "r_a",
+      "c_mna",
+      "S_mn"
+    ]
+  },
+  "exact_defect_operators": {
+    "divergence_constraint": "D_n := nabla^m S_mn-(1/4)r_n",
+    "divergence_defects": "V_X_n := nabla^m deltaG_X_mn for X in {tot,H,c}; V_tot=V_H+V_c",
+    "einstein_defects": "deltaG_X_mn := K_X_mn-(1/2)g_mn K_X for X in {tot,H,c}",
+    "exact_V_remainder": "R_V_n := nabla^m DeltaE_mn-beta Box_g V_H_n, after the stated normalization rules",
+    "exact_auxiliary_metric_residual": "E_aux_mn := E_S_mn+(1/4)g_mn E_R",
+    "exact_original_minus_auxiliary_defect": "DeltaE_mn := E_mn[g]-E_aux_mn[U], with E_mn[g] the displayed original Euler-Lagrange tensor in the consumed artifact",
+    "gauge_constraint": "C_H^a := Gamma^a[g,c]-H^a(x,g)",
+    "gauge_derivative": "Phi^a_b := partial_b C_H^a",
+    "metric_definition_defect": "C_c_mna := c_mna-partial_a g_mn",
+    "metric_definition_ricci_defect": "K_c_mn := K_tot_mn-K_H_mn; this exact difference vanishes when C_c=0",
+    "no_implicit_remainder": "Every named defect and R_V is an operator equality, not an omitted-term marker.",
+    "pure_gauge_ricci_defect": "K_H_mn := (1/2)(g_ma partial_n C_H^a+g_na partial_m C_H^a)",
+    "reduced_ricci": "R^H_mn := -(1/2)W_g g_mn+Q^H_mn[g,c,H]",
+    "scalar_curvature_definition": "C_R := R-g^mn R_mn[g]",
+    "scalar_definition_defect": "C_r_a := r_a-partial_a R",
+    "total_ricci_defect": "K_tot_mn := R_mn[g]-R^H_mn[g,c,H]",
+    "trace_constraint": "T := g^mn S_mn",
+    "tracefree_ricci_definition": "C_S_mn := S_mn-[R_mn[g]-(1/4)g_mn g^ab R_ab[g]]",
+    "traces": "K_X := g^mn K_X_mn for X in {tot,H,c}"
+  },
+  "exact_propagation_identities": {
+    "contracted_bianchi": {
+      "equation": "V_tot_n=-D_n-(1/2)C_r_n+(1/2)nabla_n T",
+      "homogeneous": true,
+      "solved_for_divergence_constraint": "D_n=-V_H_n-V_c_n-(1/2)C_r_n+(1/2)nabla_n T"
+    },
+    "divergence_defect": {
+      "equation": "beta Box_g V_H_n=-R_V_n",
+      "homogeneous": true,
+      "identity": "nabla^m DeltaE_mn=beta Box_g V_H_n+R_V_n",
+      "remainder_order": "After the exact normalization rules, R_V is polynomial in the finite constraint vector and its first derivatives.",
+      "zero_test": "R_V(U;0,0)=0"
+    },
+    "gauge": {
+      "equation": "W_g C_H^a=2g^an V_H_n-A_H^a",
+      "exact_remainder": "A_H^a := 2g^an nabla^m deltaG_H_mn-W_g C_H^a",
+      "homogeneous": true,
+      "remainder_order": "A_H is polynomial in C_H and Phi, contains no derivative of Phi, and A_H(0,0)=0"
+    },
+    "gauge_derivative": {
+      "equation": "W_g Phi^a_b=partial_b(2g^an V_H_n-A_H^a)-(partial_b g^mn)partial_m Phi^a_n",
+      "homogeneous": true
+    },
+    "metric_derivative_definition": {
+      "constraint": "C_c_mna := c_mna-partial_a g_mn",
+      "equation": "W_g C_c_mna = -(partial_a g^bc)partial_b C_c_mnc",
+      "homogeneous": true
+    },
+    "metric_integrability": {
+      "constraint": "I_g_mnab := partial_a c_mnb-partial_b c_mna",
+      "homogeneous": true,
+      "identity": "I_g_mnab=partial_a C_c_mnb-partial_b C_c_mna"
+    },
+    "scalar_curvature_definition": {
+      "equation": "C_R=-(T+K_tot)",
+      "homogeneous": true
+    },
+    "scalar_derivative_definition": {
+      "constraint": "C_r_a := r_a-partial_a R",
+      "equation": "W_g C_r_a = -(partial_a g^bc)partial_b C_r_c",
+      "homogeneous": true
+    },
+    "scalar_integrability": {
+      "constraint": "I_R_ab := partial_a r_b-partial_b r_a",
+      "homogeneous": true,
+      "identity": "I_R_ab=partial_a C_r_b-partial_b C_r_a"
+    },
+    "trace": {
+      "constraint": "T := g^mn S_mn",
+      "equation": "beta Box_g T+[c_R+(2alpha+beta)R]T+2beta K_tot_mn S^mn=0",
+      "homogeneous": true
+    },
+    "tracefree_ricci_definition": {
+      "equation": "C_S_mn=-K_tot_mn+(1/4)g_mn(T+K_tot)",
+      "homogeneous": true
+    }
+  },
+  "execution_target": "derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0",
+  "finite_subsidiary_system": {
+    "P_C_of_zero": "0",
+    "closure_order": [
+      "C_r and C_c homogeneous wave layer",
+      "I_R and I_g differential-consequence layer",
+      "C_H, Phi, and V_H gauge-defect wave layer",
+      "T trace wave layer",
+      "D, C_R, and C_S reconstruction layer",
+      "Hamiltonian and momentum Bianchi-projection layer"
+    ],
+    "derived_constraint_vector": [
+      "I_R_ab",
+      "I_g_mnab",
+      "D_n",
+      "C_R",
+      "C_S_mn",
+      "C_Hamiltonian",
+      "C_momentum_i"
+    ],
+    "finite": true,
+    "homogeneous": true,
+    "independent_component_count": 69,
+    "independent_wave_vector": [
+      "C_H^a",
+      "Phi^a_b",
+      "V_H_n",
+      "C_r_a",
+      "C_c_mna",
+      "T"
+    ],
+    "new_constraint_generated_by_differentiation": false
+  },
+  "frozen_scope": {
+    "dimension": 4,
+    "gauge_source": "H^a=H^a(x,g), prescribed C^2, with no partial-g or higher-derivative dependence",
+    "generic_sector": [
+      "beta != 0",
+      "3 alpha + beta != 0"
+    ],
+    "initial_hypersurface": "smooth spacelike noncharacteristic Sigma with unit normal n",
+    "metric_signature": "(-,+,+,+)",
+    "source": "VACUUM"
+  },
+  "hamiltonian_momentum_propagation": {
+    "conclusion": "zero Hamiltonian/momentum data propagate after the independent subsidiary vector vanishes",
+    "definitions": "C_Hamiltonian:=n^m n^n E_mn; C_momentum_i:=n^m h_i^n E_mn; Q_ij:=h_i^m h_j^n E_mn",
+    "exact_decomposition": "E_mn=C_Hamiltonian n_m n_n-2n_(m C_momentum_n)+Q_mn",
+    "exact_normal_projection_identity": "n^n nabla^m[C_Hamiltonian n_m n_n-2n_(m C_momentum_n)+Q_mn]=0",
+    "exact_tangential_projection_identity": "h_i^n nabla^m[C_Hamiltonian n_m n_n-2n_(m C_momentum_n)+Q_mn]=0",
+    "noncircular": "The two projection identities use nabla^m E_mn identically equal to zero and the reduced equations; E_mn=0 is not assumed.",
+    "reduced_evolution_role": "Q_ij is a homogeneous exact functional of the finite subsidiary vector because the frozen reduced evolution equations vanish."
+  },
+  "literature_reconciliation": {
+    "modern_no_go_boundary": "arXiv:2607.11879 separates constraint propagation from the gauge-independent defective physical block; the present healthy subsidiary symbol is therefore not a contradiction.",
+    "older_harmonic_result": "The finite gauge closure C_H,Phi,V_H follows the structural content of arXiv:1811.07869 equations (3.28)-(3.31), while all coefficients and defects here are rebound to the ToE action and exact off-constraint extension.",
+    "redundant_initial_condition": "The normal derivative of V_H is not prescribed independently, matching the role of Proposition 2 in arXiv:1811.07869."
+  },
+  "normalization_rules": [
+    "Replace partial C_H by Phi and replace higher mixed partial derivatives by derivatives of Phi.",
+    "Replace W_g C_r and W_g C_c by their exact differentiated-equation propagation identities.",
+    "Replace Box_g T by the exact trace of E_S.",
+    "Resolve commuted derivatives of C_r and C_c through their explicit curl constraints I_R and I_g.",
+    "Replace V_tot by V_H+V_c and use V_c as the exact functional of C_c fixed above.",
+    "No equation from the original metric theory is assumed; only the reduced equations and differential identities are used."
+  ],
+  "off_constraint_extension": {
+    "added_differential_order": 0,
+    "changes_evolution_principal_symbol": false,
+    "changes_physical_spin2_block": false,
+    "constraint_addition_M_A_B": "identically zero",
+    "constraint_damping": "none",
+    "definition": "Exactly the coordinate equations in the consumed reduced-system artifact, evaluated without setting any constraint to zero.",
+    "derivative_constraint_addition_N_A_B_mu": "identically zero",
+    "frozen_equations": [
+      "E_g^H",
+      "E_R",
+      "E_r",
+      "E_c",
+      "E_S"
+    ],
+    "physical_block_remains": "-beta(lambda^2-1)^2 I_2 in the frozen ToE conventions",
+    "regularizer_or_fiducial_mode_added": false
+  },
+  "prohibitions_respected": {
+    "constraint_addition_used": false,
+    "energy_estimate_executed": false,
+    "fiducial_mode_added": false,
+    "ghost_analysis_executed": false,
+    "order_reduction_claimed_as_original_theory": false,
+    "phenomenology_executed": false,
+    "physical_spin2_defect_claimed_repaired": false,
+    "regularizer_added": false,
+    "source_extension_executed": false,
+    "yukawa_work_executed": false
+  },
+  "regularity_conclusion": {
+    "auxiliary_to_metric_equivalence_loss": "To identify S in H^(s+1) with Ricci[g] at the same regularity requires g in H^(s+3), one derivative above the H^(s+2) reduced-variable baseline.",
+    "candidate_integer_s": "s >= 3 in three spatial dimensions",
+    "energy_estimate_for_full_reduced_system": false,
+    "fixed_loss": 1,
+    "local_existence_theorem": false,
+    "loss_accumulation_analyzed": false,
+    "optimality_proved": false,
+    "propagation_topology": "constraint equality is established in H^s unless the extra metric derivative is supplied"
+  },
+  "regularity_ledger": [
+    {
+      "candidate_space": "H^(s+2)",
+      "quantity": "g,R",
+      "reason": "adapted reduced-variable baseline"
+    },
+    {
+      "candidate_space": "H^(s+1)",
+      "quantity": "c,r,S",
+      "reason": "independent reduced variables"
+    },
+    {
+      "candidate_space": "H^(s+1)",
+      "quantity": "C_H,C_r,C_c,T",
+      "reason": "algebraic or first-derivative defects"
+    },
+    {
+      "candidate_space": "H^s",
+      "quantity": "Phi,V_H,D,I_R,I_g,C_R,C_S",
+      "reason": "one differentiated subsidiary level"
+    },
+    {
+      "candidate_space": "H^(s-1)",
+      "quantity": "C_Hamiltonian,C_momentum",
+      "reason": "highest projected compatibility level"
+    }
+  ],
+  "schema_id": "CALC_QFT_GR_QUADRATIC_GAUGE_AUXILIARY_CONSTRAINT_PROPAGATION_SYSTEM_v0",
+  "selected_next_target": "review_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0_result",
+  "subsidiary_principal_symbol": {
+    "algebraic_multiplicity_each_root": 69,
+    "beta_wave_components": 5,
+    "characteristic_speeds": [
+      -1,
+      1
+    ],
+    "classification": "CONSTRAINT_SYSTEM_STRONGLY_HYPERBOLIC",
+    "complete_eigenbasis": true,
+    "determinant": "-beta**5*(lambda - 1)**69*(lambda + 1)**69",
+    "geometric_multiplicity_each_root": 69,
+    "independent_wave_components": 69,
+    "nonzero_spatial_covector_scope": "every real k_i != 0, normalized by |k|_g",
+    "normalized_pencil": "(1-lambda^2) I_69",
+    "pencil": "diag((1-lambda^2) I_64, beta(1-lambda^2) I_5)",
+    "physical_theory_inference": "None: this subsidiary classification neither changes nor repairs the defective physical spin-2 metric pencil.",
+    "rank_change_controls": [
+      "beta=0 removes the V_H and T wave normalization",
+      "3alpha+beta=0 invalidates the consumed scalar reduction"
+    ],
+    "roots": [
+      -1,
+      1
+    ],
+    "strongly_hyperbolic": true,
+    "symmetric_first_order_wave_reduction_available": true,
+    "unit_wave_components": 64
+  },
+  "terminal_outcome": "QUADRATIC_CONSTRAINT_PROPAGATION_SYSTEM_CLOSED_WITH_DERIVATIVE_LOSS",
+  "verdict": "FINITE_HOMOGENEOUS_QUADRATIC_CONSTRAINT_SUBSIDIARY_SYSTEM_CLOSED_AND_STRONGLY_HYPERBOLIC_WITH_ONE_DERIVATIVE_EQUIVALENCE_LOSS_NO_PHYSICAL_HYPERBOLICITY_REPAIR_OR_LOCAL_WELL_POSEDNESS_CLAIM"
+}

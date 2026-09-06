@@ -1,0 +1,49 @@
+{
+  "schema_id": "HISTORICAL_DEBT_STRUCTURAL_ISOLATION_RESULT_REVIEW_20260725_v0",
+  "verdict": "HISTORICAL_DEBT_COMPLETE_WITH_RECORDED_FAILURES_ACCEPTED",
+  "reviewed_result": {
+    "path": "formal/docs/release/HISTORICAL_DEBT_STRUCTURAL_ISOLATION_RESULT_20260725_v0.json",
+    "sha256": "c3001aa6b2d7915e664eb1abceda8a9447a820867dce3bd16954b54ff14dce4c",
+    "commit": "338fac1c84407e8cfd1071bb4cc0af5fe2e56ce8",
+    "tree": "5cf0c118511f16b1f2975bf85e649e32ec6d1ce1"
+  },
+  "independent_review": {
+    "checkout": "C:/toe-lean-rv0",
+    "checkout_commit": "338fac1c84407e8cfd1071bb4cc0af5fe2e56ce8",
+    "profile_integrity_guards": "3 / 3 PASS",
+    "independent_junit_and_partition_recomputation": "PASS",
+    "junit": {
+      "path": ".toe-recovery/custody-v0/historical-isolation-v0/output/historical_isolation_independent_review.junit.xml",
+      "sha256": "d27b023fe6ec82492ac138b4f48861d1de48627dbe851bb7a5606c9dc8b94fe9",
+      "size_bytes": 741
+    },
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "historical_reporting_completed": true,
+    "historical_profile_nodeids": 10212,
+    "recorded_nonpassing": 353,
+    "unexpected_nonpassing": 0,
+    "current_and_historical_profiles_exactly_partition_inventory": true,
+    "current_collection_unchanged_with_historical_profile_absent": true,
+    "current_verdict_evidence_unchanged_before_and_after": true,
+    "profile_state_unchanged": true,
+    "historical_process_cache_fixture_temp_and_output_isolated": true,
+    "checkout_mutation": false,
+    "dirty_main_mutation": false,
+    "fallback_required": false
+  },
+  "accepted_boundary": {
+    "historical_debt": "ISOLATED_VISIBLE_AND_COMPLETE_WITH_RECORDED_FAILURES",
+    "current_control_plane": "GREEN",
+    "complete_recovery_lineage_lean_graph": "NOT_YET_EXECUTED",
+    "dirty_main_terminal_dispositions": "NOT_YET_COMPLETE",
+    "integration_candidate": "NOT_YET_CONSTRUCTED",
+    "recovery_control_plane_complete": false
+  },
+  "required_next_gate": "RECOVERY_LINEAGE_COMPLETE_LEAN_GRAPH",
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

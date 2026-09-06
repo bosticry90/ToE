@@ -1,0 +1,69 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "ADAPTED_ENERGY_HIERARCHY_READY",
+    "JORDAN_CHAIN_LOSS_GRADING_UNRESOLVED",
+    "KNOWN_WEIGHTED_PRINCIPAL_CONTAMINATION_INCLUDED_NOT_YET_ESTIMATED",
+    "COMPLETE_FIFTY_CHAIN_LEDGER_AT_EACH_ROOT"
+  ],
+  "authority_rotation": {
+    "energy_hierarchy_preparation_accepted": true,
+    "frozen_coefficient_frequency_growth_authorized": true,
+    "ghost_analysis_authorized": false,
+    "iteration_closure_authorized": false,
+    "local_existence_theorem_authorized": false,
+    "phenomenology_authorized": false,
+    "quasilinear_estimate_authorized": false,
+    "source_extension_authorized": false,
+    "variable_coefficient_estimate_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "authority_and_principal_predecessor_are_exactly_bound": true,
+    "chain_rows_contain_every_required_ledger_field": true,
+    "deficit_decomposition_separates_physical_and_nonphysical": true,
+    "equivalence_shift_is_not_promoted_to_propagator_loss": true,
+    "fifty_chains_at_each_root_are_complete_and_independent": true,
+    "fixed_loss_and_accumulating_loss_are_explicitly_separated": true,
+    "four_proof_levels_are_strictly_sequenced": true,
+    "no_estimate_theorem_or_forbidden_extension_is_claimed": true,
+    "preparation_outcome_is_ready_while_loss_grading_remains_open": true,
+    "regularity_threshold_is_candidate_not_theorem": true,
+    "three_required_energy_families_and_constraint_energy_are_frozen": true,
+    "weighted_principal_contamination_is_included_not_ignored": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "ONE_DERIVATIVE_FROZEN_PROPAGATOR_LOSS",
+    "TWO_DERIVATIVE_LOSS_REFUTATION",
+    "CONSTRAINT_TANGENT_PROJECTION_FOR_ALL_NON_TT_CHAINS",
+    "FROZEN_COEFFICIENT_ENERGY_ESTIMATE",
+    "VARIABLE_COEFFICIENT_LINEAR_ESTIMATE",
+    "QUASILINEAR_TAME_ESTIMATE",
+    "LOSS_NONACCUMULATION",
+    "PICARD_CLOSURE",
+    "NASH_MOSER_REQUIREMENT",
+    "LOCAL_EXISTENCE",
+    "UNIQUENESS",
+    "CONTINUOUS_DEPENDENCE"
+  ],
+  "review_target": "review_qft_gr_quadratic_adapted_derivative_loss_energy_hierarchy_v0_result",
+  "reviewed_packet": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_20260728_v0.json",
+    "sha256": "8d43ba283d7459ccee477fbcc257fb6582d4a025a46fcb415723cf190282586d"
+  },
+  "reviewer_independence": {
+    "audits_claim_ceiling": true,
+    "audits_energy_weights": true,
+    "audits_every_chain_ledger_field": true,
+    "audits_proof_level_authority": true,
+    "imports_packet_module": false,
+    "recomputes_chain_partition_and_deficit": true,
+    "reconstructs_H_maps": true,
+    "reconstructs_TT_and_auxiliary_complement": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0",
+  "verdict": "ACCEPT_COMPLETE_ENERGY_HIERARCHY_AND_JORDAN_LEDGER_AUTHORIZE_FROZEN_COMPANION_FREQUENCY_GROWTH_ONLY_KEEP_ONE_OR_TWO_DERIVATIVE_LOSS_UNRESOLVED"
+}

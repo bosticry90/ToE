@@ -1,0 +1,54 @@
+{
+  "schema_id": "REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T04:04:39Z",
+  "status": "POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_ACCEPTED",
+  "accepted": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_20260725_v0.json",
+    "sha256": "df14b7d5a498fbf4e015ffadf7fbce22aadf192bcae65b6d45b91217d7f693f2",
+    "commit": "289ff9a846a7dd1ec34be843463d7d77547efc30",
+    "tree": "eeef1aea466059bdf71f122d618d10605992a08c"
+  },
+  "independent_detached_review": {
+    "checkout": "post-pillar-v1-staging-identity-adjudication-review-v0",
+    "head": "289ff9a846a7dd1ec34be843463d7d77547efc30",
+    "tree": "eeef1aea466059bdf71f122d618d10605992a08c",
+    "tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "errors": 0,
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "thirteen_outcome_surface": "REPRODUCED",
+    "staged_dependencies": 23,
+    "all_dependencies_mapped": true,
+    "provenance_blocks": 0,
+    "masked_roots": 3,
+    "in_memory_reconstruction": "BYTE_IDENTICAL",
+    "persisted_substitutions": 0,
+    "original_historical_review_outcome_preserved": true,
+    "repair_justified": true
+  },
+  "inventory_findings": {
+    "frozen_comparability_count": 13756,
+    "current_acceptance_count": 13818,
+    "current_added_over_frozen": 62,
+    "current_removed_from_frozen": 0,
+    "roles_kept_distinct": true
+  },
+  "scope": {
+    "repair_performed": false,
+    "baseline_reassessment_performed": false,
+    "obligation_profiles_created": false,
+    "scientific_content_changed": false,
+    "registry_or_v2_changed": false,
+    "lean_activity": false,
+    "automatic_successor": false
+  },
+  "terminal_result": "POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_ACCEPTED_REPAIR_JUSTIFIED",
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

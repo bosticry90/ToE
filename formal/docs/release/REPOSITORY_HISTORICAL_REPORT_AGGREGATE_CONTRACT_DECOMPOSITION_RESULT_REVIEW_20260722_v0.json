@@ -1,0 +1,107 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:31:50Z",
+  "verdict": "ACCEPT_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "reviewed_branch": "codex/historical-aggregate-contract-decomposition-v0",
+  "reviewed_commit": "42c4934a1336a4067359d67ca2898bb9dda7bac1",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_20260722_v0.json",
+    "sha256": "3c9ecf198c3fd0df5a6be8d7d0da8cf41bd4c628e32acd2bc5e45215d158dcdd",
+    "outcome": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "independence": {
+    "review_worktree": ".toe-recovery/disposable-workspaces/historical-aggregate-contract-decomposition-review-v0",
+    "detached_clean_checkout": true,
+    "recomputation_method": "Independent AST extraction of REPORT_PATHS and exact path-bound writes, Git tracking/history checks, accepted-adjudication retention and authority checks, repository-wide local consumer scan, focused pytest reproduction, changed-path preservation audit, and 629-path dirty-main custody rehash.",
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-v0/HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_INDEPENDENT_RECOMPUTATION_20260722_v0.json",
+      "sha256": "010e21c5d8c539aeb36bf3a2fe681a8e4656a7c67a6c6a199fa4f9e1ad59a322"
+    },
+    "review_script": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-v0/independent_review_historical_report_aggregate_contract_v0.py",
+      "sha256": "18b420ab947431e87909f9c2964ec9cd25ac40e9482dd8a8d92dd3bb594bd62a"
+    },
+    "focused_junit": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-v0/INDEPENDENT_REVIEW_AGGREGATE_DIAGNOSTIC_JUNIT_v0.xml",
+      "sha256": "0dac30da03054bc685cbbd5b37a4c86d59387bddbcb1464c874e4b273bdb4597"
+    }
+  },
+  "recomputed_scope": {
+    "changed_repository_paths_from_accepted_base": 5,
+    "changed_paths_kind": "MAINTENANCE_AUTHORITY_AND_DIAGNOSTIC_DOCUMENTS_ONLY",
+    "aggregate_test_files_changed": 0,
+    "generator_files_changed": 0,
+    "report_or_fixture_artifacts_created": 0,
+    "scientific_actions": 0,
+    "scale_actions": 0
+  },
+  "recomputed_identity_classification": {
+    "dependency_identities": 19,
+    "retention_expired": 19,
+    "historical_noncurrent": 19,
+    "current_critical": 0,
+    "absent_ignored_never_tracked": 15,
+    "tracked_present_historical_records": 4,
+    "fixture_convertible_proven": 1,
+    "provenance_blocked": 14,
+    "identity_local_test_file_coverage": "19_OF_19"
+  },
+  "generator_review": {
+    "complete_output_generators": 1,
+    "complete_generator_is_accepted_baseline_pilot": true,
+    "t12_writer_is_in_place_refresher_not_complete_generator": true,
+    "t12_refresher_reads_target_before_write": true,
+    "metrics_and_rolling_window_references_are_consumers": true,
+    "fourteen_absent_nonbaseline_identities_remain_provenance_blocked": true
+  },
+  "aggregate_contract_review": {
+    "heterogeneous_monolith_is_valid_current_blocking_contract": false,
+    "all_paths_exist_disposition": "RETIRE_RETENTION_EXPIRED_EXPECTATION",
+    "cross_identity_invariance_disposition": "SPLIT_FROM_AGGREGATE_CONTRACT",
+    "identity_local_semantic_obligations_preserved": true,
+    "aggregate_implementation_performed": false,
+    "assessment": "The two loops collapse distinct lifecycle and provenance states into one clean-checkout requirement. Removing their current blocking role does not authorize deletion of identity-local historical semantics."
+  },
+  "recomputed_validation": {
+    "focused_tests": 2,
+    "focused_failures": 2,
+    "first_missing_path": "formal/output/reports/physics_math_throughput_baseline_20260407_v0.json",
+    "expected_diagnostic_state_reproduced": true,
+    "review_checkout_clean_after": true,
+    "broad_baseline_rerun": false
+  },
+  "preservation": {
+    "tests_tree_unchanged": true,
+    "aggregate_test_blob_unchanged": true,
+    "generators_unchanged": true,
+    "loop_control_registry_unchanged": true,
+    "toe_formal_tree_unchanged": true,
+    "state_of_the_theory_unchanged": true,
+    "dirty_main_manifest_rows_byte_verified": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736"
+  },
+  "decision": {
+    "diagnostic_result_accepted": true,
+    "fixture_scale_authorized": false,
+    "aggregate_test_modification_authorized": false,
+    "provenance_blocked_identity_repair_authorized": false,
+    "automatic_successor_authorized": false,
+    "v2_enrollment_authorized": false,
+    "registry_rotation_authorized": false,
+    "lean_activity_authorized": false,
+    "scientific_execution_authorized": false,
+    "fresh_selector_options": [
+      "AUTHORIZE_BOUNDED_HISTORICAL_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION",
+      "AUTHORIZE_FOURTEEN_IDENTITY_GENERATOR_PROVENANCE_REVIEW",
+      "PRESERVE_ACCEPTED_DECOMPOSITION_AND_DEFER_REPORT_CONTRACT_REPAIR"
+    ],
+    "recommended_fresh_selector": "AUTHORIZE_BOUNDED_HISTORICAL_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0_OF_12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_AND_STOP_FOR_FRESH_SELECTOR"
+}

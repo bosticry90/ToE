@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 1,
+  "event_hash": "dc3749545909da0f587e0931632d472ec518eb1cb2e2652b0fcd1a3cbf6e4429",
+  "event_sequence_number": 1,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "43df2c47",
+  "previous_event_hash": null,
+  "program_id": "TOE_NATIVE_SURROGATE_V0",
+  "registry_snapshot_hash": "befa0dac1ba2696e7c7618a43f980ed5d3fcc92e2da9ac1ca62072057220e38b",
+  "scope_hash": "2d1cd4f55cf02975a07075d09c0436044c3be85326f3d8c5861ed52b3d1b5520",
+  "semantic_stage_id": "COHERENCE_REPRESENTATION",
+  "target": "select_toe_native_coherence_representation_v0"
+}

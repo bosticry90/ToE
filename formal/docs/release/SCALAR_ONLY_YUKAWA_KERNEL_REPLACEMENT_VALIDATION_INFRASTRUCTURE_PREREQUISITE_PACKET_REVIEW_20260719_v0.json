@@ -1,0 +1,352 @@
+{
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_V0",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_20260719_v0.md",
+        "sha256": "b019219a3c2ccee06bbb5628a9104995d38938d1b46321e2f7cc1950671ad1e4"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_20260719_v0.json",
+        "sha256": "66ce9cd50115963c531c31524e20e7c567692f5455f8b8bde5411bf685da4d12"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0.py",
+        "sha256": "e7f606eea02b383377933571c1d4d77ba1788eaa77e8a97634f23450749a960e"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0.py",
+        "sha256": "1f2548d15e906f455ab9ad91329543514d1431c7896f17107cb8b08651fff45b"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaKernelReplacementValidationInfrastructurePrerequisitePacketV0.lean",
+        "sha256": "cde67ee5988a8325aac3d6339768fccdf3f2f3a7185d727998913399653b29fd"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_review_v0.py",
+      "sha256": "3926cbfd8d54b67f8f72c1b5924b8461d445fdb4f87aad2f72f74f66e293e326"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_REVIEW_20260719_v0.md",
+      "sha256": "9b48ed6ae7fe193eb1baf952b314e557120b9759c9d7ab60d9d7421ed1996b11"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaKernelReplacementValidationInfrastructurePrerequisitePacketReviewV0.lean",
+      "sha256": "050daa36ce6d574f71e49e666cce5f17b7c225acb95ae3cced7d0dffce088fed"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_review_v0.py",
+      "sha256": "015a400d91dadea94f15e17a05218c48dc314e5f0c20c5886d415258f5187a16"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This terminal review finds the kernel-agnostic validation infrastructure contract sufficiently complete for a bounded non-production exploratory sandbox selector. It does not implement or execute infrastructure or fixtures, create or execute a kernel, change production, call or adjudicate cubature, rerun Stage A, compute torque, DFT, vector, Jacobian, SVD, or identifiability, or authorize Stage B.",
+  "independent_audits": {
+    "capability_issuance_authentication_and_private_enforcement": "PASS",
+    "dependency_scanner": "PASS",
+    "exploratory_risk_tier_isolation": "PASS",
+    "future_synthetic_controls": "PASS",
+    "kernel_free_fixture_and_mutation_routes": "PASS",
+    "no_execution_custody": "PASS",
+    "recursive_canonical_schema_and_comparison": "PASS",
+    "terminal_transition": "PASS",
+    "typed_adjudicator_schemas_and_predicates": "PASS"
+  },
+  "nonblocking_review_notes": [
+    "The capability protocol addresses ordinary public-call misuse and replay; malicious arbitrary code with process-memory access remains explicitly out of scope.",
+    "This review accepts implementation-level determinism for sandbox use and does not certify cross-platform production hardening.",
+    "READY means contract-ready for a fresh selector, not infrastructure-qualified, kernel-qualified, or scientifically validated."
+  ],
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 48,
+    "pass_count": 48,
+    "rows": [
+      {
+        "finding": "five packet artifacts reproduced",
+        "gate_id": "T01_EXACT_PACKET_HASH_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "packet rotates only to this terminal review",
+        "gate_id": "T02_EXACT_REVIEW_AUTHORITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "review burden is bounded sandbox eligibility",
+        "gate_id": "T03_SANDBOX_NOT_PRODUCTION_REVIEW_STANDARD",
+        "status": "PASS"
+      },
+      {
+        "finding": "packet version is terminal V0",
+        "gate_id": "T04_V0_ONLY",
+        "status": "PASS"
+      },
+      {
+        "finding": "repair successor prohibited",
+        "gate_id": "T05_NO_REPAIR_VERSION",
+        "status": "PASS"
+      },
+      {
+        "finding": "prerequisite-to-prerequisite prohibited",
+        "gate_id": "T06_NO_PREREQUISITE_REGRESS",
+        "status": "PASS"
+      },
+      {
+        "finding": "ready or failed-retire/defer only",
+        "gate_id": "T07_TWO_REVIEW_OUTCOMES",
+        "status": "PASS"
+      },
+      {
+        "finding": "sandbox or retire/defer only",
+        "gate_id": "T08_READY_TWO_OPTION_SELECTOR",
+        "status": "PASS"
+      },
+      {
+        "finding": "no failure repair route",
+        "gate_id": "T09_FAILURE_RETIRE_OR_DEFER_ONLY",
+        "status": "PASS"
+      },
+      {
+        "finding": "ordinary-call and replay threat model bounded",
+        "gate_id": "T10_THREAT_MODEL_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "manifest and 32-byte secret framing complete",
+        "gate_id": "T11_PIPE_SECRET_FRAME_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "seven manifest fields closed",
+        "gate_id": "T12_MANIFEST_SCHEMA_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "ten token fields closed",
+        "gate_id": "T13_CAPABILITY_TOKEN_SCHEMA_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "HMAC covers all non-MAC token fields",
+        "gate_id": "T14_HMAC_BINDING_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "PID, run, and review authenticated",
+        "gate_id": "T15_PROCESS_RUN_REVIEW_BINDING",
+        "status": "PASS"
+      },
+      {
+        "finding": "fixture and mutation authenticated",
+        "gate_id": "T16_FIXTURE_MUTATION_BINDING",
+        "status": "PASS"
+      },
+      {
+        "finding": "30-second expiry and one-shot nonce exact",
+        "gate_id": "T17_EXPIRY_AND_REPLAY",
+        "status": "PASS"
+      },
+      {
+        "finding": "public signature exposes no validation arguments",
+        "gate_id": "T18_PUBLIC_PRIVATE_SEPARATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "eleven failure codes exact",
+        "gate_id": "T19_CAPABILITY_ERRORS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "environment and global modes forbidden",
+        "gate_id": "T20_NO_AMBIENT_MODE",
+        "status": "PASS"
+      },
+      {
+        "finding": "four predicates plus result schema complete",
+        "gate_id": "T21_FIVE_ADJUDICATOR_SCHEMAS",
+        "status": "PASS"
+      },
+      {
+        "finding": "nine unique mechanically typed predicates",
+        "gate_id": "T22_NINE_TYPED_PREDICATES",
+        "status": "PASS"
+      },
+      {
+        "finding": "three comparison algorithms exact",
+        "gate_id": "T23_NUMERIC_ALGORITHMS",
+        "status": "PASS"
+      },
+      {
+        "finding": "binary64-to-Decimal conversion exact",
+        "gate_id": "T24_DECIMAL_CONVERSION",
+        "status": "PASS"
+      },
+      {
+        "finding": "missing and mistyped pointers fail closed",
+        "gate_id": "T25_POINTER_FAILURES_TYPED",
+        "status": "PASS"
+      },
+      {
+        "finding": "synthetic fixture catalog complete",
+        "gate_id": "T26_EIGHT_KERNEL_FREE_FIXTURES",
+        "status": "PASS"
+      },
+      {
+        "finding": "one unique route per synthetic mutation",
+        "gate_id": "T27_EIGHT_ROUTE_IDENTITIES",
+        "status": "PASS"
+      },
+      {
+        "finding": "every route resolves one fixture/input pair",
+        "gate_id": "T28_ROUTE_INPUT_BINDING",
+        "status": "PASS"
+      },
+      {
+        "finding": "every route binds one single-use token",
+        "gate_id": "T29_ROUTE_CAPABILITY_BINDING",
+        "status": "PASS"
+      },
+      {
+        "finding": "symbol, point, and operation exact",
+        "gate_id": "T30_ROUTE_INJECTION_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "every route resolves one typed predicate",
+        "gate_id": "T31_ROUTE_ADJUDICATOR_BINDING",
+        "status": "PASS"
+      },
+      {
+        "finding": "two deterministic virtual roots exact",
+        "gate_id": "T32_SCANNER_ENTRYPOINT_AND_ROOTS",
+        "status": "PASS"
+      },
+      {
+        "finding": "imports, aliases, calls, and dynamic imports covered",
+        "gate_id": "T33_SCANNER_IMPORT_CALL_RULES",
+        "status": "PASS"
+      },
+      {
+        "finding": "parse and unknown AST paths fail closed",
+        "gate_id": "T34_SCANNER_FAILURE_RULE",
+        "status": "PASS"
+      },
+      {
+        "finding": "bad source violations exact and ordered",
+        "gate_id": "T35_SCANNER_EXPECTED_VIOLATIONS",
+        "status": "PASS"
+      },
+      {
+        "finding": "root plus seven nested schemas complete",
+        "gate_id": "T36_EIGHT_RECURSIVE_RESULT_SCHEMAS",
+        "status": "PASS"
+      },
+      {
+        "finding": "enum values unique and unknowns rejected",
+        "gate_id": "T37_SIX_ENUM_FAMILIES",
+        "status": "PASS"
+      },
+      {
+        "finding": "duplicates rejected before dictionary construction",
+        "gate_id": "T38_DUPLICATE_KEY_REJECTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "nonfinite JSON constants rejected",
+        "gate_id": "T39_NONFINITE_REJECTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "recursive sorted-key UTF-8 encoding exact",
+        "gate_id": "T40_CANONICAL_ENCODING",
+        "status": "PASS"
+      },
+      {
+        "finding": "scalar encodings unambiguous",
+        "gate_id": "T41_FLOAT_DECIMAL_INTEGER_RULES",
+        "status": "PASS"
+      },
+      {
+        "finding": "all future synthetic controls unique and mandatory",
+        "gate_id": "T42_TWELVE_CONTROLS",
+        "status": "PASS"
+      },
+      {
+        "finding": "60-second and 256-MiB bounds exact",
+        "gate_id": "T43_RESOURCE_ENVELOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "partial classification forbidden",
+        "gate_id": "T44_PARTIAL_RESULT_FIREWALL",
+        "status": "PASS"
+      },
+      {
+        "finding": "four non-decision-bearing labels exact",
+        "gate_id": "T45_EXPLORATORY_LABELS",
+        "status": "PASS"
+      },
+      {
+        "finding": "sandbox cannot alter production or claim science",
+        "gate_id": "T46_PRODUCTION_AND_CLAIM_ISOLATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "no infrastructure, fixture, candidate, or cubature execution",
+        "gate_id": "T47_NO_PREPARATION_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "review rotates only to sandbox-or-retire selector",
+        "gate_id": "T48_CURRENT_AUTHORITY_TWO_OPTION_SELECTOR_ONLY",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_KERNEL_REPLACEMENT_VALIDATION_INFRASTRUCTURE_PREREQUISITE_PACKET_REVIEW_20260719_v0",
+  "review_standard": {
+    "mechanical_executability_and_isolation_required": true,
+    "production_adoption_assurance_required": false,
+    "scientific_claim_assurance_required": false,
+    "tier": "NON_PRODUCTION_EXPLORATORY_SANDBOX_ELIGIBILITY"
+  },
+  "schema_id": "toe.scalar_only_yukawa.kernel_replacement.validation_infrastructure_prerequisite_packet_review.v0",
+  "scope": {
+    "candidate_kernel_creation_authorized": false,
+    "candidate_kernel_execution_authorized": false,
+    "infrastructure_implementation_authorized": false,
+    "infrastructure_implementation_performed": false,
+    "jacobian_or_identifiability_authorized": false,
+    "old_cubature_adjudicated": false,
+    "old_cubature_called": false,
+    "packet_custody_verified": true,
+    "packet_repair_authorized": false,
+    "prerequisite_to_prerequisite_authorized": false,
+    "production_change_authorized": false,
+    "sandbox_eligibility_standard_applied": true,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "synthetic_fixture_execution_performed": false,
+    "terminal_independent_review_performed": true,
+    "torque_or_dft_authorized": false,
+    "two_option_selector_authorized": true,
+    "validation_infrastructure_contract_ready": true
+  },
+  "selected_next_target": "select_post_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0_review_scientific_response_v0",
+  "selected_next_target_kind": "TWO_OPTION_SELECTOR_ONLY_ISOLATED_SANDBOX_OR_RETIRE_DEFER",
+  "status": "TERMINAL_INDEPENDENT_REVIEW_COMPLETE_READY_FOR_TWO_OPTION_SELECTOR",
+  "target": "review_scalar_only_yukawa_kernel_replacement_validation_infrastructure_prerequisite_packet_v0_result",
+  "terminal_consequence": {
+    "automatic_sandbox_or_replacement": "PROHIBITED",
+    "current_selector_options_exact": [
+      "AUTHORIZE_ISOLATED_NON_DECISION_BEARING_SANDBOX_IMPLEMENTATION",
+      "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE"
+    ],
+    "new_prerequisite": "PROHIBITED",
+    "packet_repair": "PROHIBITED",
+    "selector_must_choose_exactly_one_option": true
+  },
+  "verdict": "VALIDATION_INFRASTRUCTURE_PREREQUISITE_READY"
+}

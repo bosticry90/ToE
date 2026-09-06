@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 3,
+  "closed_from_commit": "e22359cffc11941e037e6ac18f3bb9e52a3d23fd",
+  "event_hash": "e3e8ae25913cb051c5590b3736547b7d11de6f946ad6504844e7293aa2634e03",
+  "event_sequence_number": 6,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "a414202ec4a5e93bc06991e54c0c842d0c23505fcfe937548d3b2ff093bce53a",
+  "previous_event_hash": "a414202ec4a5e93bc06991e54c0c842d0c23505fcfe937548d3b2ff093bce53a",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "result_artifact_hash": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20",
+  "result_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+  "review_artifact_hash": "6d64911801183311e05e7fa5b1ec08f0baa352346d90b51d2d8fef68a18c77fa",
+  "review_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

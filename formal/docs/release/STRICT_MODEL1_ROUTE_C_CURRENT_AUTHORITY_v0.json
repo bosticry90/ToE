@@ -1,0 +1,24 @@
+{
+  "as_of_pass": "0275",
+  "c03": "TERMINAL_SECTORIZED_ADJUDICATION",
+  "ccft_promotion": false,
+  "contingency_gate_v1": "PERMANENTLY_FAILED",
+  "modern_runner_repair": "CONTRACT_FROZEN__NOT_IMPLEMENTED__NOT_ACTIVATED",
+  "production": "76/1188",
+  "replacement_migration_qualification": "OPEN",
+  "route_c": "2/4",
+  "route_c_score_semantics": "TERMINALLY_ADJUDICATED_DISAGREEMENT_DOSSIERS",
+  "rows77_to96": "CLOSED",
+  "schema_id": "STRICT_MODEL1_ROUTE_C_CURRENT_AUTHORITY_v0",
+  "semantic_core_v0_2": "INTERNALLY_RELEASED_BOUNDED_INTEROPERABILITY_PROTOTYPE",
+  "strict_exact_historical_native_equivalence": "1/4",
+  "terminally_adjudicated_cases": [
+    "C01",
+    "C03"
+  ],
+  "toe_promotion": false,
+  "unadjudicated_cases": [
+    "C02",
+    "C04"
+  ]
+}

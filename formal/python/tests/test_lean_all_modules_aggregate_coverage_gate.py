@@ -2,8 +2,10 @@ from __future__ import annotations
 
 from formal.python.tools.generate_lean_all_modules_aggregate import (
     OUTPUT_PATH,
+    committed_module_names,
     render_aggregate,
     tracked_module_names,
+    working_tree_module_names,
 )
 
 
@@ -23,6 +25,15 @@ def test_validation_aggregate_is_explicitly_nonpromotional() -> None:
     assert "does not" in aggregate
     assert "promote any theorem" in aggregate
     assert "discharge any axiom" in aggregate
+
+
+def test_committed_aggregate_never_imports_untracked_worktree_modules() -> None:
+    committed = set(committed_module_names())
+    working_tree = set(working_tree_module_names())
+    assert committed <= working_tree
+    aggregate = OUTPUT_PATH.read_text(encoding="utf-8")
+    for module in working_tree - committed:
+        assert f"import {module}\n" not in aggregate
 
 
 def test_exhaustive_root_is_registered_as_a_nondefault_lake_target() -> None:

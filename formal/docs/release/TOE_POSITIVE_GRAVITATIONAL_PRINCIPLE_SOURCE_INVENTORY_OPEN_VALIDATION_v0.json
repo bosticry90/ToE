@@ -1,0 +1,46 @@
+{
+  "artifact_id": "TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_ATTEMPT_01_OPEN_v0.json",
+    "formal/python/tools/toe_positive_gravitational_principle_source_inventory_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToePositiveGravitationalPrincipleSourceInventoryAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 1,
+  "authority_decision": "AUTHORIZE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_STAGE_1_OPEN",
+  "captured_at_utc": "2026-07-31T21:30:00Z",
+  "event_hash": "3a0cbecced692a38c34fd9d4393db471a0242e2dbfe830863ca2cba5069db2e7",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_ATTEMPT_01_OPEN_v0.json",
+  "event_sequence_number": 1,
+  "event_sha256": "0531ff3cdde2aecabedbebef7b3cfc813f9ac14ea12970b4d0980a6939021d41",
+  "opened_from_commit": "d8ad84c73caa1acfba64e07e99cf1e375b2858dc",
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "registry_snapshot_hash": "e7143c8dad93e8e0ede11cd86ac9b87d59608f1526a27937c82a097d6c80afc8",
+  "schema_id": "toe.positive_gravitational_principle_source_inventory.stage_1_open_validation.v0",
+  "scientific_output_at_open": {
+    "action_class_selected": false,
+    "evidence_promoted": false,
+    "gravitational_action_constructed_or_selected": false,
+    "gravitational_calculation_started": false,
+    "gravitational_variables_selected": false,
+    "native_gravitational_principle_selected_or_derived": false,
+    "principle_source_statements_inventoried": 0,
+    "stage_2_output_created": false
+  },
+  "scope_hash": "adec5050977697a470c1ef6afb4d136bc415f1a592008c9b7c2546a74f80ab90",
+  "semantic_stage_id": "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY",
+  "status": "STAGE_1_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "inventory_toe_positive_native_gravitational_principle_sources_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_2_remains_unauthorized": true
+  }
+}

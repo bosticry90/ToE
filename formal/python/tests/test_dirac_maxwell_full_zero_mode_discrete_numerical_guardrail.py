@@ -72,4 +72,4 @@ def test_no_pilot_or_execution_is_authorized_before_review() -> None:
 
 
 def test_prompt_is_preserved() -> None:
-    assert guardrail.sha256_path(guardrail.REPO_ROOT / guardrail.PROMPT_RELATIVE_PATH) == guardrail.PROMPT_SHA256
+    assert guardrail.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

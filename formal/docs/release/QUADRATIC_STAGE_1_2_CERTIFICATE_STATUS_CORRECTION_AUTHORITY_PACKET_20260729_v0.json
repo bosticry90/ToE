@@ -1,0 +1,33 @@
+{
+  "artifact_id": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORITY_PACKET_20260729_v0",
+  "authority_lane": "scientific_custody_correction_nonadvancing",
+  "authorized_scope": {
+    "dependency_status_index": true,
+    "original_byte_and_hash_preservation": true,
+    "public_status_corrections": true,
+    "stage_1_superseding_certificate_qualification": true,
+    "stage_2_superseding_certificate_qualification": true
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "corrective_target": "prepare_quadratic_stage_1_2_certificate_status_correction_packet_v0",
+  "preserved_terminal_outcomes": {
+    "native_surrogate_v0": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+    "quadratic_control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "quadratic_toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "prohibitions": [
+    "No scientific target rotation.",
+    "No reopening of QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0.",
+    "No new bounded-program attempt or repair.",
+    "No executable rewrite-confluence proof.",
+    "No new tensor-identity proof.",
+    "No generic-DAG-to-Minkowski algebraic specialization proof.",
+    "No replacement or edit of an original calculation, result review, validation, OPEN event, or CLOSE event.",
+    "No change to either bounded program terminal outcome.",
+    "No scientific successor selection."
+  ],
+  "required_result_review_target": "review_quadratic_stage_1_2_certificate_status_correction_result_v0",
+  "schema_id": "toe.qft_gr.quadratic.stage_1_2_certificate_status_correction.authority_packet.v0",
+  "scientific_target_preserved": "close_toe_native_surrogate_v0_after_bounded_result_v0",
+  "status": "AUTHORIZED_NONADVANCING_SCIENTIFIC_CUSTODY_CORRECTION_ONLY"
+}

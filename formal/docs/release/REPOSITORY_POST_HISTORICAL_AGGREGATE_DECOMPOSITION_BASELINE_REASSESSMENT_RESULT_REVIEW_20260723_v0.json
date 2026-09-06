@@ -1,0 +1,113 @@
+{
+  "schema_id": "REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_REVIEW_20260723_v0",
+  "verdict": "ACCEPT_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_20260723_v0.json",
+    "sha256": "e8360dff6805e618a530d9d9af15ba2de9eed95906b854990679fac607616b19"
+  },
+  "review_checkout": {
+    "commit": "28bb0de520615c89262577c15ff5cbc3f6fc5d88",
+    "detached": true,
+    "clean": true
+  },
+  "independent_recalculation": {
+    "tests": 13756,
+    "passed": 12632,
+    "skipped": 598,
+    "failed": 469,
+    "errors": 57,
+    "nonpassing": 526,
+    "prior_nonpassing": 530,
+    "recovered": 4,
+    "newly_nonpassing": 0,
+    "persistent_nonpassing": 526,
+    "status_transitions": 0,
+    "aggregate_replacement_assertions_passing": 2,
+    "identity_local_routes_newly_nonpassing": 0
+  },
+  "accepted_recoveries": {
+    "fixture_pilot_dependency_local_outcomes": 2,
+    "aggregate_contract_outcomes": 2,
+    "other_recoveries": 0,
+    "interpretation": "The measured four-outcome reduction is exactly the accepted pilot-local recovery plus the accepted two-obligation aggregate decomposition."
+  },
+  "accepted_remaining_first_cause_families": {
+    "missing_artifacts": 218,
+    "qft_route_hash": 67,
+    "other_packet_contract": 65,
+    "pillar_ledger_staging_selector": 58,
+    "other_artifact_currency": 50,
+    "equation_compendium_hash": 50,
+    "authority_expectations": 8,
+    "environment_or_path_identity": 6,
+    "other_committed_assertions": 4
+  },
+  "missing_expectation_review": {
+    "remaining_total": 218,
+    "remaining_fixture_candidates": 181,
+    "provenance_blocked": 36,
+    "stale_non_missing_hash_expectation": 1,
+    "remaining_fixture_candidates_share_one_small_common_root": false,
+    "concentration": {
+      "consumer_files": 122,
+      "first_missing_identities": 103,
+      "generator_reference_sets": 101,
+      "latent_paths": 160,
+      "largest_generator_reference_set_outcomes": 18
+    },
+    "fixture_scale_authorized": false,
+    "provenance_blocked_repair_authorized": false
+  },
+  "comparability_review": {
+    "actual_junit_ids_exactly_mapped_inventory": true,
+    "canonicalized_ids_exactly_prior_frozen_inventory": true,
+    "current_collection_count": 13765,
+    "mapped_common": 13756,
+    "added_guards": 9,
+    "removed_ids": 0
+  },
+  "scope_review": {
+    "changed_paths_from_accepted_base_through_result": 5,
+    "governance_records_only": true,
+    "tests_modified": false,
+    "generators_modified": false,
+    "reports_or_fixtures_created_in_source_tree": false,
+    "scientific_content_changed": false,
+    "registry_or_v2_changed": false,
+    "lean_activity": false,
+    "repair_performed": false
+  },
+  "custody_review": {
+    "dirty_main_head_exact": true,
+    "dirty_main_status_paths_and_codes_exact": true,
+    "dirty_main_manifest_entries": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_regular_files_rehashed": 626,
+    "dirty_main_preserved_missing_paths_confirmed": 3,
+    "dirty_main_bytes_exact": true,
+    "review_checkout_clean": true,
+    "validation_checkout_clean": true,
+    "unexpected_untracked_source": 0
+  },
+  "external_review_evidence": {
+    "path": "POST_AGGREGATE_INDEPENDENT_RESULT_REVIEW_v0.json",
+    "sha256": "7eb9e5894de746b575c4d8a4d4cd14bbca8da1bf7a8d5008096e1d00775d599f",
+    "review_script": "independent_review_post_aggregate_v0.py",
+    "review_script_sha256": "bcd2f0d227928bbaec688321fe93770e4ffdd513f3dcae34679f06c07b8449a3"
+  },
+  "accepted_interpretation": {
+    "former_aggregate_outcomes_resolved": true,
+    "broader_missing_family_fully_repaired": false,
+    "dominant_remaining_family": "missing_artifacts",
+    "dominant_remaining_family_outcomes": 218,
+    "thirteen_custody_currency_outcomes_remain_independently_classified": true,
+    "global_baseline_claim": "526_NONPASSING_MEASURED_ON_MAPPED_FROZEN_13756_TEST_INVENTORY"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "successor_authority": "NONE",
+  "captured_at_utc": "2026-07-23T02:38:46Z"
+}

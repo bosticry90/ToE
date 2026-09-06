@@ -1,0 +1,50 @@
+{
+  "schema_id": "CURRENT_REACHABILITY_CORRECTION_EOL_POLICY_20260725_v0",
+  "obligation_id": "NONPASSING-09138",
+  "test_id": "formal/python/tests/test_repository_canonical_text_integrity_gate.py::test_eol_policy_does_not_glob_hash_bound_historical_trees",
+  "prior_classification": {
+    "criticality": [
+      "CURRENT_REPRODUCIBILITY"
+    ],
+    "temporal_role": "CURRENT",
+    "disposition": "PENDING_REPAIR"
+  },
+  "corrected_classification": {
+    "criticality": [
+      "NONCURRENT"
+    ],
+    "temporal_role": "HISTORICAL",
+    "provenance": "VERIFIED",
+    "disposition": "QUARANTINED",
+    "current_reachability": "VERIFIED_ABSENT"
+  },
+  "evidence": {
+    "broad_lf_rules_introduced_by": {
+      "commit": "3c0bc23c334db9c933767c2e0a1fcd8a9cdb12e4",
+      "tree": "e4645574b3df0ce2fc2fe6a06476781cd4ee52fb",
+      "subject": "Stabilize clean baseline validation"
+    },
+    "accepted_line_ending_repair": {
+      "commit": "2849adfec947bb76a86debfc4ef0f7311cb91251",
+      "tree": "ecbcb1b14fe932ca833efe830e1cc5037d0db44d",
+      "result_review": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_REVIEW_20260721_v0.json"
+    },
+    "accepted_current_policy": [
+      "formal/docs/release/*.json text eol=lf",
+      "formal/output/**/*.json text eol=lf",
+      "formal/python/**/*.py text eol=lf",
+      "formal/toe_formal/**/*.lean text eol=lf"
+    ],
+    "contradiction": "The historical assertion requires absence of exact broad LF rules that the accepted recovery lineage intentionally retains.",
+    "current_enforcing_replacement": "formal/python/tests/test_repository_canonical_text_integrity_gate.py::test_canonical_maintenance_zones_are_pinned_to_lf"
+  },
+  "treatment": {
+    "gitattributes_changed": false,
+    "historical_assertion_changed": false,
+    "failure_remains_visible": true,
+    "historical_isolation_required": true
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

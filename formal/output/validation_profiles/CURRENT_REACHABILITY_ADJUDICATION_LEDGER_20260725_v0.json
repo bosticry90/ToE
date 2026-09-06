@@ -1,0 +1,2180 @@
+{
+  "counts": {
+    "candidate_obligations": 126,
+    "current_repair_required": 4,
+    "historical_quarantine_candidates": 89,
+    "unknown_current_reachability_after": 0,
+    "unratified_quarantine_candidates": 33
+  },
+  "criticality_counts": {
+    "CURRENT_AUTHORITY": 0,
+    "CURRENT_REPRODUCIBILITY": 4,
+    "CURRENT_SCIENTIFIC_EVIDENCE": 1,
+    "NONCURRENT": 122
+  },
+  "current_relative_to_commit": "43ce70246dea33ae691b7f1506e1d10af963e3e3",
+  "invariants": {
+    "classification_is_obligation_level": true,
+    "current_failures_require_separate_repair": true,
+    "failure_did_not_cause_profile_demotion": true,
+    "historical_isolation_still_required": true,
+    "profile_membership_changed_during_adjudication": false,
+    "provenance_is_independent_of_temporal_role": true
+  },
+  "rows": [
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/calculations/test_calc_ccft_scqed_literature_applicability_matrix.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-00004",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/calculations/test_calc_ccft_scqed_literature_applicability_matrix.py::test_checked_artifacts_match_a_fresh_deterministic_execution"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_admissibility_manifest.py",
+      "criticality": [
+        "CURRENT_REPRODUCIBILITY"
+      ],
+      "current_reachability": "VERIFIED_PRESENT",
+      "disposition": "PENDING_REPAIR",
+      "obligation_id": "NONPASSING-00145",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "LEAN_ADMISSIBILITY_MANIFEST_TRACKS_CURRENT_GATE_SOURCES"
+      ],
+      "temporal_role": "CURRENT",
+      "test_id": "formal/python/tests/test_admissibility_manifest.py::test_admissibility_manifest_exists_and_matches_current"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_admissibility_manifest.py",
+      "criticality": [
+        "CURRENT_REPRODUCIBILITY"
+      ],
+      "current_reachability": "VERIFIED_PRESENT",
+      "disposition": "PENDING_REPAIR",
+      "obligation_id": "NONPASSING-00147",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "LEAN_GATE_STUB_IDENTITIES_ARE_RECOVERY_LINEAGE_INPUTS"
+      ],
+      "temporal_role": "CURRENT",
+      "test_id": "formal/python/tests/test_admissibility_manifest.py::test_admissibility_manifest_tracks_lean_gate_stubs_deterministically"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_ccft_scqed_literature_applicability_matrix_calculation_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-00431",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ccft_scqed_literature_applicability_matrix_calculation_result_review.py::test_review_accepts_exact_immutable_artifacts"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_ccft_scqed_literature_applicability_matrix_calculation_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-00432",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ccft_scqed_literature_applicability_matrix_calculation_result_review.py::test_review_payload_accepts_only_scoped_e_repro"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_cosmo_empirical_discriminator_emp_cosmo_01_scaffold_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01119",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_cosmo_empirical_discriminator_emp_cosmo_01_scaffold_gate.py::test_cosmo_emp_cosmo_01_run_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_cosmo_full_derivation_active_mode_changeset_co_repromulgation_confirmation_cycle46_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01199",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_cosmo_full_derivation_active_mode_changeset_co_repromulgation_confirmation_cycle46_gate.py::test_cycle46_confirmation_packet_pointer_integrity_to_cycle45"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_cosmo_m3_completion_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01278",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_cosmo_m3_completion_promotion_cycle01_gate.py::test_cosmo_m3_completion_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_cosmo_m4_seam_closure_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01279",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_cosmo_m4_seam_closure_promotion_cycle01_gate.py::test_cosmo_m4_seam_closure_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01488",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze.py::test_freeze_artifacts_are_current"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01496",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py::test_freeze_review_artifact_is_current"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01501",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py::test_environment_and_all_freeze_decisions_pass"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01502",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_parameter_freeze_result_review.py::test_authority_rotates_only_to_canonical_execution"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01504",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py::test_canonical_execution_artifacts_are_current"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01505",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py::test_all_fifty_frozen_records_are_preserved_with_hashes"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01506",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py::test_every_run_preserves_required_execution_evidence"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01507",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py::test_controls_thresholds_and_determinism_match_mechanically"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01508",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py::test_frozen_convergence_and_exchange_observations_are_recorded"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01509",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_canonical_simulation.py::test_execution_does_not_assign_its_own_scientific_verdict"
+    },
+    {
+      "causal_root": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01546",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py::test_generated_artifacts_are_current"
+    },
+    {
+      "causal_root": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01557",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py::test_review_report_is_current"
+    },
+    {
+      "causal_root": "ABSOLUTE_CHECKOUT_PATH_LENGTH_IDENTITY",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01565",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py::test_current_filename_set_is_safe_but_identity_contract_is_incomplete"
+    },
+    {
+      "causal_root": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01569",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py::test_generated_artifacts_are_current"
+    },
+    {
+      "causal_root": "ABSOLUTE_CHECKOUT_PATH_LENGTH_IDENTITY",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01610",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py::test_identity_closes_across_matrix_manifest_path_and_payload_contract"
+    },
+    {
+      "causal_root": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01625",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py::test_generated_review_report_is_current"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v1.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-01833",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v1.py::test_exact_artifact_regeneration_is_current_and_deterministic"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_em_empirical_discriminator_emp_em_01_scaffold_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02069",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_em_empirical_discriminator_emp_em_01_scaffold_gate.py::test_em_emp_em_01_run_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_em_m3_completion_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02081",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_em_m3_completion_promotion_cycle01_gate.py::test_em_m3_completion_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02082",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py::test_em_m4_seam_closure_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_external_physics_benchmark_registry_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02509",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_external_physics_benchmark_registry_gate.py::test_external_benchmark_registry_and_report_exist"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_formal_docs_paper_cross_reference_integrity_gate.py",
+      "criticality": [
+        "CURRENT_SCIENTIFIC_EVIDENCE",
+        "CURRENT_REPRODUCIBILITY"
+      ],
+      "current_reachability": "VERIFIED_PRESENT",
+      "disposition": "PENDING_REPAIR",
+      "obligation_id": "NONPASSING-02535",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "CURRENT_STATE_AND_PAPER_SURFACES_REQUIRE_RESOLVABLE_REFERENCES"
+      ],
+      "temporal_role": "CURRENT",
+      "test_id": "formal/python/tests/test_formal_docs_paper_cross_reference_integrity_gate.py::test_formal_docs_paper_and_state_cross_references_resolve"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02732",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py::test_gr_emp_gr_01_run_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_gr_m3_completion_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02743",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_gr_m3_completion_promotion_cycle01_gate.py::test_gr_m3_completion_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02744",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py::test_gr_m4_seam_closure_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PILLAR_PACKET_CONTRACT_DRIFT",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-02904",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py::test_registry_repair_preserves_current_target_and_nonclaim_boundary"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03003",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py::test_guardrail_v0_artifacts_are_immutable_reviewed_commit_evidence"
+    },
+    {
+      "causal_root": "OTHER_STALE_AUTHORITY_EXPECTATION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03006",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py::test_guardrail_and_maintenance_authority_preserve_scientific_authority"
+    },
+    {
+      "causal_root": "OTHER_STALE_AUTHORITY_EXPECTATION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03007",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_guardrail_packet.py::test_lean_certificate_binds_guardrail_artifact_hashes_and_nonaction"
+    },
+    {
+      "causal_root": "OTHER_STALE_AUTHORITY_EXPECTATION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03066",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py::test_protected_paths_are_unchanged_and_production_layout_is_absent"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03070",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet.py::test_preparation_integration_is_complete_without_authority_rotation"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03081",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_independent_review.py::test_review_integration_enrolls_one_integrity_gate_and_one_lean_module"
+    },
+    {
+      "causal_root": "OTHER_STALE_AUTHORITY_EXPECTATION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03106",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py::test_packet_is_preparation_only_and_preserves_all_authority"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03108",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1.py::test_preparation_integration_is_complete_without_implementation_or_authority_edits"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03128",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v1_independent_review.py::test_review_integration_enrolls_one_integrity_gate_and_lean_module"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03131",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py::test_v2_outputs_are_deterministic_canonical_and_hash_bound"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03134",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py::test_dynamic_candidate_hash_edge_declares_its_sibling_target_resolution"
+    },
+    {
+      "causal_root": "OTHER_STALE_AUTHORITY_EXPECTATION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03190",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py::test_packet_is_preparation_only_and_protected_surfaces_are_unchanged"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03191",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2.py::test_v2_integration_and_lean_certificate_bind_generated_evidence"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03215",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py::test_review_integration_enrolls_integrity_gate_and_lean_module"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03217",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_loop_control_registry_sharding_read_only_prototype_execution_packet_v2_independent_review.py::test_protected_authority_registry_and_implementation_files_are_unchanged"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_br01_regime_bridge_record.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03476",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_br01_regime_bridge_record.py::test_ov_br01_lock_exists_and_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_br02_regime_bridge_record.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03478",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_br02_regime_bridge_record.py::test_ov_br02_lock_exists_and_matches_computed_record_and_includes_failure_reasons"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_br02_regime_bridge_record_dq01_v2.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03479",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_br02_regime_bridge_record_dq01_v2.py::test_ov_br02_dq01_v2_lock_matches_computed_record_and_has_no_failure_reasons"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_br_snd02_cross_source_density_mapping_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03495",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_br_snd02_cross_source_density_mapping_lock.py::test_ov_br_snd02_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_cv_br01_cv01_v1_pruning_bridge_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03500",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_cv_br01_cv01_v1_pruning_bridge_lock.py::test_ov_cv_br01_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "COMMITTED_ASSERTION::formal/python/tests/test_ov_cv_br01_cv01_v1_pruning_bridge_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03501",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_cv_br01_cv01_v1_pruning_bridge_lock.py::test_ov_cv_br01_negative_control_lock_has_cv01_attributed_elimination"
+    },
+    {
+      "causal_root": "COMMITTED_ASSERTION::formal/python/tests/test_ov_dq01_dq01_diagnostics_record_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03504",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_dq01_dq01_diagnostics_record_lock.py::test_ov_dq01_lock_payload_fingerprint_matches_file"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_dq02_dq01_v2_threshold_update_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03512",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_dq02_dq01_v2_threshold_update_lock.py::test_ov_dq02_policy_lock_matches_computed"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_dq03_dq01_active_policy_activation_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03514",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_dq03_dq01_active_policy_activation_lock.py::test_ov_dq03_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel02_selection_status_policy_compare_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03534",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel02_selection_status_policy_compare_lock.py::test_ov_sel02_lock_matches_computed"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_bm01_benchmark_ingestion_stress_test_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03536",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_bm01_benchmark_ingestion_stress_test_lock.py::test_ov_sel_bm01_lock_matches_computed_record_and_all_checks_pass"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_bm02_numeric_benchmark_ingestion_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03537",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_bm02_numeric_benchmark_ingestion_lock.py::test_ov_sel_bm02_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_bm03_numeric_benchmark_ingestion_audit_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03538",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_bm03_numeric_benchmark_ingestion_audit_lock.py::test_ov_sel_bm03_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_bm04_benchmark_interaction_stress_test_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03539",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_bm04_benchmark_interaction_stress_test_lock.py::test_ov_sel_bm04_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_snd01_sound_anchor_ingestion_audit_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03541",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_snd01_sound_anchor_ingestion_audit_lock.py::test_ov_sel_snd01_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_snd02_sound_anchor_interaction_stress_test_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03542",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_snd02_sound_anchor_interaction_stress_test_lock.py::test_ov_sel_snd02_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_snd03_sound_speed_derived_audit_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03543",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_snd03_sound_speed_derived_audit_lock.py::test_ov_sel_snd03_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_snd04_density_dependence_audit_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03544",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_snd04_density_dependence_audit_lock.py::test_ov_sel_snd04_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_sel_snd05_multi_density_constancy_audit_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03545",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_sel_snd05_multi_density_constancy_audit_lock.py::test_ov_sel_snd05_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_snd04_sound_speed_density_constancy_lock.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03556",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_snd04_sound_speed_density_constancy_lock.py::test_ov_snd04_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "COMMITTED_ASSERTION::formal/python/tests/test_ov_xd03_overlap_band_record.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03563",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_xd03_overlap_band_record.py::test_ov_xd03_overlap_band_record_math_and_lock_consistency"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_xd04_overlap_only_preference_comparison_record.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03564",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_xd04_overlap_only_preference_comparison_record.py::test_ov_xd04_lock_matches_computed_record"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_ov_xd04_overlap_only_preference_comparison_record_dq01_v2.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03565",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_ov_xd04_overlap_only_preference_comparison_record_dq01_v2.py::test_ov_xd04_dq01_v2_lock_matches_computed_record_and_is_both_decsive_agreement_true"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-03614",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py::test_phase3_m3_consolidation_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_physics_math_throughput_phase4_t09_seam_empirical_execution_packet_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04028",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_physics_math_throughput_phase4_t09_seam_empirical_execution_packet_gate.py::test_phase4_t09_files_exist"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_physics_math_throughput_phase5_t10_ssot_cutover_rehearsal_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04035",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_physics_math_throughput_phase5_t10_ssot_cutover_rehearsal_gate.py::test_phase5_t10_files_exist"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_physics_math_throughput_phase5_t11_program_closeout_readiness_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04039",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_physics_math_throughput_phase5_t11_program_closeout_readiness_gate.py::test_phase5_t11_files_exist"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_physics_math_throughput_phase6_policy_approval_binding_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04064",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_physics_math_throughput_phase6_policy_approval_binding_gate.py::test_phase6_policy_approval_files_exist"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_physics_math_throughput_phase6_t12_live_authorization_decision_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04068",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_physics_math_throughput_phase6_t12_live_authorization_decision_gate.py::test_phase6_t12_files_exist"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_physics_math_throughput_phase6_t13_first_live_matrix_packet_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04071",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_physics_math_throughput_phase6_t13_first_live_matrix_packet_gate.py::test_phase6_t13_files_exist"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_physics_math_throughput_phase6_t14_second_live_matrix_packet_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04074",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_physics_math_throughput_phase6_t14_second_live_matrix_packet_gate.py::test_phase6_t14_files_exist"
+    },
+    {
+      "causal_root": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04289",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_artifacts_are_current"
+    },
+    {
+      "causal_root": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04290",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_scores_all_rows_and_criteria"
+    },
+    {
+      "causal_root": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04291",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_selects_sr_stably_without_execution_readiness"
+    },
+    {
+      "causal_root": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04292",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_separates_target_and_execution_readiness"
+    },
+    {
+      "causal_root": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04293",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_preserves_candidate_and_prompt_boundaries"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04374",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py::test_post_result_route_decision_artifacts_are_current"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04375",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py::test_exact_five_routes_receive_complete_frozen_scoring"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04376",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py::test_scores_reproduce_without_recommendation_or_expected_winner_oracle"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04377",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py::test_selection_is_stable_across_all_frozen_thresholds"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04378",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py::test_every_score_binds_exact_eligible_propositions"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04379",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py::test_selected_route_is_bounded_and_does_not_reopen_canonical_work"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04380",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision.py::test_mutations_and_nonpromotion_boundaries_hold"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04382",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py::test_post_result_route_decision_review_is_current"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04384",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py::test_review_independently_binds_all_sources_and_propositions"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04386",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py::test_review_accepts_descendant_robustness_at_every_threshold"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04387",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "EXPLICIT_NONCURRENT_DIRAC_MAXWELL_OR_POST_V2_SUCCESSOR",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "UNRATIFIED_POST_REGISTRY",
+      "test_id": "formal/python/tests/test_post_dirac_maxwell_full_zero_mode_canonical_result_route_decision_result_review.py::test_review_authorizes_only_route_specific_preparation"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_post_phi_transport_ccft_chain_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04524",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_post_phi_transport_ccft_chain_gate.py::test_post_phi_transport_ccft_json_reports_match_builders[ccft_scqed_literature_applicability_matrix_calculation_execution]"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_post_phi_transport_ccft_chain_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04525",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_post_phi_transport_ccft_chain_gate.py::test_post_phi_transport_ccft_json_reports_match_builders[ccft_scqed_literature_applicability_matrix_calculation_result_review]"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_post_phi_transport_ccft_chain_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-04529",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_post_phi_transport_ccft_chain_gate.py::test_ccft_scqed_literature_applicability_matrix_calculation_execution_contract"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_qft_empirical_discriminator_emp_qft_01_scaffold_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-05061",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_qft_empirical_discriminator_emp_qft_01_scaffold_gate.py::test_qft_emp_qft_01_run_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_qft_gr_renormalized_stress_energy_object_assumption_reduction_attempt_result_review_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-07229",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_qft_gr_renormalized_stress_energy_object_assumption_reduction_attempt_result_review_gate.py::test_qft_gr_renormalized_stress_energy_object_assumption_reduction_attempt_result_review_deterministic_and_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_qft_m3_completion_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-08464",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_qft_m3_completion_promotion_cycle01_gate.py::test_qft_m3_completion_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-08465",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py::test_qft_m4_seam_closure_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-08477",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py::test_qm_emp_qm_01_run_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_qm_m3_completion_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-08543",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_qm_m3_completion_promotion_cycle01_gate.py::test_qm_m3_completion_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_qm_m4_seam_closure_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-08544",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_qm_m4_seam_closure_promotion_cycle01_gate.py::test_qm_m4_seam_closure_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "AUTHORITY_STATE_PROGRESSION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09130",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_repository_authority_custody_and_reproducibility_recovery_authorization.py::test_activated_maintenance_authority_does_not_rotate_science"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_repository_canonical_text_integrity_gate.py",
+      "criticality": [
+        "CURRENT_REPRODUCIBILITY"
+      ],
+      "current_reachability": "VERIFIED_PRESENT",
+      "disposition": "PENDING_REPAIR",
+      "obligation_id": "NONPASSING-09138",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "REPOSITORY_EOL_POLICY_CONTROLS_PORTABLE_IDENTITY"
+      ],
+      "temporal_role": "CURRENT",
+      "test_id": "formal/python/tests/test_repository_canonical_text_integrity_gate.py::test_eol_policy_does_not_glob_hash_bound_historical_trees"
+    },
+    {
+      "causal_root": "AUTHORITY_STATE_PROGRESSION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09144",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_repository_clean_baseline_validation_stabilization_authorization.py::test_maintenance_authority_does_not_authorize_phase_b_c_or_science"
+    },
+    {
+      "causal_root": "OTHER_STALE_AUTHORITY_EXPECTATION",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09145",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_repository_clean_baseline_validation_stabilization_authorization.py::test_terminal_failure_consumes_cycle_and_requires_fresh_selector"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_repository_hash_refresh_and_tracked_blob_identity_repair_result.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09146",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_repository_hash_refresh_and_tracked_blob_identity_repair_result.py::test_repair_result_and_review_are_bound_and_terminal"
+    },
+    {
+      "causal_root": "COMMITTED_ASSERTION::formal/python/tests/test_scalar_multi_background_robustness_reports.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09438",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_scalar_multi_background_robustness_reports.py::test_equation_family_mapping_preserves_flat_bridge_and_canonical_row"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_scalar_multi_background_robustness_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09479",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_scalar_multi_background_robustness_result_review.py::test_review_local_adjudication_passes_exactly_sixteen_decisions"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_scalar_multi_background_robustness_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09498",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_scalar_multi_background_robustness_result_review.py::test_independent_review_accepts_frozen_chain_and_two_fresh_runs"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_scalar_multi_background_robustness_result_review.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09499",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_scalar_multi_background_robustness_result_review.py::test_accepted_review_uses_level3_claim_and_unit_ledger_target"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_scalar_route_submission_checkpoint_referential_integrity_correction_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09527",
+      "provenance": "VERIFIED",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_scalar_route_submission_checkpoint_referential_integrity_correction_gate.py::test_frozen_checkpoint_hashes_are_preserved_and_corrections_fail_closed"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09969",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py::test_sr_emp_sr_01_run_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09993",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py::test_sr_m3_completion_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-09994",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py::test_sr_m4_seam_closure_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-10054",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py::test_sr_m5_theory_parity_link_cycle56_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-10119",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py::test_stat_emp_stat_01_run_bundle_is_hash_and_pointer_pinned"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-10144",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py::test_stat_m3_completion_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_stat_m4_seam_closure_promotion_cycle01_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-10145",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_stat_m4_seam_closure_promotion_cycle01_gate.py::test_stat_m4_seam_closure_promotion_cycle01_gate"
+    },
+    {
+      "causal_root": "ARTIFACT_CURRENCY::formal/python/tests/test_technical_debt_baseline_correction_v1_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-10255",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_technical_debt_baseline_correction_v1_gate.py::test_v1_baseline_correction_is_deterministic_and_current"
+    },
+    {
+      "causal_root": "PACKET_CONTRACT::formal/python/tests/test_v01_alpha_release_packet_gap_review_gate.py",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "current_reachability": "VERIFIED_ABSENT",
+      "disposition": "QUARANTINED",
+      "obligation_id": "NONPASSING-13133",
+      "provenance": "INCOMPLETE",
+      "reachability_evidence": [
+        "NOT_REACHABLE_FROM_STRICT_CURRENT_OWNER_ROOTS",
+        "NOT_A_CURRENT_ENFORCING_GUARD",
+        "FAILURE_REMAINS_VISIBLE_IN_HISTORICAL_PROFILE"
+      ],
+      "temporal_role": "HISTORICAL",
+      "test_id": "formal/python/tests/test_v01_alpha_release_packet_gap_review_gate.py::test_v01_alpha_release_packet_gap_review_acceptance_criteria_and_determinism"
+    }
+  ],
+  "schema_id": "CURRENT_REACHABILITY_ADJUDICATION_LEDGER_20260725_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "sources": {
+    "authority_roots": {
+      "path": "formal/docs/release/CURRENT_AUTHORITY_REACHABILITY_ROOTS_20260725_v0.json",
+      "sha256": "6b6cbefae93dde6044fa2e7fec58c9f62a2a4fcad72a757a86506cc3218652c2"
+    },
+    "obligation_registry": {
+      "path": "formal/output/validation_profiles/RECOVERY_OBLIGATION_REGISTRY_20260725_v0.json",
+      "sha256": "0f9dcc69d86cac446f988dfcc30c96809f68cb67ae26e0435961a845c2be618a"
+    }
+  },
+  "temporal_role_counts": {
+    "CURRENT": 4,
+    "HISTORICAL": 89,
+    "UNRATIFIED_POST_REGISTRY": 33
+  },
+  "v2_enrollment": "NOT_AUTHORIZED"
+}

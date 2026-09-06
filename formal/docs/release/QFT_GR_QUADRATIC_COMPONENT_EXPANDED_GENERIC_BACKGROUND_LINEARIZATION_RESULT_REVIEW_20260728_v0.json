@@ -1,0 +1,72 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_INCOMPLETE",
+    "GAUGE_SOURCE_LINEARIZATION_UNSPECIFIED",
+    "BACKGROUND_JET_CONTRACT_INCOMPLETE",
+    "BACKGROUND_FIELD_EQUATION_SUBSTITUTION_AMBIGUOUS",
+    "MINKOWSKI_CONTROL_PRESERVED_NOT_REDERIVED",
+    "NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE"
+  ],
+  "authority_rotation": {
+    "blocked_linearization_result_accepted": true,
+    "component_expansion_retry_authorized": false,
+    "constraint_tangent_projection_authorized": false,
+    "gauge_and_jet_contract_packet_authorized": true,
+    "generic_companion_execution_authorized": false,
+    "generic_spectral_calculation_authorized": false,
+    "ghost_analysis_authorized": false,
+    "phenomenology_authorized": false,
+    "quasilinear_or_local_theorem_authorized": false,
+    "source_extension_authorized": false,
+    "variable_coefficient_estimate_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "Minkowski_control_custody_is_exact": true,
+    "all_predecessor_component_blockers_remain_exposed": true,
+    "authorized_target_was_consumed": true,
+    "corrective_packet_is_narrow_and_nonexecuting": true,
+    "field_independent_branch_was_not_silently_selected": true,
+    "generic_trace_tangent_differs_from_flat_chart": true,
+    "metric_dependent_gauge_requires_unfrozen_C3_jet": true,
+    "no_spectral_variable_or_nonlinear_overclaim": true,
+    "on_shell_background_substitution_fails_closed": true,
+    "terminal_outcomes_are_exact_and_nonoverclaiming": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE",
+    "OFF_SHELL_FORM_COMPLETE",
+    "ON_SHELL_REDUCTION_COMPLETE",
+    "GAUGE_COMPATIBLE_FORM_COMPLETE",
+    "MINKOWSKI_SPECIALIZATION_REPRODUCED_FROM_NEW_FORM",
+    "COMPONENT_IDENTITY_CHECKS",
+    "EXACT_GENERIC_FROZEN_COMPANION_OPERATOR",
+    "GENERIC_CHARACTERISTIC_ROOT_ASYMPTOTICS",
+    "GENERIC_FINITE_SOBOLEV_LOSS",
+    "CONSTRAINT_TANGENT_PROJECTOR",
+    "VARIABLE_COEFFICIENT_LINEAR_ESTIMATE",
+    "QUASILINEAR_OR_LOCAL_WELL_POSEDNESS"
+  ],
+  "review_target": "review_qft_gr_quadratic_component_expanded_generic_background_linearization_v0_result",
+  "reviewed_calculation": {
+    "canonical_bytes_match": true,
+    "canonical_sha256_recomputed": "3764a80a8e9cc362c86b25b08065bdbef7d48118b7c063df900b3211020ba724",
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-COMPONENT-EXPANDED-GENERIC-BACKGROUND-LINEARIZATION-v0.json",
+    "sha256": "3764a80a8e9cc362c86b25b08065bdbef7d48118b7c063df900b3211020ba724"
+  },
+  "reviewer_independence": {
+    "audits_claim_ceiling": true,
+    "imports_calculation_module": false,
+    "rechecks_Minkowski_custody": true,
+    "rechecks_background_chart_boundary": true,
+    "rechecks_gauge_derivative_order": true,
+    "rechecks_predecessor_placeholder_set": true,
+    "rechecks_trace_tangent_boundary": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+  "verdict": "ACCEPT_FAIL_CLOSED_GENERIC_LINEARIZATION_BLOCKER_AUTHORIZE_GAUGE_AND_BACKGROUND_JET_CONTRACT_PACKET_ONLY_PRESERVE_MINKOWSKI_CONTROL_NO_SPECTRAL_VARIABLE_OR_NONLINEAR_ESTIMATE"
+}

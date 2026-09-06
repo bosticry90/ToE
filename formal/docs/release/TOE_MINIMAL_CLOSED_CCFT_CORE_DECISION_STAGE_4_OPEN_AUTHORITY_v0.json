@@ -1,0 +1,135 @@
+{
+  "artifact_id": "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_STAGE_4_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_MINIMAL_CLOSED_CCFT_SURROGATE_CORE_DECISION_STAGE_4_OPEN",
+  "authorized_candidate_boundary": {
+    "bounded_surrogate_record_count": 5,
+    "candidate_families": [
+      {
+        "candidate_id": "CCFT-CORE-CANDIDATE-CP-NLSE-NUMERICAL-SURROGATE",
+        "role": "source-bound computational surrogate candidate",
+        "source_entry_ids": ["CCFT-MATH-001", "CCFT-MATH-002", "CCFT-MATH-003", "CCFT-MATH-004", "CCFT-MATH-005", "CCFT-MATH-006"]
+      },
+      {
+        "candidate_id": "CCFT-CORE-CANDIDATE-LCRD-V3-NUMERICAL-SURROGATE",
+        "role": "source-bound phenomenological computational surrogate candidate",
+        "source_entry_ids": ["CCFT-MATH-009", "CCFT-MATH-010", "CCFT-MATH-011", "CCFT-MATH-012", "CCFT-MATH-013", "CCFT-MATH-014", "CCFT-MATH-015", "CCFT-MATH-016"]
+      },
+      {
+        "candidate_id": "CCFT-CORE-COMPARATOR-SHARED-LINEAR-BASELINE",
+        "role": "generic or known-physics comparator only; not independently eligible as native CCFT core",
+        "source_entry_ids": ["CCFT-MATH-004", "CCFT-MATH-005", "CCFT-MATH-006", "CCFT-MATH-008"]
+      }
+    ],
+    "combined_wave_rotor_candidate_authorized": false,
+    "fully_physically_operational_object_count": 0,
+    "generic_or_known_physics_record_count": 6,
+    "maximum_minimal_core_candidates": 12,
+    "minimal_core_selected": false,
+    "preferred_formulation_selected": false,
+    "stage_3_operational_record_count": 20
+  },
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_v0.json",
+      "role": "accepted 20-record operationalization result with five bounded surrogates and zero physical operational objects",
+      "sha256": "7f0b5c4d01bde1976ea4c933e7eda39a78eb3fcf50b4b952fc210f0b5b6a12e5"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_REVIEW_v0.json",
+      "role": "independent Stage 3 review and surrogate-only boundary",
+      "sha256": "b9908a8c414887eb46ba1d94e017ec26f9cde189468808372dfa8b90bc6ca27f"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_VALIDATION_v0.json",
+      "role": "Stage 3 scoped validation and disclosed exhaustive-Python debt",
+      "sha256": "03cb183653cedfd3658151b6c8574a22b9baee80c2c2ef7f6a30e18d3bb718fa"
+    },
+    {
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_03_CLOSE_v0.json",
+      "role": "immutable passed Stage 3 CLOSE event",
+      "sha256": "1e9e67b830898a7d2fce6ab6cecbd7e9a0cbbabf08a2e7ca2ca9990d062623a4"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "e8bd8faac099a9b1c9e759bfae544bbe8eb56ad631959b369dc595b9f9901adf",
+    "canonical_target": "select_or_reject_toe_minimal_closed_ccft_core_v0",
+    "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+    "stage_number": 4
+  },
+  "captured_at_utc": "2026-08-01T00:44:38Z",
+  "closure_matrix_fields": [
+    "complete_state_specification",
+    "closed_evolution_rule",
+    "conservation_or_exchange_contract",
+    "initial_data_contract",
+    "boundary_data_contract",
+    "parameter_contract",
+    "domain_and_scale_contract",
+    "surrogate_operational_output",
+    "known_physics_comparator",
+    "conflict_isolation",
+    "new_postulates_required",
+    "internal_failure_conditions"
+  ],
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 4 core-decision scope",
+      "sha256": "12824e836f1f687317649b02d204dde17f01a074cb7818f46353e4fbd97469be"
+    }
+  ],
+  "permitted_work": [
+    "reverify every consumed Stage 3 operational record source and lineage binding",
+    "compare CP-NLSE and LCRD-v3 surrogate candidates separately against the frozen closure matrix",
+    "use the shared linear dispersion and generic numerical diagnostics only as controls or comparators",
+    "determine whether exactly one smallest source-bound surrogate system closes state evolution data parameter domain comparator output and failure contracts",
+    "reject a candidate when closure depends on undefined chi dynamics an unbound UCFF equation of motion a missing LSDA map or cross-lineage equation assembly",
+    "identify an exact missing new postulate without inserting or authorizing it",
+    "select a core only with the explicit status bounded mathematical or computational surrogate and no physical promotion",
+    "produce one independently reviewed atomic Stage 4 CLOSE result"
+  ],
+  "prohibited_work": [
+    "invent a physical coherence bearer units mesoscopic scale preparation operation or measurement channel",
+    "repair the nonzero-interaction frequency conflict or choose between chi dynamics",
+    "claim LCRD descends from LSDA or from the rotor functional",
+    "combine CP-NLSE UCFF chi rotor or wave branches without an explicit source-bound coupling and closure relation",
+    "select the shared generic linear baseline as distinctive native CCFT content",
+    "construct or vary an action master action matter coupling gravity coupling or seam",
+    "perform stability hyperbolicity phenomenology or empirical calculations",
+    "define a physical observable or empirical discriminator",
+    "claim a selected numerical surrogate is a physical CCFT theory or describes nature",
+    "promote historical evidence or claim repository-wide exhaustion",
+    "open Stage 5 automatically"
+  ],
+  "required_result_fields": [
+    "candidate_core_id",
+    "source_entry_and_operational_record_ids",
+    "lineage_scope",
+    "state_specification",
+    "evolution_closure",
+    "conservation_or_exchange_status",
+    "initial_and_boundary_data",
+    "parameter_contract",
+    "domain_and_scale_contract",
+    "surrogate_operational_output",
+    "known_physics_comparator",
+    "conflict_and_cross_lineage_exclusions",
+    "new_postulate_ledger",
+    "internal_failure_conditions",
+    "closure_status",
+    "selection_or_rejection_rationale"
+  ],
+  "schema_id": "toe.ccft.minimal_closed_core_decision.stage_4_open_authority.v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_4_OPEN_ONLY",
+  "surrogate_only_interpretation": {
+    "physical_ccft_model_may_be_claimed": false,
+    "positive_core_outcome_may_only_mean": "SOURCE_BOUND_MATHEMATICAL_OR_COMPUTATIONAL_SURROGATE_READY_FOR_LATER_INTERNAL_VIABILITY_TEST",
+    "representation_or_field_may_be_promoted": false
+  },
+  "terminal_outcomes": [
+    "MINIMAL_SOURCE_BOUND_CCFT_CORE_IDENTIFIED",
+    "MINIMAL_CCFT_CORE_IDENTIFIED_ONLY_AS_BOUNDED_SURROGATE",
+    "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+    "CCFT_CORE_SELECTION_BLOCKED_BY_CONFLICT"
+  ]
+}

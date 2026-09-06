@@ -1,0 +1,29 @@
+{
+  "accepted": true,
+  "archive_or_repository_content_searched": false,
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN_AUTHORITY_REVIEW_v0",
+  "candidate_source_set_created": false,
+  "captured_at_utc": "2026-08-01T04:15:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_exactly_the_seven_manifest_authorized_inputs": true,
+    "authority_binds_the_eight_roots_and_all_file_byte_branch_and_lineage_caps": true,
+    "authority_binds_the_frozen_two_axis_structural_selection_and_tie_break_rules": true,
+    "authority_binds_required_candidate_custody_duplicate_lineage_and_overflow_fields": true,
+    "authority_consumes_no_content_pass_at_open": true,
+    "authority_does_not_extract_or_adjudicate_a_closure_contract": true,
+    "authority_does_not_repair_select_or_construct_CCFT": true,
+    "authority_preserves_stage_2_as_separately_authorized": true,
+    "authority_requires_stable_root_snapshots_independent_review_and_atomic_close": true,
+    "installation_is_reviewed_unopened_with_zero_attempts_and_events": true,
+    "source_hashes_reproduce": true
+  },
+  "closure_contract_recovered_or_rejected": false,
+  "decision": "AUTHORIZE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN",
+  "failed_checks": [],
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "schema_id": "toe.targeted_ccft_closure_source_discovery_and_custody.stage_1_open_authority_review.v0",
+  "scientific_result_created": false,
+  "stage_2_authorized": false,
+  "status": "STAGE_1_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}

@@ -1,0 +1,70 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "MINKOWSKI_FROZEN_COMPANION_OPERATOR_EXACTLY_DERIVED_CONTROL_ONLY",
+    "GENERIC_BACKGROUND_OPERATOR_NOT_YET_CLOSED",
+    "GENERIC_SUBPRINCIPAL_SPECTRAL_CLASSIFICATION_NOT_AUTHORIZED",
+    "CONSTRAINT_TANGENT_PROJECTOR_REMAINS_BLOCKED",
+    "NO_VARIABLE_OR_NONLINEAR_ESTIMATE"
+  ],
+  "authority_rotation": {
+    "component_expanded_background_linearization_authorized": true,
+    "constraint_tangent_projection_authorized": false,
+    "generic_operator_execution_result_accepted": true,
+    "generic_spectral_calculation_authorized": false,
+    "ghost_analysis_authorized": false,
+    "local_existence_theorem_authorized": false,
+    "phenomenology_authorized": false,
+    "quasilinear_estimate_authorized": false,
+    "source_extension_authorized": false,
+    "variable_coefficient_estimate_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "all_named_predecessor_remainders_are_exposed": true,
+    "authorized_target_was_consumed": true,
+    "background_and_gauge_jets_fail_closed": true,
+    "constraint_projector_remains_deferred": true,
+    "generic_operator_fails_closed": true,
+    "minkowski_control_matrix_is_complete_and_placeholder_free": true,
+    "minkowski_derivative_blocks_are_exact": true,
+    "minkowski_metric_scalar_and_spin_blocks_are_exact": true,
+    "minkowski_spin2_block_is_exact": true,
+    "minkowski_top_identity_block_is_exact": true,
+    "no_spectral_variable_or_nonlinear_overclaim": true,
+    "zero_addition_extension_remains_frozen": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "EXACT_GENERIC_BACKGROUND_FROZEN_COMPANION_OPERATOR",
+    "GENERIC_CHARACTERISTIC_ROOT_ASYMPTOTICS",
+    "GENERIC_FINITE_SOBOLEV_LOSS",
+    "GENERIC_FRACTIONAL_ROOT_SPLITTING_EXCLUSION",
+    "FULL_128_STATE_CONSTRAINT_TANGENT_PROJECTOR",
+    "CONSTRAINT_RESTRICTED_MINIMUM_FROZEN_LOSS",
+    "VARIABLE_COEFFICIENT_LINEAR_ESTIMATE",
+    "QUASILINEAR_TAME_ESTIMATE",
+    "LOCAL_EXISTENCE",
+    "UNIQUENESS",
+    "CONTINUOUS_DEPENDENCE"
+  ],
+  "review_target": "review_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0_result",
+  "reviewed_calculation": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v0.json",
+    "sha256": "750bafb46fadad7763ec574506e9e616140b0d0f1bd7697d7268fb6e72f3c682"
+  },
+  "reviewer_independence": {
+    "audits_claim_ceiling": true,
+    "checks_exact_representative_entries_in_every_block": true,
+    "fails_closed_on_constraint_projector": true,
+    "fails_closed_on_generic_operator_and_spectrum": true,
+    "imports_calculation_module": false,
+    "rechecks_predecessor_placeholder_set": true,
+    "recomputes_sparse_entry_hash": true,
+    "recomputes_top_identity_coverage": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v0",
+  "verdict": "ACCEPT_EXACT_MINKOWSKI_CONTROL_KEEP_GENERIC_OPERATOR_SPECTRUM_AND_CONSTRAINT_MINIMUM_BLOCKED_AUTHORIZE_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_ONLY_NO_VARIABLE_OR_NONLINEAR_ESTIMATE"
+}

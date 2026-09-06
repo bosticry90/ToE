@@ -1,0 +1,114 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_PACKET_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:19:24Z",
+  "target": "execute_historical_report_aggregate_contract_decomposition_and_retirement_review_v0",
+  "status": "AUTHORIZED_DIAGNOSTIC_ONLY_NO_FIXTURE_NO_TEST_REPAIR",
+  "accepted_lineage": {
+    "pilot_commit": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca",
+    "pilot_result_review": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_REVIEW_20260722_v0.json",
+    "pilot_result_review_sha256": "cd323104d3c6c0da2f61fd2ac3305eaae2e7f8c2398fcbffcf7107f38612784b",
+    "adjudication_ledger": ".toe-recovery/custody-v0/missing-artifact-expectation-adjudication-v0/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_LEDGER_20260722_v0.json",
+    "adjudication_ledger_sha256": "020b59ec9d9cb8e59e256269d8459f9e95107a5b6926818fba66e64154e0a228"
+  },
+  "aggregate_contract": {
+    "path": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+    "git_blob_oid": "14ade32d677b2416c5eb09d5575b1ab513b0a72c",
+    "sha256": "8dbe535e50a125e0df84ee9d98cf7bff63fc0872f10e969866776649f58c7654",
+    "tests_tree_oid": "5c2ed42b6476086f5ed6ce61b95c520fe0d2f426",
+    "selected_outcomes": [
+      "test_all_remediation_reports_exist",
+      "test_all_report_controls_preserve_invariance"
+    ],
+    "dependency_identity_count": 19,
+    "known_checkout_partition": {
+      "absent_ignored_never_tracked": 15,
+      "committed_present": 4
+    },
+    "modification_authorized": false
+  },
+  "required_identity_questions": [
+    "Does a tracked deterministic generator exist?",
+    "Are all required inputs frozen and committed?",
+    "Is the expected output deterministic?",
+    "Is the artifact beyond the live-report retention period?",
+    "Is it current authority or historical evidence?",
+    "Does its clean-checkout absence carry scientific meaning?",
+    "Would retiring the expectation weaken a current-critical control?",
+    "Can a temporary fixture be constructed without reading dirty-main output?"
+  ],
+  "required_classifications": [
+    "fixture-convertible",
+    "retention-expired",
+    "historical-noncurrent",
+    "provenance-blocked",
+    "current-critical",
+    "safe-to-retire"
+  ],
+  "allowed_dispositions": [
+    "CONVERT_TO_TEMPORARY_FIXTURE",
+    "RETAIN_AS_CURRENT_CRITICAL_ARTIFACT",
+    "DEMOTE_TO_HISTORICAL_NONBLOCKING_PROVENANCE",
+    "RETIRE_RETENTION_EXPIRED_EXPECTATION",
+    "REQUIRE_EXPLICIT_HISTORICAL_ABSENCE",
+    "BLOCK_FOR_GENERATOR_PROVENANCE",
+    "SPLIT_FROM_AGGREGATE_CONTRACT"
+  ],
+  "required_analysis": [
+    "Recompute the exact ordered REPORT_PATHS list from the frozen aggregate test.",
+    "Inherit and verify each identity's Git, ignore, retention, authority-reference, and dirty-workspace metadata from the accepted adjudication ledger without reading dirty report contents.",
+    "Distinguish actual output generators from tools that merely consume or name an identity.",
+    "Resolve each generator's required input chain as committed and frozen, historical-report-dependent, or provenance-incomplete.",
+    "Classify identity-local validation separately from aggregate presence and aggregate invariance obligations.",
+    "Determine whether the monolithic aggregate should remain intact or split into independently adjudicated obligations.",
+    "Identify the smallest later implementation candidates and stop for independent review."
+  ],
+  "authorized_cycle": {
+    "diagnostic_execution_cycles": 1,
+    "independent_result_reviews": 1,
+    "fixture_identities_created": 0,
+    "test_files_modified": 0,
+    "generator_files_modified": 0,
+    "scientific_actions": 0,
+    "lean_actions": 0,
+    "automatic_successor_actions": 0
+  },
+  "output_containment": {
+    "maintenance_root": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-v0",
+    "dirty_main": "READ_ONLY_METADATA_ONLY_NO_REPORT_CONTENT_ACCESS",
+    "formal_output_reports": "READ_EXISTING_COMMITTED_ONLY_WRITE_PROHIBITED",
+    "fixture_generation": "PROHIBITED",
+    "canonical_repository_outputs": "SELECTION_PACKET_REVIEW_RESULT_AND_RESULT_REVIEW_ONLY"
+  },
+  "acceptance_requirements": {
+    "aggregate_dependency_identities_individually_classified": 19,
+    "aggregate_outcomes_individually_classified": 2,
+    "actual_generators_distinguished_from_consumers": true,
+    "latent_input_dependencies_resolved": true,
+    "artifacts_created": 0,
+    "fixtures_generated": 0,
+    "tests_modified": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "validation_checkout": "CLEAN",
+    "dirty_main": "BYTE_UNCHANGED",
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "reading or copying ignored dirty-main report contents",
+    "generating any historical report or fixture",
+    "writing under formal/output/reports",
+    "modifying any test or generator",
+    "retiring or decomposing the aggregate test during this diagnostic cycle",
+    "scaling the pilot fixture pattern",
+    "changing scientific content or authority",
+    "registry rotation",
+    "V2 enrollment",
+    "Lean activity",
+    "scientific calculation",
+    "automatic successor cycle"
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

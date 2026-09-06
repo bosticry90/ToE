@@ -1,0 +1,478 @@
+{
+  "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0",
+  "schema_id": "toe.ccft_v0.model_contract_completion_and_freeze.result.v0",
+  "captured_at_utc": "2026-08-02T05:10:00Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "semantic_stage_id": "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE",
+  "scientific_target": "complete_and_freeze_toe_ccft_v0_model_contract_v0",
+  "scope_hash": "b80489e0e609397bdc4b9d24c78a47f0f30578e124c67dcb47114d091e781f87",
+  "attempt_sequence_number": 2,
+  "open_event_binding": {
+    "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+    "sha256": "290446ab6c9b911554678f655501598db1cb220ec4e3b00d79db6fc96dc529fa",
+    "event_hash": "60b996e6d1c5eb202eff506d57357fc3a5878531a371335d2e5e2727f3dcf03a"
+  },
+  "scientific_input_bindings": [
+    {
+      "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0.json",
+      "sha256": "28b0827797274df7307b59da8641778ff9e5da2ef72bc358d34a4b4a9fff731d"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0.json",
+      "sha256": "9c6df6aaee209de817da67cb90a99beffd5cc7c756af39a2e4db2b17168a5b78"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+      "sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0.json",
+      "sha256": "b58b12e816db18dbda12af9b53ead28fcfe40c359751dfa9934da7fcbb5df7cf"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN_AUTHORITY_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN_AUTHORITY_v0.json",
+      "sha256": "1eb5a91816d5bfeaeaf63ad70ae4246099da8d509bae66cf69f810fc28319ab9"
+    }
+  ],
+  "historical_equation_comparison": [
+    {
+      "record_id": "CP_EQ_001",
+      "equation": "R1[phi] = i phi_t + (1/2) phi_xx - g|phi|^2 phi + lam phi_xxxx + beta phi_xxxxxx = 0",
+      "source_path": "formal/proving docs/FirstOrder.lean",
+      "source_capture_sha256": "e041a9015cc073dbaad15556c4a0af908168a3400a577f74ef113524c7c39a46",
+      "plain_language_assessment": "A higher-spatial-derivative residual with three free coefficients and no background subtraction.",
+      "control_limit": "At lam=beta=g=0 it has the shared linear Schrodinger control.",
+      "dispersion_consequence": "The frozen evidence does not supply one conflict-free interaction-dependent dispersion for this residual; no formula is adopted from it in v0.",
+      "norm_status": "PLAUSIBLE_BUT_NOT_ADJUDICATED",
+      "additional_postulate_burden": "HIGHER_BECAUSE_LAM_BETA_AND_THEIR_RANGES_MUST_BE_FIXED",
+      "quick_rejection_condition": "Reject this option for v0 if lambda and beta cannot be justified and bounded without exceeding the postulate budget.",
+      "decision": "NOT_SELECTED"
+    },
+    {
+      "record_id": "CP_EQ_002",
+      "equation": "i phi_t = -(1/2) phi_xx + g_eff (|phi|^2-rho0) phi",
+      "source_path": "formal/proving docs/Monograph.md",
+      "source_capture_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c",
+      "plain_language_assessment": "The smallest complete background-shifted cubic branch and the shortest route to a theorem-ready periodic model.",
+      "control_limit": "At g_eff=0 it has the shared linear Schrodinger control.",
+      "dispersion_consequence": "Its lineage associates the branch with the squared Bogoliubov-type statement, while the additive carrier-frequency statement remains separately preserved; which relation follows for which background is deliberately deferred to the Stage 3 packet and Stage 4 theorem attack.",
+      "norm_status": "EXPLICIT_SOURCE_CLAIM_REQUIRING_LATER_DERIVATION_FOR_THE_FROZEN_MODEL",
+      "additional_postulate_burden": "LOWEST_OF_THE_THREE_RECORDS",
+      "quick_rejection_condition": "Reject or weaken the selected v0 if the exact normalized equation is ill-posed, its defining dispersion is inconsistent, or it is only a generic known NLSE without a CCFT-specific restriction.",
+      "decision": "SELECTED_AS_STRUCTURAL_TEMPLATE_ONLY"
+    },
+    {
+      "record_id": "CP_EQ_003",
+      "equation": "i phi_t = -(1/2) phi_xx + lam phi_xxxx + beta phi_xxxxxx + g|phi|^2 phi",
+      "source_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+      "source_capture_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3",
+      "plain_language_assessment": "An explicit operational higher-derivative numerical equation whose own source distinguishes it from a canonical equation.",
+      "control_limit": "At lam=beta=g=0 it has the shared linear Schrodinger control.",
+      "dispersion_consequence": "Its source explicitly locks omega(k)=0.5 k^2+lambda k^4+beta k^6 only for the g=0 operational linear test and supplies no accepted nonzero-interaction dispersion contract.",
+      "norm_status": "NUMERICALLY_MONITORED_IN_HISTORICAL_CONFIGURATIONS_ONLY",
+      "additional_postulate_burden": "HIGHER_BECAUSE_LAM_BETA_SIGNS_RANGES_AND_CANONICAL_STATUS_REMAIN_OPEN",
+      "quick_rejection_condition": "Reject this option for v0 if its operational-only status or higher-derivative parameter burden cannot be converted into one canonical contract without silent repair.",
+      "decision": "NOT_SELECTED"
+    }
+  ],
+  "governing_equation_decision": {
+    "authorized_route": "AUTHOR_ONE_NEW_CCFT_V0_EQUATION_LABELED_NEW_CCFT_POSTULATE",
+    "selected_equation_provenance": "NEW_CCFT_POSTULATE",
+    "source_template_record_id": "CP_EQ_002",
+    "exact_equation": "i partial_t psi = -(1/2) partial_xx psi + kappa (|psi|^2-1) psi",
+    "why_new_instead_of_source_adoption": "The source supplies the structural equation but not a complete nondimensionalization, parameter range, initial-data class, failure contract, or authoritative resolution of the three-record conflict. CCFT-v0 therefore adopts the CP_EQ_002 structure while declaring the exact normalized model as a new postulate rather than a recovered final equation.",
+    "historical_conflict_status": "PRESERVED_NOT_RESOLVED_OR_REPAIRED",
+    "historical_equations_blended": false,
+    "selection_rationale": "This is the unique minimal cubic option among the frozen records: it uses one complex state and one nonnegative interaction control, is meaningful on the recovered periodic domain, recovers the shared linear control at kappa=0, and yields an exact upstream dispersion question without fourth- or sixth-derivative additions.",
+    "quick_rejection_route": "Reject or weaken the v0 route if later work proves ill-posedness in the frozen data class, refutes its candidate invariant without a replacement, or shows that its only content is gauge-equivalent to a generic known nonlinear Schrodinger model.",
+    "director_consequence": "The project is constructing a testable cubic periodic surrogate, not declaring that the archive selected the final CCFT equation."
+  },
+  "immutable_model_contract": {
+    "model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "model_version": "v0",
+    "frozen_model_count": 1,
+    "state": {
+      "evolved_variable": "psi(x,t)",
+      "codomain": "COMPLEX",
+      "state_space": "H1_per(T_L; C)",
+      "independent_variable_count": 1,
+      "derived_density": "rho=|psi|^2",
+      "physical_bearer": "UNASSIGNED",
+      "physical_units": "UNASSIGNED_DIMENSIONLESS_SURROGATE_ONLY"
+    },
+    "dynamics": {
+      "equation": "i partial_t psi = -(1/2) partial_xx psi + kappa (|psi|^2-1) psi",
+      "time_derivative_order": 1,
+      "maximum_spatial_derivative_order": 2,
+      "nonlinear_term": "kappa (|psi|^2-1) psi",
+      "derivative_meanings": {
+        "partial_t": "strong derivative for smooth implementation vectors and distributional time derivative in the later analytical problem",
+        "partial_xx": "second periodic spatial derivative on T_L"
+      },
+      "higher_derivative_coefficients": {
+        "lambda": 0.0,
+        "beta": 0.0,
+        "status": "EXCLUDED_FROM_THIS_V0_NOT_INFERRED_FALSE_IN_OTHER_BRANCHES"
+      }
+    },
+    "domain_and_data": {
+      "spatial_domain": "T_L = R/(L Z), represented as x in [0,L)",
+      "length_parameter": "L>0",
+      "boundary_condition": "psi(x+L,t)=psi(x,t)",
+      "time_domain": "t in [0,T_max), where T_max is the maximal existence time and is not assumed infinite",
+      "admissible_initial_data": "psi(x,0)=psi0(x) with psi0 in H1_per(T_L;C)",
+      "regularity_claim": "DATA_CLASS_ONLY_NO_EXISTENCE_UNIQUENESS_OR_PROPAGATION_RESULT",
+      "integral_constraint": "NONE_IMPOSED",
+      "reference_configuration": {
+        "L": "2*pi",
+        "working_kappa": 1.0,
+        "control_kappa": 0.0
+      }
+    },
+    "normalization": {
+      "x": "dimensionless",
+      "t": "dimensionless",
+      "psi": "dimensionless",
+      "background_density": 1.0,
+      "kinetic_coefficient": 0.5,
+      "physical_scaling_map": "NONE",
+      "claim": "A closed nondimensional surrogate convention, not a derivation from SI units or a mesoscopic scale."
+    },
+    "parameters": [
+      {
+        "symbol": "L",
+        "meaning": "dimensionless periodic-domain length",
+        "admissible_range": "(0,infinity)",
+        "working_value": "2*pi"
+      },
+      {
+        "symbol": "kappa",
+        "meaning": "dimensionless cubic background-shift interaction control",
+        "admissible_range": "[0,1]",
+        "working_value": 1.0,
+        "control_value": 0.0
+      }
+    ],
+    "candidate_invariants_and_diagnostics": [
+      {
+        "quantity_id": "CONTINUUM_L2_NORM",
+        "definition": "N[psi]=integral_0^L |psi|^2 dx",
+        "status": "CONJECTURED_INVARIANT",
+        "source_record_id": "CP_CONSERVE_001",
+        "stage_2_claim": "SOURCE_CLAIM_BOUND_BUT_NOT_DERIVED_FOR_V0",
+        "implementation_status": "NUMERICALLY_MONITORED_QUANTITY"
+      },
+      {
+        "quantity_id": "REFERENCE_DISCRETE_L2_NORM",
+        "definition": "N_h=(L/n) sum_j |psi_j|^2",
+        "status": "NUMERICALLY_MONITORED_QUANTITY",
+        "continuum_conservation_claim": false
+      }
+    ],
+    "controls_and_comparators": [
+      {
+        "control_id": "ZERO_COUPLING_LINEAR_CONTROL",
+        "surface": "kappa=0",
+        "equation": "i partial_t psi=-(1/2)partial_xx psi",
+        "role": "MATHEMATICAL_CONTROL"
+      },
+      {
+        "control_id": "GENERIC_DEFOCUSING_CUBIC_NLSE_COMPARATOR",
+        "equation": "i partial_t u=-(1/2)partial_xx u+kappa|u|^2u",
+        "role": "KNOWN_PHYSICS_BASELINE",
+        "equivalence_status": "NOT_ADJUDICATED_IN_STAGE_2"
+      }
+    ],
+    "claim_boundary": "CCFT-v0 is one closed nondimensional computational surrogate constructed from a recovered CP-NLSE structural template, recovered periodic custody, and explicitly labeled new postulates. It is not a physical coherence field, mesoscopic law, native gravity sector, matter seam, empirical model, or validated theory of nature."
+  },
+  "new_ccft_postulate_ledger": [
+    {
+      "postulate_id": "CCFT_V0_P1_GOVERNING_EQUATION",
+      "statement": "The v0 state psi obeys i psi_t=-(1/2)psi_xx+kappa(|psi|^2-1)psi.",
+      "reason": "It is the smallest complete branch-shaped equation and exposes the historical dispersion conflict to a later theorem.",
+      "risk": "The equation may be only a standard cubic NLSE in a removable constant gauge and may contain no distinctive CCFT mathematics."
+    },
+    {
+      "postulate_id": "CCFT_V0_P2_NONDIMENSIONALIZATION",
+      "statement": "x,t,psi are dimensionless, the reference density is one, and the kinetic coefficient is one half; no physical scaling map is asserted.",
+      "reason": "A complete term-by-term contract is required before theorem or numerical work.",
+      "risk": "No physical units, bearer, or mesoscopic domain can be inferred."
+    },
+    {
+      "postulate_id": "CCFT_V0_P3_PARAMETER_DOMAIN",
+      "statement": "L>0 and kappa is in [0,1], with kappa=1 the working point and kappa=0 the mathematical control.",
+      "reason": "This closes coefficient freedom without importing the historically incomplete g_eff calibration.",
+      "risk": "The interval is a modeling choice and has no empirical calibration."
+    },
+    {
+      "postulate_id": "CCFT_V0_P4_INITIAL_DATA_AND_TIME_DOMAIN",
+      "statement": "Initial data lie in H1_per(T_L;C), and evolution is requested only on its later-adjudicated maximal interval [0,T_max).",
+      "reason": "This makes the initial-value question exact without presupposing existence or global regularity.",
+      "risk": "Later analysis may show that a different regularity class is required."
+    },
+    {
+      "postulate_id": "CCFT_V0_P5_FAILURE_CONTRACT",
+      "statement": "The model is rejected as an evolution surrogate if later work proves nonexistence, nonuniqueness, or discontinuous dependence in the frozen data class, or if its frozen reference implementation fails its declared reproduction and refinement gates.",
+      "reason": "A constructed hypothesis must have predeclared ways to fail.",
+      "risk": "Failure of a candidate invariant alone withdraws that invariant claim but does not by itself refute every use of the equation."
+    }
+  ],
+  "postulate_budget": {
+    "maximum": 8,
+    "used": 5,
+    "remaining": 3,
+    "within_budget": true,
+    "no_unlabeled_postulates": true
+  },
+  "component_provenance_ledger": [
+    {
+      "component_id": "STATE_COMPLEX_FIELD_TEMPLATE",
+      "provenance": "SOURCE_RECOVERED",
+      "specification": "One complex scalar state shaped by CP_EQ_002.",
+      "binding": "CP_EQ_002"
+    },
+    {
+      "component_id": "ONE_DIMENSIONAL_PERIODIC_DOMAIN",
+      "provenance": "SOURCE_RECOVERED",
+      "specification": "x in [0,L) with L>0.",
+      "binding": "CP_BOUNDARY_001"
+    },
+    {
+      "component_id": "PERIODIC_BOUNDARY_CONDITION",
+      "provenance": "SOURCE_RECOVERED",
+      "specification": "psi(x+L,t)=psi(x,t).",
+      "binding": "CP_BOUNDARY_001"
+    },
+    {
+      "component_id": "CONTINUUM_NORM_CANDIDATE",
+      "provenance": "SOURCE_RECOVERED",
+      "specification": "N=integral |psi|^2 dx, retained only as a conjectured invariant.",
+      "binding": "CP_CONSERVE_001"
+    },
+    {
+      "component_id": "EXACT_V0_GOVERNING_EQUATION",
+      "provenance": "NEW_CCFT_POSTULATE",
+      "specification": "CCFT_V0_P1_GOVERNING_EQUATION"
+    },
+    {
+      "component_id": "NONDIMENSIONAL_CONTRACT",
+      "provenance": "NEW_CCFT_POSTULATE",
+      "specification": "CCFT_V0_P2_NONDIMENSIONALIZATION"
+    },
+    {
+      "component_id": "PARAMETER_AND_CONTROL_DOMAIN",
+      "provenance": "NEW_CCFT_POSTULATE",
+      "specification": "CCFT_V0_P3_PARAMETER_DOMAIN"
+    },
+    {
+      "component_id": "INITIAL_DATA_AND_MAXIMAL_TIME_CONTRACT",
+      "provenance": "NEW_CCFT_POSTULATE",
+      "specification": "CCFT_V0_P4_INITIAL_DATA_AND_TIME_DOMAIN"
+    },
+    {
+      "component_id": "MODEL_FAILURE_CONTRACT",
+      "provenance": "NEW_CCFT_POSTULATE",
+      "specification": "CCFT_V0_P5_FAILURE_CONTRACT"
+    },
+    {
+      "component_id": "GENERIC_CUBIC_NLSE_COMPARATOR",
+      "provenance": "KNOWN_PHYSICS_BASELINE",
+      "specification": "Generic defocusing cubic nonlinear Schrodinger equation; equivalence not adjudicated."
+    },
+    {
+      "component_id": "ZERO_COUPLING_SURFACE",
+      "provenance": "MATHEMATICAL_CONTROL",
+      "specification": "kappa=0 linear Schrodinger evolution."
+    },
+    {
+      "component_id": "FOURIER_PSEUDOSPECTRAL_SPACE",
+      "provenance": "NUMERICAL_CONVENTION",
+      "specification": "Uniform periodic grid and numpy.fft wavenumbers."
+    },
+    {
+      "component_id": "STRANG_SPLIT_TIME_STEPPER",
+      "provenance": "NUMERICAL_CONVENTION",
+      "specification": "Exact linear half-step, exact pointwise nonlinear full-step, exact linear half-step."
+    },
+    {
+      "component_id": "FLOATING_POINT_AND_FFT_CONTRACT",
+      "provenance": "NUMERICAL_CONVENTION",
+      "specification": "float64/complex128, NumPy backward-normalized FFT, deterministic single-process execution, no random input."
+    },
+    {
+      "component_id": "REFERENCE_GRID_AND_TIMESTEPS",
+      "provenance": "NUMERICAL_CONVENTION",
+      "specification": "L=2*pi, n=128; fixed dyadic time steps and declared test horizons."
+    },
+    {
+      "component_id": "IMPLEMENTATION_REPRODUCTION_THRESHOLDS",
+      "provenance": "NUMERICAL_CONVENTION",
+      "specification": "Thresholds apply only to the reference code and named vectors, not to continuum stability or physical truth."
+    }
+  ],
+  "provenance_counts": {
+    "SOURCE_RECOVERED": 4,
+    "KNOWN_PHYSICS_BASELINE": 1,
+    "NEW_CCFT_POSTULATE": 5,
+    "NUMERICAL_CONVENTION": 5,
+    "MATHEMATICAL_CONTROL": 1,
+    "TOTAL": 16
+  },
+  "reference_implementation": {
+    "implementation_id": "TOE_CCFT_V0_CP_NLSE_STRANG_SPECTRAL_REFERENCE_v0",
+    "packaging": "EXECUTABLE_PYTHON_SOURCE_LINES_EMBEDDED_IN_THIS_IMMUTABLE_RESULT",
+    "language": "Python 3",
+    "required_library": "NumPy",
+    "validated_environment": {
+      "numpy_version": "2.2.6",
+      "scalar_dtype": "float64",
+      "state_dtype": "complex128"
+    },
+    "embedded_source_sha256_lf_with_final_newline": "7b5e9e16737c1d76ec9e2052743bef667084461b42468495d120d43b39f95862",
+    "source_lines": [
+      "import math",
+      "import numpy as np",
+      "",
+      "def periodic_grid(n, length):",
+      "    x = np.arange(n, dtype=np.float64) * (length / n)",
+      "    k = 2.0 * np.pi * np.fft.fftfreq(n, d=length / n)",
+      "    return x, k",
+      "",
+      "def strang_step(psi, dt, k, kappa):",
+      "    linear_half = np.exp(-0.25j * (k * k) * dt)",
+      "    psi = np.fft.ifft(linear_half * np.fft.fft(psi))",
+      "    psi = np.exp(-1j * kappa * (np.abs(psi) ** 2 - 1.0) * dt) * psi",
+      "    return np.fft.ifft(linear_half * np.fft.fft(psi))",
+      "",
+      "def evolve(psi0, dt, steps, k, kappa):",
+      "    psi = np.asarray(psi0, dtype=np.complex128).copy()",
+      "    for _ in range(int(steps)):",
+      "        psi = strang_step(psi, dt, k, kappa)",
+      "    return psi",
+      "",
+      "def relative_l2(actual, expected):",
+      "    return float(np.linalg.norm(actual - expected) / np.linalg.norm(expected))",
+      "",
+      "def discrete_norm(psi, length):",
+      "    return float((length / psi.size) * np.vdot(psi, psi).real)",
+      "",
+      "def reference_vectors():",
+      "    length = 2.0 * math.pi",
+      "    n = 128",
+      "    x, k = periodic_grid(n, length)",
+      "    constant0 = np.ones(n, dtype=np.complex128)",
+      "    constant = evolve(constant0, 1.0 / 1024.0, 64, k, 1.0)",
+      "    mode = 3",
+      "    dt = 1.0 / 1024.0",
+      "    steps = 64",
+      "    horizon = dt * steps",
+      "    plane0 = np.exp(1j * mode * x)",
+      "    plane = evolve(plane0, dt, steps, k, 0.0)",
+      "    plane_exact = np.exp(1j * mode * x - 0.5j * mode * mode * horizon)",
+      "    mixed0 = (1.0 + 0.05 * np.cos(x) + 0.02j * np.sin(2.0 * x)).astype(np.complex128)",
+      "    mixed = {}",
+      "    for denominator in (64, 128, 256, 512):",
+      "        mixed_dt = 1.0 / denominator",
+      "        mixed[denominator] = evolve(mixed0, mixed_dt, round(0.125 / mixed_dt), k, 1.0)",
+      "    error64 = relative_l2(mixed[64], mixed[512])",
+      "    error128 = relative_l2(mixed[128], mixed[512])",
+      "    error256 = relative_l2(mixed[256], mixed[512])",
+      "    norm0 = discrete_norm(mixed0, length)",
+      "    norm512 = discrete_norm(mixed[512], length)",
+      "    return {",
+      "        'constant_max_abs_error': float(np.max(np.abs(constant - constant0))),",
+      "        'linear_plane_wave_relative_l2_error': relative_l2(plane, plane_exact),",
+      "        'mixed_error_dt_1_64_vs_1_512': error64,",
+      "        'mixed_error_dt_1_128_vs_1_512': error128,",
+      "        'mixed_error_dt_1_256_vs_1_512': error256,",
+      "        'mixed_refinement_ratio_64_to_128': error64 / error128,",
+      "        'mixed_refinement_ratio_128_to_256': error128 / error256,",
+      "        'mixed_discrete_norm_relative_drift': abs(norm512 - norm0) / norm0,",
+      "    }"
+    ],
+    "algorithm_contract": {
+      "spatial_representation": "uniform Fourier pseudospectral grid on [0,L)",
+      "time_integrator": "second-order Strang splitting",
+      "linear_substep": "Fourier multiplier exp(-i k^2 dt/4) for each half-step",
+      "nonlinear_substep": "pointwise multiplier exp(-i kappa(|psi|^2-1)dt)",
+      "precision": "complex128 state with float64 coordinates and coefficients",
+      "randomness": "NONE",
+      "resolution_requirement": "Named reproduction vectors use n=128; any scientific computation must separately establish spatial and temporal convergence.",
+      "finite_approximation_claim": "NO_GENERAL_CONTINUUM_FIDELITY_CLAIM"
+    },
+    "reference_vector_results": {
+      "constant_background": {
+        "observed_max_abs_error": 0.0,
+        "pass_threshold": "<=1e-13",
+        "role": "IMPLEMENTATION_REPRODUCTION_ONLY"
+      },
+      "linear_plane_wave_control": {
+        "observed_relative_l2_error": 1.817240462864231e-14,
+        "pass_threshold": "<=5e-12",
+        "role": "ZERO_COUPLING_IMPLEMENTATION_CONTROL"
+      },
+      "nonlinear_smooth_refinement": {
+        "error_dt_1_64_vs_1_512": 4.941121547673317e-07,
+        "error_dt_1_128_vs_1_512": 1.1763561617801866e-07,
+        "error_dt_1_256_vs_1_512": 2.3526616551752775e-08,
+        "ratio_64_to_128": 4.200361853161792,
+        "ratio_128_to_256": 5.00010768311071,
+        "ratio_pass_threshold": ">=3.5 for both named ratios",
+        "discrete_norm_relative_drift": 7.05766567690963e-16,
+        "norm_monitor_threshold": "<=5e-12",
+        "role": "IMPLEMENTATION_SELF_REFINEMENT_AND_MONITOR_ONLY_NO_CONTINUUM_THEOREM"
+      }
+    },
+    "reference_implementation_frozen": true,
+    "reproducible": true
+  },
+  "failure_contract": {
+    "model_rejection_conditions_for_later_adjudication": [
+      "A proof or counterexample establishes nonexistence, nonuniqueness, or failure of continuous dependence for the frozen H1_per initial-value problem in the declared parameter domain.",
+      "The exact governing equation fails to possess the declared kappa=0 linear control.",
+      "The embedded reference implementation cannot reproduce the frozen constant and linear vectors within threshold in the declared environment.",
+      "Temporal refinement for the named smooth nonlinear vector fails both declared refinement-ratio gates without an identified floating-point or spatial-resolution cause."
+    ],
+    "claim_withdrawal_not_whole_model_rejection": [
+      "Failure of the continuum norm conjecture withdraws the invariant claim and triggers model reassessment; it does not automatically prove that the PDE has no mathematical use.",
+      "Equivalence to a generic known NLSE removes distinctiveness but does not make the implementation internally inconsistent."
+    ],
+    "blowup_status": "NOT_ASSUMED_AND_NOT_TESTED",
+    "stability_status": "NOT_ASSUMED_AND_NOT_TESTED",
+    "implementation_failure_status": "NOT_TRIGGERED_BY_THE_FROZEN_REFERENCE_VECTORS"
+  },
+  "stage_3_nonautomatic_handoff": {
+    "proposed_target": "prepare_toe_ccft_v0_primary_theorem_or_counterexample_packet_v0",
+    "recommended_primary_problem": "For the frozen equation and a named constant background, derive the linearized dispersion and determine whether the historical squared and additive frequency statements describe compatible objects, distinct backgrounds, special limits, or a genuine contradiction.",
+    "authority_status": "NOT_AUTHORIZED",
+    "theorem_packet_prepared": false,
+    "theorem_attempted": false
+  },
+  "external_check_status": {
+    "C_FINITE_APPROXIMATION": "REFERENCE_IMPLEMENTATION_SPECIFIED_GENERAL_ADMISSIBILITY_NOT_YET_ADJUDICATED",
+    "C_IDENTIFIABILITY": "GENERIC_NLSE_EQUIVALENCE_RISK_PRESERVED_NOT_YET_ADJUDICATED",
+    "C_COMPLEXITY": "REFERENCE_RUN_TRACTABLE_NO_GENERAL_COMPLEXITY_RESULT",
+    "embedded_in_physical_equation": false
+  },
+  "nonclaim_boundary": {
+    "mathematical_viability_established": false,
+    "continuum_solution_exist_unique_or_stable_claimed": false,
+    "continuum_norm_conservation_proved": false,
+    "nonlinear_dispersion_derived_or_selected": false,
+    "generic_model_distinctiveness_established": false,
+    "physical_coherence_bearer_units_scale_preparation_or_measurement_established": false,
+    "matter_gravity_seam_or_master_action_constructed": false,
+    "lcrd_v3_combined_rejected_or_superseded": false,
+    "evidence_promoted": false,
+    "repository_claim_exhaustion_established": false,
+    "stage_3_authorized": false
+  },
+  "terminal_outcome": "CCFT_V0_MODEL_CONTRACT_FROZEN",
+  "lifecycle_result": "PASSED",
+  "status": "STAGE_2_RESULT_READY_FOR_INDEPENDENT_REVIEW_AND_ATOMIC_CLOSE"
+}

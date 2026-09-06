@@ -1,0 +1,677 @@
+{
+  "artifact_sha256": "a7555bd2ec9d969220664425a0de410366acd13581468a8546a8774631f16961",
+  "case_id": "ROUTE-C-03",
+  "current_provider_encoding": {
+    "eligible_source_occurrence_count_under_pass0232_provider": 0,
+    "explicit_requested_final_chain_order_count": 0,
+    "reason": "THE_SOURCE_ONLY_ROUTE_C03_PROBLEM_REQUIRES_GENERIC_d_RECOUPLING_EVEN_THOUGH_D1_V2_DID_NOT_PREENCODE_A_RULE_REQUEST",
+    "vacuous_provider_qualification_permitted": false
+  },
+  "disputed_projection_consumed": false,
+  "f0_artifact_sha256": "eccde93540eb8731e4d789ca0b3190ba8ff7798a8f42a0248367b607e86e1362",
+  "fierz_and_identical_uR_exchange_separate": true,
+  "finite_prefierz_reachable_prefix": {
+    "bmhv_lower_rank_relation_required_count": 4,
+    "bmhv_tree_terminal_new_endpoint_count": 0,
+    "bmhv_zero_gamma_tree_relation_required_count": 2,
+    "per_chain_gamma_rank_counts": {
+      "0,0": 2,
+      "0,2": 4,
+      "2,2": 32
+    },
+    "provenance_counts": {
+      "RELATION_REQUIRED__BMHV_LOWER_RANK": 4,
+      "RELATION_REQUIRED__BMHV_ZERO_GAMMA_TREE": 2,
+      "SOURCE_GENERATED": 32
+    },
+    "source_generated_count": 32,
+    "source_orbit_counts": {
+      "IDENTICAL_UR_EXCHANGE": 19,
+      "IDENTITY": 19
+    },
+    "total_typed_input_count": 38
+  },
+  "forward_scientific_request_count": 38,
+  "ordered_pairing_request_families": [
+    {
+      "direction": "FORWARD",
+      "occurrence_count": 19,
+      "request_family": "PAIRING_A_DU1__U2E_TO_PAIRING_C_DE__U1U2"
+    },
+    {
+      "direction": "FORWARD",
+      "occurrence_count": 19,
+      "request_family": "PAIRING_B_DU2__U1E_TO_PAIRING_C_DE__U1U2"
+    },
+    {
+      "direction": "INVERSE_QUALIFICATION",
+      "occurrence_count": null,
+      "request_family": "PAIRING_C_DE__U1U2_TO_PAIRING_A_DU1__U2E"
+    },
+    {
+      "direction": "INVERSE_QUALIFICATION",
+      "occurrence_count": null,
+      "request_family": "PAIRING_C_DE__U1U2_TO_PAIRING_B_DU2__U1E"
+    }
+  ],
+  "post_recoupling_signature_domain": {
+    "bar_rank_parameter": "b in {0,1,2,3,4}",
+    "classification": "COUNTABLY_PARAMETERIZED_GENERIC_d_BMHV_TOWER",
+    "finite_member_count_claimed": false,
+    "hat_rank_parameter": "h in Z_{>=0}"
+  },
+  "request_ledger": [
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-95986cecdac319a40f72008eede2adf7145cfe3b42c8bec9eee9f3cf03f7f283",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "0061c0f5f89efd5c87aadd261dca577aad21dfa2b877a50c1f69ca2b6c4058ef",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-30e221e18d21e610226af615a5a177e1ae33dc073f9f8b7aa3fe22054ab5e11d",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "17ac61cb48c4d865d0a86a5cb3f3eed20644d262bc73faa885b3c8763cd8f659",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "DUUE-V3-BMHV-daf3f89430551e54ae36db31bddeb5ecb29408afdf8236301057aa6341ad1f5f",
+      "per_chain_gamma_rank": [
+        0,
+        2
+      ],
+      "provenance_class": "RELATION_REQUIRED__BMHV_LOWER_RANK",
+      "provider_request_currently_encoded": false,
+      "request_id": "2f063f1f7ed8629af78d9bdc5f21aafea1b7085e63bb972ae301104ebf13a3f3",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "DUUE-V3-BMHV-304bc283bc136e5707f15528028d95427b8e1c32b573460457e409bedd9ac735",
+      "per_chain_gamma_rank": [
+        0,
+        0
+      ],
+      "provenance_class": "RELATION_REQUIRED__BMHV_ZERO_GAMMA_TREE",
+      "provider_request_currently_encoded": false,
+      "request_id": "328c300b420031db95df5b20319d9940c61881e58df326251f134678683a1367",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "DUUE-V3-BMHV-f64628ef9510dc6d08e6ee230a742b654475b201d1c58b9e997218225439813c",
+      "per_chain_gamma_rank": [
+        0,
+        2
+      ],
+      "provenance_class": "RELATION_REQUIRED__BMHV_LOWER_RANK",
+      "provider_request_currently_encoded": false,
+      "request_id": "4aca7735de00e12c33ac46a28f4a5fb77f60b6825ac195b28a2218010a74dcf3",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-ed38fd6a6a724151bbdf39655a4a1934e714378a132e38fc0db4784562e9060b",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "4ffcc36738d684792cd34add5c790e4bcba54ac75c685cc957333e471f82a9d2",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-ddfe384adc37ecfb8123377ff198bc2dda1487c0dc63f73b05e6cb33bedddc6c",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "5004d9db0ce98ba845e1bd4dc4bbd8a253154855283f8300cdb50b411ef8e829",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7e759ccf2ad6d501189234b1468c5832b6d5cf875457f5bb17e6ec70fe5ed701",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "5197c4632762db64dc1b03ed88f9e936d5d96f12f55714142809b4912ce1094e",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-412692aa3f9101579ab07641f378bc807aa4d8fd2c4af2323eb7ec4aed470345",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "53664efa221aa00d14cdd8e39dedae82548ee3da387086cf4cb1ac86e4162cf0",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-e8561fb5b6183d205453312f91156f4647279fa558e78e0942fad75ca170ccb4",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "586afde507a871274ec0fbda8640e724068a8cdf1ded47fbbd60abb268f1e81c",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-d5ae39ca9efe811abe2a71fe453813e4dbe3bdcc77fa2496c8d9ffd354f5ff0e",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "58f0c367952d7d19dffbc5d30c76d885dc3c8e8da8b852ef0356097475090618",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-61b89474e34c97ed6f199a0a94651b3452c52177b67a49bb0440c9d937041a56",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "60835dc3b0c79f4b9f3c2cedc0e1b8ddc6e22573632de3973e8cbeca1b11a882",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-81f6fb6e643c61431854dde2d65efa64b2f893de4a408beea365d84e7a411035",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "6a8c8b5fdf0af0226c8e98e788635ab667ac24ca9d1ce081b11f5cf0f420120f",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-fa048261a48bce8a51cf1853d6e7a7ff022c11ff117922a20c4d4941619bab02",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "6da968283686030e25e5868218a95e2d751eeaae0b380434b5ff57e0262eee18",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-5524132590566ca5e622d42c8f48214423282601b1c2efc794f34a6da74994f0",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "6e195d21581cecd9dc0ba059cf898f7c8c8f57002b9aa545f440e5b3a75c86ef",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-4ee8e68ccf09eb868886d9a648618d657cdb3c0be245cfccc1672497fa171284",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "6ef23e3724ea86e358e16fd6365c0ef09c696b53beb626d699adcfc8e3163be1",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-9103364d4dd2bc790e21582e87dfcfbebb2783dfb5e6c253b8ccda6f2fffdd97",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "7827aa2bf5f0f9662d860f26cf7c871d46363c35daf867a3c1ef62bb1285045c",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-53e2eeb594adceeec783a5b897d937411201bffad24a7c48f996513a8e77de0f",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "7a0b250b18f225e0473087e209abdee0564462a9e36e64c5a4aa9b9021ba8265",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-0d62a4c3a9e7789f38e5f9eeef320ee540864028ae81713461528f6bdb97d6b2",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "8436207c7a8ff0e4c7b32869c9ad6cd1322efdc68a09db0a6a916252a6dce407",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-caa65974bb8c868976426003cfb778f65721bce12a53118a8c6367b1a03f87d3",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "8736134d202d205ab7e4d1ea867f4dade756bc6befef3203c4177bc98803ee5f",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-1175bbbb0085c70777d6b76a4b31887c55cc24e971ac79165272b09bfaef5f5e",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "90112a06809e5e862fd44daefb0d1bc8f5a437da741671748201694e8e326680",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-bccec3eef0118d1eb5fdd30c9f6b0923537bc3eaefae4f551514957672e4c0cd",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "a1ef1ff37fbea953d8c51b6c2206074b2810400d5906e1b61d813ed649be8f4e",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7a59e5ba4969d338786a7608982e30420bc518909e74e1399d6676a14a3cde80",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "a4224c9c9e042ab8129e93dcfe26e3aedaacfc295641e19ebf8d9ddd767a9ea1",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-a691a4064299ceff91754f89cf9c91bf8cbd028c8be50c833d11ea0ac2cba005",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "ab28089fca159cc072eb09ccc04a61d3601fdd173eeeec3835caa0ddd3684ced",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7f996c738f648a2b62cd815b474956ce33ccee37b0f90402dffc51658121bfa7",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "abe1f55c383b170a77c8d85fea6145ee3297b674dfae953a814d0feefd2346e7",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-e51e6b569227a42158dd05a707018b75df285e30690f371300e20c059bb622b7",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "b15162281ee68a0d142dbf0ce5aea628a3cea2c0c5d30cf2e6826106840a6752",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "DUUE-V3-BMHV-5fd98c54ab2ff2833771bd9460ff2e569dc31760a90b2948b3b8f57858c542d5",
+      "per_chain_gamma_rank": [
+        0,
+        0
+      ],
+      "provenance_class": "RELATION_REQUIRED__BMHV_ZERO_GAMMA_TREE",
+      "provider_request_currently_encoded": false,
+      "request_id": "bd172cf6c6044358cf0ff05ba6afe8cb7c32f7756b28650c3d226ff7ca84039f",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-3ed6300d6250182a2a86e3282620a3886859fe4929eb713f850d22f053926d22",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "c275e71711c32484f1464c6adcbff74fd831cbd2599b1f66bc318874f881f3ec",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-1f09d76e7fb1c90b1d76a591efea5adcee9563261f8cd88325c221e694e84e78",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "c65eebc3d6fea7d07030c6d03c6fe5cce8ba5ebc74fa44ee6abe48228c0c89c5",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-bef92f25430cffedf3ab45e36bc20b0959e524fabf9c0cf146da41de6ae1f76a",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "c9787021dbcc726916a1cd6e8e5093065d143dbd338c5dc4c2effa5a2381cc8d",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "DUUE-V3-BMHV-547607567b569ab066eb0ebe7da743f66dc0164e023ac2d142e070096ccb2dec",
+      "per_chain_gamma_rank": [
+        0,
+        2
+      ],
+      "provenance_class": "RELATION_REQUIRED__BMHV_LOWER_RANK",
+      "provider_request_currently_encoded": false,
+      "request_id": "d205659c83eb97f3d9dcd76afac94352b676777a845c870c85c3cdb8a3aca4d5",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-c6ff1ece9037e2e428ac3e578e9ce3d4a10e2ee0acf2913811a8f6a70882ac77",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "dc00b4ef599090b854e9eea2b07db7361991db595c52267b3eeeb36c72bfc024",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 1,
+      "input_pairing_id": "PAIRING_B_DU2__U1E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-719704fc8f08bf21dd648a6d8dc4ea34f82b1a00b73e5cc08c51ee7852a713d9",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "e3687f2690c7ecaff2fb9c8bacd0ef905cd74c250c66d9fb0a8e7aea2a7b94e4",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTICAL_UR_EXCHANGE"
+    },
+    {
+      "angular_pairing_id": "AT_GAUGE_AND_PROPAGATOR",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-63d12a46480c005a7bb035691d4c4c6666071935dc95e63a33fba72de828fc46",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "ebdc6f57fde809ab65797e890d294db3af784e7caaf21cb0863404d91f333a20",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_WITHIN_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "DUUE-V3-BMHV-4af2da6b8a92aa756656b44bda4b13575d52e4447f160e87ae811cf5d98c99ed",
+      "per_chain_gamma_rank": [
+        0,
+        2
+      ],
+      "provenance_class": "RELATION_REQUIRED__BMHV_LOWER_RANK",
+      "provider_request_currently_encoded": false,
+      "request_id": "f05814e4f0a3c6c06be213e440a92f1e4b0bbacd9500aa2854c5bafc6f690ac7",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-8c0f27c15549f131bc117e935f054629c11dd325166621b74becd40bb625e6d2",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "f1844f7a82d2133792933279202cca9d50851b59f966536a7ea0fa0f98741b18",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_CROSSED_ACROSS_CHAINS",
+      "hat_rank": 0,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-b7b8e4966f0fa9f0f6eee64aa2a47fe7618fb11e3f0381dcf1d85a469ccc7c94",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "f66cc1acf2b3706f8bee1957d4b2118e0edb6b1c9c88b9aeeaf1df5a3f38645c",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    },
+    {
+      "angular_pairing_id": "AL_PARALLEL_ACROSS_CHAINS",
+      "hat_rank": 2,
+      "input_pairing_id": "PAIRING_A_DU1__U2E",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-cf0b2e284e4c0ddbb5c4a42aa49bab7d9330ae9d80937448767907b9a5b1e293",
+      "per_chain_gamma_rank": [
+        2,
+        2
+      ],
+      "provenance_class": "SOURCE_GENERATED",
+      "provider_request_currently_encoded": false,
+      "request_id": "fa56f5fc50186fd2aeecd3befa27918ef5e02b35d007abec90c528ff9a275a6c",
+      "requested_output_pairing_id": "PAIRING_C_DE__U1U2",
+      "scientific_request_basis": "ROUTE_C03_SOURCE_PACKAGE_REQUIRES_FRESH_d_DIMENSIONAL_FIERZ_REDUCTION_INTO_THE_INDEPENDENT_DUUE_BASIS",
+      "source_orbit": "IDENTITY"
+    }
+  ],
+  "schema_id": "STRICT_MODEL1_ROUTE_C03_DUUE_FIERZ_F1_REACHABLE_REQUEST_CENSUS_v1",
+  "stage_id": "F1",
+  "stage_qualified": true,
+  "status": "F1_FINITE_PREFIERZ_PREFIX_OF_38_CENSUSED__POST_RECOUPLING_DOMAIN_PARAMETERIZED_WITH_UNBOUNDED_HAT_RANK"
+}

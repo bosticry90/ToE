@@ -1,0 +1,99 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_VALIDATION_v0",
+  "captured_at_utc": "2026-07-31T19:00:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+  "attempt_sequence_number": 5,
+  "terminal_outcome": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+  "lifecycle_result": "PASSED",
+  "artifact_hashes": {
+    "result_sha256": "8f29a6d5912478a2143f751fcbb9aa817a097acc79d274bd825865dfa2e43821",
+    "review_sha256": "ccb55f8dfcd5986158f1dc133e1e3ec0fa1adb783376881638f32653ea318b45",
+    "close_event_sha256": "a6e828b02d868a45a97275c8367ac42b56ac764819de0df27bfee6b73e4c2820",
+    "close_event_hash": "6bf13523c89c86a9be135a024b4fbf3b06729255cacb284a13d00e4622afebce"
+  },
+  "scientific_validation": {
+    "all_seven_families_classified_once": true,
+    "eligible_native_action_family_count": 0,
+    "Einstein_Hilbert_remains_provisional_baseline_only": true,
+    "quadratic_gravity_remains_REFERENCE_CONTROL_ONLY": true,
+    "equivalence_probe_remains_nonaction": true,
+    "four_incomplete_families_remain_definition_blocked": true,
+    "all_five_routes_compared_against_nine_criteria": true,
+    "exactly_one_nonexecuting_route_selected": true,
+    "selected_route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "new_action_postulate_not_selected_or_authorized": true,
+    "Einstein_Hilbert_not_promoted_to_native": true,
+    "no_gravitational_action_or_principle_selected": true,
+    "no_canonical_evidence_or_master_action_promoted": true,
+    "no_gravitational_calculation_executed": true,
+    "no_successor_authorized_installed_or_opened": true,
+    "mandatory_exit_selected_not_executed": true
+  },
+  "focused_python": {
+    "status": "PASS",
+    "passed": 31,
+    "test_surfaces": [
+      "independent Stage 5 result review event and registry recomputation",
+      "Stage 5 authority and route vocabulary",
+      "bounded-program governance and event semantics",
+      "governance-enforcement completion authority",
+      "registry envelope integrity and custody"
+    ]
+  },
+  "focused_lean": {
+    "status": "PASS",
+    "job_count": 6,
+    "modules": [
+      "ToeFormal.Derivation.ToeGravitationalActionFamilyEligibilityHandoffResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ]
+  },
+  "full_lean_aggregate": {
+    "status": "PASS",
+    "module_count": 1353,
+    "job_count": 9098
+  },
+  "deterministic_generation": {
+    "status": "PASS_COMMITTED_SCOPE",
+    "projected_committed_module_count": 1353
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "registry_extension_reconstruction": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT"
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "restructured_ancestry": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED"
+  },
+  "known_validation_debt": {
+    "broad_legacy_authority_consistency_and_freshness_tests": {
+      "failed": 6,
+      "passed": 7,
+      "failure_classes": [
+        "legacy target-verb parser omits reconstruct reconcile extract and survey",
+        "four downstream assertions stop at the parser error instead of their intended mismatch checks",
+        "two legacy freshness/frontier assertions remain pinned to obsolete historical targets"
+      ]
+    },
+    "current_bounded_authority": "VALIDATED_BY_MANIFEST_EVENT_REGISTRY_AND_LEAN_SURFACES",
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "status": "DISCLOSED_NOT_REPAIRED_IN_STAGE_5"
+  },
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+    "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeGravitationalActionFamilyEligibilityHandoffResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "status": "STAGE_5_ATOMIC_CLOSE_READY_FOR_COMMIT"
+}

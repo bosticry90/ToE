@@ -1,0 +1,578 @@
+{
+  "authority": {
+    "consumed_result_review_verdict": "ACCEPTED_AUTHORIZE_SHARED_LINEARIZED_QUADRATIC_GRAVITY_COMPARISON_PACKET_PREPARATION_ONLY",
+    "frozen_result_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.md",
+        "sha256": "55dcef7184fdcde3b379b1f1abfb53b6ca0cbd137ec83750e7ab53d4694396d4"
+      },
+      {
+        "relative_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.json",
+        "sha256": "905d162d104fa3763199a88758476c9c9231a07a35b62c8711cb922b633c0d4b"
+      },
+      {
+        "relative_path": "formal/python/tools/exploratory_native_gravitational_requirements_family_survey_result_review_v0.py",
+        "sha256": "2ed3f9b6d0d3ba75282f9683a0c42411e364dc5c1389c99784ee2aee7412a29f"
+      },
+      {
+        "relative_path": "formal/python/tests/test_exploratory_native_gravitational_requirements_family_survey_result_review_v0.py",
+        "sha256": "a14826867e084f2d303ff93fb834fd9ea317e3ee297bbb670c41435b4f29dc42"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ExploratoryNativeGravitationalRequirementsFamilySurveyResultReviewV0.lean",
+        "sha256": "85631030f6401903e963c2de2f3038d40c6223538e2026edf23db1ffa190d6a4"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0.py",
+      "sha256": "dd2c6a8b3b6008df99df07a64d5adb37127b7157a2bc0e3d9be0d61029507fc1"
+    },
+    "human_packet": {
+      "relative_path": "formal/docs/lanes/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_PACKET_20260718_v0.md",
+      "sha256": "cfbc31eb732588b9a7baf4496fdfac98abab19cf6851771d7e2a8908d6070057"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0.py",
+      "sha256": "14ea925f0d58509b8027f02d03962160b90456634de62284f315079795d2cb01"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "classification": {
+    "ToE_adoption": "NONE",
+    "binding_labels": [
+      "COMPARISON ACTION FAMILY",
+      "NOT A TOE CANDIDATE",
+      "NOT A SUCCESSOR MASTER ACTION",
+      "NOT A NATIVE POSTULATE"
+    ],
+    "candidate_action_authority": "NONE",
+    "native_principle": "NONE",
+    "status": "SUPPLIED_COMPARISON_FAMILY",
+    "successful_calculation_promotes_action": false
+  },
+  "comparison_action_contract": {
+    "A_EH": "c^3/(16 pi G)",
+    "A_EH_dimension_SI": "kg s^-1",
+    "G_dimension_SI": "m^3 kg^-1 s^-2",
+    "action": "S_g^cmp=A_EH integral d^4x sqrt(-g)[R+alpha R^2+beta R_mu_nu R^mu_nu]",
+    "action_dimension_SI": "J s",
+    "alpha_beta_are_project_parameters": false,
+    "alpha_beta_domain": "symbolic real parameters",
+    "alpha_beta_perturbative": false,
+    "alpha_dimension_SI": "m^2",
+    "beta_dimension_SI": "m^2",
+    "c_dimension_SI": "m s^-1",
+    "coefficient_fitting_authorized": false,
+    "coordinate_measure": "d^4x with x^0=c t",
+    "cosmological_constant": 0,
+    "cosmological_constant_scope": "Minkowski comparison-background choice only",
+    "curvature_dimension_SI": "m^-2",
+    "kappa": "8 pi G/c^4",
+    "metric_dimension_SI": "dimensionless",
+    "term_provenance": [
+      {
+        "role": "SUPPLIED_EINSTEIN_HILBERT_COMPARATOR",
+        "term": "R"
+      },
+      {
+        "role": "SUPPLIED_SCALAR_CURVATURE_QUADRATIC_COMPARATOR",
+        "term": "R^2"
+      },
+      {
+        "role": "SUPPLIED_GENERIC_LOCAL_METRIC_QUADRATIC_COMPARATOR",
+        "term": "R_mu_nu R^mu_nu"
+      }
+    ]
+  },
+  "current_posture": {
+    "authoritative_matrix": "0_OF_70",
+    "comparison_execution": "NOT_AUTHORIZED",
+    "comparison_packet": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "exploratory_survey": "ACCEPTED_12_OF_12_GATES",
+    "frame_dragging": "NOT_RESUMED",
+    "gravitational_action": "NOT_SELECTED",
+    "metric_variation": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "review_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0_result",
+    "real_Green_functions": "NONE",
+    "real_mode_judgments": "NONE"
+  },
+  "derivation_plan": {
+    "executed_step_count": 0,
+    "literature_oracle_allowed_only_after_derivation": true,
+    "rows": [
+      {
+        "derived_output": null,
+        "obligation": "Begin with all three quadratic invariants and prove only the frozen four-dimensional compact-support local-bulk reduction.",
+        "order": 1,
+        "status": "NOT_EXECUTED",
+        "step_id": "D1_GAUSS_BONNET_REDUCTION"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Vary the reduced metric action with respect to g^mu_nu while retaining boundary terms until the compact-support rule applies.",
+        "order": 2,
+        "status": "NOT_EXECUTED",
+        "step_id": "D2_EXACT_METRIC_VARIATION"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Record E_mu_nu[g;alpha,beta] and verify its covariant divergence identity.",
+        "order": 3,
+        "status": "NOT_EXECUTED",
+        "step_id": "D3_EXACT_EULER_TENSOR_AND_IDENTITY"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Verify zero-source Minkowski is a background when Lambda=0.",
+        "order": 4,
+        "status": "NOT_EXECUTED",
+        "step_id": "D4_MINKOWSKI_BACKGROUND"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Set g=eta+h and derive E_mu_nu^lin through O(h) without importing the final equation.",
+        "order": 5,
+        "status": "NOT_EXECUTED",
+        "step_id": "D5_LINEARIZE_FROM_ACTION"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Add the frozen first variation of the external source and derive the kappa normalization.",
+        "order": 6,
+        "status": "NOT_EXECUTED",
+        "step_id": "D6_EXTERNAL_SOURCE_NORMALIZATION"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Expand S_g^cmp+S_gf through O(h^2) and verify its Euler equation agrees with D5.",
+        "order": 7,
+        "status": "NOT_EXECUTED",
+        "step_id": "D7_QUADRATIC_ACTION_CROSSCHECK"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Decompose and invert the complete gauge-fixed quadratic operator in the Barnes-Rivers basis.",
+        "order": 8,
+        "status": "NOT_EXECUTED",
+        "step_id": "D8_PROJECTOR_INVERSION"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Derive physical poles, residues, degeneracies, and source couplings after saturation with conserved sources.",
+        "order": 9,
+        "status": "NOT_EXECUTED",
+        "step_id": "D9_CONSERVED_SOURCE_SATURATION"
+      },
+      {
+        "derived_output": null,
+        "obligation": "Fourier-invert the same response for stationary 00 and 0i source channels.",
+        "order": 10,
+        "status": "NOT_EXECUTED",
+        "step_id": "D10_STATIC_CHANNEL_INVERSION"
+      }
+    ],
+    "step_count": 10
+  },
+  "external_source_contract": {
+    "ToE_matter_action_selected": false,
+    "conservation": "partial_mu T^mu_nu = 0",
+    "current_probe_component": "covariant T_0i under frozen index conventions",
+    "dimension_SI": "J m^-3",
+    "first_variation": "delta S_ext|eta=-(1/(2c)) integral d^4x T_mu_nu delta g^mu_nu",
+    "linear_coupling": "S_ext^(1)=+(1/(2c)) integral d^4x h_mu_nu T^mu_nu",
+    "mass_density_probe_definition": "rho=T_00/c^2",
+    "matter_field_content_selected": false,
+    "nondynamical": true,
+    "required_derived_equation_normalization": "E_mu_nu^lin=kappa T_mu_nu",
+    "source_status": "EXTERNALLY_SUPPLIED_CONSERVED_COMPARISON_SOURCE",
+    "symmetry": "T_mu_nu=T_nu_mu",
+    "variation_derived_ToE_stress_energy": false
+  },
+  "fail_closed_conditions": [
+    "curvature Fourier gauge source or index sign ambiguity",
+    "Einstein-Hilbert or source normalization ambiguity",
+    "Gauss-Bonnet domain ambiguity",
+    "unresolved degenerate pole or noninvertible operator",
+    "source nonconservation",
+    "boundary or Green-function prescription ambiguity",
+    "ghost tachyon and instability meanings conflated",
+    "Einstein control not reproduced without coefficient fitting"
+  ],
+  "fourier_gauge_and_green_contract": {
+    "Box_symbol": "-k^2",
+    "classical_dynamic_prescription": "RETARDED",
+    "fourier_forward": "f_tilde(k)=integral d^4x exp[+i k_mu x^mu] f(x)",
+    "fourier_inverse": "f(x)=integral d^4k/(2 pi)^4 exp[-i k_mu x^mu] f_tilde(k)",
+    "fourier_kernel": "exp[-i k_mu x^mu] = exp[i(k_vec.x_vec-omega t)]",
+    "gauge": "de Donder F_nu=0 with xi=1",
+    "gauge_fixing_action": "S_gf=-(A_EH/(2 xi)) integral d^4x F_nu F^nu",
+    "gauge_function": "F_nu=partial^mu hbar_mu_nu",
+    "growing_Yukawa_branch_allowed": false,
+    "k0": "omega/c",
+    "k_squared": "(omega/c)^2-|k_vec|^2",
+    "partial_symbol": "-i k_mu",
+    "prescriptions_may_be_conflated": false,
+    "residue_reporting_label": "FEYNMAN +i0 FOR POLE ORIENTATION ONLY",
+    "retarded_momentum_label": "+i0 k_0 continuation under frozen Fourier sign",
+    "stationary_inverse": "integral d^3q/(2 pi)^3 exp[i q.x] f_tilde(q)",
+    "stationary_spatial_prescription": "DECAY_AT_INFINITY",
+    "trace_reverse": "hbar_mu_nu=h_mu_nu-(1/2)eta_mu_nu h"
+  },
+  "geometry_and_order_contract": {
+    "Box": "eta^mu_nu partial_mu partial_nu=c^-2 partial_t^2-spatial_laplacian",
+    "Minkowski_background_must_be_verified": true,
+    "Ricci_convention": "R_sigma_nu=R^rho_sigma_rho_nu",
+    "Riemann_convention": "R^rho_sigma_mu_nu=partial_mu Gamma^rho_nu_sigma-partial_nu Gamma^rho_mu_sigma+Gamma^rho_mu_lambda Gamma^lambda_nu_sigma-Gamma^rho_nu_lambda Gamma^lambda_mu_sigma",
+    "alpha_beta_perturbative": false,
+    "background_metric": "eta_mu_nu=diag(+1,-1,-1,-1)",
+    "coordinate_time": "x^0=c t",
+    "discarded_equation_order": "O(h^2) and higher",
+    "field_equation_order": "through O(h)",
+    "gravitational_action_expansion": "through O(h^2)",
+    "index_metric_at_linear_order": "eta_mu_nu",
+    "linearization_variable": "h_mu_nu",
+    "metric_signature": "(+,-,-,-)",
+    "perturbation": "g_mu_nu=eta_mu_nu+h_mu_nu",
+    "source_expansion": "through O(h)"
+  },
+  "mode_pole_residue_register": {
+    "required_distinctions": {
+      "CLASSICAL_INSTABILITY": "separately established background or evolution growth",
+      "GHOST": "wrong-sign kinetic term or negative physical residue",
+      "HEAVY_DECOUPLED_MODE": "formally present mode with suppressed tested response",
+      "MATTER_INSTABILITY": "instability requiring specified matter environment or coupling",
+      "TACHYON": "negative derived mass-squared"
+    },
+    "rows": [
+      {
+        "coupled_source_component": "TO_BE_DERIVED",
+        "expected_question_only": "Einstein baseline sector to be reproduced as a control",
+        "mass_squared": "TO_BE_DERIVED",
+        "pole": "TO_BE_DERIVED",
+        "presence": "TO_BE_DERIVED",
+        "residue_sign": "TO_BE_DERIVED",
+        "scientific_judgment_made": false,
+        "sector_id": "MASSLESS_SPIN_2",
+        "tachyon_condition": "TO_BE_DERIVED"
+      },
+      {
+        "coupled_source_component": "TO_BE_DERIVED",
+        "expected_question_only": "Candidate scalar channel; existence and locus not preassigned",
+        "mass_squared": "TO_BE_DERIVED",
+        "pole": "TO_BE_DERIVED",
+        "presence": "TO_BE_DERIVED",
+        "residue_sign": "TO_BE_DERIVED",
+        "scientific_judgment_made": false,
+        "sector_id": "MASSIVE_SCALAR_CANDIDATE",
+        "tachyon_condition": "TO_BE_DERIVED"
+      },
+      {
+        "coupled_source_component": "TO_BE_DERIVED",
+        "expected_question_only": "Candidate beta-dependent channel; existence and residue not preassigned",
+        "mass_squared": "TO_BE_DERIVED",
+        "pole": "TO_BE_DERIVED",
+        "presence": "TO_BE_DERIVED",
+        "residue_sign": "TO_BE_DERIVED",
+        "scientific_judgment_made": false,
+        "sector_id": "MASSIVE_SPIN_2_CANDIDATE",
+        "tachyon_condition": "TO_BE_DERIVED"
+      }
+    ],
+    "scientific_judgment_count": 0,
+    "sector_count": 3
+  },
+  "preparation_controls": {
+    "control_count": 15,
+    "failure_count": 0,
+    "pass_count": 15,
+    "rows": [
+      {
+        "control_id": "PREP_AUTHORITY_EXACT",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_COMPARISON_ONLY_LABELS",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_COMMON_ACTION_NORMALIZATION",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_EXTERNAL_SOURCE_ONLY",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_GAUSS_BONNET_SCOPE",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_BACKGROUND_AND_ORDER",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_FOURIER_CONVENTION",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_GAUGE_AND_BOUNDARY_PRESCRIPTIONS",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_DERIVATION_NOT_EXECUTED",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_MODE_REGISTER_BLANK",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_00_0I_OUTPUTS_BLANK",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_TEN_SHARED_PATH_CONTROLS_UNEXECUTED",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_NO_COEFFICIENT_FITTING",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_HARD_STOP",
+        "passed": true
+      },
+      {
+        "control_id": "PREP_ROTATE_TO_INDEPENDENT_PACKET_REVIEW",
+        "passed": true
+      }
+    ]
+  },
+  "prepared_output_register": {
+    "computed_output_count": 0,
+    "output_count": 11,
+    "rows": [
+      {
+        "output_id": "NORMALIZED_ACTION_AND_SOURCE_RECORD",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "GAUSS_BONNET_LOCAL_BULK_REDUCTION_PROOF",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "EXACT_METRIC_EULER_TENSOR",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "LINEARIZED_FIELD_EQUATION",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "GAUGE_FIXED_QUADRATIC_OPERATOR",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "CONSERVED_SOURCE_SATURATED_PROPAGATOR",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "POLE_MASS_RESIDUE_TACHYON_DEGENERACY_TABLE",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "STATIONARY_00_GREEN_FUNCTION",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "STATIONARY_0I_GREEN_FUNCTION",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "TEN_SHARED_PATH_CONTROL_RESULTS",
+        "status": "NOT_COMPUTED",
+        "value": null
+      },
+      {
+        "output_id": "POST_DERIVATION_LITERATURE_COMPARISON_AND_STOP_RECORD",
+        "status": "NOT_COMPUTED",
+        "value": null
+      }
+    ],
+    "stationary_00_requirements": [
+      "massless 1/r kernel",
+      "derived scalar Yukawa kernels",
+      "derived massive-spin-2 Yukawa kernels",
+      "source coefficients",
+      "alpha beta dependence",
+      "exact EH limit"
+    ],
+    "stationary_0i_requirements": [
+      "scalar coupling determination",
+      "massive-spin-2 coupling determination",
+      "long-range kernel",
+      "Yukawa kernels",
+      "exact T_0i index and sign",
+      "no orbital observable"
+    ]
+  },
+  "projector_contract": {
+    "P0s": "P0s=(1/3)theta_mu_nu theta_rho_sigma",
+    "P2": "P2=(1/2)(theta_mu_rho theta_nu_sigma+theta_mu_sigma theta_nu_rho)-(1/3)theta_mu_nu theta_rho_sigma",
+    "complete_longitudinal_projectors_required_for_inversion": true,
+    "conserved_source_saturation_required": true,
+    "gauge_independence_check_required": true,
+    "massless_pole_interpretation": "conserved-source saturated limit",
+    "standalone_singular_theta_is_observable": false,
+    "theta": "theta_mu_nu=eta_mu_nu-k_mu k_nu/k^2"
+  },
+  "quadratic_basis_contract": {
+    "Euler_density": "E_4=Riemann^2-4 Ricci^2+R^2",
+    "boundary_global_transport_allowed": false,
+    "coefficient_map": {
+      "alpha_reduced": "alpha_unreduced-gamma",
+      "beta_reduced": "beta_unreduced+4 gamma"
+    },
+    "dimension": 4,
+    "local_bulk_reduction_only": true,
+    "nonclaims": [
+      "boundary charges",
+      "boundary actions",
+      "global topology",
+      "arbitrary boundary conditions",
+      "D!=4",
+      "nonlocal theories"
+    ],
+    "reduction_identity": "gamma Riemann^2=gamma E_4+4 gamma Ricci^2-gamma R^2",
+    "unreduced_basis": [
+      "R^2",
+      "R_mu_nu R^mu_nu",
+      "R_mu_nu_rho_sigma R^mu_nu_rho_sigma"
+    ],
+    "variation_domain": "smooth compactly supported metric variations in Omega compactly contained in M at fixed topology"
+  },
+  "schema_id": "SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_PACKET_20260718_v0",
+  "scope": {
+    "Green_function_computed": false,
+    "LARES2_analysis_executed": false,
+    "authoritative_V2_population_authorized": false,
+    "automated_action_selection_lane_reopening_authorized": false,
+    "coefficient_fitting_executed": false,
+    "comparison_action_selected": false,
+    "comparison_execution_authorized": false,
+    "frame_dragging_reopened": false,
+    "independent_packet_review_executed": false,
+    "linearized_field_equation_derived": false,
+    "master_action_mutation_authorized": false,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "modified_gravity_constraint_computed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "orbital_precession_computed": false,
+    "packet_preparation_executed": true,
+    "pole_or_residue_judgment_made": false,
+    "propagator_or_mode_calculation_executed": false
+  },
+  "selected_next_target": "review_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_COMPARISON_PACKET_REVIEW_ONLY",
+  "shared_path_control_contract": {
+    "coefficient_fitting_prohibited": true,
+    "control_count": 10,
+    "executed_control_count": 0,
+    "rows": [
+      {
+        "control_id": "C1_EH_BASELINE",
+        "mutation": "alpha=0; beta=0",
+        "required_behavior": "Derived normalization and 00/0i responses match the supplied linearized Einstein comparator.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C2_SCALAR_REPRESENTATIVE",
+        "mutation": "beta=0",
+        "required_behavior": "No generic massive spin-2 pole or correction; any scalar sector is derived rather than presumed.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C3_CURRENT_ZERO",
+        "mutation": "T_0i=0 for a conserved stationary source",
+        "required_behavior": "The current-sourced stationary h_0i contribution vanishes.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C4_CURRENT_SIGN",
+        "mutation": "T_0i -> -T_0i",
+        "required_behavior": "The linear stationary response obeys h_0i -> -h_0i.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C5_SOURCE_CONSERVATION",
+        "mutation": "deliberately violate partial_mu T^mu_nu=0",
+        "required_behavior": "Fail closed before interpreting a gauge-invariant saturated response.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C6_HEAVY_MODE_LIMIT",
+        "mutation": "take each derived pole mass to infinity along a stated nonsingular path",
+        "required_behavior": "The corresponding Yukawa term decouples while formal mode status remains explicit.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C7_DERIVED_SCALAR_DEGENERACY",
+        "mutation": "use a scalar degeneracy only after deriving its parameter locus",
+        "required_behavior": "Operator and Green-function routes agree on scalar-pole behavior.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C8_GAUGE_SECTOR",
+        "mutation": "retain longitudinal projectors before conserved-source saturation",
+        "required_behavior": "Physical conserved-source poles and residues are independent of gauge-sector terms.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C9_DIMENSIONS_NORMALIZATION",
+        "mutation": "audit every action term and the EH limit",
+        "required_behavior": "All terms have action units and the derived RHS coefficient is kappa=8 pi G/c^4.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      },
+      {
+        "control_id": "C10_GAUSS_BONNET_LOCAL_BULK",
+        "mutation": "compare unreduced and reduced bases under compact-support variation",
+        "required_behavior": "Local bulk equations agree and no boundary or global claim is emitted.",
+        "result": null,
+        "status": "NOT_EXECUTED",
+        "uses_shared_derivation_path": true
+      }
+    ]
+  },
+  "target": "prepare_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

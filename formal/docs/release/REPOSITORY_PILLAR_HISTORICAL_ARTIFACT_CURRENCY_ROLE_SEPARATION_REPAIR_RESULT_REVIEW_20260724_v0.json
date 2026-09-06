@@ -1,0 +1,87 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T23:16:01Z",
+  "verdict": "ACCEPT_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
+    "sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5",
+    "commit": "78d1cd177d1fe77128bf84e660af332a3c16ae30"
+  },
+  "review_checkout": {
+    "path": ".toe-recovery/disposable-workspaces/pillar-historical-artifact-currency-role-separation-repair-review-v0",
+    "commit": "78d1cd177d1fe77128bf84e660af332a3c16ae30",
+    "clean_before": true,
+    "clean_after": true
+  },
+  "independent_checks": {
+    "exact_17_binding_contract_reconstructed": true,
+    "all_five_temporal_and_authority_roles_present": true,
+    "one_historical_registry_source_blob_verified": true,
+    "five_historical_blocker_generator_pins_verified": true,
+    "ten_historical_compendium_pins_preserved": true,
+    "current_compendium_git_blob_identity_independently_verified": true,
+    "review_time_authority_git_blob_independently_verified": true,
+    "current_live_authority_equality_dependency_removed": true,
+    "all_historical_packet_review_generator_registry_and_compendium_bytes_preserved": true,
+    "exact_16_outcomes_pass": true,
+    "seven_role_contract_guards_pass": true,
+    "lf_checkout_pass_and_clean": true,
+    "actual_crlf_checkout_pass_and_clean": true,
+    "detached_result_commit_surface_68_of_68_pass_and_clean": true,
+    "all_external_evidence_hashes_verified": true,
+    "dirty_main_629_path_status_set_and_bytes_exact": true,
+    "baseline_reassessment_not_performed": true,
+    "scientific_and_authority_state_unchanged": true,
+    "successor_not_authorized": true
+  },
+  "accepted_implementation": {
+    "implementation_commit": "30d79212c005a0c9aad7a1e987d0752cb731f9c9",
+    "identity_count": 4,
+    "binding_count": 17,
+    "historical_role_counts": {
+      "HISTORICAL_SOURCE_BLOB": 1,
+      "HISTORICAL_GENERATOR_PIN": 15,
+      "REVIEW_TIME_AUTHORITY": 1
+    },
+    "current_successor_role_counts": {
+      "CURRENT_CANONICAL_IDENTITY": 16,
+      "CURRENT_LIVE_AUTHORITY": 1
+    },
+    "historical_hashes_refreshed": 0,
+    "historical_records_rewritten": 0
+  },
+  "validation": {
+    "current_affected_surface": "68_OF_68_PASS",
+    "fresh_lf": "23_OF_23_PASS_AND_CLEAN",
+    "fresh_actual_crlf": "23_OF_23_PASS_AND_CLEAN",
+    "detached_result_review": "68_OF_68_PASS_AND_CLEAN",
+    "tracked_validation_mutations": 0
+  },
+  "external_independent_review": {
+    "path": ".toe-recovery/custody-v0/pillar-historical-artifact-currency-role-separation-repair-v0/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_INDEPENDENT_REVIEW_v0.json",
+    "sha256": "a690af8db722af3283d7f8799b95a423c31cd6aca449d0d02c438dc867c784ea",
+    "review_script_path": ".toe-recovery/custody-v0/pillar-historical-artifact-currency-role-separation-repair-v0/independent_review_pillar_historical_role_separation_v0.py",
+    "review_script_sha256": "ab8ccea0c8fd3a2deaa6e854b6c5cc535eef04d830516fb6327a31a04ae72429"
+  },
+  "accepted_future_option": {
+    "selector": "AUTHORIZE_BOUNDED_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT",
+    "target": "prepare_repository_post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_packet_v0",
+    "status": "RECOMMENDED_NOT_AUTHORIZED"
+  },
+  "scope": {
+    "baseline_reassessment": false,
+    "historical_hashes_refreshed": 0,
+    "historical_packets_or_reviews_modified": 0,
+    "lean_activity": false,
+    "registry_rotated": false,
+    "scientific_content_changed": 0,
+    "v2_enrolled": false
+  },
+  "official_baseline_nonpassing": 390,
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "successor_authority": "NONE"
+}

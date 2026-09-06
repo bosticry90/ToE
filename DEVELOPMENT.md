@@ -6,9 +6,12 @@ authority. Read the live target from
 the uppercase `CURRENT_LIVE_*` tokens), then confirm the human-facing boundary
 in `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`.
 
-The separate non-scientific maintenance authority is
-`formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json`. Its registry-
-sharding target does not displace or rotate the scientific target.
+Resolve the separate non-scientific maintenance authority through
+`formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`. It
+currently points to `CURRENT_MAINTENANCE_AUTHORITY_v1.json` and the bounded
+July 16–19 repository-integration target. That maintenance target does not
+displace or rotate the scientific target, scientifically adopt the preserved
+tranche, or authorize a Yukawa rerun.
 
 The v0 registry-sharding contract is preparation evidence, not migration
 authority. Its independent review rejects execution readiness and recommends a

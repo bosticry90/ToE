@@ -1,0 +1,103 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_STAGE_3_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_STAGE_3_OPEN",
+  "authorized_stage": {
+    "canonical_scope_hash": "af28fab6b424603cccbc2e7ef8663d8f8a1e88212285c1767a59f0cfccef9ebb",
+    "canonical_target": "reconstruct_toe_gravitational_requirement_and_action_family_lineages_v0",
+    "semantic_stage_id": "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION",
+    "stage_number": 3
+  },
+  "captured_at_utc": "2026-07-31T15:02:00Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 3 scope",
+      "sha256": "a6062c810927fde39c4c54d5d22009ccd0f4d33d04fb7e001ffda01293fccf19"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "role": "closed source-bound Stage 1 requirement inventory",
+      "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+      "role": "accepted independent Stage 1 review",
+      "sha256": "3e6f8c74fe74d3c8a7bd177c025b1f722d386b493aaa177b06db2866b592705c"
+    },
+    {
+      "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+      "role": "closed source-bound Stage 2 seven-family inventory",
+      "sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578"
+    },
+    {
+      "path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_REVIEW_v0.json",
+      "role": "accepted independent Stage 2 review",
+      "sha256": "511f66369a95cf7569adce004d6d0d5be64f4a892fc0c4329df1c220554c9a48"
+    },
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+      "role": "prepared requirement and family source envelope",
+      "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+    }
+  ],
+  "family_ids": [
+    "F_EH",
+    "F_FR",
+    "F_QUADRATIC",
+    "F_EXTRA_FIELD",
+    "F_NONLOCAL",
+    "F_CONNECTION_TORSION",
+    "F_EQUIVALENCE_PROBE"
+  ],
+  "requirement_ids": [
+    "R1_DIMENSION",
+    "R2_METRIC_ONLY",
+    "R3_LOCALITY",
+    "R4_DIFF_COVARIANCE",
+    "R5_CK_FIREWALL",
+    "R6_LOCAL_VARIATION",
+    "R7_SOURCE_COMPATIBILITY",
+    "R8_NEWTON_POISSON",
+    "R9_MOMENTUM_CURRENT",
+    "R10_STABILITY_NO_FIT"
+  ],
+  "workload_caps": {
+    "maximum_lineage_components": 32,
+    "maximum_source_artifacts_for_deep_review": 96,
+    "maximum_total_bounded_source_excerpt_words": 24000,
+    "maximum_unresolved_lineage_relationships": 32
+  },
+  "permitted_work": [
+    "trace source-to-review and source-to-result relationships for the ten requirements and seven family rows",
+    "identify earliest preserved proposals revisions branches generated summaries result reviews and later qualifications",
+    "record exact source paths hashes direction evidence confidence authority and custody limitations for every relationship",
+    "recover existing action definitions partial actions coefficients fields or constraints only when exact preserved sources contain them",
+    "record recovered-definition status as a documentary finding without promotion or compatibility judgment",
+    "preserve supersession conflict and unresolved relationships explicitly",
+    "resolve or preserve the Stage 2 Einstein-scalar historical hash-binding discrepancy through Git-bound evidence",
+    "produce an independent review and one atomic CLOSE result"
+  ],
+  "prohibited_work": [
+    "invent an action field coefficient coupling kernel connection constraint or principle absent from preserved sources",
+    "rank score compare or select a gravitational action family",
+    "judge compatibility against the ten Stage 1 requirements",
+    "infer scientific truth authority or native status from documentary descent",
+    "silently supersede conflicting or historically ambiguous sources",
+    "infer semantic equivalence from symbols titles or text similarity alone",
+    "promote historical or external evidence into the canonical evidence set",
+    "promote Einstein-Hilbert gravity because it is the only complete baseline",
+    "promote quadratic gravity from REFERENCE_CONTROL_ONLY",
+    "perform new gravitational hyperbolicity stability recovery or phenomenology calculations",
+    "construct or promote a master action",
+    "expand the frozen ten-requirement or seven-family envelope",
+    "open Stage 4 automatically"
+  ],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "schema_id": "toe.gravitational_requirement_and_family_lineage_reconstruction.stage_3_open_authority.v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_3_OPEN_ONLY",
+  "terminal_outcomes": [
+    "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGES_RECONSTRUCTED",
+    "LINEAGES_RECONSTRUCTED_WITH_BOUNDED_UNRESOLVED_RELATIONSHIPS",
+    "LINEAGE_RECONSTRUCTION_BLOCKED_BY_PROVENANCE"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "completed_at_utc": "2026-07-19T18:58:45.187558Z",
+  "duration_seconds": 0.05516120000174851,
+  "evidence": {
+    "detected_count": 8,
+    "mutation_count": 8,
+    "rows": [
+      {
+        "delta_J": "0.0000000000000002243948640536175613169741017486273983584311910843139825644243501301389",
+        "detected": true,
+        "mutation_id": "INTERPRET_RADIUS_AS_DIAMETER"
+      },
+      {
+        "delta_J": "0.000000000000002293630777375924620683025898251372601641568808915686017435575649869861",
+        "detected": true,
+        "mutation_id": "USE_SURFACE_GAP_AS_CENTER_DISTANCE"
+      },
+      {
+        "delta_J": "0.0000000000000002144980858362483943169741017486273983584311910843139825644243501301389",
+        "detected": true,
+        "mutation_id": "OMIT_FOUR_PI_OVER_THREE_MASS_FACTOR"
+      },
+      {
+        "delta_J": "0.0000000000000004549237143502747206830258982513726016415688089156860174355756498698611",
+        "detected": true,
+        "mutation_id": "OMIT_A_Y_ONE_THIRD"
+      },
+      {
+        "delta_J": "0.00000000000000002136004616622960931697410174862739835843119108431398256442435013013892",
+        "detected": true,
+        "mutation_id": "OMIT_SECOND_SPHERE_FORM_FACTOR"
+      },
+      {
+        "delta_J": "0.00000000003702027965846157271982151799500486811889546330755452446389704603708257",
+        "detected": true,
+        "mutation_id": "FLIP_YUKAWA_EXPONENTIAL_SIGN"
+      },
+      {
+        "detected": true,
+        "failure_mode": "OverflowError",
+        "mutation_id": "FORCE_DIRECT_LARGE_X_SINH_COSH_PATH"
+      },
+      {
+        "absolute_H_difference": "0.0000000003457329428645485717748276523459611616743086766185147374204281917976691",
+        "detected": true,
+        "mutation_id": "FORCE_DIRECT_SMALL_X_CANCELLATION_PATH",
+        "tolerance_H": "0.000000000005000002998667142714322742858874138261729805808371543383092573687102141"
+      }
+    ],
+    "same_live_evaluator_radial_reference_and_adjudicator": true,
+    "status": "PASS"
+  },
+  "stage_id": "O5_MUTATIONS_AND_ADJUDICATION",
+  "started_perf_counter": 20302.0652723,
+  "status": "COMPLETE",
+  "wall_clock_seconds_max": 90,
+  "within_stage_budget": true
+}

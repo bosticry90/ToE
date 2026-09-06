@@ -1,0 +1,276 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_ONE_LOOP_RENORMALIZATION_CONVENTION_CONTRACT_PHASE_0_v0",
+  "contract_id": "T_FIRST_R2_ACTIVE_BNV_CR_BMHV_MS_BAR_RENORMALIZATION_CONVENTION_PHASE_0_20260823_V0",
+  "date": "2026-08-23",
+  "status": "PHASE_0_RENORMALIZATION_CONVENTION_CONTRACT_FROZEN_FOR_THE_PROVISIONALLY_AUTHORIZED_SINGLE_INSERTION_ONE_LOOP_COUNTERTERM_SPACE_CLOSURE_PROGRAM_WITHOUT_EXECUTING_CONNECTIVITY_TOPOLOGIES_COUNTERTERMS_OR_ADM_COEFFICIENTS",
+  "authority_scope": {
+    "one_loop_counterterm_space_closure": "PROVISIONAL_AUTHORIZED",
+    "phase_0_convention_freeze": "COMPLETE",
+    "phase_1_selection_rule_connectivity": "AUTHORIZED_NOT_EXECUTED",
+    "phase_2_topology_and_uv_tensor_support": "AUTHORIZED_NOT_EXECUTED",
+    "phase_3_exact_counterterm_span_membership": "AUTHORIZED_NOT_EXECUTED",
+    "complete_adm_coefficients": "UNAUTHORIZED",
+    "bnv_rge_execution": "UNAUTHORIZED",
+    "matching_execution": "UNAUTHORIZED",
+    "parameter_evaluation": "UNAUTHORIZED"
+  },
+  "calculation_domain": {
+    "space_time_phase": "UNBROKEN_SU3C_X_SU2L_X_U1Y_INTERMEDIATE_EFT_WITH_ZERO_SCALAR_VEV_FOR_UV_COUNTERTERM_EXTRACTION",
+    "event_strata": "ALL_EIGHT_FROZEN_RHO3_RHO8_DELTA_ACTIVE_FIELD_SUBSETS_WITH_SM_PLUS_R2TILDE_MANDATORY",
+    "operator_insertions": "EXACTLY_ONE_FROZEN_PHYSICAL_D5_OR_D6_OPERATOR_INSERTION_PER_ONE_LOOP_1PI_GRAPH",
+    "renormalizable_vertices": "ONLY_THE_FROZEN_STRATUM_SPECIFIC_RENORMALIZABLE_INTERACTION_LEDGER",
+    "homogeneous_wilson_order": "LINEAR_IN_ONE_D5_OR_D6_WILSON_COEFFICIENT",
+    "double_d5_insertions": "OUTSIDE_CURRENT_AUTHORIZATION_REQUIRES_SEPARATE_AUTHORITY",
+    "consequence_of_double_d5_exclusion": "NO_GLOBAL_COMBINED_D5_D6_ONE_LOOP_CLOSURE_CLAIM_MAY_BE_PROMOTED_FROM_THIS_SINGLE_INSERTION_PROGRAM_ALONE",
+    "loop_order": 1,
+    "maximum_operator_dimension_for_counterterm_support": 6
+  },
+  "regularization_and_subtraction": {
+    "dimension": "d=4-2*epsilon",
+    "metric_signature": "+---",
+    "regulator": "DIMENSIONAL_REGULARIZATION_BREITENLOHNER_MAISON_T_HOOFT_VELTMAN",
+    "scheme_name": "CHIRALLY_RESTORED_BMHV_MS_BAR_WITH_EVANESCENT_DECOUPLING",
+    "pole_subtraction": "MS_BAR",
+    "loop_measure_factor": "S_epsilon=(4*pi)^epsilon*exp(-gamma_E*epsilon)",
+    "uv_poles_retained_for_closure": [
+      "1/epsilon"
+    ],
+    "finite_terms_retained_only_when": [
+      "REQUIRED_TO_RESTORE_BACKGROUND_GAUGE_OR_CHIRAL_SLAVNOV_TAYLOR_IDENTITIES",
+      "REQUIRED_TO_COMPENSATE_EVANESCENT_TO_PHYSICAL_ONE_LOOP_INSERTIONS_AND_DEFINE_THE_SCHEME"
+    ],
+    "naive_anticommuting_gamma5_prohibited": true,
+    "pure_ms_bmhv_without_finite_symmetry_restoration_prohibited": true
+  },
+  "bmhv_dirac_contract": {
+    "metric_split": "g^{mu nu}=bar_g^{mu nu}+hat_g^{mu nu}",
+    "projector_traces": {
+      "bar_g_mu_nu_bar_g^nu_mu": "4",
+      "hat_g_mu_nu_hat_g^nu_mu": "-2*epsilon",
+      "bar_g_mu_nu_hat_g^nu_lambda": "0"
+    },
+    "gamma_split": "gamma^mu=bar_gamma^mu+hat_gamma^mu",
+    "clifford_algebra": [
+      "{bar_gamma^mu,bar_gamma^nu}=2*bar_g^{mu nu}",
+      "{hat_gamma^mu,hat_gamma^nu}=2*hat_g^{mu nu}",
+      "{bar_gamma^mu,hat_gamma^nu}=0"
+    ],
+    "levi_civita": "STRICTLY_FOUR_DIMENSIONAL_WITH_EPSILON^{0123}=+1",
+    "gamma5_definition": "gamma5=i/(4!)*epsilon_{mu nu rho sigma}*bar_gamma^mu*bar_gamma^nu*bar_gamma^rho*bar_gamma^sigma",
+    "gamma5_relations": [
+      "{gamma5,bar_gamma^mu}=0",
+      "[gamma5,hat_gamma^mu]=0"
+    ],
+    "chiral_projectors": [
+      "P_L=(1-gamma5)/2",
+      "P_R=(1+gamma5)/2"
+    ],
+    "trace_rule": "CYCLIC_TRACES_WITH_THE_BMHV_ALGEBRA;_NO_NAIVE_GAMMA5_ANTICOMMUTATION",
+    "open_fermion_line_normal_form": "HAT_GAMMAS_FIRST_THEN_BAR_GAMMAS_WITH_P_L_OR_P_R_AT_THE_RIGHTMOST_DECLARED_READING_POINT",
+    "charge_conjugation": [
+      "C*gamma^mu*C^{-1}=-(gamma^mu)^T",
+      "C^T=-C",
+      "C^dagger=C^{-1}",
+      "C=i*gamma^2*gamma^0_IN_THE_FOUR_DIMENSIONAL_PHYSICAL_SUBSPACE"
+    ],
+    "physical_higher_dimension_lorentz_indices": "BARRED_FOUR_DIMENSIONAL_SUBSPACE",
+    "renormalizable_kinetic_and_gauge_action": "PROMOTED_TO_d_DIMENSIONS_IN_A_BACKGROUND_GAUGE_INVARIANT_FORM"
+  },
+  "chiral_and_gauge_restoration": {
+    "anomaly_precondition": "THE_ACTIVE_CHIRAL_FERMION_CONTENT_IS_THE_ANOMALY_FREE_STANDARD_MODEL_FERMION_SET;_ADDED_ACTIVE_FIELDS_ARE_SCALARS",
+    "minimal_pole_step": "SUBTRACT_ALL_MS_BAR_UV_POLES_IN_THE_PHYSICAL_REDUNDANT_AND_EVANESCENT_SECTORS",
+    "finite_restoration_step": "ADD_LOCAL_FINITE_COUNTERTERMS_REQUIRED_BY_THE_BACKGROUND_GAUGE_BRST_AND_CHIRAL_SPURION_SLAVNOV_TAYLOR_IDENTITIES",
+    "normalization_condition": "NO_ADDITIONAL_FINITE_GAUGE_INVARIANT_PHYSICAL_COUNTERTERM_BEYOND_CHIRAL_RESTORATION_AND_THE_FROZEN_EVANESCENT_COMPENSATION",
+    "failure_condition": "UNRESOLVED_SLAVNOV_TAYLOR_BREAKING_BLOCKS_PHASE_1_AND_LATER"
+  },
+  "physical_operator_lift": {
+    "physical_basis_source": "PASS_0020_EXACT_38_FAMILY_472_POSITIVE_ORIENTATION_FLAVOR_DIRECTION_CANDIDATE_IN_THE_MAXIMAL_STRATUM",
+    "physical_basis_artifact": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_global_quotient_and_independent_span_pass_0020_v0.json",
+    "lift_rule": "EMBED_EACH_FROZEN_FOUR_DIMENSIONAL_COMPONENT_LORENTZ_FLAVOR_REPRESENTATIVE_IN_THE_BARRED_BMHV_SUBSPACE_WITH_IDENTICAL_FIELD_GAUGE_FLAVOR_AND_GRASSMANN_ORDER",
+    "physical_projection_P4": "SET_ALL_HAT_METRICS_HAT_GAMMAS_AND_HAT_LORENTZ_COMPONENTS_TO_ZERO_THEN_APPLY_THE_FROZEN_FOUR_DIMENSIONAL_CLIFFORD_FIERZ_SCHOUTEN_IBP_EOM_AND_FLAVOR_MAPS",
+    "projection_coefficients": "EVALUATED_EXACTLY_AT_d=4_AND_INDEPENDENT_OF_EPSILON",
+    "translation_requirement": "EVERY_PHASE_1_OPERATOR_NODE_MUST_CARRY_AN_EXACT_PASS0020_ROW_ID_AND_BMHV_LIFT_FINGERPRINT"
+  },
+  "evanescent_contract": {
+    "definition": "E[T]=T-lift(P4(T))",
+    "zero_physical_projection": "P4(E[T])=0",
+    "epsilon_times_physical_admixtures": "FORBIDDEN_IN_CANONICAL_EVANESCENT_DEFINITIONS",
+    "generic_normal_form": "ANTISYMMETRIZED_HAT_LORENTZ_INDICES_WITH_HAT_GAMMAS_PRECEDING_BAR_GAMMAS",
+    "bnv_four_fermion_rule": "ANTISYMMETRIZE_ALL_CONTRACTED_HAT_LORENTZ_INDICES_BEFORE_FIELD_OR_CHAIN_EXCHANGE_AND_PROJECTION",
+    "fierz_evanescent_rule": "E_FIERZ=THE_d_DIMENSIONAL_RECOUPLED_TENSOR_MINUS_THE_EXACT_FOUR_DIMENSIONAL_FIERZ_IMAGE_IN_THE_FROZEN_PHYSICAL_BASIS",
+    "evanescent_registry_key": "STRATUM__CANONICAL_FIELD_ORDER__CHIRALITY__GAUGE_CHANNEL__LORENTZ_CHAIN__HAT_RANK__FIERZ_ORDER",
+    "finite_compensation_condition": "RENORMALIZED_ONE_LOOP_MATRIX_ELEMENTS_OF_EACH_CANONICAL_EVANESCENT_INTO_THE_PHYSICAL_SECTOR_VANISH_AS_epsilon_TO_ZERO",
+    "evanescent_to_physical_decoupling": true,
+    "finite_scheme_changes": "ANY_E_TO_E_PLUS_EPSILON_TIMES_PHYSICAL_REDEFINITION_REQUIRES_A_NEW_VERSIONED_SCHEME_AND_EXPLICIT_FINITE_BASIS_TRANSFORMATION",
+    "registry_population_status": "NOT_YET_ENUMERATED;_PHASE_2_MUST_GENERATE_ONLY_THE_FINITE_ONE_LOOP_REQUIRED_SUBSET",
+    "infinite_formal_clifford_tower_claimed_complete": false
+  },
+  "redundant_and_nuisance_contract": {
+    "carried_off_shell": [
+      "TOTAL_DERIVATIVE_AND_IBP_REPRESENTATIVES",
+      "CLASSICAL_LEADING_RENORMALIZABLE_EOM_OPERATORS_F_TIMES_DELTA_S_REN_OVER_DELTA_FIELD",
+      "FIELD_REDEFINITION_COUNTERTERMS",
+      "BRST_EXACT_GAUGE_FIXING_OR_GHOST_NUISANCE_STRUCTURES_IF_GENERATED"
+    ],
+    "stratum_eom_source": "PASS_0015_EIGHT_STRATUM_LEADING_RENORMALIZABLE_EOM_DICTIONARY_WITH_PASS0017_TARGET_REPAIRS_AND_PASS0020_GLOBAL_RELATION_CERTIFICATE",
+    "eom_application_order": "EXTRACT_AND_CLASSIFY_OFF_SHELL_UV_POLES_FIRST;_PROJECT_REDUNDANT_ROWS_TO_THE_PHYSICAL_QUOTIENT_ONLY_AFTER_COUNTERTERM_CANCELLATION",
+    "field_redefinition_order": "LINEAR_FIRST_ORDER_IN_THE_ONE_LOOP_COUNTERTERM_ONLY",
+    "naive_pre_loop_eom_deletion_prohibited": true,
+    "background_field_class_IIb_expectation": "BACKGROUND_GAUGE_INVARIANCE_SHOULD_AVOID_GAUGE_VARIANT_CLASS_IIb_ROWS;_IF_ONE_APPEARS_CLASSIFY_AS_OUTSIDE_DECLARED_SPACE_AND_FAIL_CLOSED"
+  },
+  "gauge_fixing_and_ghosts": {
+    "method": "BACKGROUND_FIELD_METHOD",
+    "quantum_gauge": "BACKGROUND_COVARIANT_R_XI",
+    "gauge_parameters": [
+      "xi_3_FOR_SU3C",
+      "xi_2_FOR_SU2L",
+      "xi_1_FOR_U1Y"
+    ],
+    "parameter_treatment": "KEEP_SYMBOLIC_AND_INDEPENDENT_THROUGH_UV_TENSOR_CLASSIFICATION",
+    "gauge_fixing_function_at_zero_scalar_vev": "F^A=bar_D^mu*a_mu^A",
+    "gauge_fixing_lagrangian": "L_gf=-sum_A(F^A*F^A)/(2*xi_A)",
+    "ghosts": "INCLUDE_THE_BACKGROUND_COVARIANT_FADEEV_POPOV_ACTION;_THE_ABELIAN_GHOST_DECOUPLES",
+    "background_ward_identity": "Z_gA*sqrt(Z_background_A)=1_FOR_EACH_GAUGE_FACTOR",
+    "required_checks": [
+      "BACKGROUND_GAUGE_INVARIANCE_OF_COUNTERTERM_TENSORS",
+      "XI_INDEPENDENCE_OF_THE_FINAL_PHYSICAL_QUOTIENT_AFTER_FIELD_REDEFINITIONS",
+      "EXPLICIT_TRACKING_OF_ANY_XI_DEPENDENCE_IN_REDUNDANT_FIELD_AND_FINITE_RESTORATION_SECTORS"
+    ]
+  },
+  "infrared_and_green_function_contract": {
+    "objects": "AMPUTATED_OFF_SHELL_ONE_PARTICLE_IRREDUCIBLE_BACKGROUND_FIELD_GREEN_FUNCTIONS_WITH_ONE_OPERATOR_INSERTION",
+    "external_momenta": "GENERIC_NONEXCEPTIONAL_EUCLIDEAN_MOMENTA",
+    "infrared_regulator": "NO_PHYSICAL_IR_REGULATOR_IN_THE_FINAL_RESULT",
+    "optional_ir_rearrangement": "A_COMMON_AUXILIARY_MASS_OR_TAYLOR_IR_REARRANGEMENT_MAY_BE_USED_ONLY_WITH_ITS_REQUIRED_AUXILIARY_COUNTERTERMS",
+    "ir_rearrangement_acceptance": "ALL_AUXILIARY_MASS_DEPENDENCE_CANCELS_AND_AN_INDEPENDENT_UV_EXTRACTION_ROUTE_AGREES_FOR_HIGH_RISK_TOPOLOGIES",
+    "scaleless_integral_uv_ir_cancellation_may_not_be_used_as_a_zero_certificate": true
+  },
+  "field_parameter_and_composite_renormalization": {
+    "fields": "Phi_0=Z_Phi^{1/2}*Phi_WITH_FLAVOR_MATRICES_FOR_CHIRAL_FERMIONS_AND_REPRESENTATION_BLOCKS_FOR_SCALARS",
+    "gauge_couplings": "g_{a,0}=mu^epsilon*(g_a+delta_g_a)",
+    "yukawa_couplings": "Y_0=mu^epsilon*(Y+delta_Y)",
+    "quartic_couplings": "lambda_0=mu^(2*epsilon)*(lambda+delta_lambda)",
+    "cubic_scalar_couplings": "kappa_0=mu^epsilon*(kappa+delta_kappa)_WITH_THE_FOUR_DIMENSIONAL_MASS_DIMENSION_RETAINED",
+    "mass_parameters": "m_0^2=m^2+delta_m^2",
+    "gauge_parameters": "xi_{a,0}=Z_{xi_a}*xi_a",
+    "operator_counterterms": "INCLUDE_DIRECT_ONE_OPERATOR_INSERTION_POLES_PLUS_EXTERNAL_FIELD_AND_RENORMALIZABLE_PARAMETER_COUNTERTERM_CONTRIBUTIONS_AT_THE_SAME_ORDER",
+    "flavor_covariance": "FIELD_AND_YUKAWA_RENORMALIZATION_MATRICES_REMAIN_FLAVOR_COVARIANT;_NO_DIAGONAL_FLAVOR_BASIS_IS_ASSUMED"
+  },
+  "operator_coefficient_and_adm_orientation": {
+    "operator_vector": "O_IS_A_COLUMN_VECTOR",
+    "wilson_vector": "C_IS_A_COLUMN_VECTOR",
+    "lagrangian_pairing": "L_EFT=C^T*O+C^dagger*O^dagger",
+    "bare_operator_relation": "O_0=Z_O*O",
+    "bare_coefficient_relation": "C_0=mu^(n_epsilon)*Z_O^(-T)*C_WITH_n_epsilon_FIXED_ROW_BY_ROW_SO_C_HAS_INTEGER_FOUR_DIMENSIONAL_MASS_DIMENSION",
+    "operator_anomalous_dimension": "gamma_O=Z_O^(-1)*mu*dZ_O/dmu",
+    "operator_rge": "mu*dO/dmu=-gamma_O*O",
+    "wilson_rge": "mu*dC/dmu=gamma_O^T*C_AFTER_REMOVING_CANONICAL_DIMENSIONAL_SCALING",
+    "loop_expansion": "gamma_O=(1/(16*pi^2))*gamma_O^(1)+O((16*pi^2)^(-2))",
+    "pole_expansion": "Z_O=1+(1/(16*pi^2*epsilon))*Z_O^[1]+O((16*pi^2)^(-2))",
+    "one_loop_pole_to_adm_relation": "gamma_O^(1)=-D_epsilon(Z_O^[1])_WHERE_D_epsilon=sum_x(rho_x*x*d/dx)_USES_THE_mu^(rho_x*epsilon)_WEIGHTS_OF_ALL_RENORMALIZED_PARAMETERS",
+    "homogeneous_weight_two_special_case": "gamma_O^(1)=-2*Z_O^[1]",
+    "adm_matrix_entry_orientation": "ROW_i_COLUMN_j_MEANS_OPERATOR_O_j_RENORMALIZES_INTO_OPERATOR_O_i;_THE_WILSON_RGE_USES_gamma_O^T",
+    "complete_adm_assembly_authorized": false
+  },
+  "flavor_index_and_hermitian_conjugation": {
+    "canonical_row_order": "PASS0020_STABLE_OPERATOR_ID_THEN_FROZEN_FIELD_ORDER_THEN_LEXICOGRAPHIC_FLAVOR_MULTI_INDEX",
+    "permutation_conventions": "USE_ONLY_THE_EXACT_PASS0020_FLAVOR_PROJECTORS_AND_GRASSMANN_SIGNS;_NO_IMPLICIT_DUMMY_FLAVOR_REORDERING",
+    "delta_b_orientation": "CARRY_ONLY_THE_DELTA_B_PLUS_ONE_PHYSICAL_ROWS_AS_INDEPENDENT_COMPLEX_WILSON_COORDINATES",
+    "hermitian_partner": "THE_DELTA_B_MINUS_ONE_BLOCK_IS_THE_EXACT_HERMITIAN_CONJUGATE_WITH_COEFFICIENT_C_STAR_AND_IS_NOT_A_SECOND_INDEPENDENT_ROW",
+    "counterterm_hc_check": "EVERY_POSITIVE_ORIENTATION_COUNTERTERM_MUST_HAVE_THE_EXACT_CONJUGATE_NEGATIVE_ORIENTATION_TENSOR_AND_COEFFICIENT_RELATION",
+    "phase_and_conjugation_source": "PASS0017_EXPLICIT_COMPONENT_CG_PHASE_AND_EOM_TARGET_REGISTRY_RETAINED_BY_PASS0020"
+  },
+  "closure_classification": {
+    "allowed_labels": [
+      "PHYSICAL",
+      "EOM_OR_REDUNDANT",
+      "EVANESCENT",
+      "NEW_STRUCTURE_CLOSURE_FAIL"
+    ],
+    "classification_precedence": [
+      "NEW_STRUCTURE_CLOSURE_FAIL_IF_NO_EXACT_MEMBERSHIP_CERTIFICATE_EXISTS",
+      "EVANESCENT_IF_P4_IS_ZERO_AND_THE_CANONICAL_EVANESCENT_FACTORY_MATCHES",
+      "EOM_OR_REDUNDANT_IF_IN_THE_EXACT_OFF_SHELL_RELATION_OR_BRST_TRIVIAL_SPAN",
+      "PHYSICAL_IF_THE_NONZERO_P4_IMAGE_LIES_IN_THE_PASS0020_QUOTIENT"
+    ],
+    "exact_arithmetic_required": true,
+    "semantic_or_numeric_near_equality_prohibited": true
+  },
+  "phase_0_acceptance": {
+    "regularization_subtraction_frozen": true,
+    "gamma5_and_levi_civita_frozen": true,
+    "evanescent_factory_and_finite_compensation_frozen": true,
+    "redundant_eom_projection_order_frozen": true,
+    "gauge_fixing_and_gauge_checks_frozen": true,
+    "field_parameter_and_operator_renormalization_frozen": true,
+    "adm_sign_transpose_and_pole_relation_frozen": true,
+    "flavor_index_order_frozen": true,
+    "hermitian_conjugation_convention_frozen": true,
+    "single_insertion_scope_boundary_frozen": true,
+    "phase_0_complete": true
+  },
+  "methodology_provenance": [
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0046-arxiv-1807-04283.json",
+      "bytes": 222655,
+      "sha256": "97748c44974cd95913de79cfa6364cfb8333969b33f644059ccde04004f1781e",
+      "role": "DOUBLE_D5_INSERTION_EOM_EVANESCENT_GAUGE_AND_COUNTERTERM_METHOD_CONTROL_WITH_WRONG_PHYSICAL_SECTOR"
+    },
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0054-arxiv-2504-00792.json",
+      "bytes": 275639,
+      "sha256": "3156a5681bcb47d195cc61e20733040d77012e17360387b3de4b5e3aec71d963",
+      "role": "BACKGROUND_FIELD_REDUNDANT_EVANESCENT_IR_REARRANGEMENT_AND_POLE_CONSISTENCY_METHOD_CONTROL"
+    },
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0090-arxiv-2310-13051.json",
+      "bytes": 592872,
+      "sha256": "6e98c3a4ef1a2141db4e1b75cff1a72e6321ff9c4367cd47846d453293d0871c",
+      "role": "PRIMARY_CHIRALLY_RESTORED_HV_BACKGROUND_FIELD_PHYSICAL_REDUNDANT_EVANESCENT_FIERZ_EVANESCENT_AND_BNV_METHOD_CONTROL"
+    },
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0100-arxiv-1811-08907.json",
+      "bytes": 85878,
+      "sha256": "cec1b2876fc82a01a8dda16230e83bb4886351f690a2169388f36815745b6445",
+      "role": "LEPTOQUARK_RENORMALIZATION_GAUGE_AND_FINITE_FIERZ_SCHEME_COMPARATOR_NOT_THE_SELECTED_GAMMA5_SCHEME"
+    },
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0104-arxiv-hep-ph-0005183.json",
+      "bytes": 133157,
+      "sha256": "2c44db06e0640df935edd80a4ee04a8e872f8841022e88f82e83e93a2f149d70",
+      "role": "NDR_MS_EVANESCENT_ADM_AND_FINITE_SCHEME_TRANSFORMATION_COMPARATOR_NOT_THE_SELECTED_GAMMA5_SCHEME"
+    },
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0127-arxiv-2012-08506.json",
+      "bytes": 81127,
+      "sha256": "f350598052715672c770a38ff648b9f4b92f268ce6f33a62c50e39db030102c9",
+      "role": "FUNCTIONAL_MATCHING_READING_POINT_AND_USER_SUPPLIED_LAGRANGIAN_LIMITATION_CONTROL"
+    },
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0136-arxiv-2011-02484.json",
+      "bytes": 154731,
+      "sha256": "a81379f53c23d7c5e44a782c9ed28423b7397b0d18845d01492213fa7da19d02",
+      "role": "DREG_MS_BACKGROUND_FIELD_EOM_AND_DIMENSION_BOUNDED_TOPOLOGY_METHOD_CONTROL"
+    }
+  ],
+  "hard_nonclaims": {
+    "selection_rule_connectivity_executed": false,
+    "one_loop_topology_census_executed": false,
+    "uv_counterterm_tensor_extraction_executed": false,
+    "evanescent_registry_enumerated": false,
+    "renormalization_space_complete": false,
+    "single_insertion_one_loop_closure_established": false,
+    "combined_d5_d6_one_loop_closure_established": false,
+    "d6_basis_one_loop_closed": false,
+    "adm_authorized": false,
+    "adm_entries_calculated": 0,
+    "rge_executed": false,
+    "matching_executed": false,
+    "parameter_evaluation_count": 0,
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "model1_viability": "UNKNOWN",
+    "physics_result": "PHASE_0_CONVENTION_FREEZE_ONLY"
+  },
+  "next_authorized_action": "PHASE_1_BUILD_STRATUM_SPECIFIC_SINGLE_INSERTION_SELECTION_RULE_CONNECTIVITY_GRAPHS_WITH_EXACT_ZERO_EDGE_CERTIFICATES_AND_NO_LOOP_COEFFICIENTS"
+}

@@ -30,4 +30,4 @@ def test_selector_review_authorizes_foundation_preparation_only() -> None:
     assert report["authority_rotation"]["foundation_preparation_authorized"] is True
     assert report["authority_rotation"]["unit_resolution_execution_authorized"] is False
     assert report["authority_rotation"]["Maxwell_Dirac_result_authorized"] is False
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

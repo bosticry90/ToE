@@ -1,0 +1,63 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedExecutionResultV1",
+  "as_of": "2026-09-05",
+  "attempt": {
+    "disposition": "INCONCLUSIVE",
+    "qualification_earned": false,
+    "failure_stage": "INITIAL_NETWORK_ISOLATION_OBSERVATION_BEFORE_TRUSTED_QUALIFICATION",
+    "failure_code": "LINUX_NETWORK_NAMESPACE_INITIAL_INTERFACES",
+    "failure_detail": "docker0,enP26577s1,eth0,lo",
+    "classification_reason": "The process entered unshare, but the v1 interface census read /sys/class/net from an inherited sysfs mount. That view is not a reliable network-namespace interface census. The driver failed closed before qualify() executed, so neither a Linux scientific PASS nor a scientific mismatch was observed.",
+    "trusted_calculation_started": false,
+    "fallback_connected_execution_used": false
+  },
+  "github": {
+    "pull_request": 2,
+    "pull_request_url": "https://github.com/bosticry90/ToE/pull/2",
+    "workflow_run_id": 34007693980,
+    "workflow_run_url": "https://github.com/bosticry90/ToE/actions/runs/34007693980",
+    "job_id": 101417814892,
+    "job_url": "https://github.com/bosticry90/ToE/actions/runs/34007693980/job/101417814892",
+    "source_commit": "7d3d81fc3a4dcbff58d1ce02a4ec3cd2e581d516",
+    "pull_request_merge_commit": "1b2621d263f14f65ae927ad9fc77fd9be0289680",
+    "started_at_utc": "2026-09-06T02:55:16Z",
+    "completed_at_utc": "2026-09-06T03:08:32Z"
+  },
+  "frozen_reference": {
+    "bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204",
+    "modified": false
+  },
+  "provisioning": {
+    "completed": true,
+    "captured_at_utc": "2026-09-06T03:08:27.437943Z",
+    "manifest_hash": "539f54be12aa7a6ecbf36acd528695e1a57dbdd21611b274913fec7e2a5a50d8",
+    "manifest_sha256": "34ebf4af35e529e355514e32b6ace5e58f00709366283ea2984be6e4983bcca0"
+  },
+  "preserved_artifact": {
+    "github_artifact_id": 9981631172,
+    "github_artifact_name": "verified-calculator-linux-egress-denied-1b2621d263f14f65ae927ad9fc77fd9be0289680",
+    "github_artifact_size_bytes": 13040,
+    "archive_sha256": "d62713d8542680d43a828a5956c9fd466fc55e024ca61870b85a1ed23ce41bdb",
+    "local_explicit_preservation_path": "formal/output/verified_calculator_linux_egress_denied_run_34007693980/artifact.zip",
+    "files": {
+      "attempt.json": "d2e8a90f7c75678e78f1f0038f91525cf0d3447bd959232a0d8b35434fc04227",
+      "execution.stderr.log": "28343462af6f5eac3d4197456fded95f491082dab6dd45d72d7e6a853c31768e",
+      "execution_exit_code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "failure.json": "03f740fb486bc2908fb640e47a1b0724c3ab0de38a88f5b46bf41a5009a1f5c7",
+      "provisioning.json": "34ebf4af35e529e355514e32b6ace5e58f00709366283ea2984be6e4983bcca0",
+      "result.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "workflow_disposition.json": "5d5c92564682d310be53c1c1aa5d3c8982c9ac6f86de5175b638d25abfbd889e"
+    }
+  },
+  "repair_lineage": {
+    "required": true,
+    "next_test_id": "C03_RV_EXACT_LINUX_KERNEL_EGRESS_DENIED_REPRODUCTION_v2",
+    "repair_scope": "Replace the inherited-sysfs interface census with two namespace-aware observations, socket.if_nameindex() and /proc/net/dev. Retain /sys/class/net only as non-gating diagnostic evidence.",
+    "reference_packet_repair_required": false
+  },
+  "result_record_hash": "a6d0fba1c6891b79bca0f55c7a664a845dc2be7b027f32e6e703f00e3b391b13",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

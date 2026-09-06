@@ -1,0 +1,839 @@
+name: Verified Calculator Linux Egress-Denied Exact Reproduction v5
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/verified-calculator-linux-egress-denied.yml"
+      - "formal/python/toe/generic_runner/verified_calculator/**"
+      - "formal/python/toe/generic_runner/verified_calculator_c03_rv_*.py"
+      - "formal/toe_formal/ToeFormal/VerifiedCalculator/**"
+      - "formal/tooling/scientific_compute/julia/verified_calculator*.jl"
+      - "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_*"
+      - "formal/docs/release/verified_calculator/c03_rv_exact/**"
+      - "requirements.ci.lock"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vpc-linux-egress-denied-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  exact-profile:
+    name: Frozen C03/RV exact profile
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Initialize qualification-attempt evidence
+        shell: bash
+        run: |
+          mkdir -p formal/output/verified_calculator_linux_egress_denied_v5
+          python3 - <<'PY' > formal/output/verified_calculator_linux_egress_denied_v5/attempt.json
+          from datetime import datetime, timezone
+          import json
+          import os
+
+          print(json.dumps({
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedAttemptV5",
+              "started_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
+              "git_commit": os.environ.get("GITHUB_SHA", ""),
+              "workflow_run": {
+                  "run_id": os.environ.get("GITHUB_RUN_ID", ""),
+                  "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
+                  "workflow_ref": os.environ.get("GITHUB_WORKFLOW_REF", ""),
+              },
+              "initial_disposition": "STARTED__NO_QUALIFICATION_EARNED",
+              "scientific_promotion": False,
+              "product_v1_release": False,
+              "production_activation": False,
+          }, sort_keys=True, separators=(",", ":")))
+          PY
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Setup Julia
+        uses: julia-actions/setup-julia@v3
+        with:
+          version: "1.12.6"
+
+      - name: Setup and build Lean runtime-certificate checker
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal/toe_formal
+          auto-config: false
+          build: true
+          build-args: vpc_certificate_checker
+          test: false
+          lint: false
+          use-mathlib-cache: true
+
+      - name: Provision Python and Julia dependencies before isolation
+        shell: bash
+        run: |
+          python -m venv .venv
+          ./.venv/bin/python -m pip install --upgrade pip==26.0
+          ./.venv/bin/python -m pip install -r requirements.ci.lock
+          julia --startup-file=no --project=formal/tooling/scientific_compute/julia -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using JSON3, Nemo'
+
+      - name: Capture provisioned dependency identities before isolation
+        shell: bash
+        run: |
+          mkdir -p formal/output/verified_calculator_linux_egress_denied_v5
+          export VPC_PROVISION_JULIA="$(command -v julia)"
+          export VPC_PROVISION_IP="$(command -v ip)"
+          set +e
+          ./.venv/bin/python - <<'PY' > formal/output/verified_calculator_linux_egress_denied_v5/provisioning.json 2> formal/output/verified_calculator_linux_egress_denied_v5/provisioning.stderr.log
+          from __future__ import annotations
+
+          from datetime import datetime, timezone
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+          import sys
+
+          repository_root = Path(os.environ["GITHUB_WORKSPACE"]).resolve(strict=True)
+          sys.path.insert(0, str(repository_root))
+
+          from formal.python.toe.generic_runner.verified_calculator.canonical import canonical_json, digest
+
+          def sha256_file(path: Path) -> str:
+              accumulator = hashlib.sha256()
+              with path.open("rb") as handle:
+                  for block in iter(lambda: handle.read(1024 * 1024), b""):
+                      accumulator.update(block)
+              return accumulator.hexdigest()
+
+          dependency_paths = [
+              ".github/workflows/verified-calculator-linux-egress-denied.yml",
+              "requirements.ci.lock",
+              "formal/tooling/scientific_compute/julia/Project.toml",
+              "formal/tooling/scientific_compute/julia/Manifest.toml",
+              "formal/toe_formal/lean-toolchain",
+              "formal/toe_formal/lakefile.toml",
+              "formal/toe_formal/lake-manifest.json",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v5.json",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v5.md",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v1.json",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v2.json",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v3.json",
+              "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v4.json",
+              "formal/output/verified_calculator_linux_egress_denied_run_34007693980/artifact.zip",
+              "formal/output/verified_calculator_linux_egress_denied_run_34008583231/artifact.zip",
+              "formal/output/verified_calculator_linux_egress_denied_run_34009722386/artifact.zip",
+              "formal/output/verified_calculator_linux_egress_denied_run_34010749703/artifact.zip",
+          ]
+          test_contract = json.loads(
+              (repository_root / "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v5.json").read_text(encoding="utf-8")
+          )
+          frozen_reference_path = (repository_root / test_contract["frozen_reference"]["bundle_path"]).resolve(strict=True)
+          frozen_reference = json.loads(frozen_reference_path.read_text(encoding="utf-8"))
+          frozen_dependency_closure = frozen_reference["dependency_manifests"][0]
+          source_profile_relative = "formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/source_profile_v1.json"
+          source_profile_expected_sha256 = "6ba34bcfd572d50842d32cb3995dca131f8aba153597fadbd06b09ca0e8af2c9"
+          material_contract_relative = "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_SOURCE_MATERIAL_CONTRACT_20260905_v1.json"
+          material_contract_expected_sha256 = "b550bf1269092538cd2b43bd655ac275e7ca654d18631bb386a29286cefe42c2"
+          git_commit = os.environ.get("GITHUB_SHA", "")
+          tracked_paths = set(
+              subprocess.check_output(
+                  ["git", "ls-tree", "-r", "--name-only", git_commit],
+                  cwd=repository_root,
+                  text=True,
+              ).splitlines()
+          )
+
+          def checked_custody_row(role: str, relative: str, expected_sha256: str, expected_size: int | None = None):
+              if not relative or ":" in relative or "\\" in relative or ".." in Path(relative).parts:
+                  raise RuntimeError(f"unsafe source-custody path: {relative!r}")
+              resolved = (repository_root / relative).resolve(strict=True)
+              if repository_root not in resolved.parents:
+                  raise RuntimeError(f"source-custody path escapes repository: {relative}")
+              actual_sha256 = sha256_file(resolved)
+              actual_size = resolved.stat().st_size
+              row = {
+                  "role": role,
+                  "path": relative,
+                  "declared_sha256": expected_sha256,
+                  "actual_sha256": actual_sha256,
+                  "byte_size": actual_size,
+                  "git_tracked_at_commit": relative in tracked_paths,
+                  "hash_matched": actual_sha256 == expected_sha256,
+                  "size_matched": expected_size is None or actual_size == expected_size,
+              }
+              if not row["git_tracked_at_commit"] or not row["hash_matched"] or not row["size_matched"]:
+                  raise RuntimeError(f"source-custody failure: {canonical_json(row)}")
+              return row
+
+          source_profile_path = (repository_root / source_profile_relative).resolve(strict=True)
+          if sha256_file(source_profile_path) != source_profile_expected_sha256:
+              raise RuntimeError("source-profile descriptor hash mismatch")
+          source_profile = json.loads(source_profile_path.read_text(encoding="utf-8"))
+          source_rows = [
+              checked_custody_row("PROFILE_DESCRIPTOR", source_profile_relative, source_profile_expected_sha256),
+              checked_custody_row("NORMALIZATION_CONTRACT", source_profile["contract"]["path"], source_profile["contract"]["sha256"], source_profile["contract"]["byte_size"]),
+              checked_custody_row("PARENT_ALLOWLIST", source_profile["parent_allowlist"]["path"], source_profile["parent_allowlist"]["sha256"], source_profile["parent_allowlist"]["byte_size"]),
+          ]
+          source_rows.extend(
+              checked_custody_row("ALLOWED_INPUT", row["path"], row["sha256"], row["byte_size"])
+              for row in source_profile["allowed_inputs"]
+          )
+          source_rows.append(
+              checked_custody_row("SOURCE_MATERIAL_CONTRACT", material_contract_relative, material_contract_expected_sha256)
+          )
+          authority_rows = {
+              "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_terminal_adjudication_pass_0275_v0/terminal_adjudication.json": "6156ec809a79c5384f2d2332c9d48b447b4b91ad747ec52ad6088995bae5d5c2",
+              "formal/docs/release/STRICT_MODEL1_ROUTE_C_CURRENT_AUTHORITY_v0.json": "682476eb2bd8a05ffd5b5ff813d27c0aad597d04d1653e1362419ada2f9c6d76",
+              "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_values_pass_0272_v0/closeout/six_record_value_damage_matrix.json": "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd",
+          }
+          source_rows.extend(
+              checked_custody_row("AUTHORITY_ATTACHMENT_RECORD", path, expected_sha256)
+              for path, expected_sha256 in authority_rows.items()
+          )
+          source_rows = sorted(source_rows, key=lambda row: row["path"])
+          if len(source_rows) != 28 or len({row["path"] for row in source_rows}) != 28:
+              raise RuntimeError(f"source-custody census mismatch: {len(source_rows)}")
+          frozen_closure_by_path = {}
+          for group in ("python", "julia", "lean", "profile_policy_artifact_references"):
+              for row in frozen_dependency_closure[group]:
+                  previous = frozen_closure_by_path.setdefault(row["path"], row["sha256"])
+                  if previous != row["sha256"]:
+                      raise RuntimeError(f"conflicting frozen closure hashes: {row['path']}")
+          requirement_row = frozen_dependency_closure["runtime_requirement_lock"]
+          previous = frozen_closure_by_path.setdefault(requirement_row["path"], requirement_row["sha256"])
+          if previous != requirement_row["sha256"]:
+              raise RuntimeError(f"conflicting frozen closure hashes: {requirement_row['path']}")
+          closure_rows = sorted(
+              (
+                  checked_custody_row("FROZEN_DEPENDENCY_CLOSURE", path, expected_sha256)
+                  for path, expected_sha256 in frozen_closure_by_path.items()
+              ),
+              key=lambda row: row["path"],
+          )
+          if len(closure_rows) != 73:
+              raise RuntimeError(f"frozen dependency-closure custody census mismatch: {len(closure_rows)}")
+          executable_paths = {
+              "python": Path(sys.executable).resolve(strict=True),
+              "julia": Path(os.environ["VPC_PROVISION_JULIA"]).resolve(strict=True),
+              "iproute2": Path(os.environ["VPC_PROVISION_IP"]).resolve(strict=True),
+              "lean_runtime_certificate_checker": (
+                  repository_root / "formal/toe_formal/.lake/build/bin/vpc_certificate_checker"
+              ).resolve(strict=True),
+          }
+          body = {
+              "schema_id": "VerifiedCalculatorProvisioningManifestV5",
+              "phase": "ONLINE_PROVISIONING_COMPLETE_BEFORE_NETWORK_ISOLATION",
+              "captured_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
+              "git_commit": os.environ.get("GITHUB_SHA", ""),
+              "runner": {
+                  "image": os.environ.get("ImageOS", ""),
+                  "image_version": os.environ.get("ImageVersion", ""),
+                  "architecture": os.environ.get("RUNNER_ARCH", ""),
+                  "operating_system": os.environ.get("RUNNER_OS", ""),
+              },
+              "dependency_artifacts": {
+                  relative: sha256_file((repository_root / relative).resolve(strict=True))
+                  for relative in dependency_paths
+              },
+              "frozen_reference": {
+                  **test_contract["frozen_reference"],
+                  "bundle_raw_sha256": sha256_file(frozen_reference_path),
+                  "dependency_closure_manifest": frozen_dependency_closure,
+              },
+              "runtime_custody": {
+                  "derivation": "FIXED_PROFILE_DESCRIPTOR_PLUS_DECLARED_CONTRACT_PARENT_ALLOWED_INPUTS_MATERIAL_CONTRACT_AND_THREE_AUTHORITY_RECORDS",
+                  "git_commit": git_commit,
+                  "artifact_count": len(source_rows),
+                  "artifacts": source_rows,
+                  "all_git_tracked_and_hash_bound": all(
+                      row["git_tracked_at_commit"] and row["hash_matched"] and row["size_matched"]
+                      for row in source_rows
+                  ),
+              },
+              "frozen_dependency_closure_custody": {
+                  "derivation": "ALL_PATH_HASH_PAIRS_FROM_THE_FROZEN_REFERENCE_DEPENDENCY_MANIFEST",
+                  "git_commit": git_commit,
+                  "artifact_count": len(closure_rows),
+                  "artifacts": closure_rows,
+                  "all_git_tracked_and_hash_bound": all(
+                      row["git_tracked_at_commit"] and row["hash_matched"] and row["size_matched"]
+                      for row in closure_rows
+                  ),
+              },
+              "executables": {
+                  name: {"path": str(path), "sha256": sha256_file(path)}
+                  for name, path in executable_paths.items()
+              },
+              "python_packages": sorted(
+                  line.strip()
+                  for line in subprocess.check_output(
+                      [sys.executable, "-m", "pip", "freeze", "--all"],
+                      text=True,
+                  ).splitlines()
+                  if line.strip()
+              ),
+          }
+          body["provisioning_manifest_hash"] = digest(body, "VerifiedCalculatorProvisioningManifestV5")
+          print(canonical_json(body))
+          PY
+          provisioning_exit_code=$?
+          set -e
+          printf '%s\n' "$provisioning_exit_code" > formal/output/verified_calculator_linux_egress_denied_v5/provisioning_exit_code.txt
+          if [ "$provisioning_exit_code" -ne 0 ]; then
+            exit "$provisioning_exit_code"
+          fi
+          echo "VPC_PROVISIONING_MANIFEST=formal/output/verified_calculator_linux_egress_denied_v5/provisioning.json" >> "$GITHUB_ENV"
+          echo "VPC_PROVISIONING_MANIFEST_SHA256=$(sha256sum formal/output/verified_calculator_linux_egress_denied_v5/provisioning.json | cut -d' ' -f1)" >> "$GITHUB_ENV"
+          echo "VPC_IP_EXE=$VPC_PROVISION_IP" >> "$GITHUB_ENV"
+
+      - name: Create ephemeral egress-denied qualification driver
+        shell: bash
+        run: |
+          cat > "$RUNNER_TEMP/vpc_linux_egress_denied_driver.py" <<'PY'
+          from __future__ import annotations
+
+          from datetime import datetime, timezone
+          import errno
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import platform
+          import socket
+          import subprocess
+          import sys
+
+          repository_root = Path(os.environ["GITHUB_WORKSPACE"]).resolve(strict=True)
+          os.chdir(repository_root)
+          sys.path.insert(0, str(repository_root))
+
+          from formal.python.toe.generic_runner.verified_calculator.canonical import canonical_json, digest, strict_json_file
+          from formal.python.toe.generic_runner.verified_calculator.contracts import VerificationClass
+          from formal.python.toe.generic_runner.verified_calculator.evidence import FrozenEvidenceBundleV1, VerificationReceiptV1
+          from formal.python.toe.generic_runner.verified_calculator.errors import require
+          from formal.python.toe.generic_runner.verified_calculator_c03_rv_qualification_v1 import qualify
+
+          require(platform.system() == "Linux", "LINUX_EGRESS_TEST_PLATFORM")
+          require(os.environ.get("VPC_EGRESS_DENIED_NAMESPACE") == "1", "LINUX_NETWORK_NAMESPACE_MARKER")
+          expected_probe_errors = {errno.ENETUNREACH, errno.EHOSTUNREACH, errno.EADDRNOTAVAIL}
+          probe_targets = (("1.1.1.1", 443), ("8.8.8.8", 53))
+          non_forwarding_route_types = {"unreachable", "blackhole", "prohibit", "throw"}
+          output_root = repository_root / os.environ["VPC_EGRESS_TEST_OUTPUT"]
+          output_root.mkdir(parents=True, exist_ok=True)
+          ip_executable = Path(os.environ["VPC_IP_EXE"]).resolve(strict=True)
+
+          def utc_now():
+              return datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z")
+
+          def route_query(family):
+              completed = subprocess.run(
+                  [str(ip_executable), "-j", f"-{family}", "route", "show", "default"],
+                  capture_output=True,
+                  text=True,
+                  check=False,
+                  timeout=10,
+              )
+              parsed = None
+              parse_error = None
+              try:
+                  candidate = json.loads(completed.stdout)
+                  if not isinstance(candidate, list) or any(not isinstance(row, dict) for row in candidate):
+                      raise ValueError("iproute2 JSON result is not a list of objects")
+                  parsed = candidate
+              except Exception as exc:
+                  parse_error = f"{type(exc).__name__}:{exc}"
+              rows = parsed if parsed is not None else []
+              classified = [
+                  {**row, "effective_route_type": row.get("type", "unicast")}
+                  for row in rows
+              ]
+              return {
+                  "command": [str(ip_executable), "-j", f"-{family}", "route", "show", "default"],
+                  "returncode": completed.returncode,
+                  "stdout": completed.stdout,
+                  "stderr": completed.stderr,
+                  "parse_error": parse_error,
+                  "routes": classified,
+                  "usable_forwarding_routes": [
+                      row for row in classified
+                      if row["effective_route_type"] not in non_forwarding_route_types
+                  ],
+              }
+
+          def persist_network_state(filename, state):
+              target = output_root / filename
+              temporary = target.with_suffix(target.suffix + ".tmp")
+              temporary.write_text(canonical_json(state) + "\n", encoding="utf-8")
+              temporary.replace(target)
+
+          def network_state():
+              socket_interfaces = sorted(name for _, name in socket.if_nameindex())
+              proc_net_dev_lines = Path("/proc/net/dev").read_text(encoding="ascii").splitlines()[2:]
+              proc_net_dev_interfaces = sorted(
+                  line.split(":", 1)[0].strip()
+                  for line in proc_net_dev_lines
+                  if ":" in line
+              )
+              sysfs_interfaces_diagnostic = sorted(path.name for path in Path("/sys/class/net").iterdir())
+              ipv4_lines = Path("/proc/net/route").read_text(encoding="ascii").splitlines()[1:]
+              ipv4_default_routes = [line for line in ipv4_lines if len(line.split()) >= 2 and line.split()[1] == "00000000"]
+              ipv6_lines = Path("/proc/net/ipv6_route").read_text(encoding="ascii").splitlines()
+              ipv6_default_routes = [
+                  line
+                  for line in ipv6_lines
+                  if len(line.split()) >= 2 and line.split()[0] == "0" * 32 and line.split()[1] == "00"
+              ]
+              ipv4_iproute2 = route_query(4)
+              ipv6_iproute2 = route_query(6)
+              probes = []
+              for host, port in probe_targets:
+                  probe = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                  probe.settimeout(2.0)
+                  try:
+                      result_errno = probe.connect_ex((host, port))
+                  finally:
+                      probe.close()
+                  probes.append(
+                      {
+                          "target": f"{host}:{port}",
+                          "errno": result_errno,
+                          "error_name": errno.errorcode.get(result_errno, "UNKNOWN"),
+                      }
+                  )
+              return {
+                  "observed_at_utc": utc_now(),
+                  "socket_if_nameindex_interfaces": socket_interfaces,
+                  "proc_net_dev_interfaces": proc_net_dev_interfaces,
+                  "sysfs_interfaces_diagnostic_only": sysfs_interfaces_diagnostic,
+                  "ipv4_default_routes": ipv4_default_routes,
+                  "ipv6_default_routes": ipv6_default_routes,
+                  "ipv4_default_routes_iproute2": ipv4_iproute2,
+                  "ipv6_default_routes_iproute2": ipv6_iproute2,
+                  "active_ipv4_probes": probes,
+              }
+
+          def require_isolated(state, phase):
+              require(
+                  state["socket_if_nameindex_interfaces"] == ["lo"],
+                  f"LINUX_NETWORK_NAMESPACE_{phase}_SOCKET_INTERFACES",
+                  detail=",".join(state["socket_if_nameindex_interfaces"]),
+              )
+              require(
+                  state["proc_net_dev_interfaces"] == ["lo"],
+                  f"LINUX_NETWORK_NAMESPACE_{phase}_PROC_INTERFACES",
+                  detail=",".join(state["proc_net_dev_interfaces"]),
+              )
+              require(
+                  state["socket_if_nameindex_interfaces"] == state["proc_net_dev_interfaces"],
+                  f"LINUX_NETWORK_NAMESPACE_{phase}_INTERFACE_CENSUS_DISAGREEMENT",
+              )
+              for family in ("ipv4", "ipv6"):
+                  route_state = state[f"{family}_default_routes_iproute2"]
+                  require(route_state["returncode"] == 0, f"LINUX_NETWORK_NAMESPACE_{phase}_{family.upper()}_ROUTE_QUERY")
+                  require(route_state["parse_error"] is None, f"LINUX_NETWORK_NAMESPACE_{phase}_{family.upper()}_ROUTE_PARSE")
+                  require(
+                      not route_state["usable_forwarding_routes"],
+                      f"LINUX_NETWORK_NAMESPACE_{phase}_{family.upper()}_USABLE_DEFAULT_ROUTE",
+                      detail=canonical_json(route_state["usable_forwarding_routes"]),
+                  )
+              require(
+                  all(probe["errno"] in expected_probe_errors for probe in state["active_ipv4_probes"]),
+                  f"LINUX_EGRESS_{phase}_ACTIVE_PROBE_NOT_NETWORK_BLOCKED",
+                  detail=",".join(f'{probe["target"]}={probe["error_name"]}' for probe in state["active_ipv4_probes"]),
+              )
+
+          isolation_observed_at = utc_now()
+          initial_network_state = network_state()
+          persist_network_state("initial_network_state.json", initial_network_state)
+          require_isolated(initial_network_state, "INITIAL")
+
+          provisioning_path = repository_root / os.environ["VPC_PROVISIONING_MANIFEST"]
+          provisioning_bytes = provisioning_path.read_bytes()
+          provisioning_sha256 = hashlib.sha256(provisioning_bytes).hexdigest()
+          require(provisioning_sha256 == os.environ["VPC_PROVISIONING_MANIFEST_SHA256"], "LINUX_PROVISIONING_MANIFEST_SHA256")
+          provisioning = strict_json_file(provisioning_path)
+          declared_provisioning_hash = provisioning.pop("provisioning_manifest_hash")
+          require(
+              digest(provisioning, "VerifiedCalculatorProvisioningManifestV5") == declared_provisioning_hash,
+              "LINUX_PROVISIONING_MANIFEST_HASH",
+          )
+          provisioning["provisioning_manifest_hash"] = declared_provisioning_hash
+          require(
+              provisioning["phase"] == "ONLINE_PROVISIONING_COMPLETE_BEFORE_NETWORK_ISOLATION",
+              "LINUX_PROVISIONING_PHASE",
+          )
+          require(
+              provisioning["executables"]["iproute2"]["path"] == str(ip_executable),
+              "LINUX_IPROUTE2_PATH_BINDING",
+          )
+          require(
+              hashlib.sha256(ip_executable.read_bytes()).hexdigest() == provisioning["executables"]["iproute2"]["sha256"],
+              "LINUX_IPROUTE2_HASH_BINDING",
+          )
+          runtime_custody = provisioning["runtime_custody"]
+          require(runtime_custody["artifact_count"] == len(runtime_custody["artifacts"]) == 28, "LINUX_RUNTIME_CUSTODY_CENSUS")
+          require(runtime_custody["all_git_tracked_and_hash_bound"] is True, "LINUX_RUNTIME_CUSTODY_PROVISIONING_GATE")
+          require(len({row["path"] for row in runtime_custody["artifacts"]}) == 28, "LINUX_RUNTIME_CUSTODY_DUPLICATE")
+          require(sum(row["role"] == "AUTHORITY_ATTACHMENT_RECORD" for row in runtime_custody["artifacts"]) == 3, "LINUX_AUTHORITY_CUSTODY_CENSUS")
+          for row in runtime_custody["artifacts"]:
+              source_path = (repository_root / row["path"]).resolve(strict=True)
+              require(repository_root in source_path.parents, "LINUX_SOURCE_CUSTODY_PATH_ESCAPE", detail=row["path"])
+              require(row["git_tracked_at_commit"] is True, "LINUX_SOURCE_NOT_GIT_TRACKED", detail=row["path"])
+              require(row["hash_matched"] is True and row["size_matched"] is True, "LINUX_SOURCE_PROVISIONING_MISMATCH", detail=row["path"])
+              require(hashlib.sha256(source_path.read_bytes()).hexdigest() == row["declared_sha256"] == row["actual_sha256"], "LINUX_SOURCE_RUNTIME_HASH", detail=row["path"])
+              require(source_path.stat().st_size == row["byte_size"], "LINUX_SOURCE_RUNTIME_SIZE", detail=row["path"])
+          closure_custody = provisioning["frozen_dependency_closure_custody"]
+          require(closure_custody["artifact_count"] == len(closure_custody["artifacts"]) == 73, "LINUX_DEPENDENCY_CLOSURE_CUSTODY_CENSUS")
+          require(closure_custody["all_git_tracked_and_hash_bound"] is True, "LINUX_DEPENDENCY_CLOSURE_CUSTODY_PROVISIONING_GATE")
+          require(len({row["path"] for row in closure_custody["artifacts"]}) == 73, "LINUX_DEPENDENCY_CLOSURE_CUSTODY_DUPLICATE")
+          for row in closure_custody["artifacts"]:
+              closure_path = (repository_root / row["path"]).resolve(strict=True)
+              require(repository_root in closure_path.parents, "LINUX_DEPENDENCY_CLOSURE_PATH_ESCAPE", detail=row["path"])
+              require(row["git_tracked_at_commit"] is True, "LINUX_DEPENDENCY_CLOSURE_NOT_GIT_TRACKED", detail=row["path"])
+              require(row["hash_matched"] is True and row["size_matched"] is True, "LINUX_DEPENDENCY_CLOSURE_PROVISIONING_MISMATCH", detail=row["path"])
+              require(hashlib.sha256(closure_path.read_bytes()).hexdigest() == row["declared_sha256"] == row["actual_sha256"], "LINUX_DEPENDENCY_CLOSURE_RUNTIME_HASH", detail=row["path"])
+              require(closure_path.stat().st_size == row["byte_size"], "LINUX_DEPENDENCY_CLOSURE_RUNTIME_SIZE", detail=row["path"])
+          provisioning_time = datetime.fromisoformat(provisioning["captured_at_utc"].replace("Z", "+00:00"))
+          isolation_time = datetime.fromisoformat(isolation_observed_at.replace("Z", "+00:00"))
+          require(provisioning_time <= isolation_time, "LINUX_PROVISIONING_AFTER_ISOLATION")
+
+          contract_path = repository_root / os.environ["VPC_EGRESS_TEST_CONTRACT"]
+          contract = strict_json_file(contract_path)
+          require(contract["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedTestV5", "LINUX_EGRESS_TEST_CONTRACT")
+          require(contract["definition_status"] == "DEFINED_NOT_EXECUTED", "LINUX_EGRESS_TEST_DEFINITION_STATUS")
+          v4_result = strict_json_file(repository_root / contract["repairs_result"])
+          require(v4_result["attempt"]["disposition"] == "INCONCLUSIVE", "LINUX_V4_RESULT_NOT_PRESERVED")
+          require(v4_result["github"]["workflow_run_id"] == 34010749703, "LINUX_V4_RUN_ID")
+          require(
+              v4_result["preserved_artifact"]["archive_sha256"] == "aa5c4cc1e92c32c860f1071df190557a8a0c85602454edc0d84036182c4e1257",
+              "LINUX_V4_ARTIFACT_HASH",
+          )
+          v4_archive_path = repository_root / v4_result["preserved_artifact"]["local_explicit_preservation_path"]
+          require(
+              hashlib.sha256(v4_archive_path.read_bytes()).hexdigest() == v4_result["preserved_artifact"]["archive_sha256"],
+              "LINUX_V4_PRESERVED_ARCHIVE_SHA256",
+          )
+          v3_result = strict_json_file(repository_root / "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v3.json")
+          require(v3_result["attempt"]["disposition"] == "INCONCLUSIVE", "LINUX_V3_RESULT_NOT_PRESERVED")
+          require(v3_result["github"]["workflow_run_id"] == 34009722386, "LINUX_V3_RUN_ID")
+          require(
+              v3_result["preserved_artifact"]["archive_sha256"] == "fd6d30615610d000048dc6bc1a5f753020982cbc25e59f69decf66f21dd168e4",
+              "LINUX_V3_ARTIFACT_HASH",
+          )
+          v3_archive_path = repository_root / v3_result["preserved_artifact"]["local_explicit_preservation_path"]
+          require(
+              hashlib.sha256(v3_archive_path.read_bytes()).hexdigest() == v3_result["preserved_artifact"]["archive_sha256"],
+              "LINUX_V3_PRESERVED_ARCHIVE_SHA256",
+          )
+          v2_result = strict_json_file(repository_root / "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v2.json")
+          require(v2_result["attempt"]["disposition"] == "INCONCLUSIVE", "LINUX_V2_RESULT_NOT_PRESERVED")
+          require(v2_result["github"]["workflow_run_id"] == 34008583231, "LINUX_V2_RUN_ID")
+          require(
+              v2_result["preserved_artifact"]["archive_sha256"] == "1d92f43e723bca348ed7a38e2e2fd5a2953cb51ff2015eeccc88a82c151618b4",
+              "LINUX_V2_ARTIFACT_HASH",
+          )
+          v2_archive_path = repository_root / v2_result["preserved_artifact"]["local_explicit_preservation_path"]
+          require(
+              hashlib.sha256(v2_archive_path.read_bytes()).hexdigest() == v2_result["preserved_artifact"]["archive_sha256"],
+              "LINUX_V2_PRESERVED_ARCHIVE_SHA256",
+          )
+          v1_result = strict_json_file(repository_root / "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v1.json")
+          require(v1_result["attempt"]["disposition"] == "INCONCLUSIVE", "LINUX_V1_RESULT_NOT_PRESERVED")
+          require(v1_result["github"]["workflow_run_id"] == 34007693980, "LINUX_V1_RUN_ID")
+          require(
+              v1_result["preserved_artifact"]["archive_sha256"] == "d62713d8542680d43a828a5956c9fd466fc55e024ca61870b85a1ed23ce41bdb",
+              "LINUX_V1_ARTIFACT_HASH",
+          )
+          v1_archive_path = repository_root / v1_result["preserved_artifact"]["local_explicit_preservation_path"]
+          require(
+              hashlib.sha256(v1_archive_path.read_bytes()).hexdigest() == v1_result["preserved_artifact"]["archive_sha256"],
+              "LINUX_V1_PRESERVED_ARCHIVE_SHA256",
+          )
+          expected = contract["frozen_reference"]
+          reference_path = repository_root / expected["bundle_path"]
+          require(
+              hashlib.sha256(reference_path.read_bytes()).hexdigest() == provisioning["frozen_reference"]["bundle_raw_sha256"],
+              "LINUX_REFERENCE_RAW_SHA256",
+          )
+          require(
+              provisioning["frozen_reference"]["dependency_closure_manifest"]["closure_hash"] == expected["dependency_closure_hash"],
+              "LINUX_PROVISIONED_DEPENDENCY_CLOSURE_HASH",
+          )
+          reference = FrozenEvidenceBundleV1.from_dict(strict_json_file(reference_path, max_bytes=256 * 1024 * 1024))
+          require(reference.bundle_hash == expected["bundle_hash"], "LINUX_REFERENCE_BUNDLE_HASH")
+
+          qualification_started_at = utc_now()
+          summary = qualify(output_root / "bundles")
+          qualification_completed_at = utc_now()
+          final_network_state = network_state()
+          persist_network_state("final_network_state.json", final_network_state)
+          require_isolated(final_network_state, "FINAL")
+          for field in ("computation_id", "candidate_hash", "profile_hash", "policy_hash", "graph_hash", "runtime_certificate_hash", "dependency_closure_hash"):
+              require(summary[field] == expected[field], "LINUX_EXACT_IDENTITY_MISMATCH", detail=field)
+          require(summary["challenge_result_count"] == 373 and summary["derived_corruption_challenged_count"] == 160, "LINUX_CHALLENGE_CENSUS")
+          require(summary["derived_corruption_unexpected_survivors"] == [], "LINUX_CHALLENGE_SURVIVOR")
+          require(summary["replay_status"] == "MATCHED", "LINUX_BUNDLE_REPLAY")
+
+          linux_path = repository_root / summary["frozen_bundle_path"]
+          linux_bundle = FrozenEvidenceBundleV1.from_dict(strict_json_file(linux_path, max_bytes=256 * 1024 * 1024))
+          require(linux_bundle.bundle_hash == summary["frozen_bundle_hash"] == linux_path.stem, "LINUX_GENERATED_BUNDLE_HASH")
+          graph_kind_counts = {kind: 0 for kind in ("SOURCE", "DERIVED", "OUTPUT")}
+          for node in linux_bundle.candidate["graph"]["nodes"]:
+              graph_kind_counts[node["kind"]] = graph_kind_counts.get(node["kind"], 0) + 1
+          require(
+              graph_kind_counts == {"SOURCE": 31, "DERIVED": 160, "OUTPUT": 16},
+              "LINUX_GRAPH_CENSUS",
+              detail=canonical_json(graph_kind_counts),
+          )
+          reference_receipt = VerificationReceiptV1.from_dict(reference.verification_receipt)
+          linux_receipt = VerificationReceiptV1.from_dict(linux_bundle.verification_receipt)
+          reference_body = reference_receipt.to_dict()
+          linux_body = linux_receipt.to_dict()
+          reference_environment = reference_body.pop("environment")
+          linux_environment = linux_body.pop("environment")
+          require(reference_body.keys() == linux_body.keys(), "LINUX_RECEIPT_FIELD_SET_MISMATCH")
+          receipt_field_comparison = {
+              field: reference_body[field] == linux_body[field]
+              for field in sorted(reference_body)
+          }
+          require(reference_body == linux_body, "LINUX_RECEIPT_NONENVIRONMENT_MISMATCH")
+          require(reference_environment["platform"] != linux_environment["platform"], "LINUX_DISTINCT_PLATFORM_NOT_ESTABLISHED")
+          require(all(row.verification_class == VerificationClass.VERIFIED_EXACT for row in linux_receipt.outputs), "LINUX_OUTPUT_NOT_VERIFIED_EXACT")
+
+          gates = {
+              "all_frozen_runtime_custody_files_git_tracked_and_hash_bound": runtime_custody["artifact_count"] == 28 and runtime_custody["all_git_tracked_and_hash_bound"] is True and all(hashlib.sha256((repository_root / row["path"]).read_bytes()).hexdigest() == row["declared_sha256"] for row in runtime_custody["artifacts"]),
+              "all_frozen_dependency_closure_files_git_tracked_and_hash_bound": closure_custody["artifact_count"] == 73 and closure_custody["all_git_tracked_and_hash_bound"] is True and all(hashlib.sha256((repository_root / row["path"]).read_bytes()).hexdigest() == row["declared_sha256"] for row in closure_custody["artifacts"]),
+              "fresh_linux_network_namespace_only_loopback": initial_network_state["socket_if_nameindex_interfaces"] == initial_network_state["proc_net_dev_interfaces"] == final_network_state["socket_if_nameindex_interfaces"] == final_network_state["proc_net_dev_interfaces"] == ["lo"],
+              "namespace_aware_interface_censuses_agree": initial_network_state["socket_if_nameindex_interfaces"] == initial_network_state["proc_net_dev_interfaces"] and final_network_state["socket_if_nameindex_interfaces"] == final_network_state["proc_net_dev_interfaces"],
+              "no_usable_forwarding_default_route": all(
+                  not state[f"{family}_default_routes_iproute2"]["usable_forwarding_routes"]
+                  for state in (initial_network_state, final_network_state)
+                  for family in ("ipv4", "ipv6")
+              ),
+              "non_forwarding_route_types_explicitly_classified": all(
+                  row["effective_route_type"] in non_forwarding_route_types
+                  for state in (initial_network_state, final_network_state)
+                  for family in ("ipv4", "ipv6")
+                  for row in state[f"{family}_default_routes_iproute2"]["routes"]
+              ),
+              "network_state_persisted_before_assertion": (output_root / "initial_network_state.json").is_file() and (output_root / "final_network_state.json").is_file(),
+              "active_ipv4_egress_probes_blocked_before_and_after": all(probe["errno"] in expected_probe_errors for state in (initial_network_state, final_network_state) for probe in state["active_ipv4_probes"]),
+              "dependency_provisioning_manifest_hash_bound": bool(declared_provisioning_hash) and provisioning_sha256 == os.environ["VPC_PROVISIONING_MANIFEST_SHA256"],
+              "dependency_provisioning_completed_before_denied_phase": provisioning_time <= isolation_time,
+              "isolation_observed_before_qualification": isolation_observed_at <= qualification_started_at,
+              "isolation_maintained_after_qualification": qualification_completed_at <= final_network_state["observed_at_utc"],
+              "v1_through_v4_inconclusive_attempts_preserved": v1_result["attempt"]["disposition"] == v2_result["attempt"]["disposition"] == v3_result["attempt"]["disposition"] == v4_result["attempt"]["disposition"] == "INCONCLUSIVE" and v1_result["github"]["workflow_run_id"] == 34007693980 and v2_result["github"]["workflow_run_id"] == 34008583231 and v3_result["github"]["workflow_run_id"] == 34009722386 and v4_result["github"]["workflow_run_id"] == 34010749703 and hashlib.sha256(v1_archive_path.read_bytes()).hexdigest() == v1_result["preserved_artifact"]["archive_sha256"] and hashlib.sha256(v2_archive_path.read_bytes()).hexdigest() == v2_result["preserved_artifact"]["archive_sha256"] and hashlib.sha256(v3_archive_path.read_bytes()).hexdigest() == v3_result["preserved_artifact"]["archive_sha256"] and hashlib.sha256(v4_archive_path.read_bytes()).hexdigest() == v4_result["preserved_artifact"]["archive_sha256"],
+              "frozen_windows_reference_replayed": reference.bundle_hash == expected["bundle_hash"],
+              "all_exact_identifiers_match_reference": all(summary[field] == expected[field] for field in ("computation_id", "candidate_hash", "profile_hash", "policy_hash", "graph_hash", "runtime_certificate_hash", "dependency_closure_hash")),
+              "all_receipt_fields_except_environment_match": reference_body == linux_body,
+              "all_207_graph_nodes_executed": graph_kind_counts == {"SOURCE": 31, "DERIVED": 160, "OUTPUT": 16},
+              "all_sixteen_roots_verified_exact": len(linux_receipt.outputs) == 16 and all(row.verification_class == VerificationClass.VERIFIED_EXACT for row in linux_receipt.outputs),
+              "all_373_mandatory_challenges_pass": len(linux_receipt.challenge_results) == 373 and all(row.disposition.value == "PASSED" for row in linux_receipt.challenge_results),
+              "generated_linux_bundle_replays": summary["replay_status"] == "MATCHED",
+          }
+          require(all(gates.values()), "LINUX_EGRESS_TEST_GATE")
+          result = {
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedResultV5",
+              "definition_hash": digest(contract, "VerifiedCalculatorLinuxEgressDeniedTestV5"),
+              "git_commit": os.environ.get("GITHUB_SHA", ""),
+              "workflow_run": {
+                  "run_id": os.environ.get("GITHUB_RUN_ID", ""),
+                  "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
+                  "workflow_ref": os.environ.get("GITHUB_WORKFLOW_REF", ""),
+              },
+              "phase_timestamps_utc": {
+                  "provisioning_captured": provisioning["captured_at_utc"],
+                  "isolation_observed": isolation_observed_at,
+                  "qualification_started": qualification_started_at,
+                  "qualification_completed": qualification_completed_at,
+                  "post_qualification_isolation_observed": final_network_state["observed_at_utc"],
+              },
+              "provisioning": {
+                  "manifest_path": os.environ["VPC_PROVISIONING_MANIFEST"],
+                  "manifest_sha256": provisioning_sha256,
+                  "manifest": provisioning,
+              },
+              "runtime_custody": runtime_custody,
+              "frozen_dependency_closure_custody": closure_custody,
+              "network_isolation": {
+                  "mechanism": "LINUX_NEW_NETWORK_NAMESPACE",
+                  "interface_gate_sources": ["socket.if_nameindex()", "/proc/net/dev"],
+                  "route_gate_source": "HASH_BOUND_LOCAL_IPROUTE2_JSON",
+                  "permitted_non_forwarding_route_types": sorted(non_forwarding_route_types),
+                  "sysfs_interface_source": "DIAGNOSTIC_ONLY_NOT_A_GATE",
+                  "expected_probe_errno_names": sorted(errno.errorcode[value] for value in expected_probe_errors),
+                  "before": initial_network_state,
+                  "after": final_network_state,
+              },
+              "exact_identity_comparison": {
+                  field: {"expected": expected[field], "observed": summary[field], "matched": summary[field] == expected[field]}
+                  for field in ("computation_id", "candidate_hash", "profile_hash", "policy_hash", "graph_hash", "runtime_certificate_hash", "dependency_closure_hash")
+              },
+              "receipt_field_comparison_excluding_environment": receipt_field_comparison,
+              "windows_reference_bundle_hash": reference.bundle_hash,
+              "linux_bundle_hash": linux_bundle.bundle_hash,
+              "linux_verification_receipt_hash": linux_receipt.receipt_hash,
+              "windows_environment": reference_environment,
+              "linux_environment": linux_environment,
+              "qualification_summary": summary,
+              "graph_kind_counts": graph_kind_counts,
+              "gates": gates,
+              "scientific_promotion": False,
+              "product_v1_release": False,
+              "production_activation": False,
+          }
+          result["result_hash"] = digest(result, "VerifiedCalculatorLinuxEgressDeniedResultV5")
+          print(canonical_json(result))
+          PY
+
+      - name: Run exact qualification with kernel-enforced egress denial
+        shell: bash
+        env:
+          VPC_EGRESS_TEST_CONTRACT: formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v5.json
+          VPC_EGRESS_TEST_OUTPUT: formal/output/verified_calculator_linux_egress_denied_v5
+        run: |
+          mkdir -p "$VPC_EGRESS_TEST_OUTPUT"
+          VPC_PYTHON="$GITHUB_WORKSPACE/.venv/bin/python"
+          VPC_JULIA_EXE="$(command -v julia)"
+          VPC_JULIA_DEPOT="${JULIA_DEPOT_PATH:-$HOME/.julia}"
+          set +e
+          sudo -n /usr/bin/unshare --net --fork --pid --mount-proc \
+            /usr/bin/env \
+            HOME="$HOME" \
+            PATH="$PATH" \
+            GITHUB_WORKSPACE="$GITHUB_WORKSPACE" \
+            GITHUB_SHA="$GITHUB_SHA" \
+            GITHUB_RUN_ID="$GITHUB_RUN_ID" \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" \
+            GITHUB_WORKFLOW_REF="$GITHUB_WORKFLOW_REF" \
+            JULIA_DEPOT_PATH="$VPC_JULIA_DEPOT" \
+            JULIA_PKG_OFFLINE=true \
+            PYTHONDONTWRITEBYTECODE=1 \
+            VPC_JULIA_EXE="$VPC_JULIA_EXE" \
+            VPC_IP_EXE="$VPC_IP_EXE" \
+            VPC_EGRESS_DENIED_NAMESPACE=1 \
+            VPC_EGRESS_TEST_CONTRACT="$VPC_EGRESS_TEST_CONTRACT" \
+            VPC_EGRESS_TEST_OUTPUT="$VPC_EGRESS_TEST_OUTPUT" \
+            VPC_PROVISIONING_MANIFEST="$VPC_PROVISIONING_MANIFEST" \
+            VPC_PROVISIONING_MANIFEST_SHA256="$VPC_PROVISIONING_MANIFEST_SHA256" \
+            "$VPC_PYTHON" "$RUNNER_TEMP/vpc_linux_egress_denied_driver.py" \
+            > "$VPC_EGRESS_TEST_OUTPUT/result.json" \
+            2> "$VPC_EGRESS_TEST_OUTPUT/execution.stderr.log"
+          qualification_exit_code=$?
+          set -e
+          sudo chown -R "$(id -u):$(id -g)" "$VPC_EGRESS_TEST_OUTPUT"
+          printf '%s\n' "$qualification_exit_code" > "$VPC_EGRESS_TEST_OUTPUT/execution_exit_code.txt"
+          if [ "$qualification_exit_code" -ne 0 ]; then
+            VPC_QUALIFICATION_EXIT_CODE="$qualification_exit_code" ./.venv/bin/python - <<'PY' > "$VPC_EGRESS_TEST_OUTPUT/failure.json"
+          from datetime import datetime, timezone
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          output = Path("formal/output/verified_calculator_linux_egress_denied_v5")
+          stderr_path = output / "execution.stderr.log"
+          print(json.dumps({
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedFailureV5",
+              "recorded_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
+              "git_commit": os.environ.get("GITHUB_SHA", ""),
+              "exit_code": int(os.environ["VPC_QUALIFICATION_EXIT_CODE"]),
+              "provisioning_manifest_sha256": os.environ.get("VPC_PROVISIONING_MANIFEST_SHA256", ""),
+              "stderr_sha256": hashlib.sha256(stderr_path.read_bytes()).hexdigest(),
+              "disposition": "FAIL_OR_INCONCLUSIVE__NO_QUALIFICATION_EARNED",
+              "scientific_promotion": False,
+              "product_v1_release": False,
+              "production_activation": False,
+          }, sort_keys=True, separators=(",", ":")))
+          PY
+            exit "$qualification_exit_code"
+          fi
+
+      - name: Validate result is non-promotional and egress-denied
+        shell: bash
+        run: |
+          ./.venv/bin/python - <<'PY'
+          import json
+          from pathlib import Path
+
+          result = json.loads(Path("formal/output/verified_calculator_linux_egress_denied_v5/result.json").read_text(encoding="utf-8"))
+          assert result["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedResultV5"
+          assert result["network_isolation"]["before"]["socket_if_nameindex_interfaces"] == ["lo"]
+          assert result["network_isolation"]["before"]["proc_net_dev_interfaces"] == ["lo"]
+          assert result["network_isolation"]["after"]["socket_if_nameindex_interfaces"] == ["lo"]
+          assert result["network_isolation"]["after"]["proc_net_dev_interfaces"] == ["lo"]
+          for phase in ("before", "after"):
+              for family in ("ipv4", "ipv6"):
+                  routes = result["network_isolation"][phase][f"{family}_default_routes_iproute2"]
+                  assert routes["returncode"] == 0
+                  assert routes["parse_error"] is None
+                  assert routes["usable_forwarding_routes"] == []
+          assert all(probe["errno"] != 0 for probe in result["network_isolation"]["before"]["active_ipv4_probes"])
+          assert all(probe["errno"] != 0 for probe in result["network_isolation"]["after"]["active_ipv4_probes"])
+          assert all(result["receipt_field_comparison_excluding_environment"].values())
+          assert all(result["gates"].values())
+          assert result["scientific_promotion"] is False
+          assert result["product_v1_release"] is False
+          assert result["production_activation"] is False
+          PY
+
+      - name: Preserve incomplete or failed attempt disposition
+        if: failure()
+        shell: bash
+        env:
+          VPC_JOB_STATUS: ${{ job.status }}
+        run: |
+          python3 - <<'PY'
+          from datetime import datetime, timezone
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          output = Path("formal/output/verified_calculator_linux_egress_denied_v5")
+          output.mkdir(parents=True, exist_ok=True)
+          retained = {}
+          for path in sorted(output.rglob("*")):
+              if path.is_file() and path.name != "workflow_disposition.json":
+                  retained[path.relative_to(output).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+          record = {
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedWorkflowDispositionV5",
+              "recorded_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
+              "git_commit": os.environ.get("GITHUB_SHA", ""),
+              "workflow_run": {
+                  "run_id": os.environ.get("GITHUB_RUN_ID", ""),
+                  "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
+                  "workflow_ref": os.environ.get("GITHUB_WORKFLOW_REF", ""),
+              },
+              "job_status": os.environ.get("VPC_JOB_STATUS", "failure"),
+              "retained_file_sha256": retained,
+              "disposition": "FAIL_OR_INCONCLUSIVE__REVIEW_REQUIRED__NO_QUALIFICATION_EARNED",
+              "scientific_promotion": False,
+              "product_v1_release": False,
+              "production_activation": False,
+          }
+          (output / "workflow_disposition.json").write_text(
+              json.dumps(record, sort_keys=True, separators=(",", ":")) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Upload Linux egress-denied evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-calculator-linux-egress-denied-v5-${{ github.sha }}
+          path: formal/output/verified_calculator_linux_egress_denied_v5/
+          if-no-files-found: error
+          retention-days: 30

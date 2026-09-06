@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 2,
+  "closed_from_commit": "1a551b2e46155b7e526d3b2b9ee1c63c6801b14c",
+  "event_hash": "4ed54acb6afa409e64d641d8b8ba78ee87a08b07ad9cb50042f81675c56bb7e2",
+  "event_sequence_number": 4,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "8915d1640b9eaabb4f9931f0465f54588d2cbbcbba9cb809a61dd9f0d83b9fd9",
+  "previous_event_hash": "8915d1640b9eaabb4f9931f0465f54588d2cbbcbba9cb809a61dd9f0d83b9fd9",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "result_artifact_hash": "b58b12e816db18dbda12af9b53ead28fcfe40c359751dfa9934da7fcbb5df7cf",
+  "result_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0.json",
+  "review_artifact_hash": "4a11d7b8fb6ce6031943cec88f3921ffba828678fc3929af6821ab547d4940ec",
+  "review_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

@@ -1,0 +1,104 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:07:00Z",
+  "verdict": "ACCEPT_ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT_NO_SCALE",
+  "reviewed_branch": "codex/historical-report-fixture-pilot-v0",
+  "reviewed_commit": "e95c8e8e4ec58756f5f3ddb7bf53adcce43bce91",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_20260722_v0.json",
+    "sha256": "4297e065f3fd0a262f0827b15d384a0ec32b37ceb441d0a00f7ef3f47983c683",
+    "outcome": "ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "independence": {
+    "review_worktree": ".toe-recovery/disposable-workspaces/historical-report-fixture-pilot-review-v0",
+    "detached_clean_checkout": true,
+    "recomputation_method": "Independent changed-path and Git-object audit, temporary two-generation reconstruction, focused pytest rerun, LF/configured-CRLF/actual-CRLF JUnit validation, actual CRLF byte inspection, external comparator boundary audit, and 629-path dirty-main custody rehash.",
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/historical-report-fixture-pilot-v0/HISTORICAL_REPORT_FIXTURE_PILOT_INDEPENDENT_RECOMPUTATION_20260722_v0.json",
+      "sha256": "e346ad6f4d4071f403a64db84440b33df3872800515aa6bbf4481cf5886b3cd5"
+    },
+    "review_script": {
+      "path": ".toe-recovery/custody-v0/historical-report-fixture-pilot-v0/independent_review_historical_report_fixture_pilot_v0.py",
+      "sha256": "60fb0020846edb63f9a241d428ab431920f46f4acd5f175c0bd33d3c9f0321f8"
+    },
+    "focused_junit": {
+      "path": ".toe-recovery/custody-v0/historical-report-fixture-pilot-v0/INDEPENDENT_REVIEW_FOCUSED_JUNIT_v0.xml",
+      "sha256": "eebdba259bf4a29adf0803e70ad3d0ad281d2270b8a6cfcfb792eb9ba5b5af73"
+    }
+  },
+  "recomputed_scope": {
+    "selected_dependency_identities": 1,
+    "changed_test_files": 1,
+    "changed_generator_files": 0,
+    "committed_fixtures": 0,
+    "live_reports_created_or_read": 0,
+    "scale_actions": 0,
+    "scientific_actions": 0
+  },
+  "recomputed_determinism": {
+    "two_independent_generations_byte_identical": true,
+    "generated_fixture_sha256": "80961119f8b267fc23ae05d4832d8bd9f75dec286ae151983b70070c94f1bfb9",
+    "generated_fixture_bytes": 1525,
+    "lf_and_actual_crlf_generation_identical": true,
+    "actual_crlf_pairs_in_selected_gate": 105
+  },
+  "recomputed_validation": {
+    "implementation_gate_passed": "4_OF_4",
+    "lf_gate_passed": "4_OF_4",
+    "configured_crlf_gate_passed": "4_OF_4",
+    "actual_crlf_gate_passed": "4_OF_4",
+    "independent_review_gate_passed": "4_OF_4",
+    "all_validation_checkouts_clean": true,
+    "live_report_path_absent_in_all_clean_validations": true
+  },
+  "outcome_review": {
+    "dependency_local_outcomes_recovered": 2,
+    "aggregate_cross_identity_outcomes_recovered": 0,
+    "aggregate_cross_identity_outcomes_still_nonpassing": 2,
+    "broad_baseline_rerun": false,
+    "assessment": "The temporary-fixture pattern is validated for a dependency-local consumer. The aggregate nineteen-identity contract remains outside scope and must not be inferred repaired."
+  },
+  "preservation": {
+    "generator_blob_frozen": true,
+    "loop_control_registry_unchanged": true,
+    "toe_formal_tree_unchanged": true,
+    "state_of_the_theory_unchanged": true,
+    "dirty_main_manifest_rows_byte_verified": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736"
+  },
+  "external_qrf_comparator_review": {
+    "classification": "NONAUTHORITATIVE_NONCLAIM_DEFERRED_SCIENTIFIC_ASSESSMENT",
+    "verified_claim_ceiling": "Coordinate-transformation-related spacetime amplitudes can be expressed on one fixed background; this creates an evidence-attribution ambiguity but neither establishes classical gravity nor rules out quantum gravity.",
+    "direct_authority_effect": "NONE",
+    "direct_support_for_toe": "NONE",
+    "future_qft_gr_seam_relevance": "HIGH",
+    "future_empirical_discriminator_relevance": "VERY_HIGH",
+    "canonical_repository_enrollment": false,
+    "scientific_calculation_lane": "NOT_CREATED"
+  },
+  "decision": {
+    "pilot_accepted": true,
+    "fixture_pattern_safe_for_selected_dependency_local_gate": true,
+    "safe_to_scale_across_remaining_cohort": false,
+    "next_fixture_conversion_authorized": false,
+    "aggregate_contract_repair_authorized": false,
+    "provenance_blocked_cases_authorized": false,
+    "automatic_successor_authorized": false,
+    "v2_enrollment_authorized": false,
+    "registry_rotation_authorized": false,
+    "lean_activity_authorized": false,
+    "scientific_execution_authorized": false,
+    "fresh_selector_options": [
+      "AUTHORIZE_ANOTHER_ONE_IDENTITY_DEPENDENCY_LOCAL_FIXTURE_CONVERSION",
+      "AUTHORIZE_AGGREGATE_HISTORICAL_CONTRACT_RETIREMENT_ADJUDICATION",
+      "PRESERVE_PILOT_AND_DEFER_REPORT_CONTRACT_REPAIR"
+    ]
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0_OF_12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_FIXTURE_PILOT_AND_STOP_FOR_FRESH_SELECTOR"
+}

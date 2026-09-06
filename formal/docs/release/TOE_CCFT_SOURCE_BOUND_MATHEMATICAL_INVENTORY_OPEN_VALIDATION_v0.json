@@ -1,0 +1,47 @@
+{
+  "artifact_id": "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_OPEN_v0.json",
+    "formal/python/tools/toe_ccft_source_bound_mathematical_inventory_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTSourceBoundMathematicalInventoryAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 1,
+  "authority_decision": "AUTHORIZE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_STAGE_1_OPEN",
+  "captured_at_utc": "2026-07-31T22:30:00Z",
+  "event_hash": "272c3012dd05be6e385be91e1334f42186355154d746ec95e8dd89771a6c6104",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_01_OPEN_v0.json",
+  "event_sequence_number": 1,
+  "event_sha256": "de913292385c55dd0fcc526a2f7246bad239775226adffcdc51c7c3bcfb8eff1",
+  "opened_from_commit": "9992dad328cb982c4832c2dcbbd3a9bc8487e22c",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "0c28fbbecbb0a514d70e020665fc7e54fab7eba8e5ff615a4ce5e2a46627bd9f",
+  "schema_id": "toe.ccft_source_bound_mathematical_inventory.stage_1_open_validation.v0",
+  "scientific_output_at_open": {
+    "ccft_mathematical_inventory_entries": 0,
+    "ccft_model_or_physical_claim_established": false,
+    "deep_review_sources_selected": 0,
+    "evidence_promoted": false,
+    "minimal_ccft_core_selected": false,
+    "operational_interpretation_established": false,
+    "representation_field_action_seam_or_observable_selected": false,
+    "stage_2_output_created": false
+  },
+  "scope_hash": "e348568927073147b6353de85f14a13c2e332f217677d8e7c16a0cc7cac0d53e",
+  "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY",
+  "status": "STAGE_1_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "inventory_toe_source_bound_ccft_mathematical_structures_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "deterministic_selection_contract_and_160_source_ceiling_match": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_2_remains_unauthorized": true
+  }
+}

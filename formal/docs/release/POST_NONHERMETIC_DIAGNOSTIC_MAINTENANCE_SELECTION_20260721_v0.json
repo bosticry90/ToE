@@ -1,0 +1,11 @@
+{
+  "authority_source": "USER_REQUEST_20260721_EXECUTE_PRESCRIBED_ACTIONS",
+  "captured_at_utc": "2026-07-21T21:37:34Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_HASH_REFRESH_AND_TRACKED_IDENTITY_REPAIR",
+    "PRESERVE_DIAGNOSTIC_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "schema_id": "POST_NONHERMETIC_DIAGNOSTIC_MAINTENANCE_SELECTION_20260721_v0",
+  "selected": "AUTHORIZE_BOUNDED_HASH_REFRESH_AND_TRACKED_IDENTITY_REPAIR",
+  "successor_target": "prepare_repository_hash_refresh_and_tracked_blob_identity_repair_packet_v0"
+}

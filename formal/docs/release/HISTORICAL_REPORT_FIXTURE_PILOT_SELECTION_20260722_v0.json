@@ -1,0 +1,17 @@
+{
+  "schema_id": "HISTORICAL_REPORT_FIXTURE_PILOT_SELECTION_20260722_v0",
+  "captured_at_utc": "2026-07-22T22:50:36Z",
+  "options": [
+    "AUTHORIZE_ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT",
+    "PRESERVE_ACCEPTED_ADJUDICATION_AND_DEFER_FIXTURE_REPAIR"
+  ],
+  "selected": "AUTHORIZE_ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT",
+  "target": "prepare_repository_historical_report_fixture_conversion_pilot_packet_v0",
+  "selection_basis": "The accepted adjudication proves that no first-missing report is current decision-bearing authority. The selected historical throughput-baseline identity is beyond retention, has a tracked deterministic generator whose inputs are committed tests plus the governance test manifest, has multiple dependency-local tests, and can be generated to an explicit temporary path without reading dirty main or changing scientific authority.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "904f7d559fc7d406436c6963ede76edc88b577c755228868a1be795cdf7da0f4",
+    "commit": "2736090e3240ac6ef2c9e2d74382c6c346653cec"
+  },
+  "scientific_posture": "B-BLOCKED"
+}

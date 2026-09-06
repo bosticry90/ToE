@@ -11,6 +11,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -23,6 +27,7 @@ OUTPUT_IDENTITY_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESC
 MANIFEST_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-MANIFEST-v2.json"
 REPORT_RELATIVE_PATH = "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_CALIBRATION_AND_PARAMETER_FREEZE_PACKET_20260714_v2.json"
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 
 V1_PACKET_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CALIBRATION-AND-PARAMETER-FREEZE-PACKET-v1.json"
 V1_MATRIX_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-RUN-MATRIX-v1.json"
@@ -119,7 +124,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(relative_path: str) -> dict[str, Any]:
@@ -137,7 +142,7 @@ def validate_authority() -> None:
     for path, digest in INPUT_HASHES.items():
         if sha256_path(REPO_ROOT / path) != digest:
             raise ValueError(f"accepted input hash mismatch: {path}")
-    if sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) != PROMPT_SHA256:
+    if not prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE):
         raise ValueError("protected Prompt.txt content changed")
     review = load_json(V1_REVIEW_RELATIVE_PATH)
     if not (

@@ -1,0 +1,5 @@
+[deps]
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+Nemo = "2edaba10-b0f1-5616-af89-8c11ac63239a"
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"

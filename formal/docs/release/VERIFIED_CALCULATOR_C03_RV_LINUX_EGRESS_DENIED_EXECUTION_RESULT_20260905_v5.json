@@ -1,0 +1,100 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedExecutionResultV5",
+  "as_of": "2026-09-05",
+  "attempt": {
+    "disposition": "FAIL",
+    "qualification_earned": false,
+    "failure_stage": "PRE_ISOLATION_FROZEN_DEPENDENCY_CLOSURE_CUSTODY",
+    "failure_code": "FROZEN_DEPENDENCY_CLOSURE_RAW_HASH_MISMATCH",
+    "failure_detail": "formal/toe_formal/lean-toolchain",
+    "classification_reason": "The v5 acceptance test executed its clean-commit frozen-closure custody gate and found that a tracked file's Linux checkout bytes did not match the raw SHA-256 recorded in the frozen dependency manifest. This violates an explicit acceptance criterion and is a reproducibility defect, not an unavailable runner feature, so the preserved disposition is FAIL rather than INCONCLUSIVE. Network isolation and trusted qualification were not entered.",
+    "provisioning_completed": true,
+    "custody_manifest_completed": false,
+    "network_namespace_entered": false,
+    "qualification_driver_entered": false,
+    "complete_result_emitted": false,
+    "fallback_connected_execution_used": false
+  },
+  "github": {
+    "pull_request": 2,
+    "pull_request_url": "https://github.com/bosticry90/ToE/pull/2",
+    "workflow_run_id": 34012192493,
+    "workflow_run_url": "https://github.com/bosticry90/ToE/actions/runs/34012192493",
+    "job_id": 101429820050,
+    "job_url": "https://github.com/bosticry90/ToE/actions/runs/34012192493/job/101429820050",
+    "source_commit": "7f0f8d7e27e794c2dfe53be49e996d55ebe53777",
+    "pull_request_merge_commit": "78338a4287b8afb28cada3a150331cecc4df11e4",
+    "started_at_utc": "2026-09-06T04:42:41Z",
+    "completed_at_utc": "2026-09-06T04:56:57Z"
+  },
+  "frozen_reference": {
+    "bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204",
+    "modified": false
+  },
+  "preserved_artifact": {
+    "github_artifact_id": 9982969167,
+    "github_artifact_name": "verified-calculator-linux-egress-denied-v5-78338a4287b8afb28cada3a150331cecc4df11e4",
+    "github_artifact_size_bytes": 2000,
+    "archive_sha256": "5a24c88ffc3d51838ac133879473f6ab8b38fc13537abf0f10f208d1654620d2",
+    "local_explicit_preservation_path": "formal/output/verified_calculator_linux_egress_denied_run_34012192493/artifact.zip",
+    "files": {
+      "attempt.json": "9d02d4f49fe7bb48d1d8def100421d6afd8bcc126d90ce6e5a3cb054fef3877c",
+      "provisioning_exit_code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "provisioning.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provisioning.stderr.log": "966c8981491096b6758a49875e6d79eb5563b1139bcbcd9043566acc55070362",
+      "workflow_disposition.json": "b859c7423eeb52f155d03f78a762b47723b25eb48e5e35839614dff58e0bceea"
+    }
+  },
+  "ci_observed_failure": {
+    "path": "formal/toe_formal/lean-toolchain",
+    "frozen_declared_sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2",
+    "linux_checkout_actual_sha256": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+    "linux_checkout_byte_size": 29,
+    "git_tracked_at_tested_commit": true,
+    "hash_matched": false
+  },
+  "post_run_frozen_closure_audit": {
+    "method": "Compare every frozen dependency-manifest path/hash pair with the corresponding raw blob in tested source commit 7f0f8d7e27e794c2dfe53be49e996d55ebe53777.",
+    "unique_frozen_closure_paths": 73,
+    "git_tracked_paths": 73,
+    "raw_hash_mismatches": 3,
+    "mismatches": [
+      {
+        "path": "formal/toe_formal/lean-toolchain",
+        "frozen_sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2",
+        "tested_commit_blob_sha256": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+        "frozen_generation_byte_size": 30,
+        "tested_commit_blob_byte_size": 29,
+        "line_endings": "Frozen hash was computed from one CRLF line; the Git blob contains one LF line."
+      },
+      {
+        "path": "formal/toe_formal/lakefile.toml",
+        "frozen_sha256": "cf9606a902083a9e8aa01b9e7466551b1b610456d7853146da8109bab73de18a",
+        "tested_commit_blob_sha256": "8c8348d4bbaaf2f3f2dcc708441d3b19c2e159f984cbd86d19d17490e7d49291",
+        "frozen_generation_byte_size": 672,
+        "tested_commit_blob_byte_size": 656,
+        "line_endings": "Frozen hash was computed from mixed line endings (16 CRLF and 11 LF); the Git blob contains 27 LF lines."
+      },
+      {
+        "path": "formal/toe_formal/lake-manifest.json",
+        "frozen_sha256": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c",
+        "tested_commit_blob_sha256": "19e09b5f13d32af5353532484e6b3040d4cccdd2c8b5961ec5663d7de8b2d36b",
+        "frozen_generation_byte_size": 3224,
+        "tested_commit_blob_byte_size": 3129,
+        "line_endings": "Frozen hash was computed from 95 CRLF lines; the Git blob contains 95 LF lines."
+      }
+    ],
+    "scientific_payload_mismatch_observed": false,
+    "reason_no_scientific_payload_comparison": "The fail-closed custody gate stopped before network isolation and trusted calculation, so no Linux scientific receipt was emitted."
+  },
+  "repair_requirement": {
+    "new_versioned_exact_evidence_lineage_required": true,
+    "minimum_scope": "Make dependency hashing operate on a canonical cross-platform byte representation, generate a new exact evidence packet from a clean Git checkout, and independently review the affected closure and receipts before repeating Linux qualification.",
+    "retroactive_reference_packet_edit_permitted": false
+  },
+  "result_record_hash": "e4a7a5e961b9c60a9e29d4beabb3b5e4984a0456f835ae17dad7a8d265e7a48f",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

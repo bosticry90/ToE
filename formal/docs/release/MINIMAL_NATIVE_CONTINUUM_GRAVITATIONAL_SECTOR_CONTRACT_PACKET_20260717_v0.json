@@ -1,0 +1,303 @@
+{
+  "C_k_firewall": {
+    "action_embedding_allowed": false,
+    "classification": "EXTERNAL_ADMISSIBILITY_AUDIT_ONLY",
+    "historical_v0_modified": false,
+    "multiplier_allowed": false,
+    "quadratic_penalty_allowed": false,
+    "variation_allowed": false
+  },
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/NATIVE_CONTINUUM_ACTION_ABSENCE_SCIENTIFIC_TARGET_SELECTION_20260717_v0.json",
+        "sha256": "86717db3c1a23c8d9562a398db847668d9422fef0261e682038d25e531d9abab"
+      },
+      {
+        "relative_path": "formal/python/tools/native_continuum_action_absence_scientific_target_selection_v0.py",
+        "sha256": "1c91e2aae12390876810d698030d9ec61a3bfbd2eb1fc813e0b27ff52a05421a"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_continuum_action_absence_scientific_target_selection_v0.py",
+        "sha256": "ecc8af33edc2d9e944eeb9c1af5fd43fffd4ffe7ae2795ca97869009f1dd2610"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeContinuumActionAbsenceScientificTargetSelectionV0.lean",
+        "sha256": "95e66c9f1a33ad4c02673af2eaa9355d5afa83aacdb6a7f48847a9b3e967e8a9"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "66ed74e9264c82eaa9715cc0369020f93b7956f9f3aa2f9b8b6abb5141fe2e64"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v3.json",
+        "sha256": "0dbe441d78de6eba0fe006f7b6b280b655a3feae3e1f9d66775eefae9e49a3b1"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/ActionRep32Def.lean",
+        "sha256": "da375e85850deb5d32da8a60c24d2fd7021c95143f8da036973d9575bd398458"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/FirstVariationRep32Def.lean",
+        "sha256": "8c7a6a3f3aa74f240945e3d2ac23a05c6e5fa6fa310977ba9c03db89f456d920"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/QFT/DocumentMasterActionMapping.lean",
+        "sha256": "56ad40bfe0443a27b1c35142c52ae2430958dace2b8e62eef8e4e14e31e54ddf"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+        "sha256": "b2519245872eaed3d874c25836ce355cca9e3bc0f11914e806a74c691f8d14da"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "de305a72dc522fe807c037bbe7980d96e3308d0547645ccb9939d1889720d987"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_NATIVE_CONTINUUM_METRIC_VARIATION_AND_TENSOR_SURFACE_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "4b894a31d1eb9ea29b06f70934913f42a007db31bbf3ac75f2ab8411674d1939"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+        "sha256": "fdadf7cb74401fd1d994841c9dbbbce5f6333e86d967d0aa349ed8987c183e8f"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json",
+        "sha256": "7232643ab971c1f647421c81bb52ef37f0a636262bc172d3fffc73ed1c6a4d54"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+      },
+      {
+        "relative_path": "formal/docs/lanes/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.md",
+        "sha256": "5fc170073b11907bb14c05984d577c9b68e0a8d6ebfcf8c7fedf081a4ef292d8"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/minimal_native_continuum_gravitational_sector_contract_packet_v0.py",
+      "sha256": "6a3a835bf6bd2040ed906518174aef6dc7afa8d26c35b0dfc79f5644ef643cc1"
+    },
+    "historical_master_action_status": "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY",
+    "selection_verdict": "SELECTED_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_PREPARATION",
+    "test": {
+      "relative_path": "formal/python/tests/test_minimal_native_continuum_gravitational_sector_contract_packet_v0.py",
+      "sha256": "f415630d94c13d7c68db5bef92fec73e76457db4032ef3878c1d8201189e449a"
+    }
+  },
+  "boundary_variation_contract": {
+    "boundary_terms_may_be_silently_discarded_elsewhere": false,
+    "claim_scope": "LOCAL_BULK_FIELD_EQUATIONS_ONLY",
+    "finite_boundary_claim_authorized": false,
+    "global_variational_principle_claimed": false,
+    "region": "OPEN_OMEGA_COMPACTLY_CONTAINED_IN_M",
+    "variation_class": "SMOOTH_COMPACTLY_SUPPORTED_METRIC_VARIATIONS"
+  },
+  "candidate_completeness_contract": {
+    "gate_count": 12,
+    "gates": [
+      "one provenance class",
+      "one project principle or explicit postulate record",
+      "one exact metric field and continuum domain",
+      "one complete local gravitational scalar density",
+      "all couplings constants and SI dimensions",
+      "action-level symmetry contract",
+      "compact-support local boundary and variation contract",
+      "one selected matter functional or authorized bounded matter class",
+      "variational stress-energy definition",
+      "external C_k firewall",
+      "explicit nontransport from v0 Rep32 and supplied comparators",
+      "recovery and discriminator obligations"
+    ],
+    "nonstandard_term_required_fields": [
+      "tensorial construction and domain",
+      "selecting principle or postulated reason",
+      "allowed symmetries",
+      "coupling dimensions",
+      "added degrees of freedom and derivative order",
+      "vanishing or decoupling limit",
+      "possible observable discriminator"
+    ],
+    "undefined_correction_fails_before_variation": true
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Prepared contract only. Provenance, metric-only field scope, symmetries, SI dimensions, compact-support local variation, variational matter sourcing, external C_k policy, existing-object nontransport, twelve completeness gates, ten recovery stages, six outcomes, and eight atomic review controls are frozen. No gravitational action, successor master action, variation, stress-energy, tensor field equation, GR recovery, promotion, empirical result, tooling lane, or automation is created.",
+  "control_contract": {
+    "all_single_mutation": true,
+    "control_count": 8,
+    "controls_executed_by_preparation": false,
+    "independent_review_execution_required": true,
+    "rows": [
+      {
+        "control_id": "CTRL_RELABELED_EINSTEIN_HILBERT_NATIVE",
+        "first_diagnostic": "PROVENANCE_CLASSIFICATION_FAILURE",
+        "mutation_count": 1
+      },
+      {
+        "control_id": "CTRL_UNDEFINED_NATIVE_CORRECTION",
+        "first_diagnostic": "CANDIDATE_COMPLETENESS_FAILURE",
+        "mutation_count": 1
+      },
+      {
+        "control_id": "CTRL_CK_EMBEDDED_OR_PENALIZED",
+        "first_diagnostic": "CK_FIREWALL_VIOLATION",
+        "mutation_count": 1
+      },
+      {
+        "control_id": "CTRL_RETAINED_STRESS_INSERTED_NOT_DERIVED",
+        "first_diagnostic": "MATTER_SOURCE_DERIVATION_FAILURE",
+        "mutation_count": 1
+      },
+      {
+        "control_id": "CTRL_REP32_NAME_IMPLIES_CONTINUUM_AUTHORITY",
+        "first_diagnostic": "REP32_CONTINUUM_TRANSPORT_FAILURE",
+        "mutation_count": 1
+      },
+      {
+        "control_id": "CTRL_ONE_SI_DIMENSION_OMITTED",
+        "first_diagnostic": "DIMENSIONAL_CONTRACT_FAILURE",
+        "mutation_count": 1
+      },
+      {
+        "control_id": "CTRL_BOUNDARY_PRESCRIPTION_OMITTED",
+        "first_diagnostic": "BOUNDARY_VARIATION_CONTRACT_FAILURE",
+        "mutation_count": 1
+      },
+      {
+        "control_id": "CTRL_UNSELECTED_TETRAD_SPINOR_IMPORT",
+        "first_diagnostic": "MINIMAL_FIELD_SCOPE_FAILURE",
+        "mutation_count": 1
+      }
+    ]
+  },
+  "dimensional_contract": {
+    "S_over_hbar_dimensionless": true,
+    "action_dimension": "J s",
+    "all_couplings_fields_curvatures_and_new_scales_must_be_typed": true,
+    "automated_SR_restoration_tool_reopened": false,
+    "manual_equation_specific_restoration_required": true,
+    "target_units": "SI",
+    "x0_policy": "x^0=ct"
+  },
+  "existing_object_boundaries": {
+    "DocumentMasterActionMapping": "BOUNDED_MAPPING_NO_GLOBAL_TRANSPORT",
+    "Einstein_scalar_sandbox": "SUPPLIED_PROVISIONAL_COMPARATOR_ONLY",
+    "GR01": "BOUNDED_DISCRETE_NEWTON_POISSON_OBLIGATION_ONLY",
+    "Rep32": "SEPARATE_STRUCTURAL_MODEL_NO_CONTINUUM_TRANSPORT",
+    "authority_flows_automatically": false,
+    "historical_master_action_v0": "SCHEMATIC_SECTOR_INVENTORY_ONLY"
+  },
+  "matter_source_contract": {
+    "S_m_g_chi_is_existing_action": false,
+    "S_m_g_chi_status": "CONTRACT_NOTATION_ONLY",
+    "T_0i_representability_required": true,
+    "covariant_source_conservation_condition_required": true,
+    "inserting_retained_stress_as_input_allowed": false,
+    "matter_field_content_selected_in_current_authority": false,
+    "matter_lagrangian_selected_in_current_authority": false,
+    "required_definition": "T_mu_nu=-(2/sqrt(-g))*delta S_m/delta g^mu_nu",
+    "retained_stress_policies_are_oracles_only": true
+  },
+  "minimal_field_contract": {
+    "coordinate_policy": "x^0=ct",
+    "field_count": 1,
+    "full_Dirac_geometry_selected": false,
+    "generic_matter_symbol": "chi_CONTRACT_NOTATION_ONLY",
+    "gravitational_field": "g_mu_nu",
+    "independent_spin_connection_selected": false,
+    "manifold": "ORIENTABLE_TIME_ORIENTABLE_LORENTZIAN_M",
+    "nonlocal_route_selected": false,
+    "selected_route": "LOCAL_METRIC_THEORY",
+    "signature": "(+,-,-,-)",
+    "spacetime_dimension": 4,
+    "tetrad_selected": false
+  },
+  "outcome_contract": {
+    "allowed_outcomes": [
+      "MINIMAL_NATIVE_GRAVITATIONAL_ACTION_CONTRACT_READY",
+      "SUPPLIED_EINSTEIN_HILBERT_SECTOR_ONLY",
+      "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+      "BLOCKED_MATTER_COUPLING_UNDEFINED",
+      "BLOCKED_DIMENSIONAL_OR_BOUNDARY_CONTRACT",
+      "REQUIREMENTS_NO_GO_ROUTE_RECOMMENDED"
+    ],
+    "exactly_one_required": true,
+    "fail_closed_refinement_count": 2,
+    "outcome_count": 6,
+    "selection_base_outcome_count": 4
+  },
+  "provenance_contract": {
+    "class_count": 3,
+    "classes": [
+      "DERIVED_FROM_PROJECT_PRINCIPLE",
+      "POSTULATED_NATIVE_CANDIDATE",
+      "SUPPLIED_STANDARD_PHYSICS_BASELINE"
+    ],
+    "exactly_one_initial_class_required": true,
+    "formula_identity_determines_provenance": false,
+    "postulated_candidate_must_be_labeled_postulate": true,
+    "project_principle_must_predate_derived_formula": true,
+    "renamed_Einstein_Hilbert_is_native": false
+  },
+  "recovery_contract": {
+    "earlier_failure_blocks_later_stages": true,
+    "executed_stage_count": 0,
+    "stage_count": 10,
+    "stages": [
+      "well-defined continuum action functional",
+      "valid local metric variation",
+      "symmetric tensor field equation",
+      "covariant source conservation",
+      "stationary weak-field 00 equation",
+      "recovery of bounded Newton-Poisson surface",
+      "stationary weak-field 0i equation",
+      "exterior gravitomagnetic field",
+      "Lense-Thirring coefficient",
+      "later radiation and stronger-field tests"
+    ]
+  },
+  "schema_id": "MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0",
+  "scientific_question": "Can one complete project-owned continuum gravitational action contract be specified without rebuilding the ToE or relabeling standard GR as native?",
+  "scope": {
+    "C_k_embedded_or_varied": false,
+    "Einstein_equation_imported_or_derived": false,
+    "GR_pillar_completed": false,
+    "Newton_Poisson_calculation_executed": false,
+    "Rep32_continuum_transport_claimed": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "general_symbolic_tooling_created": false,
+    "gravitational_action_proposed_selected_or_derived": false,
+    "gravitomagnetic_calculation_executed": false,
+    "master_action_promoted": false,
+    "metric_tetrad_spin_or_matter_variation_executed": false,
+    "packet_preparation_only": true,
+    "repository_migration_executed": false,
+    "simulation_executed": false,
+    "stress_energy_derived": false,
+    "successor_master_action_prepared_or_created": false,
+    "tensor_or_weak_field_calculation_executed": false
+  },
+  "selected_next_target": "review_minimal_native_continuum_gravitational_sector_contract_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_MINIMAL_NATIVE_GRAVITATIONAL_CONTRACT_REVIEW_ONLY",
+  "symmetry_contract": {
+    "coordinate_independent_scalar_action_required": true,
+    "diffeomorphism_covariance_required": true,
+    "locality_required_for_bounded_route": true,
+    "notation_alone_proves_symmetry": false,
+    "off_shell_identity_required": true,
+    "parity_even_baseline": true,
+    "symmetry_breaking_requires_new_selection": true,
+    "time_reversal_even_baseline": true
+  },
+  "target": "prepare_minimal_native_continuum_gravitational_sector_contract_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

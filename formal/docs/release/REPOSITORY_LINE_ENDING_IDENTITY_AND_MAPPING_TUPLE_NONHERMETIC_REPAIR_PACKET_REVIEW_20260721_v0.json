@@ -1,0 +1,22 @@
+{
+  "captured_at_utc": "2026-07-21T23:51:28Z",
+  "checks": {
+    "broad_python_repair_excluded": true,
+    "canonical_text_normalization_not_invented": true,
+    "comparability_scope_is_collection_only": true,
+    "lean_bootstrap_and_source_excluded": true,
+    "mapping_writer_is_confined_to_temporary_tree": true,
+    "one_implementation_and_one_review_only": true,
+    "scientific_content_and_execution_forbidden": true,
+    "tracked_source_cleanliness_required": true,
+    "v2_identity_domain_is_frozen_git_blob_sha256": true,
+    "v2_enrollment_and_registry_rotation_forbidden": true
+  },
+  "packet": {
+    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_20260721_v0.json",
+    "sha256": "d07cdda749f3fa8787c0f5a7819826cd89be5caf94f6ccc17cedb586d26d8ebc"
+  },
+  "review_basis": "SEPARATE_SCOPE_IDENTITY_DOMAIN_AND_MUTATION_BOUNDARY_RECOMPUTATION",
+  "schema_id": "REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_PACKET_REVIEW_20260721_v0",
+  "verdict": "ACCEPT"
+}

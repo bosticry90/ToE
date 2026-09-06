@@ -1,0 +1,85 @@
+{
+  "schema_id": "REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_PACKET_20260722_v0",
+  "captured_at_utc": "2026-07-22T02:53:39Z",
+  "target": "execute_bounded_post_prompt_decoupling_baseline_reassessment_v0",
+  "status": "AUTHORIZED_ONE_NONMUTATING_EXACT_INVENTORY_REASSESSMENT",
+  "accepted_lineage": {
+    "prompt_decoupling_commit": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+    "broad_clustering_commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+    "line_ending_repair_commit": "2849adfec947bb76a86debfc4ef0f7311cb91251"
+  },
+  "frozen_inventory": {
+    "external_path": ".toe-recovery/custody-v0/broad-python-first-cause-clustering-v0/post_repair_nonlean_collected_node_ids.txt",
+    "sha256": "9fb439dcb59609622b7151355461b3fccb21600e53d48d5f963db89a5e8df139",
+    "node_id_count": 13756,
+    "execution_policy": "RUN_EXACT_FROZEN_NODE_IDS"
+  },
+  "current_collection_comparison": {
+    "required": true,
+    "scope": "formal/python/tests",
+    "added_removed_common_record_required": true,
+    "newly_collected_tests_not_automatically_added_to_baseline_run": true,
+    "lean_exclusions": [
+      "formal/python/tests/test_lean_build_gate_qft_evol_object_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_qm_full_derivation_scaffold.py",
+      "formal/python/tests/test_lean_build_gate_sr_covariance_object_discharge_stub.py",
+      "formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py",
+      "formal/python/tests/test_lean_fn01_rep32_build_guard.py",
+      "formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py",
+      "formal/python/tests/test_lean_fn01_rep64_build_guard.py",
+      "formal/python/tests/test_lean_variational_core_build_guard.py"
+    ]
+  },
+  "authorized_cycle": {
+    "full_frozen_inventory_runs": 1,
+    "current_collection_comparisons": 1,
+    "result_reviews": 1,
+    "repair_actions": 0,
+    "source_or_test_modifications": 0,
+    "lean_actions": 0,
+    "scientific_actions": 0
+  },
+  "required_measurements": [
+    "exact pass/fail/error/skip totals for the frozen 13,756 IDs",
+    "status of all 195 previously recovered Prompt-family outcomes",
+    "status and first cause of the eleven reclassified outcomes",
+    "exhaustive remaining first-cause clusters",
+    "comparison to the prior 715 nonpassing outcomes",
+    "tracked and unexpected-untracked status after validation",
+    "smallest next high-leverage maintenance family"
+  ],
+  "first_cause_classifications": [
+    "PRIMARY_COMMITTED_DEFECT",
+    "SECONDARY_CASCADE",
+    "STALE_AUTHORITY_EXPECTATION",
+    "STALE_ARTIFACT_EXPECTATION",
+    "ENVIRONMENT_IDENTITY_DEFECT",
+    "PACKET_CONTRACT_DRIFT",
+    "ORDER_DEPENDENT_FAILURE",
+    "UNRESOLVED"
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery",
+    "preflight_rule": "ALL_OUTPUT_PATHS_MUST_RESOLVE_UNDER_AUTHORIZED_RECOVERY_ROOT",
+    "canonical_main_worktree": "WRITE_PROHIBITED",
+    "reject_before_write": true
+  },
+  "validation_guard": "formal.python.tools.validation_source_cleanliness --require-clean-start",
+  "prohibited_actions": [
+    "repairing any failure",
+    "modifying tests or source after authorization",
+    "V2 enrollment",
+    "registry rotation",
+    "first-unit selector execution",
+    "integration into dirty main",
+    "Lean bootstrap work",
+    "scalar-Yukawa work",
+    "Maxwell-Dirac work",
+    "scientific calculation",
+    "automatic successor cycle"
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

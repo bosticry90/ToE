@@ -1,0 +1,19 @@
+{
+  "schema_id": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_SELECTION_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:46:15Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR",
+    "PRESERVE_EQUATION_COMPENDIUM_IDENTITY_ADJUDICATION_AND_DEFER_REPAIR"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR",
+  "target": "implement_repository_equation_compendium_git_blob_identity_contract_repair_v0_once",
+  "selection_basis": "The accepted adjudication proves that all 50 outcomes share one current raw-checkout-byte identity defect, preserves the historical mixed-EOL pin, and establishes one frozen Git blob as the portable current identity.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "b48e48ef0d1a0ff8f9b40902fa95cc1f52cbbc3dd2a0f97bf8f17b6265816591",
+    "commit": "b283f4a156d2820b12da167b0a06e09fe2829b0b"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

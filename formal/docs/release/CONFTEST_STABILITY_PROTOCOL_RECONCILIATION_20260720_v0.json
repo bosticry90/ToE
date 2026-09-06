@@ -1,0 +1,19 @@
+{
+  "approved_implementation": {
+    "approval_record": "formal/docs/release/LEGACY_DISCOVERY_REPORT_FIXTURE_CLEAN_CHECKOUT_REPRODUCIBILITY_REPAIR_20260711_v1.json",
+    "committed_size_bytes": 4763,
+    "normalized_lf_sha256": "1decbc64e31851e1db5c70ff3a4a4d6b8ca2358361476b6b9820f55520d16ef9",
+    "path": "formal/python/tests/conftest.py",
+    "source_repair_commit": "205f19ce0f502c1bb19c5f3d116dcf18506e7b92"
+  },
+  "boundary": {
+    "conftest_implementation_changed": false,
+    "fixture_logic_changed": false,
+    "pin_updated_without_review": false,
+    "scientific_authority_changed": false
+  },
+  "previous_protocol_pin": "29eeb4ac14de42cd71fa94686297010ea32808083ce8c98d6e71015ad12bee8c",
+  "reconciliation": "RESTORE_PROTOCOL_PIN_TO_PREVIOUSLY_APPROVED_IMPLEMENTATION",
+  "schema_id": "CONFTEST_STABILITY_PROTOCOL_RECONCILIATION_20260720_v0",
+  "status": "ACCEPTED_MAINTENANCE_RECONCILIATION"
+}

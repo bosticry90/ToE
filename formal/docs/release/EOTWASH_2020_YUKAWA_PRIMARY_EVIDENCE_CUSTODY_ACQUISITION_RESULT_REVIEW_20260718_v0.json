@@ -1,0 +1,476 @@
+{
+  "accepted_bounded_claim": {
+    "contact_required": true,
+    "evidence_components": "0_OF_6_COMPLETE_6_OF_6_PARTIAL",
+    "evidence_nonexistence_claim": false,
+    "experiment_irreproducibility_claim": false,
+    "experiment_suitability": "RETAINED_FROM_ACCEPTED_PACKET_REVIEW",
+    "forward_model": "NOT_EXECUTABLE",
+    "noncontact_acquisition": "COMPLETED_ONCE",
+    "primary_supplement": "IDENTIFIED_NOT_ACQUIRED_ACCESS_CONTROLLED",
+    "retrieval_attempts": "7_OF_8",
+    "scalar_allowance_or_exclusion_claim": false,
+    "source_tiers_exhausted": "5_OF_5_NONCONTACT_TIERS",
+    "statistical_inference": "NOT_EXECUTABLE",
+    "supporting_dissertation": "VERIFIED_VALUABLE_SUPPORTING_METHODS_AND_95_BY_3_TABLE"
+  },
+  "authority": {
+    "consumed_execution_verdict": "PRIMARY_EVIDENCE_ACQUISITION_PARTIAL_CONTACT_REQUIRED_PENDING_INDEPENDENT_REVIEW",
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_20260718_v0.md",
+        "sha256": "35ef1e03baa0f84df82d1b8a2e425a2295c1b9558984ef6dcaa8c99e930d5847"
+      },
+      {
+        "relative_path": "formal/docs/release/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_20260718_v0.json",
+        "sha256": "d0a457ba010f7e9a956a529da436b033fcbb546069b5f484e8c923e5a52d6679"
+      },
+      {
+        "relative_path": "formal/python/tools/eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0.py",
+        "sha256": "19180c21a40087ac56ae0ad98cef2ca289ee9e8e12c5c2b1e35b1dfeb6a31f02"
+      },
+      {
+        "relative_path": "formal/python/tests/test_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0.py",
+        "sha256": "ee2e4b38404655a165a5b7efeb742817e6a87de753111f085fc0c670936bee87"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/Eotwash2020YukawaPrimaryEvidenceCustodyAcquisitionV0.lean",
+        "sha256": "3eceb7ee6dd5ea5e7fde0dc2bf949560f9b073f7b0a7e9a6ee2e5f83015ac5ca"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/eotwash_2020_yukawa_primary_evidence_custody_acquisition_result_review_v0.py",
+      "sha256": "b378485186825bd06c341c80e4c1b97f8801e8c5cc17df00cf881b6eda3e7866"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_RESULT_REVIEW_20260718_v0.md",
+      "sha256": "c036e4a3d30ae6c7016711d8a7bc099ac44b60e78c0e3f4a84f0886b6e54dd45"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/Eotwash2020YukawaPrimaryEvidenceCustodyAcquisitionResultReviewV0.lean",
+      "sha256": "5f095aa8027f00eb95f23c0140d70e53ba4ca8423a87ed273f57e58a336a3b84"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_eotwash_2020_yukawa_primary_evidence_custody_acquisition_result_review_v0.py",
+      "sha256": "1896e9a606fb52a97ee0535ea1110a96a192d75035a4ec085b775c2dd5b1f0ca"
+    },
+    "verified_raw_custody_objects": [
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_01_aps_official_supplement/error_response.html",
+        "sha256": "b15dec15f1c4ee65b6089d7497906df46ed140883aa1fefa3547390f5b696bba",
+        "size_bytes": 5532
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_01_aps_official_supplement/response_headers.txt",
+        "sha256": "371cd576e9979fe8fc1b584ba07c7f671ccf6deb04975150690ee852cab1dc25",
+        "size_bytes": 2213
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_02_aps_official_manual_browser/attempt_record.json",
+        "sha256": "5337ec6cbce9b1a7942eee967301260d3de49681dd5a4529305e05ccb795b9ce",
+        "size_bytes": 1077
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_03_arxiv_source_archive/arXiv-2002.11761v1.tar.gz",
+        "sha256": "114bac164ab553858a310a569b5a165cc3a97b03285dc880288c5ecbf3284952",
+        "size_bytes": 530474
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_03_arxiv_source_archive/response_headers.txt",
+        "sha256": "641f173aa4cbb54745b63383ab1d48b3e84cb33444b8921fcf7161f07d38711d",
+        "size_bytes": 1165
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_04_eotwash_official_archive_index/eotwash_homepage.html",
+        "sha256": "172596b169fd2ab62fea48bd3e10650f1b7453a6911172abc62caa3537bbf4aa",
+        "size_bytes": 26691
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_04_eotwash_official_archive_index/response_headers.txt",
+        "sha256": "7dba4a8938c14f8dd772ef2fbe82f86a5942e75c7721ba66f3f15a30073acae7",
+        "size_bytes": 498
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_05_uw_researchworks_item/researchworks_item.html",
+        "sha256": "521bdbac4ed0959805200a2c269c3671592b01d78160d58dbb1874cc88855af1",
+        "size_bytes": 451122
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_05_uw_researchworks_item/response_headers.txt",
+        "sha256": "7b64407c96f702d0f2ab1f21f5f381677fb09c68f17324f45364a2ea6ea45224",
+        "size_bytes": 1131
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_06_uw_dissertation_bitstream/A_Fourier-Bessel_Test_of_the_Gravitational_Inverse-Square_Law.pdf",
+        "sha256": "00d13a466e4f8c14c3f6067d49d90fd0c49a89e72a8cf93f3a79c18d6aef924a",
+        "size_bytes": 17382930
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_06_uw_dissertation_bitstream/response_headers.txt",
+        "sha256": "864d367087c3f80069c413c0ae7da611d7df4d0a2333060339721cb89a377279",
+        "size_bytes": 2047
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_07_aps_chorus_accepted_manuscript/error_response.html",
+        "sha256": "df1065eb3c6f41a6a09a401cc96e241f4b52c76931d8cdec2fe561cda185c1bf",
+        "size_bytes": 5520
+      },
+      {
+        "relative_path": "formal/data/eotwash_2020_primary_evidence_acquisition_v0/attempt_07_aps_chorus_accepted_manuscript/response_headers.txt",
+        "sha256": "55973a87b60b64bece924dfcd14e1d2094d4933271b78caacafcec15c0a6b572",
+        "size_bytes": 2213
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "current_posture": {
+    "acquisition_execution": "COMPLETED_ONCE",
+    "acquisition_result_review": "ACCEPTED_21_OF_21_GATES",
+    "alpha": "NOT_SELECTED",
+    "empirical_target": "2020_EOT_WASH",
+    "evidence_components_complete": "0_OF_6",
+    "likelihood": "NOT_EXECUTABLE",
+    "native_relevance": "UNESTABLISHED",
+    "next_authority": "select_post_eotwash_2020_yukawa_primary_evidence_custody_acquisition_scientific_response_v0",
+    "numerical_scalar_range_bound": "NONE",
+    "principal_result": "AUTHORS_OR_CUSTODIAN_CONTACT_REQUIRED",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_only_comparison": "BOUNDEDLY_VIABLE"
+  },
+  "independent_reproduction": {
+    "aps_supplement": {
+      "authentication_used": false,
+      "browser_subscription_required": true,
+      "chorus_get_status_403": true,
+      "content_acquired": false,
+      "contents_inferred": false,
+      "download_after_notice": false,
+      "identified": true,
+      "official_source_confirmed": true,
+      "ordinary_get_challenge": true,
+      "ordinary_get_status_403": true,
+      "passed": true
+    },
+    "arxiv_archive": {
+      "article_cites_external_supplement": true,
+      "article_reports_95_by_3": true,
+      "member_count": 11,
+      "member_names": [
+        "capAF.pdf",
+        "capPF.pdf",
+        "FB_ISL_pdf.tex",
+        "fig1.pdf",
+        "fig2a.pdf",
+        "fig2b.pdf",
+        "fig5a.pdf",
+        "fig5b1.pdf",
+        "magsysZB.pdf",
+        "magsysZs.pdf",
+        "xyCenter.pdf"
+      ],
+      "passed": true,
+      "supplement_member_present": false,
+      "tex_member_present": true
+    },
+    "component_review": {
+      "complete_count": 0,
+      "forward_model_status": "NOT_EXECUTABLE",
+      "item_count": 6,
+      "passed": true,
+      "rows": [
+        {
+          "complete": false,
+          "execution_status": "VERIFIED_SUPPORTING_EXACT_TABLE_NOT_COMPLETE_AS_PRIMARY",
+          "item_id": "OBSERVATION_TORQUE_VECTOR",
+          "missing": "authorized primary supplement custody and complete primary row/configuration contract",
+          "present": "95 run identifiers, separation, N120, N18, N54, units, and pointwise errors in dissertation Appendix A",
+          "review_status": "INCOMPLETE_REPRODUCED"
+        },
+        {
+          "complete": false,
+          "execution_status": "VERIFIED_SUPPORTING_PARTIAL",
+          "item_id": "DISPLACEMENT_AND_CONFIGURATION_METADATA",
+          "missing": "per-run x and y, detector/attractor configuration identifiers, full alignment/phase metadata, exact primary ordering and cuts",
+          "present": "run identifier and scalar separation s with uncertainty",
+          "review_status": "INCOMPLETE_REPRODUCED"
+        },
+        {
+          "complete": false,
+          "execution_status": "VERIFIED_SUPPORTING_PARTIAL",
+          "item_id": "UNCERTAINTY_AND_COVARIANCE_MODEL",
+          "missing": "primary correlated-systematic contract, block/covariance declaration, conditioning rules, and exact likelihood ordering",
+          "present": "pointwise torque and separation errors plus printed chi-square denominator",
+          "review_status": "INCOMPLETE_REPRODUCED"
+        },
+        {
+          "complete": false,
+          "execution_status": "VERIFIED_SUPPORTING_PARTIAL",
+          "item_id": "FIVE_NUISANCE_PRIOR_CONTRACTS",
+          "missing": "primary declared cross-covariance/independence, bounds, and executable entry points into the exact forward model",
+          "present": "x0, y0, s0, overcut epsilon, and gamma identities, central values, widths, Gaussian penalties, and profiling description",
+          "review_status": "INCOMPLETE_REPRODUCED"
+        },
+        {
+          "complete": false,
+          "execution_status": "VERIFIED_SUPPORTING_METHODS_ONLY",
+          "item_id": "EXTENDED_SOURCE_TORQUE_FORWARD_MODEL",
+          "missing": "torque tables or executable code, exact density geometry inputs, all correction tables, and 95-setting prediction path",
+          "present": "Fourier-Bessel analytic framework, geometry descriptions, corrections, calibration discussion, and model equation",
+          "review_status": "INCOMPLETE_REPRODUCED"
+        },
+        {
+          "complete": false,
+          "execution_status": "VERIFIED_SUPPORTING_PUBLISHED_RULE_ONLY",
+          "item_id": "BOUNDARY_COVERAGE_PROCEDURE",
+          "missing": "lambda-to-zero boundary calibration, pseudoexperiment/critical-value procedure, interpolation and reproducibility policy",
+          "present": "printed Delta-chi-square threshold and Gaussian integral construction used for published limits",
+          "review_status": "INCOMPLETE_REPRODUCED"
+        }
+      ],
+      "statistical_status": "NOT_EXECUTABLE",
+      "verified_partial_count": 6
+    },
+    "dissertation_visual_and_text_review": {
+      "appendix_pdf_pages_inspected": [
+        158,
+        159,
+        160,
+        161,
+        162
+      ],
+      "appendix_printed_page_range": "146-150",
+      "five_profiled_nuisances": [
+        "x0",
+        "y0",
+        "s0",
+        "epsilon",
+        "gamma"
+      ],
+      "methods_pdf_pages_inspected": [
+        144,
+        145
+      ],
+      "passed": true,
+      "pdf_page_count": 169,
+      "pointwise_errors_printed": true,
+      "primary_release_package": false,
+      "published_limit_rule_present": true,
+      "supporting_institutional_methods_evidence": true,
+      "torque_harmonic_columns": [
+        "N120",
+        "N18",
+        "N54"
+      ],
+      "unique_science_run_rows": 95
+    },
+    "institutional_sources": {
+      "eotwash_page_links_arxiv": true,
+      "eotwash_page_mentions_supplement": false,
+      "passed": true,
+      "researchworks_bitstream_id_present": true,
+      "researchworks_cc_by_present": true,
+      "researchworks_title_present": true
+    },
+    "retrieval_limits": {
+      "attempt_cap": 8,
+      "attempt_count": 7,
+      "attempt_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "authenticated_mirrors": 0,
+      "contact_executed": false,
+      "manual_sessions": 1,
+      "maximum_same_url_count": 2,
+      "passed": true,
+      "remaining_attempts": 1
+    },
+    "source_order_and_exhaustion": {
+      "distinct_authorized_eighth_source_identified": false,
+      "first_two_attempts_are_official_supplement": true,
+      "independent_provenance_search_queries": [
+        "DOI plus supplemental data code",
+        "exact article title plus dataset",
+        "official Eot-Wash domain plus arXiv identifier and data",
+        "Zenodo Dryad or HEPData plus DOI"
+      ],
+      "independent_search_finding": "official article/CHORUS, arXiv, Eot-Wash, ResearchWorks, and secondary index records only; no distinct authenticated data package",
+      "late_check_classification": "NONMATERIAL_SAME_PUBLISHER_PRIMARY_SURFACE_CROSSCHECK; official article surface was already inspected in attempt 2",
+      "late_tier_two_chorus_check_disclosed": true,
+      "official_article_surface_reached_before_lower_tiers": true,
+      "passed": true,
+      "tier_count": 5,
+      "tier_five_authenticated_mirror_identified": false,
+      "tier_statuses": [
+        "EXHAUSTED_TWO_ATTEMPTS_ACCESS_LIMITED",
+        "EXHAUSTED",
+        "EXHAUSTED",
+        "EXHAUSTED_SUPPORTING_ONLY",
+        "NO_CONCRETE_AUTHENTICATED_MIRROR_IDENTIFIED"
+      ],
+      "tiers_exhausted": 5
+    }
+  },
+  "post_custody_source_checks": [
+    {
+      "role": "OFFICIAL_ARTICLE_AND_SUPPLEMENT_ACCESS_SURFACE",
+      "source": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.124.101101#supplemental"
+    },
+    {
+      "role": "PUBLIC_AUTHOR_SUBMITTED_ARTICLE_RECORD",
+      "source": "https://arxiv.org/abs/2002.11761"
+    },
+    {
+      "role": "OFFICIAL_GROUP_PUBLICATION_INDEX",
+      "source": "https://www.npl.washington.edu/eotwash/"
+    },
+    {
+      "role": "INSTITUTIONAL_DISSERTATION_RECORD",
+      "source": "https://digital.lib.washington.edu/researchworks/items/971237d1-100a-41ae-9027-d1bbce8cf315/full"
+    }
+  ],
+  "principal_review_outcome": "AUTHORS_OR_CUSTODIAN_CONTACT_REQUIRED",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 21,
+    "pass_count": 21,
+    "rows": [
+      {
+        "finding": "Five execution artifacts and all thirteen raw custody objects reproduce their frozen hashes and sizes.",
+        "gate_id": "G1_EXECUTION_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "Exactly one authorized acquisition was consumed.",
+        "gate_id": "G2_EXACT_AUTHORIZED_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "Attempts are numbered 1 through 7 and remain below the cap of eight.",
+        "gate_id": "G3_ATTEMPT_CAP_AND_NUMBERING",
+        "status": "PASS"
+      },
+      {
+        "finding": "No concrete URL was attempted more than twice.",
+        "gate_id": "G4_PER_URL_ATTEMPT_LIMIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "One manual session, zero authenticated mirrors, and zero contacts were used.",
+        "gate_id": "G5_MANUAL_MIRROR_AND_CONTACT_LIMITS",
+        "status": "PASS"
+      },
+      {
+        "finding": "The official supplement and article surface were inspected first; the late CHORUS request is a disclosed same-publisher cross-check, not an authority expansion.",
+        "gate_id": "G6_SOURCE_PRIORITY_MATERIAL_COMPLIANCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "All five authorized non-contact source classes have terminal findings.",
+        "gate_id": "G7_FIVE_NONCONTACT_TIERS_EXHAUSTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The cap was a maximum; no distinct authenticated eighth target was identified.",
+        "gate_id": "G8_UNUSED_ATTEMPT_RESTRAINT",
+        "status": "PASS"
+      },
+      {
+        "finding": "The APS supplement is identified at an official access-controlled surface but was neither acquired nor inferred.",
+        "gate_id": "G9_APS_SUPPLEMENT_EXACT_STATUS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Both retained APS HTTP responses independently show 403 access challenges.",
+        "gate_id": "G10_ACCESS_FAILURE_RECORDS",
+        "status": "PASS"
+      },
+      {
+        "finding": "The arXiv archive contains article TeX and ten figures; it cites but does not contain the supplement.",
+        "gate_id": "G11_ARXIV_ARCHIVE_CONTENTS",
+        "status": "PASS"
+      },
+      {
+        "finding": "The captured official group page points to arXiv and exposes no supplement link.",
+        "gate_id": "G12_OFFICIAL_GROUP_INDEX",
+        "status": "PASS"
+      },
+      {
+        "finding": "The institutional record, public bitstream identifier, title, and CC BY marker reproduce.",
+        "gate_id": "G13_RESEARCHWORKS_PROVENANCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Direct visual/text review reproduces 95 science rows, three torque harmonics, pointwise errors, and the five profiled nuisances.",
+        "gate_id": "G14_DISSERTATION_TABLES_AND_METHODS",
+        "status": "PASS"
+      },
+      {
+        "finding": "The dissertation is valuable supporting institutional evidence, not the primary 2020 release package.",
+        "gate_id": "G15_DISSERTATION_SCOPE_FIREWALL",
+        "status": "PASS"
+      },
+      {
+        "finding": "The printed torque table is exact supporting evidence, but primary row/configuration metadata remain incomplete.",
+        "gate_id": "G16_OBSERVATION_AND_CONFIGURATION_INCOMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Pointwise errors and nuisance summaries do not supply the primary covariance and executable nuisance contracts.",
+        "gate_id": "G17_COVARIANCE_AND_NUISANCE_INCOMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Methods do not supply executable 95-setting Newtonian/Yukawa torque and calibration machinery.",
+        "gate_id": "G18_FORWARD_MODEL_AND_BASELINE_INCOMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The published rule is not a reproducible boundary-calibrated coverage procedure.",
+        "gate_id": "G19_BOUNDARY_COVERAGE_INCOMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "No access bypass, contact, reconstruction, inference, bound, parameter selection, or theory adoption occurred.",
+        "gate_id": "G20_NO_UNAUTHORIZED_INFERENCE_OR_ADOPTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "Zero of six components are complete; contact is required and authority rotates only to response selection.",
+        "gate_id": "G21_PRINCIPAL_RESULT_AND_STOP",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_RESULT_REVIEW_20260718_v0",
+  "scope": {
+    "alpha_selected": false,
+    "alternative_experiment_selected": false,
+    "author_or_custodian_contact_authorized": false,
+    "author_or_custodian_contact_executed": false,
+    "author_or_custodian_contact_prepared": false,
+    "bounded_acquisition_result_accepted": true,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "independent_result_review_executed": true,
+    "lambda0_selected": false,
+    "likelihood_executed": false,
+    "likelihood_preparation_authorized": false,
+    "native_gravitational_principle_identified": false,
+    "numerical_bound_computed": false,
+    "published_constraint_reinterpretation_authorized": false,
+    "scalar_branch_adopted": false,
+    "scientific_response_selection_authorized": true,
+    "scientific_response_selection_executed": false,
+    "synthetic_forecast_authorized": false
+  },
+  "selected_next_target": "select_post_eotwash_2020_yukawa_primary_evidence_custody_acquisition_scientific_response_v0",
+  "selected_next_target_kind": "SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_CONTACT_OR_EMPIRICAL_ANALYSIS",
+  "target": "review_eotwash_2020_yukawa_primary_evidence_custody_acquisition_v0_result",
+  "verdict": "ACCEPTED_BOUNDED_PRIMARY_EVIDENCE_ACQUISITION_RESULT"
+}

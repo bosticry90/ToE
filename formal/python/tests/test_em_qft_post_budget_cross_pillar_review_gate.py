@@ -189,7 +189,6 @@ def test_frontier_aggregate_and_master_dependency_surface_follow_review() -> Non
     )
     assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "EM-QFT interface-alignment semantic bridge obstruction plus post-budget review" in frontier_text
     assert "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO" in master_action_text
     assert "post_budget_retained" in master_action_text

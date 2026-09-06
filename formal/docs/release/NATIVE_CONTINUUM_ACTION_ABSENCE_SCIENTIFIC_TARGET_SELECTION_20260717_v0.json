@@ -1,0 +1,392 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_REVIEW_20260717_v0.md",
+        "sha256": "bc7bae0bf6b1d4e5167968e7d2d3687d02d754a4d309921fb44c4032e9d1ccd1"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "66ed74e9264c82eaa9715cc0369020f93b7956f9f3aa2f9b8b6abb5141fe2e64"
+      },
+      {
+        "relative_path": "formal/python/tools/toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_review_v0.py",
+        "sha256": "c7e4165c246cd12ca2e0ad5df27c2669dda10aa926d68f9a56b78fa636606782"
+      },
+      {
+        "relative_path": "formal/python/tests/test_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_review_v0.py",
+        "sha256": "e3725dbbb2815d199c293211d628ca6dd739056d999d768127e64db1702734a4"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ToeCandidateMasterActionCKFirewallAuthorityReconciliationPacketReviewV0.lean",
+        "sha256": "7f26ff35764241ab0f16155dc55fd1eea4af3d4be3a31947df063efdcc6941a0"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SR_TOOLING_FULL_TOE_SCIENTIFIC_PRIORITY_SELECTION_20260717_v0.json",
+        "sha256": "ca9d4f032f7d9bd0ce2fef104e6c7d6d1718582ad5f2266ea4a8c3fbd4220179"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "de305a72dc522fe807c037bbe7980d96e3308d0547645ccb9939d1889720d987"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_NATIVE_CONTINUUM_METRIC_VARIATION_AND_TENSOR_SURFACE_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "4b894a31d1eb9ea29b06f70934913f42a007db31bbf3ac75f2ab8411674d1939"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+        "sha256": "b2519245872eaed3d874c25836ce355cca9e3bc0f11914e806a74c691f8d14da"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/native_continuum_action_absence_scientific_target_selection_v0.py",
+      "sha256": "1c91e2aae12390876810d698030d9ec61a3bfbd2eb1fc813e0b27ff52a05421a"
+    },
+    "native_executable_continuum_action": "NOT_YET_DEFINED",
+    "terminal_master_action_status": "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY",
+    "test": {
+      "relative_path": "formal/python/tests/test_native_continuum_action_absence_scientific_target_selection_v0.py",
+      "sha256": "ecc8af33edc2d9e944eeb9c1af5fd43fffd4ffe7ae2795ca97869009f1dd2610"
+    }
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Fresh scientific target selection only. It selects preparation of a bounded minimal native continuum gravitational-sector action-contract packet. It defines no action, creates no successor master theory, executes no variation, derives no tensor equation, imports no Einstein equation, reopens no gravitomagnetic calculation, and creates no promotion, empirical result, migration, or automation.",
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "kind": "BOUNDED_NATIVE_GRAVITATIONAL_ACTION_CONTRACT_EXISTENCE_OR_BLOCK",
+        "scientific_endpoint": "Determine whether one complete native continuum gravitational-sector action contract can be defined with explicit variables, symmetries, units, boundary treatment, and matter coupling, or return an exact native-principle or matter-coupling block.",
+        "scores": {
+          "avoids_omnibus_master_action": 5,
+          "bounded_endpoint_precision": 5,
+          "claim_state_change_potential": 5,
+          "direct_missing_core_attack": 5,
+          "downstream_gr_unlock_value": 5,
+          "infrastructure_avoidance": 4,
+          "pass_fail_scientific_value": 5,
+          "uses_retained_authority_without_import": 4
+        },
+        "target": "prepare_minimal_native_continuum_gravitational_sector_contract_packet_v0",
+        "weighted_score": 96
+      },
+      {
+        "candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "kind": "FUTURE_ACTION_REQUIREMENTS_THEOREM_OR_COUNTERMODEL",
+        "scientific_endpoint": "Derive a minimum requirements or no-go surface for future native actions from retained sector results, symmetry obligations, external C_k policy, known limits, and unsupported-degree-of-freedom exclusions.",
+        "scores": {
+          "avoids_omnibus_master_action": 5,
+          "bounded_endpoint_precision": 5,
+          "claim_state_change_potential": 4,
+          "direct_missing_core_attack": 4,
+          "downstream_gr_unlock_value": 3,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 5,
+          "uses_retained_authority_without_import": 5
+        },
+        "target": "prepare_native_dynamical_core_requirements_and_no_go_packet_v0",
+        "weighted_score": 90
+      },
+      {
+        "candidate_id": "CONTINUUM_GAUGE_MATTER_EXCHANGE_SECTOR_FIRST",
+        "kind": "NON_GR_SECTOR_FIRST_PHYSICS_OBLIGATION",
+        "scientific_endpoint": "Advance one independently defined gauge-matter source and exchange sector while retaining the absence of a native continuum master action.",
+        "scores": {
+          "avoids_omnibus_master_action": 5,
+          "bounded_endpoint_precision": 4,
+          "claim_state_change_potential": 4,
+          "direct_missing_core_attack": 2,
+          "downstream_gr_unlock_value": 1,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 5,
+          "uses_retained_authority_without_import": 4
+        },
+        "target": "prepare_continuum_gauge_matter_exchange_sector_packet_v0",
+        "weighted_score": 75
+      },
+      {
+        "candidate_id": "SUPPLIED_STANDARD_GR_VARIATIONAL_COMPARATOR",
+        "kind": "SUPPLIED_STANDARD_GR_COMPARATOR_ONLY",
+        "scientific_endpoint": "Supply the Einstein-Hilbert sector explicitly and reproduce its variation and downstream weak-field structure as a comparator with no native claim.",
+        "scores": {
+          "avoids_omnibus_master_action": 5,
+          "bounded_endpoint_precision": 5,
+          "claim_state_change_potential": 2,
+          "direct_missing_core_attack": 1,
+          "downstream_gr_unlock_value": 2,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 4,
+          "uses_retained_authority_without_import": 5
+        },
+        "target": "prepare_supplied_standard_gr_variational_comparator_packet_v0",
+        "weighted_score": 70
+      }
+    ],
+    "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+    "runner_up_score": 90,
+    "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+    "selected_score": 96
+  },
+  "retained_boundaries": {
+    "C_k": "EXTERNAL_ADMISSIBILITY_AUDIT_ONLY",
+    "Rep32": "SEPARATE_STRUCTURAL_MODEL_WITHOUT_CONTINUUM_AUTHORITY",
+    "bounded_discrete_Newton_Poisson_route": "RETAINED",
+    "gravitomagnetic_recovery": "BLOCKED_UPSTREAM",
+    "historical_master_action_v0": "SCHEMATIC_ORGANIZING_SURFACE",
+    "native_tensor_field_equation": "NOT_DERIVED",
+    "standard_GR_sandbox": "SUPPLIED_COMPARATOR_ONLY",
+    "successor_master_action": "NOT_AUTHORIZED_OR_CREATED"
+  },
+  "schema_id": "NATIVE_CONTINUUM_ACTION_ABSENCE_SCIENTIFIC_TARGET_SELECTION_20260717_v0",
+  "scope": {
+    "C_k_embedded_or_varied": false,
+    "Einstein_equation_imported": false,
+    "GR_pillar_completed": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "gravitomagnetic_route_reopened": false,
+    "master_action_promoted": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_action_defined": false,
+    "packet_preparation_authorized": true,
+    "packet_prepared_now": false,
+    "repository_migration_executed": false,
+    "scientific_target_selection_executed": true,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "successor_master_action_prepared_or_created": false,
+    "tensor_field_equation_derived": false
+  },
+  "selected_next_target": "prepare_minimal_native_continuum_gravitational_sector_contract_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_MINIMAL_NATIVE_GRAVITATIONAL_ACTION_CONTRACT",
+  "selected_scientific_obligation": {
+    "allowed_outcomes": [
+      "MINIMAL_NATIVE_GRAVITATIONAL_ACTION_CONTRACT_READY",
+      "SUPPLIED_EINSTEIN_HILBERT_SECTOR_ONLY",
+      "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+      "BLOCKED_MATTER_COUPLING_UNDEFINED"
+    ],
+    "obligation_class": "MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_ACTION_CONTRACT_EXISTENCE_OR_BLOCK",
+    "packet_must_freeze": [
+      "one exact proposed native gravitational principle and authority class",
+      "continuum spacetime domain, dimension, orientation, and retained signature",
+      "one independent gravitational variable: metric or tetrad",
+      "diffeomorphism and, if tetrad-based, local Lorentz symmetry contract",
+      "complete gravitational action density with constants and dimensions",
+      "boundary term and admissible variation contract",
+      "minimal matter coupling and variational stress-energy definition",
+      "C_k firewall: external admissibility and audit only",
+      "Rep32 relationship classified without inherited continuum authority",
+      "required Newton-Poisson and future tensor weak-field recovery obligations"
+    ],
+    "pillar": "GR",
+    "question": "Can the project define one complete native continuum gravitational action, with declared variables, symmetries, dimensions, boundary treatment, and matter coupling, from which a tensor field equation could later be derived without importing standard GR as the answer?",
+    "stopping_rule": "Prepare one bounded gravitational-sector action-contract packet and stop for independent review. Do not define a successor master action, perform variation, import the Einstein equation, resume frame-dragging, or build general symbolic infrastructure."
+  },
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_scale": "0..5",
+    "maximum_weighted_score": 100,
+    "weights": {
+      "avoids_omnibus_master_action": 2,
+      "bounded_endpoint_precision": 3,
+      "claim_state_change_potential": 3,
+      "direct_missing_core_attack": 3,
+      "downstream_gr_unlock_value": 2,
+      "infrastructure_avoidance": 2,
+      "pass_fail_scientific_value": 3,
+      "uses_retained_authority_without_import": 2
+    }
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 2,
+    "rows": [
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 78,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 81,
+        "variant": "omit_direct_missing_core_attack"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 75,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 81,
+        "variant": "omit_bounded_endpoint_precision"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 75,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 81,
+        "variant": "omit_pass_fail_scientific_value"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 78,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 81,
+        "variant": "omit_claim_state_change_potential"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 80,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 88,
+        "variant": "omit_uses_retained_authority_without_import"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 80,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 86,
+        "variant": "omit_avoids_omnibus_master_action"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 84,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 86,
+        "variant": "omit_downstream_gr_unlock_value"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 80,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 88,
+        "variant": "omit_infrastructure_avoidance"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 86,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 91,
+        "variant": "direct_missing_core_attack_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 94,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 101,
+        "variant": "direct_missing_core_attack_+1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 85,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 91,
+        "variant": "bounded_endpoint_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 95,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 101,
+        "variant": "bounded_endpoint_precision_+1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 85,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 91,
+        "variant": "pass_fail_scientific_value_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 95,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 101,
+        "variant": "pass_fail_scientific_value_+1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 86,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 91,
+        "variant": "claim_state_change_potential_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 94,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 101,
+        "variant": "claim_state_change_potential_+1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 85,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 92,
+        "variant": "uses_retained_authority_without_import_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 95,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 100,
+        "variant": "uses_retained_authority_without_import_+1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 85,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 91,
+        "variant": "avoids_omnibus_master_action_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 95,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 101,
+        "variant": "avoids_omnibus_master_action_+1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 87,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 91,
+        "variant": "downstream_gr_unlock_value_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 93,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 101,
+        "variant": "downstream_gr_unlock_value_+1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 85,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 92,
+        "variant": "infrastructure_avoidance_-1"
+      },
+      {
+        "runner_up_candidate_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO",
+        "runner_up_score": 95,
+        "selected_candidate_id": "DEFINE_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR",
+        "selected_score": 100,
+        "variant": "infrastructure_avoidance_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_next_scientific_target_with_native_continuum_action_not_defined",
+  "verdict": "SELECTED_MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_PREPARATION"
+}

@@ -1,0 +1,111 @@
+{
+  "artifact_id": "TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN_AUTHORITY_20260729_v0",
+  "authorized_action": "CREATE_STAGE_1_ATTEMPT_OPEN_EVENT_ONLY",
+  "authorized_inputs": [
+    {
+      "artifact_id": "frontier_selection",
+      "path": "formal/output/CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0.json",
+      "sha256": "83df6a3f5844d27702ee099830e8e64a29d3176c45e467a6ec73841a12aa9d1a"
+    },
+    {
+      "artifact_id": "frontier_selection_review",
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "2bcce2cbde4d0e94f47735e163482c1d05a1d0677ccfce29b89d1f72a6507cda"
+    },
+    {
+      "artifact_id": "coherence_admissibility_hypothesis",
+      "path": "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+      "sha256": "1603011e475595cce40f6e36310198952aa48b2fe351cba129ff065caf05b5ec"
+    },
+    {
+      "artifact_id": "ccft_to_toe_object_crosswalk",
+      "path": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "sha256": "d833bbe2933de80effb2ee425e59d9c29078532c8f8ab65663327e5f0d9a96ce"
+    },
+    {
+      "artifact_id": "candidate_master_action",
+      "path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+    },
+    {
+      "artifact_id": "ccft_variational_program",
+      "path": "formal/docs/paper/CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0.md",
+      "sha256": "1320659c003c12776ca0d650d39ff2c54043b4c6ba9438fbb7a6dda80216db52"
+    },
+    {
+      "artifact_id": "ccft_discriminator_map",
+      "path": "formal/docs/paper/CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0.md",
+      "sha256": "dc2d78bc9c663d5e4d87e3d3922798ec940849581f46a0ffc25712e91e44d2ac"
+    },
+    {
+      "artifact_id": "pillar_seam_readiness",
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
+    },
+    {
+      "artifact_id": "closed_real_scalar_review",
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "4d6271e5688352a96ce9b7ab1abadd669e167394d337f1b5db37d5dd3934ec38"
+    },
+    {
+      "artifact_id": "closed_native_surrogate",
+      "path": "formal/output/CALC-TOE-NATIVE-SURROGATE-V0-BOUNDED-CLOSEOUT-v0.json",
+      "sha256": "ec270a6e7f23f06dd66162c5f4deee4e654e931bf158fde4db1444e4a578f3e9"
+    },
+    {
+      "artifact_id": "bounded_governance_validator",
+      "path": "formal/python/tools/bounded_program_governance.py",
+      "sha256": "1ba7998ad58301435bca6523aff01e450a406ad14abc7504c10bfd733fbb1619"
+    },
+    {
+      "artifact_id": "quadratic_closed_program_manifest",
+      "path": "formal/docs/release/bounded_program_manifests/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_MANIFEST_v1.json",
+      "sha256": "b4ea5f2ba014c47b4b66adb49ea70661c95a1a5915d1ebc428ee115588df4f54"
+    },
+    {
+      "artifact_id": "native_surrogate_closed_program_manifest",
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_SURROGATE_V0_MANIFEST_v1.json",
+      "sha256": "35eecf20a82ac68b4fcd59ddd41cc71df09fa0845b5d3eeced85ecef0d7ea3af"
+    }
+  ],
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_classification_vocabulary": [
+    "PHYSICAL_ONTOLOGY_CLAIM",
+    "MATHEMATICAL_STRUCTURE_CLAIM",
+    "EFFECTIVE_MODEL_CLAIM",
+    "ANALOGY_OR_HEURISTIC",
+    "OBSERVATIONAL_CLAIM",
+    "UNRESOLVED_LANGUAGE"
+  ],
+  "dependency_impact_check": "formal/docs/release/TOE_NATIVE_COHERENCE_STAGE_1_DEPENDENCY_IMPACT_CHECK_20260729_v0.json",
+  "independent_review_required": true,
+  "native_hypothesis_tested": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+  "prohibited_actions": [
+    "No claim inventory producer may run before the atomic OPEN commit exists.",
+    "No source may transport physical meaning from symbolic similarity alone.",
+    "No representation, field, action, seam, pillar, observable, or empirical conclusion may be selected.",
+    "No UEFM artifact is admissible without a separate provenance and admissibility record.",
+    "No closed quadratic-control or native-surrogate program may reopen.",
+    "No modification of the untracked reddit/ directory."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "required_inventory_fields": [
+    "claim_id",
+    "exact_source_artifact",
+    "source_date",
+    "source_authority_status",
+    "controlled_paraphrase",
+    "original_project_vocabulary",
+    "claim_type",
+    "scale_and_domain",
+    "claimed_bearer_of_coherence",
+    "physical_versus_mathematical_status",
+    "conflicts_with_other_claims",
+    "whether_superseded"
+  ],
+  "schema_id": "toe.native_coherence.controlled_claim_inventory.stage_1_open_authority.v0",
+  "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+  "stage_1_scope_hash": "1d0ca35f49260b8194c9a24f2ff8200af0b1c8fe1c043fa437407a6e71a13e0e",
+  "stage_1_target": "inventory_toe_native_controlled_coherence_claims_v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_1_OPEN_ONLY"
+}

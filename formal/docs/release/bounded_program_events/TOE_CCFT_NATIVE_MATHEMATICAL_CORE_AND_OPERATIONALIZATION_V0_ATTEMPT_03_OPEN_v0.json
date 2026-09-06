@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 3,
+  "event_hash": "47694643488c718054f7360e006ddb74c0eaf5cd75f5c5087ff639dd71ca4d70",
+  "event_sequence_number": 5,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "0ab8c3dc74ecc6ed6d50d62b83126972184dd6da",
+  "previous_event_hash": "29d41df2b786dbe76c9bb0b69ae6374726859e1ca0175dcfe5cb47f39e9c70dd",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "17abb056559f4d3820ab3e24d731f6a8bbf8bd026fa823016c1140c76aded66e",
+  "scope_hash": "fe74ad24a6b899c00fccc0e5c10219f6a59c9f079349a893beaffc682c4d1b99",
+  "semantic_stage_id": "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION",
+  "target": "operationalize_toe_retained_ccft_mathematical_objects_v0"
+}

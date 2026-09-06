@@ -1,0 +1,35 @@
+{
+  "schema_id": "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_PACKET_20260725_v0",
+  "classification_universe": [
+    "EVERY_CURRENT_AUTHORITY_REACHABLE_OBLIGATION",
+    "EVERY_CURRENT_SCIENTIFIC_EVIDENCE_REACHABLE_OBLIGATION",
+    "EVERY_NONPASSING_OBLIGATION",
+    "EVERY_MIXED_ROLE_TEST_TOUCHING_A_CURRENT_SURFACE"
+  ],
+  "classification_axes": [
+    "criticality",
+    "temporal_role",
+    "provenance",
+    "disposition"
+  ],
+  "profile_machinery_is_current_critical": true,
+  "profile_membership_basis": "REACHABILITY_NOT_TEST_OUTCOME",
+  "unknown_current_reachability": "BLOCKING",
+  "mixed_role_test_profile": "CURRENT_CONTROL_PLANE",
+  "permitted": {
+    "generate_obligation_registry": true,
+    "generate_current_control_plane_profile": true,
+    "generate_historical_debt_profile": true,
+    "reconcile_complete_current_inventory": true
+  },
+  "prohibited": {
+    "repair_nonpassing_root": true,
+    "demote_because_test_fails": true,
+    "exclude_new_guard_from_current_inventory": true,
+    "quarantine_unknown_current_reachability": true,
+    "registry_or_v2_change": true,
+    "scientific_content_change": true,
+    "lean_activity": true,
+    "automatic_successor": true
+  }
+}

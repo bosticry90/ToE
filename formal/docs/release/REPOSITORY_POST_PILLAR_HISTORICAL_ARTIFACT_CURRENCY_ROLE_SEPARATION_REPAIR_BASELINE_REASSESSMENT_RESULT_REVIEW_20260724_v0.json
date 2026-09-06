@@ -1,0 +1,81 @@
+{
+  "schema_id": "REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-25T01:27:00Z",
+  "review_basis": "INDEPENDENT_DETACHED_CHECKOUT_JUNIT_RECONSTRUCTION_TRANSITION_RECOMPUTATION_CAUSAL_FAMILY_RECOMPUTATION_AND_DIRTY_MAIN_BYTE_CUSTODY_REVIEW",
+  "review_checkout": {
+    "commit": "a68ca00f038831a5c1458cb48210ad877f159fc5",
+    "path": ".toe-recovery/disposable-workspaces/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-review-v0",
+    "clean": true
+  },
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "db680730839960d97ef571073e7250e71926dd623de5c589e151695a0d226a5a",
+    "outcome": "POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_NEWLY_EXPOSED_ROOTS_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "external_independent_review": {
+    "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/POST_PILLAR_ROLE_SEPARATION_INDEPENDENT_RESULT_REVIEW_v0.json",
+    "sha256": "d61dfdf6bd6d8184a2f25b2986ff8e8fc82d9dd9c348f8e10eb1d7982701cce3",
+    "reviewer": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/independent_review_post_pillar_role_separation_reassessment_v0.py",
+    "reviewer_sha256": "d2f66ad691221bcd5724bc0e088c4dcd3c5fcc607257ba6a5f5d4d631bcd6d98"
+  },
+  "independent_recomputation": {
+    "tests": 13756,
+    "passed": 12748,
+    "skipped": 598,
+    "failed": 391,
+    "errors": 19,
+    "nonpassing": 410,
+    "prior_nonpassing": 390,
+    "recovered": 20,
+    "intended_recoveries": 16,
+    "additional_pillar_packet_recoveries": 3,
+    "environmental_nonrecurrence": 1,
+    "newly_nonpassing": 40,
+    "new_v1_frozen_review_source_pin_outcomes": 39,
+    "new_duplicate_authority_selector_outcomes": 1,
+    "persistent_nonpassing": 370,
+    "status_transitions": 0,
+    "persistent_v1_staging_outcomes_now_first_failing_at_em": 13,
+    "frozen_ids_and_order_exact": true,
+    "first_cause_clusters": 312,
+    "family_outcomes_sum": 410,
+    "highest_concentrated_root": {
+      "root_id": "PILLAR_V1_FROZEN_REVIEW_SOURCE_PIN_DRIFT",
+      "outcomes": 39
+    }
+  },
+  "family_counts": {
+    "missing_artifacts": 218,
+    "other_packet_contract": 65,
+    "pillar_ledger_staging_selector": 58,
+    "other_artifact_currency": 50,
+    "authority_expectations": 8,
+    "environment_or_path_identity": 6,
+    "other_committed_assertions": 5
+  },
+  "custody": {
+    "validation_checkout_clean": true,
+    "review_checkout_clean": true,
+    "dirty_main_manifest_rows": 629,
+    "dirty_main_manifest_mismatches": 0,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622
+  },
+  "preservation": {
+    "repair_performed": false,
+    "tests_or_generators_modified": false,
+    "source_tree_reports_or_fixtures_created": false,
+    "fixture_scaling": false,
+    "lean_activity": false,
+    "registry_rotation": false,
+    "v2_enrollment": false,
+    "scientific_activity": false,
+    "automatic_successor": false
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "verdict": "ACCEPT_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+}

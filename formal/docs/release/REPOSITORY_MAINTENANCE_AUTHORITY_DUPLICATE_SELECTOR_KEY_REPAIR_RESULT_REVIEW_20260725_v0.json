@@ -1,0 +1,50 @@
+{
+  "schema_id": "REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T03:20:30Z",
+  "accepted_implementation": {
+    "commit": "76eb5aa107d9e16efa08128461d9e6a290771575",
+    "tree": "59dc304e9ed612a3075ad6b0e2a8fa60a90f8766",
+    "result": {
+      "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_RESULT_20260725_v0.json",
+      "sha256": "074f406d423e6f2aab04cc46ca9c9e24314f0272f257f20951ac076f5396e640"
+    }
+  },
+  "independent_review": {
+    "checkout": "DETACHED",
+    "checkout_clean_before_and_after": true,
+    "focused_validation": {
+      "path": ".toe-recovery/custody-v0/maintenance-authority-duplicate-selector-key-repair-v0/INDEPENDENT_FOCUSED_v0.xml",
+      "sha256": "2a107aa919d5fa49ad23d9c6144838d09f645940d24c46c47811ff1c4f651e34",
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "errors": 0
+    },
+    "checks": {
+      "bootstrap_authority_source_is_accepted_adjudication_plus_operator": true,
+      "ambiguous_json_used_as_sole_authority": false,
+      "authorized_parent_commit_and_tree_match": true,
+      "bootstrap_tool_hash_matches_execution_tool": true,
+      "execution_counter_consumed": 1,
+      "bootstrap_permanently_expired": true,
+      "authority_before_hash_matches": true,
+      "authority_after_hash_matches": true,
+      "removed_span_is_exactly_218_authorized_bytes": true,
+      "all_other_authority_file_bytes_unchanged": true,
+      "surviving_selector_is_authorized_second_value": true,
+      "strict_current_authority_parse_passes": true,
+      "ordinary_parser_semantics_match_for_diagnostic_comparison": true,
+      "second_execution_fails_closed": true,
+      "pillar_v1_repair_performed": false,
+      "scientific_or_registry_state_changed": false,
+      "dirty_main_mutated": false
+    },
+    "verdict": "ACCEPT"
+  },
+  "terminal_outcome": "MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_ACCEPTED",
+  "bootstrap_authority_after_review": "CONSUMED_AND_PERMANENTLY_EXPIRED",
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

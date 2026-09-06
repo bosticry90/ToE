@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 2,
+  "event_hash": "6765badd2ce94586a489dbe6a755fd2f57d0bb36114cfd0dc93bb976c0f2e943",
+  "event_sequence_number": 3,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "f08e5e7d7c11ffb0cfba8c12d1cdcd7a4abb1e83",
+  "previous_event_hash": "cd1d3ac10cf71ccab8cbf87d1c349a5e3cbc038d09e8b1a9ea16db7e445cd76d",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "b8151a2c74a3fec61a65681040a75d2ffeadba91d56a65b40bc1ad4be474191a",
+  "scope_hash": "f2b412494409a17fa3527481c43a993a99f5e56b863b60c427a2746535c37902",
+  "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+  "target": "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0"
+}

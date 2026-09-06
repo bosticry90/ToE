@@ -1,0 +1,741 @@
+{
+  "accepted_result": {
+    "analytic_radial_agreement": "ACCEPTED_8_OF_8",
+    "analytic_sphere_oracle": "QUALIFIED_ON_EIGHT_FROZEN_CASES_AND_OVERLAP_PROBES",
+    "continuous_uniform_error_claim": "NOT_ESTABLISHED",
+    "derivation": "ACCEPTED",
+    "execution_rerun": "NOT_AUTHORIZED",
+    "maximum_relative_difference": "9.193531120982082907226642222031001562304493826767069136682815822591035E-15",
+    "mutations": "ACCEPTED_8_OF_8",
+    "production_cubature": "UNADJUDICATED",
+    "radial_self_convergence": "ACCEPTED_11_OF_11",
+    "required_next_action": "FRESH_SCIENTIFIC_RESPONSE_SELECTOR",
+    "stable_evaluator": "ACCEPTED"
+  },
+  "authority": {
+    "consumed_execution_result": "ANALYTIC_SPHERE_ORACLE_QUALIFIED",
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_EXECUTION_20260719_v0.md",
+        "sha256": "d9f90f2164ee613123be4a147a1121527c04b673fc72be8747203a054c59bbf6"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_EXECUTION_20260719_v0.json",
+        "sha256": "d2527fd3c03a107734b3b55920c35f73185cbbf0f6c13132ff94c40ec447676d"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_oracle_qualification_execution_v0.py",
+        "sha256": "5d357f9346a3c6bf6168d6330ff1fb62017ac3eda90e05e57605f23392be17eb"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_oracle_qualification_execution_v0.py",
+        "sha256": "b0d546155a01ccdd5603ec98275ecf04693f5e3ab10bd703ff1c844a09479a8e"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereOracleQualificationExecutionV0.lean",
+        "sha256": "fac92ebc15d1317b8e329855035abe47786c70307b7350a6ce1c320eab79319f"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_oracle_qualification_execution_result_review_v0.py",
+      "sha256": "49d0f59e9a52777ab1a41bdf448dca58ba14401dab4da84e403c8f6000f4668b"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_EXECUTION_RESULT_REVIEW_20260719_v0.md",
+      "sha256": "077f3d3e01e3bb4809790bf7d9b9266d7f1a3cd0258af5c697f7880a4b9c3d93"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereOracleQualificationExecutionResultReviewV0.lean",
+      "sha256": "d7b36f5bc4b2cc85d7afb5509ce2a319c83a741531d0a738598a068314d46ce6"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_oracle_qualification_execution_result_review_v0.py",
+      "sha256": "4bf64e2b0da2b36d038811157008bb846c2ecdfa3b861533b71ac84c6f25dc18"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review accepts the analytic homogeneous-sphere oracle on the frozen cases and overlap probes. It does not establish a continuous uniform-error bound, adjudicate or replace production cubature, rerun Stage A, validate torque or DFT, decide identifiability, or authorize Stage B.",
+  "independent_custody_audit": {
+    "all_stage_files_match_report": true,
+    "all_stages_complete": true,
+    "all_stages_within_budget": true,
+    "current_stage_pointer": {
+      "stage_id": "O6_ATOMIC_FINALIZATION",
+      "started_at_utc": "2026-07-19T18:58:45.190553Z",
+      "started_perf_counter": 20302.1228523,
+      "status": "IN_PROGRESS",
+      "wall_clock_seconds_max": 40
+    },
+    "current_stage_pointer_decision_bearing": false,
+    "current_stage_pointer_terminalized": false,
+    "custody_qualification": "current_stage.json remains an IN_PROGRESS monitor pointer for O6. The authoritative O6 atomic record, raw log, worker exit, canonical result, and zero-survivor record all establish completion; the pointer is retained unchanged as non-decision-bearing custody evidence.",
+    "launch_count": 1,
+    "launch_flag_run_id": "e844a8af-4c7e-4f17-8a09-0c3003b372ad",
+    "memory_limit_mib": 2048,
+    "peak_job_memory_bytes": 23298048,
+    "peak_job_memory_within_limit": true,
+    "process_group_mechanism": "WINDOWS_JOB_OBJECT_KILL_ON_CLOSE_AND_JOB_MEMORY_LIMIT",
+    "raw_launcher_log_sha256_observed": "3f87c488727ce415a1c62b1400ec506990375a3fe93e03267b8a613b3caff725",
+    "raw_launcher_log_sha256_reported": "3f87c488727ce415a1c62b1400ec506990375a3fe93e03267b8a613b3caff725",
+    "raw_log_outcome_count": 1,
+    "raw_log_stage_end_count": 6,
+    "raw_log_stage_order_exact": true,
+    "raw_log_stage_start_count": 6,
+    "release_equals_canonical_result": true,
+    "reported_custody_equals_atomic_file": true,
+    "reported_payload_equals_atomic_file": true,
+    "run_id": "e844a8af-4c7e-4f17-8a09-0c3003b372ad",
+    "stage_count": 6,
+    "stage_rows": [
+      {
+        "duration_seconds": 0.006889899999805493,
+        "reported_equals_atomic_file": true,
+        "sha256": "91b4008967971d803e9aceb78928a61770fff1b03504f487f56fe3a1cdcb55b6",
+        "stage_id": "O1_PREFLIGHT_AND_CUSTODY",
+        "status": "COMPLETE",
+        "within_stage_budget": true
+      },
+      {
+        "duration_seconds": 0.0030397999980777968,
+        "reported_equals_atomic_file": true,
+        "sha256": "ec3ab6bb463532388053537d1fcab1fb49ec501e3dbf0773e07bee1b52645b26",
+        "stage_id": "O2_DERIVATION_DOMAIN_AND_DIMENSIONS",
+        "status": "COMPLETE",
+        "within_stage_budget": true
+      },
+      {
+        "duration_seconds": 0.002341399998840643,
+        "reported_equals_atomic_file": true,
+        "sha256": "5802f5ba74e8909fe7c9e15d7ff60b4e9efffbf854cbf4c75b329b2802be45b9",
+        "stage_id": "O3_STABLE_EVALUATOR_AND_OVERLAPS",
+        "status": "COMPLETE",
+        "within_stage_budget": true
+      },
+      {
+        "duration_seconds": 3.1135226000005787,
+        "reported_equals_atomic_file": true,
+        "sha256": "bbea45f2fc34b57485a16ff7ba93d5f9ac5c82cf9677590869c6a2f122e90e69",
+        "stage_id": "O4_INDEPENDENT_RADIAL_CROSS_CHECK",
+        "status": "COMPLETE",
+        "within_stage_budget": true
+      },
+      {
+        "duration_seconds": 0.05516120000174851,
+        "reported_equals_atomic_file": true,
+        "sha256": "8ff593f591e0552a8f2c56c1630abfc4f2e7903f91b810f8cd68e603615e4f0e",
+        "stage_id": "O5_MUTATIONS_AND_ADJUDICATION",
+        "status": "COMPLETE",
+        "within_stage_budget": true
+      },
+      {
+        "duration_seconds": 0.005943100000877166,
+        "reported_equals_atomic_file": true,
+        "sha256": "0e01c32707d9bd9ac7fa6c75df75cea8947b1142598fa2bc3acda6b30f258dc4",
+        "stage_id": "O6_ATOMIC_FINALIZATION",
+        "status": "COMPLETE",
+        "within_stage_budget": true
+      }
+    ],
+    "timeout_initiated_at_utc": null,
+    "worker_exit_code": 0,
+    "worker_pid": 11244,
+    "zero_surviving_processes": true
+  },
+  "independent_derivation_audit": {
+    "both_form_factors_present": true,
+    "center_distance_exponential_present": true,
+    "energy_units": "kg*m^2*s^-2=J",
+    "independently_reproduced_series_coefficients": [
+      "1",
+      "1/10",
+      "1/280",
+      "1/15120",
+      "1/1330560"
+    ],
+    "mass_volume_normalization": "M_i=(4*pi/3)*rho_i*R_i^3",
+    "newtonian_shell_derivation_present": true,
+    "passed": true,
+    "point_particle_limit_reproduced": true,
+    "radial_antiderivative_present": true,
+    "reported_status": "PASS",
+    "scaled_pair_identity_present": true,
+    "sphere_exchange_symmetry": true,
+    "strict_nonoverlap_all_cases": true,
+    "yukawa_amplitude_exact": "1/3",
+    "yukawa_angular_kernel_identity_present": true
+  },
+  "independent_evaluator_audit": {
+    "all_case_regimes_exact": true,
+    "all_scaled_factors_finite_positive": true,
+    "all_six_overlap_decisions_reproduced": true,
+    "case_rows": [
+      {
+        "binary64_underflow": false,
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      },
+      {
+        "binary64_underflow": false,
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      },
+      {
+        "binary64_underflow": false,
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      },
+      {
+        "binary64_underflow": false,
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      },
+      {
+        "binary64_underflow": false,
+        "case_id": "MIXED_X_UNEQUAL",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      },
+      {
+        "binary64_underflow": false,
+        "case_id": "SMALL_GAP_LARGE_X",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      },
+      {
+        "binary64_underflow": false,
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      },
+      {
+        "binary64_underflow": false,
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "finite_positive_scaled_factors": true,
+        "regime_1_exact": true,
+        "regime_2_exact": true
+      }
+    ],
+    "direct_hyperbolic_at_x_1000": false,
+    "overlap_rows": [
+      {
+        "difference_reproduced": true,
+        "inside_tolerance": true,
+        "overlap_id": "SMALL_DIRECT",
+        "recomputed_difference": 1.0114131754335176e-13,
+        "reported_difference": 1.0114131754335176e-13,
+        "x": 0.05
+      },
+      {
+        "difference_reproduced": true,
+        "inside_tolerance": true,
+        "overlap_id": "SMALL_DIRECT",
+        "recomputed_difference": 1.6653345369377348e-15,
+        "reported_difference": 1.6653345369377348e-15,
+        "x": 0.1
+      },
+      {
+        "difference_reproduced": true,
+        "inside_tolerance": true,
+        "overlap_id": "SMALL_DIRECT",
+        "recomputed_difference": 6.106226635438361e-15,
+        "reported_difference": 6.106226635438361e-15,
+        "x": 0.2
+      },
+      {
+        "difference_reproduced": true,
+        "inside_tolerance": true,
+        "overlap_id": "DIRECT_SCALED",
+        "recomputed_difference": 4.336808689942018e-19,
+        "reported_difference": 4.336808689942018e-19,
+        "x": 20.0
+      },
+      {
+        "difference_reproduced": true,
+        "inside_tolerance": true,
+        "overlap_id": "DIRECT_SCALED",
+        "recomputed_difference": 0.0,
+        "reported_difference": 0.0,
+        "x": 32.0
+      },
+      {
+        "difference_reproduced": true,
+        "inside_tolerance": true,
+        "overlap_id": "DIRECT_SCALED",
+        "recomputed_difference": 1.0842021724855044e-19,
+        "reported_difference": 1.0842021724855044e-19,
+        "x": 40.0
+      }
+    ],
+    "reported_status": "PASS",
+    "silent_overflow_or_underflow": false,
+    "x_1000_used_scaled_branch": true
+  },
+  "independent_mutation_audit": {
+    "all_eight_numerically_detected": true,
+    "live_path_attested": true,
+    "mutation_ids_exact": true,
+    "reported_count": 8,
+    "reported_detected_count": 8,
+    "reported_status": "PASS",
+    "rows": [
+      {
+        "mutation_id": "INTERPRET_RADIUS_AS_DIAMETER",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      },
+      {
+        "mutation_id": "USE_SURFACE_GAP_AS_CENTER_DISTANCE",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      },
+      {
+        "mutation_id": "OMIT_FOUR_PI_OVER_THREE_MASS_FACTOR",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      },
+      {
+        "mutation_id": "OMIT_A_Y_ONE_THIRD",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      },
+      {
+        "mutation_id": "OMIT_SECOND_SPHERE_FORM_FACTOR",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      },
+      {
+        "mutation_id": "FLIP_YUKAWA_EXPONENTIAL_SIGN",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      },
+      {
+        "mutation_id": "FORCE_DIRECT_LARGE_X_SINH_COSH_PATH",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      },
+      {
+        "mutation_id": "FORCE_DIRECT_SMALL_X_CANCELLATION_PATH",
+        "numerical_failure_reason_present": true,
+        "reported_detected": true
+      }
+    ]
+  },
+  "independent_radial_and_agreement_audit": {
+    "all_eight_agreement_decisions_reproduced": true,
+    "all_eleven_convergence_decisions_reproduced": true,
+    "case_rows": [
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "LEGACY_STAGE_A_00_LARGE_X",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "7.15576008100466103672077104618293638432530503847064628E-40",
+        "recomputed_relative_difference": "2.218683950896401768739899247730211535168456400350662847372736921137202048235356781429316038327357101E-16",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "7.155760081004661036720771046182936384325305038470646280326647564076886E-40",
+        "reported_pass": true,
+        "reported_relative_difference": "2.218683950896401768739899247730211535168456400350662847474015848855953E-16"
+      },
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "LEGACY_STAGE_A_01_TRANSITION",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "2.09117766277600729804518637807831059249196976681318163E-30",
+        "recomputed_relative_difference": "9.193531120982082907226642222031001562304493826767069136768681238691710953639342516242506072790914011E-15",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "2.091177662776007298045186378078310592491969766813181629980468892986624E-30",
+        "reported_pass": true,
+        "reported_relative_difference": "9.193531120982082907226642222031001562304493826767069136682815822591035E-15"
+      },
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "LEGACY_STAGE_A_02_LONG_RANGE",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "7.041076992084726740681810349951369628728223016885801623E-29",
+        "recomputed_relative_difference": "5.543759035422311272671472351431335003775382215122537573041158931251484558106457426076588512539017749E-15",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "7.041076992084726740681810349951369628728223016885801623415427882258281E-29",
+        "reported_pass": true,
+        "reported_relative_difference": "5.543759035422311272671472351431335003775382215122537573368244131203805E-15"
+      },
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "SMALL_X_UNEQUAL_WIDE",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "1.2501197878098156594513203908215074415530317556387735871E-30",
+        "recomputed_relative_difference": "7.868620231210266137312637288801605717523184168475469818516942444890133512677671518313050343098475759E-15",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "1.25011978780981565945132039082150744155303175563877358713948154543805E-30",
+        "reported_pass": true,
+        "reported_relative_difference": "7.868620231210266137312637288801605717523184168475469818765450860021743E-15"
+      },
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "MIXED_X_UNEQUAL",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "2.7649848184613334946938934978596766667601439868465758933E-29",
+        "recomputed_relative_difference": "7.506450519877385960133480843580922529029035851097665161911944190320344461345939525894314244893308556E-15",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "2.764984818461333494693893497859676666760143986846575893319486860434445E-29",
+        "reported_pass": true,
+        "reported_relative_difference": "7.506450519877385960133480843580922529029035851097665161964847610499091E-15"
+      },
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "SMALL_GAP_LARGE_X",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "2.036172110158621176951362310429533292677989975536914774E-39",
+        "recomputed_relative_difference": "6.836538743268069756992356788759259082336964734784430311556280446230584019046660685572923729521643242E-16",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "2.036172110158621176951362310429533292677989975536914773845663354355507E-39",
+        "reported_pass": true,
+        "reported_relative_difference": "6.836538743268069756992356788759259082336964734784430311038088269748796E-16"
+      },
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "EXTREME_X_1000_UNEQUAL",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "4.514507216840235706156786852344602052193589078906946328E-40",
+        "recomputed_relative_difference": "3.632986607435800818548239033690124191137752892151516327258894956999665926210793072726817708201437571E-15",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "4.514507216840235706156786852344602052193589078906946328258371594608703E-40",
+        "reported_pass": true,
+        "reported_relative_difference": "3.632986607435800818548239033690124191137752892151516327466815887871992E-15"
+      },
+      {
+        "absolute_difference_consistent": true,
+        "case_id": "LONG_RANGE_UNEQUAL_WIDE",
+        "inside_tolerance": true,
+        "recomputed_absolute_difference_J": "3.8613285729449013527514562683443084793010311659401639768E-29",
+        "recomputed_relative_difference": "4.408678516475769085427958918243901100067394495615467209599930206121659646786073449009931916882725782E-15",
+        "relative_difference_consistent": true,
+        "reported_absolute_difference_J": "3.861328572944901352751456268344308479301031165940163976809464074730315E-29",
+        "reported_pass": true,
+        "reported_relative_difference": "4.408678516475769085427958918243901100067394495615467209610735829666417E-15"
+      }
+    ],
+    "convergence_rows": [
+      {
+        "decision_reproduced": true,
+        "delta": "8.781550673201110105083378773049465372357148735328040929857543623342248E-82",
+        "tolerance": "9.990015997334285428645485717748276523459611616743086766185147374204282E-25",
+        "x": 0.001
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "6.265882563465472116753126613321889157620359113111048690087113997878517E-82",
+        "tolerance": "9.970063928077073482534422709460951250734158302967660380645014143504052E-25",
+        "x": 0.003
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "9.515354836113112129299912006264353644999540856642428506361833721017698E-85",
+        "tolerance": "9.960105829576850588844518859986109198620577855751660601505312241780804E-25",
+        "x": 0.004
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "8.624762086903967032598290222832601390317343129627048940307766632167543E-82",
+        "tolerance": "9.841535139450216512346481404497537670873793284206209102076755086434671E-25",
+        "x": 0.016
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "4.314583056062799938129826058286010640141358621624366872434324272365239E-82",
+        "tolerance": "9.514682530906218695381490251014270532875483530519959088421949028275633E-25",
+        "x": 0.05
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "6.923070986104286730147636093213100235057334605268732406802719939779113E-84",
+        "tolerance": "6.218309410859617887194278629062956140246003585718210211410624305543069E-25",
+        "x": 0.5
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "8.281045348982298036722015059291740401670587070240276026248221170995903E-83",
+        "tolerance": "4.060068497098380756819984849174532102228946377287276444044766179622201E-25",
+        "x": 1.0
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "9.0287407711994617677501161920330994017870349695807661383068058917124E-83",
+        "tolerance": "1.978035468749129764152163869661981987442005379988300220578999591845784E-25",
+        "x": 2.0
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "6.141665772824074218856647689357822490568852257391020514767211006580169E-85",
+        "tolerance": "5.890000000000000000000000000000000000000000227668649732475160933133383E-28",
+        "x": 50.0
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "1.391327163788206174649075616225054645298387477667204330271294434160194E-87",
+        "tolerance": "6.988E-30",
+        "x": 500.0
+      },
+      {
+        "decision_reproduced": true,
+        "delta": "4.751123589272738139037398910783940314378394940921632480433005234221173E-88",
+        "tolerance": "2.4985E-30",
+        "x": 1000.0
+      }
+    ],
+    "independence_qualification_preserved": "Numerical radial agreement validates the reduced evaluator after angular reduction; the separately passed derivation gate establishes pair factorization.",
+    "maximum_relative_difference_below_1e_13": true,
+    "maximum_reported_relative_difference": "9.193531120982082907226642222031001562304493826767069136682815822591035E-15",
+    "reported_agreement": "PASS",
+    "reported_self_convergence": "PASS",
+    "three_failed_stage_a_cases_present": true,
+    "unique_x_count": 11
+  },
+  "independent_runtime_audit": {
+    "consistent_within_0_1_seconds": true,
+    "difference_seconds": 0.01399669999955222,
+    "stage_duration_sum_seconds": 3.1868979999999283,
+    "within_600_second_budget": true,
+    "worker_duration_seconds": 3.2008946999994805
+  },
+  "review_gates": {
+    "admissible_count": 40,
+    "failure_count": 0,
+    "gate_count": 40,
+    "pass_count": 39,
+    "qualified_pass_count": 1,
+    "rows": [
+      {
+        "detail": "five execution surfaces hash-verified",
+        "gate_id": "R01_EXACT_EXECUTION_ARTIFACT_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "detail": "byte-identical results",
+        "gate_id": "R02_RELEASE_AND_CANONICAL_RESULT_IDENTICAL",
+        "status": "PASS"
+      },
+      {
+        "detail": "launched implementation frozen",
+        "gate_id": "R03_RUNNER_HASH_MATCHES_LAUNCH_EVIDENCE",
+        "status": "PASS"
+      },
+      {
+        "detail": "scientific payload unaltered",
+        "gate_id": "R04_WORKER_PAYLOAD_MATCHES_RELEASE",
+        "status": "PASS"
+      },
+      {
+        "detail": "custody object unaltered",
+        "gate_id": "R05_LAUNCH_CUSTODY_MATCHES_RELEASE",
+        "status": "PASS"
+      },
+      {
+        "detail": "one run id and one launch flag",
+        "gate_id": "R06_EXACTLY_ONE_LAUNCH_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "detail": "normal completion",
+        "gate_id": "R07_EXIT_ZERO_AND_NO_TIMEOUT",
+        "status": "PASS"
+      },
+      {
+        "detail": "job object closed with no survivor",
+        "gate_id": "R08_ZERO_SURVIVING_PROCESSES",
+        "status": "PASS"
+      },
+      {
+        "detail": "peak 23298048 bytes",
+        "gate_id": "R09_JOB_OBJECT_AND_MEMORY_LIMIT",
+        "status": "PASS"
+      },
+      {
+        "detail": "raw log hash exact",
+        "gate_id": "R10_RAW_TRANSCRIPT_HASH_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "detail": "six ordered starts and ends",
+        "gate_id": "R11_RAW_STAGE_ORDER_AND_SINGLE_OUTCOME",
+        "status": "PASS"
+      },
+      {
+        "detail": "six stage files exact",
+        "gate_id": "R12_ALL_ATOMIC_STAGE_FILES_MATCH_REPORT",
+        "status": "PASS"
+      },
+      {
+        "detail": "six of six complete",
+        "gate_id": "R13_ALL_STAGES_COMPLETE_AND_WITHIN_BUDGET",
+        "status": "PASS"
+      },
+      {
+        "detail": "current_stage.json remains an IN_PROGRESS monitor pointer for O6. The authoritative O6 atomic record, raw log, worker exit, canonical result, and zero-survivor record all establish completion; the pointer is retained unchanged as non-decision-bearing custody evidence.",
+        "gate_id": "R14_CURRENT_STAGE_POINTER_QUALIFIED_NON_DECISION_BEARING",
+        "status": "PASS_WITH_QUALIFICATION"
+      },
+      {
+        "detail": "all eight cases",
+        "gate_id": "R15_STRICT_NONOVERLAP_DERIVATION_GATE",
+        "status": "PASS"
+      },
+      {
+        "detail": "U_N=-G*M1*M2/D",
+        "gate_id": "R16_NEWTONIAN_SHELL_RESULT_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "detail": "external-field angular reduction",
+        "gate_id": "R17_YUKAWA_ANGULAR_KERNEL_IDENTITY_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "detail": "homogeneous-sphere form factor",
+        "gate_id": "R18_RADIAL_ANTIDERIVATIVE_AND_FORM_FACTOR_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "detail": "convention complete",
+        "gate_id": "R19_TWO_FACTORS_CENTER_EXPONENT_AND_A_Y",
+        "status": "PASS"
+      },
+      {
+        "detail": "independently reproduced",
+        "gate_id": "R20_MASS_UNITS_SYMMETRY_AND_POINT_LIMIT",
+        "status": "PASS"
+      },
+      {
+        "detail": "exact rational coefficients",
+        "gate_id": "R21_SMALL_X_SERIES_COEFFICIENTS_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "detail": "small/direct/scaled routing",
+        "gate_id": "R22_EVALUATOR_REGIME_ROUTING_EXACT",
+        "status": "PASS"
+      },
+      {
+        "detail": "stored values recomputed",
+        "gate_id": "R23_ALL_SIX_OVERLAP_DECISIONS_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "detail": "large-x path exact",
+        "gate_id": "R24_X_1000_SCALED_WITHOUT_DIRECT_FALLBACK",
+        "status": "PASS"
+      },
+      {
+        "detail": "all case factors finite",
+        "gate_id": "R25_NO_SILENT_OVERFLOW_OR_UNDERFLOW",
+        "status": "PASS"
+      },
+      {
+        "detail": "0.001 through 1000",
+        "gate_id": "R26_EXACT_ELEVEN_RADIAL_X_VALUES",
+        "status": "PASS"
+      },
+      {
+        "detail": "only converged values used",
+        "gate_id": "R27_ALL_SELF_CONVERGENCE_DECISIONS_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "detail": "absolute and relative differences recomputed",
+        "gate_id": "R28_ALL_EIGHT_CASE_AGREEMENTS_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "detail": "maximum 9.193531120982082907226642222031001562304493826767069136682815822591035E-15",
+        "gate_id": "R29_MAXIMUM_RELATIVE_DIFFERENCE_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "detail": "no production adjudication inferred",
+        "gate_id": "R30_THREE_FAILED_STAGE_A_CASES_INCLUDED",
+        "status": "PASS"
+      },
+      {
+        "detail": "frozen mutation set",
+        "gate_id": "R31_EXACT_EIGHT_MUTATION_IDENTITIES",
+        "status": "PASS"
+      },
+      {
+        "detail": "decision-bearing numerical reasons",
+        "gate_id": "R32_ALL_MUTATIONS_NUMERICALLY_DETECTED",
+        "status": "PASS"
+      },
+      {
+        "detail": "no metadata-only rejection",
+        "gate_id": "R33_MUTATIONS_USE_LIVE_REFERENCE_PATH",
+        "status": "PASS"
+      },
+      {
+        "detail": "worker and stage durations agree",
+        "gate_id": "R34_RUNTIME_RECORDS_INTERNALLY_CONSISTENT",
+        "status": "PASS"
+      },
+      {
+        "detail": "bounded execution",
+        "gate_id": "R35_TIME_AND_MEMORY_WITHIN_ENVELOPE",
+        "status": "PASS"
+      },
+      {
+        "detail": "all separate gates satisfied",
+        "gate_id": "R36_QUALIFIED_OUTCOME_PREREQUISITES_ALL_PASS",
+        "status": "PASS"
+      },
+      {
+        "detail": "production remains unadjudicated",
+        "gate_id": "R37_PRODUCTION_CUBATURE_NOT_CALLED_OR_ADJUDICATED",
+        "status": "PASS"
+      },
+      {
+        "detail": "downstream firewalls closed",
+        "gate_id": "R38_NO_TORQUE_DFT_VECTOR_JACOBIAN_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "detail": "1/1 consumed",
+        "gate_id": "R39_ONE_SHOT_AUTHORITY_CONSUMED_NO_RERUN",
+        "status": "PASS"
+      },
+      {
+        "detail": "review does not directly authorize production comparison",
+        "gate_id": "R40_FRESH_SELECTOR_ONLY_AFTER_REVIEW",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_EXECUTION_RESULT_REVIEW_20260719_v0",
+  "schema_id": "toe.scalar_only_yukawa.analytic_sphere_oracle.qualification_execution_result_review.v0",
+  "scope": {
+    "analytic_sphere_oracle_qualified_result_accepted": true,
+    "execution_custody_accepted": true,
+    "final_real_150_vector_authorized": false,
+    "fresh_scientific_response_selector_authorized": true,
+    "independent_execution_result_review_performed": true,
+    "jacobian_or_identifiability_authorized": false,
+    "oracle_execution_rerun_authorized": false,
+    "production_cubature_comparison_authorized": false,
+    "production_kernel_replacement_authorized": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "stage_b_eligible": false,
+    "torque_or_dft_authorized": false
+  },
+  "selected_next_target": "select_post_scalar_only_yukawa_analytic_sphere_oracle_qualification_v0_execution_result_scientific_response_v0",
+  "selected_next_target_kind": "FRESH_SCIENTIFIC_RESPONSE_SELECTOR_ONLY_NO_PRODUCTION_COMPARISON",
+  "status": "INDEPENDENT_EXECUTION_RESULT_REVIEW_COMPLETE",
+  "target": "review_scalar_only_yukawa_analytic_sphere_oracle_qualification_v0_execution_result",
+  "verdict": "ACCEPTED_ANALYTIC_SPHERE_ORACLE_QUALIFIED"
+}

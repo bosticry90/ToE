@@ -1,0 +1,30 @@
+{
+  "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN_AUTHORITY_REVIEW_v0",
+  "schema_id": "toe.ccft_v0.primary_theorem_packet_preparation.stage_3_open_authority_review.v0",
+  "captured_at_utc": "2026-08-02T05:37:45Z",
+  "authority_path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN_AUTHORITY_v0.json",
+  "authority_sha256": "95ce906a3e09c9b1e40fc825f0c6990ec4ae2afc3bff1c0b5f6b2d3ab4922fad",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "stage_number": 3,
+  "accepted": true,
+  "checks": {
+    "stage_2_frozen_model_result_review_validation_and_close_are_bound": true,
+    "manifest_stage_target_scope_and_terminal_vocabulary_match": true,
+    "one_packet_cap_is_preserved": true,
+    "four_claims_form_one_dependency_ordered_decision_packet": true,
+    "frozen_model_equation_domain_parameter_and_postulate_count_match": true,
+    "gauge_map_is_only_a_proposed_statement_at_authority": true,
+    "unit_and_zero_background_formulas_are_only_candidate_propositions": true,
+    "background_gauge_perturbation_and_sign_conventions_must_be_explicit": true,
+    "historical_classification_vocabulary_is_frozen_without_selecting_a_class": true,
+    "formal_propositions_negations_ledgers_and_execution_contracts_are_required": true,
+    "proof_disproof_construction_counterexample_symbolic_numerical_and_Lean_execution_are_prohibited": true,
+    "norm_energy_well_posedness_stability_and_novelty_results_are_outside_this_stage": true,
+    "frozen_model_mutation_and_physical_promotion_are_prohibited": true,
+    "stage_4_remains_unauthorized": true,
+    "authority_contains_no_frozen_packet_theorem_counterexample_or_classification": true
+  },
+  "decision": "ACCEPT_STAGE_3_OPEN_AUTHORITY_AWAIT_IMMUTABLE_OPEN_EVENT",
+  "stage_4_authorized": false,
+  "status": "PASS"
+}

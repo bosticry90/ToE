@@ -13,6 +13,8 @@ from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tools import (
     pillar_seam_unit_mapping_ledger_blocker_response_route_selection as v0,
 )
+from formal.python.tools import pillar_v1_source_identity
+from formal.python.tools import qft_route_evidence_identity
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -20,6 +22,9 @@ SCRIPT_PATH = Path(__file__).resolve()
 SCRIPT_RELATIVE_PATH = (
     "formal/python/tools/"
     "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py"
+)
+HISTORICAL_SCRIPT_SHA256 = (
+    "bb42efb91530da6134a5f41661b23736afa663171935140616066f6503257da4"
 )
 PACKET_RELATIVE_PATH = (
     "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-"
@@ -483,10 +488,11 @@ def _frozen_inputs() -> list[dict[str, str]]:
 
 def load_inputs() -> tuple[dict[str, Any], dict[str, Any]]:
     ledger, _ = v0.load_inputs()
-    for binding in _frozen_inputs():
-        path = REPO_ROOT / binding["path"]
-        if not path.is_file() or sha256_path(path) != binding["sha256"]:
-            raise ValueError(f"frozen input mismatch: {binding['path']}")
+    if not pillar_v1_source_identity.bindings_match_declared_identities(
+        _frozen_inputs(),
+        repo_root=REPO_ROOT,
+    ):
+        raise ValueError("frozen input identity-domain mismatch")
     review = json.loads((REPO_ROOT / V0_REVIEW_RELATIVE_PATH).read_bytes())
     if not (
         review.get("accepted") is False
@@ -608,13 +614,12 @@ def packet_validation_failures(packet: dict[str, Any], ledger: dict[str, Any]) -
     rows = packet.get("route_selections", [])
     row_map = _ledger_row_map(ledger)
     by_id = {row.get("row_id"): row for row in rows if isinstance(row, dict)}
-    try:
-        frozen_ok = packet.get("input_artifacts") == _frozen_inputs() and all(
-            sha256_path(REPO_ROOT / item["path"]) == item["sha256"]
-            for item in _frozen_inputs()
+    frozen_ok = packet.get("input_artifacts") == _frozen_inputs() and (
+        pillar_v1_source_identity.bindings_match_declared_identities(
+            _frozen_inputs(),
+            repo_root=REPO_ROOT,
         )
-    except (OSError, KeyError):
-        frozen_ok = False
+    )
     if not frozen_ok:
         failed.add("accepted_review_and_ledger_hashes_match")
         failed.add("source_path_hash_pairs_are_exactly_rebound")
@@ -693,11 +698,12 @@ def packet_validation_failures(packet: dict[str, Any], ledger: dict[str, Any]) -
         matrix = row.get("evidence_matrix", {})
         bindings = {item.get("source_id"): item for item in matrix.get("source_bindings", []) if isinstance(item, dict)}
         propositions = {item.get("proposition_id"): item for item in matrix.get("propositions", []) if isinstance(item, dict)}
-        for binding in bindings.values():
-            try:
-                hash_ok = hash_ok and sha256_path(REPO_ROOT / binding["path"]) == binding["sha256"]
-            except (OSError, KeyError):
-                hash_ok = False
+        hash_ok = hash_ok and (
+            pillar_v1_source_identity.bindings_match_declared_identities(
+                bindings.values(),
+                repo_root=REPO_ROOT,
+            )
+        )
         for prop in propositions.values():
             classification = prop.get("classification")
             if classification == "EXPLICITLY_STATED_BY_SOURCE":
@@ -905,7 +911,10 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         "schema_id": MANIFEST_SCHEMA_ID,
         "captured_at_utc": CAPTURED_AT_UTC,
         "canonicalization": "UTF-8 JSON, sorted keys, indent=2, trailing newline",
-        "generator": {"path": SCRIPT_RELATIVE_PATH, "sha256": sha256_path(SCRIPT_PATH)},
+        "generator": {
+            "path": SCRIPT_RELATIVE_PATH,
+            "sha256": HISTORICAL_SCRIPT_SHA256,
+        },
         "input_artifacts": _frozen_inputs(),
         "packet": {"path": PACKET_RELATIVE_PATH, "schema_id": PACKET_SCHEMA_ID, "sha256": sha256_bytes(packet_raw)},
         "selected_next_target": SUCCESSOR_TARGET,

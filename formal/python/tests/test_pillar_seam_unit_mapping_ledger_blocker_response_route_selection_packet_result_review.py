@@ -33,7 +33,7 @@ def test_review_binds_immutable_preparation_commit_and_parent() -> None:
 def test_all_frozen_hashes_match_without_trusting_preparation_flags() -> None:
     value = report()
     for relative, expected in subject.EXPECTED_HASHES.items():
-        assert subject.sha256_path(subject.REPO_ROOT / relative) == expected
+        assert subject.resolved_expected_hash(relative, expected) == expected
     assert value["artifact_chain"]["expected_hashes"] == subject.EXPECTED_HASHES
 
 

@@ -6,10 +6,10 @@ import subprocess
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.historical_artifact_currency_identity import verify_binding
 from formal.python.tools.loop_control_registry_integrity import (
     DEFAULT_REGISTRY_PATH,
     casefold_collisions,
-    load_registry,
 )
 
 
@@ -38,12 +38,18 @@ def test_registry_repair_custody_binds_pre_and_post_bytes() -> None:
         check=True,
         capture_output=True,
     ).stdout
-    current = DEFAULT_REGISTRY_PATH.read_bytes()
+    post_repair = verify_binding(
+        "PAC-001",
+        expected_path=after["path"],
+        expected_sha256=after["sha256"],
+    )
 
     assert len(historical) == before["size_bytes"]
     assert hashlib.sha256(historical).hexdigest() == before["sha256"]
-    assert len(current) == after["size_bytes"]
-    assert hashlib.sha256(current).hexdigest() == after["sha256"]
+    assert post_repair["bytes"] == after["size_bytes"]
+    assert post_repair["sha256"] == after["sha256"]
+    assert post_repair["role"] == "HISTORICAL_SOURCE_BLOB"
+    assert post_repair["current_successor_role"] == "CURRENT_CANONICAL_IDENTITY"
 
     historical_payload = json.loads(historical)
     stale_projection = historical_payload["active_workstreams"][0]
@@ -72,8 +78,23 @@ def test_registry_repair_custody_binds_pre_and_post_bytes() -> None:
 
 def test_registry_repair_preserves_current_target_and_nonclaim_boundary() -> None:
     record = _record()
-    registry = load_registry()
     after = record["post_repair"]
+    frozen = verify_binding(
+        "PAC-001",
+        expected_path=after["path"],
+        expected_sha256=after["sha256"],
+    )
+    frozen_bytes = subprocess.run(
+        [
+            "git",
+            "show",
+            f"{frozen['frozen_commit']}:{frozen['path']}",
+        ],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+    ).stdout
+    registry = json.loads(frozen_bytes)
 
     assert after["current_target"] == registry["current_target_state"]["live_next_target"]
     assert after["current_target"] == "execute_pillar_seam_unit_mapping_ledger_v0"

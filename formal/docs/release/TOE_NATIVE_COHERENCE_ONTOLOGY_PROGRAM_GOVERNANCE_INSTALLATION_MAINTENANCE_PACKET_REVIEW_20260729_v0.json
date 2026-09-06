@@ -1,0 +1,20 @@
+{
+  "artifact_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_MAINTENANCE_PACKET_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "consumed_artifact": "TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_MAINTENANCE_PACKET_20260729_v0",
+  "decision": "TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_AUTHORIZED",
+  "maintenance_target": "install_toe_native_coherence_ontology_and_representation_bounded_program_governance_v0",
+  "nonclaim_boundary": [
+    "This review authorizes installation of an immutable prospective bounded-program definition only.",
+    "It does not rotate scientific authority.",
+    "It does not authorize or emit a Stage 1 OPEN event.",
+    "It does not authorize claim inventory or any other substantive scientific output.",
+    "It preserves the closed quadratic-control and native-surrogate outcomes."
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "program_installation_state_authorized": "UNOPENED",
+  "required_result_review_target": "review_toe_native_coherence_ontology_program_governance_installation_result_v0",
+  "schema_id": "toe.native_coherence_ontology_program.governance_installation_maintenance_authority_review.v0",
+  "scientific_target_preserved": "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
+  "status": "ACCEPTED_MAINTENANCE_AUTHORIZATION_ONLY"
+}

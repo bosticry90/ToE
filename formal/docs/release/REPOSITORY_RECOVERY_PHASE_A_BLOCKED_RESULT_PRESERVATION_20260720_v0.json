@@ -1,0 +1,130 @@
+{
+  "accepted_for_phase_b": false,
+  "audited_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+  "authority_provenance_reconstruction": "SUBSTANTIALLY_SUCCESSFUL",
+  "committed_mutation_patch": {
+    "path": "formal/docs/release/CLEAN_BASELINE_POST_VALIDATION_MUTATIONS_20260720_v0.patch",
+    "sha256": "726e36f0327c13e25eb25f6503543661361289c06e8ad0855bb36c6ab58831bf"
+  },
+  "committed_review": {
+    "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_INDEPENDENT_REVIEW_20260720_v0.json",
+    "sha256": "4577b40f5ceaa4952a0849ad30df95b01469024b8f2efea062146187cb649e9e"
+  },
+  "committed_source_reproducibility": "FAILED_INCOMPLETE",
+  "custody_preservation": "SUCCESSFUL",
+  "external_custody": {
+    "artifacts": {
+      "AUTHORITY_COMMIT_LINEAGE_v0.json": {
+        "bytes": 134708,
+        "sha256": "568e2dc447877d866f4e05df55d0a1036d7552e48768bab8bb200844032665e8"
+      },
+      "AUTHORITY_TRANSITION_LEDGER_v0.json": {
+        "bytes": 205400,
+        "sha256": "595ced76a58070960e098786777ccbad9ed198e4fe0663f4abe4499d5f2d1d88"
+      },
+      "CLEAN_BASELINE_POST_VALIDATION_MUTATIONS_v0.patch": {
+        "bytes": 45640,
+        "sha256": "726e36f0327c13e25eb25f6503543661361289c06e8ad0855bb36c6ab58831bf"
+      },
+      "CLEAN_BASELINE_POST_VALIDATION_MUTATION_MANIFEST_v0.json": {
+        "bytes": 10296,
+        "sha256": "556680a713efe654278a793f9602991599776493aa33cc26bce9e8d9a94f9bbb"
+      },
+      "CLEAN_BASELINE_VALIDATION_RESULT_v0.json": {
+        "bytes": 15213,
+        "sha256": "f45174ad3a43e0464d5c29ba64dad067af3b78f98d4a7be77e78f31d988c359e"
+      },
+      "CLEAN_VS_AUDITED_FAILURE_MATRIX_v0.json": {
+        "bytes": 689668,
+        "sha256": "1441830cfbe8ae923c9d67618059ded55ab08d4bc150c51de9cae05a12bb0d0e"
+      },
+      "DIRTY_WORKTREE_CUSTODY_MANIFEST_v0.json": {
+        "bytes": 807732,
+        "sha256": "4b4e5ebe0874287e7ea753bb64c2174b845bec4f5225a54d4ab962e83d5a2224"
+      },
+      "DIRTY_WORKTREE_CUSTODY_MANIFEST_v0.sha256": {
+        "bytes": 107,
+        "sha256": "f98896ec1f9a883aa42eb65c45dfc0ac45d9fb1d3c37e083587eeacc3304c074"
+      },
+      "POST_REGISTRY_ARTIFACT_CLASSIFICATION_v0.json": {
+        "bytes": 27105,
+        "sha256": "678ae337995e10a3a4dd1629f36f86f55c302dedbb40bbfc13dc1b7765cb3a0f"
+      },
+      "REPOSITORY_RECOVERY_PHASE_A_INDEPENDENT_REVIEW_v0.json": {
+        "bytes": 877,
+        "sha256": "4577b40f5ceaa4952a0849ad30df95b01469024b8f2efea062146187cb649e9e"
+      },
+      "phase_a_recovery_tool_tests.log": {
+        "bytes": 101,
+        "sha256": "6380f020f180bddd2f4e46dae74fd8d79073cf78b5d220a2d2a63ed3867807f5"
+      },
+      "phase_a_recovery_tool_tests.status.txt": {
+        "bytes": 82,
+        "sha256": "91862f5e3c9cda82550e5dc02750b7a93219dd4840b55d635e8601f950178fc3"
+      }
+    },
+    "byte_archive_remains_outside_git": true,
+    "location_identifier": "C:/toe-custody-v0"
+  },
+  "observed_baseline": {
+    "bounded_nonlean": {
+      "errors": 139,
+      "excluded_lean_build_tests": 9,
+      "failed": 690,
+      "passed": 12285,
+      "skipped": 598
+    },
+    "clean_lean_build_completed": false,
+    "full_suite_completed": false,
+    "tracked_post_validation_mutations": 23,
+    "v2_deterministic_failed": 8,
+    "v2_deterministic_passed": 2
+  },
+  "phase_a_outcome": "EVIDENCE_BLOCKED_BASELINE_VALIDATION",
+  "phase_a_tool_sources": {
+    "formal/python/tests/test_repository_recovery_baseline_mutation_capture.py": {
+      "sha256_at_phase_a_execution": "cfde0612c3ed85ea7619bd119dbba441ed7ecad0faf0ab0715a4e8743751575c"
+    },
+    "formal/python/tests/test_repository_recovery_clean_baseline_result.py": {
+      "sha256_at_phase_a_execution": "55e333a391cdaac277fa89340805af01f9fafe49c3314aafc9a522661abc7cbd"
+    },
+    "formal/python/tests/test_repository_recovery_phase_a_evidence.py": {
+      "sha256_at_phase_a_execution": "a8486c131ce6a31fa756217d5214c4a383e1ec7f0091173651812276d90edd88"
+    },
+    "formal/python/tools/repository_recovery_baseline_mutation_capture.py": {
+      "sha256_at_phase_a_execution": "22ec20fb699b1c445bbed6dbf3ebedbc9ea5d7ddd6ee5356c6ef87b28fbac7c9"
+    },
+    "formal/python/tools/repository_recovery_clean_baseline_result.py": {
+      "sha256_at_phase_a_execution": "0155214b6f1b3622dfb11b78e59658a3ff9f4bca80fb317751806d5d6fea71d2"
+    },
+    "formal/python/tools/repository_recovery_phase_a_evidence.py": {
+      "sha256_at_phase_a_execution": "0b9624974a4ad151cc0a1675244d772a5a6ee487616532f68043c6c158cbbb6f"
+    },
+    "formal/python/tools/repository_recovery_phase_a_independent_review.py": {
+      "sha256_at_phase_a_execution": "af2de8b522a72aa4c1fac051d54b5805f20454bca5f422ed95974087e9faaf39"
+    }
+  },
+  "phase_b_authorized": false,
+  "phase_c_authorized": false,
+  "recovery_authorization_commit": "1ae0790a35c55f8f3546f86a4442b7cde91ab07e",
+  "schema_id": "REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0",
+  "scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
+    "current_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH",
+    "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
+    "current_target_strict_outcome": "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+    "empirical_validation_established": false,
+    "master_action_promoted": false,
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "scientific_status_changed": false,
+  "status": "PRESERVED_ACCEPTED_BLOCKED_GOVERNANCE_RESULT"
+}

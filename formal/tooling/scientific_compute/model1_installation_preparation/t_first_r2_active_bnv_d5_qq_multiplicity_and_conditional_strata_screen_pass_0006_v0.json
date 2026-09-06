@@ -1,0 +1,225 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_D5_QQ_MULTIPLICITY_AND_CONDITIONAL_STRATA_SCREEN_PASS_v0",
+  "pass_id": "T_FIRST_R2_ACTIVE_BNV_D5_QQ_MULTIPLICITY_AND_CONDITIONAL_STRATA_SCREEN_PASS_0006",
+  "date": "2026-08-20",
+  "status": "QQXHDAG_MULTIPLICITY_INDEPENDENTLY_CONFIRMED_AS_TWO_AND_RHO3_RHO8_DELTA_CONDITIONAL_D5_STRATA_SCREENED_WITH_ONE_RHO8_ACTIVE_SCALAR_ONLY_EXTENSION_WITHOUT_BASIS_OR_ADM_PROMOTION",
+  "authority": {
+    "native_basis_derivation": "PROVISIONAL_AUTHORIZED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "full_adm_calculation": "UNAUTHORIZED",
+    "matching_or_rge_execution": "UNAUTHORIZED",
+    "parameter_evaluation": "UNAUTHORIZED",
+    "literature_absence": "NOT_ESTABLISHED",
+    "novelty": "UNKNOWN"
+  },
+  "frozen_inputs": [
+    {
+      "role": "PRIOR_INDEPENDENT_D5_RECONSTRUCTION_AND_COMPARATOR_RECONCILIATION_PASS",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d5_independent_reconstruction_and_comparator_reconciliation_pass_0005_v0.json",
+      "bytes": 11910,
+      "sha256": "b710d39edb46469677e813f2c6df2c86be0bda11981fdc031f17b22f04c80ec4"
+    },
+    {
+      "role": "STRICT_MODEL1_COMPONENT_EMBEDDING_AND_SCALAR_TRILINEAR_CONTRACT",
+      "path": "formal/docs/release/STRICT_NONSUPERSYMMETRIC_SU5_MODEL_1_COMPONENT_EMBEDDING_SCALAR_TRILINEAR_AND_CHANNEL_OPERATOR_COMPLETION_CONTRACT_20260805_v0.md",
+      "bytes": 10584,
+      "sha256": "cf593380e1b7eb637e7e7176c3515119e5d0ee4c4df9df5406247e308908d2b6"
+    },
+    {
+      "role": "FROZEN_MODEL1_MULTIPLET_REPRESENTATION_SEMANTIC_TEXT",
+      "path": "formal/m1k_semantics_v1/semantic-text/0488-ad1309637cadf2f5441c.txt",
+      "bytes": 65811,
+      "sha256": "4a61381c637f73c6f187a6b9843d50202487e71d863b4153ea611447e20f6abf"
+    },
+    {
+      "role": "PARALLEL_PROVENANCE_TRANCHE_CHECKPOINT",
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0121-arxiv-1909-08567.json",
+      "bytes": 36182,
+      "sha256": "000394ea23794471604f99ea2cb8711bbf7f7519114915c195f477171973151d"
+    }
+  ],
+  "bounded_domain": {
+    "gauge_group": "SU(3)c x SU(2)L x U(1)Y",
+    "mandatory_active_fields": [
+      "ALL_SM_FIELDS",
+      "X=R2tilde=(3,2,1/6)"
+    ],
+    "conditional_active_fields_screened": {
+      "rho3": "(1,3,0)_SCALAR_FROM_24H",
+      "rho8": "(8,1,0)_SCALAR_FROM_24H",
+      "Delta": "(1,3,1)_SCALAR_FROM_15H"
+    },
+    "canonical_dimension": 5,
+    "baryon_orientation": "DeltaB=+1; hermitian conjugates implicit",
+    "lepton_number_bookkeeping": "DeltaL is recorded but is not imposed as an exact symmetry because the strict Model-1 scalar/Yukawa sector need not conserve it",
+    "scope": "FOUR_DIMENSIONAL_PHYSICAL_CANDIDATE_INVENTORY_BEFORE_DIMENSIONAL_REGULARIZATION_AND_ONE_LOOP_CLOSURE",
+    "not_constructed": [
+      "DIMENSION_SIX_ACTIVE_FIELD_INVENTORY",
+      "DIMENSIONAL_REGULARIZATION_RENORMALIZATION_BASIS",
+      "EVANESCENT_OPERATOR_BASIS",
+      "ONE_LOOP_CLOSURE_PROOF",
+      "ANOMALOUS_DIMENSION_MATRIX"
+    ]
+  },
+  "qq_x_hdag_multiplicity_adjudication": {
+    "field_content": "qL qL X Hdag",
+    "explicit_index_route": {
+      "color_tensor": "epsilon_ABC",
+      "lorentz_tensor": "epsilon_alpha_beta for the same-chirality two-Weyl scalar bilinear",
+      "weak_tensor_candidates": [
+        "T_singlet(i,j,k,l)=epsilon_ij epsilon_kl",
+        "T_triplet(i,j,k,l)=epsilon_ik epsilon_jl + epsilon_il epsilon_jk"
+      ],
+      "three_pairing_schouten_rank": 2,
+      "two_displayed_tensor_rank": 2,
+      "conclusion": "EXACTLY_TWO_NONZERO_LINEarly_INDEPENDENT_GAUGE_LORENTZ_CONTRACTIONS"
+    },
+    "independent_character_operator_counting_route": {
+      "su2_doublet_character": "chi_2(z)=z+z^-1",
+      "four_doublet_weight_zero_coefficient": 6,
+      "four_doublet_weight_two_coefficient": 4,
+      "su2_singlet_multiplicity_by_weyl_character_projection": 2,
+      "su3_singlet_multiplicity_in_3_tensor_3_tensor_3": 1,
+      "lorentz_scalar_multiplicity_for_two_equal_chiralities": 1,
+      "total_gauge_lorentz_multiplicity": 2,
+      "method_relation_to_explicit_route": "REPRESENTATION_CHARACTER_COUNT_DOES_NOT_USE_THE_EXPLICIT_FINAL_TENSOR_LIST"
+    },
+    "identical_q_exchange_and_flavor": [
+      {
+        "family_id": "D5-QQ-X-HDAG-S",
+        "qq_weak_channel": "SINGLET_ANTISYMMETRIC_WEAK_TENSOR",
+        "flavor_symmetry": "SYMMETRIC",
+        "nf3_flavor_component_count": 6
+      },
+      {
+        "family_id": "D5-QQ-X-HDAG-A",
+        "qq_weak_channel": "TRIPLET_SYMMETRIC_WEAK_TENSOR",
+        "flavor_symmetry": "ANTISYMMETRIC",
+        "nf3_flavor_component_count": 3
+      }
+    ],
+    "nf3_total_flavor_component_count": 9,
+    "multiplicity_independently_confirmed": true,
+    "external_published_explicit_index_or_hilbert_series_confirmation": false,
+    "novelty_claim": false
+  },
+  "conditional_dimension_5_skeleton_screen": {
+    "canonical_skeleton_classes_checked": [
+      "psi2_phi2",
+      "psi2_phi_D",
+      "psi2_D2",
+      "psi2_F",
+      "phi5",
+      "phi3_D2",
+      "phi2_F",
+      "phi_F2"
+    ],
+    "new_psi2_phi2_families_from_rho3_rho8_delta": 0,
+    "new_physical_derivative_families_from_rho3_rho8_delta": 0,
+    "new_field_strength_families_from_rho3_rho8_delta": 0,
+    "charge_admissible_scalar_only_phi5_multisets": [
+      {
+        "id": "D5-PHI5-X3-HDAG-RHO3",
+        "fields": ["X", "X", "X", "Hdag", "rho3"],
+        "hypercharge": "0",
+        "delta_b": "1",
+        "delta_l_conventional": "-3",
+        "disposition": "IDENTICALLY_ZERO",
+        "reason": "COLOR_SINGLET_FORCES_EPSILON_ABC_ON_THE_THREE_IDENTICAL_X_FIELDS_AND_THEN_REQUIRES_WEDGE3_OF_THE_WEAK_DOUBLET_WHICH_IS_ZERO"
+      },
+      {
+        "id": "D5-PHI5-X3-HDAG-RHO8",
+        "fields": ["X", "X", "X", "Hdag", "rho8"],
+        "hypercharge": "0",
+        "delta_b": "1",
+        "delta_l_conventional": "-3",
+        "disposition": "NONZERO_UNIQUE_CONDITIONAL_FAMILY",
+        "family_id": "D5-X3-HDAG-RHO8",
+        "representative": "epsilon_ABD (rho8)^D_C epsilon_ij X^(A i) X^(B j) X^(C k) Hdag_k",
+        "exact_traceless_rho8_component_polynomial_nonzero_monomial_count": 36,
+        "invariant_multiplicity": 1
+      },
+      {
+        "id": "D5-PHI5-X3-H-DELTADAG",
+        "fields": ["X", "X", "X", "H", "Deltadag"],
+        "hypercharge": "0",
+        "delta_b": "1",
+        "delta_l_conventional": "-1_IF_L_DELTA_MINUS2",
+        "disposition": "IDENTICALLY_ZERO",
+        "reason": "COLOR_SINGLET_FORCES_EPSILON_ABC_ON_THE_THREE_IDENTICAL_X_FIELDS_AND_WEDGE3_OF_THE_WEAK_DOUBLET_IS_ZERO"
+      }
+    ],
+    "rho8_family_representation_counting": {
+      "symmetric_cube_identity": "Sym3((3,2))=(10,4)+(8,2)",
+      "singlet_source": "(8,2)_X3 tensor (8,1)_rho8 tensor (1,2)_Hdag",
+      "su3_8_tensor_8_singlet_multiplicity": 1,
+      "su2_2_tensor_2_singlet_multiplicity": 1,
+      "total_invariant_multiplicity": 1
+    },
+    "screen_conclusion": "RHO3_AND_DELTA_ADD_ZERO_D5_FAMILIES_WHILE_EVERY_RHO8_ACTIVE_STRATUM_ADDS_ONE_NONZERO_SCALAR_ONLY_BNV_FAMILY",
+    "matching_coefficient_at_entry_to_each_stratum": "NOT_ESTABLISHED_AND_MAY_BE_ZERO",
+    "one_loop_communication_with_delta_l_minus_1_fermionic_sector": "NOT_ESTABLISHED_PENDING_RENORMALIZABLE_COUPLING_LEDGER_AND_CLOSURE_ANALYSIS"
+  },
+  "event_stratified_d5_candidate_inventory": [
+    {"active_conditionals": [], "candidate_family_count": 6, "extension_family_ids": []},
+    {"active_conditionals": ["rho3"], "candidate_family_count": 6, "extension_family_ids": []},
+    {"active_conditionals": ["Delta"], "candidate_family_count": 6, "extension_family_ids": []},
+    {"active_conditionals": ["rho3", "Delta"], "candidate_family_count": 6, "extension_family_ids": []},
+    {"active_conditionals": ["rho8"], "candidate_family_count": 7, "extension_family_ids": ["D5-X3-HDAG-RHO8"]},
+    {"active_conditionals": ["rho3", "rho8"], "candidate_family_count": 7, "extension_family_ids": ["D5-X3-HDAG-RHO8"]},
+    {"active_conditionals": ["rho8", "Delta"], "candidate_family_count": 7, "extension_family_ids": ["D5-X3-HDAG-RHO8"]},
+    {"active_conditionals": ["rho3", "rho8", "Delta"], "candidate_family_count": 7, "extension_family_ids": ["D5-X3-HDAG-RHO8"]}
+  ],
+  "bounded_promotion": {
+    "qq_x_hdag_rank_two_multiplicity_independently_confirmed": true,
+    "listed_rho3_rho8_delta_point_dependent_d5_strata_screened": true,
+    "mandatory_sm_plus_x_delta_l_minus_1_candidate_family_count": 6,
+    "rho8_active_all_bnv_candidate_family_count": 7,
+    "d5_inventory_requires_event_stratification": true,
+    "d5_basis_validated": false,
+    "combined_d5_d6_basis_candidate": false,
+    "reason_validation_remains_open": [
+      "RHO8_EXTENSION_MATCHING_AND_ONE_LOOP_CLOSURE_NOT_ESTABLISHED",
+      "RELEVANT_RENORMALIZABLE_INTERACTION_LEDGER_NOT_FULLY_FROZEN",
+      "DIMENSIONAL_REGULARIZATION_AND_EVANESCENT_COMPLETION_NOT_STARTED",
+      "DIMENSION_SIX_ACTIVE_FIELD_INVENTORY_NOT_COMPLETE",
+      "COMBINED_D5_D6_INDEPENDENT_VALIDATION_NOT_PERFORMED"
+    ]
+  },
+  "provenance_lane": {
+    "latest_completed_tranche": "TRANCHE_0121_ARXIV_1909_08567",
+    "tranche_path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0121-arxiv-1909-08567.json",
+    "source_role": "ONE_LOOP_BARYON_CONSERVING_FLAVOUR_SMEFT_METHODOLOGY_WITH_IMPORTED_RGE_AND_POST_MEDIATOR_WRONG_FIELD_SCOPE",
+    "disposition_counts": {
+      "PARTIAL_SUPPORT": 8,
+      "CONTRARY_SCOPE_EVIDENCE": 11,
+      "NOT_APPLICABLE_OR_INSUFFICIENT": 3,
+      "closures": 0
+    },
+    "next_frozen_source": "ARXIV:2107.12133"
+  },
+  "hard_nonclaims": {
+    "full_active_theory_combined_d5_d6_raw_inventory_complete": false,
+    "global_nonredundant_basis_claimed": false,
+    "basis_validated": false,
+    "rho8_extension_claimed_generated_at_matching": false,
+    "rho8_extension_claimed_to_mix_with_delta_l_minus_1_sector": false,
+    "external_qq_multiplicity_validation_claimed": false,
+    "literature_absence_claimed": false,
+    "novelty_claimed": false,
+    "adm_calculation_started": false,
+    "adm_calculation_authorized": false,
+    "kernel_entries_present": false,
+    "model1_rge_executed": false,
+    "parameter_evaluation_count": 0,
+    "physics_result": "PROVISIONAL_D5_BASIS_STRUCTURE_ONLY"
+  },
+  "next_native_actions": [
+    "FREEZE_RELEVANT_RENORMALIZABLE_YUKAWA_AND_SCALAR_COUPLING_LEDGER_FOR_EOM_MATCHING_AND_ONE_LOOP_CLOSURE",
+    "DERIVE_COMPLETE_SM_PLUS_X_AND_CONDITIONAL_STRATUM_DIMENSION_SIX_RAW_INVENTORY",
+    "PERFORM_GLOBAL_D5_D6_NONREDUNDANCY_AND_ONE_LOOP_CLOSURE_ANALYSIS",
+    "INDEPENDENTLY_VALIDATE_THE_COMBINED_EVENT_STRATIFIED_BASIS",
+    "KEEP_ADM_CALCULATION_CLOSED"
+  ]
+}

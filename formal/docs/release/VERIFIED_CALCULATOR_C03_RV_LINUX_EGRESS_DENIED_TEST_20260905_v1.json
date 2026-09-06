@@ -1,0 +1,117 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedTestV1",
+  "test_id": "C03_RV_EXACT_LINUX_KERNEL_EGRESS_DENIED_REPRODUCTION_v1",
+  "definition_status": "DEFINED_NOT_EXECUTED",
+  "scope": "Post-milestone cross-platform reproduction of the frozen exact C03/RV computation; this definition does not modify the frozen profile, policy, candidate, receipt, or Windows evidence bundle.",
+  "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v1.md",
+  "runner": {
+    "operating_system": "ubuntu-latest",
+    "python": "3.10",
+    "julia": "1.12.6",
+    "lean_toolchain_source": "formal/toe_formal/lean-toolchain",
+    "timeout_minutes": 45
+  },
+  "phase_separation": {
+    "online_provisioning": [
+      "checkout",
+      "install pinned Python dependencies",
+      "instantiate and precompile the frozen Julia environment",
+      "build the Lean runtime-certificate checker",
+      "capture a hash-bound provisioning manifest containing dependency artifacts, executable identities, package inventory, runner identity, Git commit, and UTC completion time"
+    ],
+    "egress_denied_execution": [
+      "enter a fresh Linux network namespace",
+      "require the only network interface to be loopback",
+      "require no IPv4 or IPv6 default route",
+      "require two active numeric-address IPv4 TCP egress probes to fail for explicit network-unreachable reasons before and after trusted execution",
+      "verify the unchanged pre-isolation provisioning-manifest hashes and timestamp",
+      "execute the full 207-node exact qualification",
+      "execute Python, Julia/Nemo, Lean, and all 373 mandatory challenges",
+      "freeze and structurally replay the Linux evidence bundle",
+      "compare all non-environment receipt fields with the frozen Windows reference"
+    ]
+  },
+  "isolation_policy": {
+    "required_mechanism": "LINUX_NEW_NETWORK_NAMESPACE",
+    "required_interfaces": [
+      "lo"
+    ],
+    "maximum_ipv4_default_routes": 0,
+    "maximum_ipv6_default_routes": 0,
+    "active_probes": [
+      "1.1.1.1:443",
+      "8.8.8.8:53"
+    ],
+    "accepted_probe_errors": [
+      "ENETUNREACH",
+      "EHOSTUNREACH",
+      "EADDRNOTAVAIL"
+    ],
+    "observations": [
+      "before trusted qualification",
+      "after trusted qualification"
+    ],
+    "fallback_if_namespace_unavailable": "FAIL",
+    "applies_to_process_tree": [
+      "trusted Python verifier",
+      "Julia/Nemo independent verifier",
+      "Lean runtime-certificate checker",
+      "source resolver",
+      "challenge execution",
+      "freeze and replay"
+    ]
+  },
+  "frozen_reference": {
+    "bundle_path": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+    "bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "computation_id": "2b8ab72bd24775bfc8914e85546484f244dddc9cb5bd43dc116db0aacf2f4e8a",
+    "candidate_hash": "fe0c6fa2133a7a9ed8bb94df3a91265e91d9db1a16206b487895a3c7e4353966",
+    "profile_hash": "e131c6f94014082b8dd78bb680f1acdcf76e924b0cbe8fb62eafdda5af860617",
+    "policy_hash": "ecda89e1e6b47db2f2ec8057656cd7d622944c0202eda58ab0cd907e48c2711b",
+    "graph_hash": "67375b58adb278dfa377cab633e29c261c8b1d90f7710e3e855523a7f96c58e6",
+    "runtime_certificate_hash": "5d08aa26f2f9396d76cefc2501339bb61fa3fb0df11f4b151c19e34257978e84",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204"
+  },
+  "cross_platform_comparison": {
+    "must_match_exactly": [
+      "computation_id",
+      "candidate_hash",
+      "physics_profile_hash",
+      "verification_policy_hash",
+      "graph_hash",
+      "runtime_certificate_hash",
+      "all 16 canonical exact output values",
+      "all output verification classes and evidence bindings",
+      "all 373 challenge results",
+      "all claim-ledger entries",
+      "all source-evidence bindings",
+      "dependency closure hash"
+    ],
+    "allowed_to_differ": [
+      "runtime environment metadata",
+      "verification receipt hash induced solely by environment metadata",
+      "outer Linux frozen-bundle hash"
+    ]
+  },
+  "required_result_gates": [
+    "fresh_linux_network_namespace_only_loopback",
+    "no_default_route",
+    "active_ipv4_egress_probes_blocked_before_and_after",
+    "dependency_provisioning_manifest_hash_bound",
+    "dependency_provisioning_completed_before_denied_phase",
+    "isolation_observed_before_qualification",
+    "isolation_maintained_after_qualification",
+    "frozen_windows_reference_replayed",
+    "all_exact_identifiers_match_reference",
+    "all_receipt_fields_except_environment_match",
+    "all_207_graph_nodes_executed",
+    "all_sixteen_roots_verified_exact",
+    "all_373_mandatory_challenges_pass",
+    "generated_linux_bundle_replays"
+  ],
+  "result_retention": "Every attempted run preserves available logs, provisioning evidence, and exit disposition. A failed or inconclusive attempt cannot be promoted and is never replaced in place by a retry.",
+  "evidence_status": "No Linux result is earned until this workflow completes successfully, satisfies every linked acceptance criterion, and its result artifact is preserved and reviewed.",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

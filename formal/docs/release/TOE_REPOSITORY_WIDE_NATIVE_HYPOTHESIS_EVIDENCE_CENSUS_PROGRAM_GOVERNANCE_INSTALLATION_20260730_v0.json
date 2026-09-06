@@ -1,0 +1,24 @@
+{
+  "archive_scientifically_traversed": false,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PROGRAM_GOVERNANCE_INSTALLATION_20260730_v0",
+  "authorized_stage_count": 5,
+  "canonical_census_index_generated": false,
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "immutable_manifest": {
+    "manifest_hash": "47a39af9e9a3864bc8c38a084e66a39778a109243215082ed72b42f592b3fb15",
+    "path": "formal/docs/release/bounded_program_manifests/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_MANIFEST_v1.json"
+  },
+  "installed_program_state": "UNOPENED",
+  "maintenance_authority": "install_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_governance_v0",
+  "mandatory_exit_target": "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0",
+  "native_hypothesis_tested": "NONE_DIRECTLY_CONTROL_MODEL",
+  "no_subsidiary_scientific_targets": true,
+  "preserved_scientific_target": "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "repair_attempt_count": 0,
+  "schema_id": "toe.repository_wide_native_hypothesis_evidence_census_program.governance_installation.v0",
+  "scientific_execution_authorized": false,
+  "scientific_output_created": false,
+  "stage_1_opened": false,
+  "status": "PROGRAM_GOVERNANCE_INSTALLED_UNOPENED_NO_SCIENTIFIC_ROTATION"
+}

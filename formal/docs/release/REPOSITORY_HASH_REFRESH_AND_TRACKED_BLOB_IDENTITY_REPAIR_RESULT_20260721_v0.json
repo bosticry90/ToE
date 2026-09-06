@@ -1,0 +1,63 @@
+{
+  "acceptance_results": {
+    "eight_token_identities": "INDIVIDUALLY_PROVEN",
+    "line_ending_dependence": "NONE",
+    "repository_facing_hash_checks": "READ_ONLY_PASS",
+    "tracked_diff_after_focused_validation": "EMPTY_RELATIVE_TO_PRE_VALIDATION_STATE",
+    "tracked_source_hashes": "GIT_BLOB_BASED",
+    "untracked_source_created_by_validation": "NONE",
+    "v2_deterministic_checks": "REPRODUCIBLE_FROM_FROZEN_COMMITTED_INPUTS",
+    "write_capable_test": "TEMPORARY_TREE_ONLY_PASS"
+  },
+  "authority_accounting": {
+    "automatic_successor_authorized": false,
+    "first_unit_selector_executed": false,
+    "implementation_cycles_consumed": 1,
+    "registry_rotation_performed": false,
+    "scientific_execution_performed": false,
+    "v2_enrolled": false
+  },
+  "captured_at_utc": "2026-07-21T21:37:34Z",
+  "hash_refresh": {
+    "canonical_artifact_identity_type": "CANONICAL_ARTIFACT_SHA256",
+    "repository_check_after_repair": "OK_NO_HASH_TOKEN_DRIFT",
+    "second_temporary_write_changed_paths": 0,
+    "temporary_first_write_changed_paths": 5,
+    "temporary_first_write_token_substitutions": 8,
+    "token_adjudication_contract": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_PACKET_20260721_v0.json",
+    "token_adjudication_contract_sha256": "6ec0fb78e8e422897b22cf58748b77f46405c4588199cf4130c81a3be673f2cd"
+  },
+  "implementation_lineage": {
+    "authorization_commit": "9af90f5aa23d7a6472032e5b7994a0cfbdd95a44",
+    "frozen_implementation_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "identity_freeze_commit": "fcedde3bbc2b591eb48c41d54561235ef61c0fad",
+    "regenerated_artifact_commit": "b804dbd2f758319f664942d05b5695ae403ecd47",
+    "source_implementation_commit": "efd6fc3b88ffa233e35b7a3aa3d4f3839ef2627b"
+  },
+  "out_of_scope_status": {
+    "bulk_python_failures": "NOT_REASSESSED",
+    "lean_timeout": "NOT_REPAIRED",
+    "scientific_posture": "B-BLOCKED",
+    "scientific_work": "NOT_EXECUTED"
+  },
+  "schema_id": "REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_20260721_v0",
+  "status": "BOUNDED_REPAIR_ACCEPTANCE_CRITERIA_SATISFIED_PENDING_ONE_RESULT_REVIEW",
+  "validation": {
+    "focused_hash_refresh": "3_PASSED",
+    "focused_v2_preparation_and_review": "11_PASSED",
+    "fresh_crlf_configured_checkout": "10_PASSED_STATUS_UNCHANGED",
+    "fresh_lf_checkout": "10_PASSED_STATUS_UNCHANGED",
+    "temporary_validation_worktrees_removed": true
+  },
+  "v2_identity": {
+    "all_identities_recomputed": true,
+    "checkout_bytes_authoritative": false,
+    "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "identity_count": 28,
+    "identity_types": [
+      "CANONICAL_ARTIFACT_SHA256",
+      "GIT_BLOB_SHA256"
+    ],
+    "regenerated_artifacts_current": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_STAGE_1_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_STAGE_1_OPEN",
+  "authorized_stage": {
+    "canonical_scope_hash": "297276852be0fed5e7dafdb9a90a3dc26a2807665665dbefc69dd8572b31fb19",
+    "canonical_target": "inventory_toe_native_gravitational_requirements_v0",
+    "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+    "stage_number": 1
+  },
+  "captured_at_utc": "2026-07-31T14:00:00Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 1 scope",
+      "sha256": "a6062c810927fde39c4c54d5d22009ccd0f4d33d04fb7e001ffda01293fccf19"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+      "role": "accepted unopened installation",
+      "sha256": "5f102d5800f126c28eae13d22cd37f6d6dd32506a19f9ed4ddfcf21187cef59b"
+    },
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+      "role": "prepared ten-requirement baseline",
+      "sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f"
+    },
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.md",
+      "role": "source-bound requirement-status cautions",
+      "sha256": "7c17a967d719f0dabf887cf5fb98b7ccaf1d3dbc34f19d8b5f6368d66f2ac7ea"
+    },
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.md",
+      "role": "closed automated-evidence lane and independent-evidence boundary",
+      "sha256": "f72b793eadd4db520e30d3af5d0f22a5735d3451639ea092740a97eae3cb5b31"
+    }
+  ],
+  "permitted_work": [
+    "record exact source and content hash for each of ten prepared requirement rows",
+    "produce a controlled source-bound paraphrase for each requirement",
+    "classify native, imported, mandatory, desirable, provisional, or historical status without promotion",
+    "record mathematical content, physical motivation, scale, domain, dependencies, conflicts, and existing calculations",
+    "determine whether each requirement is precise enough for later candidate-family testing",
+    "produce an independent review and one atomic CLOSE result"
+  ],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "prohibited_work": [
+    "rank or compare the seven candidate action families",
+    "select or promote Einstein, quadratic, scalar-tensor, or another gravitational action",
+    "modify a requirement to favor a candidate",
+    "promote historical evidence",
+    "derive a new gravitational action or principle",
+    "begin a gravitational calculation",
+    "open Stage 2 automatically"
+  ],
+  "requirement_ids": [
+    "R1_DIMENSION",
+    "R2_METRIC_ONLY",
+    "R3_LOCALITY",
+    "R4_DIFF_COVARIANCE",
+    "R5_CK_FIREWALL",
+    "R6_LOCAL_VARIATION",
+    "R7_SOURCE_COMPATIBILITY",
+    "R8_NEWTON_POISSON",
+    "R9_MOMENTUM_CURRENT",
+    "R10_STABILITY_NO_FIT"
+  ],
+  "schema_id": "toe.native_gravitational_requirement_inventory.stage_1_open_authority.v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_1_OPEN_ONLY",
+  "terminal_outcomes": [
+    "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE",
+    "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+    "NATIVE_GRAVITATIONAL_REQUIREMENT_EVIDENCE_INSUFFICIENT"
+  ]
+}

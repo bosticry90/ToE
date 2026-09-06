@@ -1,0 +1,27 @@
+{
+  "accepted": true,
+  "checks": {
+    "clean_diff_gate_required": true,
+    "external_byte_archive_remains_outside_git": true,
+    "mutation_patch_hash_preserved": true,
+    "one_fresh_clone_validation_cycle_only": true,
+    "one_implementation_cycle_only": true,
+    "phase_a_blocked_result_preserved": true,
+    "phase_b_and_c_remain_unauthorized": true,
+    "science_remains_frozen": true,
+    "scientific_registry_rotation_prohibited": true,
+    "selector_authorizes_bounded_stabilization": true,
+    "selector_has_exactly_two_substantive_choices": true,
+    "v2_scientific_change_prohibited": true
+  },
+  "packet_sha256": "7bbd587ea5fc085d6e86cb3579faf13aec41d23efe982432be8ae6699ba020c1",
+  "phase_b_authorized": false,
+  "phase_c_authorized": false,
+  "preservation_sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1",
+  "schema_id": "REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_PACKET_INDEPENDENT_REVIEW_20260720_v0",
+  "scientific_execution_authorized": false,
+  "selected_next_action": "execute_one_repository_clean_baseline_validation_stabilization_cycle_v0",
+  "selector_sha256": "7d7fc03e6f7a378b27db216dc202805b206fe9710515aa972e3fdbb0f94e62d2",
+  "status": "BOUNDED_BASELINE_STABILIZATION_AUTHORIZED",
+  "verdict": "ACCEPT"
+}

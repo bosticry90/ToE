@@ -1,0 +1,110 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:46:15Z",
+  "target": "implement_repository_equation_compendium_git_blob_identity_contract_repair_v0_once",
+  "status": "AUTHORIZED_ONE_BOUNDED_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR",
+  "accepted_lineage": {
+    "commit": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+    "adjudication_result": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+    "adjudication_result_sha256": "ae399826839ca92174b13777909d131f9a52ae8daf2c2e4e75d8698c598cb16e",
+    "adjudication_result_review": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+    "adjudication_result_review_sha256": "b48e48ef0d1a0ff8f9b40902fa95cc1f52cbbc3dd2a0f97bf8f17b6265816591"
+  },
+  "bound_family": {
+    "official_baseline_nonpassing": 462,
+    "target_outcomes": 50,
+    "consumer_files": 4,
+    "current_executable_literal_binding_sites": 2,
+    "masked_additional_roots": 0
+  },
+  "required_identity_contract": {
+    "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+    "frozen_commit": "b283f4a156d2820b12da167b0a06e09fe2829b0b",
+    "current_domain": "FROZEN_GIT_BLOB_SHA256",
+    "git_blob_oid": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+    "sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae",
+    "historical_domain": "HISTORICAL_MIXED_EOL_WORKING_TREE_SHA256",
+    "historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+    "checkout_bytes_authoritative": false
+  },
+  "permitted_implementation": [
+    "add one versioned equation-compendium identity-domain contract",
+    "add one reviewed resolver using frozen commit, tracked path, Git blob OID, and blob SHA-256",
+    "route only current executable validation through the resolver while preserving historical pin values",
+    "route the current pillar execution loader's validation of the preserved historical guardrail through the same cross-version resolver",
+    "make minimum supporting edits required for all 50 mapped outcomes to execute independently",
+    "add narrowly scoped contract and resolver tests",
+    "validate exact 50 outcomes in current, fresh LF, fresh actual-CRLF, and detached independent-review checkouts",
+    "write implementation, validation, result, and independent-review governance records"
+  ],
+  "permitted_tracked_implementation_paths": [
+    "formal/docs/release/EQUATION_COMPENDIUM_IDENTITY_DOMAIN_CONTRACT_20260724_v0.json",
+    "formal/python/tools/equation_compendium_identity.py",
+    "formal/python/tools/scalar_multi_background_robustness_reports.py",
+    "formal/python/tools/pillar_seam_unit_mapping_ledger_reports.py",
+    "formal/python/tools/pillar_seam_unit_mapping_ledger_execution.py",
+    "formal/python/toe/calculations/calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness.py",
+    "formal/python/tests/test_equation_compendium_identity_domain_contract.py",
+    "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+    "formal/docs/release/EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_SELECTION_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_REVIEW_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_20260724_v0.json",
+    "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_REVIEW_20260724_v0.json"
+  ],
+  "historical_preservation": {
+    "all_preexisting_historical_pin_occurrences_preserved": true,
+    "historical_packets_reviews_and_generator_records_preserved": true,
+    "historical_pin_global_replacement_authorized": false,
+    "equation_compendium_content_modification_authorized": false
+  },
+  "authorized_cycle": {
+    "repair_implementations": 1,
+    "independent_result_reviews": 1,
+    "typed_contract_additions": 1,
+    "identity_resolver_additions": 1,
+    "historical_pin_modifications": 0,
+    "equation_compendium_modifications": 0,
+    "scientific_modifications": 0,
+    "registry_or_v2_actions": 0,
+    "lean_actions": 0,
+    "baseline_reassessments": 0,
+    "automatic_successor_actions": 0
+  },
+  "acceptance_requirements": {
+    "current_executable_bindings": "FROZEN_GIT_BLOB_SHA256",
+    "historical_pins_preserved": true,
+    "equation_compendium_content_unchanged": true,
+    "focused_50_outcomes": "50_OF_50_PASS",
+    "fresh_lf_checkout": "PASS_AND_CLEAN",
+    "fresh_actual_crlf_checkout": "PASS_AND_CLEAN",
+    "detached_independent_review": "PASS_AND_CLEAN",
+    "tracked_validation_mutations": 0,
+    "scientific_or_authority_state_changes": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false
+  },
+  "prohibited_actions": [
+    "globally replacing the historical mixed-EOL pin",
+    "changing the equation-compendium source or any scientific formula or output",
+    "repairing the four downstream historical QFT packet-review assertions",
+    "repairing missing-artifact, other packet-contract, pillar-selector, other artifact-currency, authority, path, or assertion families",
+    "running a broad baseline reassessment",
+    "performing Lean validation",
+    "enrolling V2 or rotating the registry",
+    "reconciling final authority custody",
+    "performing scientific calculations or resuming scientific execution",
+    "automatic successor cycle"
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/equation-compendium-git-blob-identity-contract-repair-v0",
+    "canonical_worktree_writes": "EXACT_PERMITTED_PATHS_ONLY",
+    "dirty_main_reads": "CUSTODY_VERIFICATION_ONLY",
+    "dirty_main_writes": "PROHIBITED"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

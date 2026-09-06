@@ -1,0 +1,571 @@
+{
+  "anti_rabbit_hole_boundary": {
+    "automatic_v2_authorized": false,
+    "lane_deferral_or_closure_remains_available": true,
+    "v1_is_final_automatic_replacement_contract_repair": true,
+    "v1_review_block_requires_fresh_selector": true
+  },
+  "authority": {
+    "consumed_review_verdict": "BLOCKED_ANALYTIC_KERNEL_REPLACEMENT_CONTRACT_INCOMPLETE",
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_REVIEW_20260719_v0.md",
+        "sha256": "b3157203008109bbf7945f0bc5a03cafcb28b13c95128f5d3559b8abf65a1553"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_REVIEW_20260719_v0.json",
+        "sha256": "6d775002f667a32caed167b1d601dc29cfac34a5b4e498af372676b1ca5cda37"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_review_v0.py",
+        "sha256": "ff47312ebe199ae8f033b96389885fa3acdba5843943ad55bfcaa079620da505"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_review_v0.py",
+        "sha256": "81b3a3b289a27ddf6d162c86b1d042d24eb1f9cd1c49a0fad504b36b6030cf2e"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelReplacementPacketReviewV0.lean",
+        "sha256": "c1a30c10822caaffd036f06a7a5cfe92b4f53ac1d13296314acdcbc4103e52bd"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0_review_scientific_response_selection_v0.py",
+      "sha256": "5f5925e66fc5770a2fdb2ec8b9fb899b559c0bbce4c1590dd643eb7941ad1e8a"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_V0_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+      "sha256": "0aa2e8c82d5807d14b4eff7c7d5ea0d09aa0f4414b88ba54b92d5eee9630ba8b"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaAnalyticSphereKernelReplacementPacketV0ReviewScientificResponseSelectionV0.lean",
+      "sha256": "6ffd3b7de04412b21f325ef9333ec249a0cdcca8df535063edca9fc20b3c164b"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0_review_scientific_response_selection_v0.py",
+      "sha256": "d5835892d2bc24486eb40c4daa3fa4afe4ea9408a698d4ca85911ea2a932897c"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This selector chooses one final eleven-gate pre-implementation contract repair. It does not prepare V1, create or execute a candidate kernel, change production dispatch, call or adjudicate cubature, compute torque, DFT, a real-150 vector, Jacobian, SVD, or identifiability result, rerun Stage A, or authorize Stage B.",
+  "current_posture": {
+    "analytic_formula_and_oracle": "ACCEPTED_FROZEN",
+    "candidate_kernel": "NOT_CREATED_NOT_AUTHORIZED",
+    "historical_cubature": "UNADJUDICATED",
+    "next_authority": "prepare_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1",
+    "production_replacement": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "replacement_contract_v0": "BLOCKED",
+    "replacement_contract_v1": "AUTHORIZED_FOR_PREPARATION_NOT_PREPARED",
+    "stage_a": "NOT_REOPENED",
+    "stage_b": "NOT_AUTHORIZED"
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "disposition": "SELECTED_FOR_FINAL_PRE_IMPLEMENTATION_CONTRACT_REPAIR_ONLY",
+        "scores": {
+          "accepted_surface_leverage": 5,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "closes_review_failures": 5,
+          "computational_economy": 4,
+          "forward_model_recovery": 5,
+          "interface_clarity": 5,
+          "numerical_reliability": 5,
+          "validation_independence": 5
+        },
+        "target": "prepare_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1",
+        "weighted_score": 226
+      },
+      {
+        "candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "disposition": "RUNNER_UP_DEFERRED_ONE_BOUNDED_REPAIR_REMAINS_PROPORTIONATE",
+        "scores": {
+          "accepted_surface_leverage": 1,
+          "anti_rabbit_hole_control": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "closes_review_failures": 5,
+          "computational_economy": 5,
+          "forward_model_recovery": 0,
+          "interface_clarity": 5,
+          "numerical_reliability": 5,
+          "validation_independence": 5
+        },
+        "target": "select_scalar_only_yukawa_internal_torsion_balance_lane_deferral_v0",
+        "weighted_score": 185
+      },
+      {
+        "candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "disposition": "DEFERRED_FRAGMENTS_ONE_LIVE_ENERGY_DERIVATIVE_INTERFACE",
+        "scores": {
+          "accepted_surface_leverage": 4,
+          "anti_rabbit_hole_control": 4,
+          "authority_clarity": 4,
+          "boundedness": 5,
+          "closes_review_failures": 3,
+          "computational_economy": 3,
+          "forward_model_recovery": 4,
+          "interface_clarity": 3,
+          "numerical_reliability": 5,
+          "validation_independence": 5
+        },
+        "target": "prepare_scalar_only_yukawa_split_energy_derivative_qualification_packet_v0",
+        "weighted_score": 184
+      },
+      {
+        "candidate_id": "ENERGY_ONLY_SHADOW_QUALIFICATION_WITH_DERIVATIVE_DEFERRED",
+        "disposition": "DEFERRED_CANNOT_QUALIFY_DECISION_BEARING_DU_DD_INTERFACE",
+        "scores": {
+          "accepted_surface_leverage": 4,
+          "anti_rabbit_hole_control": 2,
+          "authority_clarity": 3,
+          "boundedness": 5,
+          "closes_review_failures": 2,
+          "computational_economy": 4,
+          "forward_model_recovery": 3,
+          "interface_clarity": 3,
+          "numerical_reliability": 4,
+          "validation_independence": 4
+        },
+        "target": "prepare_scalar_only_yukawa_energy_only_shadow_qualification_packet_v0",
+        "weighted_score": 156
+      }
+    ],
+    "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+    "runner_up_score": 185,
+    "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+    "selected_score": 226,
+    "winning_margin": 41
+  },
+  "review_interpretation": {
+    "accepted_review_gates_frozen": 51,
+    "analytic_formula_refuted": false,
+    "failed_review_gates": [
+      "R32_INTERNAL_REPLACEMENT_TARGETS_EXACT",
+      "R33_LAMBDA_COMPONENT_COMPATIBILITY_MATRIX_COMPLETE",
+      "R34_ARRAY_DOMAIN_FAILURE_SEMANTICS_COMPLETE",
+      "R35_VALIDATION_ONLY_HOOK_ENFORCEMENT_EXECUTABLE",
+      "R37_EIGHT_REGRESSION_INPUT_RECORDS_COMPLETE",
+      "R40_INDEPENDENT_RADIAL_DERIVATIVE_REFERENCE_COMPLETE",
+      "R41_LIMIT_AND_BOUNDARY_PROBES_NUMERIC",
+      "R43_MUTATION_ROUTES_COMPLETE",
+      "R44_MUTATION_DETECTION_PREDICATES_NUMERIC",
+      "R50_RUNTIME_PROBE_INPUTS_EXACT",
+      "R52_CANONICAL_SERIALIZATION_SCHEMA_EXACT"
+    ],
+    "implementation_execution": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "principal_block": "BLOCKED_REPLACEMENT_VALIDATION_INDEPENDENCE",
+    "production_cubature_adjudicated": false,
+    "review_verdict": "BLOCKED_ANALYTIC_KERNEL_REPLACEMENT_CONTRACT_INCOMPLETE",
+    "secondary_blocks": [
+      "BLOCKED_REPLACEMENT_INTERFACE_IDENTITY",
+      "BLOCKED_REPLACEMENT_DOMAIN_COVERAGE"
+    ]
+  },
+  "schema_id": "toe.post_scalar_only_yukawa.analytic_sphere_kernel_replacement_packet_v0_review.scientific_response_selection.v0",
+  "scope": {
+    "automatic_v2_authorized": false,
+    "blocked_v0_review_frozen": true,
+    "eleven_failed_gates_selected_for_contract_repair": true,
+    "fifty_one_accepted_review_gates_frozen": true,
+    "jacobian_or_identifiability_authorized": false,
+    "old_cubature_adjudicated": false,
+    "old_cubature_called": false,
+    "production_kernel_replacement_authorized": false,
+    "production_kernel_replacement_performed": false,
+    "scientific_response_selection_executed": true,
+    "shadow_kernel_implementation_authorized": false,
+    "shadow_kernel_implementation_performed": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "torque_or_dft_authorized": false,
+    "v1_packet_preparation_authorized": true,
+    "v1_packet_prepared_now": false,
+    "v1_packet_review_authorized_now": false
+  },
+  "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+  "selected_next_target": "prepare_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v1",
+  "selected_next_target_kind": "PREPARATION_ONLY_FINAL_ELEVEN_GATE_CONTRACT_REPAIR_NO_KERNEL_IMPLEMENTATION",
+  "selected_route": "REPAIR_ANALYTIC_KERNEL_REPLACEMENT_EXECUTION_CONTRACT",
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 24,
+    "pass_count": 24,
+    "rows": [
+      {
+        "gate_id": "EXACT_BLOCKED_REVIEW_AUTHORITY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FIFTY_ONE_ACCEPTED_REVIEW_GATES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_ELEVEN_FAILED_REVIEW_GATES_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FORMULAS_EVALUATOR_AND_FIREWALLS_NOT_REOPENED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BLOCK_INTERPRETED_AS_CONTRACT_NOT_PHYSICAL_FAILURE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_FOUR_BOUNDED_RESPONSE_CANDIDATES",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_TEN_WEIGHTED_CRITERIA",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SELECTION_STABLE_IN_THIRTY_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "REPAIR_LIMITED_TO_ELEVEN_FAILED_GATES",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "INDEPENDENT_DU_DD_REFERENCE_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EIGHT_REGRESSION_INPUT_ROWS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MUTATION_ROUTES_AND_NUMERIC_PREDICATES_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "INTERFACE_COMPATIBILITY_MATRIX_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ARRAY_ATOMIC_FAILURE_RULE_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "VALIDATION_HOOK_ENFORCEMENT_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "LIMIT_AND_BOUNDARY_PROBE_GRID_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RUNTIME_WORKLOAD_VECTOR_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CANONICAL_SERIALIZATION_SCHEMA_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V1_IS_FINAL_AUTOMATIC_REPLACEMENT_CONTRACT_REPAIR",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_KERNEL_IMPLEMENTATION_OR_EXECUTION_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PRODUCTION_ADOPTION_OR_DISPATCH_CHANGE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_OLD_CUBATURE_CALL_OR_ADJUDICATION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_TORQUE_DFT_STAGE_A_IDENTIFIABILITY_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FRESH_INDEPENDENT_V1_REVIEW_REQUIRED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_id": "POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_REPLACEMENT_PACKET_V0_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0",
+  "selection_policy": {
+    "candidate_count": 4,
+    "criteria_weights": {
+      "accepted_surface_leverage": 5,
+      "anti_rabbit_hole_control": 4,
+      "authority_clarity": 4,
+      "boundedness": 4,
+      "closes_review_failures": 5,
+      "computational_economy": 4,
+      "forward_model_recovery": 5,
+      "interface_clarity": 5,
+      "numerical_reliability": 5,
+      "validation_independence": 5
+    },
+    "criterion_count": 10,
+    "criterion_scale": "0_TO_5_PRIORITY_SCORE_NOT_TRUTH_PROBABILITY",
+    "tie_break_rule": "LEXICOGRAPHIC_CANDIDATE_ID"
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 16,
+    "rows": [
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 201,
+        "variant": "omit_accepted_surface_leverage"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 169,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 201,
+        "variant": "omit_closes_review_failures"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 160,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 201,
+        "variant": "omit_validation_independence"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 169,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 201,
+        "variant": "omit_interface_clarity"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 160,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 201,
+        "variant": "omit_numerical_reliability"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 185,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 201,
+        "variant": "omit_forward_model_recovery"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 165,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 206,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 172,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 210,
+        "variant": "omit_computational_economy"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 168,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 206,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 168,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 206,
+        "variant": "omit_anti_rabbit_hole_control"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 184,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "accepted_surface_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 188,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "accepted_surface_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 181,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "closes_review_failures_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "closes_review_failures_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "validation_independence_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "validation_independence_+1"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 181,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "interface_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "interface_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "numerical_reliability_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "numerical_reliability_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 185,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "forward_model_recovery_-1"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 188,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "forward_model_recovery_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "SPLIT_ENERGY_AND_RADIAL_DERIVATIVE_QUALIFICATION",
+        "runner_up_score": 181,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 222,
+        "variant": "computational_economy_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 230,
+        "variant": "computational_economy_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 221,
+        "variant": "anti_rabbit_hole_control_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_ANALYTIC_REPLACEMENT_AND_DEFER_TORSION_BALANCE_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ELEVEN_GATE_REPLACEMENT_CONTRACT_REPAIR_V1",
+        "selected_score": 231,
+        "variant": "anti_rabbit_hole_control_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 30
+  },
+  "target": "select_post_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0_review_scientific_response_v0",
+  "v1_repair_contract": {
+    "accepted_review_gate_count_frozen": 51,
+    "all_other_surfaces": "FROZEN_NO_REDESIGN",
+    "automatic_v2": "PROHIBITED",
+    "candidate_kernel_creation": "FORBIDDEN_DURING_PACKET_PREPARATION",
+    "derivative_reference_independence_rule": "REFERENCE_MUST_BE_DERIVED_FROM_FROZEN_HIGH_PRECISION_ENERGY_VALUES_OR_AN_INDEPENDENT_HIGH_PRECISION_RADIAL_DIFFERENTIATION_PATH_AND_MAY_NOT_CALL_THE_CANDIDATE_DERIVATIVE",
+    "production_source_change": "FORBIDDEN",
+    "repair_gate_count": 11,
+    "repair_gate_ids": [
+      "R32_INTERNAL_REPLACEMENT_TARGETS_EXACT",
+      "R33_LAMBDA_COMPONENT_COMPATIBILITY_MATRIX_COMPLETE",
+      "R34_ARRAY_DOMAIN_FAILURE_SEMANTICS_COMPLETE",
+      "R35_VALIDATION_ONLY_HOOK_ENFORCEMENT_EXECUTABLE",
+      "R37_EIGHT_REGRESSION_INPUT_RECORDS_COMPLETE",
+      "R40_INDEPENDENT_RADIAL_DERIVATIVE_REFERENCE_COMPLETE",
+      "R41_LIMIT_AND_BOUNDARY_PROBES_NUMERIC",
+      "R43_MUTATION_ROUTES_COMPLETE",
+      "R44_MUTATION_DETECTION_PREDICATES_NUMERIC",
+      "R50_RUNTIME_PROBE_INPUTS_EXACT",
+      "R52_CANONICAL_SERIALIZATION_SCHEMA_EXACT"
+    ],
+    "required_repairs": [
+      "EXACT_INTERNAL_FUNCTION_REPLACEMENT_LIST_DISPATCH_SYMBOL_AND_UNCHANGED_CALLERS",
+      "CURRENT_VERSUS_PROPOSED_LAMBDA_COMPONENT_COMPATIBILITY_MATRIX",
+      "ATOMIC_ARRAY_FAILURE_SEMANTICS",
+      "ENFORCEABLE_VALIDATION_ONLY_HOOK_ROUTE",
+      "EIGHT_COMPLETE_REGRESSION_INPUT_AND_OUTPUT_ROWS",
+      "INDEPENDENT_HIGH_PRECISION_DU_DD_REFERENCE_AND_TOLERANCES",
+      "EXACT_LIMIT_BOUNDARY_CASES_LADDERS_EXPECTATIONS_AND_TOLERANCES",
+      "TWELVE_MUTATION_CASE_COMPONENT_INJECTION_AND_EXECUTION_ROUTES",
+      "TWELVE_NUMERIC_OR_EXCEPTION_DETECTION_PREDICATES",
+      "EXACT_TEN_THOUSAND_CALL_RUNTIME_WORKLOAD_AND_COMPONENT_ORDER",
+      "CANONICAL_SERIALIZATION_OBJECT_FLOAT_ENCODING_KEY_ORDER_AND_FAILURE_RULE"
+    ],
+    "status": "PACKET_PREPARATION_AUTHORIZED_NOT_PREPARED",
+    "v1_is_final_automatic_contract_repair": true
+  },
+  "verdict": "SELECTED_ANALYTIC_KERNEL_REPLACEMENT_CONTRACT_REPAIR_V1_PREPARATION"
+}

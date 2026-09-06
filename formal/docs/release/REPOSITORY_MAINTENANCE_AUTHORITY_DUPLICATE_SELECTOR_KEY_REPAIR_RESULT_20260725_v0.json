@@ -1,0 +1,106 @@
+{
+  "schema_id": "REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T03:17:05Z",
+  "status": "MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_base": {
+    "commit": "49e9216ec4727ccd0f421bf59392175e3a036d7c",
+    "tree": "ee5f4c61c10bfca892b385aae8043ab331f639e7",
+    "lineage_result_review": "formal/docs/release/REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_REVIEW_20260725_v0.json"
+  },
+  "authorization": {
+    "bootstrap_authority_source": "ACCEPTED_ADJUDICATION_PLUS_OPERATOR",
+    "ambiguous_json_used_as_sole_authority": false,
+    "selection": {
+      "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_SELECTION_20260725_v0.json",
+      "sha256": "69b864f217ed8e061bd37b3114c933327233dd98a5cebc84616d581d7dbb1ece"
+    },
+    "packet": {
+      "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_PACKET_20260725_v0.json",
+      "sha256": "eb704f2d02ad20fa3405d915c39f1addc9ee40907c546c0ca581436111c709bc"
+    },
+    "bootstrap": {
+      "path": "formal/docs/release/MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_BOOTSTRAP_20260725_v0.json",
+      "sha256": "a321e3539cd07119b500444a50cce87cc343d2acee8efccaa191439d1432c1e7",
+      "execution_counter_authorized": 1
+    },
+    "consumption": {
+      "path": "formal/docs/release/MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_BOOTSTRAP_CONSUMPTION_20260725_v0.json",
+      "sha256": "d49c96e18accc273b05408818ef59c7882b649341837576da6aa0388a7a9eb5a",
+      "execution_counter_consumed": 1,
+      "exceptional_bootstrap_authority_after": "PERMANENTLY_EXPIRED"
+    }
+  },
+  "authority_document": {
+    "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+    "before": {
+      "bytes": 25798,
+      "sha256": "51a884e65da1aa4aa477b9d0f11671f704c799318513eae7c985de0020eccf81",
+      "top_level_selector_keys": 2
+    },
+    "after": {
+      "bytes": 25580,
+      "sha256": "1d6604e25da32a886d1431c6eb3a92c16e4082d8b9ac5cda8bc16a469e99d224",
+      "top_level_selector_keys": 1
+    },
+    "minimal_byte_diff": {
+      "start_byte": 9609,
+      "end_byte_exclusive": 9827,
+      "removed_bytes": 218,
+      "removed_sha256": "f28a10533793dcd12793aa94090f92af860ed581b39137e72984e2788edcb778",
+      "removed_content": "STALE_SELECTOR_MEMBER_AND_REQUIRED_SEPARATOR_ONLY",
+      "all_other_bytes_unchanged": true
+    },
+    "authorized_surviving_selector": {
+      "path": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+      "sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
+    }
+  },
+  "parsing_contract": {
+    "current_authority_interpretation": "STRICT_CURRENT_AUTHORITY_PARSE_ONLY",
+    "strict_parser": {
+      "path": "formal/python/tools/governance_json.py",
+      "sha256": "de77525cdafb953df40fd46fe70ed375621ce7770a8bf0b6f63cfd93cfe593cc",
+      "result": "PASS"
+    },
+    "forensic_historical_parser": "FORENSIC_HISTORICAL_PARSE_WITH_DUPLICATE_REPORTING",
+    "ordinary_parser_role": "DIAGNOSTIC_ONLY",
+    "ordinary_and_strict_semantics_after_repair": "IDENTICAL"
+  },
+  "validation": {
+    "focused": {
+      "path": ".toe-recovery/custody-v0/maintenance-authority-duplicate-selector-key-repair-v0/IMPLEMENTATION_FINAL_FOCUSED_v0.xml",
+      "sha256": "75e68fc81a715a0c08124267fcd7aa261a1aa00d656efafc62bc6c8d07eb0c91",
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "errors": 0
+    },
+    "negative_controls": [
+      "SOURCE_BYTE_TAMPER_FAILS_CLOSED",
+      "IMPLEMENTATION_TOOL_TAMPER_FAILS_CLOSED",
+      "EXPANDED_DELETION_RANGE_FAILS_CLOSED",
+      "NESTED_DUPLICATE_KEY_FAILS_CLOSED",
+      "SECOND_EXECUTION_FAILS_CLOSED"
+    ],
+    "checkout_clean_required_after_commit": true
+  },
+  "scope": {
+    "pillar_v1_repair_performed": false,
+    "maintenance_target_rotated": false,
+    "scientific_content_changed": false,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "automatic_successor": false
+  },
+  "custody": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_paths": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_mutated": false
+  },
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_ONE_TIME_AUTHORITY_REPAIR_ONLY",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

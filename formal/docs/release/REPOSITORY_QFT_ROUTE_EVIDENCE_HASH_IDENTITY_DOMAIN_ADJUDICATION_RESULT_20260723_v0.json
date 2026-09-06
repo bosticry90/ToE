@@ -1,0 +1,174 @@
+{
+  "schema_id": "REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260723_v0",
+  "result": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_PROVENANCE_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/qft-route-evidence-hash-identity-domain-adjudication-v0",
+  "accepted_base_commit": "9aae6deb5778c3618b21647941d38dac9f06ac7c",
+  "authorization_commit": "f1662b782cab709c548d7c9b23ae9ec0307c6a25",
+  "scope": {
+    "diagnostic_only": true,
+    "all_target_outcomes_individually_mapped": true,
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "artifacts_regenerated": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "automatic_successor_cycle": false
+  },
+  "consumer_mapping": {
+    "outcomes": 67,
+    "unique_consumer_nodeids": 67,
+    "consumer_files": {
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py": 28,
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py": 39
+    },
+    "shared_primary_loader": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
+    "v1_transitive_loader": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py",
+    "all_consumers_share_loader_root": true,
+    "all_consumers_directly_pin_qft_independently": false
+  },
+  "prior_root_adjudication": {
+    "prior_root_id": "QFT_ROUTE_EVIDENCE_HASH_DRIFT",
+    "prior_outcomes": 67,
+    "qft_route_evidence_currently_matches": true,
+    "prior_single_qft_identity_description_accurate": false,
+    "corrected_description": "ONE_SHARED_ROUTE_EVIDENCE_LOADER_WITH_FOUR_SEQUENTIALLY_MASKED_IDENTITY_SUBROOTS",
+    "primary_causal_subroots": 4
+  },
+  "identity_table": {
+    "route_evidence_identities": 9,
+    "raw_checkout_pins_currently_matching": 5,
+    "raw_checkout_pins_currently_stale": 4,
+    "identity_domain_at_original_capture": {
+      "crlf_checkout_pins": 7,
+      "git_blob_or_lf_pin": 1,
+      "unreconstructable_pin": 1
+    },
+    "conclusion": "The original table never represented one coherent identity domain."
+  },
+  "exhaustive_stale_subroots": [
+    {
+      "masked_order": 1,
+      "root_id": "QM_ROUTE_SOURCE_STALE_CRLF_PIN_AFTER_COMMITTED_CONTENT_CHANGE",
+      "path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "classification": "STALE_BINDING_AND_NONHERMETIC_IDENTITY_DOMAIN",
+      "pinned_sha256": "5ad933d40d8151bcef17332cd39d4e0d2dbfc3a9310da1a95f1d68f70a6b4bcc",
+      "current_git_blob_oid": "24691f951d142512c8b4267af0b3598dc5a29d3c",
+      "current_git_blob_sha256": "0898e05d18821d2901390dffc42b959bcdbf83964c49eecae598191316576c4a",
+      "current_checkout_sha256": "439bf41d859bd227197d330a02f27a40540f3401c108a308d93bbc39db5586fb",
+      "recommended_identity_disposition": "RETAIN_AS_GIT_BLOB_IDENTITY"
+    },
+    {
+      "masked_order": 2,
+      "root_id": "EM_ROUTE_SOURCE_PIN_PROVENANCE_UNRECONSTRUCTABLE",
+      "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "classification": "PROVENANCE_INCOMPLETE",
+      "pinned_sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+      "current_git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+      "current_git_blob_sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c",
+      "current_checkout_sha256": "4e8ef8441c7102f9d943c6e634a3011eb775506207cb276c1f0dbabc4c84c44e",
+      "reachable_git_blob_lf_or_crlf_match": false,
+      "recommended_identity_disposition": "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW"
+    },
+    {
+      "masked_order": 3,
+      "root_id": "TARGET_MAP_GIT_BLOB_PIN_COMPARED_TO_CRLF_CHECKOUT",
+      "path": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+      "classification": "IDENTITY_DOMAIN_MISMATCH",
+      "pinned_and_current_git_blob_sha256": "2550ca7b24e03f59535133b3856ed2d7d5094a7fd3ab5a96a5a90faaeb8eda25",
+      "current_git_blob_oid": "d02c3f67b30b5edbd6e1ffa3c4b668bc9022d1e8",
+      "current_checkout_sha256": "b5e275024c0002d1d6ee47425ab8727ea7522d469fe1961928c604f2be7b5046",
+      "recommended_identity_disposition": "RETAIN_AS_GIT_BLOB_IDENTITY"
+    },
+    {
+      "masked_order": 4,
+      "root_id": "SCALAR_REVIEW_CRLF_PIN_COMPARED_TO_CANONICAL_LF_CHECKOUT",
+      "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "classification": "IDENTITY_DOMAIN_MISMATCH",
+      "pinned_crlf_sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509",
+      "current_git_blob_oid": "bde76bc1b6e3ef27e74971a7a16e781dfa9034cf",
+      "current_git_blob_and_checkout_sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544",
+      "recommended_identity_disposition": "RETAIN_AS_CANONICAL_ARTIFACT_IDENTITY"
+    }
+  ],
+  "identity_dispositions": {
+    "REMOVE_DEPENDENCY": 0,
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE": 0,
+    "RETAIN_AS_GIT_BLOB_IDENTITY": 7,
+    "RETAIN_AS_CANONICAL_ARTIFACT_IDENTITY": 1,
+    "RETAIN_AS_EXPLICIT_GENERATED_EVIDENCE_IDENTITY": 0,
+    "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW": 1
+  },
+  "consumer_disposition": {
+    "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW": 67,
+    "rationale": "Every consumer reaches the same route bundle. The bundle cannot be safely rebound while the EM pin has no reachable provenance."
+  },
+  "latent_dependency_confirmation": {
+    "diagnostic_method": "IN_MEMORY_HASH_SUBSTITUTION_WITH_FULL_RESTORATION_NO_FILE_WRITES",
+    "observed_sequence": [
+      "QM",
+      "EM",
+      "FULL_PILLAR_TARGET_MAP",
+      "SCALAR_RESULT_REVIEW",
+      "PASS"
+    ],
+    "v1_additional_latent_mismatch_after_four": false,
+    "four_subroots_exhaust_loader_identity_mismatches": true
+  },
+  "authority_and_provenance": {
+    "qm_and_em": "COMMITTED_BOUNDED_AUTHORITATIVE_PILLAR_SURFACES",
+    "target_map": "COMMITTED_BOUNDED_PLANNING_NONCLAIM",
+    "scalar_review": "HISTORICAL_ACCEPTED_BOUNDED_PROVISIONAL_IMPORTED_MATTER_REVIEW_WITH_CURRENT_ROUTE_LINEAGE_RELEVANCE",
+    "unenrolled_artifact_reference_found": false,
+    "tracked_deterministic_generator_found_for_stale_identities": false,
+    "scientific_authority_effect_of_adjudication": "NONE"
+  },
+  "overall_disposition": "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW",
+  "implementation_recommendation": "NO_HASH_OR_CONSUMER_REPAIR_UNTIL_EM_PIN_PROVENANCE_OR_INTENDED_AUTHORITY_VERSION_IS_INDEPENDENTLY_RESOLVED",
+  "narrow_future_repair_shape_if_unblocked": [
+    "Resolve the intended EM authority version without using dirty-main bytes as evidence.",
+    "Bind manually maintained Markdown policy and planning sources to Git blob identities.",
+    "Bind the scalar result review to one canonical LF artifact identity.",
+    "Update v0 and v1 route input manifests together under separate repair authority.",
+    "Validate all 67 consumers in clean LF and CRLF checkouts before broad reassessment."
+  ],
+  "custody": {
+    "validation_checkout": "CLEAN",
+    "unexpected_untracked_source": 0,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_total_paths": 629,
+    "dirty_main_bytes": "UNCHANGED"
+  },
+  "external_evidence": [
+    {
+      "path": "REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_LEDGER_20260723_v0.json",
+      "sha256": "e17758bbcaa90c935cef4d39bbd07be44068040af7f0ba6442de9db928ca4f88"
+    },
+    {
+      "path": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_ANALYSIS_v0.json",
+      "sha256": "c439f548fd9612c3b39934d299924b2ab906815bb0ec5ee360ffd9f737b02b0d"
+    },
+    {
+      "path": "QFT_ROUTE_EVIDENCE_67_CONSUMER_NODEIDS_v0.txt",
+      "sha256": "cc791daa0f2e293304be95ebffa89d6d8f63e2f5a002b90408820edc05e127cf"
+    },
+    {
+      "path": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_EXECUTION_MANIFEST_v0.json",
+      "sha256": "da60051af0e3f2eff88e8558117e19ed79dab5b922b2f87c233ae64377eda3e4"
+    },
+    {
+      "path": "build_qft_route_identity_adjudication_v0.py",
+      "sha256": "8ec7390e2d06edd9d56172d21fe076dee44add1a362f84c63b84623cd566f89f"
+    }
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "next_cycle": "NOT_AUTOMATICALLY_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_ADJUDICATION_RESULT_ONLY",
+  "captured_at_utc": "2026-07-23T03:00:00Z"
+}

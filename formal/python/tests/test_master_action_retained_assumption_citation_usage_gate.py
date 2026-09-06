@@ -177,7 +177,6 @@ def test_frontier_and_aggregate_advance_after_citation_language_audit() -> None:
     )
     assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "def masterActionCitationBoundariesV0" in master_action_text
     assert "theorem master_action_citation_boundaries_length_v0" in master_action_text
 

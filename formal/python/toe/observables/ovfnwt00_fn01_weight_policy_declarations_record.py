@@ -20,7 +20,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from formal.python.meta.repo_environment import find_repo_root
+from formal.python.meta.repo_environment import canonicalize_repo_paths, find_repo_root
 
 from formal.python.toe.constraints.admissibility_manifest import check_required_gates
 
@@ -117,7 +117,7 @@ class OVFNWT00WeightPolicyDeclarationsRecord:
     scope_limits: list[str]
 
     def to_jsonable_without_fingerprint(self) -> dict[str, Any]:
-        return {
+        return canonicalize_repo_paths({
             "schema": str(self.schema),
             "date": str(self.date),
             "observable_id": str(self.observable_id),
@@ -125,7 +125,7 @@ class OVFNWT00WeightPolicyDeclarationsRecord:
             "inputs": dict(self.inputs),
             "rows": list(self.rows),
             "scope_limits": list(self.scope_limits),
-        }
+        }, repo_root=find_repo_root(Path(__file__)))
 
     def fingerprint(self) -> str:
         return _sha256_json(self.to_jsonable_without_fingerprint())

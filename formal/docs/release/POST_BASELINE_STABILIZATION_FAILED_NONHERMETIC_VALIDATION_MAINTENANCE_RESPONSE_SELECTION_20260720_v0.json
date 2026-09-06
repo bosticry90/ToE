@@ -1,0 +1,40 @@
+{
+  "authorization_boundary": {
+    "baseline_repair_authorized": false,
+    "branch_checkout_in_dirty_main_authorized": false,
+    "root_cause_packet_authorized": true,
+    "scientific_authority_rotation_authorized": false,
+    "scientific_execution_authorized": false,
+    "test_modification_authorized": false,
+    "v2_enrollment_authorized": false
+  },
+  "containment_state": {
+    "canonical_repository": "C:/Users/psboy/Documents/ToE",
+    "containment_outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY",
+    "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
+    "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
+    "recycled_recovery_items_permanently_removed": true
+  },
+  "prior_failure": {
+    "outcome": "BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION",
+    "result_path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0.json",
+    "result_sha256": "d2db8ace01049ccc05234f54f830df4af9040a0c5eaf8c776946bd07c51d888b",
+    "review_path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_INDEPENDENT_REVIEW_20260720_v0.json",
+    "review_sha256": "5b4650229e1a4f2eec03c7505ae362851645fc742ce618ac202d0d556958e095"
+  },
+  "schema_id": "POST_BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0",
+  "scientific_authority": {
+    "posture": "B-BLOCKED",
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506",
+    "status_changed": false
+  },
+  "selected_maintenance_target": "prepare_nonhermetic_validation_root_cause_packet_v0",
+  "selected_route": "PRESERVE_FAILURE_AND_AUTHORIZE_ONE_NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET",
+  "selector_id": "select_post_baseline_stabilization_failed_nonhermetic_validation_maintenance_response_v0",
+  "status": "SELECTED_BOUNDED_ROOT_CAUSE_PACKET_NO_REPAIR_OR_SCIENCE",
+  "substantive_choices": [
+    "PRESERVE_FAILURE_AND_AUTHORIZE_ONE_NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET",
+    "PRESERVE_FAILURE_AND_DEFER_REPOSITORY_RECOVERY"
+  ]
+}

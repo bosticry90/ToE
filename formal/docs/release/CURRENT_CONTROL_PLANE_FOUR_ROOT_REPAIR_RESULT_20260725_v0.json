@@ -1,0 +1,117 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_RESULT_20260725_v0",
+  "verdict": "CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_IMPLEMENTED",
+  "implementation": {
+    "branch": "codex/current-control-plane-four-root-repair-v0",
+    "commit": "76dd14cf2a85277d528cdcdc756e1875081655d4",
+    "tree": "e6410c3946f2689e1cfe18f00fab56924cb030f0"
+  },
+  "authority": {
+    "selection": "formal/docs/release/CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_SELECTION_20260725_v0.json",
+    "packet": "formal/docs/release/CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_PACKET_20260725_v0.json",
+    "execution_count_used": 1,
+    "successor_authority": "NONE"
+  },
+  "outcomes": [
+    {
+      "obligation_id": "NONPASSING-00145",
+      "test_id": "formal/python/tests/test_admissibility_manifest.py::test_admissibility_manifest_exists_and_matches_current",
+      "result": "PASS",
+      "reason": "Current constraint sources are bound to a versioned commit-relative Git-blob identity contract."
+    },
+    {
+      "obligation_id": "NONPASSING-00147",
+      "test_id": "formal/python/tests/test_admissibility_manifest.py::test_admissibility_manifest_tracks_lean_gate_stubs_deterministically",
+      "result": "PASS",
+      "reason": "Current gate stubs are bound to the same versioned commit-relative Git-blob identity contract."
+    },
+    {
+      "obligation_id": "NONPASSING-02535",
+      "test_id": "formal/python/tests/test_formal_docs_paper_cross_reference_integrity_gate.py::test_formal_docs_paper_and_state_cross_references_resolve",
+      "result": "PASS",
+      "reason": "Current-reference integrity is green while missing historical references remain visible in a separate debt report."
+    },
+    {
+      "obligation_id": "NONPASSING-09138",
+      "test_id": "formal/python/tests/test_repository_canonical_text_integrity_gate.py::test_eol_policy_does_not_glob_hash_bound_historical_trees",
+      "result": "EXPLICITLY_RECLASSIFIED",
+      "reason": "The assertion contradicts the accepted broad-LF policy and is a superseded historical snapshot with no current reachability.",
+      "historical_failure_preserved": true,
+      "replacement_current_guard": "formal/python/tests/test_repository_canonical_text_integrity_gate.py::test_canonical_maintenance_zones_are_pinned_to_lf"
+    }
+  ],
+  "admissibility_identity": {
+    "contract": "formal/docs/release/ADMISSIBILITY_MANIFEST_CURRENT_IDENTITY_CONTRACT_20260725_v0.json",
+    "binding_count": 15,
+    "identity_algorithm": "SHA256(GIT_BLOB_CONTENTS)",
+    "current_relative_to_commit": "380db2de3aca8c19fdf1ab9c43d0e6629d232009",
+    "legacy_manifest": {
+      "path": "formal/markdown locks/gates/admissibility_manifest.json",
+      "git_blob": "b989efeedb399a11c2d9ba8dfc8614cc2f8df963",
+      "rewritten": false
+    },
+    "lean_sources_changed": 0,
+    "gate_enabled_state_changed": false
+  },
+  "cross_reference_debt": {
+    "report": "formal/output/validation_profiles/HISTORICAL_CROSS_REFERENCE_DEBT_20260725_v0.json",
+    "sha256": "b7e6fa239af42055c26880e13065e29f9316ce22701bfb0117d1d07b047622f1",
+    "current_reference_missing_count": 0,
+    "historical_missing_count": 497,
+    "historical_source_count": 16,
+    "historical_reports_restored": 0,
+    "current_verdict_affected": false
+  },
+  "eol_reachability_correction": {
+    "record": "formal/docs/release/CURRENT_REACHABILITY_CORRECTION_EOL_POLICY_20260725_v0.json",
+    "gitattributes_git_blob": "57f8d45edaf2bb1280db5b226ad7680ca817f5dd",
+    "gitattributes_changed": false,
+    "historical_assertion_changed": false,
+    "historical_assertion_observed_result": "FAIL_FOR_ACCEPTED_BROAD_LF_RULES",
+    "current_replacement_guard_result": "PASS"
+  },
+  "validation": {
+    "implementation_checkout": {
+      "focused_tests": "6/6 PASS",
+      "historical_eol_snapshot": "1/1 EXPECTED FAIL",
+      "clean": true
+    },
+    "fresh_lf_checkout": {
+      "commit": "76dd14cf2a85277d528cdcdc756e1875081655d4",
+      "focused_tests": "6/6 PASS",
+      "debt_report_check": "PASS",
+      "clean": true
+    },
+    "fresh_actual_crlf_working_bytes": {
+      "commit": "76dd14cf2a85277d528cdcdc756e1875081655d4",
+      "converted_python_files": 4,
+      "focused_tests": "6/6 PASS",
+      "debt_report_check": "PASS",
+      "restored_clean": true
+    },
+    "detached_review_checkout": {
+      "commit": "76dd14cf2a85277d528cdcdc756e1875081655d4",
+      "focused_tests": "6/6 PASS",
+      "debt_report_check": "PASS",
+      "clean": true
+    }
+  },
+  "custody": {
+    "validation_checkout_clean": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_changes": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_total_paths": 629,
+    "dirty_main_byte_preserved": true
+  },
+  "scientific_state": {
+    "scientific_posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": "0 / 12",
+    "qft_gr_seam": "OPEN",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "scientific_resumption": "NOT_AUTHORIZED",
+    "scientific_content_changed": false
+  },
+  "baseline_reassessment": "NOT_PERFORMED",
+  "lean_activity": "NONE"
+}

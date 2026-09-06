@@ -1,0 +1,41 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_PROFILE_V3_RESULT_20260725_v0",
+  "status": "RECOVERY_BLOCKED_CURRENT_CONTROL_PLANE_PROFILE_V3",
+  "execution": {
+    "selection": "formal/docs/release/CURRENT_RECOVERY_VALIDATION_PROFILE_V3_SELECTION_20260725_v0.json",
+    "profile_nodeids": 3626,
+    "passed": 3266,
+    "skipped": 357,
+    "failed": 0,
+    "errors": 3,
+    "duration_seconds": 2736.13,
+    "pytest_exit_code": 1
+  },
+  "single_exposed_root": {
+    "root": "ACCEPTED_LINEAGE_CONTRACT_PRECEDED_LATER_ACCEPTED_PROFILE_REPAIR_REVIEW",
+    "outcomes": 3,
+    "accepted_commit_outside_frozen_proposed_base": "2006ed411b0669f4de8ba10db1787207050affd3",
+    "classification": "CURRENT_REPRODUCIBILITY_CRITICAL",
+    "scientific_content_defect": false,
+    "required_repair": "VERSION_ACCEPTED_LINEAGE_CONTRACT_THROUGH_ACCEPTED_PROFILE_REPAIR_REVIEW"
+  },
+  "immutability": {
+    "profile_state_unchanged": true,
+    "current_profile_sha256": "607365a4f8dde622214de6fc1ed02f279fe679dc75b8ec7cf3b6bc4f04860b1b",
+    "historical_profile_sha256": "a36ea7f01af1d698ac3584a182f4b50f1be157fec39f69dc5a5dae76a3cb139a",
+    "obligation_registry_sha256": "be4adca77b6cd1631913c16f8f84802a8c1ca7fd467bc1b3f1821e4c6806c364",
+    "reconciliation_sha256": "0a3cb0403a01e519a63c042b23e64cd60fadf8cf9292d43fb9cef55a883f7de5",
+    "validation_checkout_clean": true,
+    "dirty_main_tracked_changes": 7,
+    "dirty_main_untracked_paths": 622
+  },
+  "evidence": {
+    "junit": ".toe-recovery/custody-v0/recovery-validation-profile-v3/current_control_plane_v3.junit.xml",
+    "stdout": ".toe-recovery/custody-v0/recovery-validation-profile-v3/current_control_plane_v3.stdout.log",
+    "stderr": ".toe-recovery/custody-v0/recovery-validation-profile-v3/current_control_plane_v3.stderr.log"
+  },
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

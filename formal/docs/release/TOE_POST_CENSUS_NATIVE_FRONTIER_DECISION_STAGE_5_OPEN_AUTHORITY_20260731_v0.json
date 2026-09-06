@@ -1,0 +1,123 @@
+{
+  "artifact_id": "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_STAGE_5_OPEN_AUTHORITY_20260731_v0",
+  "authorized_stage": {
+    "canonical_scope_hash": "639b469cbaf5000a2382d9eb01f248facf65e21d2776c8600c5922a7b5d2f507",
+    "canonical_target": "select_toe_native_frontier_after_repository_wide_evidence_census_v0",
+    "semantic_stage_id": "NATIVE_FRONTIER_DECISION",
+    "stage_number": 5
+  },
+  "candidate_classification_vocabulary": [
+    "READY_FOR_BOUNDED_TEST",
+    "READY_AFTER_ONE_DEFINITION",
+    "READY_AFTER_ONE_DERIVATION",
+    "READY_AFTER_CONFLICT_RESOLUTION",
+    "CONTROL_MODEL_ONLY",
+    "BLOCKED_BY_NEGATIVE_RESULT",
+    "BLOCKED_BY_MISSING_FOUNDATION",
+    "HISTORICAL_ONLY"
+  ],
+  "captured_at_utc": "2026-07-31T07:00:00Z",
+  "decision_contract": {
+    "automatic_next_program_open": false,
+    "canonical_evidence_promotion": false,
+    "field_action_or_seam_execution": false,
+    "maximum_selected_frontiers": 1,
+    "no_selection_is_valid": true,
+    "selected_frontier_is_truth_adjudication": false,
+    "selection_means": "STRONGEST_BOUNDED_NEXT_RESEARCH_QUESTION_FOUND_IN_THE_RECONCILED_EVIDENCE",
+    "selection_requires_separate_next_program_authority": true
+  },
+  "deterministic_ranking_contract": {
+    "candidate_unit": "ONE_OF_THE_23_STAGE_4_HYPOTHESIS_FAMILIES",
+    "conflict_burden_weight": -2,
+    "definition_completeness_weight": 2,
+    "dependency_burden_weight": -1,
+    "derivation_completeness_weight": 3,
+    "distance_to_calculation_weight": 2,
+    "distance_to_observable_weight": 2,
+    "expected_decision_value_weight": 3,
+    "manual_preference_permitted": false,
+    "native_significance_weight": 3,
+    "negative_result_burden_weight": -2,
+    "reuse_of_existing_work_weight": 1,
+    "score_range_per_factor": "INTEGER_0_TO_5",
+    "tie_break_order": [
+      "fewer_missing_prerequisites",
+      "fewer_unresolved_conflicts",
+      "fewer_negative_result_blocks",
+      "more_source_bound_mathematical_support",
+      "stable_family_id_byte_order"
+    ]
+  },
+  "mandatory_exit_conditions": {
+    "blocked_or_failed": "CLOSE_ATTEMPT_5_AND_SELECT_close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0",
+    "pass": "CLOSE_ATTEMPT_5_WITH_ONE_SELECTED_FRONTIER_OR_EXPLICIT_NO_SELECTION_THEN_SELECT_MANDATORY_CENSUS_EXIT_WITHOUT_OPENING_A_SUCCESSOR",
+    "repair_or_subsidiary_target_permitted": false
+  },
+  "nonclaim_boundary": [
+    "Stage 5 ranks bounded next research questions; it does not determine that any candidate claim is true.",
+    "A selected frontier is not canonical evidence, a native field, a master action, a closed seam, or an empirical result.",
+    "The 23 candidate families derive from 2,673 claims in a bounded 640-source review; 12,923 custody records remain outside deep review.",
+    "No selected frontier may be described as globally strongest across every unreviewed repository claim.",
+    "Control-model readiness cannot substitute for distinctive native significance.",
+    "No successor scientific program is authorized or opened by the Stage 5 result."
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "prohibited_outputs": [
+    "scientific truth adjudication",
+    "canonical evidence promotion or archive adoption",
+    "repository-wide claim exhaustion",
+    "more than one selected frontier",
+    "field or representation selection",
+    "master-action construction or selection",
+    "pillar or seam execution or closure",
+    "empirical validation",
+    "automatic successor program authorization or OPEN",
+    "same-stage repair, retry, prerequisite, or subsidiary scientific target"
+  ],
+  "required_stage_outputs": [
+    "frontier_classification_for_each_candidate",
+    "ranked_native_frontier_map",
+    "selected_next_hypothesis_or_explicit_no_selection",
+    "decision_rationale_and_missing_prerequisite_count",
+    "separate_next_program_preparation_target_if_selected",
+    "independent result review and validation record",
+    "one immutable CLOSE event"
+  ],
+  "schema_id": "toe.post_census_native_frontier_decision.stage_5_open_authority.v0",
+  "scientific_execution_authorized": "ATOMIC_STAGE_5_OPEN_THEN_BOUNDED_ONE_FRONTIER_OR_NO_FRONTIER_DECISION_ONLY",
+  "stage_4_input_binding": {
+    "canonical_promotion_candidate_count": 0,
+    "claim_count": 2673,
+    "close_event_hash": "efaa382ff81f7c865032fe8aa46ad05a60f49e1b355d8a9015689b6f0fa3bb1a",
+    "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_04_CLOSE_v0.json",
+    "close_event_sha256": "e06edee90e31748bd8815cd87862111c9eb6361329c06ebe0022e7ead88ea0bf",
+    "graph_edge_count": 6822,
+    "graph_node_count": 3239,
+    "hypothesis_family_count": 23,
+    "repository_claim_exhaustion_established": false,
+    "result_path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+    "result_review_path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_REVIEW_v0.json",
+    "result_review_sha256": "f0b5cccbc3b7f7e43b68e0e24ef6c0249e37a3ab7067efb935ea94653ac993e7",
+    "result_sha256": "d887d34ae482e1e6427b0137b6d8aff691d6df27d8c2eb11c82c6138864a474d",
+    "supported_but_incomplete_claim_count": 77,
+    "terminal_outcome": "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS",
+    "validation_path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_VALIDATION_v0.json",
+    "validation_sha256": "ed169ff8854795f3920e27a9f893efd02ceb2e4afdfcb53b1002005d2c78ac03"
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_5_OPEN_ONLY",
+  "terminal_outcomes": [
+    "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+    "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+    "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+    "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+  ],
+  "workload_limits": {
+    "maximum_candidate_families": 23,
+    "maximum_missing_prerequisites_per_candidate": 10,
+    "maximum_ranked_candidates": 23,
+    "maximum_selected_frontiers": 1,
+    "maximum_supporting_claims_per_candidate_summary": 64,
+    "source_count_outside_bounded_review": 12923
+  }
+}

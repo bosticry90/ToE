@@ -1,0 +1,59 @@
+{
+  "schema_id": "QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_VALIDATION_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "opened_from_commit": "5727a7ba3fc1ef1fd8c3c7f3715825db40366c04",
+  "bounded_program": {
+    "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+    "attempt_sequence_number": 3,
+    "semantic_stage_id": "EXACT_FROZEN_COMPANION_OPERATOR",
+    "terminal_result": "BLOCKED",
+    "terminal_outcome": "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED"
+  },
+  "artifacts": [
+    {
+      "path": "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v1.json",
+      "sha256": "dc44607059d79fcfd54220a23c07f4bf1d9692119ec05e936dc9dcedc753c1ce"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "fec0ef3d50d89a48231a798d4616ece36aafbb6bdcf8f4909497d1e95ef6abfa"
+    }
+  ],
+  "checks": [
+    {
+      "command": "python -m pytest formal/python/tests/calculations/test_calc_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract.py formal/python/tests/calculations/test_calc_qft_gr_quadratic_component_expanded_generic_background_linearization_v1.py formal/python/tests/calculations/test_calc_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1.py formal/python/tests/test_bounded_program_governance.py formal/python/tests/test_current_scientific_authority_consistency.py formal/python/tests/test_current_target_freshness_gate.py formal/python/tests/test_current_authoritative_surfaces_gate.py -q",
+      "result": "PASS",
+      "detail": "46 passed"
+    },
+    {
+      "command": "lake env lean formal/toe_formal/ToeFormal/Derivation/QFTGRQuadraticExactGenericFrozenCompanionOperatorV1.lean",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormalAll.lean",
+      "working_directory": "formal/toe_formal",
+      "result": "PASS",
+      "detail": "1,276 tracked Lean modules covered"
+    },
+    {
+      "command": "python -m formal.python.tools.loop_control_registry_integrity --check",
+      "result": "PASS",
+      "detail": "227 casefold aliases verified"
+    },
+    {
+      "command": "python -m formal.python.tools.bounded_program_governance validate",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "claim_boundary": {
+    "exact_generic_companion_pass_established": false,
+    "failed_closed_result_validated": true,
+    "Stage_4_or_Stage_5_authorized": false,
+    "repair_attempt_authorized": false,
+    "mandatory_role_gate_required": true
+  }
+}

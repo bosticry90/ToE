@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 4,
+  "event_hash": "584a9759c86d063c9db50ac0f9e2b0f9e58348cf61c70ae88417ad422941d799",
+  "event_sequence_number": 7,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "3d3d46d5dbb94009e77f5a98f28fd15c379229ce",
+  "previous_event_hash": "63c33a5b0115209f07e5cc9de1d65d4e48e52cccec36c089144f181a9209e82c",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "registry_snapshot_hash": "87f067a272b5a8fd32d87519fe6bae7fd0a3e32aa1d9f224fe89d411d5ec8608",
+  "scope_hash": "e81613ed69adbe5c5586a2b9fcb22217f721923758f7af0d85a71cce84a51c51",
+  "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+  "target": "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0"
+}

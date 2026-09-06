@@ -1,0 +1,121 @@
+{
+  "artifact_id": "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_VALIDATION_v0",
+  "atomic_close_commit_expected_path_count": 9,
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+    "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_04_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCurrentNativeHypothesisEvidenceReconciliationResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "authority_consistency": {
+    "broad_legacy_authority_consistency_test": "KNOWN_PARSER_COVERAGE_DEBT",
+    "canonical_target_verbs_missing_from_legacy_parser": [
+      "extract",
+      "reconcile",
+      "reconstruct"
+    ],
+    "current_bounded_authority": "VALIDATED",
+    "debt_changes_stage_4_scientific_result": false,
+    "repair_authorized_inside_stage_4": false,
+    "separate_maintenance_correction_required": true
+  },
+  "captured_at_utc": "2026-07-31T06:00:00Z",
+  "close_event": {
+    "event_hash": "efaa382ff81f7c865032fe8aa46ad05a60f49e1b355d8a9015689b6f0fa3bb1a",
+    "open_event_hash": "067007a838c5c2419e51e17cdd16adbfe62e0dd472d6eaa3c388d882588951f1",
+    "path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_04_CLOSE_v0.json",
+    "terminal_result": "PASSED"
+  },
+  "deterministic_producer": {
+    "analysis_hash": "ba115a019689f563041d47d1051df6dc34812efffe74d294b41eb5aaed87c774",
+    "byte_identical_in_memory_reruns": true,
+    "producer_custody": "LOCAL_EPHEMERAL_NONAUTHORITATIVE_REMOVED_BEFORE_ATOMIC_CLOSE",
+    "result_sha256": "d887d34ae482e1e6427b0137b6d8aff691d6df27d8c2eb11c82c6138864a474d",
+    "review_sha256": "f0b5cccbc3b7f7e43b68e0e24ef6c0249e37a3ab7067efb935ea94653ac993e7"
+  },
+  "exhaustive_python": {
+    "historical_debt_remains_disclosed": true,
+    "passage_claimed": false,
+    "suite_rerun": false
+  },
+  "focused_python": {
+    "deselected_obsolete_preopen_state_assertions": 1,
+    "failed": 0,
+    "passed": 8,
+    "scope": "Stage 4 manifest, Stage 3 hash bindings, reconciliation-only authority, accepted review, and authority-surface parity; the superseded pre-OPEN registry-state assertion was explicitly deselected"
+  },
+  "formal_validation": {
+    "aggregate_generation_working_tree_inventory": "PASSED_1324_MODULES",
+    "focused_authority_modules": "PASSED",
+    "full_lean_aggregate": "PASSED",
+    "full_lean_job_count": 9069,
+    "full_lean_module_count": 1324
+  },
+  "git_history_validation": {
+    "close_artifact_introduction_check": "REQUIRED_IMMEDIATELY_AFTER_ATOMIC_CLOSE_COMMIT",
+    "historical_event_chain_before_close": "PASSED",
+    "post_commit_command": "python -m formal.python.tools.bounded_program_governance validate --verify-git-history"
+  },
+  "independent_reconciliation_review": {
+    "accepted": true,
+    "all_claim_statuses_recomputed": true,
+    "all_edge_endpoints_and_types_recomputed": true,
+    "audit_hash": "0719ae9c190ec7e7c955d19fd5c70684c982f789948c4a152d33a9de8a7cac49",
+    "candidate_promotion_count": 0,
+    "claim_count": 2673,
+    "direct_contradiction_pair_count": 0,
+    "documentary_refinement_edge_count": 20,
+    "edge_count": 6822,
+    "graph_node_count": 3239,
+    "hypothesis_family_count": 23,
+    "scientific_supersession_edge_count": 0,
+    "semantic_duplicate_candidate_edge_count": 548,
+    "semantic_duplicate_group_count": 167,
+    "unpaired_explicit_conflict_claim_count": 26
+  },
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "program_state_after_close": "CLOSED",
+  "reconciliation_status_counts": {
+    "BLOCKED_BY_MISSING_DEFINITION": 481,
+    "BLOCKED_BY_MISSING_DERIVATION": 1141,
+    "BLOCKED_BY_NEGATIVE_RESULT": 105,
+    "BLOCKED_BY_UNRESOLVED_CONFLICT": 26,
+    "CONTRADICTED": 0,
+    "CONTROL_MODEL_ONLY": 38,
+    "CURRENTLY_COHERENT_CANDIDATE": 0,
+    "HISTORICAL_OR_HEURISTIC_ONLY": 805,
+    "REFINED_BY_LATER_RESULT": 0,
+    "SUPERSEDED": 0,
+    "SUPPORTED_BUT_INCOMPLETE": 77
+  },
+  "schema_id": "toe.current_native_hypothesis_evidence_reconciliation.validation.v0",
+  "semantic_stage_id": "CURRENT_HYPOTHESIS_RECONCILIATION",
+  "stage_5_state": "SELECTED_NOT_AUTHORIZED_NOT_OPENED",
+  "status": "STAGE_4_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "terminal_outcome": "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS",
+  "validation_checks": {
+    "all_2673_claims_have_one_reconciliation_record": true,
+    "all_graph_edge_endpoints_exist": true,
+    "all_graph_edge_types_are_authorized": true,
+    "authority_and_manifest_scope_preserved": true,
+    "canonical_evidence_promotion_absent": true,
+    "close_event_links_stage_4_open_event": true,
+    "close_result_and_review_hashes_match_event": true,
+    "conflicts_and_semantic_duplicates_remain_unmerged": true,
+    "deterministic_result_and_review_reruns_are_byte_identical": true,
+    "documentary_refinement_is_not_scientific_supersession": true,
+    "full_lean_aggregate_passed": true,
+    "graph_node_and_edge_budgets_preserved": true,
+    "master_action_representation_and_native_frontier_selection_absent": true,
+    "repetition_adds_no_independent_support": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "scientific_truth_adjudication_absent": true,
+    "stage_5_not_authorized_or_opened": true,
+    "unpaired_conflict_markers_do_not_become_direct_contradiction_pairs": true
+  }
+}

@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import equation_compendium_identity
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -1184,9 +1185,15 @@ def validate_bound_sources(payload: dict[str, Any]) -> None:
                 f"legacy review reproduction strength changed: {chain['chain_id']}"
             )
 
-    compendium = REPO_ROOT / payload["equation_compendium_boundary"]["path"]
-    if sha256_path(compendium) != payload["equation_compendium_boundary"]["sha256"]:
-        raise ValueError("equation compendium boundary hash mismatch")
+    compendium_contract = payload["equation_compendium_boundary"]
+    try:
+        equation_compendium_identity.verify_equation_compendium(
+            expected_path=compendium_contract["path"],
+            expected_historical_sha256=compendium_contract["sha256"],
+        )
+    except equation_compendium_identity.IdentityContractError as exc:
+        raise ValueError("equation compendium boundary identity mismatch") from exc
+    compendium = REPO_ROOT / compendium_contract["path"]
     compendium_text = compendium.read_text(encoding="utf-8")
     if FLAT_EQUATION_ID not in compendium_text or COVARIANT_EQUATION_ID not in (
         compendium_text

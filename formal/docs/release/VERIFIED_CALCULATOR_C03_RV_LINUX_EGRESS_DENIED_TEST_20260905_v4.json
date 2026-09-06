@@ -1,0 +1,100 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedTestV4",
+  "test_id": "C03_RV_EXACT_LINUX_KERNEL_EGRESS_DENIED_REPRODUCTION_v4",
+  "definition_status": "DEFINED_NOT_EXECUTED",
+  "supersedes": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v3.json",
+  "repairs_result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v3.json",
+  "scope": "Source-custody repair of the inconclusive v3 Linux attempt. The 24 missing Git objects are committed byte-for-byte from the already hash-bound local sources. No frozen physics, source value, policy, candidate, receipt, exact graph, certificate, Windows bundle, or prior attempt is modified.",
+  "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v4.md",
+  "runner": {
+    "operating_system": "ubuntu-latest",
+    "python": "3.10",
+    "julia": "1.12.6",
+    "lean_toolchain_source": "formal/toe_formal/lean-toolchain",
+    "timeout_minutes": 45
+  },
+  "repair": {
+    "defect": "The frozen profile was locally executable only because 24 of its 25 source-custody files were present as untracked workspace files. A clean GitHub checkout lacked them.",
+    "required_source_custody_files": 25,
+    "required_git_tracked_files": 25,
+    "required_hash_mismatches": 0,
+    "required_missing_files": 0,
+    "source_set": [
+      "normalization source-profile descriptor",
+      "normalization source contract",
+      "parent source-only allowlist",
+      "all source-profile allowed_inputs",
+      "C03/RV source-material contract"
+    ],
+    "unchanged_v3_isolation_gates": true
+  },
+  "isolation_policy": {
+    "required_mechanism": "LINUX_NEW_NETWORK_NAMESPACE",
+    "required_interfaces": [
+      "lo"
+    ],
+    "authoritative_route_queries": [
+      "ip -j -4 route show default",
+      "ip -j -6 route show default"
+    ],
+    "maximum_usable_ipv4_default_routes": 0,
+    "maximum_usable_ipv6_default_routes": 0,
+    "permitted_non_forwarding_default_route_types": [
+      "unreachable",
+      "blackhole",
+      "prohibit",
+      "throw"
+    ],
+    "active_probes": [
+      "1.1.1.1:443",
+      "8.8.8.8:53"
+    ],
+    "accepted_probe_errors": [
+      "ENETUNREACH",
+      "EHOSTUNREACH",
+      "EADDRNOTAVAIL"
+    ],
+    "observations": [
+      "before trusted qualification",
+      "after trusted qualification"
+    ],
+    "fallback_if_namespace_unavailable": "FAIL"
+  },
+  "frozen_reference": {
+    "bundle_path": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+    "bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "computation_id": "2b8ab72bd24775bfc8914e85546484f244dddc9cb5bd43dc116db0aacf2f4e8a",
+    "candidate_hash": "fe0c6fa2133a7a9ed8bb94df3a91265e91d9db1a16206b487895a3c7e4353966",
+    "profile_hash": "e131c6f94014082b8dd78bb680f1acdcf76e924b0cbe8fb62eafdda5af860617",
+    "policy_hash": "ecda89e1e6b47db2f2ec8057656cd7d622944c0202eda58ab0cd907e48c2711b",
+    "graph_hash": "67375b58adb278dfa377cab633e29c261c8b1d90f7710e3e855523a7f96c58e6",
+    "runtime_certificate_hash": "5d08aa26f2f9396d76cefc2501339bb61fa3fb0df11f4b151c19e34257978e84",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204"
+  },
+  "required_result_gates": [
+    "all_frozen_source_custody_files_git_tracked_and_hash_bound",
+    "fresh_linux_network_namespace_only_loopback",
+    "namespace_aware_interface_censuses_agree",
+    "no_usable_forwarding_default_route",
+    "non_forwarding_route_types_explicitly_classified",
+    "network_state_persisted_before_assertion",
+    "active_ipv4_egress_probes_blocked_before_and_after",
+    "dependency_provisioning_manifest_hash_bound",
+    "dependency_provisioning_completed_before_denied_phase",
+    "isolation_observed_before_qualification",
+    "isolation_maintained_after_qualification",
+    "v1_v2_and_v3_inconclusive_attempts_preserved",
+    "frozen_windows_reference_replayed",
+    "all_exact_identifiers_match_reference",
+    "all_receipt_fields_except_environment_match",
+    "all_207_graph_nodes_executed",
+    "all_sixteen_roots_verified_exact",
+    "all_373_mandatory_challenges_pass",
+    "generated_linux_bundle_replays"
+  ],
+  "result_retention": "Every run preserves pre-assertion network state, provisioning and source-custody manifests, logs, exit disposition, and generated bundles. No prior attempt or frozen benchmark is replaced in place.",
+  "evidence_status": "No v4 Linux result is earned until one preserved run satisfies every linked acceptance criterion and is separately reviewed.",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

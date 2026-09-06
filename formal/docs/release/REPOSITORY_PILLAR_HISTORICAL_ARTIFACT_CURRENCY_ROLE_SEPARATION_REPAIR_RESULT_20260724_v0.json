@@ -1,0 +1,109 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0",
+  "captured_at_utc": "2026-07-24T23:11:53Z",
+  "result": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_base_commit": "3dab04288d861758d3d3fe06d1a664b055cf079a",
+  "authorization_commit": "c2f7ef850c93eff37314f9ff96fed88c6e0fc997",
+  "implementation_commit": "30d79212c005a0c9aad7a1e987d0752cb731f9c9",
+  "branch": "codex/pillar-historical-artifact-currency-role-separation-repair-v0",
+  "role_contract": {
+    "path": "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_CONTRACT_20260724_v0.json",
+    "sha256": "d19838d165bc93e253f4f7459e918b01ecf2d8c88c5644efc6a6cac4d40aff12",
+    "identity_count": 4,
+    "binding_count": 17,
+    "historical_roles": {
+      "HISTORICAL_SOURCE_BLOB": 1,
+      "HISTORICAL_GENERATOR_PIN": 15,
+      "REVIEW_TIME_AUTHORITY": 1
+    },
+    "current_successor_roles": {
+      "CURRENT_CANONICAL_IDENTITY": 16,
+      "CURRENT_LIVE_AUTHORITY": 1
+    }
+  },
+  "implemented_role_separation": {
+    "historical_registry": {
+      "binding_count": 1,
+      "role": "HISTORICAL_SOURCE_BLOB",
+      "resolution": "FROZEN_GIT_BLOB_SHA256",
+      "git_blob_oid": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+      "sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+    },
+    "historical_blocker_route_generator": {
+      "binding_count": 5,
+      "role": "HISTORICAL_GENERATOR_PIN",
+      "resolution": "FROZEN_GIT_BLOB_SHA256",
+      "git_blob_oid": "2edf61181178c8629980e51b52f61aaaef628b1a",
+      "sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c"
+    },
+    "historical_equation_compendium": {
+      "binding_count": 10,
+      "role": "HISTORICAL_GENERATOR_PIN",
+      "historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "current_role": "CURRENT_CANONICAL_IDENTITY",
+      "current_git_blob_oid": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+      "current_sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae"
+    },
+    "review_time_authority": {
+      "binding_count": 1,
+      "role": "REVIEW_TIME_AUTHORITY",
+      "current_successor_role": "CURRENT_LIVE_AUTHORITY",
+      "review_time_sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+      "review_time_live_authority_equality_required": false
+    }
+  },
+  "validation": {
+    "exact_16_outcomes": "16_OF_16_PASS",
+    "new_role_contract_guards": "7_OF_7_PASS",
+    "affected_surface_current": "68_OF_68_PASS",
+    "fresh_lf": "23_OF_23_PASS_AND_CLEAN",
+    "fresh_actual_crlf": "23_OF_23_PASS_AND_CLEAN",
+    "detached_independent_review_surface": "68_OF_68_PASS_AND_CLEAN",
+    "tracked_validation_mutations": 0
+  },
+  "historical_preservation": {
+    "historical_hashes_refreshed": 0,
+    "historical_packets_modified": 0,
+    "historical_reviews_modified": 0,
+    "historical_generators_modified": 0,
+    "registry_modified": false,
+    "equation_compendium_modified": false
+  },
+  "custody": {
+    "implementation_checkout_clean": true,
+    "lf_checkout_clean": true,
+    "crlf_checkout_clean": true,
+    "detached_review_checkout_clean": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_manifest_rows": 629,
+    "dirty_main_manifest_mismatches": 0,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622
+  },
+  "external_evidence": [
+    {
+      "path": ".toe-recovery/custody-v0/pillar-historical-artifact-currency-role-separation-repair-v0/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_EVIDENCE_v0.json",
+      "sha256": "b6a10c03e968a4012207a641b5aa909951cd2e1c70701353f31c45773e374c4a"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/pillar-historical-artifact-currency-role-separation-repair-v0/build_pillar_historical_role_separation_evidence_v0.py",
+      "sha256": "867d700cd558edde37d8a48ef05308f0927fda4930d1fc9ca71e3822927166f7"
+    }
+  ],
+  "official_baseline_nonpassing": 390,
+  "baseline_reassessment_performed": false,
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_REPAIR_RESULT_ONLY",
+  "scope": {
+    "automatic_successor": false,
+    "lean_activity": false,
+    "registry_rotated": false,
+    "scientific_content_changed": 0,
+    "scientific_execution": false,
+    "v2_enrolled": false
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

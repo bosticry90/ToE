@@ -1,0 +1,13 @@
+{
+  "schema_id": "CURRENT_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "selected": "AUTHORIZE_BOUNDED_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_GATE",
+  "target": "prove_repository_recovery_base_accepted_lineage_complete_v0_once",
+  "proposed_base_commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+  "current_maintenance_authority_document_used_as_authority": false,
+  "repair_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

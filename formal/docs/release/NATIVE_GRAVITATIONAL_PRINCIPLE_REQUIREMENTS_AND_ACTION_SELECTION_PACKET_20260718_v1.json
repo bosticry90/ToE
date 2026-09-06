@@ -1,0 +1,631 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "7c17a967d719f0dabf887cf5fb98b7ccaf1d3dbc34f19d8b5f6368d66f2ac7ea"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.json",
+        "sha256": "c7cbf6997b5414a83524a82c105e33e44426dd07f5b2a703d3f68e123795fa9c"
+      },
+      {
+        "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_review_v0.py",
+        "sha256": "56004b43c82b3f6f2826b5776ffe834f1264164d5a79f3b02f8d1d1e1352388b"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_review_v0.py",
+        "sha256": "cf2672d4926e86e7f2b2a9f5b6897aaaca5a89e6f11ee65e02b90803b3c12b3b"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeGravitationalPrincipleRequirementsAndActionSelectionPacketReviewV0.lean",
+        "sha256": "2446065f93137045d141a40ded531ca0192447d213ff4c6f7f0257a53dd3befd"
+      },
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+        "sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+        "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+      },
+      {
+        "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_v0.py",
+        "sha256": "d25634e5ad6bd59ec85dd25e321bda5ffeff7529557c1419634185d87efc3f9b"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_v0.py",
+        "sha256": "5282518d483a33aed986a3babf37061058f8e4a680dcaf3ad8882c3d69ae5c3b"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeGravitationalPrincipleRequirementsAndActionSelectionPacketV0.lean",
+        "sha256": "40c6e0b41d37ee977d4836c437bc7116efb7150056c95853e833b2a82cce0371"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0.json",
+        "sha256": "e2468ea98384383654efe73dd054f5149beb6d4a62db45123109d962999dea66"
+      },
+      {
+        "relative_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v1.md",
+        "sha256": "4ed85fe1318a9923d55aa9c657a875336ebc78298cb9384659cf860fcfa48363"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/native_gravitational_principle_requirements_and_action_selection_packet_v1.py",
+      "sha256": "fffd0f6bfd38b57d913bb2f4aa13a402bd22495c47b27c03312e1be137d6b06e"
+    },
+    "retained_comparison_families": 7,
+    "retained_requirement_sources": 10,
+    "test": {
+      "relative_path": "formal/python/tests/test_native_gravitational_principle_requirements_and_action_selection_packet_v1.py",
+      "sha256": "1acbc061344e1c7a78c14ef1af9ca1e2e6a82400ed6f8907534fe2f334f7ad96"
+    },
+    "v0_review_verdict": "BLOCKED_REQUIREMENTS_ACTION_SELECTION_CONTRACT_INCOMPLETE"
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Prepared v1 contract repair only. Ten requirement classes, three supplied assumption firewalls, seven epistemically distinct matrix states, disjoint outcome logic, eight production controls, and two boundary probes are validated through one bounded table evaluator using synthetic fixtures. The real ten-by-seven matrix is untouched. No real family judgment, principle, postulate, action, matter sector, variation, GR result, general tooling lane, or automation is created.",
+  "comparison_family_envelope": {
+    "family_adopted_or_activated_count": 0,
+    "family_count": 7,
+    "rows": [
+      {
+        "comparison_only": true,
+        "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+        "family_id": "F_EH",
+        "structural_class": "local metric action linear in curvature with optional cosmological term"
+      },
+      {
+        "comparison_only": true,
+        "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+        "family_id": "F_FR",
+        "structural_class": "local metric f(R) excluding the purely linear representative"
+      },
+      {
+        "comparison_only": true,
+        "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+        "family_id": "F_QUADRATIC",
+        "structural_class": "local metric independent quadratic Ricci or Riemann invariants"
+      },
+      {
+        "comparison_only": true,
+        "envelope_status": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+        "family_id": "F_EXTRA_FIELD",
+        "structural_class": "metric plus additional fundamental scalar vector or tensor"
+      },
+      {
+        "comparison_only": true,
+        "envelope_status": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+        "family_id": "F_NONLOCAL",
+        "structural_class": "explicitly nonlocal metric action"
+      },
+      {
+        "comparison_only": true,
+        "envelope_status": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+        "family_id": "F_CONNECTION_TORSION",
+        "structural_class": "independent connection Palatini or torsion family"
+      },
+      {
+        "comparison_only": true,
+        "envelope_status": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+        "family_id": "F_EQUIVALENCE_PROBE",
+        "structural_class": "boundary algebraic or four-dimensional topological variants"
+      }
+    ],
+    "unchanged_from_v0": true
+  },
+  "control_execution": {
+    "all_used_shared_entry_point": true,
+    "boundary_probe_count": 2,
+    "boundary_probe_pass_count": 2,
+    "boundary_probes": [
+      {
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "ACTION_FAMILY_UNDERDETERMINED",
+        "observed": "ACTION_FAMILY_UNDERDETERMINED",
+        "passed": true,
+        "probe_id": "PROBE_UNDERDETERMINED_WITHOUT_EXHAUSTION"
+      },
+      {
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "DISTINCTIVE_GRAVITATIONAL_POSTULATE_REQUIRED",
+        "observed": "DISTINCTIVE_GRAVITATIONAL_POSTULATE_REQUIRED",
+        "passed": true,
+        "probe_id": "PROBE_POSTULATE_REQUIRED_AFTER_EXHAUSTION"
+      }
+    ],
+    "control_count": 8,
+    "control_pass_count": 8,
+    "controls": [
+      {
+        "control_id": "CTRL_SUPPLIED_SECOND_ORDER_NOT_NATIVE",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "ACTION_FAMILY_UNDERDETERMINED",
+        "mutation_count": 1,
+        "observed": "ACTION_FAMILY_UNDERDETERMINED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_MISSING_STATEMENT_CLASS",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "MISSING_STATEMENT_CLASS",
+        "mutation_count": 1,
+        "observed": "MISSING_STATEMENT_CLASS",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_DUPLICATE_REQUIREMENT",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "DUPLICATE_CANONICAL_REQUIREMENT",
+        "mutation_count": 1,
+        "observed": "DUPLICATE_CANONICAL_REQUIREMENT",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_SHARED_NEWTONIAN_LIMIT",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "ACTION_FAMILY_UNDERDETERMINED",
+        "mutation_count": 1,
+        "observed": "ACTION_FAMILY_UNDERDETERMINED",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNDECIDABLE_CELL",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "F_FR_UNRESOLVED_NOT_AFFIRMATIVE",
+        "mutation_count": 1,
+        "observed": {
+          "affirmative": [
+            "F_EH"
+          ],
+          "unresolved": [
+            "F_FR"
+          ]
+        },
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_BOUNDARY_EQUIVALENCE",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "mutation_count": 1,
+        "observed": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNIQUE_NONDISTINCTIVE_EH",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "mutation_count": 1,
+        "observed": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNIQUE_NATIVE_DISTINCTIVE",
+        "entry_point_id": "evaluate_analysis_v1",
+        "expected": "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+        "mutation_count": 1,
+        "observed": "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+        "passed": true
+      }
+    ],
+    "production_entry_point_id": "evaluate_analysis_v1"
+  },
+  "matrix_contract": {
+    "cell_value_count": 7,
+    "cell_values": [
+      "AFFIRMATIVELY_SATISFIES_REQUIREMENT",
+      "ELIMINATED",
+      "NOT_DECIDABLE_FROM_REQUIREMENT",
+      "OUTSIDE_FROZEN_ENVELOPE",
+      "EQUIVALENT_UNDER_LOCAL_BULK_RULE",
+      "REQUIRES_SUPPLIED_ASSUMPTION",
+      "NOT_EVALUATED"
+    ],
+    "not_evaluated_blocks_scientific_outcome": true,
+    "real_matrix_cell_count": 70,
+    "real_matrix_cells_supplied_by_preparation": 0,
+    "real_matrix_column_count": 7,
+    "real_matrix_row_count": 10,
+    "undecidable_is_affirmative": false,
+    "undecidable_is_elimination": false,
+    "undecidable_is_not_evaluated": false
+  },
+  "outcome_exclusivity_contract": {
+    "inconsistency_requires_bound_inconsistent_subset": true,
+    "multiple_with_exhaustion_and_no_refinement_proof": "DISTINCTIVE_GRAVITATIONAL_POSTULATE_REQUIRED",
+    "multiple_without_exhaustion": "ACTION_FAMILY_UNDERDETERMINED",
+    "no_go_requires_bound_distinctiveness_impossibility_proof": true,
+    "overlap_is_production_failure": true,
+    "unique_native_distinctive": "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+    "unique_nondistinctive_EH": "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR"
+  },
+  "production_evaluator_contract": {
+    "entry_point": "evaluate_analysis",
+    "entry_point_id": "evaluate_analysis_v1",
+    "exactly_one_scientific_outcome_when_computed": true,
+    "general_symbolic_algebra_or_theory_enumeration": false,
+    "internal_result_count": 3,
+    "internal_results": [
+      "PRECHECK_FAILURE",
+      "ANALYSIS_INCOMPLETE",
+      "EMPTY_SET_CLASSIFICATION_INSUFFICIENT"
+    ],
+    "scientific_outcome_count": 6,
+    "scientific_outcomes": [
+      "REQUIREMENT_SET_INCONSISTENT",
+      "NO_GO_UNDER_MINIMAL_METRIC_LOCAL_ASSUMPTIONS",
+      "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+      "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+      "ACTION_FAMILY_UNDERDETERMINED",
+      "DISTINCTIVE_GRAVITATIONAL_POSTULATE_REQUIRED"
+    ],
+    "stages": [
+      "requirement and statement-class preflight",
+      "family envelope preflight",
+      "matrix shape and cell preflight",
+      "supplied-assumption exclusion from native selection",
+      "local-bulk equivalence reduction",
+      "eliminated affirmative and unresolved set computation",
+      "native discriminating trace validation",
+      "distinctiveness and exhaustion evidence validation",
+      "disjoint scientific outcome selection"
+    ]
+  },
+  "repair_contract": {
+    "repair_count": 4,
+    "repairs": [
+      "per-row immutable three-way statement class binding",
+      "explicit completed-analysis undecidability matrix state",
+      "disjoint six-outcome production predicates",
+      "shared bounded production evaluator for controls and later analysis"
+    ],
+    "v0_sources_or_families_changed": false
+  },
+  "retained_boundaries": {
+    "C_k": "EXTERNAL_ADMISSIBILITY_AUDIT_ONLY",
+    "gravitational_action": "NOT_PROPOSED_OR_SELECTED",
+    "gravitomagnetic_recovery": "BLOCKED_UPSTREAM",
+    "matter_sector": "NOT_SELECTED",
+    "metric_variation": "NOT_EXECUTED",
+    "minimal_gravitational_contract": "ACCEPTED",
+    "native_candidate_readiness": "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "new_postulate": "NOT_AUTHORIZED",
+    "real_survivor_matrix": "NOT_COMPUTED",
+    "standard_GR_comparator": "NOT_ACTIVATED"
+  },
+  "retained_equivalence_contract": {
+    "allowed_rules": [
+      "algebraic tensor identities",
+      "total divergences trivial under frozen compact-support local bulk variation",
+      "four-dimensional topological densities with no frozen local bulk metric variation",
+      "invertible local field redefinitions preserving domain degrees source observables and boundary scope",
+      "normalization changes applied consistently to the full coupled action and source"
+    ],
+    "claim_scope": "LOCAL_BULK_ONLY",
+    "forbidden_equivalences": [
+      "different derivative or operator order",
+      "different propagating degrees of freedom",
+      "local versus nonlocal dynamics",
+      "metric-only versus independent-connection dynamics",
+      "changed source coupling",
+      "observable-changing coefficients",
+      "sign index or boundary-condition changes"
+    ],
+    "proof_required_per_equivalence": true
+  },
+  "schema_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v1",
+  "scope": {
+    "C_k_embedded_or_varied": false,
+    "GR_pillar_completed": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "gravitational_action_proposed_or_selected": false,
+    "gravitomagnetic_route_reopened": false,
+    "independent_v1_review_executed": false,
+    "master_action_promoted": false,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "packet_preparation_only": true,
+    "real_action_family_eliminated_or_adopted": false,
+    "real_requirements_family_analysis_executed": false,
+    "real_scientific_outcome_selected": false,
+    "real_survivor_matrix_computed": false,
+    "recovery_ladder_entered": false,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "symbolic_restoration_reopened": false,
+    "synthetic_production_controls_executed": true,
+    "tensor_field_equation_derived": false,
+    "unrestricted_theory_enumeration_created": false
+  },
+  "selected_next_target": "review_native_gravitational_principle_requirements_and_action_selection_packet_v1_result",
+  "selected_next_target_kind": "INDEPENDENT_REQUIREMENTS_ACTION_SELECTION_PACKET_V1_REVIEW_ONLY",
+  "standard_GR_isolation": {
+    "Einstein_Hilbert_role": "COMPARISON_ORACLE_ONLY",
+    "comparator_activated": false,
+    "supplied_assumption_eliminations_change_native_sets": false,
+    "supplied_second_order_assumption_is_native": false
+  },
+  "statement_class_contract": {
+    "active_new_postulate_count": 0,
+    "all_rows_bind_exactly_one_class": true,
+    "all_rows_source_class_compatible": true,
+    "class_count": 3,
+    "classes": [
+      "PROJECT_BOUND_NATIVE_REQUIREMENT",
+      "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION",
+      "NEW_PROPOSED_POSTULATE"
+    ],
+    "repaired_requirement_count": 10,
+    "rows": [
+      {
+        "authority_status": "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+        "authority_subclass": "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+        "canonical_requirement_id": "R1_DIMENSION",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "FIELD_CONTENT_CONSTRAINT"
+        ],
+        "initial_boundary": "may exclude other dimensions but selects no 4D invariant",
+        "mathematical_scope": "dim(M)=4",
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "necessity": "REQUIRED_INSIDE_FROZEN_ENVELOPE",
+        "requirement_id": "R1_DIMENSION",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "four-dimensional continuum target",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "FROZEN_MINIMAL_SCOPE_ASSUMPTION",
+        "authority_subclass": "FROZEN_MINIMAL_SCOPE_ASSUMPTION",
+        "canonical_requirement_id": "R2_METRIC_ONLY",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "FIELD_CONTENT_CONSTRAINT"
+        ],
+        "initial_boundary": "outside-scope classification is not refutation",
+        "mathematical_scope": "gravitational field g_mu_nu only",
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "necessity": "REQUIRED_INSIDE_FROZEN_ENVELOPE",
+        "requirement_id": "R2_METRIC_ONLY",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "one metric gravitational variable",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "FROZEN_MINIMAL_SCOPE_ASSUMPTION",
+        "authority_subclass": "FROZEN_MINIMAL_SCOPE_ASSUMPTION",
+        "canonical_requirement_id": "R3_LOCALITY",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "ACTION_FORM_CONSTRAINT"
+        ],
+        "initial_boundary": "locality is not a derived native principle",
+        "mathematical_scope": "local scalar density on M",
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "necessity": "REQUIRED_INSIDE_FROZEN_ENVELOPE",
+        "requirement_id": "R3_LOCALITY",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "local action in the bounded route",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "ACCEPTED_EVALUATION_REQUIREMENT",
+        "authority_subclass": "ACCEPTED_EVALUATION_REQUIREMENT",
+        "canonical_requirement_id": "R4_DIFF_COVARIANCE",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "SYMMETRY_CONSTRAINT"
+        ],
+        "initial_boundary": "covariance alone does not prove action uniqueness",
+        "mathematical_scope": "coordinate-independent scalar action",
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "necessity": "REQUIRED_FOR_EVALUATED_CANDIDATE",
+        "requirement_id": "R4_DIFF_COVARIANCE",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "diffeomorphism-covariant scalar action",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "ACCEPTED_GLOBAL_PROJECT_POLICY",
+        "authority_subclass": "ACCEPTED_GLOBAL_PROJECT_POLICY",
+        "canonical_requirement_id": "R5_CK_FIREWALL",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "EXTERNAL_ADMISSIBILITY_CONSTRAINT"
+        ],
+        "initial_boundary": "excludes C_k dynamics but selects no remaining invariant",
+        "mathematical_scope": "no C_k embedding multiplier penalty or variation",
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "necessity": "REQUIRED",
+        "requirement_id": "R5_CK_FIREWALL",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "C_k remains external to gravitational dynamics",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "ACCEPTED_LOCAL_BULK_REVIEW_CONTRACT",
+        "authority_subclass": "ACCEPTED_LOCAL_BULK_REVIEW_CONTRACT",
+        "canonical_requirement_id": "R6_LOCAL_VARIATION",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "VARIATIONAL_CONSTRAINT"
+        ],
+        "initial_boundary": "does not establish a global boundary theory",
+        "mathematical_scope": "delta g compactly supported in Omega compactly contained in M",
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "necessity": "REQUIRED_FOR_LOCAL_BULK_COMPARISON",
+        "requirement_id": "R6_LOCAL_VARIATION",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "smooth compactly supported local metric variations",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "ACCEPTED_CANDIDATE_EVALUATION_REQUIREMENT",
+        "authority_subclass": "ACCEPTED_CANDIDATE_EVALUATION_REQUIREMENT",
+        "canonical_requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "SOURCE_COUPLING_CONSTRAINT"
+        ],
+        "initial_boundary": "matter action remains undefined and stress policies are oracles only",
+        "mathematical_scope": "T_mu_nu=-(2/sqrt(-g))*delta S_m/delta g^mu_nu",
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "necessity": "REQUIRED_FOR_SOURCE_COUPLED_CANDIDATE",
+        "requirement_id": "R7_SOURCE_COMPATIBILITY",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+          "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+          "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "generic variational matter source and conservation compatibility",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "RETAINED_RECOVERY_OBLIGATION",
+        "authority_subclass": "RETAINED_RECOVERY_OBLIGATION",
+        "canonical_requirement_id": "R8_NEWTON_POISSON",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "RECOVERY_CONSTRAINT"
+        ],
+        "initial_boundary": "shared weak-field limit is not an action uniqueness theorem",
+        "mathematical_scope": "stationary weak-field 00 limit",
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "necessity": "REQUIRED_FOR_FUTURE_RECOVERY",
+        "requirement_id": "R8_NEWTON_POISSON",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "recover the bounded Newton-Poisson surface",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "RETAINED_DOWNSTREAM_RECOVERY_OBLIGATION",
+        "authority_subclass": "RETAINED_DOWNSTREAM_RECOVERY_OBLIGATION",
+        "canonical_requirement_id": "R9_MOMENTUM_CURRENT",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "SOURCE_COUPLING_CONSTRAINT",
+          "RECOVERY_CONSTRAINT"
+        ],
+        "initial_boundary": "recovery target not yet derived",
+        "mathematical_scope": "stationary momentum-current source sector",
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "necessity": "REQUIRED_FOR_FUTURE_GRAVITOMAGNETISM",
+        "requirement_id": "R9_MOMENTUM_CURRENT",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+          "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "represent conserved T_0i and a weak-field 0i response",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      },
+      {
+        "authority_status": "SELECTED_EVALUATION_OBLIGATION",
+        "authority_subclass": "SELECTED_EVALUATION_OBLIGATION",
+        "canonical_requirement_id": "R10_STABILITY_NO_FIT",
+        "class_binding_immutable": true,
+        "constraint_classes": [
+          "STABILITY_CONSTRAINT",
+          "OBSERVATIONAL_CONSTRAINT"
+        ],
+        "initial_boundary": "not a candidate premise before a candidate exists",
+        "mathematical_scope": "candidate weak-field and recovery comparison",
+        "native_distinctiveness_allowed": true,
+        "native_elimination_allowed": true,
+        "necessity": "REQUIRED_AFTER_CANDIDATE_EXISTS",
+        "requirement_id": "R10_STABILITY_NO_FIT",
+        "selection_power_status": "NOT_ANALYZED",
+        "source_bindings": [
+          "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0.json"
+        ],
+        "source_class_expected": "PROJECT_BOUND_NATIVE_REQUIREMENT",
+        "statement": "stable weak-field behavior and no fitting of recovery coefficients",
+        "statement_class": "PROJECT_BOUND_NATIVE_REQUIREMENT"
+      }
+    ],
+    "supplied_assumption_count": 3,
+    "supplied_assumptions": [
+      {
+        "authority_subclass": "UNSELECTED_STANDARD_GR_UNIQUENESS_ASSUMPTION",
+        "canonical_requirement_id": "S1_SECOND_ORDER_FIELD_EQUATIONS",
+        "class_binding_immutable": true,
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "requirement_id": "S1_SECOND_ORDER_FIELD_EQUATIONS",
+        "source_class_expected": "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION",
+        "statement_class": "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION"
+      },
+      {
+        "authority_subclass": "UNSELECTED_STANDARD_GR_GEOMETRIC_ASSUMPTION",
+        "canonical_requirement_id": "S2_LEVI_CIVITA_UNIQUENESS",
+        "class_binding_immutable": true,
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "requirement_id": "S2_LEVI_CIVITA_UNIQUENESS",
+        "source_class_expected": "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION",
+        "statement_class": "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION"
+      },
+      {
+        "authority_subclass": "UNSELECTED_STANDARD_GR_FIELD_CONTENT_ASSUMPTION",
+        "canonical_requirement_id": "S3_NO_EXTRA_GRAVITATIONAL_MODES",
+        "class_binding_immutable": true,
+        "native_distinctiveness_allowed": false,
+        "native_elimination_allowed": false,
+        "requirement_id": "S3_NO_EXTRA_GRAVITATIONAL_MODES",
+        "source_class_expected": "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION",
+        "statement_class": "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION"
+      }
+    ],
+    "supplied_assumptions_affect_native_distinctiveness": false,
+    "supplied_assumptions_affect_native_elimination": false
+  },
+  "target": "prepare_native_gravitational_principle_requirements_and_action_selection_packet_v1",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

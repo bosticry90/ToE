@@ -1,0 +1,497 @@
+{
+  "authority": {
+    "consumed_result_review_gate_count": 21,
+    "consumed_result_review_verdict": "ACCEPTED_BOUNDED_PRIMARY_EVIDENCE_ACQUISITION_RESULT",
+    "frozen_result_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_RESULT_REVIEW_20260718_v0.md",
+        "sha256": "c036e4a3d30ae6c7016711d8a7bc099ac44b60e78c0e3f4a84f0886b6e54dd45"
+      },
+      {
+        "relative_path": "formal/docs/release/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_RESULT_REVIEW_20260718_v0.json",
+        "sha256": "f5a6b3942b728400b925f99a8b953a7a434e37c6d17e36e90c6cd8a6d44108c8"
+      },
+      {
+        "relative_path": "formal/python/tools/eotwash_2020_yukawa_primary_evidence_custody_acquisition_result_review_v0.py",
+        "sha256": "b378485186825bd06c341c80e4c1b97f8801e8c5cc17df00cf881b6eda3e7866"
+      },
+      {
+        "relative_path": "formal/python/tests/test_eotwash_2020_yukawa_primary_evidence_custody_acquisition_result_review_v0.py",
+        "sha256": "1896e9a606fb52a97ee0535ea1110a96a192d75035a4ec085b775c2dd5b1f0ca"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/Eotwash2020YukawaPrimaryEvidenceCustodyAcquisitionResultReviewV0.lean",
+        "sha256": "5f095aa8027f00eb95f23c0140d70e53ba4ca8423a87ed273f57e58a336a3b84"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_eotwash_2020_yukawa_primary_evidence_custody_acquisition_scientific_response_selection_v0.py",
+      "sha256": "7a1354f6935bda276270df1b0f5e12a367a767a0d0501f9785fb267c6866f1e3"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+      "sha256": "8dae576859d54df29a7ffa82e08d6cacd0558de068b505cdfc180a7ca813d392"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostEotwash2020YukawaPrimaryEvidenceCustodyAcquisitionScientificResponseSelectionV0.lean",
+      "sha256": "1436a30c8781af703a8821c0e15f9f8be64a1bfe435fd54c07af477c1de2ecef"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_eotwash_2020_yukawa_primary_evidence_custody_acquisition_scientific_response_selection_v0.py",
+      "sha256": "7f3451c12e307b5757e7e5d4aceb447b978e4cf08ab94489a3a4f5f3de99425e"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This scientific-response selection authorizes preparation only of a bounded Eot-Wash 2020 author-or-data-custodian contact packet. No recipient is selected, no message is drafted or sent, no contact is authorized, no synthetic forecast or published-limit reinterpretation is authorized, and no likelihood, scalar-range or alpha bound, scalar-branch adoption, native gravitational principle, gravitational action, frame-dragging result, or master-action change is computed, selected, claimed, or authorized.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "author_contact": "NOT_AUTHORIZED",
+    "contact_packet": "NOT_YET_PREPARED",
+    "gravitational_action": "NOT_SELECTED",
+    "likelihood": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "prepare_eotwash_2020_yukawa_author_or_custodian_contact_packet_v0",
+    "published_reinterpretation": "NOT_AUTHORIZED",
+    "runner_up": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_range_bound": "NONE",
+    "selected_response": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+    "selection_stability": "FIRST_IN_24_OF_24_VARIANTS",
+    "synthetic_forecast": "NOT_AUTHORIZED"
+  },
+  "deferred_route_boundaries": {
+    "all_deferred_not_rejected": true,
+    "alternative_experiment": "REQUIRES_RELEVANT_SENSITIVITY_COMPLETE_PUBLIC_DATA_COVARIANCE_GEOMETRY_NUISANCE_AND_STATISTICAL_CONTRACT",
+    "published_reinterpretation": "SUPPLIED_EMPIRICAL_CONSTRAINT_NOT_INDEPENDENTLY_REPRODUCED",
+    "synthetic_forecast": "IDEALIZED_OR_APPROXIMATE_APPARATUS_NOT_EOTWASH_EMPIRICAL_BOUND"
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "disposition": "SELECTED_FOR_PACKET_PREPARATION_ONLY",
+        "kind": "CONTACT_PACKET_PREPARATION_ONLY",
+        "scientific_endpoint": "Prepare a bounded, professional request for the finite missing primary evidence package without sending any message.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_progress": 2,
+          "confirmed_empirical_target_continuity": 5,
+          "cost_proportionality": 4,
+          "direct_repair_of_accepted_block": 5,
+          "independent_fit_restoration_potential": 5,
+          "new_information_gain": 5
+        },
+        "target": "prepare_eotwash_2020_yukawa_author_or_custodian_contact_packet_v0",
+        "weighted_score": 132
+      },
+      {
+        "candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "disposition": "DEFERRED_HIGH_PRIORITY_FALLBACK_NOT_REJECTED",
+        "kind": "EXPLORATORY_SYNTHETIC_COMPUTATIONAL_LANE",
+        "scientific_endpoint": "Build an explicitly approximate apparatus forecast with synthetic injection recovery and no Eot-Wash empirical-bound claim.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_progress": 5,
+          "confirmed_empirical_target_continuity": 4,
+          "cost_proportionality": 4,
+          "direct_repair_of_accepted_block": 1,
+          "independent_fit_restoration_potential": 0,
+          "new_information_gain": 5
+        },
+        "target": "prepare_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v0",
+        "weighted_score": 89
+      },
+      {
+        "candidate_id": "SUPPLIED_PUBLISHED_EOTWASH_LIMIT_REINTERPRETATION",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "SUPPLIED_EMPIRICAL_EVIDENCE_ONLY",
+        "scientific_endpoint": "Translate only the authors' published Yukawa result into lambda0, inverse-length mass, particle-mass equivalent, and packet alpha.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_progress": 2,
+          "confirmed_empirical_target_continuity": 5,
+          "cost_proportionality": 5,
+          "direct_repair_of_accepted_block": 1,
+          "independent_fit_restoration_potential": 0,
+          "new_information_gain": 2
+        },
+        "target": "prepare_supplied_eotwash_fixed_strength_yukawa_constraint_reinterpretation_packet_v0",
+        "weighted_score": 77
+      },
+      {
+        "candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "disposition": "DEFERRED_UNLESS_CONTACT_FAILS_NOT_REJECTED",
+        "kind": "ALTERNATIVE_EXPERIMENT_REPRODUCIBILITY_SELECTION",
+        "scientific_endpoint": "Select a replacement only if public observations, covariance, geometry, nuisance treatment, and A_Y=1/3 sensitivity are complete.",
+        "scores": {
+          "authority_clarity": 4,
+          "boundedness": 2,
+          "computational_progress": 3,
+          "confirmed_empirical_target_continuity": 2,
+          "cost_proportionality": 1,
+          "direct_repair_of_accepted_block": 2,
+          "independent_fit_restoration_potential": 3,
+          "new_information_gain": 4
+        },
+        "target": "prepare_reproducible_fixed_strength_yukawa_alternative_experiment_survey_v0",
+        "weighted_score": 75
+      }
+    ],
+    "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+    "runner_up_score": 89,
+    "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+    "selected_score": 132,
+    "winning_margin": 43
+  },
+  "retained_empirical_posture": {
+    "acquisition_result": "AUTHORS_OR_CUSTODIAN_CONTACT_REQUIRED",
+    "alpha_constraint": "NONE",
+    "evidence_component_count": 6,
+    "evidence_components_complete": 0,
+    "experiment": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+    "experiment_suitable": true,
+    "fixed_signal": "A_Y=1/3",
+    "independent_likelihood_executable": false,
+    "likelihood": "NOT_EXECUTED",
+    "scalar_range_bound": "NONE"
+  },
+  "schema_id": "toe.post_eotwash_2020_yukawa_primary_evidence_custody_acquisition.scientific_response_selection.v0",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "alternative_experiment_selected": false,
+    "author_or_custodian_contact_authorized": false,
+    "author_or_custodian_contact_executed": false,
+    "beta_zero_adopted": false,
+    "contact_message_drafted": false,
+    "contact_packet_preparation_authorized": true,
+    "contact_packet_prepared_now": false,
+    "contact_recipient_selected": false,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "likelihood_executed": false,
+    "likelihood_preparation_authorized": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "published_constraint_reinterpretation_authorized": false,
+    "scalar_branch_adopted": false,
+    "scientific_response_selection_executed": true,
+    "synthetic_forecast_authorized": false
+  },
+  "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+  "selected_contact_packet_contract": {
+    "analysis_authorized": false,
+    "contact_authorized": false,
+    "future_packet_obligations": [
+      "resolve one appropriate public professional recipient or custodian hierarchy",
+      "draft one concise request explaining independent reproduction purpose",
+      "state that the request does not challenge the publication",
+      "request no personal proprietary security-sensitive or unauthorized material",
+      "ask for data-use citation redistribution and access conditions",
+      "freeze one initial contact and a bounded follow-up policy",
+      "include no unsolicited attachment",
+      "stop for independent packet review before sending anything"
+    ],
+    "independent_packet_review_required": true,
+    "message_drafted_now": false,
+    "message_sent_now": false,
+    "requested_item_count": 8,
+    "requested_items": [
+      "official supplemental package or authenticated accessible copy",
+      "machine-readable 95x3 torque vector with complete row and configuration metadata",
+      "statistical uncertainty and covariance or equivalent generative model",
+      "definitions priors constraints and executable implementation of five profiled nuisances",
+      "extended-source Newtonian and Yukawa torque code or sufficient machine-readable geometry",
+      "calibration and published Newtonian-baseline implementation",
+      "likelihood and boundary-aware coverage procedure",
+      "data-use citation redistribution and repository conditions"
+    ],
+    "status": "PREPARATION_AUTHORIZED_PACKET_NOT_PREPARED",
+    "terminal_outcomes": [
+      "CONTACT_PACKET_READY",
+      "CONTACT_RECIPIENT_UNRESOLVED",
+      "REQUEST_SCOPE_TOO_BROAD",
+      "CONTACT_SENT_RESPONSE_PENDING",
+      "PRIMARY_PACKAGE_PROVIDED",
+      "PARTIAL_PACKAGE_PROVIDED",
+      "PACKAGE_UNAVAILABLE",
+      "NO_RESPONSE_WITHIN_BOUNDED_WINDOW"
+    ]
+  },
+  "selected_next_target": "prepare_eotwash_2020_yukawa_author_or_custodian_contact_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_NO_CONTACT_OR_EMPIRICAL_ANALYSIS",
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 17,
+    "pass_count": 17,
+    "rows": [
+      {
+        "gate_id": "ACCEPTED_ACQUISITION_RESULT_CUSTODY_AND_EXACT_SELECTOR_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_FOUR_AUTHORIZED_RESPONSES_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXPERIMENT_SUITABILITY_RETAINED_WITHOUT_EMPIRICAL_INFERENCE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ZERO_OF_SIX_COMPLETE_AND_LIKELIHOOD_BLOCK_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTACT_PREPARATION_DIRECTLY_TARGETS_ACCEPTED_BLOCK",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_EIGHT_REQUESTED_OBJECTS_FROZEN_FOR_FUTURE_PACKET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RECIPIENT_AND_DATA_USE_OBLIGATIONS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ONE_INITIAL_CONTACT_AND_BOUNDED_FOLLOWUP_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_MESSAGE_DRAFTED_OR_SENT_DURING_SELECTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYNTHETIC_FORECAST_REMAINS_EXPLORATORY_FALLBACK",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PUBLISHED_REINTERPRETATION_REMAINS_SUPPLIED_NOT_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALTERNATIVE_EXPERIMENT_REQUIRES_COMPLETE_PUBLIC_CONTRACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_DEFERRED_ROUTES_REMAIN_OPEN_NOT_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RANKING_CRITERIA_AND_SCORES_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTACT_PREPARATION_WINS_ALL_24_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SYNTHETIC_ROUTE_IS_RUNNER_UP",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PREPARATION_ONLY_NO_CONTACT_ANALYSIS_PARAMETER_OR_ACTION_SELECTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_count": 8,
+    "criterion_scale": "0..5_RESEARCH_PRIORITY_NOT_TRUTH_PROBABILITY",
+    "maximum_weighted_score": 140,
+    "weights": {
+      "authority_clarity": 3,
+      "boundedness": 3,
+      "computational_progress": 2,
+      "confirmed_empirical_target_continuity": 4,
+      "cost_proportionality": 2,
+      "direct_repair_of_accepted_block": 5,
+      "independent_fit_restoration_potential": 5,
+      "new_information_gain": 4
+    }
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 18,
+    "rows": [
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 84,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 107,
+        "variant": "omit_direct_repair_of_accepted_block"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 89,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 107,
+        "variant": "omit_independent_fit_restoration_potential"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 73,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 112,
+        "variant": "omit_confirmed_empirical_target_continuity"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 69,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 112,
+        "variant": "omit_new_information_gain"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 74,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 117,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 74,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 117,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 81,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 124,
+        "variant": "omit_cost_proportionality"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 79,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 128,
+        "variant": "omit_computational_progress"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 88,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 127,
+        "variant": "direct_repair_of_accepted_block_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 90,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 137,
+        "variant": "direct_repair_of_accepted_block_+1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 89,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 127,
+        "variant": "independent_fit_restoration_potential_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 89,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 137,
+        "variant": "independent_fit_restoration_potential_+1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 85,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 127,
+        "variant": "confirmed_empirical_target_continuity_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 93,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 137,
+        "variant": "confirmed_empirical_target_continuity_+1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 84,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 127,
+        "variant": "new_information_gain_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 94,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 137,
+        "variant": "new_information_gain_+1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 84,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 127,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 94,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 137,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 84,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 127,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 94,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 137,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 85,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 128,
+        "variant": "cost_proportionality_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 93,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 136,
+        "variant": "cost_proportionality_+1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 84,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 130,
+        "variant": "computational_progress_-1"
+      },
+      {
+        "runner_up_candidate_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST",
+        "runner_up_score": 94,
+        "selected_candidate_id": "TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PREPARATION",
+        "selected_score": 134,
+        "variant": "computational_progress_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_post_eotwash_2020_yukawa_primary_evidence_custody_acquisition_scientific_response_v0",
+  "verdict": "SELECTED_TARGETED_EOTWASH_AUTHOR_OR_CUSTODIAN_CONTACT_PACKET_PREPARATION"
+}

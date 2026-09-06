@@ -1,0 +1,469 @@
+{
+  "authority": {
+    "consumed_adversarial_probe_count": 8,
+    "consumed_packet_review_verdict": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+    "consumed_review_gate_count": 18,
+    "frozen_packet_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_REVIEW_20260718_v0.md",
+        "sha256": "17c64e37d54380c0c4fa53285b3d8f112b8c1b4cde1b70e3cdffa7e0e5dd63ce"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_REVIEW_20260718_v0.json",
+        "sha256": "51484eebd42f5bda8386b3857af675add3e8966ce58354965822dfcf31c703d0"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_v0.py",
+        "sha256": "7269afe70ca4fbb7f491c3d00493f8d34044dd339a677d24704d130581342b27"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_v0.py",
+        "sha256": "2ae0dd0847991d282bd674d573a7581bce6c4811cd5ca3787e522332981b3567"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyQuadraticGravityRangeAndWeakFieldConstraintPacketReviewV0.lean",
+        "sha256": "b77140e66d8e77b8315540a0783e38ebea517fdf69b79bbf4cc3a6d7be7ab96e"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_scientific_response_selection_v0.py",
+      "sha256": "7428993ea205e342fc223375740357231b3b3eedea0e8feeb110ae29f7024645"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+      "sha256": "312a8f3b1067035f6ce59b20c1aa1bde5d7c1f565bd13c843177b5bb08058330"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_scientific_response_selection_v0.py",
+      "sha256": "79d827c1ff1e7454daa948ba44267289e64408bbe1bd0bcf71697ebd514a0cca"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "This response selection authorizes preparation only of a bounded Eot-Wash 2020 primary-evidence custody acquisition packet. No supplement download, file acquisition, author or custodian contact, alternative experiment, published-constraint reinterpretation, likelihood, scalar-range or alpha bound, beta=0 law, scalar-branch adoption, native scalar bridge, native gravitational principle, gravitational action, orbital result, frame-dragging result, or master-action change is selected, computed, claimed, or authorized.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "author_contact": "NOT_AUTHORIZED",
+    "evidence_acquisition": "NOT_STARTED",
+    "gravitational_action": "NOT_SELECTED",
+    "likelihood": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "prepare_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0",
+    "packet": "NOT_YET_PREPARED",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_range_bound": "NONE",
+    "selected_response": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+    "selection_stability": "FIRST_IN_24_OF_24_VARIANTS"
+  },
+  "preparation_gates": {
+    "failure_count": 0,
+    "gate_count": 15,
+    "pass_count": 15,
+    "rows": [
+      {
+        "gate_id": "ACCEPTED_BLOCK_CUSTODY_AND_EXACT_SELECTOR_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_FOUR_AUTHORIZED_RESPONSES_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EOTWASH_SUITABILITY_RETAINED_WITHOUT_FIT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRIMARY_DATA_COVARIANCE_MODEL_AND_COVERAGE_BLOCK_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ACQUISITION_ROUTE_DIRECTLY_TARGETS_ALL_MISSING_INPUTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SUPPLEMENT_RECEIPT_CANNOT_AUTOMATICALLY_COMPLETE_CONTRACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SIX_CONTENT_COMPONENTS_REQUIRE_INDIVIDUAL_INSPECTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_DOWNLOAD_CONTACT_OR_ACQUISITION_EXECUTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SUPPLIED_REINTERPRETATION_REMAINS_NONINDEPENDENT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALTERNATIVE_EXPERIMENT_REQUIRES_PUBLIC_EVIDENCE_AND_SIGNAL_MATCH",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEMPORARY_CLOSURE_REMAINS_LEGITIMATE_FALLBACK",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "OTHER_THREE_ROUTES_DEFERRED_NOT_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RANKING_CRITERIA_AND_SCORES_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "WINNER_STABLE_UNDER_24_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PACKET_PREPARATION_ONLY_NO_PARAMETER_BRANCH_OR_ACTION_SELECTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "disposition": "SELECTED_FOR_PACKET_PREPARATION_ONLY",
+        "kind": "PRIMARY_EVIDENCE_AND_FORWARD_MODEL_CUSTODY_PACKET_PREPARATION",
+        "scientific_endpoint": "Determine whether legitimate primary materials can place every decision-bearing likelihood input and the extended-source model into verified custody, without executing the fit.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "cost_proportionality": 4,
+          "direct_repair_of_confirmed_block": 5,
+          "fixed_one_third_signal_match": 5,
+          "likelihood_of_restoring_independent_fit": 5,
+          "reproducibility_gain": 5,
+          "stopping_rule_precision": 5
+        },
+        "target": "prepare_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0",
+        "weighted_score": 133
+      },
+      {
+        "candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "ALTERNATIVE_EXPERIMENT_REPRODUCIBILITY_SELECTION",
+        "scientific_endpoint": "Select a replacement only if it has complete numerical evidence, an executable observable model, and real sensitivity near A_Y=1/3.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 3,
+          "cost_proportionality": 2,
+          "direct_repair_of_confirmed_block": 2,
+          "fixed_one_third_signal_match": 3,
+          "likelihood_of_restoring_independent_fit": 4,
+          "reproducibility_gain": 5,
+          "stopping_rule_precision": 4
+        },
+        "target": "prepare_reproducible_fixed_strength_yukawa_alternative_experiment_survey_v0",
+        "weighted_score": 94
+      },
+      {
+        "candidate_id": "SUPPLIED_PUBLISHED_EOTWASH_CONSTRAINT_REINTERPRETATION",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "SUPPLIED_PUBLISHED_CONSTRAINT_ONLY",
+        "scientific_endpoint": "State only what follows under the authors' published analysis and assumptions, explicitly without claiming independent reproduction.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "cost_proportionality": 5,
+          "direct_repair_of_confirmed_block": 2,
+          "fixed_one_third_signal_match": 5,
+          "likelihood_of_restoring_independent_fit": 0,
+          "reproducibility_gain": 1,
+          "stopping_rule_precision": 5
+        },
+        "target": "prepare_supplied_eotwash_fixed_strength_yukawa_constraint_reinterpretation_packet_v0",
+        "weighted_score": 84
+      },
+      {
+        "candidate_id": "TEMPORARILY_CLOSE_SCALAR_EMPIRICAL_LANE",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "EMPIRICAL_LANE_DEFERMENT",
+        "scientific_endpoint": "Preserve the opportunity and return to theory work if evidence custody cannot be restored proportionately.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "cost_proportionality": 5,
+          "direct_repair_of_confirmed_block": 0,
+          "fixed_one_third_signal_match": 0,
+          "likelihood_of_restoring_independent_fit": 0,
+          "reproducibility_gain": 0,
+          "stopping_rule_precision": 5
+        },
+        "target": "select_non_empirical_post_scalar_scientific_priority_v0",
+        "weighted_score": 50
+      }
+    ],
+    "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+    "runner_up_score": 94,
+    "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+    "selected_score": 133
+  },
+  "retained_block": {
+    "alpha_constraint": "NONE",
+    "experiment": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+    "experiment_scientifically_suitable": true,
+    "fixed_signal": "A_Y=1/3",
+    "independent_project_fit_executable": false,
+    "likelihood": "NOT_EXECUTED",
+    "principal_block": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+    "scalar_range_bound": "NONE"
+  },
+  "schema_id": "toe.post_scalar_only_quadratic_gravity_range_and_weak_field_constraint.packet_review_scientific_response_selection.v0",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "alternate_experiment_selected": false,
+    "author_or_custodian_contact_authorized": false,
+    "beta_zero_adopted": false,
+    "coverage_calibration_available": false,
+    "empirical_lane_closed": false,
+    "eotwash_acquisition_packet_preparation_authorized": true,
+    "eotwash_acquisition_packet_prepared_now": false,
+    "forward_model_executable": false,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "likelihood_evaluated": false,
+    "likelihood_execution_authorized": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "orbital_or_light_propagation_analysis_executed": false,
+    "primary_data_custody_complete": false,
+    "published_constraint_reinterpretation_authorized": false,
+    "scalar_branch_adopted": false,
+    "scientific_response_selection_executed": true,
+    "supplement_download_or_acquisition_authorized": false
+  },
+  "selected_acquisition_packet_contract": {
+    "allowed_preparation_obligations": [
+      "enumerate legitimate supplement and custodian access routes",
+      "define provenance, hash, format, and completeness checks",
+      "define an item-by-item content inspection against likelihood operations",
+      "define author-or-custodian contact as a separately reviewed possible action",
+      "define fail-closed terminal outcomes for partial custody",
+      "stop for independent packet review before any acquisition or communication"
+    ],
+    "dissertation_may_fill_missing_values_by_inference": false,
+    "fit_execution_authorized": false,
+    "independent_review_required": true,
+    "required_component_count": 6,
+    "required_components": [
+      "complete 95x3 torque observations",
+      "displacement and configuration metadata",
+      "numerical uncertainty and covariance model",
+      "five numerical nuisance priors",
+      "executable extended-source torque implementation",
+      "executable or fully specified boundary-coverage calibration"
+    ],
+    "status": "PREPARATION_AUTHORIZED_EXECUTION_NOT_AUTHORIZED",
+    "supplement_receipt_automatically_completes_contract": false,
+    "terminal_outcomes": [
+      "PRIMARY_EVIDENCE_CONTRACT_COMPLETE",
+      "SUPPLEMENT_ACQUIRED_BUT_FORWARD_MODEL_INCOMPLETE",
+      "SUPPLEMENT_ACQUIRED_BUT_COVARIANCE_INCOMPLETE",
+      "AUTHORS_OR_CUSTODIAN_CONTACT_REQUIRED",
+      "PRIMARY_EVIDENCE_NOT_OBTAINABLE_WITHIN_BOUNDED_ROUTE"
+    ]
+  },
+  "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+  "selected_next_target": "prepare_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_EVIDENCE_CUSTODY_ACQUISITION_NO_CONTACT_DOWNLOAD_OR_FIT",
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_count": 8,
+    "criterion_scale": "0..5_RESEARCH_PRIORITY_NOT_TRUTH_PROBABILITY",
+    "maximum_weighted_score": 135,
+    "weights": {
+      "authority_clarity": 3,
+      "boundedness": 3,
+      "cost_proportionality": 2,
+      "direct_repair_of_confirmed_block": 5,
+      "fixed_one_third_signal_match": 4,
+      "likelihood_of_restoring_independent_fit": 4,
+      "reproducibility_gain": 4,
+      "stopping_rule_precision": 2
+    }
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 24,
+    "rows": [
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 84,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 108,
+        "variant": "omit_direct_repair_of_confirmed_block"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_PUBLISHED_EOTWASH_CONSTRAINT_REINTERPRETATION",
+        "runner_up_score": 84,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 113,
+        "variant": "omit_likelihood_of_restoring_independent_fit"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 82,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 113,
+        "variant": "omit_fixed_one_third_signal_match"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_PUBLISHED_EOTWASH_CONSTRAINT_REINTERPRETATION",
+        "runner_up_score": 80,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 113,
+        "variant": "omit_reproducibility_gain"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 85,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 118,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 79,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 118,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 90,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 125,
+        "variant": "omit_cost_proportionality"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 86,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 123,
+        "variant": "omit_stopping_rule_precision"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 92,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 128,
+        "variant": "direct_repair_of_confirmed_block_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 96,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 138,
+        "variant": "direct_repair_of_confirmed_block_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 90,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 128,
+        "variant": "likelihood_of_restoring_independent_fit_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 98,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 138,
+        "variant": "likelihood_of_restoring_independent_fit_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 91,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 128,
+        "variant": "fixed_one_third_signal_match_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 97,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 138,
+        "variant": "fixed_one_third_signal_match_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 89,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 128,
+        "variant": "reproducibility_gain_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 99,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 138,
+        "variant": "reproducibility_gain_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 91,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 128,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 97,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 138,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 89,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 128,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 99,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 138,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 92,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 129,
+        "variant": "cost_proportionality_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 96,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 137,
+        "variant": "cost_proportionality_+1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 90,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 128,
+        "variant": "stopping_rule_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "FULLY_PUBLIC_ALTERNATIVE_EXPERIMENT_SELECTION",
+        "runner_up_score": 98,
+        "selected_candidate_id": "TARGETED_EOTWASH_PRIMARY_EVIDENCE_AND_FORWARD_MODEL_ACQUISITION",
+        "selected_score": 138,
+        "variant": "stopping_rule_precision_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_post_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_scientific_response_v0",
+  "verdict": "SELECTED_TARGETED_EOTWASH_PRIMARY_EVIDENCE_ACQUISITION_PACKET_PREPARATION"
+}

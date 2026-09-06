@@ -1,0 +1,34 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PREPARATION_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_PROPOSAL_PREPARATION_ONLY",
+  "authorized_target": "prepare_toe_native_gravitational_requirements_and_candidate_action_family_survey_bounded_program_v0",
+  "captured_at_utc": "2026-07-31T10:00:00Z",
+  "consumed_terminal_checkpoint": {
+    "census_closeout_result_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "census_closeout_result_sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34",
+    "census_closeout_review_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+    "census_closeout_review_sha256": "ca8ac154c409fff05bc58e6e64e00609d477a8fbca56f586b0518b68f4d979d2",
+    "selected_frontier": "HYP_TOE_NATIVE_GRAVITATIONAL_PRINCIPLE_ACTION_SELECTION_v0",
+    "selected_frontier_readiness": "AFTER_ONE_PREREQUISITE"
+  },
+  "permitted_work": [
+    "prepare a bounded five-stage gravitational requirements and candidate-family survey proposal",
+    "freeze source, custody, workload, review, terminal-outcome, and mandatory-exit contracts",
+    "independently review the proposal for boundedness and nonpromotion",
+    "prepare authority and Lean mirrors for the proposal checkpoint"
+  ],
+  "prohibited_work": [
+    "install the proposed program",
+    "open any scientific stage",
+    "adjudicate a requirement-family compatibility cell",
+    "populate or reuse the closed V2 automated scientific matrix",
+    "select or endorse a gravitational action",
+    "derive a gravitational principle",
+    "promote archived evidence",
+    "authorize or open a scientific successor"
+  ],
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.preparation_authority.v0",
+  "status": "PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED",
+  "user_authority": "EXPLICIT_CURRENT_REQUEST",
+  "zero_scientific_execution": true
+}

@@ -1,0 +1,131 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN",
+  "authorized_source_set": [
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+      "role": "frozen roots search gates budgets and missing-contract checklists",
+      "sha256": "82e9ad6954b365228cfdfbebf018ada2176ec4e326ecff9733947c1fad4a3bf2"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+      "role": "accepted proposal and anti-overclaim boundary",
+      "sha256": "e79497be81d2771e6142b773da8b0b5689f3fb0bf5e8a8cb0f30942718ff0691"
+    },
+    {
+      "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0",
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0.json",
+      "role": "declared-root custody and stable-snapshot result",
+      "sha256": "d8e5cd39b7d7ebf907120aaf1bab1d0d8763bf2a162984977f25e1cc24705ad2"
+    },
+    {
+      "artifact_id": "REPOSITORY_WIDE_SOURCE_CENSUS_AGGREGATE_MANIFEST_v1",
+      "path": "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/aggregate_manifest.json",
+      "role": "eight-batch source and custody index",
+      "sha256": "900647ca8823b4e1c4f82f11f019d135106e65cd9bd9ea3d45d6e1fdf6dc3168"
+    },
+    {
+      "artifact_id": "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+      "role": "prior selected sources mathematical entries and review overflow",
+      "sha256": "9dbcc3402df99065d484cc83518c2d55916f3eacfbc98098bf64663028bcf0b4"
+    },
+    {
+      "artifact_id": "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0.json",
+      "role": "prior CCFT lineages conflicts and unresolved relationships",
+      "sha256": "8cc3ed47abe59d11ec7ba39aa47c7a848800635e1f4ccc9e15e278c558d33bf1"
+    },
+    {
+      "artifact_id": "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0",
+      "path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0.json",
+      "role": "exact missing CP-NLSE and LCRD-v3 closure contracts",
+      "sha256": "b731508223914d3c2172bd7e6a60c43f1bb85c7c2653c1775f2d63fff09a69bd"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "d2019a5d75347897cf4648ec88945b2a4cc2209be10ececf6e6c5b7f33d5d6aa",
+    "canonical_target": "discover_toe_targeted_ccft_closure_evidence_sources_v0",
+    "semantic_stage_id": "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY",
+    "stage_number": 1
+  },
+  "captured_at_utc": "2026-08-01T04:10:00Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 1 scope",
+      "sha256": "f69d6072ce6e86954ebb47d79ecf08b0101b6b6bca288a9318f684377acc891f"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+      "role": "accepted unopened installation",
+      "sha256": "20681dc3c01bb45f9aecf9577ef80446fbda76d2632a9ba7b08d470dfa3feeb3"
+    }
+  ],
+  "permitted_work": [
+    "create initial and final snapshots for the eight authorized custody roots",
+    "apply the frozen branch-plus-contract or structural-signature candidate gate",
+    "bind candidate and selected files to normalized paths hashes custody roots classes and lineage",
+    "identify exact-content duplicates while preserving every custody path",
+    "allocate at most 96 deep-review files under branch lineage byte parser and unsupported-format ceilings",
+    "classify selection relevance only against the frozen CP-NLSE and LCRD-v3 missing-contract checklists",
+    "record unsupported parser-failure local-only overflow and mutation statuses",
+    "produce an independently reviewed atomic Stage 1 CLOSE"
+  ],
+  "prohibited_work": [
+    "declare a missing contract recovered rejected complete or scientifically adequate",
+    "extract or adjudicate substantive contract content",
+    "repair harmonize or select a CCFT equation or branch",
+    "infer coefficients parameter ranges initial data boundary data invariants or failure rules",
+    "insert a new CCFT postulate or construct CCFT-v0",
+    "perform mathematical viability stability phenomenology or observable testing",
+    "promote evidence or claim repository exhaustion",
+    "open Stage 2 automatically"
+  ],
+  "required_candidate_record_fields": [
+    "candidate_id",
+    "source_root_id",
+    "normalized_custody_relative_path",
+    "content_sha256_or_git_blob_identity",
+    "file_type_and_size",
+    "custody_and_portability_status",
+    "branch_gate_match",
+    "contract_gate_or_structural_signature_match",
+    "lineage_allocation",
+    "exact_duplicate_group",
+    "parser_or_unsupported_status",
+    "deterministic_priority_and_tie_break",
+    "selection_or_overflow_status"
+  ],
+  "scientific_limits": {
+    "authorized_source_root_count": 8,
+    "maximum_deep_review_files": 96,
+    "maximum_deep_review_files_per_branch": 48,
+    "maximum_deep_review_files_per_lineage": 12,
+    "maximum_metadata_candidates": 256,
+    "maximum_parser_failures": 8,
+    "maximum_source_root_mutations": 0,
+    "maximum_total_deep_review_bytes": 536870912,
+    "maximum_unsupported_format_files": 32,
+    "targeted_content_search_pass_limit": 1
+  },
+  "selection_contract": {
+    "automatic_second_search": false,
+    "candidate_gate": "at least one frozen branch term and one frozen contract term, or one enumerated structural signature tied to a missing contract",
+    "content_extraction_during_stage_1": false,
+    "desired_model_or_recovery_outcome_may_affect_selection": false,
+    "duplicate_paths_add_independent_support": false,
+    "selected_content_passes_consumed_during_stage_1": 0,
+    "tie_breaking_rule": "branch ID, source class, lineage allocation, normalized custody-relative path, then verified SHA-256"
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_1_OPEN_ONLY",
+  "terminal_outcomes": [
+    "TARGETED_CCFT_SOURCE_SET_BOUND",
+    "NO_TARGETED_CCFT_SOURCE_CANDIDATES_FOUND",
+    "SOURCE_ROOT_MUTATED_DURING_TARGETED_RECOVERY",
+    "TARGETED_SOURCE_SELECTION_BUDGET_EXCEEDED",
+    "SOURCE_ROOT_OR_CUSTODY_UNAVAILABLE"
+  ]
+}

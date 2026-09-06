@@ -1,0 +1,57 @@
+{
+  "schema_id": "EXTERNAL_AI_ASSISTED_MATHEMATICAL_DISCOVERY_MILESTONE_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:04:17Z",
+  "classification": "EXTERNAL_AI_ASSISTED_MATHEMATICAL_DISCOVERY_MILESTONE",
+  "evidence": [
+    {
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "bounded_claim": "The reported construction disproves the conjectured n^(1+o(1)) upper growth by obtaining n^(1+delta) unit-distance pairs for infinitely many n; it does not determine the exact asymptotic of u(n).",
+      "source_role": "PRIMARY_ORIGINATOR_REPORT_WITH_LINKED_EXTERNAL_MATHEMATICAL_REVIEW"
+    },
+    {
+      "title": "The sum-product conjecture is false for real numbers",
+      "url": "https://arxiv.org/abs/2605.28781",
+      "bounded_claim": "The authors explicitly report that the unit-distance construction inspired renewed investigation using high-degree number fields, while describing the final proof as almost entirely human-generated.",
+      "source_role": "PRIMARY_RESEARCH_PREPRINT"
+    },
+    {
+      "title": "Advancing Mathematics Research with AI-Driven Formal Proof Search",
+      "url": "https://arxiv.org/abs/2605.22763",
+      "bounded_claim": "The preprint authors report 9 of 353 selected open Erdos problems and 44 of 492 OEIS conjectures resolved or proved using AI-driven formal proof search with Lean verification.",
+      "source_role": "PRIMARY_RESEARCH_PREPRINT_AUTHOR_REPORTED_CLAIMS"
+    }
+  ],
+  "claim_ceiling": {
+    "ai_can_generate_original_human_reviewable_research_level_mathematics": "SUPPORTED_BY_THIS_EXTERNAL_MILESTONE",
+    "ai_output_is_self_authenticating": false,
+    "formal_verification_establishes_physical_truth": false,
+    "mathematical_novelty_establishes_the_ToE": false,
+    "the_ToE_is_physically_supported": false
+  },
+  "future_methodological_relevance": {
+    "native_theory_search": "VERY_HIGH",
+    "seam_closure": "HIGH",
+    "formalization": "VERY_HIGH",
+    "adversarial_counterexample_search": "VERY_HIGH"
+  },
+  "future_bounded_workflow": [
+    "AI_EXPLORATION",
+    "SYMBOLIC_AND_NUMERICAL_COMPUTATION",
+    "HUMAN_CONCEPTUAL_REVIEW",
+    "INDEPENDENT_DERIVATION",
+    "LEAN_OR_OTHER_FORMAL_VERIFICATION_WHERE_FEASIBLE",
+    "PHYSICAL_INTERPRETATION",
+    "EMPIRICAL_TESTING"
+  ],
+  "current_repository_treatment": {
+    "direct_authority_effect": "NONE",
+    "direct_support_for_ToE": "NONE",
+    "scientific_lane_created": false,
+    "scientific_execution_authorized": false,
+    "registry_enrollment": "NO",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "role": "NONAUTHORITATIVE_EXTERNAL_METHODS_COMPARATOR_ONLY"
+  },
+  "scientific_posture": "B-BLOCKED"
+}

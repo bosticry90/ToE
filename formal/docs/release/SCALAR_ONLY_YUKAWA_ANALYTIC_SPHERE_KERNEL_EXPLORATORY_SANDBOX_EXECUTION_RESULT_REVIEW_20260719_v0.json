@@ -1,0 +1,345 @@
+{
+  "authority": {
+    "consumed_execution_outcome": "EXPLORATORY_IMPLEMENTATION_RESULT_SERIALIZATION_FAILED_INCOMPLETE",
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_20260719_v0.md",
+        "sha256": "ac9efc946a9f106a6418233fc1c4d384d838c27340fc8862428e7792f58e7cb7"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v0.json",
+        "sha256": "14eaaf53c8b730c8ac2a9c4910fca28bd647843f89e8aac50bcde4dcad4c2982"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v0.json.sha256",
+        "sha256": "966c71b5b04314699b19bf964aec51c51cdf2212d7d2689bb4e9d11a3ddd2822"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0.py",
+        "sha256": "27a32f540465ed78cb2094629033a4aa30e3142c1f75aa113fc88eb10c7563ae"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_execution_result_v0.py",
+        "sha256": "61efcee6e4c97a69d8cfd75d0297a357343278f61aabe1ef8b51ce704dae982a"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelExploratorySandboxExecutionResultV0.lean",
+        "sha256": "4529cffee3eaa2d2ec20c4024f31021319092985ac5cc2741a910a729fc6e66a"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v0.authority_consumed.json",
+        "sha256": "ee3ca18499c38e2480155e8b7d51394c2dde198612e0b270e5975ae333f1d572"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v0.stages.json",
+        "sha256": "0314b322cb5ae1b6f5279c88f15194733f00ebae9278c504120575d259c08b51"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v0.log",
+        "sha256": "04b010afc7fd1025dd1da23b4cac34b86c828fb5f9ec772b701e4d5599fb351b"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_execution_result_review_v0.py",
+      "sha256": "586ad278f1819e4a4d0904c61bda6f1be174f1ff526eff24ef9cf8dc8f76f5c1"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_REVIEW_20260719_v0.md",
+      "sha256": "8a25dfee32a67a960efb36217de7b45ca6da3134af58526b127be5eee3be75c8"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelExploratorySandboxExecutionResultReviewV0.lean",
+      "sha256": "9115aaf011cd0734c59129457b4375ca3d37f0c2e4a58c0d185830384aea8bb2"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_execution_result_review_v0.py",
+      "sha256": "a6587f52ee964831eadbbd9cae9f118a40332b847bda7471aa5d72d058fb3688"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review accepts the one-shot sandbox serialization failure and localizes an implementation conversion defect plus a synthetic-control integration gap. It does not recover transient values, qualify or refute the analytic kernel, adjudicate cubature, edit or rerun the sandbox, change production, rerun Stage A, compute torque, DFT, vector, Jacobian, SVD, or identifiability, or authorize Stage B.",
+  "custody_review": {
+    "administrative_failure_result_sufficient_for_failure_review": true,
+    "administrative_failure_result_sufficient_for_scientific_review": false,
+    "authorized_execution_count": 1,
+    "canonical_result_written_by_sandbox": false,
+    "completed_stage_boundary_count": 8,
+    "consumed_execution_count": 1,
+    "run_id": "fc9577fb-9fe5-45eb-b416-778a04ee51ce",
+    "surviving_process_count": 0
+  },
+  "defect_attribution": {
+    "ambiguity_in_decimal_conversion_obligation_established": false,
+    "contract_coverage_failure_established": false,
+    "contract_rule": "UPPERCASE_NORMALIZED_DECIMAL_STRINGS_ONLY",
+    "contract_status": "SUFFICIENTLY_EXPLICIT_FOR_THIS_CONVERSION_PATH",
+    "missing_implementation_boundary": "CONVERT_TYPED_DECIMAL_VALUES_TO_SCHEMA_STRINGS_BEFORE_RESULT_TREE_INSERTION",
+    "principal_classification": "IMPLEMENTATION_FAILURE",
+    "secondary_classification": "SYNTHETIC_CONTROL_INTEGRATION_COVERAGE_GAP",
+    "static_trace": [
+      "adjudicate_v0 numeric branch constructs Decimal observed/reference values",
+      "adjudicate_v0 returns those objects in observed_canonical/reference_canonical",
+      "C07 retains the nested adjudication results",
+      "C12 serializes a separate fixed object rather than C07 or the aggregate result",
+      "final _canonical_bytes(result) rejects the live Decimal object"
+    ]
+  },
+  "next_response_boundary": {
+    "automatic_rerun": "PROHIBITED",
+    "fresh_selector_required": true,
+    "missing_value_reconstruction": "PROHIBITED",
+    "production_or_scientific_advance": "PROHIBITED",
+    "retire_or_defer_remains_available": true,
+    "silent_implementation_edit": "PROHIBITED"
+  },
+  "principal_review_outcome": "VALIDATION_INFRASTRUCTURE_IMPLEMENTATION_FAILED_CANONICAL_SERIALIZATION",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 40,
+    "pass_count": 40,
+    "rows": [
+      {
+        "finding": "nine frozen artifacts reproduce",
+        "gate_id": "E01_EXACT_RESULT_AND_CUSTODY_HASHES",
+        "status": "PASS"
+      },
+      {
+        "finding": "result rotates only to this review",
+        "gate_id": "E02_EXACT_REVIEW_AUTHORITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "one of one execution consumed",
+        "gate_id": "E03_ONE_SHOT_EXECUTION_CONSUMED",
+        "status": "PASS"
+      },
+      {
+        "finding": "no rerun or implementation edit accepted",
+        "gate_id": "E04_NO_RERUN_OR_REPAIR",
+        "status": "PASS"
+      },
+      {
+        "finding": "zero surviving process recorded and rechecked",
+        "gate_id": "E05_ZERO_SURVIVING_PROCESS_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "marker and result run ids agree",
+        "gate_id": "E06_RUN_ID_CROSS_SURFACE_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "executed source hash reproduced",
+        "gate_id": "E07_SOURCE_HASH_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "raw log hash reproduced",
+        "gate_id": "E08_RAW_LOG_HASH_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "stage checkpoint hash reproduced",
+        "gate_id": "E09_STAGE_CHECKPOINT_HASH_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "eight completion boundaries preserved",
+        "gate_id": "E10_EIGHT_STAGE_BOUNDARIES_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "completion is not interpreted as pass",
+        "gate_id": "E11_STAGE_COMPLETION_NOT_PASS_CLASSIFICATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "authorized writer failed before result commit",
+        "gate_id": "E12_CANONICAL_RESULT_NOT_WRITTEN_IN_PROCESS",
+        "status": "PASS"
+      },
+      {
+        "finding": "post-launch custody reconstruction is labeled",
+        "gate_id": "E13_ADMINISTRATIVE_RESULT_PROVENANCE_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "transient values are not reconstructed",
+        "gate_id": "E14_MISSING_DECISION_RECORDS_INADMISSIBLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "builtins.TypeError preserved",
+        "gate_id": "E15_EXACT_FAILURE_TYPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Decimal JSON failure preserved",
+        "gate_id": "E16_EXACT_FAILURE_MESSAGE",
+        "status": "PASS"
+      },
+      {
+        "finding": "numeric adjudicator creates Decimal objects",
+        "gate_id": "E17_DECIMAL_CREATION_PATH_LOCALIZED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Decimal objects enter canonical fields",
+        "gate_id": "E18_DECIMAL_RETURN_PATH_LOCALIZED",
+        "status": "PASS"
+      },
+      {
+        "finding": "strict final encoder receives result tree",
+        "gate_id": "E19_FINAL_ENCODER_FAILURE_PATH_LOCALIZED",
+        "status": "PASS"
+      },
+      {
+        "finding": "uppercase normalized decimal strings required",
+        "gate_id": "E20_CONTRACT_DECIMAL_RULE_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "nested canonical scalar schema excludes Decimal objects",
+        "gate_id": "E21_CONTRACT_CANONICAL_SCALARS_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "conversion boundary omitted in implementation",
+        "gate_id": "E22_IMPLEMENTATION_DEFECT_PRIMARY",
+        "status": "PASS"
+      },
+      {
+        "finding": "numeric predicates generated the leaking values",
+        "gate_id": "E23_C07_EXERCISED_NUMERIC_PATH",
+        "status": "PASS"
+      },
+      {
+        "finding": "round trip did not cover C07 or full result tree",
+        "gate_id": "E24_C12_USED_SEPARATE_FIXED_OBJECT",
+        "status": "PASS"
+      },
+      {
+        "finding": "control composition missed nested path",
+        "gate_id": "E25_SYNTHETIC_CONTROL_INTEGRATION_GAP_SECONDARY",
+        "status": "PASS"
+      },
+      {
+        "finding": "conversion obligation was sufficiently explicit",
+        "gate_id": "E26_NO_CONTRACT_AMBIGUITY_FINDING",
+        "status": "PASS"
+      },
+      {
+        "finding": "serialization failure blocks infrastructure qualification",
+        "gate_id": "E27_INFRASTRUCTURE_NOT_QUALIFIED",
+        "status": "PASS"
+      },
+      {
+        "finding": "kernel outcome remains unresolved",
+        "gate_id": "E28_KERNEL_NOT_QUALIFIED_OR_REFUTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "no cubature inference issued",
+        "gate_id": "E29_HISTORICAL_CUBATURE_UNADJUDICATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "no production change accepted",
+        "gate_id": "E30_PRODUCTION_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Stage A remains closed",
+        "gate_id": "E31_NO_STAGE_A_RERUN",
+        "status": "PASS"
+      },
+      {
+        "finding": "torque and DFT remain closed",
+        "gate_id": "E32_NO_TORQUE_OR_DFT",
+        "status": "PASS"
+      },
+      {
+        "finding": "identifiability remains closed",
+        "gate_id": "E33_NO_IDENTIFIABILITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "Stage B remains closed",
+        "gate_id": "E34_NO_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "finding": "four nonclaim labels exact",
+        "gate_id": "E35_EXPLORATORY_LABELS_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "no partial scientific outcome promoted",
+        "gate_id": "E36_FAIL_CLOSED_BEHAVIOR_ACCEPTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "review uses custody only",
+        "gate_id": "E37_NO_VALUE_RECONSTRUCTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "review statically reads source only",
+        "gate_id": "E38_NO_IMPLEMENTATION_IMPORT_OR_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "response requires new governed selection",
+        "gate_id": "E39_FRESH_SELECTOR_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "finding": "review stops before response selection",
+        "gate_id": "E40_CURRENT_AUTHORITY_ROTATES_TO_POST_FAILURE_SELECTOR",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_REVIEW_20260719_v0",
+  "schema_id": "toe.scalar_only_yukawa.analytic_sphere_kernel.exploratory_sandbox_execution_result_review.v0",
+  "scientific_admissibility": {
+    "boundary_probe_results_admissible": false,
+    "derivative_values_admissible": false,
+    "infrastructure_pass_or_fail": "FAILED_QUALIFICATION_BY_SERIALIZATION",
+    "kernel_pass_or_fail": "UNRESOLVED",
+    "mutation_results_admissible": false,
+    "regression_values_admissible": false,
+    "runtime_results_admissible": false,
+    "stage_completion_is_decision_bearing": false
+  },
+  "scope": {
+    "analytic_kernel_qualified": false,
+    "analytic_kernel_refuted": false,
+    "contract_ambiguity_established": false,
+    "fresh_scientific_response_selector_authorized": true,
+    "historical_cubature_adjudicated": false,
+    "implementation_defect_localized": true,
+    "implementation_edit_authorized": false,
+    "independent_execution_result_review_performed": true,
+    "infrastructure_qualified": false,
+    "jacobian_or_identifiability_authorized": false,
+    "missing_value_reconstruction_authorized": false,
+    "one_shot_custody_accepted": true,
+    "production_change_authorized": false,
+    "sandbox_rerun_authorized": false,
+    "serialization_failure_accepted": true,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "synthetic_control_integration_gap_localized": true,
+    "torque_or_dft_authorized": false
+  },
+  "secondary_review_outcomes": [
+    "SANDBOX_IMPLEMENTATION_DEFECT_LOCALIZED",
+    "SYNTHETIC_CONTROL_SERIALIZATION_INTEGRATION_COVERAGE_GAP",
+    "KERNEL_QUALIFICATION_REMAINS_UNRESOLVED"
+  ],
+  "selected_next_target": "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0_execution_result_review_scientific_response_v0",
+  "selected_next_target_kind": "FRESH_POST_FAILURE_SELECTOR_ONLY_NO_EDIT_RERUN_QUALIFICATION_OR_PRODUCTION_ADVANCE",
+  "target": "review_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0_execution_result",
+  "verdict": "ACCEPTED_EXPLORATORY_IMPLEMENTATION_SERIALIZATION_FAILURE"
+}

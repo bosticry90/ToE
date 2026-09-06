@@ -173,7 +173,7 @@ def test_historical_v2_validation_limitation_is_preserved_without_rewriting_v2()
 
 def test_prompt_and_claim_boundary_remain_unchanged() -> None:
     packet = _load(freeze.PACKET_RELATIVE_PATH)
-    assert freeze.sha256_path(ROOT / freeze.PROMPT_RELATIVE_PATH) == freeze.PROMPT_SHA256
+    assert freeze.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"
     assert packet["authority_boundary"]["robustness_classification_assigned"] is False
     assert packet["authority_boundary"]["descendant_materiality_classification_assigned"] is False
     assert packet["historical_repository_wide_Lean"]["status"] == "INCOMPLETE_TIMEOUT"

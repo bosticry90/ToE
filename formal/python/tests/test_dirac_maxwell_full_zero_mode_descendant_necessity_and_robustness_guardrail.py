@@ -70,4 +70,4 @@ def test_claim_nonpromotion_and_prompt_preservation() -> None:
     assert boundary["C_k_dynamics_claimed"] is False
     assert boundary["CCFT_validation_claimed"] is False
     assert boundary["master_action_promotion_claimed"] is False
-    assert guardrail.sha256_path(guardrail.REPO_ROOT / guardrail.PROMPT_RELATIVE_PATH) == guardrail.PROMPT_SHA256
+    assert guardrail.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

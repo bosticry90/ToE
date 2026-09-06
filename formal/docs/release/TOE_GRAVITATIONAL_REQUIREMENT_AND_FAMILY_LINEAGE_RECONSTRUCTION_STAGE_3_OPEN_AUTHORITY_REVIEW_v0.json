@@ -1,0 +1,27 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_STAGE_3_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T15:03:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_the_closed_and_reviewed_Stage_1_and_Stage_2_results": true,
+    "authority_binds_exactly_ten_requirement_and_seven_family_ids": true,
+    "authority_preserves_manifest_workload_caps": true,
+    "authority_allows_only_source_bound_documentary_relationships": true,
+    "authority_allows_recovery_only_from_exact_preserved_source_content": true,
+    "authority_prohibits_invention_ranking_compatibility_and_action_selection": true,
+    "authority_preserves_Einstein_Hilbert_as_baseline_and_quadratic_as_control": true,
+    "authority_preserves_evidence_promotion_as_prohibited": true,
+    "authority_preserves_new_calculations_as_prohibited": true,
+    "authority_preserves_Stage_4_as_separately_authorized": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "source_hashes_reproduce": true
+  },
+  "decision": "AUTHORIZE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_STAGE_3_OPEN",
+  "failed_checks": [],
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "schema_id": "toe.gravitational_requirement_and_family_lineage_reconstruction.stage_3_open_authority_review.v0",
+  "stage_3_scientific_result_created": false,
+  "stage_4_authorized": false,
+  "status": "STAGE_3_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}

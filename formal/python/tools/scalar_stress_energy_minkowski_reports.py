@@ -7,6 +7,11 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.meta.numeric_reproducibility import (
+    DEFAULT_ABSOLUTE_TOLERANCE,
+    DEFAULT_RELATIVE_TOLERANCE,
+    structurally_numeric_equivalent,
+)
 from formal.python.toe.calculations.calc_scalar_stress_energy_divergence_identity_minkowski import (
     CALCULATION_ID,
     RESOLUTIONS,
@@ -516,6 +521,7 @@ def verify_calculation_result(
 
     canonical_bytes_match = False
     independent_regeneration_match = False
+    independent_regeneration_byte_identity = False
     if result is not None and manifest is not None:
         try:
             canonical_bytes_match = (
@@ -596,8 +602,12 @@ def verify_calculation_result(
             mismatch_codes.append("manifest_hash_mismatch")
 
         fresh_result = rebuild_calculation_result()
-        independent_regeneration_match = (
+        independent_regeneration_byte_identity = (
             calculation_canonical_json_bytes(fresh_result) == output_path.read_bytes()
+        )
+        independent_regeneration_match = structurally_numeric_equivalent(
+            result,
+            fresh_result,
         )
         if not independent_regeneration_match:
             mismatch_codes.append("regeneration_mismatch")
@@ -630,6 +640,15 @@ def verify_calculation_result(
         "independent_in_memory_regeneration_match": (
             independent_regeneration_match
         ),
+        "independent_in_memory_byte_identity": (
+            independent_regeneration_byte_identity
+        ),
+        "cross_platform_numeric_equivalence_contract": {
+            "relative_tolerance": DEFAULT_RELATIVE_TOLERANCE,
+            "absolute_tolerance": DEFAULT_ABSOLUTE_TOLERANCE,
+            "non_numeric_structure": "EXACT",
+            "recorded_artifact_hash": "EXACT",
+        },
         "threshold_evidence": threshold_evidence,
         "selected_next_target": (
             CURVED_RETEST_GUARDRAIL_TARGET

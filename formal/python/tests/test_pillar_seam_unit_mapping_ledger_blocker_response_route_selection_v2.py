@@ -14,6 +14,27 @@ def test_v2_artifacts_are_current() -> None:
     assert v2.REPORT_PATH.read_bytes() == v2.canonical_json_bytes(report)
 
 
+def test_v2_tracked_inputs_use_frozen_blob_identities() -> None:
+    packet, manifest, _ = v2.build_artifacts()
+    closures = packet["dependency_closures"]
+    identities = [
+        *closures["scientific_input_closure"],
+        *closures["implementation_closure"]["artifacts"],
+        *closures["environment_closure"]["bound_environment_files"],
+        packet["prompt_protection"],
+        manifest["generator"],
+    ]
+    assert identities
+    assert {item["frozen_commit"] for item in identities} == {v2._frozen_commit()}
+    assert {item["identity_type"] for item in identities} <= {
+        "GIT_BLOB_SHA256",
+        "CANONICAL_ARTIFACT_SHA256",
+    }
+    assert all(v2._identity_matches(item) for item in identities)
+    assert packet["determinism_contract"]["checkout_bytes_authoritative"] is False
+    assert packet["determinism_contract"]["line_ending_dependence"] == "NONE"
+
+
 def test_v2_repairs_authority_at_proposition_granularity() -> None:
     packet, _, _ = v2.build_artifacts()
     records = v2._record_map(packet)
@@ -90,4 +111,4 @@ def test_v2_emits_no_resolution_and_preserves_prompt() -> None:
     assert packet["boundary"]["Maxwell_Dirac_selected"] is False
     assert report["packet_acceptance_authorized"] is False
     assert report["first_unit_selector_authorized"] is False
-    assert v2.sha256_path(v2.REPO_ROOT / v2.PROMPT_RELATIVE_PATH) == v2.PROMPT_BASELINE_SHA256
+    assert v2._identity_matches(packet["prompt_protection"])

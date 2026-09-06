@@ -1,0 +1,263 @@
+{
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_PACKET_20260718_v0.md",
+        "sha256": "cfbc31eb732588b9a7baf4496fdfac98abab19cf6851771d7e2a8908d6070057"
+      },
+      {
+        "relative_path": "formal/docs/release/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_PACKET_20260718_v0.json",
+        "sha256": "01ee3d662c3e0a346bd42e2f56c680fd0e790261161dc45577703933e4fab40b"
+      },
+      {
+        "relative_path": "formal/python/tools/shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0.py",
+        "sha256": "dd2c6a8b3b6008df99df07a64d5adb37127b7157a2bc0e3d9be0d61029507fc1"
+      },
+      {
+        "relative_path": "formal/python/tests/test_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0.py",
+        "sha256": "14ea925f0d58509b8027f02d03962160b90456634de62284f315079795d2cb01"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/SharedLinearizedQuadraticGravitySourceAndSpectrumComparisonPacketV0.lean",
+        "sha256": "fa3a7b342b55039a3692f494a8fd740b73b322a8fe4cb591c2688235dd4cb275"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_review_v0.py",
+      "sha256": "94a0cc9b7330071a16f41c629b39554b514d510967d4e2049345e12316dbbc31"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_PACKET_REVIEW_20260718_v0.md",
+      "sha256": "ad15fe0ba457ed37de6c7829e9101a15d9e0326bba5affed6f38f2f6d43deeec"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_review_v0.py",
+      "sha256": "3ab58c4519dbcd907a49bed138211ca7f977bf1d2944e0623cb7cd8f1eb671b1"
+    }
+  },
+  "authorized_execution": {
+    "clauses": [
+      "Hash and revalidate the accepted packet before symbolic variation.",
+      "Treat alpha and beta as exact real parameters with units m^2.",
+      "Keep the source first-order, supplied, symmetric, and conserved.",
+      "Pass D1 through D7 before projector inversion.",
+      "Pass the Minkowski background check before defining poles.",
+      "Derive the complete gauge-fixed operator before source saturation.",
+      "Apply the binding operational residue rule.",
+      "Derive 00 and 0i from the same saturated operator and Fourier convention.",
+      "Execute all ten controls through the same path and fail closed on failure.",
+      "Compare with literature only after derivation and record convention translations.",
+      "Emit all eleven outputs or a localized blocked result.",
+      "Stop at review_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_v0_result."
+    ],
+    "derivation_step_count": 10,
+    "execution_count": 1,
+    "required_output_count": 11,
+    "result_review_target": "review_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_v0_result",
+    "shared_path_control_count": 10
+  },
+  "binding_residue_rule": "At each simple physical pole, decompose the conserved-source saturated amplitude into the frozen spin-2 or scalar projector channel; factor out the common positive G/source normalization; and report the residue sign relative to the positive Einstein massless-spin-2 reference for a normalized physical polarization/source channel. Repeated, merged, or non-diagonalizable poles receive no sign until resolved by a limiting or diagonalized analysis.",
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "current_posture": {
+    "comparison_action": "SUPPLIED_COMPARISON_ONLY",
+    "derivation_stages_completed": "0/10",
+    "gravitational_action": "NOT_SELECTED",
+    "mode_judgments": "0/3",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "physical_outputs": "0/11",
+    "shared_path_controls_executed": "0/10"
+  },
+  "independent_normalization_audit": {
+    "A_EH": [
+      1,
+      0,
+      -1
+    ],
+    "G": [
+      -1,
+      3,
+      -2
+    ],
+    "alpha_dimension": [
+      0,
+      2,
+      0
+    ],
+    "beta_dimension": [
+      0,
+      2,
+      0
+    ],
+    "c": [
+      0,
+      1,
+      -1
+    ],
+    "curvature": [
+      0,
+      -2,
+      0
+    ],
+    "d4x": [
+      0,
+      4,
+      0
+    ],
+    "derived_rhs_coefficient": "8 pi G/c^4",
+    "derived_rhs_sign": "POSITIVE",
+    "dimension_order": [
+      "M",
+      "L",
+      "T"
+    ],
+    "expected_action_J_s": [
+      1,
+      2,
+      -1
+    ],
+    "gravity_action": [
+      1,
+      2,
+      -1
+    ],
+    "passed": true,
+    "source_action": [
+      1,
+      2,
+      -1
+    ],
+    "source_stationarity": "A_EH H_mu_nu-(1/(2c))T_mu_nu=0 => H_mu_nu=(8 pi G/c^4)T_mu_nu",
+    "stress_energy": [
+      1,
+      -1,
+      -2
+    ]
+  },
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 15,
+    "pass_count": 15,
+    "rows": [
+      {
+        "finding": "Five packet artifacts match frozen SHA-256 values.",
+        "gate_id": "G1_EXACT_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "The action cannot be promoted by a successful comparison calculation.",
+        "gate_id": "G2_IMMUTABLE_COMPARISON_ONLY_STATUS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Both gravitational and source variations have J s dimensions.",
+        "gate_id": "G3_COMMON_NORMALIZATION_AND_SI_DIMENSIONS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Independent stationarity algebra gives +8 pi G/c^4 and no native matter claim.",
+        "gate_id": "G4_EXTERNAL_SOURCE_SIGN_AND_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "finding": "The reduction is restricted to compact-support four-dimensional local-bulk variation.",
+        "gate_id": "G5_FOUR_DIMENSIONAL_GAUSS_BONNET_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Zero curvature is structurally admissible; D4 remains unexecuted until the Euler tensor exists.",
+        "gate_id": "G6_MINKOWSKI_ADMISSIBLE_BUT_EXECUTION_GATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The h expansion does not assume small alpha or beta.",
+        "gate_id": "G7_LINEARIZATION_EXACT_IN_ALPHA_BETA",
+        "status": "PASS"
+      },
+      {
+        "finding": "Curvature, Fourier, causal, and stationary conventions are explicit and disjoint.",
+        "gate_id": "G8_CONVENTIONS_AND_BOUNDARY_PRESCRIPTIONS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "Gauge sectors remain through inversion and are removed only after conserved-source saturation.",
+        "gate_id": "G9_GAUGE_FIXING_PRESERVES_MODE_QUESTIONS",
+        "status": "PASS"
+      },
+      {
+        "finding": "All equations, modes, poles, residues, and Green functions remain blank.",
+        "gate_id": "G10_NO_PRELOADED_MODES_OR_LITERATURE_RESULTS",
+        "status": "PASS"
+      },
+      {
+        "finding": "PASS with a binding operational residue rule for simple and degenerate poles.",
+        "gate_id": "G11_POLE_AND_RESIDUE_SEMANTICS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Both source channels are components of one inverted, saturated operator.",
+        "gate_id": "G12_ONE_OPERATOR_SUPPLIES_00_AND_0I",
+        "status": "PASS"
+      },
+      {
+        "finding": "Retarded dynamics, pole reporting, and decaying static inversion have separate roles.",
+        "gate_id": "G13_STATIC_AND_DYNAMIC_PRESCRIPTIONS_NOT_MIXED",
+        "status": "PASS"
+      },
+      {
+        "finding": "All ten controls are unrun and route through the primary calculation.",
+        "gate_id": "G14_TEN_CONTROLS_USE_THE_SHARED_PATH",
+        "status": "PASS"
+      },
+      {
+        "finding": "Review authorizes one execution only, followed by independent result review.",
+        "gate_id": "G15_ONE_EXECUTION_AND_HARD_STOP",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_PACKET_REVIEW_20260718_v0",
+  "scientific_oracle_spot_checks": [
+    {
+      "role": "POST_DERIVATION_MODE_AND_GHOST_ORACLE_ONLY",
+      "source": "https://arxiv.org/abs/hep-th/9509142"
+    },
+    {
+      "role": "POST_DERIVATION_FOURTH_ORDER_WEAK_FIELD_AND_GAUSS_BONNET_ORACLE_ONLY",
+      "source": "https://arxiv.org/abs/1007.1917"
+    },
+    {
+      "role": "POST_DERIVATION_ANALYTIC_F_R_SCALAR_MODE_ORACLE_ONLY",
+      "source": "https://arxiv.org/abs/1104.0819"
+    },
+    {
+      "role": "GENERAL_COVARIANT_VARIATIONAL_CONTEXT_ONLY",
+      "source": "https://arxiv.org/abs/gr-qc/9403028"
+    }
+  ],
+  "scope": {
+    "Green_function_computed": false,
+    "authoritative_V2_population_authorized": false,
+    "coefficient_selection_authorized": false,
+    "comparison_action_selected": false,
+    "comparison_execution_executed": false,
+    "empirical_fitting_authorized": false,
+    "frame_dragging_reopened": false,
+    "independent_packet_review_executed": true,
+    "linearized_field_equation_derived": false,
+    "master_action_mutation_authorized": false,
+    "matter_sector_selected": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "one_comparison_execution_authorized": true,
+    "orbital_precession_authorized": false,
+    "packet_accepted": true,
+    "pole_or_residue_judgment_made": false,
+    "propagator_or_mode_calculation_executed": false
+  },
+  "selected_next_target": "execute_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_v0",
+  "selected_next_target_kind": "ONE_BOUNDED_COMPARISON_EXECUTION_THEN_INDEPENDENT_RESULT_REVIEW",
+  "target": "review_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_packet_v0_result",
+  "verdict": "ACCEPTED_FOR_ONE_BOUNDED_SHARED_LINEARIZED_QUADRATIC_GRAVITY_COMPARISON_EXECUTION"
+}

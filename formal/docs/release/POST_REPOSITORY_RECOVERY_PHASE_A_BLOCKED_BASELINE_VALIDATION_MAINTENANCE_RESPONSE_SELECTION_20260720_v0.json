@@ -1,0 +1,46 @@
+{
+  "baseline_disposition": "RED_REPAIR_REQUIRED",
+  "boundaries": {
+    "first_unit_selector_execution_authorized": false,
+    "maxwell_dirac_execution_authorized": false,
+    "phase_b_authorized": false,
+    "phase_c_authorized": false,
+    "scalar_yukawa_execution_authorized": false,
+    "scientific_execution_frozen": true,
+    "scientific_registry_mutation_authorized": false,
+    "scientific_target_unchanged": true,
+    "v2_enrollment_authorized": false,
+    "v2_scientific_regeneration_authorized": false
+  },
+  "phase_a_preservation": {
+    "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
+    "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
+  },
+  "previous_maintenance_target": "prepare_repository_authority_custody_and_reproducibility_recovery_packet_v0",
+  "schema_id": "POST_REPOSITORY_RECOVERY_PHASE_A_BLOCKED_BASELINE_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0",
+  "scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
+    "current_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH",
+    "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
+    "current_target_strict_outcome": "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+    "empirical_validation_established": false,
+    "master_action_promoted": false,
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "selected_maintenance_target": "prepare_repository_clean_baseline_validation_stabilization_packet_v0",
+  "selected_route": "PRESERVE_PHASE_A_RESULT_AND_AUTHORIZE_BOUNDED_BASELINE_STABILIZATION",
+  "selector": "select_post_repository_recovery_phase_a_blocked_baseline_validation_maintenance_response_v0",
+  "status": "SELECTED_PENDING_INDEPENDENT_STABILIZATION_REVIEW",
+  "substantive_choices": [
+    "PRESERVE_PHASE_A_RESULT_AND_AUTHORIZE_BOUNDED_BASELINE_STABILIZATION",
+    "PRESERVE_PHASE_A_RESULT_AND_DEFER_REPOSITORY_RECOVERY"
+  ]
+}

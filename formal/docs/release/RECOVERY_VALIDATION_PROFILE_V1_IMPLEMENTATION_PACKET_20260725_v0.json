@@ -1,0 +1,31 @@
+{
+  "schema_id": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_PACKET_20260725_v0",
+  "permitted": {
+    "collect_complete_non_lean_pytest_inventory": true,
+    "version_current_acceptance_inventory": true,
+    "apply_accepted_reachability_ledger": true,
+    "remove_accepted_staging_repair_from_nonpassing_input": true,
+    "version_obligation_and_profile_manifests": true,
+    "update_immutable_profile_runner_to_v1": true,
+    "add_profile_integrity_guards": true
+  },
+  "required": {
+    "frozen_comparability_inventory_preserved": true,
+    "every_collected_test_exactly_one_profile": true,
+    "new_guards_in_current_inventory": true,
+    "profile_membership_frozen_before_execution": true,
+    "unknown_current_reachability_after": 0,
+    "current_known_nonpassing": 4,
+    "historical_known_nonpassing_visible": 353,
+    "independent_review": true
+  },
+  "prohibited": {
+    "root_repair": true,
+    "test_outcome_demotion": true,
+    "historical_failure_deletion": true,
+    "registry_or_v2_change": true,
+    "scientific_content_change": true,
+    "lean_activity": true,
+    "automatic_successor": true
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "auxiliary_variables": [
+    {
+      "components": 10,
+      "new_physical_mode": false,
+      "role": "Lorentzian metric",
+      "symbol": "g_mn"
+    },
+    {
+      "components": 1,
+      "definition": "scalar curvature of g on the constraint set",
+      "new_physical_mode": false,
+      "symbol": "R"
+    },
+    {
+      "components": 4,
+      "definition": "partial_a R",
+      "new_physical_mode": false,
+      "role": "derivative closure variable",
+      "symbol": "r_a"
+    },
+    {
+      "components": 40,
+      "definition": "partial_a g_mn, symmetric in mn",
+      "new_physical_mode": false,
+      "role": "derivative closure variable",
+      "symbol": "c_mna"
+    },
+    {
+      "components": 9,
+      "definition": "R_mn[g]-(1/4)g_mn scalar_curvature[g] on the constraint set",
+      "new_physical_mode": false,
+      "role": "trace-free Ricci auxiliary",
+      "symbol": "S_mn"
+    }
+  ],
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-AUXILIARY-HARMONIC-REDUCED-SYSTEM-v0",
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "claim_boundary": {
+    "algebraic_equivalence_on_full_constraint_surface_derived": true,
+    "constraint_propagation_established": false,
+    "exact_reduced_equations_derived": true,
+    "linear_energy_estimate_established": false,
+    "local_well_posedness_established": false,
+    "one_derivative_loss_sufficient": false,
+    "ordinary_metric_strong_hyperbolicity_restored": false,
+    "picard_iteration_closed": false,
+    "reduced_system_principal_symbol_classified": false,
+    "source_extension_executed": false
+  },
+  "closed_second_order_system": {
+    "metric_derivative_equation": {
+      "equation": "W_g c_mna = F^c_mna := partial_a F^g_mn -(partial_a g^bc)partial_b c_mnc",
+      "id": "E_c",
+      "origin": "partial_a(E_g^H coordinate form)"
+    },
+    "metric_equation": {
+      "coordinate_form": "W_g g_mn = F^g_mn := 2Q^H_mn-2S_mn-(1/2)g_mn R",
+      "covariant_form": "R^H_mn = S_mn+(1/4)g_mn R",
+      "id": "E_g^H"
+    },
+    "not_an_order_reduction_of_the_physics": "The enlarged system is equivalent to the original fourth-order metric equation only on the complete definition-and-gauge constraint surface.",
+    "principal_organization": "Each displayed evolution equation has W_g acting on its own unknown; every right-hand side is an exact function of U and partial U after the definitions above are expanded.",
+    "scalar_derivative_equation": {
+      "equation": "W_g r_a = F^r_a := partial_a F^R -(partial_a g^bc)partial_b r_c",
+      "id": "E_r",
+      "origin": "partial_a(E_R coordinate form)"
+    },
+    "scalar_equation": {
+      "coordinate_form": "W_g R = F^R := Gamma^a r_a +(c_R R+2c_Lambda)/[2(3alpha+beta)]",
+      "covariant_form": "E_R := 2(3 alpha+beta) Box_g R - c_R R - 2 c_Lambda = 0",
+      "id": "E_R"
+    },
+    "trace_free_ricci_equation": {
+      "coordinate_form": "W_g S_mn = beta^(-1){(2alpha+beta)(nabla_m r_n)^TF -[c_R+(2alpha+beta/2)R]S_mn -2beta R_mrns[g,c]S^rs +(beta/2)g_mn S_rs S^rs} - L^S_mn",
+      "covariant_form": "E_S_mn := beta Box_g S_mn -(2 alpha+beta)(nabla_m r_n-(1/4)g_mn Box_g R) +[c_R+(2 alpha+beta/2)R]S_mn +2 beta R_mrns[g,c] S^rs -(beta/2)g_mn S_rs S^rs = 0",
+      "id": "E_S"
+    },
+    "unknown_vector": [
+      "g_mn",
+      "R",
+      "r_a",
+      "c_mna",
+      "S_mn"
+    ]
+  },
+  "coefficient_controls": {
+    "3alpha_plus_beta_eq_0": "E_R cannot be solved as a scalar wave equation; generic reduction rank changes.",
+    "alpha_eq_beta_eq_0": "Einstein second-order control; not in the generic reduction.",
+    "beta_eq_0": "E_S cannot be solved as a wave equation; generic reduction rank changes.",
+    "c_Lambda": "lower order in every principal block",
+    "c_R_eq_0": "Reduction remains algebraically invertible when beta and 3alpha+beta are nonzero, but the sector is not Einstein-connected."
+  },
+  "constraint_system": [
+    {
+      "class": "generalized-harmonic gauge",
+      "equation": "Gamma^a-H^a(x,g)=0",
+      "id": "C_H^a"
+    },
+    {
+      "class": "scalar derivative definition",
+      "equation": "r_a-partial_a R=0",
+      "id": "C_r_a"
+    },
+    {
+      "class": "metric derivative definition",
+      "equation": "c_mna-partial_a g_mn=0",
+      "id": "C_c_mna"
+    },
+    {
+      "class": "scalar-curvature definition",
+      "equation": "R-g^mn R_mn[g,c]=0",
+      "id": "C_R"
+    },
+    {
+      "class": "trace-free Ricci definition",
+      "equation": "S_mn-[R_mn[g,c]-(1/4)g_mn g^rs R_rs[g,c]]=0",
+      "id": "C_S_mn"
+    },
+    {
+      "class": "algebraic trace",
+      "equation": "g^mn S_mn=0",
+      "id": "C_trace"
+    },
+    {
+      "class": "contracted-Bianchi compatibility",
+      "equation": "nabla^m S_mn-(1/4)r_n=0",
+      "id": "C_div_n"
+    },
+    {
+      "class": "scalar derivative integrability",
+      "equation": "partial_a r_b-partial_b r_a=0",
+      "id": "C_curl_r_ab"
+    },
+    {
+      "class": "metric derivative integrability",
+      "equation": "partial_a c_mnb-partial_b c_mna=0",
+      "id": "C_curl_c_mnab"
+    },
+    {
+      "class": "normal-normal original metric projection",
+      "equation": "n^m n^n E_mn=0",
+      "id": "C_Hamiltonian"
+    },
+    {
+      "class": "normal-tangential original metric projection",
+      "equation": "h^n_a n^m E_mn=0",
+      "id": "C_momentum_a"
+    }
+  ],
+  "consumed_authority": {
+    "accepted": true,
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0.json",
+    "sha256": "3b6de37d96703ba41546c68636070f60288bcc78d494bb5d76fabfd7cd7952a6"
+  },
+  "consumed_frozen_conventions": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_20260728_v0.json",
+    "ricci": "R_sigma_nu = R^rho_{ sigma rho nu}",
+    "riemann": "R^rho_{ sigma mu nu} = partial_mu Gamma^rho_{nu sigma} - partial_nu Gamma^rho_{mu sigma} + Gamma^rho_{mu lambda} Gamma^lambda_{nu sigma} - Gamma^rho_{nu lambda} Gamma^lambda_{mu sigma}",
+    "sha256": "9eb7d675c45dd3709c0f19d8263155c1d07ee5eafa5909087e0b4f98d88c33dc"
+  },
+  "derivative_ledger": [
+    {
+      "constraint_derivative_order": "C_H and C_c are first order; C_R and C_S are second order in the metric",
+      "equation": "E_g^H",
+      "highest_spatial_derivative": 2,
+      "highest_time_derivative": 2,
+      "metric_only_interpretation": "g order 2",
+      "rhs_highest_derivative_of_U": 0,
+      "source_regularity_required": "none (vacuum)",
+      "unknown": "g_mn"
+    },
+    {
+      "constraint_derivative_order": "C_r is first order in R; C_R is second order in g",
+      "equation": "E_R",
+      "highest_spatial_derivative": 2,
+      "highest_time_derivative": 2,
+      "metric_only_interpretation": "g order 4",
+      "rhs_highest_derivative_of_U": 0,
+      "source_regularity_required": "none (vacuum)",
+      "unknown": "R"
+    },
+    {
+      "constraint_derivative_order": "C_r and C_curl_r are first order in reduced variables",
+      "equation": "E_r",
+      "highest_spatial_derivative": 2,
+      "highest_time_derivative": 2,
+      "metric_only_interpretation": "g order 5",
+      "rhs_highest_derivative_of_U": 1,
+      "source_regularity_required": "none (vacuum)",
+      "unknown": "r_a"
+    },
+    {
+      "constraint_derivative_order": "C_c and C_curl_c are first order in reduced variables",
+      "equation": "E_c",
+      "highest_spatial_derivative": 2,
+      "highest_time_derivative": 2,
+      "metric_only_interpretation": "g order 3",
+      "rhs_highest_derivative_of_U": 1,
+      "source_regularity_required": "none (vacuum)",
+      "unknown": "c_mna"
+    },
+    {
+      "constraint_derivative_order": "C_trace is algebraic, C_div is first order, and C_S is second order in g",
+      "equation": "E_S",
+      "highest_spatial_derivative": 2,
+      "highest_time_derivative": 2,
+      "metric_only_interpretation": "g order 4",
+      "rhs_highest_derivative_of_U": 1,
+      "source_regularity_required": "none (vacuum)",
+      "unknown": "S_mn"
+    }
+  ],
+  "equivalence_boundary": {
+    "arbitrary_auxiliary_solution_to_metric_solution": false,
+    "auxiliary_to_metric": "A sufficiently regular auxiliary solution satisfying every definition, trace, divergence, integrability, gauge, Hamiltonian, and momentum constraint reconstructs R_mn=S_mn+(1/4)g_mn R; E_R=0 and E_S=0 then reconstruct E_mn=0 by trace plus trace-free decomposition.",
+    "constraint_propagation_established_here": false,
+    "metric_to_auxiliary": "A C^4 solution g of E_mn=0 in the prescribed generalized-harmonic gauge induces R, r, c, and S by their definitions and satisfies E_g^H, E_R, E_r, E_c, and E_S.",
+    "next_required_proof": "derive the closed homogeneous gauge and auxiliary-constraint propagation system"
+  },
+  "exact_operator_definitions": {
+    "component_wave": "W_g u := g^ab partial_a partial_b u, component by component",
+    "connection": "Gamma^r_mn := (1/2)g^rs(c_snm+c_smn-c_mns)",
+    "contracted_connection": "Gamma^r := g^mn Gamma^r_mn",
+    "gauge_constraint": "C_H^r := Gamma^r-H^r(x,g)",
+    "generalized_harmonic_remainder": "Q^H_mn := Q_mn(g,c) +(1/2)(g_mr partial_n H^r+g_nr partial_m H^r)",
+    "harmonic_ricci_remainder": "Q_mn(g,c) := R_mn[g] +(1/2)W_g g_mn -(1/2)(g_mr partial_n Gamma^r +g_nr partial_m Gamma^r); all partial c terms cancel",
+    "inverse_metric_derivative": "partial_a g^mn = -g^mr g^ns c_rsa",
+    "lowered_riemann": "R_mrns[g,c] := g_ml R^l_rns[g,c]",
+    "reduced_ricci": "R^H_mn := -(1/2)W_g g_mn+Q^H_mn",
+    "ricci": "R_sn[g,c] := R^r_srn[g,c]",
+    "riemann": "R^r_smn[g,c] := partial_m Gamma^r_ns -partial_n Gamma^r_ms +Gamma^r_ml Gamma^l_ns -Gamma^r_nl Gamma^l_ms",
+    "scalar_box": "Box_g R := W_g R-Gamma^a r_a",
+    "scalar_hessian": "nabla_m r_n := partial_m r_n-Gamma^a_mn r_a",
+    "tensor_box": "Box_g S_mn := g^ab D_a D_b S_mn",
+    "tensor_box_remainder": "L^S_mn(g,c,partial c,S,partial S) := Box_g S_mn-W_g S_mn",
+    "tensor_first_derivative": "D_a S_mn := partial_a S_mn -Gamma^r_am S_rn-Gamma^r_an S_mr",
+    "tensor_second_derivative": "D_a D_b S_mn := partial_a(D_b S_mn) -Gamma^r_ab D_r S_mn -Gamma^r_am D_b S_rn -Gamma^r_an D_b S_mr",
+    "trace_free_hessian": "(nabla_m r_n)^TF := nabla_m r_n -(1/4)g_mn Box_g R"
+  },
+  "execution_target": "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0",
+  "frozen_scope": {
+    "action_density": "sqrt(-g)[c_R R+c_Lambda+alpha R^2+beta R_mn R^mn]",
+    "dimension": 4,
+    "einstein_connected_sector_adds": "c_R != 0",
+    "gauge": "PRESCRIBED_GENERALIZED_HARMONIC",
+    "gauge_source": "H^mu=H^mu(x,g), prescribed C^2, with no dependence on partial g or higher derivatives",
+    "generic_principal_sector": [
+      "beta != 0",
+      "3 alpha + beta != 0"
+    ],
+    "metric_signature": "(-,+,+,+)",
+    "source": "VACUUM"
+  },
+  "initial_data_contract": {
+    "arbitrary_auxiliary_data_are_original_metric_data": false,
+    "compatibility_required": [
+      "C_H and its normal derivative",
+      "C_R and C_S",
+      "C_trace and C_div",
+      "C_curl_r and C_curl_c",
+      "C_Hamiltonian and C_momentum"
+    ],
+    "definition_derived_fields": [
+      "r_a and its normal derivative from C_r and E_R",
+      "c_mna and its normal derivative from C_c and E_g^H"
+    ],
+    "freely_specifiable_component_parametrization": "NOT_CLASSIFIED_HERE; solving and parametrizing the coupled constraint manifold belongs to the propagation/initial-data successor and cannot be inferred from raw component counts",
+    "not_freely_specifiable_on_metric_equivalence_surface": [
+      "R data, which must satisfy C_R",
+      "S_mn data, which must satisfy C_S, C_trace, and C_div",
+      "g_mn data, which must satisfy gauge, Hamiltonian, and momentum constraints"
+    ],
+    "raw_second_order_data": "U|Sigma and n^a partial_a U|Sigma for U=(g,R,r,c,S)",
+    "unconstrained_seed_fields_before_constraint_solving": [
+      "g_mn and normal derivative of g_mn",
+      "R and normal derivative of R",
+      "trace-free S_mn and normal derivative of S_mn"
+    ]
+  },
+  "original_metric_equation": {
+    "differential_order_in_metric": 4,
+    "equation": "E_mn := c_R(R_mn-(1/2)g_mn R) -(1/2)c_Lambda g_mn + alpha[2 R R_mn -(1/2)g_mn R^2 +2(g_mn Box_g-nabla_m nabla_n)R] + beta[2 R_mrns R^rs -(1/2)g_mn R_rs R^rs +Box_g R_mn +(1/2)g_mn Box_g R -nabla_m nabla_n R] = 0",
+    "vacuum_bianchi_identity": "nabla^m E_mn identically equals 0"
+  },
+  "prohibitions_respected": {
+    "fiducial_mode_added": false,
+    "new_physical_mode_added": false,
+    "numerical_stability_substituted": false,
+    "perturbative_order_reduction": false,
+    "preserved_descendant_adopted": false,
+    "regularizer_added": false,
+    "yukawa_work_executed": false
+  },
+  "projection_derivation": {
+    "coefficient_ledger": {
+      "gamma": "3*alpha + beta",
+      "kinetic_map_determinant": "2*beta*(3*alpha + beta)",
+      "kinetic_map_invertible_iff": [
+        "beta != 0",
+        "3 alpha + beta != 0"
+      ],
+      "trace_box_coefficient": "6*alpha + 2*beta",
+      "trace_box_factorization": "2*(3*alpha + beta)",
+      "trace_free_R_times_S_coefficient": "2*alpha + beta/2",
+      "trace_free_Riemann_times_S_coefficient": "2*beta",
+      "trace_free_hessian_coefficient": "-2*alpha - beta",
+      "trace_free_metric_times_S_squared_coefficient": "-beta/2",
+      "trace_free_tensor_box_coefficient": "beta"
+    },
+    "definition": "S_mn := R_mn-(1/4)g_mn R",
+    "reconstruction_identity": "E_mn = E_S_mn+(1/4)g_mn(g^rs E_rs), with g^rs E_rs=E_R",
+    "ricci_decomposition": "R_mn = S_mn+(1/4)g_mn R",
+    "ricci_square_decomposition": "R_mn R^mn = S_mn S^mn+(1/4)R^2",
+    "trace_constraint": "g^mn S_mn = 0",
+    "trace_equation": "E_R := 2(3 alpha+beta) Box_g R - c_R R - 2 c_Lambda = 0",
+    "trace_free_equation": "E_S_mn := beta Box_g S_mn -(2 alpha+beta)(nabla_m r_n-(1/4)g_mn Box_g R) +[c_R+(2 alpha+beta/2)R]S_mn +2 beta R_mrns[g,c] S^rs -(beta/2)g_mn S_rs S^rs = 0"
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_v0",
+  "selected_next_target": "review_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0_result",
+  "verdict": "EXACT_VACUUM_AUXILIARY_HARMONIC_REDUCED_SYSTEM_DERIVED_CONSTRAINT_PROPAGATION_AND_WELL_POSEDNESS_NOT_ESTABLISHED"
+}

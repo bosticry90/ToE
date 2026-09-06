@@ -1,0 +1,86 @@
+{
+  "attempt_sequence_number": 1,
+  "calculation_id": "CALC-TOE-NATIVE-COHERENCE-REPRESENTATION-v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "chi_semantics": {
+    "chi_symmetry_status": "BLOCKED_COHERENCE_Z2_UNJUSTIFIED",
+    "gradient": "UNRESOLVED; historical transport meaning belongs to the complex phase gradient",
+    "sign": "UNRESOLVED; complex-field amplitude is nonnegative while a real scalar is signed",
+    "value": "UNRESOLVED_REAL_SCALAR_TO_COHERENCE_MAP",
+    "zero": "UNRESOLVED; cannot canonically equate zero scalar with absence of coherence"
+  },
+  "claim_boundary": {
+    "ccft_validated": false,
+    "full_toe_unification_claimed": false,
+    "native_action_selected": false,
+    "portal_interaction_authorized": false,
+    "real_scalar_representation_derived": false,
+    "real_scalar_surrogate_accepted": false,
+    "stage_2_authorized": false
+  },
+  "evidence": {
+    "action_program_review": {
+      "path": "formal/toe_formal/ToeFormal/Derivation/CCFTFullVariationalActionProgramPacketResultReview.lean",
+      "sha256": "97891dedd0aaf9dfebc39a915b36e6db3a7150834846f803115c375347898c98"
+    },
+    "archived_ccft_dossier": {
+      "path": "formal/quarantine/dossiers/DOSSIER_0007_archive_docs_monograph_ccft_monograph_md.md",
+      "sha256": "99f78eb2fee1b8d0021a4394aecbab10cf8dbcbb253890f291b033112b583752"
+    },
+    "candidate_layer_review": {
+      "path": "formal/toe_formal/ToeFormal/Derivation/CoherenceAdmissibilityBridgeRoadmapRebaseResultReview.lean",
+      "sha256": "aa93c13fae73bd1211932388a436d42dcc3a2eabf466ff3718ca5000ec75b893"
+    },
+    "historical_complex_field_description": {
+      "path": "formal/proving docs/Part I - Conceptual Foundations.md",
+      "sha256": "28cb21207b4944c4e211a6287562fbf87ff112f220c15de05141c54cf3d08614"
+    },
+    "object_crosswalk": {
+      "path": "formal/toe_formal/ToeFormal/Derivation/CCFTToTOEObjectCrosswalkPacket.lean",
+      "sha256": "8598ec144bab941cd7dc3e4b3c2f5b9b3e9b1eb9db987cd058614527b13a9a06"
+    },
+    "phi_policy": {
+      "path": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+      "sha256": "49fa73a4f0cd3821bfdd818c5623ed6e545cdebaefbe2b6e9bec47afa5e9a4b0"
+    },
+    "provisional_scalar_sector": {
+      "path": "formal/toe_formal/ToeFormal/Derivation/QFTGRToeMatterSectorCandidateSelectionPacket.lean",
+      "sha256": "802d835001b86be3aa0c10fe60269302ffef92412785626763f99505c9f3b484"
+    }
+  },
+  "evidence_checks": {
+    "archived_ccft_source_is_unaccepted_candidate": true,
+    "ccft_action_remains_pre_derivation": true,
+    "ccft_is_only_candidate_mesoscopic_layer": true,
+    "historical_ccft_field_is_complex": true,
+    "object_crosswalk_is_mapping_only": true,
+    "phi_potential_is_not_even_or_derived": true,
+    "real_scalar_is_only_provisional_test_sector": true
+  },
+  "execution_target": "select_toe_native_coherence_representation_v0",
+  "mandatory_exit_target": "close_toe_native_surrogate_v0_after_bounded_result_v0",
+  "open_event_hash": "dc3749545909da0f587e0931632d472ec518eb1cb2e2652b0fcd1a3cbf6e4429",
+  "phi_semantics": {
+    "phi_symmetry_status": "BLOCKED_TEST_MATTER_SYMMETRY_UNJUSTIFIED",
+    "reason": "The preserved scalar policy admits a generic smooth bounded-below potential and does not select an even potential or an independent phi-to-minus-phi symmetry.",
+    "sector_class": "PROVISIONAL_REAL_SCALAR_TEST_MATTER_SECTOR"
+  },
+  "program_id": "TOE_NATIVE_SURROGATE_V0",
+  "representation_assessment": {
+    "bounded_amplitude_surrogate_authorized_by_preserved_result": false,
+    "bounded_amplitude_surrogate_possible_in_principle": true,
+    "faithful_value_sign_zero_gradient_map_found": false,
+    "historical_candidate_structure": "The archived candidate uses a complex primary field whose amplitude and phase gradient carry distinct density and transport meanings.",
+    "preserved_native_claim": "CCFT is retained only as a candidate mesoscopic coherence linkage layer.",
+    "real_scalar_crosswalk_found": false,
+    "reason": "A real amplitude surrogate is conceivable, but the accepted repository surfaces provide only candidate/mapping-level CCFT records. They do not derive or authorize a relativistic real scalar map, and the historical complex field assigns independent meaning to amplitude and phase gradient.",
+    "relativistic_covariant_crosswalk_found": false,
+    "representation_outcome": "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED"
+  },
+  "schema_id": "CALC_TOE_NATIVE_COHERENCE_REPRESENTATION_v0",
+  "semantic_stage_id": "COHERENCE_REPRESENTATION",
+  "terminal_outcome": "BLOCKED_CCFT_TO_CONTINUUM_MAP_UNRESOLVED",
+  "terminal_result": "BLOCKED",
+  "v0_discriminator_result": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+  "verdict": "NATIVE_SURROGATE_V0_BLOCKED_AT_COHERENCE_REPRESENTATION_NO_REPAIR_OR_STAGE_2_AUTHORIZED"
+}

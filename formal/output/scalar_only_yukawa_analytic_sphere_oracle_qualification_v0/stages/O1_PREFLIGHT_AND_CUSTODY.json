@@ -1,0 +1,25 @@
+{
+  "completed_at_utc": "2026-07-19T18:58:41.998812Z",
+  "duration_seconds": 0.006889899999805493,
+  "evidence": {
+    "authority_unused": false,
+    "case_count": 8,
+    "memory_limit_mib": 2048,
+    "review_verdict": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION_CONTRACT_READY",
+    "stage_caps_seconds": {
+      "O1_PREFLIGHT_AND_CUSTODY": 20,
+      "O2_DERIVATION_DOMAIN_AND_DIMENSIONS": 60,
+      "O3_STABLE_EVALUATOR_AND_OVERLAPS": 90,
+      "O4_INDEPENDENT_RADIAL_CROSS_CHECK": 300,
+      "O5_MUTATIONS_AND_ADJUDICATION": 90,
+      "O6_ATOMIC_FINALIZATION": 40
+    },
+    "target": "execute_scalar_only_yukawa_analytic_sphere_oracle_qualification_v0_once",
+    "total_timeout_seconds": 600
+  },
+  "stage_id": "O1_PREFLIGHT_AND_CUSTODY",
+  "started_perf_counter": 20298.9243834,
+  "status": "COMPLETE",
+  "wall_clock_seconds_max": 20,
+  "within_stage_budget": true
+}

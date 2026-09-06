@@ -1,27 +1,337 @@
 {
   "boundary": {
-    "maintenance_target_inserted_into_scientific_workstreams": false,
-    "migration_execution_authorized": false,
-    "next_maintenance_target_selected": false,
+    "automatic_successor_authorized": false,
+    "baseline_repair_authorized": false,
+    "bounded_hash_identity_repair_authorized": false,
+    "broad_python_first_cause_clustering_authorized": false,
+    "diagnostic_execution_cycles_remaining": 0,
+    "em_route_source_pin_provenance_and_authority_review_authorized": false,
+    "em_route_source_pin_provenance_review_cycles_remaining": 0,
+    "em_route_source_pin_provenance_result_reviews_remaining": 0,
+    "first_unit_selector_execution_authorized": false,
+    "historical_report_aggregate_contract_decomposition_authorized": false,
+    "historical_report_aggregate_contract_decomposition_implementation_authorized": false,
+    "historical_report_fixture_conversion_pilot_authorized": false,
+    "independent_result_reviews_remaining": 0,
+    "equation_compendium_boundary_hash_identity_domain_adjudication_authorized": false,
+    "equation_compendium_boundary_hash_identity_domain_adjudication_cycles_remaining": 0,
+    "equation_compendium_boundary_hash_identity_domain_adjudication_result_reviews_remaining": 0,
+    "equation_compendium_git_blob_identity_contract_repair_authorized": false,
+    "equation_compendium_git_blob_identity_contract_repair_cycles_remaining": 0,
+    "equation_compendium_git_blob_identity_contract_repair_result_reviews_remaining": 0,
+    "line_ending_identity_and_mapping_tuple_repair_authorized": false,
+    "missing_artifact_expectation_adjudication_authorized": false,
+    "nonhermetic_root_cause_packet_authorized": false,
+    "post_identity_baseline_reassessment_authorized": false,
+    "post_equation_compendium_repair_baseline_reassessment_authorized": false,
+    "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_authorized": false,
+    "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_result_reviews_remaining": 0,
+    "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_validation_cycles_remaining": 0,
+    "post_historical_aggregate_decomposition_baseline_reassessment_authorized": false,
+    "post_prompt_decoupling_baseline_reassessment_authorized": false,
+    "post_qft_route_identity_repair_baseline_reassessment_authorized": false,
+    "prompt_dependency_role_adjudication_and_decoupling_authorized": false,
+    "qft_route_evidence_hash_identity_domain_adjudication_authorized": false,
+    "qft_route_evidence_identity_domain_repair_authorized": false,
+    "qft_route_evidence_identity_domain_repair_cycles_remaining": 0,
+    "qft_route_evidence_identity_domain_repair_result_reviews_remaining": 0,
+    "qft_route_identity_adjudication_cycles_remaining": 0,
+    "qft_route_identity_adjudication_result_reviews_remaining": 0,
+    "phase_b_authorized": false,
+    "phase_c_authorized": false,
+    "pillar_artifact_currency_identity_domain_adjudication_authorized": false,
+    "pillar_artifact_currency_identity_domain_adjudication_cycles_remaining": 0,
+    "pillar_artifact_currency_identity_domain_adjudication_result_reviews_remaining": 0,
+    "pillar_historical_artifact_currency_role_separation_repair_authorized": false,
+    "pillar_historical_artifact_currency_role_separation_repair_cycles_remaining": 0,
+    "pillar_historical_artifact_currency_role_separation_repair_result_reviews_remaining": 0,
+    "registry_sharding_migration_authorized": false,
+    "repair_implementation_cycles_remaining": 0,
+    "reassessment_result_reviews_remaining": 0,
+    "reassessment_validation_cycles_remaining": 0,
+    "scientific_execution_authorized": false,
     "scientific_target_displaced": false,
-    "scientific_target_rotated": false
+    "scientific_target_rotated": false,
+    "test_modification_authorized": false,
+    "tracked_source_mutation_authorized": false,
+    "v2_enrollment_authorized": false,
+    "v2_regeneration_authorized": false
   },
-  "captured_at_utc": "2026-07-11T00:00:00Z",
-  "current_maintenance_target": "prepare_loop_control_registry_sharding_and_current_projection_packet_v0",
-  "current_maintenance_target_evidence": "formal/docs/release/LOOP_CONTROL_REGISTRY_SHARDING_AND_CURRENT_PROJECTION_GUARDRAIL_PACKET_20260711_v0.json",
-  "current_maintenance_target_evidence_sha256": "7371ff496fc8fd948e892e0136d380991c6f87128201d12fe7ff6f5df9ffa764",
-  "current_maintenance_target_kind": "registry_sharding_guardrail_preparation",
-  "current_maintenance_target_status": "PREPARED_CONTRACT_CURRENT_NO_EXECUTION_SUCCESSOR_SELECTED",
-  "maintenance_consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
-  "maintenance_consumer_inventory_sha256": "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4",
-  "maintenance_program_source": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
-  "maintenance_program_source_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6",
-  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
-  "scientific_authority": {
+  "captured_at_utc": "2026-07-25T01:27:20Z",
+  "containment": {
+    "external_review_path": ".toe-recovery/manifests/TOE_RECOVERY_MATERIAL_CONTAINMENT_INDEPENDENT_REVIEW_20260720_v0.json",
+    "external_review_sha256": "6c21179d27eee93ff260df9a75ec06ff0b1db56c63a22a09585387f744a6fac1",
+    "outcome": "RECOVERY_MATERIAL_CONSOLIDATED_WITHIN_CANONICAL_TOE_DIRECTORY"
+  },
+  "current_maintenance_target": "preserve_accepted_post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+  "current_maintenance_target_evidence_sha256": "69acee3c804913fc71c65ce5c098bee45435e52d5402d3f5efec4ad8d77e72f1",
+  "current_maintenance_target_kind": "accepted_post_pillar_role_separation_baseline_reassessment_preservation",
+  "current_maintenance_target_status": "POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "historical_scientific_snapshot": {
     "current_target": "execute_pillar_seam_unit_mapping_ledger_v0",
     "previous_target": "prepare_pillar_seam_unit_mapping_ledger_guardrail_packet",
     "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
     "source_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
   },
-  "status": "ACTIVE_OPERATIONAL_NONSCIENTIFIC_MAINTENANCE_GUARDRAIL_ONLY"
+  "independent_authorization_review": {
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260724_v0.json",
+    "sha256": "7ae43ebbb5c18487d133c0f2064042a0dcda00ceae78b49dca5e15564ee1f632",
+    "verdict": "ACCEPT_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT"
+  },
+  "hash_identity_repair_result_review": {
+    "path": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_REVIEW_20260721_v0.json",
+    "sha256": "2ad83053fdeb578a3b5e733e453cc0f87389b78c31de8262175fdf69831246d4",
+    "verdict": "ACCEPT"
+  },
+  "broad_python_first_cause_cluster_result": {
+    "outcome": "BROAD_PYTHON_FIRST_CAUSE_CLUSTERING_COMPLETE_STILL_BLOCKED",
+    "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_20260722_v0.json",
+    "sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55"
+  },
+  "independent_result_review": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2",
+    "verdict": "ACCEPT_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
+  },
+  "line_ending_identity_and_mapping_tuple_repair_result": {
+    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
+    "sha256": "8155f10193f4ef8f6049fffcc2db6de6fb7713d03b227b434c02fd3f3b9c3e28",
+    "outcome": "LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_ACCEPTED"
+  },
+  "post_identity_reassessment_authorization_review": {
+    "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_REVIEW_20260721_v0.json",
+    "sha256": "9992f7fd9f328c26c26ce3d10e91d823ca2a9dbde575057325362da9d1b8d2a8",
+    "verdict": "ACCEPT"
+  },
+  "post_identity_reassessment_result": {
+    "path": "formal/docs/release/POST_IDENTITY_BASELINE_REASSESSMENT_RESULT_20260721_v0.json",
+    "sha256": "bdb06f9583728ac14e79b3e14f214ae8259c6a602e2786eadf2c8327776d870f",
+    "outcome": "POST_IDENTITY_BASELINE_REASSESSMENT_BLOCKED"
+  },
+  "maintenance_consumer_inventory_path": "formal/docs/release/LOOP_CONTROL_REGISTRY_CONSUMER_INVENTORY_20260711_v0.json",
+  "maintenance_consumer_inventory_sha256": "4dc376cedfafad55f950e62057113ab3f6695f28ad986a42e723fe451904aac4",
+  "maintenance_program_source": "formal/docs/release/TECHNICAL_DEBT_BASELINE_20260711_v0.json",
+  "maintenance_program_source_sha256": "7e9dd29378d70ae51de4a456ecf9745c59a8e40da36df50fa7515baa24f53ac6",
+  "phase_a_preservation": {
+    "path": "formal/docs/release/REPOSITORY_RECOVERY_PHASE_A_BLOCKED_RESULT_PRESERVATION_20260720_v0.json",
+    "sha256": "accd775645f71abbe67abaf0e0fbcfdeaae0e07b3cafdc3e3260723cac6330d1"
+  },
+  "previous_maintenance_target": "independent_review_repository_post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_result_v0_once",
+  "previous_maintenance_target_status": "POST_PILLAR_ROLE_SEPARATION_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_NEWLY_EXPOSED_ROOTS_AWAITING_INDEPENDENT_REVIEW",
+  "preserved_diagnostic_result": {
+    "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_PRESERVATION_20260721_v0.json",
+    "sha256": "a0e88dfa5b5b813ff0daff15c9240dc5de4b9259473d2ad25974660a1c7d97cf"
+  },
+  "prior_failed_stabilization_result": {
+    "path": "formal/docs/release/REPOSITORY_CLEAN_BASELINE_VALIDATION_STABILIZATION_RESULT_20260720_v0.json",
+    "sha256": "d2db8ace01049ccc05234f54f830df4af9040a0c5eaf8c776946bd07c51d888b"
+  },
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v0",
+  "scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "empirical_validation_established": false,
+    "master_action_promoted": false,
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "external_ai_assisted_mathematical_discovery_milestone": {
+    "path": "formal/docs/release/EXTERNAL_AI_ASSISTED_MATHEMATICAL_DISCOVERY_MILESTONE_20260724_v0.json",
+    "sha256": "f64f98f83e4c67644ace4fdf1ed4af38dd8608128f0b1d23b8f7dac128ce7fd4",
+    "direct_authority_effect": "NONE",
+    "direct_support_for_ToE": "NONE",
+    "scientific_lane_created": false
+  },
+  "prompt_dependency_role_adjudication_and_decoupling_result": {
+    "outcome": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_ACCEPTED_STILL_BLOCKED",
+    "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_20260722_v0.json",
+    "sha256": "88a9007e0891d9222a29fd5d598cf5f4eb1021219f4c117577273d6748ec7182"
+  },
+  "post_prompt_decoupling_baseline_reassessment_result": {
+    "outcome": "POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED",
+    "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_20260722_v0.json",
+    "sha256": "d24cb811c307826a4585bbaa474377778c3df9f752ac7cb0f21cb086a29f1dd4"
+  },
+  "post_prompt_decoupling_baseline_reassessment_result_review": {
+    "path": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "24b599794874616e17fe49fc77818b530222c68855f4423a6e4364f88432cbb4",
+    "verdict": "ACCEPT_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_STILL_BLOCKED"
+  },
+  "missing_artifact_expectation_adjudication_result": {
+    "outcome": "MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_20260722_v0.json",
+    "sha256": "c2de1f02bf33a02a15b67d4a897958a131e5e9c88902d4dcbfc01a4547e384d8"
+  },
+  "missing_artifact_expectation_adjudication_result_review": {
+    "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "904f7d559fc7d406436c6963ede76edc88b577c755228868a1be795cdf7da0f4",
+    "verdict": "ACCEPT_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_STILL_BLOCKED"
+  },
+  "historical_report_fixture_conversion_pilot_result": {
+    "outcome": "ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_20260722_v0.json",
+    "sha256": "4297e065f3fd0a262f0827b15d384a0ec32b37ceb441d0a00f7ef3f47983c683"
+  },
+  "historical_report_fixture_conversion_pilot_result_review": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "cd323104d3c6c0da2f61fd2ac3305eaae2e7f8c2398fcbffcf7107f38612784b",
+    "verdict": "ACCEPT_ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT_NO_SCALE"
+  },
+  "historical_report_aggregate_contract_decomposition_result": {
+    "outcome": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_20260722_v0.json",
+    "sha256": "3c9ecf198c3fd0df5a6be8d7d0da8cf41bd4c628e32acd2bc5e45215d158dcdd"
+  },
+  "historical_report_aggregate_contract_decomposition_result_review": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "536c47e804b8be6adde729d72c5bba4fb498d8f75472c3e1c3de3670561a354e",
+    "verdict": "ACCEPT_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "historical_report_aggregate_contract_decomposition_implementation_result": {
+    "outcome": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_20260722_v0.json",
+    "sha256": "78c2e6f5283184dfa4b91210c1b43d953050515e8e9bb110941755c3a90df077"
+  },
+  "historical_report_aggregate_contract_decomposition_implementation_result_review": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "03f15009105afb50173c303cc72c3519311b1f164fcb97e8f02e4d2054d7ed3b",
+    "verdict": "ACCEPT_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_STILL_BLOCKED_NO_SCALE_NO_SUCCESSOR_AUTHORITY"
+  },
+  "post_historical_aggregate_decomposition_baseline_reassessment_result": {
+    "outcome": "POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_20260723_v0.json",
+    "sha256": "e8360dff6805e618a530d9d9af15ba2de9eed95906b854990679fac607616b19"
+  },
+  "post_historical_aggregate_decomposition_baseline_reassessment_result_review": {
+    "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "c4f1be6e3092366655f3c88ef54a31d44ce9bce3b6c6abfccc2fc8e12bd85bf2",
+    "verdict": "ACCEPT_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "qft_route_evidence_hash_identity_domain_adjudication_result": {
+    "outcome": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_PROVENANCE_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260723_v0.json",
+    "sha256": "1b76ceae7eb8e8af1f0f80963fc5c020ecd0bda421654db2bb1519a91b61ea2e"
+  },
+  "qft_route_evidence_hash_identity_domain_adjudication_result_review": {
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "aa26118dabb54b6e0009bedd6c5a108df7ed6f013c6cd9d6c1f859d455947568",
+    "verdict": "ACCEPT_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PROVENANCE_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "em_route_source_pin_provenance_and_authority_review_result": {
+    "outcome": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_COMPLETE_REBINDING_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+    "terminal_outcome": "EM_SOURCE_PIN_REBINDING_JUSTIFIED",
+    "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_20260723_v0.json",
+    "sha256": "4b1a6683819eb22a98b4f6deb0e04df8036119b088662c3c696f489076353b55"
+  },
+  "em_route_source_pin_provenance_and_authority_review_result_review": {
+    "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "f0e184bd99fd26f6bcfbe8363b387ca5fe08d3fb85034d16b25ae247176d1cf8",
+    "verdict": "ACCEPT_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_REBINDING_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "qft_route_evidence_identity_domain_repair_result": {
+    "outcome": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0.json",
+    "sha256": "bf73766313d6b7d5e001306d264430e0aa5cf4edd88e484a4cb1fca55731df2a"
+  },
+  "qft_route_evidence_identity_domain_repair_result_review": {
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "111092bd73ecb218b561cc0cfe3ece415d08a380375c4965a0433a30cdbfa78b",
+    "verdict": "ACCEPT_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
+  },
+  "post_qft_route_identity_repair_baseline_reassessment_result": {
+    "outcome": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "ea320e60d86d3856e9780ccf62e4608904555001a331c5eb6063d7ee6ae3e931"
+  },
+  "post_qft_route_identity_repair_baseline_reassessment_result_review": {
+    "path": "formal/docs/release/REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "cdebb0ddc79cc302b1d74e6eb856014c85de403a2c1792c650e6682b642dbe04",
+    "verdict": "ACCEPT_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "equation_compendium_boundary_hash_identity_domain_adjudication_result": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+    "sha256": "ae399826839ca92174b13777909d131f9a52ae8daf2c2e4e75d8698c598cb16e",
+    "outcome": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "equation_compendium_boundary_hash_identity_domain_adjudication_result_review": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "b48e48ef0d1a0ff8f9b40902fa95cc1f52cbbc3dd2a0f97bf8f17b6265816591",
+    "verdict": "ACCEPT_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "equation_compendium_git_blob_identity_contract_repair_result": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_20260724_v0.json",
+    "sha256": "54dde09f3b62417f8b7e1103888490cae63c7809918ac8e7ab9fc0c450805c78",
+    "outcome": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "equation_compendium_git_blob_identity_contract_repair_result_review": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "4c997137581b23266076528583853ba1002bbb8cae86e93269f8d8f77d656998",
+    "verdict": "ACCEPT_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
+  },
+  "post_equation_compendium_repair_baseline_reassessment_result": {
+    "outcome": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "7d102927802c4334e2071aeb89c1b05ee885a4dfc86513347ad21a72d44c1445"
+  },
+  "post_equation_compendium_repair_baseline_reassessment_result_review": {
+    "path": "formal/docs/release/REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "f90470efb0f7a705fbe2bf9eaa09f8dacb04bc59aa2eebe8ec6c569de32f7152",
+    "verdict": "ACCEPT_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "selector": {
+    "path": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+    "sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
+  },
+  "pillar_artifact_currency_identity_domain_adjudication_result": {
+    "outcome": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_ROLE_SEPARATION_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+    "sha256": "23a85fa5d93f999da9801917a173d89e252faaacc33c3d262cd6f24f822bee41"
+  },
+  "pillar_artifact_currency_identity_domain_adjudication_result_review": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "56920ed033823c50a88e2664536b68b4c5cebd3edf01f1f9008d32fc130ea6f4",
+    "verdict": "ACCEPT_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "pillar_historical_artifact_currency_role_separation_repair_authorization": {
+    "packet": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_20260724_v0.json",
+    "packet_sha256": "d08e87cbfe9a67ab18aa0bddd141b0bf09282b185f23fe7c6bba0800b4b810eb",
+    "packet_review": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0.json",
+    "packet_review_sha256": "ca2e568604561248b38744d6de0e1caeb2f63041670147ff5b92107c2fa6c5f8",
+    "selector": "formal/docs/release/PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_SELECTION_20260724_v0.json",
+    "selector_sha256": "64ad0ee632dd5f4efb9463f10a4848ced1f3ab158a07b62f36296228db4f4b8e"
+  },
+  "pillar_historical_artifact_currency_role_separation_repair_result": {
+    "outcome": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_20260724_v0.json",
+    "sha256": "84c58ff080c7c03641cf6343fd578e36c58ee1b6c14dc94d6c7b618799d478f5"
+  },
+  "pillar_historical_artifact_currency_role_separation_repair_result_review": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2",
+    "verdict": "ACCEPT_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
+  },
+  "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_authorization": {
+    "packet": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_20260724_v0.json",
+    "packet_sha256": "6e1da2421556ccf6d9c0233ff2dd3810823be897bf4d2b1178b931cb625c6bbc",
+    "packet_review": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_PACKET_REVIEW_20260724_v0.json",
+    "packet_review_sha256": "7ae43ebbb5c18487d133c0f2064042a0dcda00ceae78b49dca5e15564ee1f632",
+    "selector": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+    "selector_sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
+  },
+  "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_result": {
+    "outcome": "POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_NEWLY_EXPOSED_ROOTS_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0.json",
+    "sha256": "db680730839960d97ef571073e7250e71926dd623de5c589e151695a0d226a5a"
+  },
+  "post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_result_review": {
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "69acee3c804913fc71c65ce5c098bee45435e52d5402d3f5efec4ad8d77e72f1",
+    "verdict": "ACCEPT_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
+  },
+  "status": "POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_ACCEPTED_STILL_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY"
 }

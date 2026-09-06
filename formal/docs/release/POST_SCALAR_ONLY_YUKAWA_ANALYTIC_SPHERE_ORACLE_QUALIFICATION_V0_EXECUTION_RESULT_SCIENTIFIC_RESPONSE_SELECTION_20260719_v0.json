@@ -1,0 +1,657 @@
+{
+  "accepted_result_interpretation": {
+    "analytic_sphere_oracle": "QUALIFIED_ON_EIGHT_FROZEN_CASES_AND_OVERLAP_PROBES",
+    "continuous_uniform_error_claim": "NOT_ESTABLISHED",
+    "maximum_relative_difference": "9.193531120982082907226642222031001562304493826767069136682815822591035E-15",
+    "physical_identifiability": "NOT_TESTED",
+    "production_cubature": "UNADJUDICATED",
+    "stage_b": "NOT_AUTHORIZED",
+    "torque_and_dft": "NOT_VALIDATED"
+  },
+  "authority": {
+    "consumed_result_review_verdict": "ACCEPTED_ANALYTIC_SPHERE_ORACLE_QUALIFIED",
+    "frozen_result_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_EXECUTION_RESULT_REVIEW_20260719_v0.md",
+        "sha256": "077f3d3e01e3bb4809790bf7d9b9266d7f1a3cd0258af5c697f7880a4b9c3d93"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_EXECUTION_RESULT_REVIEW_20260719_v0.json",
+        "sha256": "e963c033514e47e374cb6caced1ab533ed6ea08792f964c04e079e7b67088868"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_oracle_qualification_execution_result_review_v0.py",
+        "sha256": "49d0f59e9a52777ab1a41bdf448dca58ba14401dab4da84e403c8f6000f4668b"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_oracle_qualification_execution_result_review_v0.py",
+        "sha256": "4bf64e2b0da2b36d038811157008bb846c2ecdfa3b861533b71ac84c6f25dc18"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereOracleQualificationExecutionResultReviewV0.lean",
+        "sha256": "d7b36f5bc4b2cc85d7afb5509ce2a319c83a741531d0a738598a068314d46ce6"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_yukawa_analytic_sphere_oracle_qualification_v0_execution_result_scientific_response_selection_v0.py",
+      "sha256": "2f8688392eeeeb50e498adaa82b7011267da5f1aeffdbf7070db30b4ab98e22f"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_V0_EXECUTION_RESULT_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+      "sha256": "7f3007c16f0c0a9aa3ac06fea5434649cd26f558b5dcab48d7296738a3fa1043"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaAnalyticSphereOracleQualificationV0ExecutionResultScientificResponseSelectionV0.lean",
+      "sha256": "61886f4b1b45d6a1b433d8ff91d5b3099ce0d9effcdc322768ebed148b8e94bd"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_analytic_sphere_oracle_qualification_v0_execution_result_scientific_response_selection_v0.py",
+      "sha256": "5356a9a700394e64f85d407276c502e98030e1ff234c40fb5e8b9c6bef214f59"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This selector authorizes preparation of one bounded energy-level production-cubature versus qualified-oracle comparison packet only. It performs no comparison, changes no kernel, validates no torque or DFT, reruns no Stage A, decides no identifiability question, and authorizes no Stage B work.",
+  "comparison_packet_preparation_requirements": {
+    "case_grid": {
+      "additional_stratified_roles": [
+        "WIDE_SEPARATION",
+        "SMALL_POSITIVE_GAP",
+        "YUKAWA_TRANSITION_RANGE"
+      ],
+      "maximum_case_count": 8,
+      "minimum_case_count": 6,
+      "post_result_case_selection_forbidden": true,
+      "strict_nonoverlap_required": true,
+      "three_failed_stage_a_cases_required": true
+    },
+    "component_comparison": {
+      "absolute_error_required": true,
+      "analytic_oracle_is_reference": true,
+      "combined_energy_diagnostic_only": true,
+      "error_ratio_between_orders_required": true,
+      "near_zero_relative_denominator_rule_required": true,
+      "newtonian_separate": true,
+      "relative_error_required": true,
+      "runtime_and_work_required": true,
+      "yukawa_separate": true
+    },
+    "custody_and_immutability": {
+      "accepted_oracle_review_hash_pinned": true,
+      "failed_production_implementation_hash_pin_required": true,
+      "oracle_code_changes_during_comparison_forbidden": true,
+      "production_code_changes_during_comparison_forbidden": true,
+      "result_dependent_case_or_order_changes_forbidden": true
+    },
+    "decision_contract_to_freeze": {
+      "accuracy_plateau_rule_required": true,
+      "constant_ratio_normalization_probe_required": true,
+      "geometry_distance_probe_required": true,
+      "monotone_or_interpretable_convergence_rule_required": true,
+      "near_threshold_result_is_unresolved": true,
+      "no_tolerance_relaxation_after_results": true,
+      "one_dimension_left_unrefined_mutation_required": true
+    },
+    "forbidden_work": [
+      "PRODUCTION_KERNEL_REPAIR",
+      "PRODUCTION_KERNEL_REPLACEMENT",
+      "TORQUE",
+      "ANGULAR_DFT",
+      "APPARATUS_HARMONICS",
+      "FINAL_REAL_150_VECTOR",
+      "JACOBIAN_OR_SVD",
+      "IDENTIFIABILITY",
+      "STAGE_A_RERUN",
+      "STAGE_B"
+    ],
+    "legitimate_outcomes": [
+      "PRODUCTION_CUBATURE_VALIDATED_AGAINST_ORACLE",
+      "PRODUCTION_CUBATURE_SLOW_BUT_CONVERGENT",
+      "FIXED_ORDER_CUBATURE_INADEQUATE",
+      "PRODUCTION_IMPLEMENTATION_DEFECT_LOCALIZED",
+      "NORMALIZATION_OR_GEOMETRY_MISMATCH",
+      "PRODUCTION_COMPARISON_NUMERICALLY_UNRESOLVED",
+      "PRODUCTION_COMPARISON_TIMEOUT"
+    ],
+    "production_order_ladder_to_freeze": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48
+    ],
+    "resource_envelope_to_freeze": {
+      "budget_exhaustion_fails_closed": true,
+      "per_case_and_per_order_caps_required": true,
+      "process_group_termination_required": true,
+      "raw_log_and_stage_atomic_records_required": true,
+      "target_memory_mib_max": 4096,
+      "target_total_wall_clock_seconds_max": 1200
+    },
+    "review_sequence": "prepare comparison packet -> independent packet review -> one bounded comparison -> independent result review -> fresh repair/replacement/retention selector",
+    "scientific_objective": "Use the accepted analytic homogeneous-sphere oracle to adjudicate the exact failed production cubature at energy level on a small frozen case set, without repairing, replacing, or extending that production path.",
+    "status": "PACKET_PREPARATION_AUTHORIZED_NOT_PREPARED"
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "disposition": "SELECTED_FOR_SMALL_PRODUCTION_COMPARISON_PACKET_PREPARATION",
+        "route": "COMPARE_FAILED_PRODUCTION_CUBATURE_AGAINST_QUALIFIED_ANALYTIC_ORACLE",
+        "scores": {
+          "anti_rabbit_hole_clarity": 5,
+          "bounded_executability": 5,
+          "computational_economy": 5,
+          "direct_alignment_with_accepted_result": 5,
+          "downstream_firewall_fit": 5,
+          "method_decision_leverage": 5,
+          "qualified_reference_use": 5,
+          "root_cause_information_gain": 5,
+          "scientific_causal_localization": 5,
+          "scope_reversibility": 5
+        },
+        "target": "prepare_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v0",
+        "weighted_score": 220
+      },
+      {
+        "candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "disposition": "DEFERRED_UNTIL_FAILED_PRODUCTION_PATH_IS_ADJUDICATED",
+        "route": "REPLACE_PRODUCTION_CUBATURE_WITH_QUALIFIED_ANALYTIC_KERNEL_NOW",
+        "scores": {
+          "anti_rabbit_hole_clarity": 3,
+          "bounded_executability": 4,
+          "computational_economy": 5,
+          "direct_alignment_with_accepted_result": 4,
+          "downstream_firewall_fit": 4,
+          "method_decision_leverage": 4,
+          "qualified_reference_use": 5,
+          "root_cause_information_gain": 2,
+          "scientific_causal_localization": 2,
+          "scope_reversibility": 3
+        },
+        "target": "prepare_scalar_only_yukawa_analytic_sphere_kernel_replacement_packet_v0",
+        "weighted_score": 160
+      },
+      {
+        "candidate_id": "APPARATUS_REDESIGN",
+        "disposition": "DEFERRED_PREMATURE_WHILE_EXISTING_METHOD_CAN_BE_CHEAPLY_ADJUDICATED",
+        "route": "REDESIGN_INTERNAL_APPARATUS_BEFORE_PRODUCTION_COMPARISON",
+        "scores": {
+          "anti_rabbit_hole_clarity": 3,
+          "bounded_executability": 3,
+          "computational_economy": 2,
+          "direct_alignment_with_accepted_result": 2,
+          "downstream_firewall_fit": 4,
+          "method_decision_leverage": 3,
+          "qualified_reference_use": 2,
+          "root_cause_information_gain": 3,
+          "scientific_causal_localization": 2,
+          "scope_reversibility": 2
+        },
+        "target": "prepare_redesigned_scalar_only_yukawa_internal_apparatus_packet_v0",
+        "weighted_score": 112
+      },
+      {
+        "candidate_id": "DIRECT_TORQUE_AND_DFT_VALIDATION",
+        "disposition": "DEFERRED_ENERGY_LEVEL_PRODUCTION_FAILURE_NOT_YET_ADJUDICATED",
+        "route": "SKIP_PRODUCTION_DIAGNOSIS_AND_VALIDATE_TORQUE_AND_DFT",
+        "scores": {
+          "anti_rabbit_hole_clarity": 2,
+          "bounded_executability": 3,
+          "computational_economy": 4,
+          "direct_alignment_with_accepted_result": 2,
+          "downstream_firewall_fit": 1,
+          "method_decision_leverage": 2,
+          "qualified_reference_use": 4,
+          "root_cause_information_gain": 1,
+          "scientific_causal_localization": 1,
+          "scope_reversibility": 2
+        },
+        "target": "prepare_scalar_only_yukawa_analytic_torque_and_dft_validation_packet_v0",
+        "weighted_score": 99
+      },
+      {
+        "candidate_id": "PIVOT_TO_NATIVE_GRAVITY_PRIORITY",
+        "disposition": "DEFERRED_SEPARATE_FOUNDATIONAL_PRIORITY_NOT_A_RESPONSE_TO_THIS_RESULT",
+        "route": "PAUSE_SYNTHETIC_LANE_AND_RETURN_TO_NATIVE_GRAVITY_SELECTION",
+        "scores": {
+          "anti_rabbit_hole_clarity": 4,
+          "bounded_executability": 4,
+          "computational_economy": 3,
+          "direct_alignment_with_accepted_result": 1,
+          "downstream_firewall_fit": 5,
+          "method_decision_leverage": 0,
+          "qualified_reference_use": 0,
+          "root_cause_information_gain": 1,
+          "scientific_causal_localization": 1,
+          "scope_reversibility": 3
+        },
+        "target": "select_next_native_gravitational_principle_priority_v0",
+        "weighted_score": 90
+      },
+      {
+        "candidate_id": "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE",
+        "disposition": "DEFERRED_ORACLE_SUCCESS_JUSTIFIES_ONE_SMALL_METHOD_COMPARISON",
+        "route": "CLOSE_INTERNAL_SYNTHETIC_TORSION_BALANCE_LANE",
+        "scores": {
+          "anti_rabbit_hole_clarity": 5,
+          "bounded_executability": 5,
+          "computational_economy": 5,
+          "direct_alignment_with_accepted_result": 1,
+          "downstream_firewall_fit": 5,
+          "method_decision_leverage": 0,
+          "qualified_reference_use": 0,
+          "root_cause_information_gain": 0,
+          "scientific_causal_localization": 0,
+          "scope_reversibility": 1
+        },
+        "target": "select_post_scalar_internal_torsion_balance_lane_closure_v0",
+        "weighted_score": 89
+      }
+    ],
+    "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+    "runner_up_score": 160,
+    "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+    "selected_score": 220,
+    "winning_margin": 60
+  },
+  "schema_id": "toe.post_scalar_only_yukawa.analytic_sphere_oracle.qualification_execution_result.scientific_response_selection.v0",
+  "scope": {
+    "accepted_oracle_result_frozen": true,
+    "candidate_count": 6,
+    "final_real_150_vector_authorized": false,
+    "jacobian_or_identifiability_authorized": false,
+    "oracle_execution_rerun_authorized": false,
+    "production_comparison_executed": false,
+    "production_comparison_packet_preparation_authorized": true,
+    "production_comparison_packet_prepared_now": false,
+    "production_kernel_repair_authorized": false,
+    "production_kernel_replacement_authorized": false,
+    "scientific_response_selector_executed": true,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "stage_b_eligible": false,
+    "torque_or_dft_authorized": false
+  },
+  "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+  "selected_next_target": "prepare_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_BOUNDED_ENERGY_LEVEL_PRODUCTION_COMPARISON_PACKET_NO_EXECUTION_NO_REPLACEMENT",
+  "selected_route": "COMPARE_FAILED_PRODUCTION_CUBATURE_AGAINST_QUALIFIED_ANALYTIC_ORACLE",
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 33,
+    "pass_count": 33,
+    "rows": [
+      {
+        "gate_id": "AUTHORITY_HASHES_MATCH",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "QUALIFIED_ORACLE_RESULT_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ONE_SHOT_ORACLE_EXECUTION_REMAINS_CONSUMED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRODUCTION_CUBATURE_REMAINS_UNADJUDICATED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTINUOUS_UNIFORM_ORACLE_ERROR_NOT_CLAIMED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SIX_BOUNDED_OPTIONS_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DIRECT_REPLACEMENT_EXPLICITLY_RANKED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TORQUE_AND_DFT_SHORTCUT_EXPLICITLY_RANKED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRODUCTION_COMPARISON_UNIQUE_BASELINE_WINNER",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THIRTY_SENSITIVITY_VARIANTS_EXECUTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRODUCTION_COMPARISON_WINS_ALL_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THREE_FAILED_STAGE_A_CASES_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SMALL_SIX_TO_EIGHT_CASE_GRID_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "STRICT_NONOVERLAP_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRODUCTION_ORDERS_EIGHT_THROUGH_FORTY_EIGHT_TO_FREEZE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NEWTONIAN_AND_YUKAWA_COMPONENTS_SEPARATE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ABSOLUTE_AND_RELATIVE_ERRORS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RUNTIME_AND_WORK_RECORDS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FAILED_PRODUCTION_IMPLEMENTATION_HASH_PIN_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PRODUCTION_CODE_CHANGE_DURING_COMPARISON",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_ORACLE_CODE_CHANGE_DURING_COMPARISON",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RESULT_DEPENDENT_CASE_SELECTION_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONVERGENCE_AND_PLATEAU_RULES_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NORMALIZATION_AND_GEOMETRY_PROBES_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NEAR_THRESHOLD_RESULTS_UNRESOLVED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RESOURCE_AND_PROCESS_CUSTODY_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PACKET_PREPARED_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_COMPARISON_EXECUTION_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PRODUCTION_REPAIR_OR_REPLACEMENT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_TORQUE_OR_DFT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_VECTOR_JACOBIAN_OR_IDENTIFIABILITY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_STAGE_A_RERUN_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "INDEPENDENT_PACKET_REVIEW_REQUIRED_BEFORE_EXECUTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_id": "POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_V0_EXECUTION_RESULT_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0",
+  "selection_policy": {
+    "candidate_count": 6,
+    "criteria_weights": {
+      "anti_rabbit_hole_clarity": 2,
+      "bounded_executability": 5,
+      "computational_economy": 5,
+      "direct_alignment_with_accepted_result": 5,
+      "downstream_firewall_fit": 4,
+      "method_decision_leverage": 4,
+      "qualified_reference_use": 5,
+      "root_cause_information_gain": 5,
+      "scientific_causal_localization": 5,
+      "scope_reversibility": 4
+    },
+    "criterion_count": 10,
+    "criterion_scale": "0_TO_5_PRIORITY_SCORE_NOT_TRUTH_PROBABILITY",
+    "tie_break_rule": "LEXICOGRAPHIC_CANDIDATE_ID"
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 45,
+    "rows": [
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 140,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 195,
+        "variant": "omit_direct_alignment_with_accepted_result"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 135,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 195,
+        "variant": "omit_qualified_reference_use"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 150,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 195,
+        "variant": "omit_root_cause_information_gain"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 140,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 195,
+        "variant": "omit_bounded_executability"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 150,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 195,
+        "variant": "omit_scientific_causal_localization"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 135,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 195,
+        "variant": "omit_computational_economy"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 144,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 200,
+        "variant": "omit_downstream_firewall_fit"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 148,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 200,
+        "variant": "omit_scope_reversibility"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 144,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 200,
+        "variant": "omit_method_decision_leverage"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 154,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 210,
+        "variant": "omit_anti_rabbit_hole_clarity"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 156,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "direct_alignment_with_accepted_result_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 164,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "direct_alignment_with_accepted_result_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 155,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "qualified_reference_use_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 165,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "qualified_reference_use_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 158,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "root_cause_information_gain_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 162,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "root_cause_information_gain_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 156,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "bounded_executability_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 164,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "bounded_executability_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 158,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "scientific_causal_localization_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 162,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "scientific_causal_localization_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 155,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "computational_economy_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 165,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "computational_economy_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 156,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "downstream_firewall_fit_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 164,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "downstream_firewall_fit_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 157,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "scope_reversibility_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 163,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "scope_reversibility_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 156,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "method_decision_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 164,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "method_decision_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 157,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 215,
+        "variant": "anti_rabbit_hole_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+        "runner_up_score": 163,
+        "selected_candidate_id": "BOUNDED_PRODUCTION_VS_ORACLE_COMPARISON",
+        "selected_score": 225,
+        "variant": "anti_rabbit_hole_clarity_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 30
+  },
+  "target": "select_post_scalar_only_yukawa_analytic_sphere_oracle_qualification_v0_execution_result_scientific_response_v0",
+  "verdict": "SELECTED_BOUNDED_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_PREPARATION"
+}
