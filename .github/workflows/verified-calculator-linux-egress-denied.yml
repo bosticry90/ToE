@@ -1,0 +1,235 @@
+name: Verified Calculator Linux Egress-Denied Exact Reproduction
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/verified-calculator-linux-egress-denied.yml"
+      - "formal/python/toe/generic_runner/verified_calculator/**"
+      - "formal/python/toe/generic_runner/verified_calculator_c03_rv_*.py"
+      - "formal/toe_formal/ToeFormal/VerifiedCalculator/**"
+      - "formal/tooling/scientific_compute/julia/verified_calculator*.jl"
+      - "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_*.json"
+      - "formal/docs/release/verified_calculator/c03_rv_exact/**"
+      - "requirements.ci.lock"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vpc-linux-egress-denied-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  exact-profile:
+    name: Frozen C03/RV exact profile
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Setup Julia
+        uses: julia-actions/setup-julia@v3
+        with:
+          version: "1.12.6"
+
+      - name: Setup and build Lean runtime-certificate checker
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal/toe_formal
+          auto-config: false
+          build: true
+          build-args: vpc_certificate_checker
+          test: false
+          lint: false
+          use-mathlib-cache: true
+
+      - name: Provision Python and Julia dependencies before isolation
+        shell: bash
+        run: |
+          python -m venv .venv
+          ./.venv/bin/python -m pip install --upgrade pip==26.0
+          ./.venv/bin/python -m pip install -r requirements.ci.lock
+          julia --startup-file=no --project=formal/tooling/scientific_compute/julia -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using JSON3, Nemo'
+
+      - name: Create ephemeral egress-denied qualification driver
+        shell: bash
+        run: |
+          cat > "$RUNNER_TEMP/vpc_linux_egress_denied_driver.py" <<'PY'
+          from __future__ import annotations
+
+          import os
+          from pathlib import Path
+          import platform
+          import socket
+          import sys
+
+          repository_root = Path(os.environ["GITHUB_WORKSPACE"]).resolve(strict=True)
+          os.chdir(repository_root)
+          sys.path.insert(0, str(repository_root))
+
+          from formal.python.toe.generic_runner.verified_calculator.canonical import canonical_json, digest, strict_json_file
+          from formal.python.toe.generic_runner.verified_calculator.contracts import VerificationClass
+          from formal.python.toe.generic_runner.verified_calculator.evidence import FrozenEvidenceBundleV1, VerificationReceiptV1
+          from formal.python.toe.generic_runner.verified_calculator.errors import require
+          from formal.python.toe.generic_runner.verified_calculator_c03_rv_qualification_v1 import qualify
+
+          require(platform.system() == "Linux", "LINUX_EGRESS_TEST_PLATFORM")
+          require(os.environ.get("VPC_EGRESS_DENIED_NAMESPACE") == "1", "LINUX_NETWORK_NAMESPACE_MARKER")
+          def network_state():
+              interfaces = sorted(path.name for path in Path("/sys/class/net").iterdir())
+              route_lines = Path("/proc/net/route").read_text(encoding="ascii").splitlines()[1:]
+              default_routes = [line for line in route_lines if len(line.split()) >= 2 and line.split()[1] == "00000000"]
+              probe = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+              probe.settimeout(2.0)
+              probe_errno = probe.connect_ex(("1.1.1.1", 443))
+              probe.close()
+              return interfaces, default_routes, probe_errno
+
+          initial_interfaces, initial_default_routes, initial_probe_errno = network_state()
+          require(initial_interfaces == ["lo"], "LINUX_NETWORK_NAMESPACE_INTERFACES", detail=",".join(initial_interfaces))
+          require(not initial_default_routes, "LINUX_NETWORK_NAMESPACE_DEFAULT_ROUTE")
+          require(initial_probe_errno != 0, "LINUX_EGRESS_ACTIVE_PROBE_CONNECTED")
+
+          contract_path = repository_root / os.environ["VPC_EGRESS_TEST_CONTRACT"]
+          contract = strict_json_file(contract_path)
+          require(contract["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedTestV1", "LINUX_EGRESS_TEST_CONTRACT")
+          require(contract["definition_status"] == "DEFINED_NOT_EXECUTED", "LINUX_EGRESS_TEST_DEFINITION_STATUS")
+          expected = contract["frozen_reference"]
+          reference_path = repository_root / expected["bundle_path"]
+          reference = FrozenEvidenceBundleV1.from_dict(strict_json_file(reference_path, max_bytes=256 * 1024 * 1024))
+          require(reference.bundle_hash == expected["bundle_hash"], "LINUX_REFERENCE_BUNDLE_HASH")
+
+          output_root = repository_root / os.environ["VPC_EGRESS_TEST_OUTPUT"]
+          summary = qualify(output_root / "bundles")
+          final_interfaces, final_default_routes, final_probe_errno = network_state()
+          require(final_interfaces == ["lo"], "LINUX_NETWORK_NAMESPACE_FINAL_INTERFACES", detail=",".join(final_interfaces))
+          require(not final_default_routes, "LINUX_NETWORK_NAMESPACE_FINAL_DEFAULT_ROUTE")
+          require(final_probe_errno != 0, "LINUX_EGRESS_FINAL_ACTIVE_PROBE_CONNECTED")
+          for field in ("computation_id", "candidate_hash", "profile_hash", "policy_hash", "graph_hash", "runtime_certificate_hash", "dependency_closure_hash"):
+              require(summary[field] == expected[field], "LINUX_EXACT_IDENTITY_MISMATCH", detail=field)
+          require(summary["challenge_result_count"] == 373 and summary["derived_corruption_challenged_count"] == 160, "LINUX_CHALLENGE_CENSUS")
+          require(summary["derived_corruption_unexpected_survivors"] == [], "LINUX_CHALLENGE_SURVIVOR")
+          require(summary["replay_status"] == "MATCHED", "LINUX_BUNDLE_REPLAY")
+
+          linux_path = repository_root / summary["frozen_bundle_path"]
+          linux_bundle = FrozenEvidenceBundleV1.from_dict(strict_json_file(linux_path, max_bytes=256 * 1024 * 1024))
+          require(linux_bundle.bundle_hash == summary["frozen_bundle_hash"] == linux_path.stem, "LINUX_GENERATED_BUNDLE_HASH")
+          reference_receipt = VerificationReceiptV1.from_dict(reference.verification_receipt)
+          linux_receipt = VerificationReceiptV1.from_dict(linux_bundle.verification_receipt)
+          reference_body = reference_receipt.to_dict()
+          linux_body = linux_receipt.to_dict()
+          reference_environment = reference_body.pop("environment")
+          linux_environment = linux_body.pop("environment")
+          require(reference_body == linux_body, "LINUX_RECEIPT_NONENVIRONMENT_MISMATCH")
+          require(reference_environment["platform"] != linux_environment["platform"], "LINUX_DISTINCT_PLATFORM_NOT_ESTABLISHED")
+          require(all(row.verification_class == VerificationClass.VERIFIED_EXACT for row in linux_receipt.outputs), "LINUX_OUTPUT_NOT_VERIFIED_EXACT")
+
+          gates = {
+              "fresh_linux_network_namespace_only_loopback": initial_interfaces == final_interfaces == ["lo"],
+              "no_default_route": not initial_default_routes and not final_default_routes,
+              "active_ipv4_egress_probe_blocked": initial_probe_errno != 0 and final_probe_errno != 0,
+              "dependency_provisioning_completed_before_denied_phase": True,
+              "frozen_windows_reference_replayed": reference.bundle_hash == expected["bundle_hash"],
+              "all_exact_identifiers_match_reference": all(summary[field] == expected[field] for field in ("computation_id", "candidate_hash", "profile_hash", "policy_hash", "graph_hash", "runtime_certificate_hash", "dependency_closure_hash")),
+              "all_receipt_fields_except_environment_match": reference_body == linux_body,
+              "all_sixteen_roots_verified_exact": len(linux_receipt.outputs) == 16 and all(row.verification_class == VerificationClass.VERIFIED_EXACT for row in linux_receipt.outputs),
+              "all_373_mandatory_challenges_pass": len(linux_receipt.challenge_results) == 373 and all(row.disposition.value == "PASSED" for row in linux_receipt.challenge_results),
+              "generated_linux_bundle_replays": summary["replay_status"] == "MATCHED",
+          }
+          require(all(gates.values()), "LINUX_EGRESS_TEST_GATE")
+          result = {
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedResultV1",
+              "definition_hash": digest(contract, "VerifiedCalculatorLinuxEgressDeniedTestV1"),
+              "git_commit": os.environ.get("GITHUB_SHA", ""),
+              "network_isolation": {
+                  "mechanism": "LINUX_NEW_NETWORK_NAMESPACE",
+                  "active_probe_target": "1.1.1.1:443",
+                  "before": {
+                      "interfaces": initial_interfaces,
+                      "default_route_count": len(initial_default_routes),
+                      "active_probe_errno": initial_probe_errno,
+                  },
+                  "after": {
+                      "interfaces": final_interfaces,
+                      "default_route_count": len(final_default_routes),
+                      "active_probe_errno": final_probe_errno,
+                  },
+              },
+              "windows_reference_bundle_hash": reference.bundle_hash,
+              "linux_bundle_hash": linux_bundle.bundle_hash,
+              "linux_verification_receipt_hash": linux_receipt.receipt_hash,
+              "windows_environment": reference_environment,
+              "linux_environment": linux_environment,
+              "qualification_summary": summary,
+              "gates": gates,
+              "scientific_promotion": False,
+              "product_v1_release": False,
+              "production_activation": False,
+          }
+          result["result_hash"] = digest(result, "VerifiedCalculatorLinuxEgressDeniedResultV1")
+          print(canonical_json(result))
+          PY
+
+      - name: Run exact qualification with kernel-enforced egress denial
+        shell: bash
+        env:
+          VPC_EGRESS_TEST_CONTRACT: formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v1.json
+          VPC_EGRESS_TEST_OUTPUT: formal/output/verified_calculator_linux_egress_denied
+        run: |
+          mkdir -p "$VPC_EGRESS_TEST_OUTPUT"
+          VPC_PYTHON="$GITHUB_WORKSPACE/.venv/bin/python"
+          VPC_JULIA_EXE="$(command -v julia)"
+          VPC_JULIA_DEPOT="${JULIA_DEPOT_PATH:-$HOME/.julia}"
+          sudo -n /usr/bin/unshare --net --fork --pid --mount-proc \
+            /usr/bin/env \
+            HOME="$HOME" \
+            PATH="$PATH" \
+            GITHUB_WORKSPACE="$GITHUB_WORKSPACE" \
+            GITHUB_SHA="$GITHUB_SHA" \
+            JULIA_DEPOT_PATH="$VPC_JULIA_DEPOT" \
+            JULIA_PKG_OFFLINE=true \
+            PYTHONDONTWRITEBYTECODE=1 \
+            VPC_JULIA_EXE="$VPC_JULIA_EXE" \
+            VPC_EGRESS_DENIED_NAMESPACE=1 \
+            VPC_EGRESS_TEST_CONTRACT="$VPC_EGRESS_TEST_CONTRACT" \
+            VPC_EGRESS_TEST_OUTPUT="$VPC_EGRESS_TEST_OUTPUT" \
+            "$VPC_PYTHON" "$RUNNER_TEMP/vpc_linux_egress_denied_driver.py" \
+            > "$VPC_EGRESS_TEST_OUTPUT/result.json"
+          sudo chown -R "$(id -u):$(id -g)" "$VPC_EGRESS_TEST_OUTPUT"
+
+      - name: Validate result is non-promotional and egress-denied
+        shell: bash
+        run: |
+          ./.venv/bin/python - <<'PY'
+          import json
+          from pathlib import Path
+
+          result = json.loads(Path("formal/output/verified_calculator_linux_egress_denied/result.json").read_text(encoding="utf-8"))
+          assert result["schema_id"] == "VerifiedCalculatorLinuxEgressDeniedResultV1"
+          assert result["network_isolation"]["before"]["interfaces"] == ["lo"]
+          assert result["network_isolation"]["after"]["interfaces"] == ["lo"]
+          assert result["network_isolation"]["before"]["default_route_count"] == 0
+          assert result["network_isolation"]["after"]["default_route_count"] == 0
+          assert all(result["gates"].values())
+          assert result["scientific_promotion"] is False
+          assert result["product_v1_release"] is False
+          assert result["production_activation"] is False
+          PY
+
+      - name: Upload Linux egress-denied evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-calculator-linux-egress-denied-${{ github.sha }}
+          path: formal/output/verified_calculator_linux_egress_denied/
+          if-no-files-found: error
+          retention-days: 30
