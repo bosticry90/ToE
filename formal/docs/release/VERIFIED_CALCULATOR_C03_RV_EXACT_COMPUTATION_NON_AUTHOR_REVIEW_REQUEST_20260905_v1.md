@@ -21,6 +21,7 @@ Primary artifacts:
 - `formal/docs/release/VERIFIED_CALCULATOR_C03_RV_POLICY_FREEZE_20260905_v1.json`
 - `formal/docs/release/VERIFIED_CALCULATOR_C03_RV_SOURCE_MATERIAL_CONTRACT_20260905_v1.json`
 - `formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_CHECKLIST_20260905_v1.md`
+- `formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_EVIDENCE_MATRIX_20260905_v1.md`
 
 ## Requested review questions
 
@@ -40,7 +41,7 @@ The reviewer should return one of:
 - `SUPPORTED_WITH_REQUIRED_AMENDMENTS`
 - `NOT_SUPPORTED`
 
-The result should identify the reviewer, establish non-authorship of the implementation/evidence, list every artifact and hash actually inspected, answer each review question, enumerate required amendments or residual limitations, and state explicitly:
+The result should identify the reviewer, establish non-authorship of the implementation/evidence, list every artifact and hash actually inspected, complete every required row of the evidence matrix without sampling the stated censuses, answer each review question, enumerate required amendments or residual limitations, and state explicitly:
 
 ```text
 scientific_promotion = false

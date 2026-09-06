@@ -66,14 +66,16 @@
     "linux_egress_denied_test": {
       "status": "DEFINED_NOT_EXECUTED",
       "contract": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v1.json",
+      "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v1.md",
       "workflow": ".github/workflows/verified-calculator-linux-egress-denied.yml",
-      "required_isolation": "FRESH_LINUX_NETWORK_NAMESPACE_ONLY_LOOPBACK_NO_DEFAULT_ROUTE_ACTIVE_PROBE_BLOCKED",
+      "required_isolation": "FRESH_LINUX_NETWORK_NAMESPACE_ONLY_LOOPBACK_NO_IPV4_OR_IPV6_DEFAULT_ROUTE_TWO_ACTIVE_PROBES_BLOCKED_BEFORE_AND_AFTER",
       "successful_result_artifact": null
     },
     "non_author_review": {
       "status": "PENDING",
       "request": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_COMPUTATION_NON_AUTHOR_REVIEW_REQUEST_20260905_v1.md",
       "checklist": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_CHECKLIST_20260905_v1.md",
+      "evidence_matrix": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_EVIDENCE_MATRIX_20260905_v1.md",
       "accepted_result_artifact": null
     }
   },

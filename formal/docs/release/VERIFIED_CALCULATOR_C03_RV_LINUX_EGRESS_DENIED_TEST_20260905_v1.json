@@ -3,6 +3,7 @@
   "test_id": "C03_RV_EXACT_LINUX_KERNEL_EGRESS_DENIED_REPRODUCTION_v1",
   "definition_status": "DEFINED_NOT_EXECUTED",
   "scope": "Post-milestone cross-platform reproduction of the frozen exact C03/RV computation; this definition does not modify the frozen profile, policy, candidate, receipt, or Windows evidence bundle.",
+  "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v1.md",
   "runner": {
     "operating_system": "ubuntu-latest",
     "python": "3.10",
@@ -15,13 +16,15 @@
       "checkout",
       "install pinned Python dependencies",
       "instantiate and precompile the frozen Julia environment",
-      "build the Lean runtime-certificate checker"
+      "build the Lean runtime-certificate checker",
+      "capture a hash-bound provisioning manifest containing dependency artifacts, executable identities, package inventory, runner identity, Git commit, and UTC completion time"
     ],
     "egress_denied_execution": [
       "enter a fresh Linux network namespace",
       "require the only network interface to be loopback",
-      "require no IPv4 default route",
-      "require an active IPv4 TCP egress probe to fail",
+      "require no IPv4 or IPv6 default route",
+      "require two active numeric-address IPv4 TCP egress probes to fail for explicit network-unreachable reasons before and after trusted execution",
+      "verify the unchanged pre-isolation provisioning-manifest hashes and timestamp",
       "execute the full 207-node exact qualification",
       "execute Python, Julia/Nemo, Lean, and all 373 mandatory challenges",
       "freeze and structurally replay the Linux evidence bundle",
@@ -33,8 +36,21 @@
     "required_interfaces": [
       "lo"
     ],
-    "maximum_default_routes": 0,
-    "active_probe": "1.1.1.1:443",
+    "maximum_ipv4_default_routes": 0,
+    "maximum_ipv6_default_routes": 0,
+    "active_probes": [
+      "1.1.1.1:443",
+      "8.8.8.8:53"
+    ],
+    "accepted_probe_errors": [
+      "ENETUNREACH",
+      "EHOSTUNREACH",
+      "EADDRNOTAVAIL"
+    ],
+    "observations": [
+      "before trusted qualification",
+      "after trusted qualification"
+    ],
     "fallback_if_namespace_unavailable": "FAIL",
     "applies_to_process_tree": [
       "trusted Python verifier",
@@ -80,16 +96,21 @@
   "required_result_gates": [
     "fresh_linux_network_namespace_only_loopback",
     "no_default_route",
-    "active_ipv4_egress_probe_blocked",
+    "active_ipv4_egress_probes_blocked_before_and_after",
+    "dependency_provisioning_manifest_hash_bound",
     "dependency_provisioning_completed_before_denied_phase",
+    "isolation_observed_before_qualification",
+    "isolation_maintained_after_qualification",
     "frozen_windows_reference_replayed",
     "all_exact_identifiers_match_reference",
     "all_receipt_fields_except_environment_match",
+    "all_207_graph_nodes_executed",
     "all_sixteen_roots_verified_exact",
     "all_373_mandatory_challenges_pass",
     "generated_linux_bundle_replays"
   ],
-  "evidence_status": "No Linux result is earned until this workflow completes successfully and its result artifact is preserved and reviewed.",
+  "result_retention": "Every attempted run preserves available logs, provisioning evidence, and exit disposition. A failed or inconclusive attempt cannot be promoted and is never replaced in place by a retry.",
+  "evidence_status": "No Linux result is earned until this workflow completes successfully, satisfies every linked acceptance criterion, and its result artifact is preserved and reviewed.",
   "scientific_promotion": false,
   "product_v1_release": false,
   "production_activation": false

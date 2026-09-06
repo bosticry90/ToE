@@ -4,6 +4,8 @@ Status: `DRAFT_CHECKLIST_FOR_PENDING_NON_AUTHOR_REVIEW`
 
 This checklist governs review of the frozen C03/RV exact pre-release computation. The reviewer evaluates whether the computation deserves its bounded `VERIFIED_EXACT` claims. The review cannot validate SU(5), CCFT, the ToE, product v1, production activation, or any topology outside the seven frozen records.
 
+Record criterion-by-criterion findings in `formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_EVIDENCE_MATRIX_20260905_v1.md`. This checklist supplies the review instructions; the matrix supplies the complete source, operation, root, challenge, formal-evidence, and authority census that must be dispositioned.
+
 ## 0. Reviewer eligibility and custody
 
 - [ ] Identify the reviewer and review date.
