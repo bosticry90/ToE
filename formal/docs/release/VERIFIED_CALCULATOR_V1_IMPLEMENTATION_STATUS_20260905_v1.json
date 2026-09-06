@@ -64,11 +64,18 @@
   },
   "post_milestone_qualification": {
     "linux_egress_denied_test": {
-      "status": "DEFINED_NOT_EXECUTED",
-      "contract": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v1.json",
-      "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v1.md",
+      "status": "V1_INCONCLUSIVE__V2_DEFINED_NOT_EXECUTED",
+      "contract": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v2.json",
+      "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v2.md",
       "workflow": ".github/workflows/verified-calculator-linux-egress-denied.yml",
-      "required_isolation": "FRESH_LINUX_NETWORK_NAMESPACE_ONLY_LOOPBACK_NO_IPV4_OR_IPV6_DEFAULT_ROUTE_TWO_ACTIVE_PROBES_BLOCKED_BEFORE_AND_AFTER",
+      "required_isolation": "FRESH_LINUX_NETWORK_NAMESPACE_SOCKET_AND_PROC_ONLY_LOOPBACK_NO_IPV4_OR_IPV6_DEFAULT_ROUTE_TWO_ACTIVE_PROBES_BLOCKED_BEFORE_AND_AFTER",
+      "prior_attempt": {
+        "version": 1,
+        "status": "INCONCLUSIVE",
+        "workflow_run_id": 34007693980,
+        "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v1.json",
+        "reason": "Inherited /sys/class/net was not a namespace-aware interface census; execution failed closed before trusted qualification."
+      },
       "successful_result_artifact": null
     },
     "non_author_review": {
