@@ -60,30 +60,47 @@
     "exact_milestone_artifact": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_COMPUTATIONAL_MILESTONE_20260905_v1.json",
     "frozen_bundle_artifact": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
     "frozen_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
-    "independent_non_author_review": "PENDING"
+    "independent_non_author_review": "COMPLETED_SUPPORTED_WITH_REQUIRED_AMENDMENTS",
+    "non_author_review_result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+    "non_author_review_repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v2.json"
   },
   "post_milestone_qualification": {
     "linux_egress_denied_test": {
-      "status": "V1_INCONCLUSIVE__V2_DEFINED_NOT_EXECUTED",
-      "contract": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v2.json",
-      "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v2.md",
+      "status": "V1_INCONCLUSIVE__V2_INCONCLUSIVE__V3_DEFINED_NOT_EXECUTED",
+      "contract": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_TEST_20260905_v3.json",
+      "acceptance_criteria": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_ACCEPTANCE_CRITERIA_20260905_v3.md",
       "workflow": ".github/workflows/verified-calculator-linux-egress-denied.yml",
-      "required_isolation": "FRESH_LINUX_NETWORK_NAMESPACE_SOCKET_AND_PROC_ONLY_LOOPBACK_NO_IPV4_OR_IPV6_DEFAULT_ROUTE_TWO_ACTIVE_PROBES_BLOCKED_BEFORE_AND_AFTER",
-      "prior_attempt": {
-        "version": 1,
-        "status": "INCONCLUSIVE",
-        "workflow_run_id": 34007693980,
-        "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v1.json",
-        "reason": "Inherited /sys/class/net was not a namespace-aware interface census; execution failed closed before trusted qualification."
-      },
+      "required_isolation": "FRESH_LINUX_NETWORK_NAMESPACE_SOCKET_AND_PROC_ONLY_LOOPBACK_NO_USABLE_IPV4_OR_IPV6_FORWARDING_DEFAULT_ROUTE_TWO_ACTIVE_PROBES_BLOCKED_BEFORE_AND_AFTER",
+      "prior_attempts": [
+        {
+          "version": 1,
+          "status": "INCONCLUSIVE",
+          "workflow_run_id": 34007693980,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v1.json",
+          "reason": "Inherited /sys/class/net was not a namespace-aware interface census; execution failed closed before trusted qualification."
+        },
+        {
+          "version": 2,
+          "status": "INCONCLUSIVE",
+          "workflow_run_id": 34008583231,
+          "result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v2.json",
+          "reason": "The raw IPv6 prefix gate did not distinguish a non-forwarding unreachable default sentinel from a usable forwarding route; execution failed closed before trusted qualification."
+        }
+      ],
       "successful_result_artifact": null
     },
     "non_author_review": {
-      "status": "PENDING",
+      "status": "COMPLETED_SUPPORTED_WITH_REQUIRED_AMENDMENTS",
       "request": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_COMPUTATION_NON_AUTHOR_REVIEW_REQUEST_20260905_v1.md",
       "checklist": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_CHECKLIST_20260905_v1.md",
       "evidence_matrix": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_EVIDENCE_MATRIX_20260905_v1.md",
-      "accepted_result_artifact": null
+      "result_artifact": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+      "accepted_result_artifact": null,
+      "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v2.json",
+      "material_defects": [
+        "D-01_LEAN_CERTIFICATE_IDENTITY_NOT_INDEPENDENTLY_BOUND",
+        "D-02_COMPLETE_VALUE_TYPE_METADATA_NOT_ENFORCED"
+      ]
     }
   },
   "milestones": {
@@ -96,8 +113,8 @@
     "product_v1": "NOT_RELEASED"
   },
   "remaining_release_work": [
-    "Obtain and hash-bind a genuine scoped non-author scientific/computational review; calculator-profile scientific requalification remains unearned until then.",
-    "Execute and preserve the defined Linux kernel-egress-denied exact-profile workflow result, then review its cross-platform comparison evidence.",
+    "Implement the two material amendments required by the completed non-author review in a new exact-profile lineage, then regenerate and independently review the affected evidence; calculator-profile scientific requalification remains unearned.",
+    "Execute and preserve Linux kernel-egress-denied exact-profile workflow v3, then review its cross-platform comparison evidence; v1 and v2 remain preserved as inconclusive attempts.",
     "Freeze interval, ODE/RGE, uncertainty, unsafe-plugin-boundary, and synthetic-profile subsystem acceptance records.",
     "Assemble the all-or-nothing product release only after every remaining gate passes."
   ],
