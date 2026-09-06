@@ -78,18 +78,46 @@ def evaluate_candidate(contracts: ContractSetV1, request: CalculationRequestV1, 
     require(all(value <= contracts.policy.resource_limits.trusted_route_seconds for key, value in request.execution_budgets.items() if key != "total_seconds"), "TRUSTED_ROUTE_RUNTIME_BUDGET")
     with trusted_offline():
         resolver = SourceResolverV1(contracts.source_root, contracts.profile.source_declarations, contracts.policy.resource_limits)
-        evaluation = ExactDagVerifierV1(contracts.profile, resolver, contracts.policy.resource_limits).verify(candidate)
+        if contracts.profile.profile_id == "C03_RV_SU5_EXACT_PROFILE_v1":
+            from .c03_rv_exact_verifier import C03RVExactProfileVerifierV1
+            evaluation = C03RVExactProfileVerifierV1(contracts.profile, resolver, contracts.policy.resource_limits).verify(candidate)
+        else:
+            evaluation = ExactDagVerifierV1(contracts.profile, resolver, contracts.policy.resource_limits).verify(candidate)
     certificate = build_runtime_certificate(request.computation_id, candidate.candidate_hash, contracts.profile.contract_hash, contracts.policy.contract_hash, evaluation)
     return EvaluatedRunV1(contracts, request, candidate, evaluation, certificate)
 
 
 def run_challenges(run: EvaluatedRunV1, specs: Sequence[ChallengeSpecV1]) -> tuple[ChallengeResultV1, ...]:
-    verifier = lambda candidate: evaluate_candidate(run.contracts, run.request, candidate).evaluation
     results: list[ChallengeResultV1] = []
-    for spec in specs:
-        for target in select_targets(spec, run.candidate):
-            packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target)
-            results.append(run_challenge(spec, packet, run.candidate, verifier))
+    if run.contracts.profile.profile_id == "C03_RV_SU5_EXACT_PROFILE_v1":
+        from .c03_rv_exact_verifier import C03RVExactProfileVerifierV1
+        with trusted_offline():
+            resolver = SourceResolverV1(run.contracts.source_root, run.contracts.profile.source_declarations, run.contracts.policy.resource_limits)
+            profile_verifier = C03RVExactProfileVerifierV1(run.contracts.profile, resolver, run.contracts.policy.resource_limits)
+            for spec in specs:
+                for target in select_targets(spec, run.candidate):
+                    source_target = target if spec.mutation_rule.get("kind") in {"CORRUPT_SOURCE_LOCATOR", "REPLACE_SOURCE_REFERENCE"} else None
+                    verifier = (
+                        (
+                            lambda candidate, source_target=source_target, injection_node=target: profile_verifier.probe_rejecting_challenge(
+                                candidate,
+                                run.evaluation,
+                                run.candidate,
+                                injection_node=injection_node,
+                                resolve_source_node=source_target,
+                            )
+                        )
+                        if spec.required_consequence == "VERIFIER_REJECTS"
+                        else (lambda candidate: evaluate_candidate(run.contracts, run.request, candidate).evaluation)
+                    )
+                    packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
+                    results.append(run_challenge(spec, packet, run.candidate, verifier, run.evaluation, packet_derivation_prevalidated=True))
+    else:
+        verifier = lambda candidate: evaluate_candidate(run.contracts, run.request, candidate).evaluation
+        for spec in specs:
+            for target in select_targets(spec, run.candidate):
+                packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
+                results.append(run_challenge(spec, packet, run.candidate, verifier, run.evaluation))
     return tuple(results)
 
 
@@ -128,7 +156,7 @@ def verify_run(
             targets = select_targets(spec, run.candidate)
             require(targets, "MANDATORY_CHALLENGE_NOT_APPLICABLE", spec.challenge_id)
             for target in targets:
-                packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target)
+                packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
                 expected_packets.append(packet.packet_hash)
                 for root in packet.affected_roots:
                     mandatory_packets_by_root[root].append(packet.packet_hash)
@@ -180,7 +208,7 @@ def assemble_evidence_bundle(
     packet_hashes = {row.challenge_packet_hash for row in receipt.challenge_results}
     for spec in challenge_specs:
         for target in select_targets(spec, run.candidate):
-            packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target)
+            packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
             if packet.packet_hash in packet_hashes:
                 packets.append(packet.to_dict())
     require({digest(row, "ChallengePacketV1") for row in packets} == packet_hashes, "BUNDLE_CHALLENGE_PACKET_MISSING")

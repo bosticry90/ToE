@@ -9,7 +9,7 @@ from typing import Any, Mapping, Sequence
 
 from .challenges import ChallengeSpecV1, validate_registry
 from .contracts import AlgebraicFieldV1, DimensionSystemV1, PhysicsProfileV1, QMCPolicyV1, VerificationPolicyV1
-from .dag import TRUSTED_DOMAIN_NEUTRAL_OPERATIONS
+from .c03_rv_operation_contracts import C03_RV_PHYSICS_OPERATIONS, DERIVED_SIGNATURES, SOURCE_SIGNATURES
 from .milestones import C03_RV_ROOTS
 
 
@@ -57,17 +57,27 @@ def challenge_registry_census() -> dict[str, Any]:
 
 
 def physics_profile(source_declarations: Sequence[Mapping[str, Any]]) -> PhysicsProfileV1:
+    algebraic_field = AlgebraicFieldV1(
+        "SQRT2_SQRT3_I_COMMON_FIELD", "alpha",
+        ("144", "0", "192", "0", "88", "0", "-16", "0", "1"),
+        {"kind": "COMPLEX_RECTANGLE", "real_lower": "3", "real_upper": "4", "imag_lower": "1/2", "imag_upper": "3/2"},
+        ("1", "alpha", "alpha^2", "alpha^3", "alpha^4", "alpha^5", "alpha^6", "alpha^7"),
+    )
+    semantic_types = tuple(sorted(set(SOURCE_SIGNATURES.values()) | {row["semantic_type"] for row in DERIVED_SIGNATURES.values()}))
     return PhysicsProfileV1(
         "C03_RV_SU5_EXACT_PROFILE_v1",
-        ("g1", "g2", "g3", "xi1", "xi2", "xi3"),
-        AlgebraicFieldV1.rational(),
+        # ``d`` remains symbolic in the admitted BMHV/native-E coordinate
+        # vector.  It is part of the exact language, not an implicit runtime
+        # symbol supplied by SymPy.
+        ("C_duue", "d", "g1", "g2", "g3", "xi1", "xi2", "xi3"),
+        algebraic_field,
         DimensionSystemV1(("MASS", "LENGTH", "TIME"), "RATIONAL", (("1", "1", "0"), ("1", "0", "1"))),
         ("SU5_NATURAL_HBAR_C_1",),
-        ("SCALAR", "BOOLEAN", "WILSON_COEFFICIENT", "NATIVE_COORDINATE_VECTOR", "EVANESCENT_EVALUATION_STATE", "SOURCE_CHANNEL"),
+        semantic_types,
         {"NATIVE_E": 14},
         ("SU5", "BMHV", "WARSAW", "NATIVE_E"),
         tuple(dict(row) for row in source_declarations),
-        tuple(sorted(TRUSTED_DOMAIN_NEUTRAL_OPERATIONS)),
+        tuple(sorted({"SOURCE_DECODE", *C03_RV_PHYSICS_OPERATIONS})),
         C03_RV_ROOTS,
         {root: root.replace(".OUTPUT.", ".claim.") for root in C03_RV_ROOTS},
     )

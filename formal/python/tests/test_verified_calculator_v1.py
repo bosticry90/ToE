@@ -574,7 +574,12 @@ def test_c03_rv_profile_census_is_complete_but_does_not_claim_milestone() -> Non
     result = census()
     assert result["output_root_count"] == 16
     assert result["output_roots"] == result["expected_output_roots"]
-    assert result["derived_node_count"] >= 160
+    assert result["derived_node_count"] == 160
+    assert result["trusted_source_signature_count"] == 31
+    assert result["trusted_derived_signature_count"] == 160
+    assert result["trusted_output_signature_count"] == 16
+    assert result["trusted_physics_operation_count"] == result["operation_count"] == 19
+    assert result["historical_physics_operations_requiring_declarative_lowering"] == []
     assert result["per_record_spec_count"]["C03"] == 43
     assert result["challenge_registry"]["unclassified"] == []
     assert all(count > 0 for count in result["challenge_target_counts"].values())
@@ -588,6 +593,39 @@ def test_c03_rv_profile_census_is_complete_but_does_not_claim_milestone() -> Non
     assert binding.claim_bindings["C03.claim.PHYSICAL_COEFFICIENT"].authority_state == "TERMINALLY_ADJUDICATED"
     assert binding.claim_bindings["RV03.claim.SOURCE_CHANNEL"].historical_label == "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP"
     assert binding.calculator_profile_review_status == "SCIENTIFIC_REQUALIFICATION_NOT_EARNED"
+
+
+def test_c03_rv_trusted_python_recomputes_all_nodes_and_roots() -> None:
+    from formal.python.toe.generic_runner.verified_calculator.c03_rv_operation_contracts import validate_operation_contracts
+    from formal.python.toe.generic_runner.verified_calculator_c03_rv_candidate_v1 import candidate
+    validate_operation_contracts()
+    profile, policy, request, packet = candidate(Path.cwd())
+    run = api.evaluate_candidate(api.ContractSetV1(profile, policy, Path.cwd()), request, packet)
+    assert len(run.evaluation.receipts) == 207
+    assert len([row for row in run.evaluation.receipts if row.kind == "SOURCE"]) == 31
+    assert len([row for row in run.evaluation.receipts if row.kind == "DERIVED"]) == 160
+    assert set(run.evaluation.outputs) == set(profile.output_roots)
+    assert len(run.evaluation.outputs) == 16
+    assert run.certificate.scientific_promotion is False
+
+
+@cross_language
+def test_c03_rv_all_sixteen_roots_crosscheck_in_julia_and_actual_lean_certificate() -> None:
+    from formal.python.toe.generic_runner.verified_calculator_c03_rv_candidate_v1 import candidate
+    profile, policy, request, packet = candidate(Path.cwd())
+    run = api.evaluate_candidate(api.ContractSetV1(profile, policy, Path.cwd()), request, packet)
+    julia = run_julia_independent(run)
+    lean = run_lean_certificate_checker(run)
+    assert set(julia.output_value_hashes) == set(profile.output_roots)
+    assert len(julia.output_value_hashes) == 16
+    assert lean.accepted_certificate_hash == run.certificate.certificate_hash
+
+
+def test_c03_rv_profile_value_matrix_canonicalization_ignores_sympy_mutability() -> None:
+    import sympy as sp
+    from formal.python.toe.generic_runner.verified_calculator.c03_rv_profile_values import encode_profile_value
+    mutable = sp.Matrix([[1, sp.Symbol("d")], [0, 2]])
+    assert encode_profile_value(mutable) == encode_profile_value(sp.ImmutableMatrix(mutable))
 
 
 @cross_language
@@ -649,7 +687,13 @@ def test_implementation_status_is_truthful_and_closure_bound() -> None:
     closure = generate_dependency_closure(Path.cwd())
     validate_dependency_closure(closure)
     assert status["local_validation"]["dependency_closure_hash"] == closure["closure_hash"]
-    assert status["milestones"]["C03_RV_COMPUTATION_VERIFIED_EXACT_PRE_RELEASE"] == "NOT_EARNED"
+    assert status["milestones"]["C03_RV_COMPUTATION_VERIFIED_EXACT_PRE_RELEASE"] == "EARNED"
+    evidence = json.loads(Path(status["c03_rv_profile"]["exact_milestone_artifact"]).read_text(encoding="utf-8"))
+    assert evidence["milestone_hash"] == digest(evidence["milestone"], "InternalMilestoneV1")
+    assert all(evidence["milestone"]["gates"].values())
+    assert evidence["replay_a"]["bundle_hash"] == evidence["replay_b"]["bundle_hash"]
+    assert replay_bundle(Path(status["c03_rv_profile"]["frozen_bundle_artifact"]))["replay_status"] == "MATCHED"
+    assert evidence["independent_non_author_review"] == "PENDING"
     assert status["milestones"]["product_v1"] == "NOT_RELEASED"
     assert status["scientific_promotion"] is False
     assert status["product_v1_release"] is False

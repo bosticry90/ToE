@@ -16,7 +16,7 @@ from formal.python.toe.generic_runner.verified_calculator.c03_rv_policy import (
     mandatory_challenge_specs,
     verification_policy,
 )
-from formal.python.toe.generic_runner.verified_calculator.dag import TRUSTED_DOMAIN_NEUTRAL_OPERATIONS
+from formal.python.toe.generic_runner.verified_calculator.c03_rv_operation_contracts import C03_RV_PHYSICS_OPERATIONS, DERIVED_SIGNATURES, SOURCE_SIGNATURES
 from formal.python.toe.generic_runner.verified_calculator.canonical import file_sha256
 from formal.python.toe.generic_runner.verified_calculator.contracts import ClaimAuthorityBindingV1, ScientificAuthorityBindingV1
 from formal.python.toe.generic_runner.verified_calculator.errors import require
@@ -100,7 +100,7 @@ def census() -> dict[str, Any]:
     roots = sorted(identity for identity, row in specs.items() if row["kind"] == "OUTPUT_ROOT")
     derived = sorted(identity for identity, row in specs.items() if row["kind"] != "OUTPUT_ROOT")
     operations = sorted({row["operation"] for row in specs.values()})
-    unsupported = sorted(set(operations) - TRUSTED_DOMAIN_NEUTRAL_OPERATIONS)
+    unsupported = sorted(set(operations) - set(C03_RV_PHYSICS_OPERATIONS))
     per_record = Counter(identity.split(".")[0] for identity in specs)
     challenge_targets = {
         row.challenge_id: (
@@ -122,6 +122,10 @@ def census() -> dict[str, Any]:
         "expected_output_roots": sorted(C03_RV_ROOTS),
         "per_record_spec_count": dict(sorted(per_record.items())),
         "operation_count": len(operations),
+        "trusted_source_signature_count": len(SOURCE_SIGNATURES),
+        "trusted_derived_signature_count": sum(row["kind"] == "DERIVED" for row in DERIVED_SIGNATURES.values()),
+        "trusted_output_signature_count": sum(row["kind"] == "OUTPUT" for row in DERIVED_SIGNATURES.values()),
+        "trusted_physics_operation_count": len(C03_RV_PHYSICS_OPERATIONS),
         "historical_physics_operations_requiring_declarative_lowering": unsupported,
         "challenge_target_counts": challenge_targets,
         "challenge_registry": challenge_registry_census(),
@@ -131,7 +135,7 @@ def census() -> dict[str, Any]:
         "product_v1_release": False,
         "scientific_promotion": False,
         "production_activation": False,
-        "blocking_reason": "The 16-root historical operation graph has not yet been lowered to the trusted domain-neutral IR and independently reimplemented in Julia.",
+        "blocking_reason": "Exact-profile qualification remains unearned until the cumulative challenge run and two isolated frozen replays complete.",
     }
 
 

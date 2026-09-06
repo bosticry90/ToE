@@ -51,7 +51,7 @@ def run_julia_independent(run: EvaluatedRunV1) -> JuliaEvidenceV1:
         environment = dict(os.environ)
         environment.update({"JULIA_PKG_OFFLINE": "true", "JULIA_HISTORY": str(root / "julia_history")})
         process = subprocess.run(command, capture_output=True, timeout=run.contracts.policy.resource_limits.trusted_route_seconds, env=environment)
-        require(process.returncode == 0, "JULIA_VERIFIER_REJECTED", detail=process.stderr.decode("utf-8", "replace")[-2000:])
+        require(process.returncode == 0, "JULIA_VERIFIER_REJECTED", detail=process.stderr.decode("utf-8", "replace")[-10_000:])
         raw = process.stdout
         require(len(raw) <= run.contracts.policy.resource_limits.plugin_output_bytes, "JULIA_RECEIPT_SIZE")
         value = strict_json_bytes(raw.strip(), max_bytes=run.contracts.policy.resource_limits.plugin_output_bytes)

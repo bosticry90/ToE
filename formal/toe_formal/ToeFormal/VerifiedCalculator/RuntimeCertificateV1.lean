@@ -51,6 +51,14 @@ def allowedOperation : String → Bool
   | "SOURCE_DECODE" | "LITERAL" | "OUTPUT_BIND" | "ADD" | "SUB" | "MUL"
   | "DIV" | "NEG" | "POW_INT" | "MAKE_TENSOR" | "INDEX" | "MATMUL" => true
   | "EQUAL" | "ALL" | "SELECT" | "CLASSIFY_ZERO" => true
+  | "ANGULAR_AVERAGE" | "DOMAIN_PREDICATE" | "EPISTEMIC_CLASSIFICATION" => true
+  | "EXACT_CLIFFORD_ACTION" | "EXACT_MATRIX_PROJECTION" => true
+  | "GAUGE_GENERATOR_ACTION" | "INVERTIBLE_NORMALIZATION" => true
+  | "LINEAR_COMBINATION" | "NORMALIZATION_MONOMIAL" => true
+  | "NORMALIZATION_RECIPROCAL" | "NORMALIZATION_REFERENCE_SCALAR" => true
+  | "PERMUTATION_PARITY" | "PRODUCT" | "RELATION_REDUCTION" => true
+  | "TENSOR_DIFFERENCE" | "TENSOR_EXCHANGE_EIGENVALUE" | "TENSOR_SUM" => true
+  | "WARD_REDUCTION" => true
   | _ => false
 
 theorem unknown_operation_cannot_be_allowed {operation : String}

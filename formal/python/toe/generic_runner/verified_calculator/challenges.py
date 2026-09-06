@@ -162,8 +162,16 @@ def select_targets(spec: ChallengeSpecV1, candidate: CandidatePacketV1) -> tuple
     return targets
 
 
-def instantiate(spec: ChallengeSpecV1, candidate: CandidatePacketV1, baseline_graph_hash: str, target: str) -> ChallengePacketV1:
-    require(canonical_graph_hash(candidate) == baseline_graph_hash, "CHALLENGE_BASELINE_GRAPH_BINDING")
+def instantiate(
+    spec: ChallengeSpecV1,
+    candidate: CandidatePacketV1,
+    baseline_graph_hash: str,
+    target: str,
+    *,
+    baseline_binding_prevalidated: bool = False,
+) -> ChallengePacketV1:
+    if not baseline_binding_prevalidated:
+        require(canonical_graph_hash(candidate) == baseline_graph_hash, "CHALLENGE_BASELINE_GRAPH_BINDING")
     require(target in select_targets(spec, candidate), "CHALLENGE_TARGET_NOT_APPLICABLE", target)
     descendants = _descendants(candidate, target)
     roots = tuple(sorted(root for root in candidate.claimed_outputs if target in _ancestry(candidate, root)))
@@ -180,19 +188,76 @@ def instantiate(spec: ChallengeSpecV1, candidate: CandidatePacketV1, baseline_gr
     return ChallengePacketV1(spec.spec_hash, baseline_graph_hash, target, descendants, roots, seed)
 
 
-def apply_mutation(spec: ChallengeSpecV1, packet: ChallengePacketV1, candidate: CandidatePacketV1) -> CandidatePacketV1:
-    require(canonical_graph_hash(candidate) == packet.baseline_graph_hash, "CHALLENGE_BASELINE_GRAPH_BINDING")
+def apply_mutation(
+    spec: ChallengeSpecV1,
+    packet: ChallengePacketV1,
+    candidate: CandidatePacketV1,
+    *,
+    packet_derivation_prevalidated: bool = False,
+) -> CandidatePacketV1:
+    if not packet_derivation_prevalidated:
+        require(canonical_graph_hash(candidate) == packet.baseline_graph_hash, "CHALLENGE_BASELINE_GRAPH_BINDING")
     require(packet.challenge_spec_hash == spec.spec_hash, "CHALLENGE_SPEC_BINDING")
-    expected = instantiate(spec, candidate, packet.baseline_graph_hash, packet.injection_node)
-    require(packet == expected, "CHALLENGE_PACKET_BASELINE_DERIVATION")
-    raw = deepcopy(candidate.to_dict())
-    graph = raw["graph"]
+    if not packet_derivation_prevalidated:
+        expected = instantiate(spec, candidate, packet.baseline_graph_hash, packet.injection_node)
+        require(packet == expected, "CHALLENGE_PACKET_BASELINE_DERIVATION")
+    # Copy the mutation target and the small top-level collections, while
+    # sharing untouched canonical subtrees from the frozen baseline.  C03/RV
+    # source contexts are deliberately large; deep-copying all 207 nodes for
+    # each of hundreds of independent mutants adds no assurance.
+    baseline_raw = candidate.to_dict()
+    graph = {
+        "nodes": list(baseline_raw["graph"]["nodes"]),
+        "edges": list(baseline_raw["graph"]["edges"]),
+    }
+    target_index = next((index for index, row in enumerate(graph["nodes"]) if row["node_id"] == packet.injection_node), None)
+    require(target_index is not None, "CHALLENGE_TARGET_NOT_FOUND")
+    graph["nodes"][target_index] = deepcopy(graph["nodes"][target_index])
+    raw = {
+        **baseline_raw,
+        "graph": graph,
+        "claimed_outputs": dict(baseline_raw["claimed_outputs"]),
+        "source_bindings": list(baseline_raw["source_bindings"]),
+    }
     nodes = {row["node_id"]: row for row in graph["nodes"]}
     require(packet.injection_node in nodes, "CHALLENGE_TARGET_NOT_FOUND")
     rule = spec.mutation_rule
     kind = rule.get("kind")
     target = nodes[packet.injection_node]
+    def perturb_profile_wire(value):
+        profile_kind = value.get("type")
+        if profile_kind == "BOOLEAN":
+            value["value"] = not value["value"]
+        elif profile_kind == "INTEGER":
+            value["value"] += 1
+        elif profile_kind == "EXACT_EXPRESSION":
+            value["value"] = f"({value['value']})+1"
+        elif profile_kind == "TEXT":
+            value["value"] = "__VPC_CORRUPTED_PROFILE_TEXT__"
+        elif profile_kind == "NULL":
+            value = {"type": "TEXT", "value": "__VPC_CORRUPTED_NULL__"}
+        elif profile_kind in {"LIST", "TUPLE"}:
+            if value["items"]:
+                value["items"][0] = perturb_profile_wire(value["items"][0])
+            else:
+                value = {"type": "TEXT", "value": "__VPC_CORRUPTED_EMPTY_SEQUENCE__"}
+        elif profile_kind == "MAP":
+            if value["entries"]:
+                value["entries"][0][1] = perturb_profile_wire(value["entries"][0][1])
+            else:
+                value = {"type": "TEXT", "value": "__VPC_CORRUPTED_EMPTY_MAP__"}
+        elif profile_kind == "MATRIX":
+            require(value["entries"], "CHALLENGE_EMPTY_PROFILE_MATRIX")
+            value["entries"][0] = perturb_profile_wire(value["entries"][0])
+        else:
+            raise CalculatorError("CHALLENGE_PROFILE_VALUE_KIND")
+        return value
+
     def perturb(value):
+        if value.get("kind") == "PROFILE_VALUE":
+            require(set(value) == {"kind", "value"}, "CHALLENGE_PROFILE_VALUE_SCHEMA")
+            value["value"] = perturb_profile_wire(value["value"])
+            return value
         if value.get("kind") == "BOOLEAN":
             value["value"] = not value["value"]
             return value
@@ -236,16 +301,20 @@ def apply_mutation(spec: ChallengeSpecV1, packet: ChallengePacketV1, candidate: 
             reference["conventions_pointer"] = "/__vpc_nonexistent_source_locator__"
         else:
             raise CalculatorError("CHALLENGE_SOURCE_REFERENCE_TYPE")
-        target["parameters"] = {"reference": reference}
-        for row in raw["source_bindings"]:
+        target["parameters"]["reference"] = reference
+        for index, row in enumerate(raw["source_bindings"]):
             if row["node_id"] == packet.injection_node:
-                row["reference"] = deepcopy(reference)
+                replacement = dict(row)
+                replacement["reference"] = deepcopy(reference)
+                raw["source_bindings"][index] = replacement
     elif kind == "REPLACE_SOURCE_REFERENCE":
         require(set(rule) == {"kind", "reference"}, "CHALLENGE_MUTATION_SCHEMA")
-        target["parameters"] = {"reference": deepcopy(rule["reference"])}
-        for row in raw["source_bindings"]:
+        target["parameters"]["reference"] = deepcopy(rule["reference"])
+        for index, row in enumerate(raw["source_bindings"]):
             if row["node_id"] == packet.injection_node:
-                row["reference"] = deepcopy(rule["reference"])
+                replacement = dict(row)
+                replacement["reference"] = deepcopy(rule["reference"])
+                raw["source_bindings"][index] = replacement
     elif kind == "REMOVE_PARENT":
         require(set(rule) == {"kind", "parent_index"} and type(rule["parent_index"]) is int, "CHALLENGE_MUTATION_SCHEMA")
         index = rule["parent_index"]
@@ -287,9 +356,12 @@ def run_challenge(
     packet: ChallengePacketV1,
     candidate: CandidatePacketV1,
     verifier: Callable[[CandidatePacketV1], Any],
+    baseline_result: Any | None = None,
+    *,
+    packet_derivation_prevalidated: bool = False,
 ) -> ChallengeResultV1:
-    mutated = apply_mutation(spec, packet, candidate)
-    baseline_result = verifier(candidate)
+    mutated = apply_mutation(spec, packet, candidate, packet_derivation_prevalidated=packet_derivation_prevalidated)
+    baseline_result = verifier(candidate) if baseline_result is None else baseline_result
     try:
         mutant_result = verifier(mutated)
         if spec.required_consequence == "AFFECTED_ROOT_VALUE_CHANGES":

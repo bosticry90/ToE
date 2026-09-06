@@ -34,7 +34,7 @@ class ValueTypeV1:
     @classmethod
     def from_dict(cls, value: Mapping[str, Any], profile: PhysicsProfileV1) -> "ValueTypeV1":
         require(set(value) == {"mathematical_kind", "semantic_type", "dimension", "unit_convention", "index_spaces", "representation_tags", "domain"}, "VALUE_TYPE_FIELDS")
-        require(value["mathematical_kind"] in {"EXACT_SCALAR", "EXACT_TENSOR", "EXACT_BOOLEAN", "EXACT_ATOM", "INTERVAL", "NUMERICAL_SCALAR", "NUMERICAL_VECTOR"}, "MATHEMATICAL_KIND")
+        require(value["mathematical_kind"] in {"EXACT_SCALAR", "EXACT_TENSOR", "EXACT_BOOLEAN", "EXACT_ATOM", "EXACT_DOCUMENT", "INTERVAL", "NUMERICAL_SCALAR", "NUMERICAL_VECTOR"}, "MATHEMATICAL_KIND")
         require(value["semantic_type"] in profile.semantic_types, "SEMANTIC_TYPE")
         require(value["unit_convention"] in profile.unit_conventions, "UNIT_CONVENTION")
         spaces = tuple(value["index_spaces"])
@@ -63,7 +63,7 @@ class NodeV1:
         identity = value["node_id"]
         require(isinstance(identity, str) and identity, "NODE_ID")
         require(value["kind"] in {"SOURCE", "LITERAL", "DERIVED", "OUTPUT"}, "NODE_KIND", identity)
-        require(value["operation"] in profile.permitted_operations and value["operation"] in TRUSTED_DOMAIN_NEUTRAL_OPERATIONS, "UNTRUSTED_OR_UNKNOWN_OPERATION", identity)
+        require(value["operation"] in profile.permitted_operations, "UNTRUSTED_OR_UNKNOWN_OPERATION", identity)
         parents = tuple(value["parents"])
         require(len(set(parents)) == len(parents) and all(isinstance(parent, str) and parent for parent in parents), "PARENT_LIST", identity)
         return cls(identity, value["kind"], value["operation"], parents, dict(value["parameters"]), ValueTypeV1.from_dict(value["value_type"], profile), dict(value["claimed_value"]))

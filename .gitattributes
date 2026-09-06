@@ -108,9 +108,11 @@ formal/toe_formal/ToeFormal/Release/TechnicalDebtBaselineCorrectionV1.lean text 
 formal/docs/release/VERIFIED_CALCULATOR_*.json text eol=lf
 formal/python/tests/test_verified_calculator_v1.py text eol=lf
 formal/python/toe/generic_runner/verified_calculator/** text eol=lf
-formal/python/toe/generic_runner/verified_calculator_c03_rv_census_v1.py text eol=lf
+formal/python/toe/generic_runner/verified_calculator_c03_rv_*.py text eol=lf
 formal/toe_formal/ToeFormal/VerifiedCalculator/** text eol=lf
 formal/tooling/scientific_compute/julia/* text eol=lf
+formal/docs/release/VERIFIED_CALCULATOR_*.md text eol=lf
+formal/docs/release/verified_calculator/** -text
 
 # Current bounded-governance and canonical-text maintenance surfaces. Immutable
 # event and custody records retain their exact produced bytes.

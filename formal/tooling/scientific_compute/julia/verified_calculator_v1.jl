@@ -206,6 +206,8 @@ function resolve_source(reference, declarations, source_root)
     fail("SOURCE_REFERENCE_TYPE")
 end
 
+include("verified_calculator_c03_rv_v1.jl")
+
 function topological_nodes(candidate)
     nodes = Dict(row["node_id"] => row for row in candidate["graph"]["nodes"])
     ensure(length(nodes) == length(candidate["graph"]["nodes"]), "DUPLICATE_NODE")
@@ -319,7 +321,15 @@ function main(args)
     candidate = JSON3.read(read(args[4], String), Dict{String,Any})
     source_root = args[5]
     ensure(policy["julia_verifier"] == VERIFIER_ID, "JULIA_VERIFIER_ID")
-    evaluate_candidate(profile, request, candidate, source_root)
+    ensure(domain_digest(profile, "PhysicsProfileV1") == request["physics_profile_hash"], "JULIA_REQUEST_PROFILE_HASH")
+    ensure(domain_digest(policy, "VerificationPolicyV1") == request["verification_policy_hash"], "JULIA_REQUEST_POLICY_HASH")
+    ensure(domain_digest(request, "CalculationRequestV1:computation") == candidate["computation_id"], "JULIA_CANDIDATE_COMPUTATION_ID")
+    ensure(Set(String.(request["requested_roots"])) == Set(String.(profile["output_roots"])), "JULIA_REQUEST_ROOTS")
+    if profile["profile_id"] == "C03_RV_SU5_EXACT_PROFILE_v1"
+        evaluate_c03_rv_candidate(profile, request, candidate, source_root)
+    else
+        evaluate_candidate(profile, request, candidate, source_root)
+    end
     output_hashes = Dict(root => domain_digest(candidate["claimed_outputs"][root], "ExactOutputValueV1") for root in profile["output_roots"])
     receipt = Dict{String,Any}(
         "schema_id" => "JuliaIndependentEvidenceV1",
@@ -337,6 +347,6 @@ end
 try
     main(ARGS)
 catch exception
-    println(stderr, "REJECTED:", sprint(showerror, exception))
+    println(stderr, "REJECTED:", sprint(showerror, exception, catch_backtrace()))
     exit(2)
 end

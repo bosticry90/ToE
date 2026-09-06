@@ -28,19 +28,19 @@
   ],
   "local_validation": {
     "platform": "windows",
-    "python_test_result": "257 passed",
-    "new_calculator_tests": 29,
+    "python_test_result": "260 passed",
+    "new_calculator_tests": 32,
     "preserved_repair_tests": 228,
     "lean_target": "vpc_certificate_checker",
     "lean_build": "PASSED",
     "lean_version": "4.27.0-rc1",
     "julia_version": "1.12.6",
-    "dependency_closure_hash": "22d2a6e62f7ebbc8844b000efb8530547f338be810bc87a924cbd317cffa44da",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204",
     "dependency_closure_counts": {
-      "python_files": 43,
-      "julia_files": 4,
+      "python_files": 54,
+      "julia_files": 5,
       "lean_files": 4,
-      "fixed_contract_artifacts": 8
+      "fixed_contract_artifacts": 9
     },
     "unresolved_dynamic_imports": [],
     "unresolved_runtime_requirements": [],
@@ -49,15 +49,21 @@
   "c03_rv_profile": {
     "authoritative_roots": 16,
     "source_nodes_censused": 31,
-    "derived_nodes_requiring_lowering": 160,
-    "historical_physics_operations_requiring_lowering": 19,
+    "derived_nodes_lowered_and_recomputed": 160,
+    "trusted_physics_operations_implemented": 19,
     "mandatory_challenge_specifications": 10,
+    "mandatory_challenge_instances_passed": 373,
+    "derived_corruption_unexpected_survivors": [],
     "accepted_falsifiers_unclassified": [],
     "claim_authority_bindings": 16,
-    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED"
+    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED",
+    "exact_milestone_artifact": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_COMPUTATIONAL_MILESTONE_20260905_v1.json",
+    "frozen_bundle_artifact": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+    "frozen_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "independent_non_author_review": "PENDING"
   },
   "milestones": {
-    "C03_RV_COMPUTATION_VERIFIED_EXACT_PRE_RELEASE": "NOT_EARNED",
+    "C03_RV_COMPUTATION_VERIFIED_EXACT_PRE_RELEASE": "EARNED",
     "interval_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
     "ode_rge_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
     "uncertainty_subsystem_frozen_acceptance": "NOT_YET_FROZEN",
@@ -66,12 +72,10 @@
     "product_v1": "NOT_RELEASED"
   },
   "remaining_release_work": [
-    "Lower all 160 historical C03/RV derived nodes from 19 physics operations into the domain-neutral trusted IR without importing historical execution code into the trusted package.",
-    "Implement and review the independent Julia/Nemo source-to-result route for all 16 C03/RV authoritative roots.",
-    "Execute every frozen challenge instance, including the full derived-node corruption census, on the lowered 16-root graph.",
-    "Produce two isolated offline exact replays with matching canonical receipts.",
+    "Obtain and hash-bind a genuine scoped non-author scientific/computational review; calculator-profile scientific requalification remains unearned until then.",
     "Run and preserve the Windows and Linux CI matrix results; canonical release evidence additionally requires executor-level egress denial.",
-    "Freeze actual subsystem acceptance records and assemble the all-or-nothing product release only after every gate passes."
+    "Freeze interval, ODE/RGE, uncertainty, unsafe-plugin-boundary, and synthetic-profile subsystem acceptance records.",
+    "Assemble the all-or-nothing product release only after every remaining gate passes."
   ],
   "scientific_promotion": false,
   "product_v1_release": false,
