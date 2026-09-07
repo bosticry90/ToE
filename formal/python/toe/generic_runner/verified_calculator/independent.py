@@ -9,8 +9,10 @@ import tempfile
 from typing import Any
 
 from .api import EvaluatedRunV1, JuliaEvidenceV1, LeanEvidenceV1
-from .canonical import canonical_bytes, file_sha256, strict_json_bytes
+from .canonical import canonical_bytes, digest, file_sha256, strict_json_bytes
+from .challenges import ChallengeResultV1, ChallengeSpecV1
 from .errors import CalculatorError, require
+from .qualification_envelope import LeanQualificationEvidenceV1, build_envelope_and_context
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[5]
@@ -19,6 +21,7 @@ JULIA_SCRIPT = JULIA_PROJECT / "verified_calculator_v1.jl"
 JULIA_NUMERICS_SCRIPT = JULIA_PROJECT / "verified_calculator_numerics_v1.jl"
 LEAN_PROJECT = REPOSITORY_ROOT / "formal" / "toe_formal"
 LEAN_CHECKER = LEAN_PROJECT / ".lake" / "build" / "bin" / ("vpc_certificate_checker.exe" if os.name == "nt" else "vpc_certificate_checker")
+LEAN_QUALIFICATION_CHECKER = LEAN_PROJECT / ".lake" / "build" / "bin" / ("vpc_qualification_envelope_checker.exe" if os.name == "nt" else "vpc_qualification_envelope_checker")
 
 
 def _julia_executable() -> Path:
@@ -74,6 +77,57 @@ def run_lean_certificate_checker(run: EvaluatedRunV1) -> LeanEvidenceV1:
         require(process.returncode == 0 and stdout == expected, "LEAN_CERTIFICATE_REJECTED", detail=process.stderr.decode("utf-8", "replace")[-2000:])
     payload = {"schema_id": "LeanRuntimeCertificateEvidenceV1", "verifier_id": run.contracts.policy.lean_verifier, "accepted_certificate_hash": run.certificate.certificate_hash, "certificate_file_sha256": certificate_file_sha256, "checker_output": stdout, "scientific_promotion": False}
     return LeanEvidenceV1(run.contracts.policy.lean_verifier, run.certificate.certificate_hash, payload)
+
+
+def run_lean_qualification_envelope_checker(
+    run: EvaluatedRunV1,
+    julia_evidence: JuliaEvidenceV1,
+    challenge_specs: tuple[ChallengeSpecV1, ...],
+    challenge_results: tuple[ChallengeResultV1, ...],
+) -> LeanQualificationEvidenceV1:
+    """Check the actual v6 evidence with no caller-selected accepted hash."""
+    require(LEAN_QUALIFICATION_CHECKER.is_file(), "LEAN_QUALIFICATION_CHECKER_NOT_BUILT", detail=str(LEAN_QUALIFICATION_CHECKER))
+    envelope, context = build_envelope_and_context(run, julia_evidence, challenge_specs, challenge_results)
+    with tempfile.TemporaryDirectory(prefix="vpc-lean-qualification-") as directory:
+        root = Path(directory)
+        certificate_path = root / "runtime_certificate.json"
+        envelope_path = root / "qualification_envelope.json"
+        context_path = root / "expected_context.json"
+        certificate_path.write_bytes(canonical_bytes(run.certificate.to_dict()))
+        envelope_path.write_bytes(canonical_bytes(envelope.to_dict()))
+        context_path.write_bytes(canonical_bytes(context.to_dict()))
+        process = subprocess.run(
+            [str(LEAN_QUALIFICATION_CHECKER), str(certificate_path), str(envelope_path), str(context_path)],
+            capture_output=True,
+            timeout=run.contracts.policy.resource_limits.trusted_route_seconds,
+        )
+        stdout = process.stdout.decode("utf-8", "strict").strip()
+        cert_file = file_sha256(certificate_path)
+        envelope_file = file_sha256(envelope_path)
+        context_file = file_sha256(context_path)
+        expected = (
+            f"ACCEPTED ENVELOPE {envelope.envelope_hash} "
+            f"RUNTIME_CERTIFICATE {run.certificate.certificate_hash} "
+            f"ENVELOPE_FILE_SHA256 {envelope_file} CONTEXT_FILE_SHA256 {context_file} "
+            f"CERTIFICATE_FILE_SHA256 {cert_file} SCIENTIFIC_PROMOTION_FALSE"
+        )
+        require(process.returncode == 0 and stdout == expected, "LEAN_QUALIFICATION_ENVELOPE_REJECTED", detail=process.stderr.decode("utf-8", "replace")[-4000:])
+    payload = {
+        "schema_id": "LeanQualificationEnvelopeEvidenceV1",
+        "verifier_id": run.contracts.policy.lean_verifier,
+        "accepted_envelope_hash": envelope.envelope_hash,
+        "bound_runtime_certificate_hash": run.certificate.certificate_hash,
+        "qualification_envelope": envelope.to_dict(),
+        "expected_context_hash": digest(context.to_dict(), "QualificationExpectedContextV1"),
+        "certificate_file_sha256": cert_file,
+        "envelope_file_sha256": envelope_file,
+        "context_file_sha256": context_file,
+        "checker_output": stdout,
+        "scientific_promotion": False,
+        "product_v1_release": False,
+        "production_activation": False,
+    }
+    return LeanQualificationEvidenceV1(run.contracts.policy.lean_verifier, envelope.envelope_hash, run.certificate.certificate_hash, payload)
 
 
 def run_julia_numerical_control(kind: str, specification: dict[str, Any], *, timeout: int = 1_800) -> dict[str, Any]:

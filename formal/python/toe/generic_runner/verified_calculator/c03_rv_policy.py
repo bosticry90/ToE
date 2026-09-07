@@ -102,3 +102,19 @@ def verification_policy() -> VerificationPolicyV1:
         },
         QMCPolicyV1("SOBOL", "VPC_SOBOL_UINT32_V1", "VPC_SOBOL_2D_BRATLEY_FOX_BASE_V1", "DIGITAL_XOR_SHA256_V1", "GRAY_CODE_INDEX_ORDER", "FIRST_N_FROM_INDEX_ZERO"),
     )
+
+
+def verification_policy_v2() -> VerificationPolicyV1:
+    """Amended D-07/D-01/D-02 policy; physics-profile identity is unchanged."""
+    baseline = verification_policy()
+    return VerificationPolicyV1(
+        "C03_RV_VERIFICATION_POLICY_v2_D07_D01_D02", FREEZE_TIMESTAMP,
+        "python-verified-calculator-v2-d02",
+        baseline.julia_verifier,
+        "lean-qualification-envelope-v1",
+        baseline.mandatory_challenge_hashes,
+        baseline.numerical_policy,
+        baseline.qmc_policy,
+        baseline.resource_limits,
+        baseline.trusted_network_access,
+    )

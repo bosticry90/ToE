@@ -19,7 +19,11 @@ name = "ToeFormal"
 
 [[lean_exe]]
 name = "vpc_certificate_checker"
-root = "ToeFormal.VerifiedCalculator.RuntimeCertificateV1"
+root = "ToeFormal.VerifiedCalculator.RuntimeCertificateMainV1"
+
+[[lean_exe]]
+name = "vpc_qualification_envelope_checker"
+root = "ToeFormal.VerifiedCalculator.QualificationEnvelopeV1"
 
 # Exhaustive validation root; intentionally nondefault so focused local builds
 # retain their historical cost while CI can request every tracked module.

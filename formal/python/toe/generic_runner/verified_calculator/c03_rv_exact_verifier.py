@@ -17,7 +17,7 @@ from .c03_rv_operation_contracts import DERIVED_SIGNATURES, SOURCE_SIGNATURES, e
 from .c03_rv_profile_values import encode_profile_value, unwrap_profile_value
 from . import c03_rv_operation_support as operation_support
 from .contracts import CandidatePacketV1, PhysicsProfileV1, ResourceLimitsV1
-from .dag import EvaluationResultV1, NodeReceiptV1, NodeV1
+from .dag import EvaluationResultV1, NodeReceiptV1, NodeV1, TypeSignatureReceiptV1
 from .errors import require
 from .exact import ExactAtomV1, ExactRuntimeV1, ExactValueV1
 from .sources import SourceResolverV1
@@ -45,13 +45,15 @@ def _exact_output(runtime: ExactRuntimeV1, semantic_type: str, value: Any) -> Ex
 
 
 class C03RVExactProfileVerifierV1:
-    def __init__(self, profile: PhysicsProfileV1, resolver: SourceResolverV1, limits: ResourceLimitsV1 | None = None) -> None:
+    def __init__(self, profile: PhysicsProfileV1, resolver: SourceResolverV1, limits: ResourceLimitsV1 | None = None, *, enforce_complete_metadata: bool = False) -> None:
         require(profile.profile_id == "C03_RV_SU5_EXACT_PROFILE_v1", "C03_RV_PROFILE_ID")
         validate_operation_contracts()
         self.profile = profile
         self.resolver = resolver
         self.limits = limits or ResourceLimitsV1()
         self.exact = ExactRuntimeV1(profile.algebraic_field, profile.symbols, self.limits)
+        self.enforce_complete_metadata = enforce_complete_metadata
+        self._type_receipts: dict[str, TypeSignatureReceiptV1] = {}
 
     def _validate_graph(self, packet: CandidatePacketV1) -> tuple[dict[str, NodeV1], tuple[str, ...], str]:
         require(packet.producer.get("imports_trusted_physics_operations") is False, "C03_RV_CANDIDATE_VERIFIER_ROUTINE_SHARING")
@@ -65,6 +67,10 @@ class C03RVExactProfileVerifierV1:
             require(node.node_id not in nodes, "DUPLICATE_NODE", node.node_id)
             nodes[node.node_id] = node
         require(set(nodes) == set(SOURCE_SIGNATURES) | set(DERIVED_SIGNATURES), "C03_RV_EXACT_NODE_SET")
+        if self.enforce_complete_metadata:
+            from .c03_rv_type_contracts import validate_edge_types, validate_node_type
+            self._type_receipts = {node_id: validate_node_type(node) for node_id, node in nodes.items()}
+            validate_edge_types(nodes)
         for node_id, semantic_type in SOURCE_SIGNATURES.items():
             node = nodes[node_id]
             require(node.kind == "SOURCE" and node.operation == "SOURCE_DECODE" and not node.parents and node.value_type.mathematical_kind == "EXACT_DOCUMENT" and node.value_type.semantic_type == semantic_type, "C03_RV_SOURCE_SIGNATURE", node_id)
@@ -172,7 +178,14 @@ class C03RVExactProfileVerifierV1:
             require(any(nodes[node_id].kind == "SOURCE" for node_id in active), "OUTPUT_WITHOUT_SOURCE", root)
             ancestry[root] = tuple(sorted(active))
         require(set().union(*(set(row) for row in ancestry.values())) == set(nodes), "DECORATIVE_NODE")
-        return EvaluationResultV1(graph_hash, values, exact_outputs, tuple(receipts), ancestry)
+        type_receipts: tuple[TypeSignatureReceiptV1, ...] = ()
+        if self.enforce_complete_metadata:
+            from .c03_rv_type_contracts import bind_actual_value_shape
+            for root, value in exact_outputs.items():
+                self._type_receipts[root] = bind_actual_value_shape(self._type_receipts[root], value)
+            type_receipts = tuple(self._type_receipts[node_id] for node_id in sorted(self._type_receipts))
+            require(len(type_receipts) == 207, "C03_RV_TYPE_RECEIPT_CENSUS")
+        return EvaluationResultV1(graph_hash, values, exact_outputs, tuple(receipts), ancestry, type_receipts)
 
     def probe_rejecting_challenge(
         self,
@@ -220,6 +233,9 @@ class C03RVExactProfileVerifierV1:
         require(len(actual_edges) == len(packet.graph["edges"]) and actual_edges == expected_edges, "PARENT_EDGE_DISAGREEMENT")
 
         node = NodeV1.from_dict(mutant_nodes[injection_node], self.profile)
+        if self.enforce_complete_metadata:
+            from .c03_rv_type_contracts import validate_node_type
+            validate_node_type(node)
         if injection_node in SOURCE_SIGNATURES:
             require(node.kind == "SOURCE" and node.operation == "SOURCE_DECODE" and not node.parents and node.value_type.mathematical_kind == "EXACT_DOCUMENT" and node.value_type.semantic_type == SOURCE_SIGNATURES[injection_node], "C03_RV_SOURCE_SIGNATURE", injection_node)
         else:
@@ -257,3 +273,10 @@ class C03RVExactProfileVerifierV1:
                 root,
             )
         return baseline
+
+
+class C03RVExactProfileVerifierV2(C03RVExactProfileVerifierV1):
+    """D-02 strict verifier; v1 remains available for frozen replay."""
+
+    def __init__(self, profile: PhysicsProfileV1, resolver: SourceResolverV1, limits: ResourceLimitsV1 | None = None) -> None:
+        super().__init__(profile, resolver, limits, enforce_complete_metadata=True)

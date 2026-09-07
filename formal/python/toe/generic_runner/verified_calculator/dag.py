@@ -30,10 +30,12 @@ class ValueTypeV1:
     index_spaces: tuple[str, ...]
     representation_tags: tuple[str, ...]
     domain: Mapping[str, Any]
+    shape: tuple[int, ...] | None = None
 
     @classmethod
     def from_dict(cls, value: Mapping[str, Any], profile: PhysicsProfileV1) -> "ValueTypeV1":
-        require(set(value) == {"mathematical_kind", "semantic_type", "dimension", "unit_convention", "index_spaces", "representation_tags", "domain"}, "VALUE_TYPE_FIELDS")
+        legacy = {"mathematical_kind", "semantic_type", "dimension", "unit_convention", "index_spaces", "representation_tags", "domain"}
+        require(set(value) in {frozenset(legacy), frozenset({*legacy, "shape"})}, "VALUE_TYPE_FIELDS")
         require(value["mathematical_kind"] in {"EXACT_SCALAR", "EXACT_TENSOR", "EXACT_BOOLEAN", "EXACT_ATOM", "EXACT_DOCUMENT", "INTERVAL", "NUMERICAL_SCALAR", "NUMERICAL_VECTOR"}, "MATHEMATICAL_KIND")
         require(value["semantic_type"] in profile.semantic_types, "SEMANTIC_TYPE")
         require(value["unit_convention"] in profile.unit_conventions, "UNIT_CONVENTION")
@@ -41,10 +43,16 @@ class ValueTypeV1:
         require(all(space in profile.index_spaces for space in spaces), "INDEX_SPACE")
         tags = tuple(value["representation_tags"])
         require(all(tag in profile.representation_tags for tag in tags), "REPRESENTATION_TAG")
-        return cls(value["mathematical_kind"], value["semantic_type"], DimensionVectorV1.decode(value["dimension"], profile.dimensions), value["unit_convention"], spaces, tags, dict(value["domain"]))
+        raw_shape = value.get("shape")
+        require(raw_shape is None or (isinstance(raw_shape, list) and all(type(size) is int and size >= 0 for size in raw_shape)), "VALUE_TYPE_SHAPE")
+        shape = None if raw_shape is None else tuple(raw_shape)
+        return cls(value["mathematical_kind"], value["semantic_type"], DimensionVectorV1.decode(value["dimension"], profile.dimensions), value["unit_convention"], spaces, tags, dict(value["domain"]), shape)
 
     def to_dict(self) -> dict[str, Any]:
-        return {"mathematical_kind": self.mathematical_kind, "semantic_type": self.semantic_type, "dimension": self.dimension.to_list(), "unit_convention": self.unit_convention, "index_spaces": list(self.index_spaces), "representation_tags": list(self.representation_tags), "domain": dict(self.domain)}
+        result = {"mathematical_kind": self.mathematical_kind, "semantic_type": self.semantic_type, "dimension": self.dimension.to_list(), "unit_convention": self.unit_convention, "index_spaces": list(self.index_spaces), "representation_tags": list(self.representation_tags), "domain": dict(self.domain)}
+        if self.shape is not None:
+            result["shape"] = list(self.shape)
+        return result
 
 
 @dataclass(frozen=True)
@@ -91,12 +99,33 @@ class NodeReceiptV1:
 
 
 @dataclass(frozen=True)
+class TypeSignatureReceiptV1:
+    node_id: str
+    expected: Mapping[str, Any]
+    observed: Mapping[str, Any]
+    applicable_axes: tuple[str, ...]
+    actual_value_shape: tuple[int, ...] | None
+    status: str = "TRUSTED_SIGNATURE_MATCHED"
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "node_id": self.node_id,
+            "expected": dict(self.expected),
+            "observed": dict(self.observed),
+            "applicable_axes": list(self.applicable_axes),
+            "actual_value_shape": None if self.actual_value_shape is None else list(self.actual_value_shape),
+            "status": self.status,
+        }
+
+
+@dataclass(frozen=True)
 class EvaluationResultV1:
     graph_hash: str
     values: Mapping[str, ExactValueV1]
     outputs: Mapping[str, ExactValueV1]
     receipts: tuple[NodeReceiptV1, ...]
     ancestry: Mapping[str, tuple[str, ...]]
+    type_signature_receipts: tuple[TypeSignatureReceiptV1, ...] = ()
 
     def output_data(self) -> dict[str, Any]:
         return {root: value.to_dict() for root, value in self.outputs.items()}

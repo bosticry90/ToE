@@ -12,6 +12,7 @@ from .dag import EvaluationResultV1, ExactDagVerifierV1
 from .evidence import ClaimLedgerEntryV1, FrozenEvidenceBundleV1, RuntimeCertificateV1, VerificationReceiptV1, attach_authority as _attach_authority, build_runtime_certificate, freeze_bundle, promote_exact_outputs, replay_bundle, runtime_environment
 from .errors import require
 from .offline import trusted_offline
+from .qualification_envelope import LeanQualificationEvidenceV1
 from .sources import SourceResolverV1
 
 
@@ -79,8 +80,9 @@ def evaluate_candidate(contracts: ContractSetV1, request: CalculationRequestV1, 
     with trusted_offline():
         resolver = SourceResolverV1(contracts.source_root, contracts.profile.source_declarations, contracts.policy.resource_limits)
         if contracts.profile.profile_id == "C03_RV_SU5_EXACT_PROFILE_v1":
-            from .c03_rv_exact_verifier import C03RVExactProfileVerifierV1
-            evaluation = C03RVExactProfileVerifierV1(contracts.profile, resolver, contracts.policy.resource_limits).verify(candidate)
+            from .c03_rv_exact_verifier import C03RVExactProfileVerifierV1, C03RVExactProfileVerifierV2
+            verifier_class = C03RVExactProfileVerifierV2 if contracts.policy.python_verifier == "python-verified-calculator-v2-d02" else C03RVExactProfileVerifierV1
+            evaluation = verifier_class(contracts.profile, resolver, contracts.policy.resource_limits).verify(candidate)
         else:
             evaluation = ExactDagVerifierV1(contracts.profile, resolver, contracts.policy.resource_limits).verify(candidate)
     certificate = build_runtime_certificate(request.computation_id, candidate.candidate_hash, contracts.profile.contract_hash, contracts.policy.contract_hash, evaluation)
@@ -90,10 +92,11 @@ def evaluate_candidate(contracts: ContractSetV1, request: CalculationRequestV1, 
 def run_challenges(run: EvaluatedRunV1, specs: Sequence[ChallengeSpecV1]) -> tuple[ChallengeResultV1, ...]:
     results: list[ChallengeResultV1] = []
     if run.contracts.profile.profile_id == "C03_RV_SU5_EXACT_PROFILE_v1":
-        from .c03_rv_exact_verifier import C03RVExactProfileVerifierV1
+        from .c03_rv_exact_verifier import C03RVExactProfileVerifierV1, C03RVExactProfileVerifierV2
         with trusted_offline():
             resolver = SourceResolverV1(run.contracts.source_root, run.contracts.profile.source_declarations, run.contracts.policy.resource_limits)
-            profile_verifier = C03RVExactProfileVerifierV1(run.contracts.profile, resolver, run.contracts.policy.resource_limits)
+            verifier_class = C03RVExactProfileVerifierV2 if run.contracts.policy.python_verifier == "python-verified-calculator-v2-d02" else C03RVExactProfileVerifierV1
+            profile_verifier = verifier_class(run.contracts.profile, resolver, run.contracts.policy.resource_limits)
             for spec in specs:
                 for target in select_targets(spec, run.candidate):
                     source_target = target if spec.mutation_rule.get("kind") in {"CORRUPT_SOURCE_LOCATOR", "REPLACE_SOURCE_REFERENCE"} else None
@@ -127,13 +130,15 @@ def verify_run(
     challenge_results: Sequence[ChallengeResultV1] = (),
     challenge_specs: Sequence[ChallengeSpecV1] = (),
     julia_evidence: JuliaEvidenceV1 | None = None,
-    lean_evidence: LeanEvidenceV1 | None = None,
+    lean_evidence: LeanEvidenceV1 | LeanQualificationEvidenceV1 | None = None,
 ) -> VerificationReceiptV1:
     if julia_evidence is not None:
         require(julia_evidence.verifier_id == run.contracts.policy.julia_verifier, "JULIA_VERIFIER_ID")
         require(julia_evidence.computation_id == run.request.computation_id and julia_evidence.candidate_hash == run.candidate.candidate_hash, "JULIA_EVIDENCE_BINDING")
     if lean_evidence is not None:
         require(lean_evidence.verifier_id == run.contracts.policy.lean_verifier, "LEAN_VERIFIER_ID")
+        if isinstance(lean_evidence, LeanQualificationEvidenceV1):
+            require(lean_evidence.bound_runtime_certificate_hash == run.certificate.certificate_hash, "LEAN_RUNTIME_CERTIFICATE_BINDING")
     specs_by_hash = {row.spec_hash: row for row in challenge_specs}
     require(len(specs_by_hash) == len(challenge_specs), "CHALLENGE_SPEC_DUPLICATE")
     if challenge_specs:
@@ -169,6 +174,7 @@ def verify_run(
         julia_output_hashes=julia_evidence.output_value_hashes if julia_evidence else None,
         julia_receipt_hash=julia_evidence.receipt_hash if julia_evidence else None,
         lean_accepted_certificate_hash=lean_evidence.accepted_certificate_hash if lean_evidence else None,
+        lean_bound_runtime_certificate_hash=lean_evidence.bound_runtime_certificate_hash if isinstance(lean_evidence, LeanQualificationEvidenceV1) else None,
         challenge_results=challenge_results, mandatory_packets_by_root=mandatory_packets_by_root,
     )
     source_evidence = tuple(row.source_receipt for row in run.evaluation.receipts if row.source_receipt is not None)
@@ -198,7 +204,7 @@ def assemble_evidence_bundle(
     *,
     challenge_specs: Sequence[ChallengeSpecV1] = (),
     julia_evidence: JuliaEvidenceV1 | None = None,
-    lean_evidence: LeanEvidenceV1 | None = None,
+    lean_evidence: LeanEvidenceV1 | LeanQualificationEvidenceV1 | None = None,
     dependency_manifests: Sequence[Mapping[str, Any]] = (),
     authority_bindings: Sequence[ScientificAuthorityBindingV1] = (),
     authority_attachments: Sequence[AuthorityAttachmentV1] = (),
@@ -225,7 +231,8 @@ def assemble_evidence_bundle(
     if julia_evidence is not None:
         verifier_evidence.append({"evidence_kind": "JULIA_INDEPENDENT_RECOMPUTATION", "receipt_hash": julia_evidence.receipt_hash, "payload": dict(julia_evidence.receipt_payload)})
     if lean_evidence is not None:
-        verifier_evidence.append({"evidence_kind": "LEAN_RUNTIME_CERTIFICATE_CHECK", "receipt_hash": lean_evidence.receipt_hash, "payload": dict(lean_evidence.receipt_payload)})
+        kind = "LEAN_QUALIFICATION_ENVELOPE_CHECK" if isinstance(lean_evidence, LeanQualificationEvidenceV1) else "LEAN_RUNTIME_CERTIFICATE_CHECK"
+        verifier_evidence.append({"evidence_kind": kind, "receipt_hash": lean_evidence.receipt_hash, "payload": dict(lean_evidence.receipt_payload)})
     return FrozenEvidenceBundleV1(
         run.request.to_dict(), run.candidate.to_dict(), receipt.to_dict(), run.certificate.to_dict(),
         tuple(row.to_dict() for row in authority_bindings), tuple(row.to_dict() for row in authority_attachments),

@@ -7,13 +7,15 @@ editing a release manifest.
 from __future__ import annotations
 
 import ast
+import hashlib
 from pathlib import Path
 import re
+import subprocess
 import sys
-from typing import Any, Iterable
+from typing import Any, Iterable, Mapping
 
 from .canonical import digest, file_sha256
-from .errors import require
+from .errors import CalculatorError, require
 
 
 TRUSTED_PREFIX = "formal.python.toe.generic_runner.verified_calculator"
@@ -196,4 +198,186 @@ def validate_dependency_closure(closure: dict[str, Any]) -> None:
     require(set(closure.get("calculator_test_roots", ())) == set(CALCULATOR_TESTS), "DEPENDENCY_TEST_CLOSURE_NARROWED")
     require({row.get("path") for row in closure.get("profile_policy_artifact_references", ())} == set(FIXED_ARTIFACT_REFERENCES), "DEPENDENCY_ARTIFACT_CLOSURE_NARROWED")
     require(closure.get("platform_runtime_commands") == {platform: list(commands) for platform, commands in PLATFORM_RUNTIME_COMMANDS.items()}, "DEPENDENCY_RUNTIME_COMMANDS_NARROWED")
+    require(closure.get("unresolved_dynamic_imports") == [] and closure.get("unresolved_runtime_requirements") == [] and closure.get("manually_excluded_dependencies") == [], "DEPENDENCY_CLOSURE_NARROWED")
+
+
+TEXT_IDENTITY_SUFFIXES = {
+    "", ".gitattributes", ".json", ".jl", ".lean", ".lock", ".md",
+    ".py", ".toml", ".txt", ".yaml", ".yml",
+}
+
+
+def canonical_text_v1_bytes(raw: bytes) -> bytes:
+    """Return the deliberately narrow D-07 text identity domain.
+
+    Only newline representation is normalized.  BOMs, invalid UTF-8,
+    whitespace changes, and final-newline changes fail or remain visible.
+    """
+    require(not raw.startswith(b"\xef\xbb\xbf"), "CANONICAL_TEXT_V1_BOM")
+    try:
+        text = raw.decode("utf-8", "strict")
+    except UnicodeDecodeError as exc:
+        raise CalculatorError("CANONICAL_TEXT_V1_UTF8") from exc
+    return text.replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+
+
+def canonical_text_v1_sha256(raw: bytes) -> str:
+    return hashlib.sha256(canonical_text_v1_bytes(raw)).hexdigest()
+
+
+def _git(repository_root: Path, *args: str, text: bool = True) -> str | bytes:
+    process = subprocess.run(
+        ["git", "-C", str(repository_root), *args], capture_output=True,
+        text=text, check=False,
+    )
+    require(process.returncode == 0, "DEPENDENCY_GIT_IDENTITY", detail=(process.stderr if text else process.stderr.decode("utf-8", "replace"))[-4000:])
+    return process.stdout.strip() if text else process.stdout
+
+
+def _identity_row(repository_root: Path, relative_path: str, tested_commit: str) -> dict[str, Any]:
+    path = repository_root / relative_path
+    require(path.is_file(), "DEPENDENCY_CLOSURE_FILE", relative_path)
+    object_id = str(_git(repository_root, "rev-parse", f"{tested_commit}:{relative_path}"))
+    blob = bytes(_git(repository_root, "cat-file", "blob", object_id, text=False))
+    filesystem = path.read_bytes()
+    row: dict[str, Any] = {
+        "hash_domain": "GIT_BLOB_BYTES_V1",
+        "git_commit": tested_commit,
+        "repository_relative_path": relative_path,
+        "git_object_id": object_id,
+        "git_blob_sha256": hashlib.sha256(blob).hexdigest(),
+        "filesystem_sha256": hashlib.sha256(filesystem).hexdigest(),
+    }
+    suffix = path.suffix.lower()
+    if suffix in TEXT_IDENTITY_SUFFIXES or path.name in {"lean-toolchain"}:
+        row.update({
+            "checkout_domain": "CANONICAL_TEXT_V1",
+            "canonical_text_v1_sha256": canonical_text_v1_sha256(blob),
+            "filesystem_canonical_text_v1_sha256": canonical_text_v1_sha256(filesystem),
+        })
+        require(row["canonical_text_v1_sha256"] == row["filesystem_canonical_text_v1_sha256"], "DEPENDENCY_CANONICAL_TEXT_MISMATCH", relative_path)
+    else:
+        row["checkout_domain"] = "BINARY_BYTES_V1"
+        require(blob == filesystem, "DEPENDENCY_BINARY_CHECKOUT_MISMATCH", relative_path)
+    return row
+
+
+def _v2_identity_projection(closure: Mapping[str, Any]) -> dict[str, Any]:
+    def stable(row: Mapping[str, Any]) -> dict[str, Any]:
+        return {key: value for key, value in row.items() if key not in {"filesystem_sha256", "filesystem_canonical_text_v1_sha256"}}
+
+    return {
+        "schema_id": closure["schema_id"],
+        "generation_method": closure["generation_method"],
+        "tested_commit": closure["tested_commit"],
+        "python": [stable(row) for row in closure["python"]],
+        "calculator_test_roots": closure["calculator_test_roots"],
+        "runtime_requirement_lock": {**stable(closure["runtime_requirement_lock"]), "resolved_packages": closure["runtime_requirement_lock"]["resolved_packages"]},
+        "unresolved_runtime_requirements": closure["unresolved_runtime_requirements"],
+        "julia": [stable(row) for row in closure["julia"]],
+        "lean": [stable(row) for row in closure["lean"]],
+        "lean_imports": closure["lean_imports"],
+        "platform_runtime_commands": closure["platform_runtime_commands"],
+        "profile_policy_artifact_references": [stable(row) for row in closure["profile_policy_artifact_references"]],
+        "runtime_profile_sources": closure["runtime_profile_sources"],
+        "unresolved_dynamic_imports": closure["unresolved_dynamic_imports"],
+        "manually_excluded_dependencies": closure["manually_excluded_dependencies"],
+    }
+
+
+def generate_dependency_closure_v2(
+    repository_root: Path,
+    *,
+    tested_commit: str = "HEAD",
+    require_clean: bool = True,
+) -> dict[str, Any]:
+    """Generate a Git-object-bound, checkout-observed D-07 closure.
+
+    V1 remains available solely to replay the frozen pre-amendment lineage.
+    V2 uses the Git blob as primary identity and records checkout bytes only as
+    non-authoritative custody observations.
+    """
+    repository_root = repository_root.resolve(strict=True)
+    commit = str(_git(repository_root, "rev-parse", f"{tested_commit}^{{commit}}"))
+    if require_clean:
+        status = str(_git(repository_root, "status", "--porcelain=v1", "--untracked-files=no"))
+        require(not status, "DEPENDENCY_WORKTREE_NOT_CLEAN")
+    old = generate_dependency_closure(repository_root)
+
+    v2_seed_paths = (
+        "formal/python/toe/generic_runner/verified_calculator_c03_rv_candidate_v2.py",
+        "formal/python/toe/generic_runner/verified_calculator_c03_rv_qualification_v2.py",
+        "formal/python/tests/test_verified_calculator_v6_repairs.py",
+    )
+    extra_rows, extra_external, extra_dynamic = _transitive_python_files(
+        repository_root, (repository_root / path for path in v2_seed_paths)
+    )
+    merged_python = {row["path"]: row for row in old["python"]}
+    merged_python.update({row["path"]: row for row in extra_rows})
+    pins = _requirements_pins(repository_root / old["runtime_requirement_lock"]["path"])
+    external_names = sorted({*old["runtime_requirement_lock"]["resolved_packages"], *extra_external})
+    runtime_requirements = {name: pins.get(name) for name in external_names}
+    unresolved = sorted(name for name, version in runtime_requirements.items() if version is None)
+
+    def identity(path: str) -> dict[str, Any]:
+        return _identity_row(repository_root, path, commit)
+
+    python_rows = []
+    for old_row in sorted(merged_python.values(), key=lambda row: row["path"]):
+        row = identity(old_row["path"])
+        row.update({key: old_row[key] for key in ("module", "imports", "local_dependencies")})
+        python_rows.append(row)
+    lock = identity(old["runtime_requirement_lock"]["path"])
+    lock["resolved_packages"] = runtime_requirements
+    lean_paths_v2 = sorted({
+        *(row["path"] for row in old["lean"]),
+        "formal/toe_formal/ToeFormal/VerifiedCalculator/RuntimeCertificateMainV1.lean",
+        "formal/toe_formal/ToeFormal/VerifiedCalculator/QualificationEnvelopeV1.lean",
+    })
+    closure = {
+        "schema_id": "VerifiedCalculatorDependencyClosureV2",
+        "generation_method": "TRANSITIVE_STATIC_IMPORTS_PLUS_FIXED_CONTRACT_SURFACES__GIT_OBJECT_BOUND",
+        "tested_commit": commit,
+        "python": python_rows,
+        "calculator_test_roots": [*old["calculator_test_roots"], "formal/python/tests/test_verified_calculator_v6_repairs.py"],
+        "runtime_requirement_lock": lock,
+        "unresolved_runtime_requirements": unresolved,
+        "julia": [identity(row["path"]) for row in old["julia"]],
+        "lean": [identity(path) for path in lean_paths_v2],
+        "lean_imports": sorted(set(old["lean_imports"]) | {
+            name
+            for path in lean_paths_v2
+            if path.endswith(".lean")
+            for name in re.findall(r"^import\s+([^\s]+)", (repository_root / path).read_text(encoding="utf-8"), re.MULTILINE)
+        }),
+        "platform_runtime_commands": old["platform_runtime_commands"],
+        "profile_policy_artifact_references": [identity(row["path"]) for row in old["profile_policy_artifact_references"]],
+        "runtime_profile_sources": old["runtime_profile_sources"],
+        "unresolved_dynamic_imports": sorted({*old["unresolved_dynamic_imports"], *extra_dynamic}),
+        "manually_excluded_dependencies": old["manually_excluded_dependencies"],
+    }
+    closure["closure_hash"] = digest(_v2_identity_projection(closure), "VerifiedCalculatorDependencyClosureV2")
+    closure["custody_observation_hash"] = digest(closure, "VerifiedCalculatorDependencyCustodyObservationV2")
+    validate_dependency_closure_v2(closure)
+    return closure
+
+
+def validate_dependency_closure_v2(closure: Mapping[str, Any]) -> None:
+    require(closure.get("schema_id") == "VerifiedCalculatorDependencyClosureV2", "DEPENDENCY_CLOSURE_V2_SCHEMA")
+    supplied_observation = closure.get("custody_observation_hash")
+    observation = dict(closure); observation.pop("custody_observation_hash", None)
+    require(supplied_observation == digest(observation, "VerifiedCalculatorDependencyCustodyObservationV2"), "DEPENDENCY_CUSTODY_OBSERVATION_HASH")
+    require(closure.get("closure_hash") == digest(_v2_identity_projection(closure), "VerifiedCalculatorDependencyClosureV2"), "DEPENDENCY_CLOSURE_HASH")
+    rows = [*closure.get("python", ()), closure.get("runtime_requirement_lock", {}), *closure.get("julia", ()), *closure.get("lean", ()), *closure.get("profile_policy_artifact_references", ())]
+    paths = []
+    for row in rows:
+        require(row.get("hash_domain") == "GIT_BLOB_BYTES_V1", "DEPENDENCY_HASH_DOMAIN")
+        require(row.get("git_commit") == closure.get("tested_commit"), "DEPENDENCY_COMMIT_BINDING")
+        require(all(isinstance(row.get(field), str) and row.get(field) for field in ("repository_relative_path", "git_object_id", "git_blob_sha256", "filesystem_sha256")), "DEPENDENCY_IDENTITY_FIELDS")
+        if row.get("checkout_domain") == "CANONICAL_TEXT_V1":
+            require(row.get("canonical_text_v1_sha256") == row.get("filesystem_canonical_text_v1_sha256"), "DEPENDENCY_CANONICAL_TEXT_MISMATCH", row.get("repository_relative_path"))
+        else:
+            require(row.get("checkout_domain") == "BINARY_BYTES_V1" and row.get("git_blob_sha256") == row.get("filesystem_sha256"), "DEPENDENCY_BINARY_CHECKOUT_MISMATCH", row.get("repository_relative_path"))
+        paths.append(row["repository_relative_path"])
+    require(len(paths) == len(set(paths)), "DEPENDENCY_DUPLICATE_PATH")
     require(closure.get("unresolved_dynamic_imports") == [] and closure.get("unresolved_runtime_requirements") == [] and closure.get("manually_excluded_dependencies") == [], "DEPENDENCY_CLOSURE_NARROWED")

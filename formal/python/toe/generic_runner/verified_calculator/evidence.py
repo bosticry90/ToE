@@ -149,6 +149,7 @@ def promote_exact_outputs(
     julia_output_hashes: Mapping[str, str] | None,
     julia_receipt_hash: str | None,
     lean_accepted_certificate_hash: str | None,
+    lean_bound_runtime_certificate_hash: str | None,
     challenge_results: Sequence[ChallengeResultV1],
     mandatory_packets_by_root: Mapping[str, Sequence[str]],
 ) -> tuple[OutputEvidenceV1, ...]:
@@ -158,7 +159,13 @@ def promote_exact_outputs(
         value_hash = digest(value.to_dict(), "ExactOutputValueV1")
         exact_ready = (
             julia_output_hashes is not None and julia_output_hashes.get(root) == value_hash and julia_receipt_hash is not None
-            and lean_accepted_certificate_hash == certificate.certificate_hash
+            and (
+                lean_accepted_certificate_hash == certificate.certificate_hash
+                or (
+                    lean_accepted_certificate_hash is not None
+                    and lean_bound_runtime_certificate_hash == certificate.certificate_hash
+                )
+            )
             and coverage[root]["complete"]
             and set(coverage[root]["mandatory_applicable_packet_hashes"]) == {row.challenge_packet_hash for row in challenge_results if row.mandatory and root in row.affected_roots}
         )
@@ -253,6 +260,7 @@ class FrozenEvidenceBundleV1:
             "PYTHON_TRUSTED_VERIFICATION": "PythonTrustedVerificationV1",
             "JULIA_INDEPENDENT_RECOMPUTATION": "JuliaIndependentEvidenceV1",
             "LEAN_RUNTIME_CERTIFICATE_CHECK": "LeanRuntimeCertificateEvidenceV1",
+            "LEAN_QUALIFICATION_ENVELOPE_CHECK": "LeanQualificationEnvelopeEvidenceV1",
         }
         for row in self.verifier_evidence:
             require(set(row) == {"evidence_kind", "receipt_hash", "payload"}, "BUNDLE_VERIFIER_EVIDENCE_SCHEMA")
@@ -270,8 +278,21 @@ class FrozenEvidenceBundleV1:
             require(len(julia_hashes) == 1 and evidence_by_kind.get("JULIA_INDEPENDENT_RECOMPUTATION", {}).get("receipt_hash") in julia_hashes, "BUNDLE_JULIA_EVIDENCE_BINDING")
         lean_hashes = {row.lean_certificate_hash for row in receipt.outputs if row.lean_certificate_hash is not None}
         if lean_hashes:
-            lean_payload = evidence_by_kind.get("LEAN_RUNTIME_CERTIFICATE_CHECK", {}).get("payload", {})
-            require(lean_hashes == {certificate.certificate_hash} and lean_payload.get("accepted_certificate_hash") == certificate.certificate_hash, "BUNDLE_LEAN_EVIDENCE_BINDING")
+            legacy_payload = evidence_by_kind.get("LEAN_RUNTIME_CERTIFICATE_CHECK", {}).get("payload", {})
+            qualification_payload = evidence_by_kind.get("LEAN_QUALIFICATION_ENVELOPE_CHECK", {}).get("payload", {})
+            if qualification_payload:
+                from .qualification_envelope import QualificationEnvelopeV1
+                envelope_data = qualification_payload.get("qualification_envelope", {})
+                envelope = QualificationEnvelopeV1({key: value for key, value in envelope_data.items() if key != "schema_id"})
+                require(
+                    lean_hashes == {envelope.envelope_hash}
+                    and qualification_payload.get("accepted_envelope_hash") == envelope.envelope_hash
+                    and qualification_payload.get("bound_runtime_certificate_hash") == certificate.certificate_hash
+                    and envelope.commitments.get("runtime_certificate_hash") == certificate.certificate_hash,
+                    "BUNDLE_LEAN_QUALIFICATION_BINDING",
+                )
+            else:
+                require(lean_hashes == {certificate.certificate_hash} and legacy_payload.get("accepted_certificate_hash") == certificate.certificate_hash, "BUNDLE_LEAN_EVIDENCE_BINDING")
 
     @property
     def bundle_hash(self) -> str:
