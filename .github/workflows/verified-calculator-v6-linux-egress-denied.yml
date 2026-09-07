@@ -1,0 +1,223 @@
+name: VPC v6 Linux Egress-Denied Qualification
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "codex/**"
+    paths:
+      - ".github/workflows/verified-calculator-v6-linux-egress-denied.yml"
+      - "formal/tooling/scientific_compute/run_vpc_v6_linux_egress_denied.sh"
+      - "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_*"
+  pull_request:
+    paths:
+      - ".github/workflows/verified-calculator-v6-linux-egress-denied.yml"
+      - "formal/tooling/scientific_compute/run_vpc_v6_linux_egress_denied.sh"
+      - "formal/python/toe/generic_runner/verified_calculator/**"
+      - "formal/python/toe/generic_runner/verified_calculator_c03_rv_*.py"
+      - "formal/python/tools/compare_vpc_v6_payload.py"
+      - "formal/python/tools/run_vpc_v6_repair_acceptance.py"
+      - "formal/toe_formal/ToeFormal/VerifiedCalculator/**"
+      - "formal/tooling/scientific_compute/julia/verified_calculator*.jl"
+      - "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_*"
+      - "requirements.ci.lock"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vpc-v6-linux-egress-denied-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  VPC_TESTED_COMMIT: 3307e35514cc76d63b6039b240c625defbb737d5
+  VPC_TESTED_ROOT: ${{ runner.temp }}/vpc-tested-3307e355
+  VPC_OUTPUT: ${{ runner.temp }}/vpc-tested-3307e355/formal/output/vpc_v6_linux_egress_denied
+  VPC_WINDOWS_REFERENCE: ${{ github.workspace }}/formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json
+  VPC_PAYLOAD_LEDGER_SEED: ${{ runner.temp }}/vpc-tested-3307e355/formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_PAYLOAD_MISMATCH_REPORT_20260907_v1.json
+
+jobs:
+  exact-profile:
+    name: Frozen amended C03/RV exact profile
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout qualification lineage
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Materialize exact tested commit and initialize attempt
+        shell: bash
+        run: |
+          git cat-file -e "${VPC_TESTED_COMMIT}^{commit}"
+          git worktree add --detach "$VPC_TESTED_ROOT" "$VPC_TESTED_COMMIT"
+          test "$(git -C "$VPC_TESTED_ROOT" rev-parse HEAD)" = "$VPC_TESTED_COMMIT"
+          test -f "$VPC_WINDOWS_REFERENCE"
+          mkdir -p "$VPC_OUTPUT"
+          python3 - <<'PY' > "$VPC_OUTPUT/attempt.json"
+          from datetime import datetime, timezone
+          import json
+          import os
+
+          print(json.dumps({
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedAttemptV6",
+              "started_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
+              "tested_commit": os.environ["VPC_TESTED_COMMIT"],
+              "qualification_lineage_commit": os.environ.get("GITHUB_SHA", ""),
+              "workflow_run": {
+                  "run_id": os.environ.get("GITHUB_RUN_ID", ""),
+                  "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
+                  "workflow_ref": os.environ.get("GITHUB_WORKFLOW_REF", ""),
+              },
+              "environment_provisioning_network_access": "PERMITTED_BEFORE_ISOLATION",
+              "trusted_execution_network_access": "MUST_BE_EGRESS_DENIED",
+              "initial_disposition": "STARTED__NO_QUALIFICATION_EARNED",
+              "scientific_promotion": False,
+              "product_v1_release": False,
+              "production_activation": False,
+          }, sort_keys=True, separators=(",", ":")))
+          PY
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Setup Julia
+        uses: julia-actions/setup-julia@v3
+        with:
+          version: "1.12.6"
+
+      - name: Setup and build both Lean evidence checkers before isolation
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: ${{ env.VPC_TESTED_ROOT }}/formal/toe_formal
+          auto-config: false
+          build: true
+          build-args: vpc_certificate_checker vpc_qualification_envelope_checker
+          test: false
+          lint: false
+          use-mathlib-cache: true
+
+      - name: Provision Python and Julia dependencies before isolation
+        shell: bash
+        run: |
+          python -m venv "$VPC_TESTED_ROOT/.venv"
+          "$VPC_TESTED_ROOT/.venv/bin/python" -m pip install --upgrade pip==26.0
+          "$VPC_TESTED_ROOT/.venv/bin/python" -m pip install -r "$VPC_TESTED_ROOT/requirements.ci.lock"
+          julia --startup-file=no --project="$VPC_TESTED_ROOT/formal/tooling/scientific_compute/julia" -e 'using Pkg; Pkg.instantiate(); Pkg.precompile(); using JSON3, Nemo'
+
+      - name: Capture provisioned identities and isolation prerequisites
+        shell: bash
+        run: |
+          command -v unshare
+          command -v ip
+          export VPC_JULIA_PATH="$(command -v julia)"
+          export VPC_IP_PATH="$(command -v ip)"
+          "$VPC_TESTED_ROOT/.venv/bin/python" - <<'PY' > "$VPC_OUTPUT/provisioning.json"
+          from datetime import datetime, timezone
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+
+          tested = Path(os.environ["VPC_TESTED_ROOT"])
+          reference = Path(os.environ["VPC_WINDOWS_REFERENCE"])
+          paths = {
+              "requirements_lock": tested / "requirements.ci.lock",
+              "julia_project": tested / "formal/tooling/scientific_compute/julia/Project.toml",
+              "julia_manifest": tested / "formal/tooling/scientific_compute/julia/Manifest.toml",
+              "lean_toolchain": tested / "formal/toe_formal/lean-toolchain",
+              "lakefile": tested / "formal/toe_formal/lakefile.toml",
+              "lake_manifest": tested / "formal/toe_formal/lake-manifest.json",
+              "windows_reference_bundle": reference,
+          }
+          result = {
+              "schema_id": "VerifiedCalculatorProvisioningEvidenceV6",
+              "captured_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
+              "stage": "BEFORE_NETWORK_ISOLATION",
+              "tested_commit": os.environ["VPC_TESTED_COMMIT"],
+              "python_version": subprocess.check_output([str(tested / ".venv/bin/python"), "--version"], text=True).strip(),
+              "julia_path": os.environ["VPC_JULIA_PATH"],
+              "ip_path": os.environ["VPC_IP_PATH"],
+              "files": {name: {"path": path.as_posix(), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()} for name, path in paths.items()},
+              "network_access_used_for_provisioning": True,
+              "trusted_execution_started": False,
+              "scientific_promotion": False,
+          }
+          print(json.dumps(result, sort_keys=True, separators=(",", ":")))
+          PY
+
+      - name: Execute complete trusted route in fresh network namespace
+        id: isolated
+        shell: bash
+        continue-on-error: true
+        run: |
+          set +e
+          sudo env \
+            "PATH=$VPC_TESTED_ROOT/.venv/bin:$PATH" \
+            "PYTHONPATH=$VPC_TESTED_ROOT" \
+            "JULIA_DEPOT_PATH=$HOME/.julia" \
+            "JULIA_PKG_OFFLINE=true" \
+            "GITHUB_RUN_ID=$GITHUB_RUN_ID" \
+            "GITHUB_RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT" \
+            unshare --net --fork --pid --mount-proc \
+            bash "$GITHUB_WORKSPACE/formal/tooling/scientific_compute/run_vpc_v6_linux_egress_denied.sh" \
+              "$VPC_TESTED_ROOT" "$VPC_OUTPUT" "$VPC_WINDOWS_REFERENCE" "$VPC_PAYLOAD_LEDGER_SEED"
+          code=$?
+          printf '%s\n' "$code" > "$VPC_OUTPUT/isolation_execution_exit_code.txt"
+          exit 0
+
+      - name: Seal attempt evidence
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$VPC_OUTPUT"
+          if [[ ! -f "$VPC_OUTPUT/outcome.json" ]]; then
+            export VPC_FALLBACK_EXIT_CODE="$(cat "$VPC_OUTPUT/isolation_execution_exit_code.txt" 2>/dev/null || printf '%s' 125)"
+            python3 - <<'PY' > "$VPC_OUTPUT/outcome.json"
+          from datetime import datetime, timezone
+          import json
+          import os
+          print(json.dumps({
+              "schema_id": "VerifiedCalculatorLinuxEgressDeniedOutcomeV6",
+              "attempt_id": f"VPC_C03_RV_EXACT_V6_3307E355_LINUX_EGRESS_DENIED_{os.environ.get('GITHUB_RUN_ID', 'UNKNOWN')}_{os.environ.get('GITHUB_RUN_ATTEMPT', '0')}",
+              "completed_at_utc": datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z"),
+              "disposition": "INCONCLUSIVE",
+              "terminal_stage": "PRE_TRUSTED_EXECUTION_SETUP_OR_NAMESPACE_ENTRY",
+              "exit_code": int(os.environ["VPC_FALLBACK_EXIT_CODE"]),
+              "evidence_files": [],
+              "scientific_promotion": False,
+              "product_v1_release": False,
+              "production_activation": False,
+          }, sort_keys=True, separators=(",", ":")))
+          PY
+          fi
+          find "$VPC_OUTPUT" -type f ! -name all_file_sha256s.txt -print0 | sort -z | xargs -0 sha256sum > "$VPC_OUTPUT/all_file_sha256s.txt" || true
+
+      - name: Upload PASS, FAIL, or INCONCLUSIVE evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vpc-v6-linux-egress-denied-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ env.VPC_OUTPUT }}
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Enforce qualification disposition
+        if: always()
+        shell: bash
+        run: |
+          test -f "$VPC_OUTPUT/outcome.json"
+          "$VPC_TESTED_ROOT/.venv/bin/python" - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          outcome = json.loads((Path(os.environ["VPC_OUTPUT"]) / "outcome.json").read_text(encoding="utf-8"))
+          if outcome["disposition"] != "PASS" or outcome["terminal_stage"] != "COMPLETE" or outcome["exit_code"] != 0:
+              raise SystemExit(f"LINUX_QUALIFICATION_{outcome['disposition']}:{outcome['terminal_stage']}:{outcome['exit_code']}")
+          print("VPC v6 Linux egress-denied qualification PASS; no authority promotion performed.")
+          PY
