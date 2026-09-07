@@ -1,6 +1,6 @@
 {
   "schema_id": "VERIFIED_CALCULATOR_V1_IMPLEMENTATION_STATUS_v1",
-  "as_of": "2026-09-05",
+  "as_of": "2026-09-07",
   "preservation_checkpoint": {
     "commit": "404b36e0e747",
     "artifact": "formal/docs/release/VERIFIED_CALCULATOR_REPAIR_CORPUS_PRESERVATION_20260905_v1.json",
@@ -62,7 +62,18 @@
     "frozen_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
     "independent_non_author_review": "COMPLETED_SUPPORTED_WITH_REQUIRED_AMENDMENTS",
     "non_author_review_result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
-    "non_author_review_repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v5.json"
+    "non_author_review_repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260907_v6.json",
+    "next_exact_lineage": {
+      "status": "AMENDED_REQUALIFICATION_CONTRACTS_DEFINED__REPAIRS_NOT_IMPLEMENTED",
+      "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260907_v6.json",
+      "sequence": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_AMENDED_REQUALIFICATION_SEQUENCE_20260907_v1.md",
+      "acceptance_tests": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_ACCEPTANCE_TESTS_20260907_v1.json",
+      "repair_scope": [
+        "D-07_FROZEN_DEPENDENCY_HASH_PORTABILITY",
+        "D-01_RUNTIME_LEAN_CERTIFICATE_BINDING",
+        "D-02_VALUE_TYPE_METADATA_ENFORCEMENT"
+      ]
+    }
   },
   "post_milestone_qualification": {
     "linux_egress_denied_test": {
@@ -117,7 +128,7 @@
       "evidence_matrix": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_EVIDENCE_MATRIX_20260905_v1.md",
       "result_artifact": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
       "accepted_result_artifact": null,
-      "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v5.json",
+      "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260907_v6.json",
       "material_defects": [
         "D-01_LEAN_CERTIFICATE_IDENTITY_NOT_INDEPENDENTLY_BOUND",
         "D-02_COMPLETE_VALUE_TYPE_METADATA_NOT_ENFORCED"
@@ -134,8 +145,8 @@
     "product_v1": "NOT_RELEASED"
   },
   "remaining_release_work": [
-    "Implement the two material amendments required by the completed non-author review in a new exact-profile lineage, then regenerate and independently review the affected evidence; calculator-profile scientific requalification remains unearned.",
-    "Repair raw dependency-hash portability in a new versioned exact evidence lineage, regenerate from clean canonical Git bytes, independently review the affected closure and receipts, and only then repeat Linux egress-denied qualification; frozen v1 remains preserved and v5 remains FAIL.",
+    "Implement only D-07, D-01, and D-02 under the frozen amended requalification sequence and three repair acceptance tests; calculator-profile scientific requalification remains unearned.",
+    "Generate the amended exact evidence from a clean Git checkout, complete amendment-only non-author review, and only then repeat Linux egress-denied qualification; frozen v1 remains preserved and v5 remains FAIL.",
     "Freeze interval, ODE/RGE, uncertainty, unsafe-plugin-boundary, and synthetic-profile subsystem acceptance records.",
     "Assemble the all-or-nothing product release only after every remaining gate passes."
   ],

@@ -1,0 +1,305 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactRepairAcceptanceTestsV1",
+  "test_contract_id": "C03_RV_EXACT_REPAIR_ACCEPTANCE_TESTS_20260907_v1",
+  "status": "DEFINED_NOT_EXECUTED",
+  "baseline": {
+    "frozen_v1_bundle": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+    "frozen_v1_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "non_author_review": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+    "non_author_review_hash": "d415ae3d690b4bcf87d6222f8618371af2d1a28b0c624843f95b8649cb816b15",
+    "linux_v5_failure": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v5.json",
+    "linux_v5_result_record_hash": "e4a7a5e961b9c60a9e29d4beabb3b5e4984a0456f835ae17dad7a8d265e7a48f",
+    "source_nodes": 31,
+    "derived_nodes": 160,
+    "authoritative_roots": 16,
+    "trusted_physics_operations": 19,
+    "mandatory_challenge_instances": 373
+  },
+  "hash_domains": {
+    "GIT_BLOB_BYTES_V1": {
+      "purpose": "Primary identity for every tracked dependency and tracked exact source whose policy requires byte identity.",
+      "input": "Raw bytes of the blob resolved from the tested Git commit and repository-relative path, not bytes read from the checked-out worktree.",
+      "required_fields": [
+        "git_commit",
+        "repository_relative_path",
+        "git_object_id",
+        "git_blob_sha256"
+      ]
+    },
+    "CANONICAL_TEXT_V1": {
+      "purpose": "Explicit semantic-text equivalence check when checkout newline transformations are permitted by policy.",
+      "algorithm": [
+        "Reject a UTF-8 BOM.",
+        "Decode with strict UTF-8.",
+        "Replace CRLF with LF, then replace remaining CR with LF.",
+        "Do not apply Unicode normalization, whitespace trimming, final-newline insertion/removal, comment removal, or syntax rewriting.",
+        "Encode as UTF-8 and hash the resulting bytes."
+      ],
+      "required_fields": [
+        "canonical_text_v1_sha256",
+        "filesystem_sha256",
+        "git_blob_sha256"
+      ]
+    },
+    "BINARY_BYTES_V1": {
+      "purpose": "Exact identity for non-text artifacts.",
+      "rule": "Checked-out bytes must equal the Git blob bytes exactly; no canonicalization is permitted."
+    }
+  },
+  "tests": [
+    {
+      "test_id": "RAT-A-D07-CROSS_PLATFORM_DEPENDENCY_IDENTITY",
+      "repairs": "D-07_FROZEN_DEPENDENCY_HASH_PORTABILITY",
+      "objective": "Prove that dependency identity is derived from an explicit hash domain and is invariant to permitted checkout newline representation without hiding genuine content changes.",
+      "preconditions": [
+        "Run from a clean tested Git commit with no untracked dependency input.",
+        "Generate the closure from imports, fixed artifacts, runtime declarations, Julia manifests, and Lean imports; do not use a hand-maintained inclusion list or exclusions.",
+        "The 73 v1 paths are a regression corpus. The amended closure count is generated and may increase only through disclosed transitive dependencies."
+      ],
+      "positive_controls": [
+        {
+          "case_id": "A-P01-GIT-BLOB-PRIMARY",
+          "action": "Resolve every generated tracked dependency at tested_commit:path and compute git_blob_sha256 from raw blob bytes.",
+          "pass_condition": "Every closure row contains tested commit, path, Git object ID, explicit GIT_BLOB_BYTES_V1 domain, and matching raw blob SHA-256; no primary identity is read from mutable worktree bytes."
+        },
+        {
+          "case_id": "A-P02-LF-CRLF-EQUIVALENCE",
+          "action": "Materialize LF, CRLF, and mixed-newline fixtures with identical decoded text and process them under CANONICAL_TEXT_V1.",
+          "pass_condition": "All fixtures produce the same canonical_text_v1_sha256 while retaining distinct filesystem_sha256 values."
+        },
+        {
+          "case_id": "A-P03-CLEAN-CHECKOUT-CLOSURE",
+          "action": "Generate the amended closure in isolated Windows and Linux clean checkouts of the same commit.",
+          "pass_condition": "Path set, Git object IDs, git_blob_sha256 values, canonical-text identities where applicable, and the domain-separated closure identity agree. Environment and filesystem hashes may differ only where the policy explicitly allows text newline transformation."
+        }
+      ],
+      "negative_controls": [
+        {
+          "case_id": "A-N01-GENUINE-CONTENT-MUTATION",
+          "mutation": "Change a physics-bearing token such as xi1 to xi1 + 1 while retaining valid UTF-8 and newline form.",
+          "required_outcome": "git_blob_sha256 and canonical_text_v1_sha256 change; closure comparison rejects the file."
+        },
+        {
+          "case_id": "A-N02-TRAILING-WHITESPACE-MUTATION",
+          "mutation": "Add or remove non-newline whitespace.",
+          "required_outcome": "Canonical identity changes and the file is rejected; canonicalization must not trim whitespace."
+        },
+        {
+          "case_id": "A-N03-FINAL-NEWLINE-MUTATION",
+          "mutation": "Add or remove the final newline.",
+          "required_outcome": "Canonical identity changes and the file is rejected."
+        },
+        {
+          "case_id": "A-N04-BOM",
+          "mutation": "Prepend a UTF-8 BOM.",
+          "required_outcome": "CANONICAL_TEXT_V1 rejects the input rather than silently removing the BOM."
+        },
+        {
+          "case_id": "A-N05-BINARY-NEWLINE-LAUNDERING",
+          "mutation": "Apply text normalization to an artifact declared BINARY_BYTES_V1.",
+          "required_outcome": "The domain/type mismatch is rejected."
+        },
+        {
+          "case_id": "A-N06-WORKTREE-ONLY-DEPENDENCY",
+          "mutation": "Add or substitute a required dependency that is absent from the tested Git commit.",
+          "required_outcome": "Closure generation or custody fails before trusted execution."
+        }
+      ],
+      "acceptance_gates": [
+        "Every hash field names its domain; an unlabeled sha256 field cannot establish dependency identity.",
+        "The three v5 mismatch paths are rechecked from Git blobs and pass under the amended policy without rewriting the old packet.",
+        "All generated closure paths are Git-tracked and no unresolved or manually excluded dependency exists.",
+        "LF/CRLF equivalence passes and every genuine-content negative control fails closed on both supported platforms."
+      ],
+      "required_evidence": [
+        "generated dependency-closure manifest",
+        "per-path hash-domain ledger",
+        "cross-platform comparison receipt",
+        "positive/negative-control results"
+      ],
+      "failure_disposition": "REPAIR_NOT_ACCEPTED__NO_NEW_EXACT_EVIDENCE_FREEZE"
+    },
+    {
+      "test_id": "RAT-B-D01-RUNTIME_LEAN_CERTIFICATE_BINDING",
+      "repairs": "D-01",
+      "objective": "Prove a non-circular chain in which Lean derives the identity of the actual executed evidence, the receipt binds that identity, and the outer bundle binds the receipt and certificate.",
+      "required_binding": [
+        "The Lean-facing certificate/envelope commits to certificate-format version, computation ID, candidate hash, physics-profile hash, verification-policy hash, calculation-request hash, source-manifest/receipt-set hash, graph hash, ordered node-trace hash, authoritative root set, canonical exact output-value hashes, Julia evidence hash, mandatory challenge-spec/packet/result-set hashes, status ceiling, and scientific/product/production non-promotion flags.",
+        "Lean recomputes the domain-separated certificate/envelope identity from parsed canonical fields. It does not accept an asserted certificate identity as a command-line authority.",
+        "An independently serialized verification context supplies the expected contract and evidence identities; Lean compares every committed field and reports only the identity it computed.",
+        "The verification receipt records the Lean-computed identity and checker/context/file identities; bundle assembly verifies the receipt-to-certificate edge; the bundle hash then commits to both without requiring a circular bundle-hash field inside the certificate."
+      ],
+      "positive_controls": [
+        {
+          "case_id": "B-P01-ACTUAL-RUNTIME-EVIDENCE",
+          "action": "Build the certificate/envelope from one fresh trusted execution and run the versioned Lean checker on those exact canonical bytes and an independently generated expected context.",
+          "pass_condition": "Lean recomputes and returns the same domain-separated identity recorded by the receipt, and bundle assembly accepts the exact edge."
+        },
+        {
+          "case_id": "B-P02-SEPARATE-REPLAY",
+          "action": "Repeat certificate creation and checking in a separate process from the same canonical request and sources.",
+          "pass_condition": "All scientific/contract commitments and the computed certificate identity match; only explicitly environmental evidence may differ."
+        }
+      ],
+      "negative_controls": [
+        {
+          "case_id": "B-N01-VALID-SUBSTITUTE-SAME-OUTPUT",
+          "mutation": "Substitute a separately valid certificate having the same mathematical outputs but a different computation, candidate, graph, source, or trace identity while retaining the original expected context.",
+          "required_outcome": "Lean or bundle binding rejects the substitute."
+        },
+        {
+          "case_id": "B-N02-CALLER-CHOSEN-HASH",
+          "mutation": "Supply 00...00, ff...ff, or another caller-chosen accepted identity.",
+          "required_outcome": "No caller-selected identity can be accepted or echoed as authority; the checker reports only its internally computed identity."
+        },
+        {
+          "case_id": "B-N03-CONTRACT-IDENTITY",
+          "mutation": "Change computation, request, candidate, profile, or policy identity to another valid 64-hex value.",
+          "required_outcome": "Rejected after recomputing transport/file hashes."
+        },
+        {
+          "case_id": "B-N04-GRAPH-TRACE-SOURCE",
+          "mutation": "Change graph identity, ordered trace content/digest, or any source receipt/set identity.",
+          "required_outcome": "Rejected after recomputing transport/file hashes."
+        },
+        {
+          "case_id": "B-N05-OUTPUT-ROOT-VALUE",
+          "mutation": "Change an authoritative root binding or canonical exact output-value hash.",
+          "required_outcome": "Rejected after recomputing transport/file hashes."
+        },
+        {
+          "case_id": "B-N06-INDEPENDENT-EVIDENCE",
+          "mutation": "Change Julia evidence identity or mandatory challenge specification, packet, result-set, applicability, or pass disposition.",
+          "required_outcome": "Rejected or prevented from reaching VERIFIED_EXACT."
+        },
+        {
+          "case_id": "B-N07-STATUS-OR-PROMOTION",
+          "mutation": "Raise the status ceiling, assert VERIFIED_EXACT inside the runtime execution certificate, or set any scientific/product/production promotion flag true.",
+          "required_outcome": "Rejected."
+        },
+        {
+          "case_id": "B-N08-RECEIPT-BUNDLE-EDGE",
+          "mutation": "Keep the certificate valid but change the receipt's certificate identity or assemble it with a different bundle member.",
+          "required_outcome": "Receipt or bundle construction rejects the mismatch."
+        }
+      ],
+      "acceptance_gates": [
+        "The checker command has no authoritative accepted-certificate-hash argument.",
+        "Lean computes the certificate/envelope identity and validates every listed binding against independently supplied context.",
+        "Every mutation is made one field at a time with a fresh valid transport/file hash, preventing rejection for the wrong reason.",
+        "All positive controls pass and all negative controls reject with a stable reason before any output reaches VERIFIED_EXACT."
+      ],
+      "required_evidence": [
+        "canonical certificate/envelope and context",
+        "Lean-computed identity receipt",
+        "checker binary/source/dependency identities",
+        "mutation matrix with exact rejection codes",
+        "receipt and bundle binding results"
+      ],
+      "failure_disposition": "D01_OPEN__VERIFIED_EXACT_FOR_ALL_AFFECTED_ROOTS_WITHHELD"
+    },
+    {
+      "test_id": "RAT-C-D02-VALUE-TYPE-METADATA-ENFORCEMENT",
+      "repairs": "D-02",
+      "objective": "Prove that complete node type metadata is inferred or resolved from trusted profile/operation contracts and enforced independently of candidate-declared metadata.",
+      "required_binding": [
+        "Source signatures come from trusted source declarations and typed source resolvers.",
+        "Derived signatures are inferred from the operation identifier, ordered parent signatures, parameters, exact value shape/rank, dimension quotient, unit rules, representation/index rules, and domain prerequisites.",
+        "Output signatures are identical to the independently inferred parent signature and satisfy the profile's root declaration.",
+        "Candidate-declared ValueType metadata is compared with the independently determined signature and never supplies the authority used to validate itself."
+      ],
+      "metadata_axes": [
+        "mathematical_kind",
+        "semantic_type",
+        "physical_dimension_equivalence_class",
+        "canonical_unit_convention",
+        "exact_shape_and_rank",
+        "ordered_index_spaces",
+        "representation_tags",
+        "domain_status_and_prerequisites"
+      ],
+      "positive_controls": [
+        {
+          "case_id": "C-P01-COMPLETE-BASELINE",
+          "action": "For all 31 source, 160 derived, and 16 output nodes, derive the trusted expected signature and compare every metadata axis with the candidate and computed exact value.",
+          "pass_condition": "207/207 nodes pass with a per-node signature receipt; all 16 root values remain identical to v1."
+        },
+        {
+          "case_id": "C-P02-VALID-NATURAL-UNIT-QUOTIENT",
+          "action": "Exercise a profile-declared dimension equivalence under the exact quotient lattice.",
+          "pass_condition": "A legitimately quotient-equivalent dimension is accepted and canonicalized to the declared equivalence class without permitting an undeclared conversion."
+        }
+      ],
+      "negative_controls": [
+        {
+          "case_id": "C-N01-MATHEMATICAL-KIND",
+          "mutation": "Replace a node's mathematical kind with another parser-valid kind while preserving its numerical payload.",
+          "required_outcome": "Reject at that node with the expected/observed signature difference."
+        },
+        {
+          "case_id": "C-N02-SEMANTIC-TYPE",
+          "mutation": "Replace semantic type with another profile-valid semantic type.",
+          "required_outcome": "Reject at that node."
+        },
+        {
+          "case_id": "C-N03-DIMENSION",
+          "mutation": "Replace the physical dimension with a non-equivalent profile-valid dimension.",
+          "required_outcome": "Reject at that node before operation acceptance."
+        },
+        {
+          "case_id": "C-N04-UNIT-CONVENTION",
+          "mutation": "Replace the canonical unit convention or claim an undeclared conversion.",
+          "required_outcome": "Reject at that node."
+        },
+        {
+          "case_id": "C-N05-SHAPE-RANK",
+          "mutation": "Change exact tensor/vector shape or rank while preserving compatible-looking flattened entries where possible.",
+          "required_outcome": "Reject at that node."
+        },
+        {
+          "case_id": "C-N06-INDEX-SPACE",
+          "mutation": "Replace, reorder, remove, or add an index space, including COLOR to NATIVE_E substitution.",
+          "required_outcome": "Reject at that node."
+        },
+        {
+          "case_id": "C-N07-REPRESENTATION-TAG",
+          "mutation": "Replace, remove, or add a representation tag, including the reviewed BMHV substitution.",
+          "required_outcome": "Reject at that node."
+        },
+        {
+          "case_id": "C-N08-DOMAIN",
+          "mutation": "Change a domain label, status, regulator/profile identity, or prerequisite while preserving the exact value.",
+          "required_outcome": "Reject at that node."
+        },
+        {
+          "case_id": "C-N09-EDGE-COMPATIBILITY",
+          "mutation": "Keep each node's declared signature locally plausible but connect parents whose independently inferred signatures violate the operation edge contract.",
+          "required_outcome": "Reject at the consuming node."
+        }
+      ],
+      "coverage_rule": "Generate a mutation for every one of the 207 nodes on every applicable metadata axis. Use a different profile-valid value when one exists; otherwise use a typed synthetic fixture proving invalid or unknown metadata rejects. The generated applicability census and every result must be retained—sampling is not sufficient.",
+      "acceptance_gates": [
+        "All 207 baseline nodes receive complete trusted signature receipts and all 16 exact root values match v1.",
+        "Every generated applicable mutation rejects at the intended node with a stable metadata/edge failure code.",
+        "The previously accepted COLOR_TENSOR representation, dimension, index-space, and domain mutations all reject.",
+        "A metadata-invalid candidate cannot obtain a runtime certificate or any VERIFIED_EXACT output.",
+        "The mutation generator's coverage is derived from the frozen graph and trusted signature schema and cannot be manually narrowed."
+      ],
+      "required_evidence": [
+        "trusted source/derived/output signature registry or inference receipts",
+        "207-node baseline signature ledger",
+        "complete generated metadata-mutation census",
+        "per-mutation rejection code and node",
+        "root-value equivalence comparison with v1"
+      ],
+      "failure_disposition": "D02_OPEN__VERIFIED_EXACT_FOR_ALL_AFFECTED_ROOTS_WITHHELD"
+    }
+  ],
+  "global_acceptance_rule": "All three tests must pass in full. Passing counts cannot average away a failed case. Any repair-induced source meaning, physics operation, parent edge, authoritative root value, claim boundary, or mandatory-challenge applicability change requires a broader new scientific review rather than amendment-only review.",
+  "required_flags": {
+    "scientific_promotion": false,
+    "product_v1_release": false,
+    "production_activation": false
+  },
+  "definition_hash": "009590b4923f73956139916b2d43b4b1171b5a32f8125705d4666b90cc5542e9"
+}
