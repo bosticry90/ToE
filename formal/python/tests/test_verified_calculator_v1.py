@@ -684,7 +684,9 @@ def test_cli_run_and_freeze_rejects_non_bundle(tmp_path: Path, capsys: pytest.Ca
 
 def test_implementation_status_is_truthful_and_closure_bound() -> None:
     status = json.loads(Path("formal/docs/release/VERIFIED_CALCULATOR_V1_IMPLEMENTATION_STATUS_20260905_v1.json").read_text(encoding="utf-8"))
-    closure = generate_dependency_closure(Path.cwd())
+    frozen = json.loads(Path(status["c03_rv_profile"]["frozen_bundle_artifact"]).read_text(encoding="utf-8"))
+    assert len(frozen["dependency_manifests"]) == 1
+    closure = frozen["dependency_manifests"][0]
     validate_dependency_closure(closure)
     assert status["local_validation"]["dependency_closure_hash"] == closure["closure_hash"]
     assert status["milestones"]["C03_RV_COMPUTATION_VERIFIED_EXACT_PRE_RELEASE"] == "EARNED"
