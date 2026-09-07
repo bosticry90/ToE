@@ -70,6 +70,18 @@
       "acceptance_tests": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_ACCEPTANCE_TESTS_20260907_v1.json",
       "payload_equivalence_test": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_PAYLOAD_EQUIVALENCE_TEST_20260907_v1.json",
       "execution_checklist": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_EXECUTION_CHECKLIST_20260907_v1.md",
+      "payload_mismatch_report": {
+        "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_PAYLOAD_MISMATCH_REPORT_20260907_v1.json",
+        "status": "NOT_RUN",
+        "required_rows": 643,
+        "report_hash": "839b9254b0059f266e6804d412f00a12ae054626d33474ac4f55002dc74d814e"
+      },
+      "execution_run_log": {
+        "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_EXECUTION_RUN_LOG_20260907_v1.json",
+        "status": "NOT_RUN",
+        "required_checks": 104,
+        "run_log_hash": "edbdf211f6bf22a7d4e9a511385bf02f90afceb770cbe38f9142f01b2c0fb783"
+      },
       "repair_scope": [
         "D-07_FROZEN_DEPENDENCY_HASH_PORTABILITY",
         "D-01_RUNTIME_LEAN_CERTIFICATE_BINDING",
