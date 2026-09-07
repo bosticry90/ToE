@@ -254,7 +254,7 @@ def _d02(bundle: Mapping[str, Any]) -> dict[str, Any]:
     invalid_rejected = False
     invalid_code = None
     try:
-        mutant_candidate = CandidatePacketV1.from_dict(invalid, profile)
+        mutant_candidate = CandidatePacketV1.from_dict(invalid)
         api.evaluate_candidate(api.ContractSetV1(profile, policy, verified_calculator_c03_rv_candidate_v2.v1.normalization.ROOT), request, mutant_candidate)
     except CalculatorError as exc:
         invalid_rejected = True; invalid_code = exc.code
