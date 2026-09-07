@@ -34,6 +34,7 @@ FIXED_ARTIFACT_REFERENCES = (
     "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_POLICY_FREEZE_20260905_v1.json",
     "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_SOURCE_MATERIAL_CONTRACT_20260905_v1.json",
     "formal/docs/release/STRICT_MODEL1_ROUTE_C_CURRENT_AUTHORITY_v0.json",
+    "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_derivation_pure_candidate_pass_0280_v0/provenance_dag_contract.json",
     "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_terminal_adjudication_pass_0275_v0/terminal_adjudication.json",
     "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_values_pass_0272_v0/closeout/six_record_value_damage_matrix.json",
     "formal/python/toe/generic_runner/verified_calculator/schemas/contracts_v1.schema.json",
