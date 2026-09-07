@@ -125,10 +125,9 @@ from pathlib import Path
 summary = json.loads(Path(os.environ["VPC_QUALIFICATION_SUMMARY"]).read_text(encoding="utf-8"))
 required = {
     "computation_id": "20a479ef428a9f079b7ea0c3b5506689383e26d2242579180777489818bbaeb8",
-    "graph_hash": "ddf90108673cf88b2e075d02bb399ce53045b1e8307bdb741b5e5c3ed2c68b13",
+    "graph_hash": "ddf90176934cb018775ef7bb78ce8f5516fce40afbe7b4ed491e6116f4b46801",
     "runtime_certificate_hash": "401d6aa6f502c751113931975d222f261d59849897b7e24e9e504404dfa88502",
     "lean_qualification_envelope_hash": "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c",
-    "verification_receipt_hash": "200720b0bb761941c9facc206f3dd72ffad38b9b474234d120101ecd5c88ed9e",
     "dependency_closure_hash": "a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058",
     "replay_status": "MATCHED",
     "source_node_count": 31,

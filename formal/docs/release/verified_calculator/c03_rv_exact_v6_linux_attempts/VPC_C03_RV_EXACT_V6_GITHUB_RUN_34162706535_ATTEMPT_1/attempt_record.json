@@ -1,0 +1,96 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedAttemptRecordV6",
+  "attempt_id": "VPC_C03_RV_EXACT_V6_3307E355_LINUX_EGRESS_DENIED_34162706535_1",
+  "workflow_run": {
+    "run_id": 34162706535,
+    "run_attempt": 1,
+    "run_number": 2,
+    "event": "push",
+    "head_sha": "da6d699900375f559dbde2802902ed262215873c",
+    "tested_scientific_commit": "3307e35514cc76d63b6039b240c625defbb737d5",
+    "url": "https://github.com/bosticry90/ToE/actions/runs/34162706535",
+    "started_at_utc": "2026-09-07T21:19:22Z",
+    "completed_at_utc": "2026-09-07T21:54:06Z",
+    "github_conclusion": "failure"
+  },
+  "github_artifact": {
+    "artifact_id": 10033772236,
+    "name": "vpc-v6-linux-egress-denied-34162706535-1",
+    "size_displayed": "12.9 KB",
+    "zip_sha256": "cc20ecc4ef0753505d0cb9f84d8f7fa75c810152a9a0d28a3d5acf2dedfbfbe1",
+    "retention_days": 90
+  },
+  "network_boundary_before_execution": {
+    "network_namespace_entered": true,
+    "interface_names": ["lo"],
+    "loopback_only": true,
+    "no_default_ipv4_route": true,
+    "no_default_ipv6_route": true,
+    "ipv4_probe": {"address": "1.1.1.1", "port": 443, "result": "EGRESS_DENIED", "errno": 101},
+    "ipv6_probe": {"address": "2606:4700:4700::1111", "port": 443, "result": "EGRESS_DENIED", "errno": 101}
+  },
+  "trusted_test_closure": {
+    "platform": "linux",
+    "python": "3.10.21",
+    "pytest": "9.0.3",
+    "collected": 270,
+    "passed": 270,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 873.08
+  },
+  "exact_qualification_execution": {
+    "completed": true,
+    "source_node_count": 31,
+    "derived_node_count": 160,
+    "output_root_count": 16,
+    "type_signature_receipt_count": 207,
+    "trusted_physics_operation_count": 19,
+    "challenge_result_count": 373,
+    "derived_corruption_challenged_count": 160,
+    "derived_corruption_unexpected_survivors": [],
+    "replay_status_inside_qualification_entrypoint": "MATCHED",
+    "computation_id": "20a479ef428a9f079b7ea0c3b5506689383e26d2242579180777489818bbaeb8",
+    "graph_hash": "ddf90176934cb018775ef7bb78ce8f5516fce40afbe7b4ed491e6116f4b46801",
+    "runtime_certificate_hash": "401d6aa6f502c751113931975d222f261d59849897b7e24e9e504404dfa88502",
+    "lean_qualification_envelope_hash": "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c",
+    "dependency_closure_hash": "a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058",
+    "linux_verification_receipt_hash": "f0175a60af9b96c869f76ebe727956e9156fb24b84267a480cf93a0637e78084",
+    "linux_bundle_hash": "0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13"
+  },
+  "terminal_failure": {
+    "stage": "TRUSTED_EXACT_QUALIFICATION_POSTCONDITION",
+    "code": "PROCEDURE_STATIC_EXPECTATION_MISMATCH",
+    "mistyped_expected_graph_hash": "ddf90108673cf88b2e075d02bb399ce53045b1e8307bdb741b5e5c3ed2c68b13",
+    "observed_graph_hash": "ddf90176934cb018775ef7bb78ce8f5516fce40afbe7b4ed491e6116f4b46801",
+    "observed_graph_matches_preserved_windows_bundle": true,
+    "overstrict_expected_windows_receipt_hash": "200720b0bb761941c9facc206f3dd72ffad38b9b474234d120101ecd5c88ed9e",
+    "observed_linux_receipt_hash": "f0175a60af9b96c869f76ebe727956e9156fb24b84267a480cf93a0637e78084",
+    "receipt_difference_class": "EXPECTED_PLATFORM_ENVIRONMENT_METADATA__SCIENTIFIC_PROJECTION_NOT_YET_COMPARED",
+    "materiality": "QUALIFICATION_PROCEDURE_DEFECT__NO_OBSERVED_SCIENTIFIC_DISAGREEMENT"
+  },
+  "downstream_stages": {
+    "separate_replay_a": "NOT_RUN",
+    "separate_replay_b": "NOT_RUN",
+    "D-07_peer_acceptance": "NOT_RUN",
+    "D-01_linux_acceptance": "NOT_RUN",
+    "D-02_linux_acceptance": "NOT_RUN",
+    "windows_linux_643_row_comparison": "NOT_RUN",
+    "network_boundary_after_execution": "NOT_RUN"
+  },
+  "evidence_file_hashes": {
+    "outcome.json": "cd8908d94d435a998bfef43c05839874266e1aee0515ebd129f7036177cc2b82",
+    "network_boundary_before.json": "b65cf155a322d24fb58727defe961b4772b1aa819db1b2b1bcb7bdfe2d67fe55",
+    "pytest.log": "719802dd072e62d2f2d331882d31f0125b4fe447ef6c77a4ef8ceadb9c3c6c7a",
+    "pytest.xml": "bfdd781ba38891d9c65ad9f95cabcea3aae9484d487d270173e0279274081e12",
+    "qualification.json": "8a8f2cf1aff8a2aa8bf9aa72057fd76d9de14ca2de4f258005f8b4f535500baf",
+    "provisioning.json": "94186ff7f2fbf45c4d9611970d287fba46dd71884a2a2b9b80d4ae814a6f1d99"
+  },
+  "disposition": "FAIL",
+  "D-07": "INCONCLUSIVE",
+  "linux_egress_denied_qualification": "NOT_EARNED",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}
