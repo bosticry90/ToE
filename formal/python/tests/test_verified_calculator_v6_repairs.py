@@ -179,7 +179,7 @@ def test_payload_comparator_covers_all_frozen_rows(tmp_path: Path) -> None:
     reference = Path("formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json")
     output = tmp_path / "comparison.json"
     environment = dict(os.environ)
-    environment["PYTHONPATH"] = str(Path("formal/python").resolve())
+    environment["PYTHONPATH"] = str(Path.cwd().resolve())
     process = subprocess.run([
         "python", "formal/python/tools/compare_vpc_v6_payload.py",
         "--seed", "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_PAYLOAD_MISMATCH_REPORT_20260907_v1.json",

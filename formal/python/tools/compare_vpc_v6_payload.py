@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 from typing import Any, Mapping
 
-from toe.generic_runner.verified_calculator.canonical import canonical_bytes, digest
+from formal.python.toe.generic_runner.verified_calculator.canonical import canonical_bytes, digest
 
 
 def _index(rows, key):
