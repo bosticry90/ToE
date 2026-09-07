@@ -68,6 +68,8 @@
       "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260907_v6.json",
       "sequence": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_AMENDED_REQUALIFICATION_SEQUENCE_20260907_v1.md",
       "acceptance_tests": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_ACCEPTANCE_TESTS_20260907_v1.json",
+      "payload_equivalence_test": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_PAYLOAD_EQUIVALENCE_TEST_20260907_v1.json",
+      "execution_checklist": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_EXECUTION_CHECKLIST_20260907_v1.md",
       "repair_scope": [
         "D-07_FROZEN_DEPENDENCY_HASH_PORTABILITY",
         "D-01_RUNTIME_LEAN_CERTIFICATE_BINDING",
@@ -145,8 +147,8 @@
     "product_v1": "NOT_RELEASED"
   },
   "remaining_release_work": [
-    "Implement only D-07, D-01, and D-02 under the frozen amended requalification sequence and three repair acceptance tests; calculator-profile scientific requalification remains unearned.",
-    "Generate the amended exact evidence from a clean Git checkout, complete amendment-only non-author review, and only then repeat Linux egress-denied qualification; frozen v1 remains preserved and v5 remains FAIL.",
+    "Implement only D-07, D-01, and D-02 under the frozen amended requalification sequence, three repair acceptance tests, payload-equivalence test, and v6 execution checklist; calculator-profile scientific requalification remains unearned.",
+    "Generate the amended exact evidence from a clean Git checkout, prove complete scientific-payload equivalence, complete amendment-only non-author review, and only then repeat Linux egress-denied qualification; frozen v1 remains preserved and v5 remains FAIL.",
     "Freeze interval, ODE/RGE, uncertainty, unsafe-plugin-boundary, and synthetic-profile subsystem acceptance records.",
     "Assemble the all-or-nothing product release only after every remaining gate passes."
   ],
