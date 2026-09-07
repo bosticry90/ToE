@@ -1,0 +1,465 @@
+{
+  "allowed_node_kinds": [
+    "SOURCE_FACT",
+    "UNIVERSAL_ALGEBRA_PRIMITIVE",
+    "DERIVED_FACT",
+    "APPLICABILITY_DECISION",
+    "REPRESENTATION_DISPATCH",
+    "NORMALIZATION_MAP",
+    "EPISTEMIC_STATE",
+    "OUTPUT_ROOT",
+    "DECLARED_NOTATION_CONVENTION"
+  ],
+  "allowed_operations": [
+    "SOURCE_DECODE",
+    "PERMUTATION_PARITY",
+    "TENSOR_EXCHANGE_EIGENVALUE",
+    "PRODUCT",
+    "EXACT_CLIFFORD_ACTION",
+    "TENSOR_SUM",
+    "TENSOR_DIFFERENCE",
+    "LINEAR_COMBINATION",
+    "GAUGE_GENERATOR_ACTION",
+    "WARD_REDUCTION",
+    "ANGULAR_AVERAGE",
+    "EXACT_MATRIX_PROJECTION",
+    "RELATION_REDUCTION",
+    "DOMAIN_PREDICATE",
+    "INVERTIBLE_NORMALIZATION",
+    "EPISTEMIC_CLASSIFICATION",
+    "OUTPUT_BIND",
+    "CONTRACT_DECODE",
+    "NORMALIZATION_MONOMIAL",
+    "NORMALIZATION_REFERENCE_SCALAR",
+    "NORMALIZATION_RECIPROCAL"
+  ],
+  "c03_physical_required_dag": {
+    "clarification": "The metric-g numerator sum cancels, but the genuine transverse projector sum does not: G_sum=0, L_sum=+Q, and P_T_sum=G_sum-L_sum=-Q. The covariant numerator P_T+xi1*P_L therefore yields (xi1-1)Q before the global phase/charge/target-normalization layers.",
+    "edges": [
+      [
+        "C03.SOURCE.ORDERED_FIELDS",
+        "C03.DERIVED.GRASSMANN_EXCHANGE_SIGN"
+      ],
+      [
+        "C03.SOURCE.COLOR_TENSOR",
+        "C03.DERIVED.COLOR_EXCHANGE_SIGN"
+      ],
+      [
+        "C03.DERIVED.GRASSMANN_EXCHANGE_SIGN",
+        "C03.DERIVED.EXCHANGE_OCCURRENCE_WEIGHT"
+      ],
+      [
+        "C03.DERIVED.COLOR_EXCHANGE_SIGN",
+        "C03.DERIVED.EXCHANGE_OCCURRENCE_WEIGHT"
+      ],
+      [
+        "C03.SOURCE.SPINOR_X",
+        "C03.DERIVED.G_X"
+      ],
+      [
+        "C03.SOURCE.SPINOR_Y",
+        "C03.DERIVED.G_Y"
+      ],
+      [
+        "C03.SOURCE.SPINOR_X",
+        "C03.DERIVED.L_X"
+      ],
+      [
+        "C03.SOURCE.SPINOR_Y",
+        "C03.DERIVED.L_Y"
+      ],
+      [
+        "C03.DERIVED.IDENTITY_OCCURRENCE_WEIGHT",
+        "C03.DERIVED.G_SUM"
+      ],
+      [
+        "C03.DERIVED.EXCHANGE_OCCURRENCE_WEIGHT",
+        "C03.DERIVED.G_SUM"
+      ],
+      [
+        "C03.DERIVED.G_X",
+        "C03.DERIVED.G_SUM"
+      ],
+      [
+        "C03.DERIVED.G_Y",
+        "C03.DERIVED.G_SUM"
+      ],
+      [
+        "C03.DERIVED.IDENTITY_OCCURRENCE_WEIGHT",
+        "C03.DERIVED.L_SUM"
+      ],
+      [
+        "C03.DERIVED.EXCHANGE_OCCURRENCE_WEIGHT",
+        "C03.DERIVED.L_SUM"
+      ],
+      [
+        "C03.DERIVED.L_X",
+        "C03.DERIVED.L_SUM"
+      ],
+      [
+        "C03.DERIVED.L_Y",
+        "C03.DERIVED.L_SUM"
+      ],
+      [
+        "C03.DERIVED.G_SUM",
+        "C03.DERIVED.PT_SUM"
+      ],
+      [
+        "C03.DERIVED.L_SUM",
+        "C03.DERIVED.PT_SUM"
+      ],
+      [
+        "C03.DERIVED.PT_SUM",
+        "C03.DERIVED.COVARIANT_NUMERATOR"
+      ],
+      [
+        "C03.DERIVED.L_SUM",
+        "C03.DERIVED.COVARIANT_NUMERATOR"
+      ],
+      [
+        "C03.SOURCE.GAUGE_PARAMETER",
+        "C03.DERIVED.COVARIANT_NUMERATOR"
+      ],
+      [
+        "C03.DERIVED.COVARIANT_NUMERATOR",
+        "C03.DERIVED.RAW_GRAPH"
+      ],
+      [
+        "C03.SOURCE.DIAGRAM_PHASE",
+        "C03.DERIVED.RAW_GRAPH"
+      ],
+      [
+        "C03.SOURCE.HYPERCHARGE_D",
+        "C03.DERIVED.CHARGE_PRODUCT"
+      ],
+      [
+        "C03.SOURCE.HYPERCHARGE_E",
+        "C03.DERIVED.CHARGE_PRODUCT"
+      ],
+      [
+        "C03.DERIVED.CHARGE_PRODUCT",
+        "C03.DERIVED.RAW_GRAPH"
+      ],
+      [
+        "C03.DERIVED.RAW_GRAPH",
+        "C03.DERIVED.COMMON_NORMALIZED_COEFFICIENT"
+      ],
+      [
+        "C03.DERIVED.COMMON_NORMALIZED_COEFFICIENT",
+        "C03.OUTPUT.PHYSICAL_COEFFICIENT"
+      ],
+      [
+        "C03.SOURCE.COUPLING_MONOMIAL",
+        "C03.DERIVED.REMOVED_MONOMIAL"
+      ],
+      [
+        "C03.CONVENTION.WILSON_SYMBOL",
+        "C03.DERIVED.REMOVED_MONOMIAL"
+      ],
+      [
+        "C03.SOURCE.COMMON_PREFACTOR",
+        "C03.DERIVED.REFERENCE_SCALAR"
+      ],
+      [
+        "C03.DERIVED.REMOVED_MONOMIAL",
+        "C03.DERIVED.REFERENCE_SCALAR"
+      ],
+      [
+        "C03.DERIVED.REFERENCE_SCALAR",
+        "C03.DERIVED.TARGET_NORMALIZATION_SCALE"
+      ],
+      [
+        "C03.DERIVED.TARGET_NORMALIZATION_SCALE",
+        "C03.DERIVED.COMMON_NORMALIZED_COEFFICIENT"
+      ],
+      [
+        "C03.DERIVED.REFERENCE_SCALAR",
+        "C03.DERIVED.COMMON_NORMALIZED_COEFFICIENT"
+      ]
+    ],
+    "nodes": [
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.ORDERED_FIELDS",
+        "required_evidence": "source hash + JSON pointer to ordered fields and repeated-uR orbit"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.COLOR_TENSOR",
+        "required_evidence": "registered epsilon color tensor fingerprint"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.SPINOR_X",
+        "required_evidence": "source bilinear tensor X"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.SPINOR_Y",
+        "required_evidence": "source bilinear tensor Y"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.GAUGE_PARAMETER",
+        "required_evidence": "frozen covariant-gauge propagator convention"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.HYPERCHARGE_D",
+        "required_evidence": "frozen action field registry"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.HYPERCHARGE_E",
+        "required_evidence": "frozen action field registry"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.DIAGRAM_PHASE",
+        "required_evidence": "factorized phase ledger, not a bare target constant"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.IDENTITY_OCCURRENCE_WEIGHT",
+        "operation": "PRODUCT",
+        "required_value": "1"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.GRASSMANN_EXCHANGE_SIGN",
+        "operation": "PERMUTATION_PARITY",
+        "required_value": "-1"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.COLOR_EXCHANGE_SIGN",
+        "operation": "TENSOR_EXCHANGE_EIGENVALUE",
+        "required_value": "-1"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.EXCHANGE_OCCURRENCE_WEIGHT",
+        "operation": "PRODUCT",
+        "required_value": "1"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.G_X",
+        "operation": "EXACT_CLIFFORD_ACTION",
+        "required_value": "2*X-2*Y"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.G_Y",
+        "operation": "EXACT_CLIFFORD_ACTION",
+        "required_value": "-2*X+2*Y"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.L_X",
+        "operation": "WARD_REDUCTION",
+        "required_value": "X"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.L_Y",
+        "operation": "WARD_REDUCTION",
+        "required_value": "Y"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.G_SUM",
+        "operation": "TENSOR_SUM",
+        "required_value": "0"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.L_SUM",
+        "operation": "TENSOR_SUM",
+        "required_value": "Q_DUUE"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.PT_SUM",
+        "operation": "TENSOR_DIFFERENCE",
+        "required_value": "-Q_DUUE"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.COVARIANT_NUMERATOR",
+        "operation": "LINEAR_COMBINATION",
+        "required_value": "(xi1-1)*Q_DUUE"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.CHARGE_PRODUCT",
+        "operation": "PRODUCT",
+        "required_value": "1/3"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.RAW_GRAPH",
+        "operation": "PRODUCT",
+        "required_value": "(1-xi1)*Q_DUUE/3"
+      },
+      {
+        "kind": "NORMALIZATION_MAP",
+        "node_id": "C03.DERIVED.COMMON_NORMALIZED_COEFFICIENT",
+        "operation": "INVERTIBLE_NORMALIZATION",
+        "required_value": "xi1-1"
+      },
+      {
+        "kind": "OUTPUT_ROOT",
+        "node_id": "C03.OUTPUT.PHYSICAL_COEFFICIENT",
+        "operation": "OUTPUT_BIND",
+        "required_value": "xi1-1"
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.COMMON_PREFACTOR",
+        "operation": "SOURCE_DECODE",
+        "required_evidence": "Exact /common_prefactor_factored pointer in pinned, already allowlisted typed universe; check repeated occurrence declarations."
+      },
+      {
+        "kind": "SOURCE_FACT",
+        "node_id": "C03.SOURCE.COUPLING_MONOMIAL",
+        "operation": "SOURCE_DECODE",
+        "required_evidence": "Exact coupling_monomial field in uniquely selected pinned source topology."
+      },
+      {
+        "kind": "DECLARED_NOTATION_CONVENTION",
+        "node_id": "C03.CONVENTION.WILSON_SYMBOL",
+        "operation": "CONTRACT_DECODE",
+        "required_evidence": "Pinned normalization reference_policy/wilson_symbol; notation role only."
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.REMOVED_MONOMIAL",
+        "operation": "NORMALIZATION_MONOMIAL"
+      },
+      {
+        "kind": "DERIVED_FACT",
+        "node_id": "C03.DERIVED.REFERENCE_SCALAR",
+        "operation": "NORMALIZATION_REFERENCE_SCALAR"
+      },
+      {
+        "kind": "NORMALIZATION_MAP",
+        "node_id": "C03.DERIVED.TARGET_NORMALIZATION_SCALE",
+        "operation": "NORMALIZATION_RECIPROCAL"
+      }
+    ]
+  },
+  "dag_checks": [
+    {
+      "check_id": "PD1",
+      "rule": "Node IDs are unique; edge endpoints exist; the graph is acyclic."
+    },
+    {
+      "check_id": "PD2",
+      "rule": "Every SOURCE_FACT has a source artifact hash and exact semantic locator; no oracle/comparison artifact is an ancestor."
+    },
+    {
+      "check_id": "PD3",
+      "rule": "Every DERIVED_FACT has parents, an allowlisted operation, exact typed inputs/outputs, and an independent recomputation receipt."
+    },
+    {
+      "check_id": "PD4",
+      "rule": "Every OUTPUT_ROOT has exactly one derivation root and agrees byte/canonically with the emitted scientific payload."
+    },
+    {
+      "check_id": "PD5",
+      "rule": "All mandatory C03 physical nodes and edges above occur exactly once and recompute to their required typed values."
+    },
+    {
+      "check_id": "PD6",
+      "rule": "Every mandatory source node lies on an active path to the output; decorative provenance is forbidden."
+    },
+    {
+      "check_id": "PD7",
+      "rule": "The C03 native-E root descends from typed occurrences, separate signs, phase/charges, defect columns, N7 relations, and N8 projection; physical leakage and unexplained residual are recomputed."
+    },
+    {
+      "check_id": "PD8",
+      "rule": "Each RV physical root descends from source operator/channel, exact group action, spinor projection, gauge parameter/coupling, and invertible normalization."
+    },
+    {
+      "check_id": "PD9",
+      "rule": "Each evanescent state root descends from an evaluated method, an applicability/domain node, and evidence; no empty container is an epistemic-state parent."
+    },
+    {
+      "check_id": "PD10",
+      "rule": "Changing a mandatory source node changes a declared descendant or causes typed fail-closed termination; a source node with no observable sensitivity fails the gate."
+    },
+    {
+      "check_id": "PD11",
+      "rule": "Record IDs may select source decoders and representation profiles but may not be parents of literal target coefficients, coordinates, or epistemic states."
+    },
+    {
+      "check_id": "PD12",
+      "rule": "A and B provenance graphs have identical canonical nodes, edges, operations, typed values, and source evidence identities, excluding disclosed runtime metadata."
+    }
+  ],
+  "node_schema": {
+    "required_fields": [
+      "node_id",
+      "kind",
+      "semantic_type",
+      "typed_value",
+      "parents",
+      "operation",
+      "domain_status",
+      "epistemic_status",
+      "evidence_refs",
+      "recomputation_digest"
+    ],
+    "source_evidence_fields": [
+      "artifact_path",
+      "artifact_sha256",
+      "semantic_locator"
+    ]
+  },
+  "normalization_amendment_sha256": "646503046f4ab3fc0dd7109964cd8a47eb4b68ee38bab1bc7e2d4988c45372fa",
+  "normalization_operation_scope": {
+    "allowed_only_at": [
+      "C03.CONVENTION.WILSON_SYMBOL",
+      "C03.DERIVED.REMOVED_MONOMIAL",
+      "C03.DERIVED.REFERENCE_SCALAR",
+      "C03.DERIVED.TARGET_NORMALIZATION_SCALE"
+    ],
+    "full_evaluator_support": "REQUIRED_BEFORE_FULL_CANDIDATE_ACCEPTANCE__NOT_GRANTED_BY_THIS_FILE",
+    "inverse_rule": "COMMON_NORMALIZED_COEFFICIENT consumes RAW_GRAPH, TARGET_NORMALIZATION_SCALE and REFERENCE_SCALAR, checks scale*inverse=1 and binds the computed output.",
+    "notation_rule": "CONTRACT_DECODE binds only /reference_policy/wilson_symbol in the pinned normalization contract. It is notation, not an inferred physical constant.",
+    "signatures": {
+      "INVERTIBLE_NORMALIZATION": "Existing value, scale, inverse signature; verify scale*inverse=1",
+      "NORMALIZATION_MONOMIAL": "Product of decoded gauge symbols and declared Wilson symbol; no coefficient literals",
+      "NORMALIZATION_RECIPROCAL": "Exact reciprocal of the derived reference scalar",
+      "NORMALIZATION_REFERENCE_SCALAR": "Exact quotient prefactor/monomial; reject zero, residual symbols and nonrational values"
+    }
+  },
+  "output_roots_required": [
+    "C03.OUTPUT.PHYSICAL_COEFFICIENT",
+    "C03.OUTPUT.EVANESCENT_STATE",
+    "C03.OUTPUT.EVANESCENT_COORDINATES",
+    "RV01.OUTPUT.PHYSICAL_COEFFICIENT",
+    "RV01.OUTPUT.EVANESCENT_STATE",
+    "RV02.OUTPUT.PHYSICAL_COEFFICIENT",
+    "RV02.OUTPUT.EVANESCENT_STATE",
+    "RV03.OUTPUT.PHYSICAL_COEFFICIENT",
+    "RV03.OUTPUT.SOURCE_CHANNEL",
+    "RV03.OUTPUT.EVANESCENT_STATE",
+    "RV04.OUTPUT.PHYSICAL_COEFFICIENT",
+    "RV04.OUTPUT.EVANESCENT_STATE",
+    "RV05.OUTPUT.PHYSICAL_COEFFICIENT",
+    "RV05.OUTPUT.EVANESCENT_STATE",
+    "RV06.OUTPUT.PHYSICAL_COEFFICIENT",
+    "RV06.OUTPUT.EVANESCENT_STATE"
+  ],
+  "parent_contract_binding": {
+    "byte_size": 9455,
+    "path": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_derivation_pure_candidate_pass_0280_v0/provenance_dag_contract.json",
+    "sha256": "e5177e9b4931d9ad0223fb74488592de0bd496c205d6285e62e45a2644f51aa8"
+  },
+  "role": "COMPARISON_SIDE_ACCEPTANCE_CONTRACT_NOT_CANDIDATE_SCIENTIFIC_INPUT",
+  "schema_id": "STRICT_MODEL1_PROVENANCE_DAG_CONTRACT_C03_NORMALIZATION_AMENDMENT_v1",
+  "status": "NORMALIZATION_SEAM_AMENDED__FULL_RUNNER_INTEGRATION_PENDING"
+}

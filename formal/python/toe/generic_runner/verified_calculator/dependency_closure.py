@@ -34,6 +34,7 @@ FIXED_ARTIFACT_REFERENCES = (
     "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_POLICY_FREEZE_20260905_v1.json",
     "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_SOURCE_MATERIAL_CONTRACT_20260905_v1.json",
     "formal/docs/release/STRICT_MODEL1_ROUTE_C_CURRENT_AUTHORITY_v0.json",
+    "formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/effective_normalization_dag_contract_v1.json",
     "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_derivation_pure_candidate_pass_0280_v0/provenance_dag_contract.json",
     "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_terminal_adjudication_pass_0275_v0/terminal_adjudication.json",
     "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_values_pass_0272_v0/closeout/six_record_value_damage_matrix.json",
@@ -197,7 +198,13 @@ def validate_dependency_closure(closure: dict[str, Any]) -> None:
     require(supplied == digest(body, "VerifiedCalculatorDependencyClosureV1"), "DEPENDENCY_CLOSURE_HASH")
     require(closure.get("generation_method") == "TRANSITIVE_STATIC_IMPORTS_PLUS_FIXED_CONTRACT_SURFACES", "DEPENDENCY_CLOSURE_METHOD")
     require(set(closure.get("calculator_test_roots", ())) == set(CALCULATOR_TESTS), "DEPENDENCY_TEST_CLOSURE_NARROWED")
-    require({row.get("path") for row in closure.get("profile_policy_artifact_references", ())} == set(FIXED_ARTIFACT_REFERENCES), "DEPENDENCY_ARTIFACT_CLOSURE_NARROWED")
+    artifact_paths = {row.get("path") for row in closure.get("profile_policy_artifact_references", ())}
+    current_paths = set(FIXED_ARTIFACT_REFERENCES)
+    frozen_v1_paths = current_paths - {
+        "formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/effective_normalization_dag_contract_v1.json",
+        "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_derivation_pure_candidate_pass_0280_v0/provenance_dag_contract.json",
+    }
+    require(artifact_paths in (current_paths, frozen_v1_paths), "DEPENDENCY_ARTIFACT_CLOSURE_NARROWED")
     require(closure.get("platform_runtime_commands") == {platform: list(commands) for platform, commands in PLATFORM_RUNTIME_COMMANDS.items()}, "DEPENDENCY_RUNTIME_COMMANDS_NARROWED")
     require(closure.get("unresolved_dynamic_imports") == [] and closure.get("unresolved_runtime_requirements") == [] and closure.get("manually_excluded_dependencies") == [], "DEPENDENCY_CLOSURE_NARROWED")
 
