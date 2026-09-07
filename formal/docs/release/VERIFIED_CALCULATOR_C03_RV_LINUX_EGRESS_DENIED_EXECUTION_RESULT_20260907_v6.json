@@ -1,0 +1,93 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedExecutionResultV6",
+  "as_of": "2026-09-07",
+  "attempt": {
+    "attempt_id": "VPC_C03_RV_EXACT_V6_3307E355_LINUX_EGRESS_DENIED_34167712902_1",
+    "disposition": "PASS",
+    "linux_egress_denied_qualification_earned": true,
+    "terminal_stage": "COMPLETE",
+    "exit_code": 0,
+    "provisioning_completed_before_isolation": true,
+    "network_namespace_entered": true,
+    "trusted_qualification_completed": true,
+    "complete_result_emitted": true,
+    "fallback_connected_execution_used": false
+  },
+  "github": {
+    "workflow_run_id": 34167712902,
+    "workflow_run_number": 6,
+    "workflow_run_url": "https://github.com/bosticry90/ToE/actions/runs/34167712902",
+    "job_id": 101881966692,
+    "job_url": "https://github.com/bosticry90/ToE/actions/runs/34167712902/job/101881966692",
+    "qualification_lineage_commit": "eec9da7374515b0235d2b3d4cabca0871e4387a5",
+    "tested_scientific_commit": "3307e35514cc76d63b6039b240c625defbb737d5",
+    "started_at_utc": "2026-09-07T22:44:55Z",
+    "completed_at_utc": "2026-09-07T23:20:14Z"
+  },
+  "preserved_artifact": {
+    "github_artifact_id": 10035287072,
+    "github_artifact_name": "vpc-v6-linux-egress-denied-34167712902-1",
+    "github_artifact_size_bytes": 700548,
+    "archive_sha256": "5e3244fd2a0745b0f62e7a1d03f0f30630a92e045f2f62ba8974396fdf449f39",
+    "expires_at_utc": "2026-12-06T22:44:52Z",
+    "attempt_record": "formal/docs/release/verified_calculator/c03_rv_exact_v6_linux_attempts/VPC_C03_RV_EXACT_V6_GITHUB_RUN_34167712902_ATTEMPT_1/attempt_record.json",
+    "declared_file_count": 25,
+    "revalidated_file_count": 25,
+    "hash_or_size_mismatch_count": 0
+  },
+  "network_isolation": {
+    "before_and_after_identical": true,
+    "interfaces": ["lo"],
+    "loopback_only": true,
+    "no_default_ipv4_route": true,
+    "no_default_ipv6_route": true,
+    "ipv4_probe_before_and_after": "EGRESS_DENIED_ERRNO_101",
+    "ipv6_probe_before_and_after": "EGRESS_DENIED_ERRNO_101",
+    "claim_boundary": "EGRESS_DENIED_TRUSTED_EXECUTION_AFTER_CONNECTED_ENVIRONMENT_PROVISIONING__NOT_OFFLINE_ENVIRONMENT_CONSTRUCTION__NOT_HOSTILE_CODE_SANDBOX"
+  },
+  "trusted_execution": {
+    "tests": "270/270_PASS",
+    "test_duration_seconds": 891.59,
+    "source_nodes": 31,
+    "derived_nodes": 160,
+    "type_signatures": 207,
+    "trusted_operations": 19,
+    "authoritative_roots": 16,
+    "mandatory_challenge_results": 373,
+    "derived_corruptions_rejected": "160/160",
+    "unexpected_corruption_survivors": 0,
+    "entrypoint_replay": "MATCHED",
+    "separate_replay_a": "MATCHED",
+    "separate_replay_b": "MATCHED"
+  },
+  "repair_gates": {
+    "D-07": "PASS",
+    "D-01": "PASS_26_CONTROLS",
+    "D-02": "PASS_207_BASELINES_1656_METADATA_MUTATIONS_160_EDGE_MUTATIONS",
+    "overall": "PASS"
+  },
+  "scientific_payload_equivalence": {
+    "reference_windows_bundle": "b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc",
+    "linux_bundle": "0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13",
+    "comparison": "643/643_MATCH",
+    "mismatch": 0,
+    "missing": 0,
+    "duplicate": 0,
+    "unclassified_delta": 0
+  },
+  "fixed_scientific_identities": {
+    "computation_id": "20a479ef428a9f079b7ea0c3b5506689383e26d2242579180777489818bbaeb8",
+    "graph_hash": "ddf90176934cb018775ef7bb78ce8f5516fce40afbe7b4ed491e6116f4b46801",
+    "runtime_certificate_hash": "401d6aa6f502c751113931975d222f261d59849897b7e24e9e504404dfa88502",
+    "lean_qualification_envelope_hash": "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c",
+    "dependency_closure_hash": "a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058"
+  },
+  "remaining_gate": {
+    "amendment_only_non_author_review": "NOT_RUN",
+    "bounded_requalification": "NOT_EARNED",
+    "authority_adjudication": "NOT_RUN"
+  },
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}
