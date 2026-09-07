@@ -31,10 +31,6 @@ concurrency:
 
 env:
   VPC_TESTED_COMMIT: 3307e35514cc76d63b6039b240c625defbb737d5
-  VPC_TESTED_ROOT: ${{ runner.temp }}/vpc-tested-3307e355
-  VPC_OUTPUT: ${{ runner.temp }}/vpc-tested-3307e355/formal/output/vpc_v6_linux_egress_denied
-  VPC_WINDOWS_REFERENCE: ${{ github.workspace }}/formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json
-  VPC_PAYLOAD_LEDGER_SEED: ${{ runner.temp }}/vpc-tested-3307e355/formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_PAYLOAD_MISMATCH_REPORT_20260907_v1.json
 
 jobs:
   exact-profile:
@@ -51,12 +47,22 @@ jobs:
       - name: Materialize exact tested commit and initialize attempt
         shell: bash
         run: |
+          tested_root="$RUNNER_TEMP/vpc-tested-3307e355"
+          output="$tested_root/formal/output/vpc_v6_linux_egress_denied"
+          windows_reference="$GITHUB_WORKSPACE/formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json"
+          payload_seed="$tested_root/formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_PAYLOAD_MISMATCH_REPORT_20260907_v1.json"
+          {
+            echo "VPC_TESTED_ROOT=$tested_root"
+            echo "VPC_OUTPUT=$output"
+            echo "VPC_WINDOWS_REFERENCE=$windows_reference"
+            echo "VPC_PAYLOAD_LEDGER_SEED=$payload_seed"
+          } >> "$GITHUB_ENV"
           git cat-file -e "${VPC_TESTED_COMMIT}^{commit}"
-          git worktree add --detach "$VPC_TESTED_ROOT" "$VPC_TESTED_COMMIT"
-          test "$(git -C "$VPC_TESTED_ROOT" rev-parse HEAD)" = "$VPC_TESTED_COMMIT"
-          test -f "$VPC_WINDOWS_REFERENCE"
-          mkdir -p "$VPC_OUTPUT"
-          python3 - <<'PY' > "$VPC_OUTPUT/attempt.json"
+          git worktree add --detach "$tested_root" "$VPC_TESTED_COMMIT"
+          test "$(git -C "$tested_root" rev-parse HEAD)" = "$VPC_TESTED_COMMIT"
+          test -f "$windows_reference"
+          mkdir -p "$output"
+          python3 - <<'PY' > "$output/attempt.json"
           from datetime import datetime, timezone
           import json
           import os
@@ -93,7 +99,7 @@ jobs:
       - name: Setup and build both Lean evidence checkers before isolation
         uses: leanprover/lean-action@v1
         with:
-          lake-package-directory: ${{ env.VPC_TESTED_ROOT }}/formal/toe_formal
+          lake-package-directory: ${{ runner.temp }}/vpc-tested-3307e355/formal/toe_formal
           auto-config: false
           build: true
           build-args: vpc_certificate_checker vpc_qualification_envelope_checker

@@ -1,0 +1,32 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedAttemptRecordV6",
+  "attempt_id": "VPC_C03_RV_EXACT_V6_GITHUB_RUN_34162555952_ATTEMPT_1",
+  "workflow_run": {
+    "run_id": 34162555952,
+    "run_attempt": 1,
+    "event": "push",
+    "head_sha": "ea3515cc4ef2515e7e24affabfdb4de00c976a51",
+    "workflow_path": ".github/workflows/verified-calculator-v6-linux-egress-denied.yml",
+    "url": "https://github.com/bosticry90/ToE/actions/runs/34162555952",
+    "created_at_utc": "2026-09-07T21:16:48Z",
+    "completed_at_utc": "2026-09-07T21:16:48Z",
+    "github_conclusion": "failure",
+    "job_count": 0
+  },
+  "disposition": "INCONCLUSIVE",
+  "terminal_stage": "WORKFLOW_VALIDATION_BEFORE_RUNNER_ALLOCATION",
+  "failure": {
+    "code": "GITHUB_ACTIONS_TOP_LEVEL_RUNNER_CONTEXT_UNAVAILABLE",
+    "annotation": "Invalid workflow file at lines 34, 35, and 37: runner.temp is unavailable in the top-level env context.",
+    "materiality": "QUALIFICATION_INFRASTRUCTURE_ONLY__NO_LINUX_RUNNER_OR_TRUSTED_EXECUTION_STARTED"
+  },
+  "tested_scientific_commit_reached": false,
+  "network_namespace_entered": false,
+  "linux_scientific_result_exists": false,
+  "D-07": "INCONCLUSIVE",
+  "D-01": "NOT_RUN_ON_LINUX",
+  "D-02": "NOT_RUN_ON_LINUX",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}
