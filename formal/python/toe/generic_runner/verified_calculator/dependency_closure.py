@@ -307,6 +307,9 @@ def generate_dependency_closure_v2(
     v2_seed_paths = (
         "formal/python/toe/generic_runner/verified_calculator_c03_rv_candidate_v2.py",
         "formal/python/toe/generic_runner/verified_calculator_c03_rv_qualification_v2.py",
+        "formal/python/tools/compare_vpc_v6_payload.py",
+        "formal/python/tools/generate_vpc_v6_execution_records.py",
+        "formal/python/tools/run_vpc_v6_repair_acceptance.py",
         "formal/python/tests/test_verified_calculator_v6_repairs.py",
     )
     extra_rows, extra_external, extra_dynamic = _transitive_python_files(

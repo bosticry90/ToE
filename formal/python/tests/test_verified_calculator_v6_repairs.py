@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from dataclasses import replace
 import hashlib
+import json
+import os
 from pathlib import Path
 import subprocess
 
@@ -10,6 +12,7 @@ import pytest
 from formal.python.toe.generic_runner.verified_calculator.c03_rv_operation_contracts import DERIVED_SIGNATURES, SOURCE_SIGNATURES
 from formal.python.toe.generic_runner.verified_calculator.c03_rv_policy import physics_profile
 from formal.python.toe.generic_runner.verified_calculator.c03_rv_type_contracts import trusted_value_type, trusted_value_type_registry, validate_node_edge, validate_node_type
+from formal.python.toe.generic_runner.verified_calculator.challenges import canonical_graph_hash, challenge_seed_graph_hash, instantiate, select_targets
 from formal.python.toe.generic_runner.verified_calculator.dag import NodeV1
 from formal.python.toe.generic_runner.verified_calculator.dependency_closure import _identity_row, canonical_text_v1_bytes, canonical_text_v1_sha256
 from formal.python.toe.generic_runner.verified_calculator.errors import CalculatorError
@@ -150,6 +153,45 @@ def test_d02_declared_natural_unit_quotient_only() -> None:
     zero = DimensionVectorV1.decode(["0", "0", "0"], profile.dimensions)
     assert quotient.equivalent(mass, inverse_length)
     assert not quotient.equivalent(length, zero)
+
+
+def test_d02_explicit_shape_preserves_frozen_challenge_seeds() -> None:
+    from formal.python.toe.generic_runner import verified_calculator_c03_rv_candidate_v1 as candidate_v1
+    from formal.python.toe.generic_runner import verified_calculator_c03_rv_candidate_v2 as candidate_v2
+    from formal.python.toe.generic_runner.verified_calculator.c03_rv_policy import mandatory_challenge_specs
+
+    *_, old_candidate = candidate_v1.candidate()
+    *_, amended_candidate = candidate_v2.candidate()
+    old_graph_hash = canonical_graph_hash(old_candidate)
+    amended_graph_hash = canonical_graph_hash(amended_candidate)
+    assert old_graph_hash != amended_graph_hash
+    assert challenge_seed_graph_hash(old_candidate) == challenge_seed_graph_hash(amended_candidate) == old_graph_hash
+
+    spec = mandatory_challenge_specs()[0]
+    target = select_targets(spec, old_candidate)[0]
+    old_packet = instantiate(spec, old_candidate, old_graph_hash, target)
+    amended_packet = instantiate(spec, amended_candidate, amended_graph_hash, target)
+    assert old_packet.baseline_graph_hash != amended_packet.baseline_graph_hash
+    assert old_packet.concrete_seed == amended_packet.concrete_seed
+
+
+def test_payload_comparator_covers_all_frozen_rows(tmp_path: Path) -> None:
+    reference = Path("formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json")
+    output = tmp_path / "comparison.json"
+    environment = dict(os.environ)
+    environment["PYTHONPATH"] = str(Path("formal/python").resolve())
+    process = subprocess.run([
+        "python", "formal/python/tools/compare_vpc_v6_payload.py",
+        "--seed", "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_PAYLOAD_MISMATCH_REPORT_20260907_v1.json",
+        "--reference", str(reference), "--amended", str(reference),
+        "--output", str(output), "--attempt-id", "SELF_COMPARISON_CONTROL",
+    ], capture_output=True, text=True, check=False, env=environment)
+    assert process.returncode == 0, process.stderr
+    result = json.loads(output.read_text(encoding="utf-8"))
+    assert result["schema_id"] == "VerifiedCalculatorC03RVExactPayloadEquivalenceResultV1"
+    assert result["status"] == "PASS"
+    assert len(result["rows"]) == result["summary"]["MATCH"] == 643
+    assert all(row["reference_projection"] == row["amended_projection"] for row in result["rows"])
 
 
 def _minimal_d01_fixture():

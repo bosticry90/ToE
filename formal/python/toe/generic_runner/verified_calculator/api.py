@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 from .canonical import digest, strict_json_file
-from .challenges import ChallengeResultV1, ChallengeSpecV1, instantiate, run_challenge, select_targets
+from .challenges import ChallengeResultV1, ChallengeSpecV1, challenge_seed_graph_hash, instantiate, run_challenge, select_targets
 from .contracts import AuthorityAttachmentV1, CandidatePacketV1, CalculationRequestV1, ExecutionStatus, PhysicsProfileV1, ReplayStatus, ScientificAuthorityBindingV1, VerificationPolicyV1
 from .dag import EvaluationResultV1, ExactDagVerifierV1
 from .evidence import ClaimLedgerEntryV1, FrozenEvidenceBundleV1, RuntimeCertificateV1, VerificationReceiptV1, attach_authority as _attach_authority, build_runtime_certificate, freeze_bundle, promote_exact_outputs, replay_bundle, runtime_environment
@@ -91,6 +91,7 @@ def evaluate_candidate(contracts: ContractSetV1, request: CalculationRequestV1, 
 
 def run_challenges(run: EvaluatedRunV1, specs: Sequence[ChallengeSpecV1]) -> tuple[ChallengeResultV1, ...]:
     results: list[ChallengeResultV1] = []
+    seed_graph_hash = challenge_seed_graph_hash(run.candidate)
     if run.contracts.profile.profile_id == "C03_RV_SU5_EXACT_PROFILE_v1":
         from .c03_rv_exact_verifier import C03RVExactProfileVerifierV1, C03RVExactProfileVerifierV2
         with trusted_offline():
@@ -113,14 +114,14 @@ def run_challenges(run: EvaluatedRunV1, specs: Sequence[ChallengeSpecV1]) -> tup
                         if spec.required_consequence == "VERIFIER_REJECTS"
                         else (lambda candidate: evaluate_candidate(run.contracts, run.request, candidate).evaluation)
                     )
-                    packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
-                    results.append(run_challenge(spec, packet, run.candidate, verifier, run.evaluation, packet_derivation_prevalidated=True))
+                    packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True, seed_graph_hash=seed_graph_hash)
+                    results.append(run_challenge(spec, packet, run.candidate, verifier, run.evaluation, packet_derivation_prevalidated=True, seed_graph_hash=seed_graph_hash))
     else:
         verifier = lambda candidate: evaluate_candidate(run.contracts, run.request, candidate).evaluation
         for spec in specs:
             for target in select_targets(spec, run.candidate):
-                packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
-                results.append(run_challenge(spec, packet, run.candidate, verifier, run.evaluation))
+                packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True, seed_graph_hash=seed_graph_hash)
+                results.append(run_challenge(spec, packet, run.candidate, verifier, run.evaluation, seed_graph_hash=seed_graph_hash))
     return tuple(results)
 
 
@@ -154,6 +155,7 @@ def verify_run(
     mandatory_hashes = set(run.contracts.policy.mandatory_challenge_hashes)
     mandatory_packets_by_root: dict[str, list[str]] = {root: [] for root in run.evaluation.outputs}
     if mandatory_hashes:
+        seed_graph_hash = challenge_seed_graph_hash(run.candidate)
         require(set(specs_by_hash) >= mandatory_hashes, "MANDATORY_CHALLENGE_SPEC_MISSING")
         expected_packets = []
         for spec_hash in sorted(mandatory_hashes):
@@ -161,13 +163,19 @@ def verify_run(
             targets = select_targets(spec, run.candidate)
             require(targets, "MANDATORY_CHALLENGE_NOT_APPLICABLE", spec.challenge_id)
             for target in targets:
-                packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
+                packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True, seed_graph_hash=seed_graph_hash)
                 expected_packets.append(packet.packet_hash)
                 for root in packet.affected_roots:
                     mandatory_packets_by_root[root].append(packet.packet_hash)
         observed_packets = {row.challenge_packet_hash for row in challenge_results if row.mandatory}
         require(observed_packets == set(expected_packets), "MANDATORY_CHALLENGE_EXECUTION_INCOMPLETE")
-    python_payload = {"verifier": run.contracts.policy.python_verifier, "certificate": run.certificate.to_dict(), "node_receipts": [row.to_dict() for row in run.evaluation.receipts]}
+    python_payload = {
+        "verifier": run.contracts.policy.python_verifier,
+        "certificate": run.certificate.to_dict(),
+        "node_receipts": [row.to_dict() for row in run.evaluation.receipts],
+    }
+    if run.evaluation.type_signature_receipts:
+        python_payload["type_signature_receipts"] = [row.to_dict() for row in run.evaluation.type_signature_receipts]
     python_hash = digest(python_payload, "PythonTrustedVerificationV1")
     outputs = promote_exact_outputs(
         run.evaluation, run.certificate, python_receipt_hash=python_hash,
@@ -211,10 +219,11 @@ def assemble_evidence_bundle(
 ) -> FrozenEvidenceBundleV1:
     require(receipt.computation_id == run.request.computation_id and receipt.candidate_hash == run.candidate.candidate_hash, "BUNDLE_RUN_RECEIPT_BINDING")
     packets = []
+    seed_graph_hash = challenge_seed_graph_hash(run.candidate)
     packet_hashes = {row.challenge_packet_hash for row in receipt.challenge_results}
     for spec in challenge_specs:
         for target in select_targets(spec, run.candidate):
-            packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True)
+            packet = instantiate(spec, run.candidate, run.evaluation.graph_hash, target, baseline_binding_prevalidated=True, seed_graph_hash=seed_graph_hash)
             if packet.packet_hash in packet_hashes:
                 packets.append(packet.to_dict())
     require({digest(row, "ChallengePacketV1") for row in packets} == packet_hashes, "BUNDLE_CHALLENGE_PACKET_MISSING")
@@ -223,6 +232,8 @@ def assemble_evidence_bundle(
         "certificate": run.certificate.to_dict(),
         "node_receipts": [row.to_dict() for row in run.evaluation.receipts],
     }
+    if run.evaluation.type_signature_receipts:
+        python_payload["type_signature_receipts"] = [row.to_dict() for row in run.evaluation.type_signature_receipts]
     verifier_evidence: list[Mapping[str, Any]] = [{
         "evidence_kind": "PYTHON_TRUSTED_VERIFICATION",
         "receipt_hash": digest(python_payload, "PythonTrustedVerificationV1"),

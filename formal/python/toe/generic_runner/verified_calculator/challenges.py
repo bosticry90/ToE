@@ -122,6 +122,30 @@ def canonical_graph_hash(candidate: CandidatePacketV1) -> str:
     return digest({"nodes": [nodes[key] for key in sorted(nodes)], "edges": [list(edge) for edge in sorted(edges)]}, "CandidateGraphV1")
 
 
+def challenge_seed_graph_hash(candidate: CandidatePacketV1) -> str:
+    """Return the stable scientific graph identity used by DERIVED seeds.
+
+    ``ValueTypeV1.shape`` became explicit in the v6 evidence lineage.  The
+    shape is enforced by the trusted verifier, while the pre-v6 challenge
+    corpus derived its concrete seeds from the otherwise identical graph in
+    which that field was implicit.  Seed identity therefore projects out only
+    this versioned evidence representation field.  Challenge packets remain
+    bound to ``canonical_graph_hash`` of the complete graph, so this projection
+    cannot weaken baseline-graph custody or descendant confinement.
+    """
+    nodes = _baseline_nodes(candidate)
+    normalized_nodes = []
+    for identity in sorted(nodes):
+        node = deepcopy(nodes[identity])
+        node["value_type"].pop("shape", None)
+        normalized_nodes.append(node)
+    edges = [tuple(edge) for edge in candidate.graph["edges"]]
+    return digest(
+        {"nodes": normalized_nodes, "edges": [list(edge) for edge in sorted(edges)]},
+        "CandidateGraphV1",
+    )
+
+
 def _descendants(candidate: CandidatePacketV1, target: str) -> tuple[str, ...]:
     nodes = _baseline_nodes(candidate)
     require(target in nodes, "CHALLENGE_TARGET_NOT_FOUND", target)
@@ -169,6 +193,7 @@ def instantiate(
     target: str,
     *,
     baseline_binding_prevalidated: bool = False,
+    seed_graph_hash: str | None = None,
 ) -> ChallengePacketV1:
     if not baseline_binding_prevalidated:
         require(canonical_graph_hash(candidate) == baseline_graph_hash, "CHALLENGE_BASELINE_GRAPH_BINDING")
@@ -183,7 +208,8 @@ def instantiate(
     if policy["kind"] == "FIXED":
         seed = policy["seed"]
     else:
-        seed = int(digest({"spec": spec.spec_hash, "graph": baseline_graph_hash, "target": target}, "ChallengeSeedV1")[:16], 16)
+        seed_graph_hash = seed_graph_hash or challenge_seed_graph_hash(candidate)
+        seed = int(digest({"spec": spec.spec_hash, "graph": seed_graph_hash, "target": target}, "ChallengeSeedV1")[:16], 16)
     require(type(seed) is int and 0 <= seed < 2 ** 64, "CHALLENGE_SEED")
     return ChallengePacketV1(spec.spec_hash, baseline_graph_hash, target, descendants, roots, seed)
 
@@ -194,12 +220,19 @@ def apply_mutation(
     candidate: CandidatePacketV1,
     *,
     packet_derivation_prevalidated: bool = False,
+    seed_graph_hash: str | None = None,
 ) -> CandidatePacketV1:
     if not packet_derivation_prevalidated:
         require(canonical_graph_hash(candidate) == packet.baseline_graph_hash, "CHALLENGE_BASELINE_GRAPH_BINDING")
     require(packet.challenge_spec_hash == spec.spec_hash, "CHALLENGE_SPEC_BINDING")
     if not packet_derivation_prevalidated:
-        expected = instantiate(spec, candidate, packet.baseline_graph_hash, packet.injection_node)
+        expected = instantiate(
+            spec,
+            candidate,
+            packet.baseline_graph_hash,
+            packet.injection_node,
+            seed_graph_hash=seed_graph_hash,
+        )
         require(packet == expected, "CHALLENGE_PACKET_BASELINE_DERIVATION")
     # Copy the mutation target and the small top-level collections, while
     # sharing untouched canonical subtrees from the frozen baseline.  C03/RV
@@ -359,8 +392,15 @@ def run_challenge(
     baseline_result: Any | None = None,
     *,
     packet_derivation_prevalidated: bool = False,
+    seed_graph_hash: str | None = None,
 ) -> ChallengeResultV1:
-    mutated = apply_mutation(spec, packet, candidate, packet_derivation_prevalidated=packet_derivation_prevalidated)
+    mutated = apply_mutation(
+        spec,
+        packet,
+        candidate,
+        packet_derivation_prevalidated=packet_derivation_prevalidated,
+        seed_graph_hash=seed_graph_hash,
+    )
     baseline_result = verifier(candidate) if baseline_result is None else baseline_result
     try:
         mutant_result = verifier(mutated)

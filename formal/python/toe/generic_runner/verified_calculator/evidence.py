@@ -281,14 +281,48 @@ class FrozenEvidenceBundleV1:
             legacy_payload = evidence_by_kind.get("LEAN_RUNTIME_CERTIFICATE_CHECK", {}).get("payload", {})
             qualification_payload = evidence_by_kind.get("LEAN_QUALIFICATION_ENVELOPE_CHECK", {}).get("payload", {})
             if qualification_payload:
-                from .qualification_envelope import QualificationEnvelopeV1
+                from .qualification_envelope import QualificationEnvelopeV1, QualificationExpectedContextV1
                 envelope_data = qualification_payload.get("qualification_envelope", {})
                 envelope = QualificationEnvelopeV1({key: value for key, value in envelope_data.items() if key != "schema_id"})
+                python_payload = evidence_by_kind.get("PYTHON_TRUSTED_VERIFICATION", {}).get("payload", {})
+                type_receipts = python_payload.get("type_signature_receipts", ())
+                mandatory_specs = sorted((row for row in specs if row.mandatory), key=lambda row: row.spec_hash)
+                mandatory_results = sorted((row for row in receipt.challenge_results if row.mandatory), key=lambda row: row.challenge_packet_hash)
+                julia_evidence = evidence_by_kind.get("JULIA_INDEPENDENT_RECOMPUTATION", {})
+                expected_commitments = {
+                    "certificate_format_version": "RuntimeCertificateV1+QualificationEnvelopeV1",
+                    "runtime_certificate_hash": certificate.certificate_hash,
+                    "computation_id": request.computation_id,
+                    "calculation_request_hash": digest(self.request, "CalculationRequestV1:transport"),
+                    "candidate_hash": candidate.candidate_hash,
+                    "physics_profile_hash": request.physics_profile_hash,
+                    "verification_policy_hash": request.verification_policy_hash,
+                    "source_receipt_set_hash": digest(list(certificate.source_receipt_hashes), "ResolvedSourceReceiptSetV1"),
+                    "graph_hash": certificate.graph_hash,
+                    "ordered_node_trace_hash": digest(list(certificate.node_trace), "OrderedNodeTraceV1"),
+                    "authoritative_roots": sorted(certificate.output_value_hashes),
+                    "canonical_exact_output_value_hashes": dict(sorted(certificate.output_value_hashes.items())),
+                    "julia_evidence_hash": julia_evidence.get("receipt_hash"),
+                    "mandatory_challenge_spec_set_hash": digest([row.to_dict() for row in mandatory_specs], "MandatoryChallengeSpecSetV1"),
+                    "mandatory_challenge_packet_set_hash": digest([row.challenge_packet_hash for row in mandatory_results], "MandatoryChallengePacketSetV1"),
+                    "mandatory_challenge_result_set_hash": digest([row.to_dict() for row in mandatory_results], "MandatoryChallengeResultSetV1"),
+                    "challenge_applicability_hash": digest([
+                        {"challenge_packet_hash": row.challenge_packet_hash, "affected_roots": list(row.affected_roots), "disposition": row.disposition.value}
+                        for row in mandatory_results
+                    ], "ChallengeApplicabilitySetV1"),
+                    "type_signature_set_hash": digest(list(type_receipts), "C03RVTypeSignatureReceiptSetV1"),
+                    "status_ceiling": certificate.status_ceiling,
+                    "scientific_promotion": receipt.scientific_promotion,
+                    "product_v1_release": receipt.product_v1_release,
+                    "production_activation": receipt.production_activation,
+                }
+                expected_context = QualificationExpectedContextV1(expected_commitments)
                 require(
                     lean_hashes == {envelope.envelope_hash}
                     and qualification_payload.get("accepted_envelope_hash") == envelope.envelope_hash
                     and qualification_payload.get("bound_runtime_certificate_hash") == certificate.certificate_hash
-                    and envelope.commitments.get("runtime_certificate_hash") == certificate.certificate_hash,
+                    and envelope.commitments == expected_commitments
+                    and qualification_payload.get("expected_context_hash") == digest(expected_context.to_dict(), "QualificationExpectedContextV1"),
                     "BUNDLE_LEAN_QUALIFICATION_BINDING",
                 )
             else:
