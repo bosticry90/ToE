@@ -26,7 +26,7 @@ TYPE_AXES = (
 )
 ZERO_DIMENSION = ["0", "0", "0"]
 UNIT = "SU5_NATURAL_HBAR_C_1"
-DOMAIN = {"profile": "C03_RV_SU5_EXACT_PROFILE_v1", "status": "EXACT_SOURCE_BOUND"}
+DOMAIN = {"profile": "C03_RV_SU5_EXACT_PROFILE_v1"}
 
 
 def _output_kind_shape(semantic_type: str) -> tuple[str, list[int], list[str]]:
