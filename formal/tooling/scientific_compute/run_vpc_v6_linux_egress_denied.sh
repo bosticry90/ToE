@@ -145,10 +145,12 @@ if any(summary.get(key) is not False for key in ("scientific_promotion", "produc
 print((Path(os.environ["VPC_TESTED_ROOT"]) / summary["frozen_bundle_path"]).resolve())
 PY
 )
-cp "$linux_bundle" "$output_directory/linux_bundle.json"
+mkdir -p "$output_directory/bundles"
+preserved_linux_bundle="$output_directory/bundles/$(basename "$linux_bundle")"
+cp "$linux_bundle" "$preserved_linux_bundle"
 
 stage="DETERMINISTIC_REPLAY_A"
-export VPC_LINUX_BUNDLE="$output_directory/linux_bundle.json"
+export VPC_LINUX_BUNDLE="$preserved_linux_bundle"
 python - <<'PY' > "$output_directory/replay_a.json"
 import json
 import os
@@ -192,7 +194,7 @@ stage="WINDOWS_LINUX_643_ROW_SCIENTIFIC_COMPARISON"
 python formal/python/tools/compare_vpc_v6_payload.py \
   --seed "$payload_ledger_seed" \
   --reference "$windows_reference_bundle" \
-  --amended "$output_directory/linux_bundle.json" \
+  --amended "$preserved_linux_bundle" \
   --output "$output_directory/windows_linux_payload_equivalence.json" \
   --attempt-id "$attempt_id" > "$output_directory/windows_linux_payload_equivalence.stdout.log" 2> "$output_directory/windows_linux_payload_equivalence.stderr.log"
 grep -q '"status": "PASS"' "$output_directory/windows_linux_payload_equivalence.stdout.log"

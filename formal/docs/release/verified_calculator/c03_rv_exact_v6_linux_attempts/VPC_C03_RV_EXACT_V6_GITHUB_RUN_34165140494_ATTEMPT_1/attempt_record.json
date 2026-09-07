@@ -1,0 +1,94 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedAttemptRecordV6",
+  "attempt_id": "VPC_C03_RV_EXACT_V6_3307E355_LINUX_EGRESS_DENIED_34165140494_1",
+  "workflow_run": {
+    "run_id": 34165140494,
+    "run_attempt": 1,
+    "run_number": 4,
+    "event": "push",
+    "head_sha": "140bc3f04d78fa35d42a1f2a43b6bb819f22b9ca",
+    "tested_scientific_commit": "3307e35514cc76d63b6039b240c625defbb737d5",
+    "url": "https://github.com/bosticry90/ToE/actions/runs/34165140494",
+    "started_at_utc": "2026-09-07T22:00:37Z",
+    "completed_at_utc": "2026-09-07T22:37:40Z",
+    "github_conclusion": "failure"
+  },
+  "github_artifact": {
+    "artifact_id": 10034563269,
+    "name": "vpc-v6-linux-egress-denied-34165140494-1",
+    "size_in_bytes": 241215,
+    "zip_sha256": "76fc04fd5aaa556b7eeb3f404095829785df2e19207d8354aa3575148b07f0ef",
+    "expires_at_utc": "2026-12-06T22:00:34Z"
+  },
+  "network_boundary_before_execution": {
+    "network_namespace_entered": true,
+    "interface_names": ["lo"],
+    "loopback_only": true,
+    "no_default_ipv4_route": true,
+    "no_default_ipv6_route": true,
+    "ipv4_probe": {"address": "1.1.1.1", "port": 443, "result": "EGRESS_DENIED", "errno": 101},
+    "ipv6_probe": {"address": "2606:4700:4700::1111", "port": 443, "result": "EGRESS_DENIED", "errno": 101}
+  },
+  "trusted_test_closure": {
+    "platform": "linux",
+    "python": "3.10.21",
+    "pytest": "9.0.3",
+    "collected": 270,
+    "passed": 270,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 960.99
+  },
+  "exact_qualification_execution": {
+    "completed": true,
+    "source_node_count": 31,
+    "derived_node_count": 160,
+    "output_root_count": 16,
+    "type_signature_receipt_count": 207,
+    "trusted_physics_operation_count": 19,
+    "challenge_result_count": 373,
+    "derived_corruption_challenged_count": 160,
+    "derived_corruption_unexpected_survivors": [],
+    "entrypoint_replay_status": "MATCHED",
+    "computation_id": "20a479ef428a9f079b7ea0c3b5506689383e26d2242579180777489818bbaeb8",
+    "graph_hash": "ddf90176934cb018775ef7bb78ce8f5516fce40afbe7b4ed491e6116f4b46801",
+    "runtime_certificate_hash": "401d6aa6f502c751113931975d222f261d59849897b7e24e9e504404dfa88502",
+    "lean_qualification_envelope_hash": "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c",
+    "dependency_closure_hash": "a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058",
+    "linux_verification_receipt_hash": "f0175a60af9b96c869f76ebe727956e9156fb24b84267a480cf93a0637e78084",
+    "linux_bundle_hash": "0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13",
+    "linux_bundle_artifact_sha256": "88c976cf6305457b79c40ce74dd11dc0a52cb9fe48bcf73e0fdf7deead5d9ba3"
+  },
+  "terminal_failure": {
+    "stage": "DETERMINISTIC_REPLAY_A",
+    "error_code": "FROZEN_BUNDLE_HASH",
+    "cause": "The workflow copied the valid content-addressed Linux bundle to the generic basename linux_bundle.json before replay.",
+    "control_behavior": "The replay checker correctly rejected unchanged bundle bytes presented under a non-content-addressed filename.",
+    "materiality": "QUALIFICATION_PROCEDURE_CUSTODY_DEFECT__NO_OBSERVED_SCIENTIFIC_DISAGREEMENT"
+  },
+  "downstream_stages": {
+    "separate_replay_a": "FAIL",
+    "separate_replay_b": "NOT_RUN",
+    "D-07_peer_acceptance": "NOT_RUN",
+    "D-01_linux_acceptance": "NOT_RUN",
+    "D-02_linux_acceptance": "NOT_RUN",
+    "windows_linux_643_row_comparison": "NOT_RUN",
+    "network_boundary_after_execution": "NOT_RUN"
+  },
+  "evidence_file_hashes": {
+    "outcome.json": "e46791368971739d117e6177203271db95ae97db9fcca855cd88d1a4a4bb41b8",
+    "network_boundary_before.json": "b65cf155a322d24fb58727defe961b4772b1aa819db1b2b1bcb7bdfe2d67fe55",
+    "pytest.log": "619bbf50755a0beb4ac5e28404e4816ea7139aee6a3b10be42ce0be07bcbd60a",
+    "pytest.xml": "d0507ea878c1ef0fa99c9f5897cacbd23e26c3536b3cca4614fae6020ce1d42e",
+    "qualification.json": "0f8e61e568c6101ac487e744d9deda2a0f519ffe0bab12b1a9b06d0624665e84",
+    "provisioning.json": "351373b14218f93af3005e8cdf26ec22234ef8ff583e52a89fac47005c6bf53f",
+    "linux_bundle.json": "88c976cf6305457b79c40ce74dd11dc0a52cb9fe48bcf73e0fdf7deead5d9ba3"
+  },
+  "disposition": "FAIL",
+  "D-07": "INCONCLUSIVE",
+  "linux_egress_denied_qualification": "NOT_EARNED",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}
