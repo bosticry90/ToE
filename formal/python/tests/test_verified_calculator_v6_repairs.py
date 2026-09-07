@@ -54,6 +54,27 @@ def test_d07_git_blob_is_primary_and_worktree_only_input_rejects(tmp_path: Path)
         _identity_row(tmp_path, "untracked.txt", "HEAD")
 
 
+def test_d07_hash_bound_c03_sources_checkout_as_exact_git_blob_bytes() -> None:
+    paths = (
+        "formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/source_profile_v1.json",
+        "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_runner_acceptance_pass_0276_v0/source_only_allowlist.json",
+        "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_derivation_pure_candidate_pass_0280_v0/provenance_dag_contract.json",
+    )
+    for relative in paths:
+        attribute = subprocess.run(
+            ["git", "check-attr", "text", "--", relative],
+            capture_output=True,
+            check=True,
+        ).stdout.decode("utf-8").strip()
+        assert attribute == f"{relative}: text: unset"
+        committed = subprocess.run(
+            ["git", "cat-file", "blob", f"HEAD:{relative}"],
+            capture_output=True,
+            check=True,
+        ).stdout
+        assert Path(relative).read_bytes() == committed
+
+
 def _profile_with_alternates():
     baseline = physics_profile(())
     return replace(baseline, unit_conventions=(*baseline.unit_conventions, "SYNTHETIC_ALTERNATE_UNIT"))

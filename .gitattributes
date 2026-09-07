@@ -114,6 +114,13 @@ formal/tooling/scientific_compute/julia/* text eol=lf
 formal/docs/release/VERIFIED_CALCULATOR_*.md text eol=lf
 formal/docs/release/verified_calculator/** -text
 
+# The preserved C03/RV source lineage contains byte-hash bindings to committed
+# artifacts.  Keep those checkout bytes identical to their Git blobs on every
+# platform; line-ending conversion would otherwise break trusted source
+# admission before calculation begins.
+formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/** -text
+formal/tooling/scientific_compute/model1_installation_preparation/** -text
+
 # Current bounded-governance and canonical-text maintenance surfaces. Immutable
 # event and custody records retain their exact produced bytes.
 formal/docs/release/BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_20260729_v0.json text eol=lf
