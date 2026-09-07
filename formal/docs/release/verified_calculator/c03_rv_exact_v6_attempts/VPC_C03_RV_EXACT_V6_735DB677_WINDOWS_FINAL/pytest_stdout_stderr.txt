@@ -1,0 +1,36 @@
+........................................................................ [ 26%]
+...................................F.................................... [ 53%]
+........................................................................ [ 80%]
+.....................................................                    [100%]
+================================== FAILURES ===================================
+___________ test_composite_preserves_other_scientific_requirements ____________
+
+    def test_composite_preserves_other_scientific_requirements():
+        contract,profile=n.load_contract()
+>       parent=n.exact.read_json((n.ROOT/contract['parent_dag_contract']['path']).read_bytes())
+
+formal\python\tests\test_c03_normalization_v1.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Program Files\Python310\lib\pathlib.py:1126: in read_bytes
+    with self.open(mode='rb') as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/v6b/formal/tooling/scientific_compute/model1_installation_preparation/route_c03_derivation_pure_candidate_pass_0280_v0/provenance_dag_contract.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\v6b\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_derivation_pure_candidate_pass_0280_v0\\provenance_dag_contract.json'
+
+C:\Program Files\Python310\lib\pathlib.py:1119: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED formal/python/tests/test_c03_normalization_v1.py::test_composite_preserves_other_scientific_requirements
+1 failed, 268 passed in 344.01s (0:05:44)
