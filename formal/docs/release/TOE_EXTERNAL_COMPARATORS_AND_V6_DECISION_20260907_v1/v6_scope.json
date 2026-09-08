@@ -1,0 +1,1229 @@
+{
+  "authority_effect": "NONE",
+  "candidate_hash": "4167aae835fac646cc18700bb930949a6f2e70faaef567ccef235c4031677278",
+  "challenge_packets_hash": "854e8a38922211f419dbc122d588e08f2b67112831a98f4335a8f6e3c1b06d29",
+  "computation_id": "20a479ef428a9f079b7ea0c3b5506689383e26d2242579180777489818bbaeb8",
+  "dependency_closure_hashes": [
+    "a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058"
+  ],
+  "derived_node_ids": [
+    "C03.DERIVED.CHARGE_PRODUCT",
+    "C03.DERIVED.COLOR_EXCHANGE_SIGN",
+    "C03.DERIVED.COMMON_NORMALIZED_COEFFICIENT",
+    "C03.DERIVED.COVARIANT_NUMERATOR",
+    "C03.DERIVED.EXCHANGE_OCCURRENCE_WEIGHT",
+    "C03.DERIVED.GRASSMANN_EXCHANGE_SIGN",
+    "C03.DERIVED.G_SUM",
+    "C03.DERIVED.G_X",
+    "C03.DERIVED.G_Y",
+    "C03.DERIVED.IDENTITY_OCCURRENCE_WEIGHT",
+    "C03.DERIVED.L_SUM",
+    "C03.DERIVED.L_X",
+    "C03.DERIVED.L_Y",
+    "C03.DERIVED.PT_SUM",
+    "C03.DERIVED.RAW_GRAPH",
+    "C03.DERIVED.REFERENCE_SCALAR",
+    "C03.DERIVED.REMOVED_MONOMIAL",
+    "C03.DERIVED.TARGET_NORMALIZATION_SCALE",
+    "C03.NATIVE.AMBIENT",
+    "C03.NATIVE.ANGULAR",
+    "C03.NATIVE.CHANNEL",
+    "C03.NATIVE.CLIFFORD",
+    "C03.NATIVE.COORDINATES",
+    "C03.NATIVE.DUAL",
+    "C03.NATIVE.JOIN",
+    "C03.NATIVE.LEAKAGE",
+    "C03.NATIVE.LEAKAGE_ROW",
+    "C03.NATIVE.LEGACY",
+    "C03.NATIVE.PHASE",
+    "C03.NATIVE.PROJECTED",
+    "C03.NATIVE.QUOTIENT",
+    "C03.NATIVE.RELATIONS",
+    "C03.NATIVE.RELATION_CERTIFICATE",
+    "C03.NATIVE.RELATION_PART",
+    "C03.NATIVE.REMAINDER",
+    "C03.NATIVE.REPRESENTATIVE",
+    "C03.NATIVE.RESIDUAL",
+    "C03.NATIVE.STATE",
+    "C03.NATIVE.WEIGHTS",
+    "C03.NATIVE.WITNESS",
+    "RV01.ABSENCE_DOMAIN",
+    "RV01.CHANNEL",
+    "RV01.COVARIANT",
+    "RV01.DOMAIN",
+    "RV01.GROUP",
+    "RV01.GROUP_IMAGE",
+    "RV01.METRIC_IMAGE",
+    "RV01.NORMALIZED",
+    "RV01.PHASE",
+    "RV01.POLE",
+    "RV01.RAW",
+    "RV01.SPINOR_PROJECTION",
+    "RV01.STATE",
+    "RV01.TENSOR",
+    "RV01.TREE",
+    "RV01.TREE_MAP",
+    "RV01.WARD_IMAGE",
+    "RV01.WORDS",
+    "RV01.WORD_COVERAGE",
+    "RV01.WORD_REDUCTIONS",
+    "RV02.ABSENCE_DOMAIN",
+    "RV02.CHANNEL",
+    "RV02.COVARIANT",
+    "RV02.DOMAIN",
+    "RV02.GROUP",
+    "RV02.GROUP_IMAGE",
+    "RV02.METRIC_IMAGE",
+    "RV02.NORMALIZED",
+    "RV02.PHASE",
+    "RV02.POLE",
+    "RV02.RAW",
+    "RV02.SPINOR_PROJECTION",
+    "RV02.STATE",
+    "RV02.TENSOR",
+    "RV02.TREE",
+    "RV02.TREE_MAP",
+    "RV02.WARD_IMAGE",
+    "RV02.WORDS",
+    "RV02.WORD_COVERAGE",
+    "RV02.WORD_REDUCTIONS",
+    "RV03.ABSENCE_DOMAIN",
+    "RV03.CHANNEL",
+    "RV03.COVARIANT",
+    "RV03.DOMAIN",
+    "RV03.GROUP",
+    "RV03.GROUP_IMAGE",
+    "RV03.METRIC_IMAGE",
+    "RV03.NORMALIZED",
+    "RV03.PHASE",
+    "RV03.POLE",
+    "RV03.RAW",
+    "RV03.SPINOR_PROJECTION",
+    "RV03.STATE",
+    "RV03.TENSOR",
+    "RV03.TREE",
+    "RV03.TREE_MAP",
+    "RV03.WARD_IMAGE",
+    "RV03.WORDS",
+    "RV03.WORD_COVERAGE",
+    "RV03.WORD_REDUCTIONS",
+    "RV04.ABSENCE_DOMAIN",
+    "RV04.CHANNEL",
+    "RV04.COVARIANT",
+    "RV04.DOMAIN",
+    "RV04.GROUP",
+    "RV04.GROUP_IMAGE",
+    "RV04.METRIC_IMAGE",
+    "RV04.NORMALIZED",
+    "RV04.PHASE",
+    "RV04.POLE",
+    "RV04.RAW",
+    "RV04.SPINOR_PROJECTION",
+    "RV04.STATE",
+    "RV04.TENSOR",
+    "RV04.TREE",
+    "RV04.TREE_MAP",
+    "RV04.WARD_IMAGE",
+    "RV04.WORDS",
+    "RV04.WORD_COVERAGE",
+    "RV04.WORD_REDUCTIONS",
+    "RV05.ABSENCE_DOMAIN",
+    "RV05.CHANNEL",
+    "RV05.COVARIANT",
+    "RV05.DOMAIN",
+    "RV05.GROUP",
+    "RV05.GROUP_IMAGE",
+    "RV05.METRIC_IMAGE",
+    "RV05.NORMALIZED",
+    "RV05.PHASE",
+    "RV05.POLE",
+    "RV05.RAW",
+    "RV05.SPINOR_PROJECTION",
+    "RV05.STATE",
+    "RV05.TENSOR",
+    "RV05.TREE",
+    "RV05.TREE_MAP",
+    "RV05.WARD_IMAGE",
+    "RV05.WORDS",
+    "RV05.WORD_COVERAGE",
+    "RV05.WORD_REDUCTIONS",
+    "RV06.ABSENCE_DOMAIN",
+    "RV06.CHANNEL",
+    "RV06.COVARIANT",
+    "RV06.DOMAIN",
+    "RV06.GROUP",
+    "RV06.GROUP_IMAGE",
+    "RV06.METRIC_IMAGE",
+    "RV06.NORMALIZED",
+    "RV06.PHASE",
+    "RV06.POLE",
+    "RV06.RAW",
+    "RV06.SPINOR_PROJECTION",
+    "RV06.STATE",
+    "RV06.TENSOR",
+    "RV06.TREE",
+    "RV06.TREE_MAP",
+    "RV06.WARD_IMAGE",
+    "RV06.WORDS",
+    "RV06.WORD_COVERAGE",
+    "RV06.WORD_REDUCTIONS"
+  ],
+  "evidence_git_commit": "ff28285872f8ca799f5003257dae42b256daad28",
+  "evidence_references": [
+    {
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_AMENDMENT_ONLY_NON_AUTHOR_REVIEW_RESULT_20260907_v1.json",
+      "sha256": "7305aa62c31bf8825ab4012e7b7cd34a39722af983d1610aae3788171028041c"
+    },
+    {
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260907_v6.json",
+      "sha256": "ff6a0b98e302d6cbfe75f30542bcd2865a9834ec665cccc84f00b8e31abf8d15"
+    },
+    {
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "path": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+      "sha256": "7496caaa2f63915cf3adf5d81776ee3298decd204f745ae65e8a38b6c80b1bcf"
+    },
+    {
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json",
+      "sha256": "2da78322b4d7767fe04e6a33a36ce1190449ea94d5f82f6fe56e31bb9841c84f"
+    }
+  ],
+  "graph_hash": "ddf90176934cb018775ef7bb78ce8f5516fce40afbe7b4ed491e6116f4b46801",
+  "linux_bundle_id": "0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13",
+  "mandatory_challenge_count": 373,
+  "original_v1_bundle_id": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+  "physics_operation_ids": [
+    "ANGULAR_AVERAGE",
+    "DOMAIN_PREDICATE",
+    "EPISTEMIC_CLASSIFICATION",
+    "EXACT_CLIFFORD_ACTION",
+    "EXACT_MATRIX_PROJECTION",
+    "GAUGE_GENERATOR_ACTION",
+    "INVERTIBLE_NORMALIZATION",
+    "LINEAR_COMBINATION",
+    "NORMALIZATION_MONOMIAL",
+    "NORMALIZATION_RECIPROCAL",
+    "NORMALIZATION_REFERENCE_SCALAR",
+    "OUTPUT_BIND",
+    "PERMUTATION_PARITY",
+    "PRODUCT",
+    "RELATION_REDUCTION",
+    "TENSOR_DIFFERENCE",
+    "TENSOR_EXCHANGE_EIGENVALUE",
+    "TENSOR_SUM",
+    "WARD_REDUCTION"
+  ],
+  "preserved_calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED",
+  "product_v1_release": false,
+  "production_activation": false,
+  "request": {
+    "execution_budgets": {
+      "challenge_seconds": 1800,
+      "julia_seconds": 1800,
+      "lean_seconds": 1800,
+      "python_seconds": 1800,
+      "total_seconds": 5400
+    },
+    "inputs": {
+      "frozen_source_material_contract_sha256": "b550bf1269092538cd2b43bd655ac275e7ca654d18631bb386a29286cefe42c2"
+    },
+    "physics_profile_hash": "e131c6f94014082b8dd78bb680f1acdcf76e924b0cbe8fb62eafdda5af860617",
+    "requested_roots": [
+      "C03.OUTPUT.PHYSICAL_COEFFICIENT",
+      "C03.OUTPUT.EVANESCENT_COORDINATES",
+      "C03.OUTPUT.EVANESCENT_STATE",
+      "RV01.OUTPUT.PHYSICAL_COEFFICIENT",
+      "RV01.OUTPUT.EVANESCENT_STATE",
+      "RV02.OUTPUT.PHYSICAL_COEFFICIENT",
+      "RV02.OUTPUT.EVANESCENT_STATE",
+      "RV03.OUTPUT.PHYSICAL_COEFFICIENT",
+      "RV03.OUTPUT.EVANESCENT_STATE",
+      "RV03.OUTPUT.SOURCE_CHANNEL",
+      "RV04.OUTPUT.PHYSICAL_COEFFICIENT",
+      "RV04.OUTPUT.EVANESCENT_STATE",
+      "RV05.OUTPUT.PHYSICAL_COEFFICIENT",
+      "RV05.OUTPUT.EVANESCENT_STATE",
+      "RV06.OUTPUT.PHYSICAL_COEFFICIENT",
+      "RV06.OUTPUT.EVANESCENT_STATE"
+    ],
+    "schema_id": "CalculationRequestV1",
+    "stochastic_experiments": [],
+    "verification_policy_hash": "c91c992d5d1ef084d6370b2749d01c8fa05346c65c3444d13c2e36469d2e9e04"
+  },
+  "roots": [
+    {
+      "canonical_value_hash": "59c9bde97896bee76cb2175664d69bedea39f0c02eda55fcb5b25b221022dba0",
+      "claim_ledger_entry": {
+        "claim_id": "C03.claim.EVANESCENT_COORDINATES",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output C03.OUTPUT.EVANESCENT_COORDINATES equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "TERMINALLY_ADJUDICATED",
+        "claim_ceiling": "CORRECTED_ROUTE_C_NATIVE_QUOTIENT_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "CORRECTED_ROUTE_C_EVALUATED_NONZERO__EXACT_HISTORICAL_NATIVE_IDENTITY_CORPUS_BOUNDED_UNDERDEFINED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Does not establish an exact historical/native evanescent basis-class identity."
+        ],
+        "scope": "C03 corrected Route-C native quotient only",
+        "supporting_record_hashes": [
+          "6156ec809a79c5384f2d2332c9d48b447b4b91ad747ec52ad6088995bae5d5c2",
+          "682476eb2bd8a05ffd5b5ff813d27c0aad597d04d1653e1362419ada2f9c6d76"
+        ]
+      },
+      "root_id": "C03.OUTPUT.EVANESCENT_COORDINATES",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [
+          "NATIVE_E"
+        ],
+        "mathematical_kind": "EXACT_TENSOR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "NATIVE_COORDINATE_VECTOR",
+        "shape": [
+          14
+        ],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "707f5ec2eb2c8d4eee0ffa8fbfe5d9836a4645a48635230c6ddb047f6aef8b84",
+      "claim_ledger_entry": {
+        "claim_id": "C03.claim.EVANESCENT_STATE",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output C03.OUTPUT.EVANESCENT_STATE equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "TERMINALLY_ADJUDICATED",
+        "claim_ceiling": "CORRECTED_ROUTE_C_NATIVE_QUOTIENT_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "CORRECTED_ROUTE_C_EVALUATED_NONZERO__EXACT_HISTORICAL_NATIVE_IDENTITY_CORPUS_BOUNDED_UNDERDEFINED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Does not establish an exact historical/native evanescent basis-class identity."
+        ],
+        "scope": "C03 corrected Route-C native quotient only",
+        "supporting_record_hashes": [
+          "6156ec809a79c5384f2d2332c9d48b447b4b91ad747ec52ad6088995bae5d5c2",
+          "682476eb2bd8a05ffd5b5ff813d27c0aad597d04d1653e1362419ada2f9c6d76"
+        ]
+      },
+      "root_id": "C03.OUTPUT.EVANESCENT_STATE",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "EVANESCENT_EVALUATION_STATE",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "f4a8b12315f1b8988c6e94b08df23c4bb5f847ec723c26760e0b1c4d00f105c1",
+      "claim_ledger_entry": {
+        "claim_id": "C03.claim.PHYSICAL_COEFFICIENT",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output C03.OUTPUT.PHYSICAL_COEFFICIENT equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "TERMINALLY_ADJUDICATED",
+        "claim_ceiling": "C03_SECTOR_FINDING_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "HISTORICAL_UPHELD__CORRECTED_ROUTE_C_CONFIRMED__MODERN_REOPENED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows."
+        ],
+        "scope": "C03 physical coefficient under the frozen conventions",
+        "supporting_record_hashes": [
+          "6156ec809a79c5384f2d2332c9d48b447b4b91ad747ec52ad6088995bae5d5c2",
+          "682476eb2bd8a05ffd5b5ff813d27c0aad597d04d1653e1362419ada2f9c6d76"
+        ]
+      },
+      "root_id": "C03.OUTPUT.PHYSICAL_COEFFICIENT",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_SCALAR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOLIC_COEFFICIENT",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+      "claim_ledger_entry": {
+        "claim_id": "RV01.claim.EVANESCENT_STATE",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV01.OUTPUT.EVANESCENT_STATE equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_NATIVE_E_STATE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "The historical empty report was unevaluated and is not retroactively validated as zero."
+        ],
+        "scope": "RV01 corrected canonical native-E state",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV01.OUTPUT.EVANESCENT_STATE",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "EVANESCENT_EVALUATION_STATE",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "6feb15ffc21da4c16214941871c4cb6e6e627ec087274d151fdfd9ddd689fb79",
+      "claim_ledger_entry": {
+        "claim_id": "RV01.claim.PHYSICAL_COEFFICIENT",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV01.OUTPUT.PHYSICAL_COEFFICIENT equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_SOURCE_DERIVED_VALUE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "CORRECTED_SOURCE_DERIVED__PHYSICAL_CHANGED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Pass-0272 did not adopt a terminal classification for the six-record matrix."
+        ],
+        "scope": "RV01 source-defined corrected physical value",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV01.OUTPUT.PHYSICAL_COEFFICIENT",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_SCALAR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOLIC_SCALAR",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+      "claim_ledger_entry": {
+        "claim_id": "RV02.claim.EVANESCENT_STATE",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV02.OUTPUT.EVANESCENT_STATE equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_NATIVE_E_STATE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "The historical empty report was unevaluated and is not retroactively validated as zero."
+        ],
+        "scope": "RV02 corrected canonical native-E state",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV02.OUTPUT.EVANESCENT_STATE",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "EVANESCENT_EVALUATION_STATE",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "7de34400005fa5b796b70553ac0131a580ed0830aa81b7f5a90a74c22586f4a6",
+      "claim_ledger_entry": {
+        "claim_id": "RV02.claim.PHYSICAL_COEFFICIENT",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV02.OUTPUT.PHYSICAL_COEFFICIENT equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_SOURCE_DERIVED_VALUE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "CORRECTED_SOURCE_DERIVED__PHYSICAL_CHANGED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Pass-0272 did not adopt a terminal classification for the six-record matrix."
+        ],
+        "scope": "RV02 source-defined corrected physical value",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV02.OUTPUT.PHYSICAL_COEFFICIENT",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_SCALAR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOLIC_SCALAR",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+      "claim_ledger_entry": {
+        "claim_id": "RV03.claim.EVANESCENT_STATE",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV03.OUTPUT.EVANESCENT_STATE equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_NATIVE_E_STATE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "The historical empty report was unevaluated and is not retroactively validated as zero."
+        ],
+        "scope": "RV03 corrected canonical native-E state",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV03.OUTPUT.EVANESCENT_STATE",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "EVANESCENT_EVALUATION_STATE",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "58b608ce79bcaeccd3a216c280650d6d731161f9b2386f9053583fcd3f5f9d93",
+      "claim_ledger_entry": {
+        "claim_id": "RV03.claim.PHYSICAL_COEFFICIENT",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV03.OUTPUT.PHYSICAL_COEFFICIENT equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_SOURCE_DERIVED_VALUE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Pass-0272 did not adopt a terminal classification for the six-record matrix."
+        ],
+        "scope": "RV03 source-defined corrected physical value",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV03.OUTPUT.PHYSICAL_COEFFICIENT",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_SCALAR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOLIC_SCALAR",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "741a3e65c299f5bff2701da5801427c0e9392036f7cc90ada8a3d24f16138861",
+      "claim_ledger_entry": {
+        "claim_id": "RV03.claim.SOURCE_CHANNEL",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV03.OUTPUT.SOURCE_CHANNEL equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "RV03_SOURCE_CHANNEL_DISPOSITION_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows."
+        ],
+        "scope": "RV03 source-channel disposition",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV03.OUTPUT.SOURCE_CHANNEL",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOL_TEXT",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+      "claim_ledger_entry": {
+        "claim_id": "RV04.claim.EVANESCENT_STATE",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV04.OUTPUT.EVANESCENT_STATE equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_NATIVE_E_STATE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "The historical empty report was unevaluated and is not retroactively validated as zero."
+        ],
+        "scope": "RV04 corrected canonical native-E state",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV04.OUTPUT.EVANESCENT_STATE",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "EVANESCENT_EVALUATION_STATE",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "fb095d802ad60ece9633bebb7df1fd25200aff6bdc762a6678b97e44ca2cb0e1",
+      "claim_ledger_entry": {
+        "claim_id": "RV04.claim.PHYSICAL_COEFFICIENT",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV04.OUTPUT.PHYSICAL_COEFFICIENT equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_SOURCE_DERIVED_VALUE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "CORRECTED_SOURCE_DERIVED__PHYSICAL_CHANGED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Pass-0272 did not adopt a terminal classification for the six-record matrix."
+        ],
+        "scope": "RV04 source-defined corrected physical value",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV04.OUTPUT.PHYSICAL_COEFFICIENT",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_SCALAR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOLIC_SCALAR",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+      "claim_ledger_entry": {
+        "claim_id": "RV05.claim.EVANESCENT_STATE",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV05.OUTPUT.EVANESCENT_STATE equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_NATIVE_E_STATE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "The historical empty report was unevaluated and is not retroactively validated as zero."
+        ],
+        "scope": "RV05 corrected canonical native-E state",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV05.OUTPUT.EVANESCENT_STATE",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "EVANESCENT_EVALUATION_STATE",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "7de34400005fa5b796b70553ac0131a580ed0830aa81b7f5a90a74c22586f4a6",
+      "claim_ledger_entry": {
+        "claim_id": "RV05.claim.PHYSICAL_COEFFICIENT",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV05.OUTPUT.PHYSICAL_COEFFICIENT equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_SOURCE_DERIVED_VALUE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "CORRECTED_SOURCE_DERIVED__PHYSICAL_CHANGED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Pass-0272 did not adopt a terminal classification for the six-record matrix."
+        ],
+        "scope": "RV05 source-defined corrected physical value",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV05.OUTPUT.PHYSICAL_COEFFICIENT",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_SCALAR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOLIC_SCALAR",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+      "claim_ledger_entry": {
+        "claim_id": "RV06.claim.EVANESCENT_STATE",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV06.OUTPUT.EVANESCENT_STATE equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_NATIVE_E_STATE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "The historical empty report was unevaluated and is not retroactively validated as zero."
+        ],
+        "scope": "RV06 corrected canonical native-E state",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV06.OUTPUT.EVANESCENT_STATE",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_ATOM",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "EVANESCENT_EVALUATION_STATE",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    },
+    {
+      "canonical_value_hash": "d61a7f6b97996fbe658dd37fa8472f3a02fc6c5064a705e14f804e88f7425cbe",
+      "claim_ledger_entry": {
+        "claim_id": "RV06.claim.PHYSICAL_COEFFICIENT",
+        "claim_text": "Under profile C03_RV_SU5_EXACT_PROFILE_v1, output RV06.OUTPUT.PHYSICAL_COEFFICIENT equals the receipt-bound canonical value.",
+        "does_not_claim": [
+          "SU(5) is physically correct",
+          "CCFT is physically correct",
+          "The production runner is globally qualified"
+        ],
+        "evidence_class": "VERIFIED_EXACT",
+        "limitations": [
+          "Computational statement under frozen inputs, conventions, operations, and policy.",
+          "Does not establish that Nature uses the profile assumptions."
+        ],
+        "supporting_receipts": [
+          "00ff89e732ecfc292aa149d40f3533239fdb56d1756f729a2887e90535efbd23",
+          "7fb358d5007228d3637546aef95f6e545481053627d14e2118292ab02d279b4a",
+          "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c"
+        ]
+      },
+      "preserved_scientific_authority": {
+        "authority_state": "REVIEWED_SUPPORTED",
+        "claim_ceiling": "CORRECTED_SOURCE_DERIVED_VALUE_ONLY",
+        "effective_time": "2026-09-05T00:00:00Z",
+        "historical_label": "CORRECTED_SOURCE_DERIVED__PHYSICAL_UNCHANGED",
+        "limitations": [
+          "Independent computational/AI triangulation; no external human expert review.",
+          "No SU(5), CCFT, ToE, phenomenology, publication, production, or replacement-runner qualification follows.",
+          "Pass-0272 did not adopt a terminal classification for the six-record matrix."
+        ],
+        "scope": "RV06 source-defined corrected physical value",
+        "supporting_record_hashes": [
+          "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+        ]
+      },
+      "root_id": "RV06.OUTPUT.PHYSICAL_COEFFICIENT",
+      "value_hash_domain": "ExactOutputValueV1",
+      "value_type": {
+        "dimension": [
+          "0",
+          "0",
+          "0"
+        ],
+        "domain": {
+          "profile": "C03_RV_SU5_EXACT_PROFILE_v1"
+        },
+        "index_spaces": [],
+        "mathematical_kind": "EXACT_SCALAR",
+        "representation_tags": [
+          "SU5"
+        ],
+        "semantic_type": "SYMBOLIC_SCALAR",
+        "shape": [],
+        "unit_convention": "SU5_NATURAL_HBAR_C_1"
+      },
+      "verification_class": "VERIFIED_EXACT"
+    }
+  ],
+  "runtime_certificate_hash": "401d6aa6f502c751113931975d222f261d59849897b7e24e9e504404dfa88502",
+  "schema_id": "C03RVV6DecisionScopeProjectionV1",
+  "scientific_promotion": false,
+  "source_node_ids": [
+    "C03.CONVENTION.WILSON_SYMBOL",
+    "C03.NATIVE.SOURCE.COLUMNS",
+    "C03.NATIVE.SOURCE.DEFECTS",
+    "C03.NATIVE.SOURCE.DUAL_CACHE",
+    "C03.NATIVE.SOURCE.K_CACHE",
+    "C03.NATIVE.SOURCE.LEDGER",
+    "C03.NATIVE.SOURCE.OCCURRENCES",
+    "C03.NATIVE.SOURCE.ORDER",
+    "C03.NATIVE.SOURCE.Q_CACHE",
+    "C03.NATIVE.SOURCE.RELATIONS",
+    "C03.NATIVE.SOURCE.REPRESENTATIVES",
+    "C03.NATIVE.SOURCE.REP_CACHE",
+    "C03.NATIVE.SOURCE.REQUESTS",
+    "C03.SOURCE.CLIFFORD_DOMAIN",
+    "C03.SOURCE.COLOR_TENSOR",
+    "C03.SOURCE.COMMON_PREFACTOR",
+    "C03.SOURCE.COUPLING_MONOMIAL",
+    "C03.SOURCE.DIAGRAM_PHASE",
+    "C03.SOURCE.GAUGE_PARAMETER",
+    "C03.SOURCE.HYPERCHARGE_D",
+    "C03.SOURCE.HYPERCHARGE_E",
+    "C03.SOURCE.NORMALIZATION_DOMAIN",
+    "C03.SOURCE.ORDERED_FIELDS",
+    "C03.SOURCE.SPINOR_X",
+    "C03.SOURCE.SPINOR_Y",
+    "RV01.SOURCE.CONTEXT",
+    "RV02.SOURCE.CONTEXT",
+    "RV03.SOURCE.CONTEXT",
+    "RV04.SOURCE.CONTEXT",
+    "RV05.SOURCE.CONTEXT",
+    "RV06.SOURCE.CONTEXT"
+  ],
+  "status": "DRAFT_NOT_ADOPTED",
+  "windows_bundle_id": "b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc"
+}

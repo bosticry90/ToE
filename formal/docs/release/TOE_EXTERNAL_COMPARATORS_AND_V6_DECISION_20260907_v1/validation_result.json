@@ -1,0 +1,21 @@
+{
+  "documentation_validation": "PASS",
+  "as_of_local_date": "2026-09-07",
+  "python_version": "3.10.11",
+  "sympy_version_for_scratch_math_only": "1.14.0",
+  "comparators": 4,
+  "scope_roots": 16,
+  "sources": 31,
+  "derived_nodes": 160,
+  "operations": 19,
+  "archived_evidence_files_rehashed": 25,
+  "local_links_checked": 18,
+  "new_physics_execution": false,
+  "authority_adopted": false,
+  "record_kind": "DOCUMENTATION_VALIDATION_NOT_PHYSICS_QUALIFICATION",
+  "test_command": "python formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1/test_packet.py",
+  "unittest_count_passed": 9,
+  "new_linux_execution": false,
+  "new_non_author_review": false,
+  "new_authority_attachment": false
+}
