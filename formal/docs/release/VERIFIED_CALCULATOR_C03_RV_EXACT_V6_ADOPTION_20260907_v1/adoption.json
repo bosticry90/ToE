@@ -1,0 +1,312 @@
+{
+  "schema_id": "C03RVV6AuthorityAdoptionRecordV1",
+  "record_id": "VPC_C03_RV_EXACT_V6_OWNER_ADOPTION_20260907_V1",
+  "record_kind": "SEPARATE_OWNER_COMPUTATIONAL_AUTHORITY_DECISION",
+  "disposition": "ADOPTED",
+  "decision_adopted": true,
+  "adopted_status": "C03_RV_EXACT_COMPUTATION_REQUALIFIED",
+  "effective_at_utc": "2026-09-08T01:17:32Z",
+  "local_calendar_date": "2026-09-07",
+  "local_timezone": "America/Denver",
+  "decision_maker": {
+    "identity": "Project owner, through the explicit user instruction in this Codex task",
+    "authorization_kind": "EXPLICIT_OWNER_INSTRUCTION",
+    "authorization_excerpt": "push the preserved packet, then adopt the positive bounded computational requalification exactly within its frozen seven-record/16-root scope.",
+    "recorded_by": "Codex assistant, acting as registrar of the owner-directed decision",
+    "assistant_is_independent_adjudicator": false,
+    "cryptographic_owner_signature_claimed": false
+  },
+  "prior_remote_preservation": {
+    "remote_url": "https://github.com/bosticry90/ToE.git",
+    "branch": "refs/heads/codex/native-hypothesis-selection-v0",
+    "commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+    "observed_remote_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+    "confirmed_at_utc": "2026-09-08T01:15:13Z",
+    "method": "Non-force push of exact commit, followed by git ls-remote --heads.",
+    "confirmed_before_adoption": true
+  },
+  "operative_decision": "Adopt bounded computational requalification of the exact frozen C03/RV01-RV06 v6 calculation and its sixteen authoritative roots, under the pinned request, sources, conventions, operations, types, policy, challenges and reviewed implementation lineage. This accepts a conditional mathematical computation, not a physical model's truth or generic calculator reliability.",
+  "scope": {
+    "basis": "The exact v6_scope.json at the preserved decision commit; its full root values, ValueTypeV1 signatures, claim ledgers and per-claim historical authority are incorporated by reference without amendment.",
+    "records": [
+      "C03",
+      "RV01",
+      "RV02",
+      "RV03",
+      "RV04",
+      "RV05",
+      "RV06"
+    ],
+    "source_node_count": 31,
+    "derived_node_count": 160,
+    "output_node_count": 16,
+    "total_node_count": 207,
+    "physics_operation_count": 19,
+    "operation_count_convention": "18 derived transformations plus OUTPUT_BIND; SOURCE_DECODE is separate.",
+    "mandatory_challenge_count": 373,
+    "tested_scientific_commit": "3307e35514cc76d63b6039b240c625defbb737d5",
+    "windows_evidence_commit": "e2f19a424f50e05164a24e67d949d1b2959894a4",
+    "linux_workflow_commit": "eec9da7374515b0235d2b3d4cabca0871e4387a5",
+    "computation_id": "20a479ef428a9f079b7ea0c3b5506689383e26d2242579180777489818bbaeb8",
+    "physics_profile_hash": "e131c6f94014082b8dd78bb680f1acdcf76e924b0cbe8fb62eafdda5af860617",
+    "verification_policy_hash": "c91c992d5d1ef084d6370b2749d01c8fa05346c65c3444d13c2e36469d2e9e04",
+    "candidate_hash": "4167aae835fac646cc18700bb930949a6f2e70faaef567ccef235c4031677278",
+    "graph_hash": "ddf90176934cb018775ef7bb78ce8f5516fce40afbe7b4ed491e6116f4b46801",
+    "runtime_certificate_hash": "401d6aa6f502c751113931975d222f261d59849897b7e24e9e504404dfa88502",
+    "lean_envelope_hash": "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c",
+    "windows_bundle_id": "b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc",
+    "linux_bundle_id": "0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13",
+    "original_v1_bundle_id": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "dependency_closure_hashes": [
+      "a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058"
+    ],
+    "challenge_packets_hash": "854e8a38922211f419dbc122d588e08f2b67112831a98f4335a8f6e3c1b06d29",
+    "roots": [
+      {
+        "root_id": "C03.OUTPUT.EVANESCENT_COORDINATES",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "59c9bde97896bee76cb2175664d69bedea39f0c02eda55fcb5b25b221022dba0",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "C03.OUTPUT.EVANESCENT_STATE",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "707f5ec2eb2c8d4eee0ffa8fbfe5d9836a4645a48635230c6ddb047f6aef8b84",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "C03.OUTPUT.PHYSICAL_COEFFICIENT",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "f4a8b12315f1b8988c6e94b08df23c4bb5f847ec723c26760e0b1c4d00f105c1",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV01.OUTPUT.EVANESCENT_STATE",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV01.OUTPUT.PHYSICAL_COEFFICIENT",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "6feb15ffc21da4c16214941871c4cb6e6e627ec087274d151fdfd9ddd689fb79",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV02.OUTPUT.EVANESCENT_STATE",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV02.OUTPUT.PHYSICAL_COEFFICIENT",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "7de34400005fa5b796b70553ac0131a580ed0830aa81b7f5a90a74c22586f4a6",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV03.OUTPUT.EVANESCENT_STATE",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV03.OUTPUT.PHYSICAL_COEFFICIENT",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "58b608ce79bcaeccd3a216c280650d6d731161f9b2386f9053583fcd3f5f9d93",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV03.OUTPUT.SOURCE_CHANNEL",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "741a3e65c299f5bff2701da5801427c0e9392036f7cc90ada8a3d24f16138861",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV04.OUTPUT.EVANESCENT_STATE",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV04.OUTPUT.PHYSICAL_COEFFICIENT",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "fb095d802ad60ece9633bebb7df1fd25200aff6bdc762a6678b97e44ca2cb0e1",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV05.OUTPUT.EVANESCENT_STATE",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV05.OUTPUT.PHYSICAL_COEFFICIENT",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "7de34400005fa5b796b70553ac0131a580ed0830aa81b7f5a90a74c22586f4a6",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV06.OUTPUT.EVANESCENT_STATE",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "af9313261daa285b5907c78d50166aa122d021486712bcfbd36bd55892eaf27b",
+        "verification_class": "VERIFIED_EXACT"
+      },
+      {
+        "root_id": "RV06.OUTPUT.PHYSICAL_COEFFICIENT",
+        "value_hash_domain": "ExactOutputValueV1",
+        "canonical_value_hash": "d61a7f6b97996fbe658dd37fa8472f3a02fc6c5064a705e14f804e88f7425cbe",
+        "verification_class": "VERIFIED_EXACT"
+      }
+    ],
+    "arbitrary_inputs_covered": false,
+    "future_versions_automatically_covered": false,
+    "numerical_observables_covered": false,
+    "additional_records_or_roots_covered": false
+  },
+  "pinned_references": [
+    {
+      "path": "formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1/v6_decision_draft.md",
+      "git_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "7268258873ebff95612c6f63d7ee718e2c89ef891b28c078fbc13937a0b17d3d"
+    },
+    {
+      "path": "formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1/v6_scope.json",
+      "git_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "47d18d64d35d2e36d50a5b308887afae0536404c7b8522f3c97ab9affff9b3ff"
+    },
+    {
+      "path": "formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1/manifest.json",
+      "git_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "8ee6d4b621ba5700fbcc1779e99ee6bc5feea49c9024508ec0e97b7280373f83"
+    },
+    {
+      "path": "formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1/validate_packet.py",
+      "git_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "51e322e5be0bc08ebb5f02926c3052c1f391bd74f9ea9843ed92d0b0926c4a9a"
+    },
+    {
+      "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_AMENDED_REQUALIFICATION_SEQUENCE_20260907_v1.md",
+      "git_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "5272ad641a4386660f1bf6e00c5bada9299287dac41fe774a73191220718f6aa"
+    },
+    {
+      "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_EXECUTION_RUN_LOG_RESULT_20260907_3307e355.json",
+      "git_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "a2a83600f7e5afe1afb1128cde6cf977cc212efc478dd4dd79a3c83f489ae42a"
+    },
+    {
+      "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_AMENDMENT_ONLY_NON_AUTHOR_REVIEW_RESULT_20260907_v1.json",
+      "git_commit": "ff28285872f8ca799f5003257dae42b256daad28",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "7305aa62c31bf8825ab4012e7b7cd34a39722af983d1610aae3788171028041c"
+    },
+    {
+      "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260907_v6.json",
+      "git_commit": "ff28285872f8ca799f5003257dae42b256daad28",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "ff6a0b98e302d6cbfe75f30542bcd2865a9834ec665cccc84f00b8e31abf8d15"
+    },
+    {
+      "path": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+      "git_commit": "ff28285872f8ca799f5003257dae42b256daad28",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "7496caaa2f63915cf3adf5d81776ee3298decd204f745ae65e8a38b6c80b1bcf"
+    },
+    {
+      "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json",
+      "git_commit": "ff28285872f8ca799f5003257dae42b256daad28",
+      "hash_domain": "GIT_BLOB_BYTES_SHA256",
+      "git_blob_sha256": "2da78322b4d7767fe04e6a33a36ce1190449ea94d5f82f6fe56e31bb9841c84f"
+    }
+  ],
+  "linux_archive": {
+    "path": "formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1/evidence/linux-34167712902-1.zip",
+    "git_commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+    "hash_domain": "GIT_BLOB_BYTES_SHA256",
+    "git_blob_sha256": "5e3244fd2a0745b0f62e7a1d03f0f30630a92e045f2f62ba8974396fdf449f39",
+    "size_bytes": 700548,
+    "run_url": "https://github.com/bosticry90/ToE/actions/runs/34167712902",
+    "run_id": 34167712902,
+    "artifact_id": 10035287072,
+    "original_hosted_archive_expiry": "2026-12-06T22:44:52Z"
+  },
+  "evidence_accepted": {
+    "D_01": "PASS_26_CONTROLS",
+    "D_02": "PASS_207_BASELINES_1656_METADATA_MUTATIONS_160_EDGE_MUTATIONS",
+    "D_07": "PASS_ACTUAL_LINUX_PEER",
+    "trusted_tests": "270_OF_270_PASS",
+    "exact_roots": "16_OF_16_VERIFIED_EXACT",
+    "mandatory_challenges": "373_OF_373_PASS",
+    "derived_corruptions": "160_OF_160_REJECTED_ZERO_UNEXPECTED_SURVIVORS",
+    "deterministic_replay": "TWO_MATCHING_REPLAYS",
+    "v1_to_windows_v6_payload": "643_OF_643_MATCH_ZERO_MISMATCHES",
+    "windows_v6_to_linux_payload": "643_OF_643_MATCH_ZERO_MISMATCHES",
+    "linux_execution": "PASS_EGRESS_DENIED_AFTER_ENVIRONMENT_PROVISIONING",
+    "amendment_review": "SUPPORTED_18_OF_18_SCOPE_LIMITED",
+    "review_independence": "SAME_PROVIDER_NON_AUTHOR_AI_WITH_SHARED_PROVIDER_AND_INHERITED_CONTEXT_NOT_EXTERNAL_HUMAN_EXPERT_PEER_REVIEW"
+  },
+  "adjudication_reconciliations": [
+    {
+      "id": "REVIEW_DISPOSITION_VOCABULARY",
+      "decision": "Accept the executed SUPPORTED disposition together with its explicit scope limitations as SUPPORTED_WITHIN_STATED_COMPUTATIONAL_SCOPE for Stage 6, not unrestricted scientific approval."
+    },
+    {
+      "id": "ACTUAL_REVIEW_LINUX_ORDER",
+      "decision": "Accept the owner-permitted independent lanes: the final amendment review inspected the successful Linux evidence after execution. Do not assert literal compliance with the original review-before-Linux prose ordering."
+    },
+    {
+      "id": "HISTORICAL_104_CHECK_SNAPSHOT",
+      "decision": "Preserve the earlier 80 PASS / 1 INCONCLUSIVE / 23 NOT_RUN log. Later Linux and review records resolve their prerequisites; this separate record supplies Stage 8 adoption. No retrospective 104/104 PASS claim is made."
+    },
+    {
+      "id": "DURABLE_ARCHIVE_CUSTODY",
+      "decision": "Accept the byte-identical Git-preserved archive as durable custody beyond hosted-artifact expiry. Rehashing for this adoption is documentation/custody validation, not a new physics execution."
+    }
+  ],
+  "authority_effect": {
+    "bounded_computational_adoption": true,
+    "model_truth_authority_changed": false,
+    "per_claim_historical_authority_changed": false,
+    "original_bundle_authority_bindings_rewritten": false,
+    "verification_receipts_rewritten": false,
+    "computation_identity_changed": false,
+    "new_AuthorityAttachmentV1_created": false,
+    "new_FrozenEvidenceBundleV1_created": false,
+    "historical_104_check_log_rewritten": false,
+    "claimed_104_of_104_pass": false,
+    "scope_document_historical_draft_status_rewritten": false,
+    "mechanism": "This standalone Stage 8 owner-adoption record governs only the pinned exact computation. Frozen embedded review statuses remain historical as-of-computation facts, not the current adopted disposition. No engine-wide REQUALIFIED default is set."
+  },
+  "preserved_project_state": {
+    "Route_C": "2/4",
+    "strict_historical_native_exact_equivalence": "1/4",
+    "production": "76/1188",
+    "rows_77_through_96": "CLOSED",
+    "scientific_promotion": false,
+    "product_v1_release": false,
+    "production_activation": false,
+    "CCFT_promotion": false,
+    "ToE_promotion": false
+  },
+  "limitations": [
+    "The corrected C03 fourteen-coordinate native quotient does not establish the underdefined exact historical/native-E basis identity.",
+    "Evaluated-zero RV states do not retroactively validate historical unevaluated empty reports; RV03 source-channel distinctions remain binding.",
+    "Qualification does not transfer automatically to other inputs, topology classes, profiles, implementations, source meanings, policies, numerical calculations or future versions.",
+    "Linux evidence establishes egress-denied trusted execution after connected dependency provisioning, not offline environment construction or a hostile-code sandbox.",
+    "Non-author review is same-provider AI computational review, not external expert peer review or experimental independence.",
+    "SU(5) viability, observed proton decay, CCFT, a ToE, generic runner validity, full product v1 and production activation are not established."
+  ],
+  "closure": {
+    "exact_profile_work": "STOP_UNLESS_NEW_FALSIFIER_OR_SEPARATELY_AUTHORIZED_SCOPE_CHANGE",
+    "new_falsifier_action": "Preserve the adopted and historical evidence; open a versioned impact review and withhold affected assurance pending disposition. Never repair frozen evidence in place.",
+    "follow_on_scientific_or_product_tasks_started": false,
+    "external_comparator_or_CCFT_work_launched": false
+  }
+}
