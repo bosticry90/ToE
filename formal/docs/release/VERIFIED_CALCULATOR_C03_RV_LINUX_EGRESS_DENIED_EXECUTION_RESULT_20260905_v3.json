@@ -1,0 +1,91 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedExecutionResultV3",
+  "as_of": "2026-09-05",
+  "attempt": {
+    "disposition": "INCONCLUSIVE",
+    "qualification_earned": false,
+    "isolation_boundary_established": true,
+    "failure_stage": "TRUSTED_QUALIFICATION_SOURCE_LOADING_BEFORE_GRAPH_EXECUTION",
+    "failure_code": "FROZEN_SOURCE_ARTIFACT_ABSENT_FROM_CLEAN_CHECKOUT",
+    "failure_detail": "formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/source_profile_v1.json",
+    "classification_reason": "The v3 network evidence established a fresh namespace with only loopback, no usable forwarding default route, and both active probes returning ENETUNREACH. qualify() was invoked, but candidate/profile reconstruction failed before graph execution because a required hash-bound source artifact existed only as an untracked local workspace file and was absent from the clean Git checkout. Under AC-22 and the result vocabulary, a missing required artifact is INCONCLUSIVE and earns no Linux qualification.",
+    "qualification_driver_entered": true,
+    "trusted_graph_execution_started": false,
+    "fallback_connected_execution_used": false
+  },
+  "network_isolation_observation": {
+    "initial_state_file_sha256": "1ca3e95971086657b6837b2a52abc957a0054e6ea436a20f9005a7e835900980",
+    "socket_interfaces": [
+      "lo"
+    ],
+    "proc_net_dev_interfaces": [
+      "lo"
+    ],
+    "usable_ipv4_default_routes": [],
+    "usable_ipv6_default_routes": [],
+    "active_probe_results": [
+      "1.1.1.1:443=ENETUNREACH",
+      "8.8.8.8:53=ENETUNREACH"
+    ],
+    "raw_ipv6_proc_rows_retained": 2,
+    "iproute2_ipv6_default_routes": []
+  },
+  "github": {
+    "pull_request": 2,
+    "pull_request_url": "https://github.com/bosticry90/ToE/pull/2",
+    "workflow_run_id": 34009722386,
+    "workflow_run_url": "https://github.com/bosticry90/ToE/actions/runs/34009722386",
+    "job_id": 101423304421,
+    "job_url": "https://github.com/bosticry90/ToE/actions/runs/34009722386/job/101423304421",
+    "source_commit": "fd4a32f1a544b2af51e2a1a4038b48dd80c7c41c",
+    "pull_request_merge_commit": "085f72a209a067391d0d147eb3afba82be046ec0",
+    "started_at_utc": "2026-09-06T03:43:49Z",
+    "completed_at_utc": "2026-09-06T03:57:20Z"
+  },
+  "frozen_reference": {
+    "bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204",
+    "modified": false
+  },
+  "provisioning": {
+    "completed": true,
+    "captured_at_utc": "2026-09-06T03:57:13.807804Z",
+    "manifest_hash": "43a7308f2d0c528ba2987c2e0999645eea1b56afbdd1190ba73f9d76be0d6f7e",
+    "manifest_sha256": "be61c59eff0702fe768228d9b13c801c3bb4618e39fa27fd30110d05d607ea1e",
+    "iproute2_sha256": "ea200fcc3a7bf723a8e0e2a21ceb3805324812fef36f6ba0552362a9a9e65f92"
+  },
+  "preserved_artifact": {
+    "github_artifact_id": 9982234981,
+    "github_artifact_name": "verified-calculator-linux-egress-denied-v3-085f72a209a067391d0d147eb3afba82be046ec0",
+    "github_artifact_size_bytes": 14131,
+    "archive_sha256": "fd6d30615610d000048dc6bc1a5f753020982cbc25e59f69decf66f21dd168e4",
+    "local_explicit_preservation_path": "formal/output/verified_calculator_linux_egress_denied_run_34009722386/artifact.zip",
+    "files": {
+      "attempt.json": "05f7a55f70572c26cebe50b705a89d7b435c54f868507a9f262a126ac4ee1112",
+      "execution.stderr.log": "2b5134c4d70d198cf048104c62540c3b56415d99fc673dea382c17374c6ad0f2",
+      "execution_exit_code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "failure.json": "2d84e742521f38d1b893e646a6dd4e3e9f97393ae67353ba4cb26d72f7bfa7c2",
+      "initial_network_state.json": "1ca3e95971086657b6837b2a52abc957a0054e6ea436a20f9005a7e835900980",
+      "provisioning.json": "be61c59eff0702fe768228d9b13c801c3bb4618e39fa27fd30110d05d607ea1e",
+      "result.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "workflow_disposition.json": "5a8cfb0adfeff6b0a5bc17a9255d308bf26c9b9bedc260c1c89254e85dd9491f"
+    }
+  },
+  "source_custody_defect": {
+    "profile_descriptor_and_declared_source_files_audited": 25,
+    "git_tracked_before_repair": 1,
+    "git_untracked_before_repair": 24,
+    "all_local_bytes_match_frozen_declared_hashes": true,
+    "review_implication": "The prior non-author review verified local bytes but did not establish that the source corpus was present in the reviewed Git object. This is a post-review custody amendment and does not modify the preserved review result."
+  },
+  "repair_lineage": {
+    "required": true,
+    "next_test_id": "C03_RV_EXACT_LINUX_KERNEL_EGRESS_DENIED_REPRODUCTION_v4",
+    "repair_scope": "Commit the 24 previously untracked but already hash-matching profile descriptor, parent allowlist, normalization contract, and declared source artifacts without modifying their bytes. Add a fail-closed pre-isolation manifest gate proving all 25 runtime source-custody files are present in the tested Git commit and match their frozen hashes.",
+    "reference_packet_repair_required": false
+  },
+  "result_record_hash": "5823c8a0534834e3824c2feba4fadfccbc9c658d4eff36c32fe770ab67bf3c01",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

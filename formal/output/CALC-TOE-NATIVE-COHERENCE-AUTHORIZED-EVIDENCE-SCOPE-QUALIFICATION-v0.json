@@ -1,0 +1,115 @@
+{
+  "artifact_id": "CALC-TOE-NATIVE-COHERENCE-AUTHORIZED-EVIDENCE-SCOPE-QUALIFICATION-v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "custody_controls": {
+    "archive_files_modified": false,
+    "archive_material_promoted": false,
+    "automatic_successor_selected": false,
+    "closed_program_event_chain_unchanged": true,
+    "closed_program_manifest_unchanged": true,
+    "new_scientific_stage_consumed": false,
+    "non_destructive_addendum": true
+  },
+  "evidence": {
+    "archive_candidate_ranking": {
+      "path": "formal/output/archive_candidate_ranking.json",
+      "sha256": "4faf70e406f9346234261282c5184347795c061293c19e8380eab994545ff0c6"
+    },
+    "archive_intake_index": {
+      "path": "formal/output/archive_intake_index.json",
+      "sha256": "106a991ab0cd2eab2df07fadf0cd213f3a7d8cd9121f486424504bb24fe8d005"
+    },
+    "ccft_archive_quarantine_dossier": {
+      "path": "formal/quarantine/dossiers/DOSSIER_0007_archive_docs_monograph_ccft_monograph_md.md",
+      "sha256": "99f78eb2fee1b8d0021a4394aecbab10cf8dbcbb253890f291b033112b583752"
+    },
+    "closed_program_manifest": {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_MANIFEST_v1.json",
+      "sha256": "0b16ddb1464016930c4696448a3294cb3259ee8a6706bfc318408935389d6a2a"
+    },
+    "stage_1_claim_inventory": {
+      "path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+      "sha256": "91b2fb9a275232b96604db77e0d862c9edbdde1a5daf703bed798d8d717f894b"
+    },
+    "stage_2_operational_test": {
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0.json",
+      "sha256": "55127f74ef6794b76ec5044330eb667ef3e9a78c5660ca0bedd6ca7386322c41"
+    },
+    "terminal_closeout": {
+      "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0.json",
+      "sha256": "be08cef68004565430e7393c78e96f5aa80c11959d7c5ddb87ff10eedd07450e"
+    },
+    "terminal_closeout_review": {
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_REVIEW_20260730_v0.json",
+      "sha256": "ce21c95b70fb60b8351b905a6c0225ad488ccf2f25289e6416a9fd9402dd7283"
+    }
+  },
+  "execution_target": "record_toe_native_coherence_authorized_evidence_scope_qualification_v0",
+  "native_hypothesis_tested": "NONE_GOVERNANCE_OR_CUSTODY_ONLY",
+  "native_relevance": {
+    "kind": "SCIENTIFIC_CUSTODY_SCOPE_QUALIFICATION",
+    "statement": "Qualifies the evidentiary reach of a closed native-coherence program without changing its result."
+  },
+  "preserved_closed_result": {
+    "calculation_status": "NOT_REACHED",
+    "native_model_status": "NOT_CONSTRUCTED",
+    "operational_result": "COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL",
+    "original_artifacts_rewritten": false,
+    "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+    "program_reopened": false,
+    "program_result": "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+    "representation_status": "NOT_REACHED",
+    "terminal_outcome_changed": false
+  },
+  "schema_id": "toe.native_coherence.authorized_evidence_scope_qualification.v0",
+  "scientific_boundary": {
+    "established": [
+      "The authorized 13-source evidence set was insufficient for operational representation."
+    ],
+    "not_established": [
+      "the entire repository lacks an operational definition",
+      "the archive contains an operational definition",
+      "CCFT is false",
+      "coherence cannot be physical",
+      "a future coherence representation is impossible"
+    ]
+  },
+  "scope_qualification": {
+    "archive_contains_operational_definition": "UNKNOWN_NOT_TESTED",
+    "archive_wide_ccft_evidence_census": "NOT_PERFORMED",
+    "authorized_evidence_sufficiency": "FAILED",
+    "ccft_operational_representability": "BLOCKED_ON_AUTHORIZED_EVIDENCE",
+    "every_repository_coherence_claim_exhausted": false,
+    "future_coherence_representation_ruled_out": false,
+    "precise_status_statement": "The coherence claims contained in the authorized canonical evidence set were insufficiently defined for operational representation. Potentially relevant historical archive material was outside scope and remains unadjudicated.",
+    "repository_wide_evidence_sufficiency": "NOT_TESTED"
+  },
+  "source_scope_facts": {
+    "archive_indexed_file_count": 7331,
+    "archive_material_was_in_stage_1_authority": false,
+    "archive_wide_ccft_evidence_census_performed": false,
+    "ccft_monograph_was_available_only_through_a_canonical_dossier": true,
+    "repository_wide_native_hypothesis_census_performed": false,
+    "stage_1_authorized_sources": [
+      "formal/docs/paper/CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0.md",
+      "formal/docs/paper/CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0.md",
+      "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+      "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json",
+      "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_RESULT_REVIEW_20260729_v0.json",
+      "formal/docs/release/bounded_program_manifests/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_MANIFEST_v1.json",
+      "formal/docs/release/bounded_program_manifests/TOE_NATIVE_SURROGATE_V0_MANIFEST_v1.json",
+      "formal/output/CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0.json",
+      "formal/output/CALC-TOE-NATIVE-SURROGATE-V0-BOUNDED-CLOSEOUT-v0.json",
+      "formal/python/tools/bounded_program_governance.py"
+    ],
+    "stage_1_claim_count": 13,
+    "stage_1_distinct_authorized_source_count": 13,
+    "stage_1_source_record_count": 13
+  },
+  "strict_terminal_outcome": "AUTHORIZED_13_SOURCE_EVIDENCE_INSUFFICIENT_ARCHIVE_WIDE_EVIDENCE_UNADJUDICATED_ORIGINAL_CLOSEOUT_AND_TERMINAL_OUTCOME_UNCHANGED",
+  "terminal_outcome": "COHERENCE_CLOSEOUT_SCOPE_QUALIFIED_WITHOUT_SCIENTIFIC_REOPENING",
+  "verdict": "ACCEPT_FORWARD_ONLY_SCOPE_QUALIFICATION_PRESERVE_CLOSED_RESULT"
+}

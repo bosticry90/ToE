@@ -1,0 +1,43 @@
+{
+  "artifact_id": "BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_20260729_v0",
+  "authority_lane": "corrective_governance_only",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "current_scientific_target_preserved": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+  "installation": {
+    "event_chain": "immutable ATTEMPT_OPEN and ATTEMPT_CLOSE artifacts linked by SHA-256",
+    "native_program_status": "TEMPLATE_NOT_AUTHORIZED",
+    "quadratic_program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+    "quadratic_repair_attempt_count": 0,
+    "quadratic_stage_cap": 5,
+    "registry_extension": "bounded_program_governance_v1",
+    "registry_schema_version_after": 1,
+    "registry_schema_version_before": 0
+  },
+  "nonclaim_boundary": [
+    "No scientific target is rotated.",
+    "No quadratic scientific stage is attempted by this installation.",
+    "No native-surrogate program is authorized.",
+    "No physics result is produced.",
+    "No maintenance successor is selected."
+  ],
+  "scope_hash_contract": {
+    "hash": "SHA-256",
+    "jcs": "RFC 8785 bounded I-JSON subset",
+    "ordered_array_fields": [
+      "rewrite_precedence",
+      "substitution_order",
+      "variable_ordering",
+      "dependency_execution_sequence",
+      "Jordan_chain_member_order"
+    ],
+    "set_like_array_fields": [
+      "authorized_inputs",
+      "required_outputs",
+      "prohibited_claims",
+      "dependency_artifact_ids",
+      "terminal_outcome_vocabulary"
+    ]
+  },
+  "schema_id": "toe.bounded_program_governance.control_installation.v0",
+  "status": "INSTALLED_GOVERNANCE_ONLY_NO_SCIENTIFIC_ROTATION"
+}

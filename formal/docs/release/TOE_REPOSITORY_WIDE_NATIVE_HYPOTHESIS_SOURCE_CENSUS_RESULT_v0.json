@@ -1,0 +1,107 @@
+{
+  "aggregate_manifest": {
+    "path": "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/aggregate_manifest.json",
+    "sha256": "900647ca8823b4e1c4f82f11f019d135106e65cd9bd9ea3d45d6e1fdf6dc3168"
+  },
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0",
+  "batch_count": 8,
+  "bounded_deep_review_status": "NOT_REACHED_STAGE_3",
+  "captured_at_utc": "2026-07-30T23:25:13Z",
+  "claim_exhaustion_status": "REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED",
+  "content_boundary": {
+    "active_content_executed": false,
+    "claim_extraction_performed": false,
+    "content_fingerprints_generated": false,
+    "evidence_promotion_performed": false,
+    "lineage_or_supersession_conclusions_performed": false,
+    "native_frontier_selected": false,
+    "network_retrieval_performed": false,
+    "pdf_and_office_content_extracted": false,
+    "recursive_archive_expansion_performed": false,
+    "stage_2_output_produced": false
+  },
+  "custody_inventory_status": "COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS",
+  "declared_root_discovery_status": "DECLARED_ROOT_METADATA_DISCOVERY_COMPLETE",
+  "dependency_impact_boundary": {
+    "exhaustive_python_passage_claimed": false,
+    "known_dependency_impact_result": "KNOWN_EXHAUSTIVE_FAILURES_DO_NOT_REACH_CENSUS_DEPENDENCIES"
+  },
+  "discovery_counts": {
+    "aggregate_discovered_bytes": 2132217250,
+    "content_extraction_failures": 0,
+    "custody_records": 13563,
+    "exact_content_duplicate_groups": 421,
+    "excluded_descendant_aggregate_bytes": 378135588,
+    "excluded_descendant_files": 15640,
+    "excluded_subtree_records": 44,
+    "file_entries_addressed_including_segregated_descendants": 29159,
+    "git_tracked_records": 12487,
+    "local_verified_file_records": 1032,
+    "metadata_only_pdf_and_office_records": 61,
+    "unsupported_format_records_preserved": 103
+  },
+  "domain_candidate_counts": {
+    "basis": "PATH_KEYWORD_ONLY_NONAUTHORITATIVE",
+    "BRIDGE_CONDITIONS": 1486,
+    "CCFT": 453,
+    "EMERGENCE": 2,
+    "FALSIFICATION": 31,
+    "GRAVITY": 2339,
+    "MASTER_ACTION": 459,
+    "MATTER": 1283,
+    "OBSERVABLES": 326,
+    "ONTOLOGY": 560,
+    "PILLARS": 230,
+    "PREDICTIONS": 346,
+    "QUANTUM_STRUCTURE": 3399,
+    "SCALE_HIERARCHY": 18,
+    "SEAMS": 2195,
+    "THERMODYNAMICS": 63,
+    "interpretation": "Candidate counts arise only from deterministic path keywords. They are discovery metadata, not extracted scientific claims or evidence strength."
+  },
+  "eligibility_for_later_bounded_review": {
+    "eligible_record_count": 11697,
+    "eligibility_is_adoption": false,
+    "eligibility_is_scientific_validation": false,
+    "selection_budget_applies_only_at_stage_3": true
+  },
+  "local_custody_disclosure": {
+    "portable_byte_custody_established": false,
+    "source_root_count": 2,
+    "statement": "The local archive source bytes were available and hash-bound in the executing workspace but are not preserved in normal Git history and may not exist in another checkout. No local-only claim may become canonical without portable custody or an independently auditable dossier."
+  },
+  "next_stage": {
+    "authorized": false,
+    "opened": false,
+    "selected_target": "reconstruct_toe_native_hypothesis_source_lineages_v0",
+    "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION"
+  },
+  "performance": {
+    "bytes_read": 3508163324,
+    "elapsed_cpu_seconds": 50.8125,
+    "elapsed_wall_seconds": 58.595736,
+    "peak_memory_bytes": 105085135,
+    "worker_count": 1
+  },
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "reddit_status": "EXCLUDED_AND_UNTOUCHED",
+  "schema_id": "toe.repository_wide_native_hypothesis_source_census.result.v0",
+  "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+  "source_classification_counts": {
+    "CACHE_OR_TEMPORARY": 42,
+    "GENERATED_PROJECT_OUTPUT": 1723,
+    "HISTORICAL_PROJECT_METADATA": 2402,
+    "SCIENTIFIC_DERIVED_SOURCE": 6435,
+    "UNKNOWN_REQUIRES_REVIEW": 2959,
+    "VENDORED_DEPENDENCY": 2
+  },
+  "source_root_status": {
+    "all_declared_roots_available": true,
+    "all_source_root_snapshots_stable": true,
+    "mutation_outcome": "SOURCE_ROOT_SNAPSHOT_STABLE"
+  },
+  "stage_attempt": 1,
+  "stage_lifecycle_result": "PASSED",
+  "status": "SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS",
+  "terminal_outcome": "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS"
+}

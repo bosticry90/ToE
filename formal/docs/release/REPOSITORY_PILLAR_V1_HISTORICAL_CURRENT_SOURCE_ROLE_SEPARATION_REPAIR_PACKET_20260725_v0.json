@@ -1,0 +1,43 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_PACKET_20260725_v0",
+  "accepted_adjudication": {
+    "commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+    "result": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_20260725_v0.json",
+    "review": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "accepted_authority_repair": {
+    "commit": "cbed4a31e66509797e6712d53f3d3993eb9a7cff",
+    "review": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_RESULT_REVIEW_20260725_v0.json"
+  },
+  "permitted": {
+    "preserve_v1_historical_review_source_pin": true,
+    "declare_commit_relative_current_source_blob": true,
+    "declare_commit_relative_current_generator_blob": true,
+    "remove_historical_to_current_equality": true,
+    "retain_corruption_controls": true,
+    "add_identity_contract_and_exact_guards": true
+  },
+  "prohibited": {
+    "rewrite_historical_review": true,
+    "refresh_historical_pin": true,
+    "maintenance_authority_change": true,
+    "registry_rotation": true,
+    "v2_enrollment": true,
+    "scientific_content_change": true,
+    "lean_activity": true,
+    "staging_identity_repair": true,
+    "automatic_successor": true
+  },
+  "acceptance": {
+    "historical_review_and_pin": "BYTE_PRESERVED",
+    "historical_role": "V1_FROZEN_REVIEW_SOURCE_PIN",
+    "current_source_role": "CURRENT_SOURCE_BLOB_IDENTITY",
+    "current_generator_role": "CURRENT_GENERATOR_IDENTITY",
+    "historical_to_live_equality_requirement": "REMOVED",
+    "affected_outcomes": "39 / 39 PASS",
+    "lf_checkout": "PASS_AND_CLEAN",
+    "crlf_checkout": "PASS_AND_CLEAN",
+    "detached_review": "PASS_AND_CLEAN",
+    "scientific_posture": "B-BLOCKED"
+  }
+}

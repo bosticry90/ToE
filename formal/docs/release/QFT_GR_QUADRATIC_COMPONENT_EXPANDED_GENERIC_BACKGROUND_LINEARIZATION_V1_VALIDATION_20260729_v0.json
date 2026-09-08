@@ -1,0 +1,87 @@
+{
+  "aggregate_generation": {
+    "command": "python -m formal.python.tools.generate_lean_all_modules_aggregate --check --scope committed",
+    "covered_module_count_after_stage_2_enrollment": 1274,
+    "result": "PASS"
+  },
+  "bounded_program": {
+    "attempt_sequence_number": 2,
+    "close_event_hash": "f902a205eab6924c647ea9490b3d8bf2ecf80d49f3efc3d4908b758f98e5b97d",
+    "close_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_02_CLOSE_v0.json",
+    "open_commit": "abe37346165f786885d440107bd5bf64b46ba3d4",
+    "open_event_hash": "e154c04548138950b66630fc2d3b4a206162c7ca4a42ea26545b7182118cd7fe",
+    "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_02_OPEN_v0.json",
+    "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+    "semantic_stage_id": "COMPONENT_EXPANDED_LINEARIZATION",
+    "substantive_stage_output_predated_open_commit": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checkout_boundary": {
+    "allowed_root": "C:/Users/psboy/Documents/ToE",
+    "new_artifact_outside_allowed_root": false,
+    "tracked_index_and_worktree_expected_clean_after_commit": true,
+    "untracked_reddit_directory_status": "PRESENT_UNTOUCHED_OUTSIDE_STAGE_2"
+  },
+  "commands": [
+    {
+      "command": "python -m formal.python.toe.calculations.calc_qft_gr_quadratic_component_expanded_generic_background_linearization_v1 --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m formal.python.tools.qft_gr_quadratic_component_expanded_generic_background_linearization_v1_result_review --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m pytest formal/python/tests/calculations/test_calc_qft_gr_quadratic_component_expanded_generic_background_linearization_v1.py formal/python/tests/test_bounded_program_governance.py formal/python/tests/test_current_scientific_authority_consistency.py formal/python/tests/test_current_authoritative_surfaces_gate.py formal/python/tests/test_current_target_freshness_gate.py formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py formal/python/tests/test_authority_surface_parity_tool_gate.py formal/python/tests/test_repository_front_door_links.py formal/python/tests/test_lean_all_modules_aggregate_coverage_gate.py formal/python/tests/test_repository_canonical_text_integrity_gate.py -q",
+      "passed": 55,
+      "result": "PASS"
+    },
+    {
+      "command": "python -m formal.python.tools.bounded_program_governance validate",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m formal.python.tools.loop_control_registry_integrity --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m formal.python.tools.current_scientific_authority_consistency",
+      "result": "PASS"
+    },
+    {
+      "command": "lake build ToeFormal.Derivation.CurrentTarget ToeFormal.Release.CurrentAuthority ToeFormal.Derivation.CrossPillarClosureFrontier",
+      "result": "PASS"
+    },
+    {
+      "command": "lake env lean ToeFormalAll.lean",
+      "covered_module_count": 1274,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check && git diff --cached --check",
+      "result": "PASS"
+    }
+  ],
+  "component_result": {
+    "component_dag_node_count": 3950,
+    "equation_count_per_trace_chart": 64,
+    "minkowski_nonzero_entry_count": 224,
+    "minkowski_state_count": 128,
+    "off_shell_on_shell_and_gauge_compatible_forms_separated": true,
+    "trace_chart_count": 10,
+    "unnamed_placeholder_count": 0
+  },
+  "result": "STAGE_2_VALIDATION_PASSED",
+  "schema_id": "toe.qft_gr_quadratic_component_expanded_generic_background_linearization_v1_validation.v0",
+  "scientific_boundary": {
+    "component_expanded_linearization_complete": true,
+    "constraint_tangent_projector_constructed": false,
+    "exact_generic_companion_operator_constructed": false,
+    "finite_loss_established": false,
+    "nonlinear_estimate_claimed": false,
+    "spectral_result_claimed": false,
+    "variable_coefficient_result_claimed": false
+  },
+  "stage_2_terminal_result": "PASSED",
+  "working_branch": "codex/quadratic-hyperbolicity-bounded-replay"
+}

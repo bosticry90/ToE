@@ -1,0 +1,72 @@
+{
+  "schema_id": "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v2",
+  "recovery_start_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+  "base_contract": {
+    "path": "formal/docs/release/RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v1.json",
+    "sha256": "ef77adee3cc70fc6a652ba6487e6e1617e40b292705f027f2822cac10401b0ba",
+    "accepted_repair_count": 9
+  },
+  "proposed_base": {
+    "commit": "2006ed411b0669f4de8ba10db1787207050affd3",
+    "tree": "3cc4d16697c719ea18ccd560c5dbbac78d2c3aa8"
+  },
+  "guard_classes": [
+    "PROTECTED_INVARIANT_GUARD",
+    "HISTORICAL_SNAPSHOT_GUARD",
+    "SUPERSEDED_GUARD_WITH_ACCEPTED_REPLACEMENT"
+  ],
+  "accepted_repairs": [
+    {
+      "cycle_id": "CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR",
+      "authorization_commit": "a875b5538db790e7732acd8927bf53acd0615e6b",
+      "implementation_commits": [
+        {
+          "commit": "a875b5538db790e7732acd8927bf53acd0615e6b",
+          "tree": "6c24fa5b8d14c92d436719f9a3c99ce97a4b2a8b"
+        }
+      ],
+      "accepted_commit": "2006ed411b0669f4de8ba10db1787207050affd3",
+      "result_path": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_RESULT_20260725_v0.json",
+      "result_sha256": "26b7ef803321177b910f20aa8a002d441e5bc09eb7d7702a60cd79f8753510f3",
+      "review_path": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "36ee6e56536c5803d91fb1286dffd6112d3aff2b2a64dc9dcb9cc04c92647fa8",
+      "result_binding_mode": "ORIGINAL_RESULT_EXPLICIT",
+      "protected_invariant": "The accepted current-profile exposed-root repair preserves the complete accepted lineage, Prompt decoupling, validation-profile integrity, and reproducible short-path Lean-backed guards.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_recovery_accepted_lineage_completeness.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_prompt_dependency_role_adjudication_and_decoupling.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_recovery_validation_profiles.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_lean_build_gate_qft_evol_object_scaffold.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_lean_build_gate_qm_full_derivation_scaffold.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_lean_build_gate_sr_covariance_object_discharge_stub.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [
+        "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v1",
+        "CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_RESULT_20260725_v0"
+      ],
+      "superseded_guards": []
+    }
+  ]
+}

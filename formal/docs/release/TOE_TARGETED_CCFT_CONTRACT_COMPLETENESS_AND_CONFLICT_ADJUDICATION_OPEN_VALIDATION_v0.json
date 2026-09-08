@@ -1,0 +1,53 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+    "formal/python/tools/toe_targeted_ccft_contract_adjudication_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTContractAdjudicationAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 3,
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_STAGE_3_OPEN",
+  "captured_at_utc": "2026-08-02T01:35:36Z",
+  "event_hash": "a414202ec4a5e93bc06991e54c0c842d0c23505fcfe937548d3b2ff093bce53a",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+  "event_sha256": "bd8506faf58bdd9302a3ef7049ea862a6555852c310c6b70415d1ffd88ad0606",
+  "opened_from_commit": "f529423204a9576a721e542619f08e345b6f8807",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "registry_snapshot_hash": "19396d47601fad569eacc1466ae3305795b6c393979ab372d9dccd7e057c41f4",
+  "schema_id": "toe.targeted_ccft.contract_adjudication.stage_3_open_validation.v0",
+  "scientific_output_at_open": {
+    "adjudication_records_created": 0,
+    "ccft_v0_constructed": false,
+    "checklist_items": 18,
+    "conflicted_checklists": 3,
+    "conflicts_selected_or_repaired": 0,
+    "contract_records": 23,
+    "contracts_recovered_or_rejected": 0,
+    "exact_candidates": 7,
+    "frozen_sources": 96,
+    "new_ccft_postulates": 0,
+    "new_source_search": false,
+    "stage_4_output_created": false,
+    "theorem_discovery_opened": false
+  },
+  "scope_hash": "5b6cf39bbf3e4f8bf076dba1817778547410a8d7950164ce5b1c27d0f977410a",
+  "semantic_stage_id": "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION",
+  "status": "STAGE_3_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0",
+  "validation_checks": {
+    "all_23_records_18_checklists_and_7_exact_candidates_match": true,
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_adjudication_or_model_output": true,
+    "program_state_is_open": true,
+    "stage_2_result_review_validation_and_close_hashes_match": true,
+    "stage_4_remains_unauthorized": true,
+    "three_conflict_sets_remain_frozen_without_selection": true
+  }
+}

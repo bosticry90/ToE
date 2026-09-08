@@ -1,0 +1,215 @@
+{
+  "archived_active_content_execution": "DENY",
+  "batch_contract": {
+    "aggregate_manifest_binds_each_batch_hash": true,
+    "batch_count_for_stage_1": 8,
+    "batch_omission_permitted": false,
+    "batch_overlap_permitted": false
+  },
+  "cache_never_replaces_final_hash_verification": true,
+  "cache_status": "LOCAL_REGENERABLE_NONAUTHORITATIVE",
+  "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+  "file_record_fields": [
+    "source_root_id",
+    "custody_relative_path",
+    "git_or_filesystem_status",
+    "git_object_id",
+    "committed_blob_sha256",
+    "worktree_sha256",
+    "local_verified_sha256",
+    "file_size",
+    "date_metadata_with_kind_and_confidence",
+    "file_type",
+    "content_fingerprint",
+    "duplicate_group_candidate",
+    "source_classification",
+    "content_extraction_status",
+    "domain_tags",
+    "source_lineage",
+    "provenance_status",
+    "licensing_or_redistribution_concern",
+    "custody_class",
+    "eligibility_for_deeper_review",
+    "exclusion_reason",
+    "source_snapshot_id",
+    "indexer_schema_version",
+    "parser_contract_version"
+  ],
+  "filename_normalization_collision_policy": "PRESERVE_RAW_NAMES_RECORD_COLLISION_AND_BLOCK_AMBIGUOUS_INTAKE",
+  "hashing_schema_version": 1,
+  "index_id": "TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_V1",
+  "legacy_index_must_not_be_overwritten": "formal/output/archive_intake_index.json",
+  "local_final_manifest_requires_verified_sha256": true,
+  "macro_policy": "DISABLED",
+  "maintenance_cli_refuses_scientific_roots": true,
+  "metadata_is_change_detection_hint_only": true,
+  "network_policy": "DENY",
+  "parser_contract_version": "v1",
+  "parser_specs": [
+    {
+      "extensions": [
+        "md",
+        "txt",
+        "py",
+        "lean",
+        "tex",
+        "rst",
+        "ps1",
+        "sh",
+        "cfg",
+        "ini"
+      ],
+      "max_extracted_text_bytes": 4194304,
+      "max_file_bytes": 16777216,
+      "maximum_nesting_or_recursion_depth": 32,
+      "maximum_page_or_worksheet_count": null,
+      "maximum_record_or_cell_count": null,
+      "memory_limit_bytes": 536870912,
+      "parser_id": "PASSIVE_TEXT_SOURCE_V1",
+      "timeout_seconds": 30
+    },
+    {
+      "extensions": [
+        "json",
+        "yaml",
+        "yml",
+        "toml"
+      ],
+      "max_extracted_text_bytes": 4194304,
+      "max_file_bytes": 16777216,
+      "maximum_nesting_or_recursion_depth": 64,
+      "maximum_page_or_worksheet_count": null,
+      "maximum_record_or_cell_count": null,
+      "memory_limit_bytes": 536870912,
+      "parser_id": "PASSIVE_STRUCTURED_TEXT_V1",
+      "timeout_seconds": 30
+    },
+    {
+      "extensions": [
+        "csv",
+        "tsv"
+      ],
+      "max_extracted_text_bytes": 8388608,
+      "max_file_bytes": 268435456,
+      "maximum_nesting_or_recursion_depth": null,
+      "maximum_page_or_worksheet_count": null,
+      "maximum_record_or_cell_count": 2000000,
+      "memory_limit_bytes": 1073741824,
+      "parser_id": "PASSIVE_TABULAR_V1",
+      "timeout_seconds": 60
+    },
+    {
+      "extensions": [
+        "pdf"
+      ],
+      "max_extracted_text_bytes": 8388608,
+      "max_file_bytes": 134217728,
+      "maximum_nesting_or_recursion_depth": null,
+      "maximum_page_or_worksheet_count": 1000,
+      "maximum_record_or_cell_count": null,
+      "memory_limit_bytes": 1073741824,
+      "parser_id": "PASSIVE_PDF_V1",
+      "timeout_seconds": 120
+    },
+    {
+      "extensions": [
+        "docx",
+        "xlsx",
+        "pptx",
+        "odt",
+        "ods",
+        "odp"
+      ],
+      "max_extracted_text_bytes": 8388608,
+      "max_file_bytes": 134217728,
+      "maximum_nesting_or_recursion_depth": null,
+      "maximum_page_or_worksheet_count": 1000,
+      "maximum_record_or_cell_count": null,
+      "memory_limit_bytes": 1073741824,
+      "parser_id": "PASSIVE_OFFICE_V1",
+      "timeout_seconds": 120
+    },
+    {
+      "extensions": [
+        "ipynb"
+      ],
+      "max_extracted_text_bytes": 8388608,
+      "max_file_bytes": 67108864,
+      "maximum_nesting_or_recursion_depth": 64,
+      "maximum_page_or_worksheet_count": null,
+      "maximum_record_or_cell_count": 10000,
+      "memory_limit_bytes": 1073741824,
+      "parser_id": "PASSIVE_NOTEBOOK_V1",
+      "timeout_seconds": 60
+    },
+    {
+      "extensions": [
+        "png",
+        "jpg",
+        "jpeg",
+        "gif",
+        "svg",
+        "wav",
+        "mp3",
+        "mp4"
+      ],
+      "max_extracted_text_bytes": 0,
+      "max_file_bytes": 1073741824,
+      "maximum_nesting_or_recursion_depth": null,
+      "maximum_page_or_worksheet_count": null,
+      "maximum_record_or_cell_count": null,
+      "memory_limit_bytes": 536870912,
+      "parser_id": "METADATA_ONLY_MEDIA_V1",
+      "timeout_seconds": 30
+    },
+    {
+      "extensions": [
+        "npy",
+        "npz",
+        "bin",
+        "exe",
+        "dll",
+        "whl"
+      ],
+      "max_extracted_text_bytes": 0,
+      "max_file_bytes": 1073741824,
+      "maximum_nesting_or_recursion_depth": null,
+      "maximum_page_or_worksheet_count": null,
+      "maximum_record_or_cell_count": null,
+      "memory_limit_bytes": 536870912,
+      "parser_id": "METADATA_ONLY_BINARY_DATA_V1",
+      "timeout_seconds": 30
+    },
+    {
+      "extensions": [
+        "zip",
+        "tar",
+        "gz",
+        "7z",
+        "rar"
+      ],
+      "max_extracted_text_bytes": 0,
+      "max_file_bytes": 1073741824,
+      "maximum_nesting_or_recursion_depth": 0,
+      "maximum_page_or_worksheet_count": null,
+      "maximum_record_or_cell_count": null,
+      "memory_limit_bytes": 536870912,
+      "parser_id": "CONTAINER_METADATA_ONLY_V1",
+      "timeout_seconds": 30
+    }
+  ],
+  "recursive_archive_expansion": "DENY",
+  "schema_id": "toe.native_hypothesis_census.index_schema.v1",
+  "schema_version": 1,
+  "source_snapshot_fields": [
+    "source_root_id",
+    "initial_snapshot_tuple_hash",
+    "final_snapshot_tuple_hash",
+    "stability_status"
+  ],
+  "special_file_policy": "DEVICE_PIPE_SOCKET_OR_OTHER_SPECIAL_OBJECT_METADATA_ONLY",
+  "stage_1_execution_enabled": false,
+  "symlink_junction_reparse_policy": "DO_NOT_FOLLOW_RECORD_METADATA_AND_BLOCK_ANY_ROOT_ESCAPE",
+  "tracked_blob_read_method": "git cat-file blob",
+  "tracked_primary_identity": "COMMITTED_GIT_BLOB_BYTES"
+}

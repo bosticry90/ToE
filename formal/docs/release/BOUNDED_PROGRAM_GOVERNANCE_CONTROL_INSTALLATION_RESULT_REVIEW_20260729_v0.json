@@ -1,0 +1,24 @@
+{
+  "artifact_id": "BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_RESULT_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "consumed_artifact": "BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_20260729_v0",
+  "decision": "BOUNDED_PROGRAM_GOVERNANCE_CONTROL_INSTALLATION_ACCEPTED",
+  "findings": {
+    "canonical_scope_normalization_installed": true,
+    "event_chain_initially_empty": true,
+    "native_program_authorized": false,
+    "quadratic_stage_cap": 5,
+    "repair_loop_cap": 0,
+    "scientific_stage_attempted": false,
+    "scientific_target_preserved": true
+  },
+  "next_scientific_target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+  "nonclaim_boundary": [
+    "This review accepts governance infrastructure only.",
+    "It does not attempt or accept a quadratic scientific stage.",
+    "It does not authorize the native-surrogate program.",
+    "It does not select a scientific successor."
+  ],
+  "schema_id": "toe.bounded_program_governance.control_installation_review.v0",
+  "status": "ACCEPTED_GOVERNANCE_ONLY_NO_SCIENTIFIC_ROTATION"
+}

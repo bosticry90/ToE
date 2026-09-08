@@ -1,0 +1,92 @@
+{
+  "artifact_hashes": {
+    "close_event_hash": "912d075f243e417aa3bfc7292b7e4ad5d31c206cfe66e1084c41e397cd9f2d6c",
+    "close_event_sha256": "0c179c8438d99da8d16642d50abc354a1fca40d9203894f5324f6293cb29aef6",
+    "result_sha256": "2c4a32b16dd35d798d95a14a3a0ac466b4fff5dbafd7ae0a70e0755cef9bb81f",
+    "review_sha256": "b402ae4d6871490ab1cc64a5867b203784684dcdf8e514b918d649f5912a2a24"
+  },
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_VALIDATION_v0",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureSourceDiscoveryResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-08-01T23:23:23Z",
+  "deterministic_generation": {
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "module_count": 1396,
+    "status": "PASS"
+  },
+  "focused_lean": {
+    "modules": [
+      "ToeFormal.Derivation.ToeTargetedCCFTClosureSourceDiscoveryResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "status": "PASS"
+  },
+  "focused_python": {
+    "deselected": 6,
+    "deselected_assertions": [
+      "test_registry_projects_program_as_installed_unopened",
+      "test_registry_preserves_target_after_proposal_preparation_completes",
+      "test_every_registry_target_verb_is_supported",
+      "test_live_registry_and_evaluated_lean_values_agree",
+      "test_mismatched_lean_value_fails_closed",
+      "test_maintenance_target_cannot_occupy_scientific_field"
+    ],
+    "deselection_reason": "The first two assertions describe completed installation or preparation checkpoints. The remaining four depend on the separately disclosed legacy authority-parser vocabulary, which does not recognize the already-canonical extract target verb. None adjudicates the Stage 1 source set.",
+    "elapsed_seconds": "44.75",
+    "passed": 69,
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "job_count": 9141,
+    "module_count": 1396,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "precommit_full_history_validator_result": "EXPECTED_SINGLE_FAILURE_CLOSE_ARTIFACT_HAS_ZERO_INTRODUCTION_COMMITS"
+  },
+  "lifecycle_result": "PASSED",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "repository_validation": {
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "git_diff_check": "PASS",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT"
+  },
+  "schema_id": "toe.targeted_ccft_closure.source_discovery_and_custody.validation.v0",
+  "scientific_validation": {
+    "all_eight_roots_are_stable": true,
+    "all_selected_sources_were_previously_unreviewed": true,
+    "branch_allocation_is_balanced_and_within_cap": true,
+    "candidate_population_is_deterministically_bounded": true,
+    "every_selected_source_passes_the_frozen_gate": true,
+    "immutable_census_population_is_complete": true,
+    "inventory_visible_excluded_formats_do_not_enter_deep_review": true,
+    "lineage_cap_is_respected": true,
+    "no_contract_extraction_or_adjudication_occurred": true,
+    "no_equation_repair_parameter_inference_postulate_or_model_construction_occurred": true,
+    "program_stage_target_and_scope_match_manifest": true,
+    "selected_content_identities_are_unique": true,
+    "selected_parser_and_unsupported_caps_are_respected": true,
+    "selected_set_hits_the_frozen_file_cap_without_exceeding_it": true,
+    "selected_source_and_text_byte_caps_are_respected": true,
+    "selected_text_is_hash_bound_for_stage_2_reuse": true,
+    "single_content_pass_consumed_exactly_once": true,
+    "stage_2_is_selected_but_unauthorized": true,
+    "terminal_outcome_is_the_frozen_positive_stage_1_result": true
+  },
+  "semantic_stage_id": "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY",
+  "status": "STAGE_1_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "terminal_outcome": "TARGETED_CCFT_SOURCE_SET_BOUND"
+}

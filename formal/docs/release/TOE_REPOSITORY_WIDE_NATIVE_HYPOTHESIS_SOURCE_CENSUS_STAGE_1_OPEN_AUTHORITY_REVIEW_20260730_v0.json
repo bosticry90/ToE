@@ -1,0 +1,29 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_STAGE_1_OPEN_AUTHORITY_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "all_declared_roots_assigned_to_exactly_one_logical_batch": true,
+    "dependency_impact_check_permits_open_without_claiming_exhaustive_passage": true,
+    "eight_batch_contract_bound": true,
+    "file_byte_parser_and_hostile_content_limits_bound": true,
+    "immutable_manifest_stage_id_target_and_scope_hash_match": true,
+    "local_custody_and_portability_language_present": true,
+    "pdf_office_and_unsupported_files_remain_visible_but_unreviewed": true,
+    "prohibitions_exclude_claim_lineage_promotion_and_frontier_work": true,
+    "reddit_is_excluded": true,
+    "scanner_and_schema_hashes_match_reviewed_maintenance_outputs": true
+  },
+  "consumed_artifact": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_STAGE_1_OPEN_AUTHORITY_20260730_v0",
+  "decision": "AUTHORIZE_REPOSITORY_WIDE_SOURCE_CENSUS_STAGE_1_OPEN",
+  "nonclaim_boundary": [
+    "This review authorizes the atomic OPEN event and then source/custody inventory only.",
+    "The OPEN checkpoint itself may contain no scientific census output.",
+    "Stage 1 may not extract or adjudicate ToE claims, determine scientific lineage, promote evidence, or select a frontier.",
+    "PDF and Office content remains metadata-only; unsupported content remains visible.",
+    "Stage 2 remains prohibited until Stage 1 closes."
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "schema_id": "toe.repository_wide_native_hypothesis_source_census.stage_1_open_authority_review.v0",
+  "status": "STAGE_1_OPEN_AUTHORITY_ACCEPTED_AWAITING_ATOMIC_OPEN_COMMIT"
+}

@@ -1,0 +1,176 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:25:21Z",
+  "result": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/equation-compendium-boundary-hash-identity-domain-adjudication-v0",
+  "accepted_base_commit": "ed1c78734bc0a58a432b55a5fd3b0b9ccb66bd6d",
+  "authorization_commit": "7022a7d040e5d5a82ca5bb60590c10620f40add9",
+  "consumer_mapping": {
+    "outcomes": 50,
+    "unique_nodeids": 50,
+    "consumer_files": 4,
+    "consumer_file_counts": {
+      "formal/python/tests/calculations/test_calc_scalar_stress_energy_covariant_divergence_identity_multi_background_robustness.py": 27,
+      "formal/python/tests/test_scalar_multi_background_robustness_reports.py": 15,
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_execution.py": 6,
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_guardrail.py": 2
+    },
+    "primary_identity_roots": 1,
+    "independent_current_binding_sites": 2,
+    "masked_additional_identity_roots": 0
+  },
+  "identity_adjudication": {
+    "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+    "historical_pin": {
+      "sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "bytes": 13743,
+      "line_feeds": 113,
+      "carriage_returns": 85,
+      "domain": "MIXED_EOL_RAW_WORKTREE_BYTES_SHA256",
+      "provenance": "EXACT_BYTES_PRESERVED_IN_DIRTY_MAIN",
+      "disposition": "RETAIN_AS_HISTORICAL_GENERATOR_PIN"
+    },
+    "current_identity": {
+      "domain": "FROZEN_GIT_BLOB_SHA256",
+      "git_blob_oid": "ccd41b23e28ee01cc23c41821d0f4dde5ccb13fb",
+      "sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae",
+      "bytes": 13658,
+      "last_content_change_commit": "fd4af4f2a7d0916b1ea5d5e4d1f7047ddfe03c43",
+      "stable_at_scalar_capture_commit": "6f3ebce0f03690e54b227a00466a415d60deaf64",
+      "stable_at_pillar_capture_commit": "4e8036a5a3f3d472d8d5ce70bea51793fb7975ea",
+      "disposition": "RETAIN_AS_GIT_BLOB_IDENTITY"
+    },
+    "fresh_lf_checkout_sha256": "3e4f82424d294289a44fa400b82e31654c9e3614d5551a5c5a0c72526352a9ae",
+    "fresh_crlf_checkout_sha256": "97394a0d23aa1d4bed1e3b22582e817222c9468b26d35373b0a39f770fb71f11",
+    "historical_pin_matches_fresh_lf": false,
+    "historical_pin_matches_fresh_crlf": false,
+    "historical_bytes_normalize_to_current_git_blob": true,
+    "substantive_scientific_content_change_established": false,
+    "defect": "RAW_CHECKOUT_BYTE_IDENTITY_USED_AS_CURRENT_TRACKED_SOURCE_IDENTITY"
+  },
+  "related_pin_surfaces": {
+    "occurrences": 23,
+    "files": 15,
+    "current_executable_binding_sites": 2,
+    "historical_or_preservation_surfaces": 13,
+    "blind_refresh_authorized": false,
+    "historical_pin_rewrite_authorized": false
+  },
+  "focused_diagnostics": {
+    "unmodified_focused_baseline": {
+      "tests": 50,
+      "failed": 12,
+      "errors": 38,
+      "passed": 0
+    },
+    "read_only_identity_substitution_current_checkout": {
+      "tests": 50,
+      "passed": 50
+    },
+    "read_only_identity_substitution_fresh_lf_checkout": {
+      "tests": 50,
+      "passed": 50,
+      "checkout_clean": true
+    },
+    "read_only_identity_substitution_fresh_crlf_checkout": {
+      "tests": 50,
+      "passed": 50,
+      "checkout_clean": true
+    },
+    "substitution_scope": "IN_MEMORY_SHA256_RESULT_ONLY",
+    "repository_hashes_modified": 0,
+    "interpretation": "The one identity-domain mismatch exhausts the first causes observed across the exact 50-outcome cohort; the substitution is diagnostic evidence and not a repair."
+  },
+  "accepted_dispositions": {
+    "consumer_expectations": {
+      "RETAIN_AS_GIT_BLOB_IDENTITY": 50
+    },
+    "identity_roles": {
+      "RETAIN_AS_HISTORICAL_GENERATOR_PIN": 1,
+      "RETAIN_AS_GIT_BLOB_IDENTITY": 1,
+      "REMOVE_OBSOLETE_DEPENDENCY": 1
+    },
+    "overall": "RETAIN_AS_GIT_BLOB_IDENTITY_WITH_HISTORICAL_GENERATOR_PIN_PRESERVED"
+  },
+  "narrow_implementation_recommendation": {
+    "selector": "AUTHORIZE_BOUNDED_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR",
+    "target": "implement_repository_equation_compendium_git_blob_identity_contract_repair_v0_once",
+    "requirements": [
+      "Preserve every v0 historical mixed-EOL pin and its records unchanged.",
+      "Create one versioned current identity contract declaring FROZEN_GIT_BLOB_SHA256 at a reviewed frozen commit.",
+      "Route only the two current executable binding sites through one reviewed Git-blob resolver.",
+      "Keep historical-generator custody and current reproducible identity as separate validation roles.",
+      "Run the exact 50-outcome cohort in fresh LF and CRLF checkouts.",
+      "Stop for independent review before any broader baseline reassessment."
+    ],
+    "authorized_by_this_result": false
+  },
+  "external_evidence": [
+    {
+      "path": "REPOSITORY_EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_LEDGER_20260724_v0.json",
+      "sha256": "fbc1a7d1dc0ced4a559ce8f882b2a88b35a6284f4b534df99bb7b5cf34246fc1"
+    },
+    {
+      "path": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ANALYSIS_v0.json",
+      "sha256": "53b0c0ec0619480b69c516272247efee95cb2554b6b51928f08ac76478bec708"
+    },
+    {
+      "path": "EQUATION_COMPENDIUM_RELATED_PIN_SURFACES_v0.json",
+      "sha256": "a40755f2cdf310403cf86a8933c4b4dbf9838516bc7112560fce2c1072a427a6"
+    },
+    {
+      "path": "EQUATION_COMPENDIUM_50_CONSUMER_NODEIDS_v0.txt",
+      "sha256": "d5e101cefcfd56e053e4ca3ab52c3adf5326c50e8195b8313cef31ac298d83ae"
+    },
+    {
+      "path": "EQUATION_COMPENDIUM_BOUNDARY_HASH_IDENTITY_DOMAIN_ADJUDICATION_EXECUTION_MANIFEST_v0.json",
+      "sha256": "0c720796c78cfdfaa99be0bbb7eb047aff15e00ec078fdb1495e6a111b295e19"
+    },
+    {
+      "path": "equation_compendium_50_baseline_v0.xml",
+      "sha256": "b4fa49d0d211d0b8827af46c4734d8be59e9c149fa2c3874008cb33fd9e9caa6"
+    },
+    {
+      "path": "equation_compendium_50_identity_substitution_v0.xml",
+      "sha256": "28af1ab1b1897490f7a4d0810639d9f16bf160dd20829f8f99ed73f958086fb6"
+    },
+    {
+      "path": "equation_compendium_50_lf_identity_substitution_v0.xml",
+      "sha256": "23a0e2e745e3e3b106b5f0f550a5501746179cce87c76b03e23f0c9791919721"
+    },
+    {
+      "path": "equation_compendium_50_crlf_identity_substitution_v0.xml",
+      "sha256": "6ca8c1d3236b86ab51c63cee50e965e262aa352136a725081f7a807e0a36fa8a"
+    }
+  ],
+  "custody": {
+    "adjudication_checkout_clean": true,
+    "fresh_lf_checkout_clean": true,
+    "fresh_crlf_checkout_clean": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_dirty": 7,
+    "dirty_main_untracked": 622,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_path_status_set_exact": true,
+    "dirty_main_existing_regular_file_bytes_unchanged": true
+  },
+  "scope": {
+    "diagnostic_only": true,
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "compendium_content_modified": 0,
+    "artifacts_regenerated": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "four_historical_packet_review_assertions_repaired": 0,
+    "automatic_successor": false
+  },
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_ADJUDICATION_RESULT_ONLY",
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

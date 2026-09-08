@@ -1,0 +1,67 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_VALIDATION_v0",
+  "atomic_closeout_commit_expected_path_count": 9,
+  "atomic_closeout_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+    "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_repository_wide_native_hypothesis_evidence_census_v0_bounded_closeout.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusV0BoundedCloseout.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "broad_legacy_authority_consistency_suite": {
+    "acceptance_claimed": false,
+    "known_debt": [
+      "registry target-verb coverage omits reconstruct, extract, and reconcile",
+      "legacy tests retain stale hard-coded pre-census target expectations"
+    ],
+    "observed_failed": 3,
+    "observed_passed": 46,
+    "status": "KNOWN_PARSER_AND_STALE_EXPECTATION_DEBT_SEPARATE_FROM_THIS_CLOSEOUT"
+  },
+  "captured_at_utc": "2026-07-31T09:00:00Z",
+  "focused_python_validation": {
+    "passed": 43,
+    "status": "PASSED",
+    "suites": [
+      "test_toe_repository_wide_native_hypothesis_evidence_census_v0_bounded_closeout.py",
+      "test_bounded_program_governance.py",
+      "test_bounded_program_governance_enforcement_completion_authority.py",
+      "test_bounded_program_governance_enforcement_adversarial.py"
+    ]
+  },
+  "full_lean_validation": {
+    "jobs": 9074,
+    "modules": 1329,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "governance_validation": {
+    "event_chain_changed": false,
+    "event_count": 10,
+    "mandatory_exit_completed": true,
+    "repair_attempt_count": 0,
+    "status": "PASSED"
+  },
+  "nonclaim_boundary": {
+    "canonical_evidence_promoted": false,
+    "gravitational_survey_authorized": false,
+    "gravitational_survey_opened": false,
+    "native_gravitational_action_selected": false,
+    "repository_claim_exhaustion_established": false,
+    "successor_program_authorized": false,
+    "successor_program_opened": false
+  },
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "result_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+  "result_sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34",
+  "review_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+  "review_sha256": "ca8ac154c409fff05bc58e6e64e00609d477a8fbca56f586b0518b68f4d979d2",
+  "schema_id": "toe.repository_wide_native_hypothesis_evidence_census.bounded_closeout_validation.v0",
+  "status": "MANDATORY_EXIT_CLOSEOUT_READY_FOR_ATOMIC_COMMIT",
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true
+}

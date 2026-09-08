@@ -1,0 +1,49 @@
+{
+  "artifact_id": "TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_03_OPEN_v0.json",
+    "formal/python/tools/toe_ccft_mathematical_object_operationalization_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTMathematicalObjectOperationalizationAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 3,
+  "authority_decision": "AUTHORIZE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_STAGE_3_OPEN",
+  "captured_at_utc": "2026-07-31T23:40:00Z",
+  "event_hash": "47694643488c718054f7360e006ddb74c0eaf5cd75f5c5087ff639dd71ca4d70",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_03_OPEN_v0.json",
+  "event_sequence_number": 5,
+  "event_sha256": "712b47198cc6b8db85d4a437180929f399a2937ba848b8f7992306b3fabc9a74",
+  "opened_from_commit": "0ab8c3dc74ecc6ed6d50d62b83126972184dd6da",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "17abb056559f4d3820ab3e24d731f6a8bbf8bd026fa823016c1140c76aded66e",
+  "schema_id": "toe.ccft.mathematical_object_operationalization.stage_3_open_validation.v0",
+  "scientific_output_at_open": {
+    "bounded_surrogate_interpretations_adopted": 0,
+    "equations_or_definitions_repaired": false,
+    "evidence_promoted": false,
+    "generic_wave_baseline_classifications_created": 0,
+    "objects_operationally_defined": 0,
+    "operational_records_created": 0,
+    "preferred_formulation_or_minimal_core_selected": false,
+    "representation_field_action_seam_or_observable_selected": false,
+    "stage_4_output_created": false
+  },
+  "scope_hash": "fe74ad24a6b899c00fccc0e5c10219f6a59c9f079349a893beaffc682c4d1b99",
+  "semantic_stage_id": "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION",
+  "status": "STAGE_3_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "operationalize_toe_retained_ccft_mathematical_objects_v0",
+  "validation_checks": {
+    "33_entries_nine_components_four_conflicts_and_five_unresolved_relationships_are_bound": true,
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_2_result_review_validation_and_close_hashes_match": true,
+    "stage_4_remains_unauthorized": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "addendum_id": "QFT_GR_QUADRATIC_STAGE_2_ALGEBRAIC_CERTIFICATE_STATUS_ADDENDUM_20260729_v0",
+  "authority": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORITY_PACKET_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "certificate_status": "ALGEBRAIC_CERTIFICATION_INCOMPLETE",
+  "downstream_consumption_rule": {
+    "allowed": [
+      "Consume the 3,950-node generic component DAG as a structurally closed, acyclic, placeholder-free historical representation.",
+      "Consume the independently checked 64-equation component inventory and stored control hashes.",
+      "Use the independently generated Minkowski companion as a separate control only."
+    ],
+    "prohibited": [
+      "Do not cite the independently regenerated Minkowski control as proof that the generic DAG specializes to it entry by entry.",
+      "Do not cite producer-authored PASS_ strings as independent proofs of Bianchi, trace, divergence, definition, or integrability identities.",
+      "Do not treat Stage 2 as a fully algebraically certified generic-background linearization."
+    ]
+  },
+  "not_independently_verified": [
+    "generic DAG specialized to Minkowski entry by entry",
+    "linearized contracted Bianchi identity",
+    "trace and trace-free recombination identity",
+    "divergence of the trace-free Ricci equation",
+    "definition and integrability identities",
+    "symmetry and trace-free identity family"
+  ],
+  "original_artifacts_preserved": [
+    {
+      "path": "formal/output/CALC-QFT-GR-QUADRATIC-COMPONENT-EXPANDED-GENERIC-BACKGROUND-LINEARIZATION-v1.json",
+      "sha256": "18988cbd2708848fa50b08694bb2f46a7e17537e8b1d77b4275352c7568cd4ad"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "0693bc1eda6c4dde6921380ea2cd8709b07011974125b112b41472da0727bc2d"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_VALIDATION_20260729_v0.json",
+      "sha256": "d48be2451a3c791f7c6fd202070ac8871cb961c54a595713b4598d09f3b9ccbc"
+    }
+  ],
+  "preserved_terminal_boundaries": {
+    "bounded_stage_reopened": false,
+    "control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "missing_proof_added": false,
+    "toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "schema_id": "toe.qft_gr.quadratic.stage_2_algebraic_certificate_status_addendum.v0",
+  "structural_status": "GENERIC_COMPONENT_DAG_STRUCTURALLY_COMPLETE",
+  "supersedes_only": [
+    "The historical review's claim that required identity families were independently certified.",
+    "The historical MINKOWSKI_SPECIALIZATION_REPRODUCED label when interpreted as generic-DAG substitution and entrywise recovery."
+  ],
+  "verified": [
+    "component graph closure",
+    "component graph acyclicity",
+    "unique node identifiers",
+    "topological ordering",
+    "absence of unnamed placeholders",
+    "64-equation component inventory",
+    "stored independent Minkowski-control hashes"
+  ]
+}

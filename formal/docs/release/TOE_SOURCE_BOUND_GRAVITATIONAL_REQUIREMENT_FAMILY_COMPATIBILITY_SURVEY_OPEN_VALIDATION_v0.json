@@ -1,0 +1,46 @@
+{
+  "artifact_id": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_OPEN_v0.json",
+    "formal/python/tools/toe_source_bound_gravitational_requirement_family_compatibility_survey_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 4,
+  "authority_decision": "AUTHORIZE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_STAGE_4_OPEN",
+  "captured_at_utc": "2026-07-31T16:35:00Z",
+  "event_hash": "584a9759c86d063c9db50ac0f9e2b0f9e58348cf61c70ae88417ad422941d799",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_OPEN_v0.json",
+  "event_sequence_number": 7,
+  "event_sha256": "5e9b1bf2119f75aaab675f8d3a76166a7c9eb1f84b7da8464c1be0d2f8f9ae43",
+  "opened_from_commit": "3d3d46d5dbb94009e77f5a98f28fd15c379229ce",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "registry_snapshot_hash": "87f067a272b5a8fd32d87519fe6bae7fd0a3e32aa1d9f224fe89d411d5ec8608",
+  "schema_id": "toe.source_bound_gravitational_requirement_family_compatibility_survey.open_validation.v0",
+  "scientific_output_at_open": {
+    "compatibility_cells_populated": 0,
+    "evidence_promoted": false,
+    "families_eligible_for_native_selection": 0,
+    "gravitational_action_selected": false,
+    "gravitational_calculation_started": false,
+    "master_action_constructed": false,
+    "stage_5_output_created": false
+  },
+  "scope_hash": "e81613ed69adbe5c5586a2b9fcb22217f721923758f7af0d85a71cce84a51c51",
+  "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+  "status": "STAGE_4_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "role_aware_matrix_contract_is_frozen": true,
+    "stage_5_remains_unauthorized": true
+  }
+}

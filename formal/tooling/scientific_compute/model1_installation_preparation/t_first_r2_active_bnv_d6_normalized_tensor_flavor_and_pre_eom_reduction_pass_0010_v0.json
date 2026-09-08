@@ -1,0 +1,411 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_D6_NORMALIZED_TENSOR_FLAVOR_AND_PRE_EOM_REDUCTION_PASS_v0",
+  "pass_id": "T_FIRST_R2_ACTIVE_BNV_D6_NORMALIZED_TENSOR_FLAVOR_AND_PRE_EOM_REDUCTION_PASS_0010",
+  "date": "2026-08-22",
+  "status": "D6_RAW_ATLAS_NORMALIZED_AT_REPRESENTATION_CHANNEL_FLAVOR_AND_DERIVATIVE_PLACEMENT_LEVEL_WITH_EXCHANGE_FIERZ_AND_PSI2PHI2D_IBP_REDUCTION_FROZEN_AND_GLOBAL_EOM_QUOTIENT_BLOCKED_BY_THE_INCOMPLETE_RENORMALIZABLE_COUPLING_LEDGER",
+  "authority": {
+    "native_basis_derivation": "PROVISIONAL_AUTHORIZED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "full_adm_calculation": "UNAUTHORIZED",
+    "matching_or_rge_execution": "UNAUTHORIZED",
+    "parameter_evaluation": "UNAUTHORIZED",
+    "literature_absence": "NOT_ESTABLISHED",
+    "novelty": "UNKNOWN"
+  },
+  "frozen_inputs": [
+    {
+      "role": "PRIOR_EXHAUSTIVE_D6_RAW_ATLAS",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_derivative_field_strength_screen_pass_0009_v0.json",
+      "bytes": 14767,
+      "sha256": "c54a187bdaa0fefae1a082da9b2d60f191740dd4cf2a9486e9a6468269a8a313"
+    },
+    {
+      "role": "ACTIVE_FIELD_AND_COUPLING_COMPLETENESS_CONTRACT",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_intermediate_eft_construction_manifest_v0.json",
+      "bytes": 2455,
+      "sha256": "1597a1c9ad2b7c85406fe3a4e143713eb3783ec5b7a5dd7f238868f4d139fb02"
+    },
+    {
+      "role": "INHERITED_SM_BNV_D6_OPERATOR_ORDER_AND_NORMALIZATION_CONTRACT",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/low_energy_matching_and_hadronic_controlled_execution_operator_lift_sign_and_threshold_domain_amendment_manifest_v1.json",
+      "bytes": 8237,
+      "sha256": "4fa4cac8b8545d12e1b0f2a437b592f7bd5e38b09eb814637acad704e02a927e"
+    },
+    {
+      "role": "PARALLEL_PROVENANCE_TRANCHE_CHECKPOINT",
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0125-arxiv-2109-08689.json",
+      "bytes": 36547,
+      "sha256": "d40d90157dece9463e6341eea25569b3c53a68c5f3879e0fccc0d1985a11a8cc"
+    }
+  ],
+  "bounded_domain": {
+    "gauge_group": "SU(3)c x SU(2)L x U(1)Y",
+    "spacetime_dimension": 4,
+    "orientation": "DeltaB=+1_WITH_HERMITIAN_CONJUGATES_IMPLICIT",
+    "flavor_generations": 3,
+    "active_strata": "MANDATORY_SM_PLUS_X_WITH_RHO3_RHO8_DELTA_SUBSET_EXTENSIONS_FROM_PASS0009",
+    "counting_unit": "EXPLICIT_ORTHONORMAL_GAUGE_FUSION_CHANNEL_WITH_LORENTZ_TENSOR_FLAVOR_PROJECTION_AND_DERIVATIVE_DECORATION_RECORDED",
+    "not_performed": [
+      "EOM_REDUCTION_USING_AN_INCOMPLETE_RENORMALIZABLE_COUPLING_LEDGER",
+      "CLEAN_ROOM_D6_RECONSTRUCTION",
+      "DIMENSIONAL_RENORMALIZATION_OR_EVANESCENT_COMPLETION",
+      "ONE_LOOP_CLOSURE_OR_UV_POLE_CALCULATION",
+      "ANOMALOUS_DIMENSION_MATRIX_CALCULATION"
+    ]
+  },
+  "canonical_tensor_contract": {
+    "indices": {
+      "color_fundamental": ["A", "B", "C"],
+      "color_adjoint": ["a", "b"],
+      "weak_doublet": ["i", "j", "k", "l"],
+      "weak_triplet": ["I", "J"],
+      "left_weyl": ["alpha", "beta"],
+      "right_weyl": ["dotalpha", "dotbeta"],
+      "flavor": ["p", "r", "s", "t"]
+    },
+    "primitive_tensors": {
+      "color_epsilon": "epsilon_123=+1_AND_NO_EXTRA_1_OVER_SQRT6_IN_THE_INHERITED_WARSAW_ROWS",
+      "weak_epsilon": "epsilon_12=+1",
+      "color_generators": "Tr(Ta Tb)=delta_ab/2",
+      "weak_generators": "Tr(tauI tauJ)=delta_IJ/2",
+      "left_spinor_metric": "epsilon_alpha_beta_WITH_epsilon_12=+1",
+      "right_spinor_metric": "epsilon_dotalpha_dotbeta_WITH_epsilon_dot1_dot2=+1"
+    },
+    "cg_projector_rule": "Every non-Warsaw fusion label CG[G:Rout<-R1xR2] denotes the unique real orthonormal Clebsch-Gordan projector in the declared irrep channel; degenerate channels are separated by the displayed fusion tree.",
+    "cg_orthonormality": "SUM_OVER_INPUT_INDICES_CG_R_a_TIMES_CG_RPRIME_b_CONJUGATE=delta_R_RPRIME_delta_a_b",
+    "cg_phase_rule": "IN_THE_LEXICOGRAPHIC_COMPONENT_ORDER_A_THEN_i_THEN_ADDITIONAL_FIELDS_THE_FIRST_NONZERO_COMPONENT_IS_REAL_AND_POSITIVE",
+    "operator_coefficient_rule": "A Wilson coefficient multiplies the displayed canonical tensor once; no unrecorded identical-field factorial is absorbed into the coefficient.",
+    "fermion_bilinears": {
+      "same_chirality": "psi_p^alpha chi_r^beta epsilon_alpha_beta_OR_DOTTED_ANALOG",
+      "opposite_chirality_vector": "psi_p^alpha sigma_mu_alpha_dotalpha chi_r^dotalpha"
+    },
+    "canonical_field_order": ["qL", "uR", "dR", "lL", "eR", "H", "Hdag", "X", "Xdag", "rho3", "rho8", "Delta", "Deltadag"],
+    "flavor_projection_rule": {
+      "SYMMETRIC": "C_pr=+C_rp_WITH_6_COMPONENTS_FOR_THREE_FLAVORS",
+      "ANTISYMMETRIC": "C_pr=-C_rp_WITH_3_COMPONENTS_FOR_THREE_FLAVORS_AND_ZERO_DIAGONAL",
+      "DISTINCT_FERMIONS": "UNRESTRICTED_ORDERED_3_BY_3_FLAVOR_TENSOR"
+    },
+    "hermitian_conjugation": "CONJUGATE_ORIENTATION_IS_NOT_COUNTED_AS_A_SECOND_FAMILY"
+  },
+  "normalized_nonderivative_records": {
+    "inherited_psi4_warsaw_rows": [
+      {
+        "id": "D6-PSI4-Q-QQQL",
+        "operator": "Q_qqql[p,r,s,t]=epsilon_ABC epsilon_il epsilon_jk (q_p^{AiT} C q_r^{Bj})(q_s^{CkT} C l_t^l)",
+        "index_order": "p,r,s,t=q,q,q,l",
+        "normalization": "DISPLAYED_WARSAW_TENSOR_WITH_NO_EXTRA_SYMMETRY_FACTOR",
+        "flavor_status": "INHERITED_ACCEPTED_WARSAW_RELATIONS_RETAINED_FOR_GLOBAL_COMBINED_QUOTIENT"
+      },
+      {
+        "id": "D6-PSI4-Q-QQUE",
+        "operator": "Q_qque[p,r,s,t]=epsilon_ABC epsilon_ij (q_p^{AiT} C q_r^{Bj})(u_s^{CT} C e_t)",
+        "index_order": "p,r,s,t=q,q,u,e",
+        "normalization": "DISPLAYED_WARSAW_TENSOR_WITH_NO_EXTRA_SYMMETRY_FACTOR",
+        "flavor_status": "INHERITED_ACCEPTED_WARSAW_RELATIONS_RETAINED_FOR_GLOBAL_COMBINED_QUOTIENT"
+      },
+      {
+        "id": "D6-PSI4-Q-DUQL",
+        "operator": "Q_duql[p,r,s,t]=epsilon_ABC epsilon_ij (d_p^{AT} C u_r^B)(q_s^{CiT} C l_t^j)",
+        "index_order": "p,r,s,t=d,u,q,l",
+        "normalization": "DISPLAYED_WARSAW_TENSOR_WITH_NO_EXTRA_SYMMETRY_FACTOR",
+        "flavor_status": "DISTINCT_FERMION_ORDERING"
+      },
+      {
+        "id": "D6-PSI4-Q-DUUE",
+        "operator": "Q_duue[p,r,s,t]=epsilon_ABC (d_p^{AT} C u_r^B)(u_s^{CT} C e_t)",
+        "index_order": "p,r,s,t=d,u,u,e",
+        "normalization": "DISPLAYED_WARSAW_TENSOR_WITH_NO_EXTRA_SYMMETRY_FACTOR",
+        "flavor_status": "INHERITED_ACCEPTED_WARSAW_RELATIONS_RETAINED_FOR_GLOBAL_COMBINED_QUOTIENT"
+      }
+    ],
+    "psi2_phi3_channel_groups": [
+      {
+        "multiset_id": "D6-P2P3-QQ-H-X-DELTADAG",
+        "fields": ["qL", "qL", "H", "X", "Deltadag"],
+        "delta_l": 1,
+        "lorentz": "LEFT_LEFT_SCALAR",
+        "channels": [
+          {"id": "QQ_C3BAR_W1__HX_W3__DELTADAG_W3", "flavor": "SYMMETRIC"},
+          {"id": "QQ_C3BAR_W3__HX_W1__DELTADAG_W3", "flavor": "ANTISYMMETRIC"},
+          {"id": "QQ_C3BAR_W3__HX_W3__DELTADAG_W3", "flavor": "ANTISYMMETRIC"}
+        ]
+      },
+      {
+        "multiset_id": "D6-P2P3-QQ-HDAG-X-RHO3",
+        "fields": ["qL", "qL", "Hdag", "X", "rho3"],
+        "delta_l": -1,
+        "lorentz": "LEFT_LEFT_SCALAR",
+        "channels": [
+          {"id": "QQ_C3BAR_W1__HDAGX_W3__RHO3_W3", "flavor": "SYMMETRIC"},
+          {"id": "QQ_C3BAR_W3__HDAGX_W1__RHO3_W3", "flavor": "ANTISYMMETRIC"},
+          {"id": "QQ_C3BAR_W3__HDAGX_W3__RHO3_W3", "flavor": "ANTISYMMETRIC"}
+        ]
+      },
+      {
+        "multiset_id": "D6-P2P3-QQ-HDAG-X-RHO8",
+        "fields": ["qL", "qL", "Hdag", "X", "rho8"],
+        "delta_l": -1,
+        "lorentz": "LEFT_LEFT_SCALAR",
+        "channels": [
+          {"id": "QQ_C3BAR_W1__X_TO_C8__HDAGX_W1", "flavor": "SYMMETRIC"},
+          {"id": "QQ_C3BAR_W3__X_TO_C8__HDAGX_W3", "flavor": "ANTISYMMETRIC"},
+          {"id": "QQ_C6_W1__X_TO_C8__HDAGX_W1", "flavor": "ANTISYMMETRIC"},
+          {"id": "QQ_C6_W3__X_TO_C8__HDAGX_W3", "flavor": "SYMMETRIC"}
+        ]
+      },
+      {
+        "multiset_id": "D6-P2P3-QL-X2-RHO3",
+        "fields": ["qL", "lL", "X", "X", "rho3"],
+        "delta_l": -1,
+        "lorentz": "LEFT_LEFT_SCALAR",
+        "channels": [{"id": "SYM2X_C3BAR_W1__QL_W3__RHO3_W3", "flavor": "DISTINCT_FERMIONS"}]
+      },
+      {
+        "multiset_id": "D6-P2P3-QL-X2-RHO8",
+        "fields": ["qL", "lL", "X", "X", "rho8"],
+        "delta_l": -1,
+        "lorentz": "LEFT_LEFT_SCALAR",
+        "channels": [
+          {"id": "SYM2X_C3BAR_W1__Q_TO_C8__QL_W1", "flavor": "DISTINCT_FERMIONS"},
+          {"id": "SYM2X_C6_W3__Q_TO_C8__QL_W3", "flavor": "DISTINCT_FERMIONS"}
+        ]
+      },
+      {
+        "multiset_id": "D6-P2P3-UU-HDAG-X-DELTADAG",
+        "fields": ["uR", "uR", "Hdag", "X", "Deltadag"],
+        "delta_l": 1,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [{"id": "UU_C3BAR__HDAGX_W3__DELTADAG_W3", "flavor": "ANTISYMMETRIC"}]
+      },
+      {
+        "multiset_id": "D6-P2P3-UD-H-X-DELTADAG",
+        "fields": ["uR", "dR", "H", "X", "Deltadag"],
+        "delta_l": 1,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [{"id": "UD_C3BAR__HX_W3__DELTADAG_W3", "flavor": "DISTINCT_FERMIONS"}]
+      },
+      {
+        "multiset_id": "D6-P2P3-UD-HDAG-X-RHO3",
+        "fields": ["uR", "dR", "Hdag", "X", "rho3"],
+        "delta_l": -1,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [{"id": "UD_C3BAR__HDAGX_W3__RHO3_W3", "flavor": "DISTINCT_FERMIONS"}]
+      },
+      {
+        "multiset_id": "D6-P2P3-UD-HDAG-X-RHO8",
+        "fields": ["uR", "dR", "Hdag", "X", "rho8"],
+        "delta_l": -1,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [
+          {"id": "UD_C3BAR__X_TO_C8__HDAGX_W1", "flavor": "DISTINCT_FERMIONS"},
+          {"id": "UD_C6__X_TO_C8__HDAGX_W1", "flavor": "DISTINCT_FERMIONS"}
+        ]
+      },
+      {
+        "multiset_id": "D6-P2P3-UE-X2-RHO8",
+        "fields": ["uR", "eR", "X", "X", "rho8"],
+        "delta_l": -1,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [{"id": "SYM2X_C3BAR_W1__U_TO_C8__RHO8", "flavor": "DISTINCT_FERMIONS"}]
+      },
+      {
+        "multiset_id": "D6-P2P3-DD-H-X-RHO3",
+        "fields": ["dR", "dR", "H", "X", "rho3"],
+        "delta_l": -1,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [{"id": "DD_C3BAR__HX_W3__RHO3_W3", "flavor": "ANTISYMMETRIC"}]
+      },
+      {
+        "multiset_id": "D6-P2P3-DD-H-X-RHO8",
+        "fields": ["dR", "dR", "H", "X", "rho8"],
+        "delta_l": -1,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [
+          {"id": "DD_C3BAR__X_TO_C8__HX_W1", "flavor": "ANTISYMMETRIC"},
+          {"id": "DD_C6__X_TO_C8__HX_W1", "flavor": "SYMMETRIC"}
+        ]
+      },
+      {
+        "multiset_id": "D6-P2P3-DD-HDAG-X-DELTA",
+        "fields": ["dR", "dR", "Hdag", "X", "Delta"],
+        "delta_l": -3,
+        "lorentz": "RIGHT_RIGHT_SCALAR",
+        "channels": [{"id": "DD_C3BAR__HDAGX_W3__DELTA_W3", "flavor": "ANTISYMMETRIC"}]
+      }
+    ],
+    "phi6_channels": [
+      {
+        "id": "D6-PHI6-H-X3-RHO8-DELTADAG",
+        "fields": ["H", "X", "X", "X", "rho8", "Deltadag"],
+        "delta_l": -1,
+        "fusion_tree": "SYM3X_C8_W2__RHO8_C8_AND_HX3_W3__DELTADAG_W3",
+        "flavor": "NONE"
+      },
+      {
+        "id": "D6-PHI6-HDAG-X3-RHO3-RHO8",
+        "fields": ["Hdag", "X", "X", "X", "rho3", "rho8"],
+        "delta_l": -3,
+        "fusion_tree": "SYM3X_C8_W2__RHO8_C8_AND_HDAGX3_W3__RHO3_W3",
+        "flavor": "NONE"
+      },
+      {
+        "id": "D6-PHI6-HDAG-X3-RHO8-2",
+        "fields": ["Hdag", "X", "X", "X", "rho8", "rho8"],
+        "delta_l": -3,
+        "fusion_tree": "SYM3X_C8_W2__SYM2RHO8_C8S_AND_HDAGX3_W1",
+        "flavor": "NONE"
+      }
+    ],
+    "summary": {
+      "inherited_psi4_rows": 4,
+      "psi2_phi3_multisets": 13,
+      "psi2_phi3_channels": 23,
+      "phi6_channels": 3,
+      "total_nonderivative_channels": 30,
+      "all_channels_have_field_order_lorentz_gauge_normalization_delta_l_and_flavor_records": true
+    }
+  },
+  "normalized_derivative_records": {
+    "psi2_phi2_D_channel_groups": [
+      {
+        "id": "D6-DER-P2P2D-QU-X-DELTADAG",
+        "fields": ["qL", "uR", "X", "Deltadag"],
+        "gauge_channels": ["COLOR_EPSILON__QX_W3__DELTADAG_W3"],
+        "lorentz": "LEFT_RIGHT_VECTOR_DOT_COVARIANT_DERIVATIVE",
+        "flavor": "DISTINCT_FERMIONS",
+        "placements_per_channel": ["D_qL", "D_uR", "D_X", "D_Deltadag"],
+        "ibp_relation_per_channel": "D_qL+D_uR+D_X+D_Deltadag=0",
+        "canonical_ibp_quotient_representatives": ["D_qL", "D_uR", "D_X"]
+      },
+      {
+        "id": "D6-DER-P2P2D-QD-X-RHO3",
+        "fields": ["qL", "dR", "X", "rho3"],
+        "gauge_channels": ["COLOR_EPSILON__QX_W3__RHO3_W3"],
+        "lorentz": "LEFT_RIGHT_VECTOR_DOT_COVARIANT_DERIVATIVE",
+        "flavor": "DISTINCT_FERMIONS",
+        "placements_per_channel": ["D_qL", "D_dR", "D_X", "D_rho3"],
+        "ibp_relation_per_channel": "D_qL+D_dR+D_X+D_rho3=0",
+        "canonical_ibp_quotient_representatives": ["D_qL", "D_dR", "D_X"]
+      },
+      {
+        "id": "D6-DER-P2P2D-QD-X-RHO8",
+        "fields": ["qL", "dR", "X", "rho8"],
+        "gauge_channels": ["QD_C3BAR__X_TO_C8__QX_W1", "QD_C6__X_TO_C8__QX_W1"],
+        "lorentz": "LEFT_RIGHT_VECTOR_DOT_COVARIANT_DERIVATIVE",
+        "flavor": "DISTINCT_FERMIONS",
+        "placements_per_channel": ["D_qL", "D_dR", "D_X", "D_rho8"],
+        "ibp_relation_per_channel": "D_qL+D_dR+D_X+D_rho8=0",
+        "canonical_ibp_quotient_representatives": ["D_qL", "D_dR", "D_X"]
+      }
+    ],
+    "phi4_D2_channels": [
+      {
+        "id": "D6-DER-PHI4D2-D2X-X2-HDAG",
+        "prototype": "(D2X) X X Hdag",
+        "fusion_tree": "SYM2X_UNDIFFERENTIATED_C3BAR_W1__D2X_TIMES_HDAG_TO_C3_W1",
+        "flavor": "NONE"
+      },
+      {
+        "id": "D6-DER-PHI4D2-DX-DX-X-HDAG",
+        "prototype": "(DmuX)(DmuX) X Hdag",
+        "fusion_tree": "SYM2DX_C3BAR_W1__X_TIMES_HDAG_TO_C3_W1",
+        "flavor": "NONE"
+      },
+      {
+        "id": "D6-DER-PHI4D2-DX-X2-DHDAG",
+        "prototype": "(DmuX) X X (DmuHdag)",
+        "fusion_tree": "SYM2X_UNDIFFERENTIATED_C3BAR_W1__DX_TIMES_DHDAG_TO_C3_W1",
+        "flavor": "NONE"
+      }
+    ],
+    "summary": {
+      "psi2_phi2_D_gauge_channels": 4,
+      "psi2_phi2_D_raw_placements": 16,
+      "psi2_phi2_D_exact_ibp_relations": 4,
+      "psi2_phi2_D_canonical_ibp_quotient_rank_before_eom": 12,
+      "phi4_D2_raw_decoration_channels": 3,
+      "phi4_D2_ibp_rank_before_eom": "OPEN_PENDING_EXPLICIT_VECTOR_ANCESTOR_INCIDENCE_RECONSTRUCTION",
+      "raw_derivative_channel_or_decoration_units": 7,
+      "derivative_units_claimed_physical_operators": false
+    }
+  },
+  "pre_eom_reduction": {
+    "identical_fermion_exchange_and_flavor_projection": "COMPLETE_FOR_ALL_NEW_PSI2PHI3_CHANNELS",
+    "identical_scalar_bose_projection": "COMPLETE_AT_THE_RAW_GAUGE_CHANNEL_LEVEL",
+    "new_psi2_phi3_fierz_relations": "NONE_BEYOND_THE_SINGLE_SAME_CHIRALITY_BILINEAR_AND_RECORDED_IDENTICAL_FERMION_EXCHANGE_PROJECTION",
+    "psi2_phi2_D_ibp_quotient": "COMPLETE_RANK_12_WITH_ONE_TOTAL_DERIVATIVE_RELATION_PER_GAUGE_CHANNEL",
+    "cross_channel_linear_independence_before_eom": "ORTHOGONAL_BY_FIELD_MULTISET_OR_ORTHONORMAL_INTERMEDIATE_GAUGE_IRREP_CHANNEL",
+    "global_eom_reduction": "BLOCKED_NOT_PERFORMED",
+    "eom_blocker": {
+      "code": "COMPLETE_RENORMALIZABLE_ACTIVE_THEORY_COUPLING_LEDGER_NOT_FROZEN",
+      "why_material": "FERMION_EOMS_DEPEND_ON_ALL_RETAINED_YUKAWA_VERTICES_AND_D2X_D2H_EOMS_DEPEND_ON_THE_FULL_SCALAR_POTENTIAL_AND_DIMENSIONFUL_MIXINGS; OMITTED_ALLOWED_COUPLINGS_CANNOT_BE_SET_TO_ZERO_BY_CONVENIENCE",
+      "frozen_contract_evidence": "THE_INTERMEDIATE_EFT_CONSTRUCTION_MANIFEST_RECORDS_RETAINED_COUPLING_LEDGER_COMPLETE_FALSE_AND_SCALAR_POTENTIAL_RELEVANCE_CLOSED_FALSE",
+      "required_next_object": "SOURCE_BOUND_EVENT_STRATIFIED_RENORMALIZABLE_INTERACTION_LEDGER_WITH_EXPLICIT_SIGNS_CONJUGATIONS_NORMALIZATIONS_AND_STRATUM_RESTRICTIONS"
+    },
+    "physical_operator_count_after_eom": "UNDETERMINED",
+    "adm_dimension": "UNDETERMINED"
+  },
+  "milestones": {
+    "D6_RAW_INVENTORY_COMPLETE_WITHIN_FROZEN_FIELD_DOMAIN": true,
+    "D6_NORMALIZED_RAW_CHANNEL_AND_FLAVOR_LEDGER_COMPLETE": true,
+    "D6_PRE_EOM_PSI2PHI2D_IBP_QUOTIENT_COMPLETE": true,
+    "D6_GLOBAL_EOM_FIERZ_IBP_CONJUGATION_REDUCTION_COMPLETE": false,
+    "D6_NONREDUNDANT_BASIS_CANDIDATE_COMPLETE": false,
+    "COMBINED_D5_D6_BASIS_VALIDATED": false,
+    "ADM_AUTHORIZATION_EARNED": false
+  },
+  "provenance_lane": {
+    "latest_completed_tranche": "TRANCHE_0125_ARXIV_2109_08689",
+    "latest_tranche_path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0125-arxiv-2109-08689.json",
+    "disposition_counts": {
+      "PARTIAL_SUPPORT": 2,
+      "CONTRARY_SCOPE_EVIDENCE": 9,
+      "NOT_APPLICABLE_OR_INSUFFICIENT": 2,
+      "closures": 0
+    },
+    "cumulative": {
+      "works_reviewed": 125,
+      "claims_reviewed": 845,
+      "candidate_edges_reviewed": 6742,
+      "remaining_works": 796,
+      "remaining_claims": 7612,
+      "remaining_candidate_edges": 38299,
+      "remaining_limitation_materiality_acts": 6592
+    },
+    "next_frozen_source": "ARXIV:1404.4663"
+  },
+  "external_input_dispositions": {
+    "ARXIV:2602.12266": {
+      "classification": "UNREGISTERED_HIGH_VALUE_FUTURE_QUANTUM_GRAVITY_DISCRIMINATOR_CANDIDATE",
+      "benchmark_registry_changed": false,
+      "empirical_result": false,
+      "model1_change": false,
+      "ccft_change": false,
+      "native_gravity_selection": "NONE",
+      "monitor_created": false
+    },
+    "ARXIV:2508.03961": {
+      "classification": "DEFERRED_MATHEMATICAL_AND_COMPUTATIONAL_METHODOLOGY_NOTE_FOR_DEPENDENCY_AWARE_PARAMETER_SEARCH",
+      "physics_benchmark_registry_changed": false,
+      "immediate_tooling_integration": false,
+      "model1_change": false,
+      "future_evaluation_gate": "ONLY_WHEN_HIGH_DIMENSIONAL_PARAMETER_SEARCH_IS_AUTHORIZED_COMPARE_AGAINST_QMC_ADAPTIVE_AND_OPTIMIZATION_BASELINES",
+      "exclusion_proof_status_changed": false
+    }
+  },
+  "hard_nonclaims": {
+    "thirty_plus_seven_is_operator_count": false,
+    "complete_physical_d6_basis_claimed": false,
+    "clean_room_d6_reconstruction_complete": false,
+    "one_loop_closure_claimed": false,
+    "adm_calculation_started": false,
+    "adm_calculation_authorized": false,
+    "kernel_entries_present": false,
+    "model1_rge_executed": false,
+    "parameter_evaluation_count": 0,
+    "model_viability": "UNKNOWN",
+    "physics_result": "PROVISIONAL_NORMALIZED_RAW_D6_CHANNEL_LEDGER_ONLY"
+  },
+  "next_native_action": "FREEZE_THE_SOURCE_BOUND_EVENT_STRATIFIED_RENORMALIZABLE_INTERACTION_LEDGER_THEN_REPLAY_THE_D6_FERMION_AND_SCALAR_EOMS_AND_COMPLETE_THE_GLOBAL_QUOTIENT_BEFORE_CLEAN_ROOM_RECONSTRUCTION_OR_ANY_ADM_WORK"
+}

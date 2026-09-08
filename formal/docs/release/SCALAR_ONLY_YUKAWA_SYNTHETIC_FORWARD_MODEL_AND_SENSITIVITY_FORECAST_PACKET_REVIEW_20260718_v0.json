@@ -1,0 +1,327 @@
+{
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_SYNTHETIC_FORECAST_CONTRACT_READY_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST_PACKET_20260718_v0.md",
+        "sha256": "e107573a49ab743b70bfe5b223507924fdf3bd4ffc0c92eaf65809ed6350f949"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST_PACKET_20260718_v0.json",
+        "sha256": "7102ed5a41e95792ab6a0be3d6b1321f05b1246600871752128940b5d1110217"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v0.py",
+        "sha256": "b32361b5fce58848846278bb7494f05b50e1361424f89cc586bc3f9ad3988cda"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v0.py",
+        "sha256": "80c2f8e3da34560cab118e7f8a7e09de3a70f10f10fdad7134761df8d6f5c26f"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSyntheticForwardModelAndSensitivityForecastPacketV0.lean",
+        "sha256": "90d1223135ec26153f62b21d1fe97927f01a0b7b119923d35110b4a4db15e6ab"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_review_v0.py",
+      "sha256": "b235150168a89d3c989e3e71a3431562f951cb357c384f14f2471fd5138ebab6"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST_PACKET_REVIEW_20260718_v0.md",
+      "sha256": "c1dc928e468148c503876ee0bf09b797691706ab78ca8c7491451ddd5cb81049"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSyntheticForwardModelAndSensitivityForecastPacketReviewV0.lean",
+      "sha256": "24bf788986e8972d9916ffd176d13324227d20835e69f310e0d1ed8732706234"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_review_v0.py",
+      "sha256": "1b5d5cff300aac724aacfb5cf99a247710954aebf5d8d6a2d43670c6b22dcd9c"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "The review verifies the geometry's even harmonics, the real-150 observation count, covariance positive definiteness, bounded range grid, and Monte Carlo resolution, while blocking execution on seven underdefined forward-model, covariance, nuisance, optimizer, and control interfaces. It authorizes no repair, simulation, forecast, empirical claim, parameter bound, or theory adoption.",
+  "computational_execution_plan_review": {
+    "candidate_range_count": 25,
+    "complete": false,
+    "minimum_outer_profile_fit_count": 675000,
+    "missing_items": [
+      "OPTIMIZER",
+      "DERIVATIVE_METHOD",
+      "INITIAL_CONDITIONS",
+      "WARM_START_POLICY",
+      "MAXIMUM_ITERATIONS_AND_EVALUATIONS",
+      "FIT_CONVERGENCE_TOLERANCE",
+      "RETRY_POLICY",
+      "PARALLELIZATION",
+      "RANDOM_STREAM_TO_WORKER_PARTITION",
+      "FAILED_FIT_CLASSIFICATION",
+      "WALL_TIME_AND_MEMORY_CAP",
+      "CHECKPOINT_AND_RESUME_POLICY"
+    ],
+    "synthetic_dataset_count": 27026
+  },
+  "covariance_review": {
+    "factorization_and_failure_policy_complete": false,
+    "full_covariance_condition_number": 69.2453279,
+    "gap_correlation_condition_number": 30.7757013,
+    "interpretation": "R_gap_KRONECKER_DIAG_CHANNEL_VARIANCES",
+    "maximum_symmetry_residual_si": 2.6e-49,
+    "minimum_gap_correlation_eigenvalue": 0.1733442158,
+    "real_covariance_dimension": 150,
+    "symmetric_positive_definite": true
+  },
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "empirical_constraint": "NONE",
+    "forecast_outputs": "0_OF_8",
+    "injection_trials": "0_OF_25000",
+    "next_authority": "select_post_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_review_scientific_response_v0",
+    "null_trials": "0_OF_2000",
+    "packet_review": "COMPLETED",
+    "principal_outcome": "BLOCKED_SYNTHETIC_NOISE_OR_NUISANCE_CONTRACT",
+    "scalar_branch": "NOT_ADOPTED",
+    "synthetic_execution": "NOT_AUTHORIZED",
+    "synthetic_observations": 0,
+    "work_packages": "0_OF_8_EXECUTED"
+  },
+  "diagnostics": [
+    "HARMONIC_NORMALIZATION_PHASE_CONVENTION_INCOMPLETE",
+    "PRODUCTION_BENCHMARK_ROUTING_AND_MUTATION_INCOMPLETE",
+    "COVARIANCE_FACTORIZATION_FAILURE_POLICY_INCOMPLETE",
+    "NUISANCE_TRUTH_BOUND_EFFECT_CONTRACT_INCOMPLETE",
+    "EXACT_MULTIPLICATIVE_NUISANCE_DEGENERACY",
+    "OPTIMIZER_PARALLELIZATION_RESOURCE_CAP_INCOMPLETE",
+    "PHASE_SIGN_MUTATION_AND_IDENTIFIABILITY_CONTROLS_MISSING"
+  ],
+  "execution_readiness": "NOT_READY",
+  "independent_geometry_check": {
+    "energy_pair_structure": "2*(u(r_minus)+u(r_plus))",
+    "energy_pi_periodic": true,
+    "forecast_output_produced": false,
+    "n2_n4_n6_nonzero_representative_check": true,
+    "only_even_sine_harmonics_nominal": true,
+    "pair_distance_minus_squared": "z^2+2*L^2*(1-cos(theta))",
+    "pair_distance_plus_squared": "z^2+2*L^2*(1+cos(theta))",
+    "representative_symmetry_residual_max": 8.7e-13,
+    "torque_odd": true
+  },
+  "monte_carlo_review": {
+    "five_sigma_calibration_supported": false,
+    "injection_trials": 25000,
+    "injection_trials_per_positive_lambda": 1000,
+    "maximum_injection_binomial_standard_error": 0.0158113883,
+    "null_trials": 2000,
+    "ordinary_95_percent_forecast_supported": true,
+    "positive_lambda_count": 25,
+    "smallest_direct_null_tail_probability": 0.0004997501249375312,
+    "total_synthetic_datasets_if_authorized": 27026,
+    "zero_noise_trials": 26
+  },
+  "nuisance_identifiability_review": {
+    "contract_complete": false,
+    "data_jacobian_degeneracy": "TORQUE_CALIBRATION_COLUMN_EQUALS_DENSITY_MASS_SCALE_COLUMN_AT_NOMINAL_POINT",
+    "declared_nuisance_count": 11,
+    "penalized_fit_finite_due_to_priors": true,
+    "separately_data_identifiable": false,
+    "truth_values_bounds_and_maps_complete": false
+  },
+  "observation_convention_review": {
+    "complex_observation_count_claim": false,
+    "exact_dft_normalization_complete": false,
+    "gap_count": 25,
+    "harmonic_count": 3,
+    "real_covariance_dimension": 150,
+    "real_observation_count": 150,
+    "real_quadrature_count": 2
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_SYNTHETIC_FORWARD_MODEL_AND_SENSITIVITY_FORECAST_PACKET_REVIEW_20260718_v0",
+  "principal_packet_review_outcome": "BLOCKED_SYNTHETIC_NOISE_OR_NUISANCE_CONTRACT",
+  "review_gates": {
+    "failure_count": 7,
+    "gate_count": 22,
+    "pass_count": 15,
+    "rows": [
+      {
+        "finding": "Five packet artifacts match frozen SHA-256 values.",
+        "gate_id": "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "No measured evidence, Eot-Wash reproduction, empirical constraint, or branch adoption is claimed.",
+        "gate_id": "G2_SYNTHETIC_ONLY_STATUS_AND_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "A_Y=1/3 and the lambda0, m0, alpha maps are exact and no parameter is selected.",
+        "gate_id": "G3_FIXED_AMPLITUDE_MODEL_AND_SI_MAP",
+        "status": "PASS"
+      },
+      {
+        "finding": "Sphere counts, radii, density, arm radii, gap grid, centers, and gap definition are frozen.",
+        "gate_id": "G4_IDEALIZED_GEOMETRY_DIMENSIONS_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Analytic symmetry and a representative dimensionless calculation show nonzero n=2,4,6 sine harmonics.",
+        "gate_id": "G5_GEOMETRY_GENERATES_DECLARED_EVEN_HARMONICS",
+        "status": "PASS"
+      },
+      {
+        "finding": "25 gaps x 3 harmonics x 2 real quadratures equals a real 150-vector.",
+        "gate_id": "G6_REAL_OBSERVATION_COUNT_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "finding": "DFT sign, normalization, phase origin, alias handling, and torque derivative convention are not frozen.",
+        "gate_id": "G7_EXACT_HARMONIC_NORMALIZATION_AND_PHASE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "Production pair kernel, derivative, cubature sequence, and deliberate mutation tests are incomplete.",
+        "gate_id": "G8_PRODUCTION_KERNEL_BENCHMARK_ROUTING",
+        "status": "FAIL"
+      },
+      {
+        "finding": "The real 150x150 Kronecker covariance is symmetric positive definite with moderate condition number.",
+        "gate_id": "G9_COVARIANCE_MATHEMATICALLY_SPD",
+        "status": "PASS"
+      },
+      {
+        "finding": "Factorization, threshold, jitter/clipping prohibition or rule, and fail-closed behavior are absent.",
+        "gate_id": "G10_COVARIANCE_NUMERICAL_FAILURE_POLICY",
+        "status": "FAIL"
+      },
+      {
+        "finding": "The finite logarithmic grid spans lambda below, within, and above the gap domain.",
+        "gate_id": "G11_RANGE_GRID_COVERS_THREE_REGIMES",
+        "status": "PASS"
+      },
+      {
+        "finding": "Trial counts resolve ordinary 95-percent power and coverage with reported binomial uncertainty, not five sigma.",
+        "gate_id": "G12_MONTE_CARLO_RESOLUTION_MATCHES_ORDINARY_FORECAST",
+        "status": "PASS"
+      },
+      {
+        "finding": "All truth values, bounds, leakage/background maps, and invalid-domain behavior are not frozen.",
+        "gate_id": "G13_NUISANCE_TRUTHS_BOUNDS_AND_EXACT_EFFECTS",
+        "status": "FAIL"
+      },
+      {
+        "finding": "Calibration and density/mass scale have identical nominal data-Jacobian columns.",
+        "gate_id": "G14_NUISANCE_DATA_IDENTIFIABILITY",
+        "status": "FAIL"
+      },
+      {
+        "finding": "Null thresholds and pointwise coverage are simulation calibrated; Wilks is prohibited.",
+        "gate_id": "G15_BOUNDARY_CALIBRATION_FAILS_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Optimizer, derivatives, starts, limits, retries, parallelization, resources, and failed-fit handling are missing.",
+        "gate_id": "G16_COMPUTATIONAL_EXECUTION_PLAN",
+        "status": "FAIL"
+      },
+      {
+        "finding": "Required sign-reversal, deliberate-mutation, nuisance-monotonicity, and rank controls are absent.",
+        "gate_id": "G17_ADVERSARIAL_PHASE_SIGN_MUTATION_AND_RANK_CONTROLS",
+        "status": "FAIL"
+      },
+      {
+        "finding": "Angular, transport, cubature, and design-refinement tolerances are bounded and fail closed.",
+        "gate_id": "G18_NUMERICAL_CONVERGENCE_THRESHOLDS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Eight output classes and Monte Carlo uncertainty prevent excess precision claims.",
+        "gate_id": "G19_FORECAST_OUTPUT_PRECISION_CEILING",
+        "status": "PASS"
+      },
+      {
+        "finding": "No dataset, trial, profile fit, or forecast output was produced.",
+        "gate_id": "G20_NO_SYNTHETIC_EXECUTION_DURING_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "finding": "The internal-only public-information scope remains binding.",
+        "gate_id": "G21_STANDING_NO_CONTACT_AND_PUBLIC_ONLY_POLICY",
+        "status": "PASS"
+      },
+      {
+        "finding": "No bound, scalar adoption, native bridge, action selection, or downstream GR claim occurs.",
+        "gate_id": "G22_NO_EMPIRICAL_OR_THEORY_PROMOTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "toe.scalar_only_yukawa.synthetic_forward_model_and_sensitivity_forecast.packet_review.v0",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "covariance_mathematical_positive_definiteness_verified": true,
+    "empirical_constraint_claimed": false,
+    "eotwash_reproduction_claimed": false,
+    "forecast_output_produced": false,
+    "frame_dragging_resumed": false,
+    "geometry_even_harmonics_verified": true,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": true,
+    "master_action_mutated": false,
+    "measured_evidence_used": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "nuisance_degeneracy_identified": true,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "outbound_contact_authorized": false,
+    "packet_execution_ready": false,
+    "packet_repair_authorized": false,
+    "private_data_dependency_created": false,
+    "real_150_observation_count_verified": true,
+    "scalar_branch_adopted": false,
+    "synthetic_dataset_generated": false,
+    "synthetic_execution_authorized": false,
+    "synthetic_execution_performed": false
+  },
+  "selected_next_target": "select_post_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_review_scientific_response_v0",
+  "selected_next_target_kind": "SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_PACKET_REPAIR_OR_SYNTHETIC_EXECUTION",
+  "target": "review_scalar_only_yukawa_synthetic_forward_model_and_sensitivity_forecast_packet_v0_result",
+  "unblock_requirements": [
+    {
+      "requirement": "freeze real-150 harmonic normalization phase sign and alias conventions",
+      "requirement_id": "U1",
+      "satisfied": false
+    },
+    {
+      "requirement": "freeze shared production kernel torque derivative cubature refinement and mutation gates",
+      "requirement_id": "U2",
+      "satisfied": false
+    },
+    {
+      "requirement": "freeze covariance factorization conditioning and regularization failure policy",
+      "requirement_id": "U3",
+      "satisfied": false
+    },
+    {
+      "requirement": "freeze all nuisance truth values bounds exact effects and invalid-domain behavior",
+      "requirement_id": "U4",
+      "satisfied": false
+    },
+    {
+      "requirement": "combine or physically distinguish the exact multiplicative nuisance pair and require rank diagnostics",
+      "requirement_id": "U5",
+      "satisfied": false
+    },
+    {
+      "requirement": "freeze optimizer derivatives starts warm starts limits retries parallel resources checkpoints and failed-fit handling",
+      "requirement_id": "U6",
+      "satisfied": false
+    },
+    {
+      "requirement": "add phase-sign reversal deliberate mutation nuisance-removal monotonicity and identifiability controls",
+      "requirement_id": "U7",
+      "satisfied": false
+    }
+  ],
+  "verdict": "BLOCKED_SYNTHETIC_NOISE_OR_NUISANCE_CONTRACT"
+}

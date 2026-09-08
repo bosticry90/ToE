@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 2,
+  "closed_from_commit": "826c9d07fa52ccefda6ec4e251b6ca70fc418bb9",
+  "event_hash": "a7eb509c34cde7e0da18ec83d15dc35ddce3fdf636bc575e66032b9ac3e485b9",
+  "event_sequence_number": 4,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "60b996e6d1c5eb202eff506d57357fc3a5878531a371335d2e5e2727f3dcf03a",
+  "previous_event_hash": "60b996e6d1c5eb202eff506d57357fc3a5878531a371335d2e5e2727f3dcf03a",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "result_artifact_hash": "4f3a7031960522f91d9a1988bc4c290a56505b5f71e84e815da3bd46f21d959a",
+  "result_artifact_path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0.json",
+  "review_artifact_hash": "c57b2a5a3649deaba3be237da014992663f62e544c898bed89cfecbd35498556",
+  "review_artifact_path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

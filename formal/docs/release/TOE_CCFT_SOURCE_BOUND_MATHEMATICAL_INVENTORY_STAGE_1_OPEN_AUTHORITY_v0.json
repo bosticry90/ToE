@@ -1,0 +1,159 @@
+{
+  "artifact_id": "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_STAGE_1_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_STAGE_1_OPEN",
+  "authorized_source_set": [
+    {
+      "path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+      "role": "prepared CCFT core program, source-selection contract, classifications, and limits",
+      "sha256": "5b9177fde7417a0a70acc6074c48b5d0cdc000ab0e9d73cf11ad97e7b9add90c"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+      "role": "independent proposal review and anti-overclaim boundary",
+      "sha256": "2eeabff93fb7912f7950c3336d56c8574f4d7f3601aa309fccdb6fb73e1b47fb"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0.json",
+      "role": "selected CCFT frontier and one-prerequisite boundary",
+      "sha256": "1d9f06a1e8d914d88603eff9b0539b78ef1f5141b327cc2f2255f0c1531b128b"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "role": "declared-root custody census and bounded-review limitation",
+      "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+      "role": "bounded documentary lineages and unresolved relationships",
+      "sha256": "5779c67ca1e573868f5620f11a92b559393bd2f3b45305bf8a371fb9edeb4a3d"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "role": "source-bound claim inventory including CCFT-family claims",
+      "sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3"
+    },
+    {
+      "path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+      "role": "CCFT readiness, conflict, definition, derivation, and negative-result ledger",
+      "sha256": "d887d34ae482e1e6427b0137b6d8aff691d6df27d8c2eb11c82c6138864a474d"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+      "role": "earlier thirteen-source coherence inventory",
+      "sha256": "91b2fb9a275232b96604db77e0d862c9edbdde1a5daf703bed798d8d717f894b"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0.json",
+      "role": "earlier operational-definition block",
+      "sha256": "55127f74ef6794b76ec5044330eb667ef3e9a78c5660ca0bedd6ca7386322c41"
+    },
+    {
+      "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0.json",
+      "role": "terminal earlier coherence-program boundary",
+      "sha256": "be08cef68004565430e7393c78e96f5aa80c11959d7c5ddb87ff10eedd07450e"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "e348568927073147b6353de85f14a13c2e332f217677d8e7c16a0cc7cac0d53e",
+    "canonical_target": "inventory_toe_source_bound_ccft_mathematical_structures_v0",
+    "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY",
+    "stage_number": 1
+  },
+  "captured_at_utc": "2026-07-31T22:20:00Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 1 scope",
+      "sha256": "12824e836f1f687317649b02d204dde17f01a074cb7818f46353e4fbd97469be"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0.json",
+      "role": "accepted unopened installation",
+      "sha256": "e46d1555152a087066a6695acd8121ba55b11732cb3374917ae0e834bb0fb16a"
+    }
+  ],
+  "inventory_limits": {
+    "maximum_documentary_lineage_components": 64,
+    "maximum_explicit_equations_or_relations": 512,
+    "maximum_extracted_mathematical_statements": 1024,
+    "maximum_parser_failures": 16,
+    "maximum_preserved_formulation_conflicts": 128,
+    "maximum_retained_mathematical_objects": 256,
+    "maximum_source_artifacts_for_deep_review": 160,
+    "maximum_total_bounded_source_excerpt_words": 40000,
+    "maximum_total_deep_review_source_bytes": 536870912,
+    "maximum_total_extracted_text_bytes": 67108864,
+    "maximum_unresolved_lineage_relationships": 64,
+    "maximum_unsupported_format_files": 64
+  },
+  "mathematical_content_vocabulary": [
+    "EXPLICIT_CCFT_MATHEMATICS",
+    "PARTIAL_MATHEMATICAL_STRUCTURE",
+    "HEURISTIC_OR_ANALOGY",
+    "CONFLICTING_CCFT_FORMULATION",
+    "UNDEFINED_SYMBOL_OR_TERM",
+    "CONTROL_OR_KNOWN_PHYSICS_IMPORT"
+  ],
+  "permitted_work": [
+    "apply the frozen deterministic selection contract to the authorized evidence surfaces and report overflow",
+    "deeply review at most 160 selected sources under passive-content and custody limits",
+    "bind every retained mathematical statement and object to exact source path hash location authority custody and lineage",
+    "inventory explicit variables objects equations operators parameters units domains scales initial data boundary data conservation relations derivations calculations and numerical results",
+    "classify partial heuristic conflicting undefined and known-physics-import content without harmonizing it",
+    "preserve missing definitions dependencies parser failures unsupported formats local-only custody and repository nonexhaustion",
+    "produce an independent review and one atomic CLOSE result"
+  ],
+  "prohibited_work": [
+    "adopt or validate CCFT or declare coherence fundamental or physically real",
+    "assign physical interpretation beyond explicit source wording",
+    "choose or harmonize a preferred CCFT formulation",
+    "invent missing definitions equations coefficients data or dependencies",
+    "select a scalar complex field rotor tensor current nonlocal relation or other representation",
+    "construct an action evolution law matter coupling gravity coupling or master action",
+    "select a seam observable discriminator or empirical claim",
+    "promote archived evidence or claim repository-wide exhaustion",
+    "open Stage 2 automatically"
+  ],
+  "required_record_fields": [
+    "object_id",
+    "exact_source_path_and_hash",
+    "source_location_and_bounded_excerpt",
+    "source_authority_and_custody_status",
+    "documentary_lineage",
+    "original_symbol_and_vocabulary",
+    "mathematical_type",
+    "definition_or_equation",
+    "domain_and_codomain",
+    "units_or_dimensional_status",
+    "symmetries",
+    "initial_or_boundary_data",
+    "conservation_or_exchange_relations",
+    "claimed_scale_and_domain",
+    "derived_results_or_numerical_work",
+    "dependencies_conflicts_and_supersession",
+    "physical_interpretation_status"
+  ],
+  "schema_id": "toe.ccft_source_bound_mathematical_inventory.stage_1_open_authority.v0",
+  "source_selection_contract": {
+    "desired_physical_interpretation_may_not_affect_selection": true,
+    "desired_representation_or_action_may_not_affect_selection": true,
+    "overflow_population_and_unreviewed_counts_required": true,
+    "priority_order": [
+      "current canonical primary CCFT mathematical sources",
+      "archived primary CCFT lineage heads",
+      "earliest primary source for each CCFT mathematical lineage",
+      "sources containing unique explicit equations variables operators boundary data conservation laws numerical results or units",
+      "sources containing accepted negative results conflicts corrections or supersession",
+      "derived summaries only when the primary source is unavailable",
+      "deterministic stratified overflow sample by source class and lineage"
+    ],
+    "tie_breaking_rule": "normalized custody-relative path then verified content hash"
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_1_OPEN_ONLY",
+  "terminal_outcomes": [
+    "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_COMPLETE",
+    "CCFT_MATHEMATICAL_INVENTORY_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+    "CCFT_MATHEMATICAL_SOURCE_EVIDENCE_INSUFFICIENT",
+    "CCFT_SOURCE_CONTENT_UNREADABLE_WITHIN_BUDGET"
+  ]
+}

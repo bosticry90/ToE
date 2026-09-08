@@ -1,0 +1,166 @@
+{
+  "artifact_manifest": {
+    "artifact_count": 10,
+    "rows": [
+      {
+        "byte_count": 832,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/benchmarks.csv",
+        "sha256": "1c74fe053233a5c89b8b00ce69d22a671c3a45d2532cbaff39308a49961505b8"
+      },
+      {
+        "byte_count": 543,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/convergence.csv",
+        "sha256": "7874938aa114f77dfbcda6027604de5a585d958f4cc53cf064ee803c64ad02f0"
+      },
+      {
+        "byte_count": 661,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/execution_core.json",
+        "sha256": "2588f9eeb661dbb739a5980b22ca56feee84e889d4c5949f682ac3d28a9d71c1"
+      },
+      {
+        "byte_count": 49,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/jacobian_columns.csv",
+        "sha256": "3186383eae36e37a874919ec82e58537af177adab9cb411a61349030c631b3bc"
+      },
+      {
+        "byte_count": 279,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/mutations.csv",
+        "sha256": "2e2b47ffb0a0c8f4d2c159315f2dbb9d049db42a7310fa69a0e7baa781a0406b"
+      },
+      {
+        "byte_count": 15471,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/newtonian_real_150.csv",
+        "sha256": "14c4822ce277c9cd11735c1d045ca5e1391f0180c66eeccf925686d8e14149e7"
+      },
+      {
+        "byte_count": 14871,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/reference_total_real_150.csv",
+        "sha256": "394953b8561641ce8aab7fd2fb4889890c41cffe4044d72ef98841285d77a914"
+      },
+      {
+        "byte_count": 521,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/symmetry_controls.csv",
+        "sha256": "477525539719c72327d16843fcb61cd6ab0ace88abc6e00a26fb182f0530d223"
+      },
+      {
+        "byte_count": 32,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/v1_controls.csv",
+        "sha256": "bba8b37d3af2472dff5c82facd7575dc53b7aae3b592edbe7a6c7876b7466747"
+      },
+      {
+        "byte_count": 366255,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/yukawa_real_150.csv",
+        "sha256": "c851a5da96adb2de0e9b097f7e2ca3936b591feb78dc28c8b14ce5024d3708c4"
+      }
+    ]
+  },
+  "authority": {
+    "authorized_execution_count": 1,
+    "consumed_execution_count": 1,
+    "consumed_review_verdict": "DETERMINISTIC_IDENTIFIABILITY_CONTRACT_READY",
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_REVIEW_20260719_v1.md",
+        "sha256": "d5454c879532ad26afbc07b882cca12aa0bcf3b8f69196f46c1d3011b7f50c82"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_REVIEW_20260719_v1.json",
+        "sha256": "e39b8ec2672cae854921638856103fdfdc5c6903ec9a7127d683f839cc6243af"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_review_v1.py",
+        "sha256": "73967ee60e41ad6e1a3c0d16b45eb91b538371b355ef855ce8ac240d28126eaf"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_review_v1.py",
+        "sha256": "25175b4256cd53405ff23018771a4d0ef387958b22454c498495421b18bb8f77"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketReviewV1.lean",
+        "sha256": "3a1f0d1fc9b7088bd7d419f553c15acb7388da7907257a7b8c7826decc6cecb5"
+      }
+    ]
+  },
+  "canonical_repeat": {
+    "artifact_count_compared": 10,
+    "byte_identical": true,
+    "internal_run_count": 2
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This result reports one idealized deterministic Stage A execution through the frozen internal torsion-balance model. It uses no random noise, covariance, Monte Carlo, likelihood, synthetic observation, or measured evidence; produces no sensitivity forecast or parameter bound; and does not authorize Stage B, select alpha, adopt a scalar branch, or identify a native ToE principle or action.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "authorized_deterministic_executions": 1,
+    "automatic_v2": "NOT_AUTHORIZED",
+    "consumed_deterministic_executions": 1,
+    "deterministic_outcome": "BLOCKED_PRODUCTION_KERNEL_VALIDATION",
+    "next_authority": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_execution_result",
+    "scalar_branch": "NOT_ADOPTED",
+    "stage_b": "NOT_AUTHORIZED",
+    "stage_b_eligible_for_fresh_selection": false,
+    "synthetic_or_empirical_constraint": "NONE"
+  },
+  "execution_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_EXECUTION_20260719_v1",
+  "execution_summary": {
+    "detail": {
+      "identifiability": {
+        "status": "NOT_COMPUTED_EARLY_PHYSICAL_CONTROL_BLOCK"
+      },
+      "pre_identifiability": {
+        "benchmark_count": 4,
+        "benchmark_pass_count": 3,
+        "convergence_control_count": 6,
+        "convergence_pass_count": 4,
+        "mutation_count": 5,
+        "mutation_pass_count": 5,
+        "symmetry_control_count": 6,
+        "symmetry_pass_count": 6
+      },
+      "v1_control_count": 0,
+      "v1_control_pass_count": 0
+    },
+    "outcome": "BLOCKED_PRODUCTION_KERNEL_VALIDATION",
+    "pre_identifiability_controls_pass": false,
+    "secondary_outcome": "NO_IDENTIFIABILITY_CALCULATION_DUE_TO_EARLY_PHYSICAL_CONTROL_FAILURE"
+  },
+  "outcome": "BLOCKED_PRODUCTION_KERNEL_VALIDATION",
+  "schema_id": "toe.scalar_only_yukawa.deterministic_torsion_balance_forward_model_validation.execution.v1",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "automatic_v2_repair_authorized": false,
+    "benchmarks_executed": true,
+    "canonical_repeat_byte_identical": true,
+    "convergence_controls_executed": true,
+    "covariance_used": false,
+    "deterministic_execution_performed": true,
+    "deterministic_vectors_produced": true,
+    "empirical_constraint_claimed": false,
+    "eta_lambda_computed": false,
+    "gaussian_noise_used": false,
+    "gravitational_action_selected": false,
+    "internal_repeat_performed": true,
+    "jacobian_computed": false,
+    "measured_evidence_used": false,
+    "monte_carlo_executed": false,
+    "mutations_executed": true,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "physical_identifiability_evaluated": false,
+    "profile_likelihood_executed": false,
+    "scalar_branch_adopted": false,
+    "sensitivity_forecast_produced": false,
+    "single_execution_authority_consumed": true,
+    "singular_values_computed": false,
+    "stage_b_authorized": false,
+    "stage_b_eligible_for_fresh_selection": false,
+    "stochastic_packet_preparation_authorized": false,
+    "symmetry_controls_executed": true,
+    "synthetic_dataset_generated": false
+  },
+  "secondary_outcome": "NO_IDENTIFIABILITY_CALCULATION_DUE_TO_EARLY_PHYSICAL_CONTROL_FAILURE",
+  "selected_next_target": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_execution_result",
+  "selected_next_target_kind": "INDEPENDENT_DETERMINISTIC_STAGE_A_EXECUTION_RESULT_REVIEW_ONLY",
+  "target": "execute_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_once"
+}

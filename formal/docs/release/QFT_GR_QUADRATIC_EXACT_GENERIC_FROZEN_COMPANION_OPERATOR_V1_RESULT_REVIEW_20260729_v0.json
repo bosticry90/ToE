@@ -1,0 +1,34 @@
+{
+  "accepted": true,
+  "accepted_as": "VALID_FAILED_CLOSED_STAGE_3_RESULT_WITHOUT_GENERIC_OPERATOR",
+  "authority_rotation": {
+    "quadratic_repair_authorized": false,
+    "quadratic_role_gate_mandatory": true,
+    "quadratic_stage_4_authorized": false,
+    "quadratic_stage_5_authorized": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "Minkowski_control_reproduced": true,
+    "all_trace_charts_retain_dependent_jets": true,
+    "bounded_stage_3_authority_consumed": true,
+    "later_claims_remain_false": true,
+    "mandatory_exit_selected": true,
+    "metric_wave_slot_ambiguity_demonstrated": true,
+    "no_early_constraint_projection": true,
+    "no_repair_or_subsidiary_target": true,
+    "scalar_wave_slot_ambiguity_demonstrated": true
+  },
+  "failed_checks": [],
+  "mandatory_exit_target": "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0",
+  "reviewed_result": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v1.json",
+    "sha256": "dc44607059d79fcfd54220a23c07f4bf1d9692119ec05e936dc9dcedc753c1ce"
+  },
+  "schema_id": "QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0",
+  "scientific_interpretation": "The accepted component expansion does not determine a unique generic off-constraint 128-state companion. Treating dk and du as metric/scalar second derivatives imposes definition constraints before the authorized tangent-space stage; treating c and r as independent requires absent dh/d2h and dq/d2q jet slots. Every trace chart also retains its dependent spin component or derivative.",
+  "terminal_outcome": "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED",
+  "terminal_result": "BLOCKED",
+  "toe_role_not_decided_here": true,
+  "verdict": "STAGE_3_BLOCKED_RESULT_ACCEPTED_NO_EXACT_GENERIC_COMPANION_NO_REPAIR_OR_LATER_QUADRATIC_STAGE_MANDATORY_ROLE_GATE"
+}

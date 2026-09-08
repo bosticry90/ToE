@@ -1,0 +1,64 @@
+{
+  "schema_id": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITION_RESULT_20260725_v0",
+  "status": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITIONS_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "source_custody": {
+    "dirty_main_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "tracked_dirty_paths": 7,
+    "untracked_paths": 622,
+    "total_paths": 629,
+    "manifest_path": ".toe-recovery/custody-v0/DIRTY_WORKTREE_CUSTODY_MANIFEST_v0.json",
+    "manifest_sha256": "4b4e5ebe0874287e7ea753bb64c2174b845bec4f5225a54d4ab962e83d5a2224",
+    "dirty_main_byte_preserved": true
+  },
+  "terminal_ledger": {
+    "path": ".toe-recovery/custody-v0/dirty-main-terminal-dispositions-v0/DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITION_LEDGER_20260725_v0.json",
+    "sha256": "75d3e68da9b496a86ecd60c1a94dee1bcf26c123e478fb1e0191d511e9a2266c",
+    "size_bytes": 672324,
+    "entry_identity_root_sha256": "ec3987d844d6fd9576a260192057f8d60fd7f5a375d32afb45370373be273f58"
+  },
+  "verification": {
+    "manifest_entries": 629,
+    "unique_paths": 629,
+    "live_paths_or_absences_verified": 629,
+    "custody_objects_verified": 629,
+    "unmatched_paths": 0,
+    "manual_review_required_remaining": 0,
+    "terminal_dispositions": 629
+  },
+  "terminal_disposition_counts": {
+    "APPROVED_FOR_CLEAN_INTEGRATION": 0,
+    "PRESERVED_NONCURRENT_RESEARCH": 435,
+    "PRESERVED_EXECUTION_EVIDENCE": 71,
+    "DETERMINISTIC_REGENERABLE_OUTPUT": 0,
+    "HISTORICAL_CUSTODY_ONLY": 123,
+    "EXCLUDED_TRANSIENT": 0
+  },
+  "reviewed_cohorts": {
+    "dirty_release_surface_custody_only_v0": 120,
+    "dirty_root_readme_noncurrent_v0": 1,
+    "external_acquisition_evidence_v0": 24,
+    "tracked_root_deletion_marker_v0": 3,
+    "unenrolled_execution_output_v0": 47,
+    "unenrolled_formal_research_v0": 113,
+    "unenrolled_research_document_v0": 90,
+    "unenrolled_research_implementation_v0": 231
+  },
+  "integration_boundary": {
+    "dirty_main_merged_wholesale": false,
+    "dirty_main_paths_imported": 0,
+    "approved_items_requiring_integration_result": 0,
+    "scientific_artifacts_promoted": 0,
+    "authority_surfaces_promoted": 0,
+    "all_noncurrent_material_remains_recoverable_from_custody_objects": true,
+    "clean_integration_candidate_base": "ACCEPTED_RECOVERY_LINEAGE"
+  },
+  "acceptance_candidate": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITIONS_ACCEPTED",
+  "required_next_gate_after_independent_review": "CLEAN_INTEGRATION_CANDIDATE_CONSTRUCTION_AND_VALIDATION",
+  "automatic_successor_authority": "NONE",
+  "recovery_control_plane_complete": false,
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_or_seam_rows": "0 / 12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

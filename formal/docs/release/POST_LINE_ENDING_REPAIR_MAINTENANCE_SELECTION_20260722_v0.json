@@ -1,0 +1,17 @@
+{
+  "captured_at_utc": "2026-07-22T00:27:54Z",
+  "input_result": {
+    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_20260721_v0.json",
+    "sha256": "8155f10193f4ef8f6049fffcc2db6de6fb7713d03b227b434c02fd3f3b9c3e28",
+    "outcome": "LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_ACCEPTED"
+  },
+  "input_review": {
+    "path": "formal/docs/release/REPOSITORY_LINE_ENDING_IDENTITY_AND_MAPPING_TUPLE_NONHERMETIC_REPAIR_RESULT_REVIEW_20260721_v0.json",
+    "sha256": "beaa10e0e11e805638f1c67a81fec7a89343b5bf0aaa562110392ad06d6e6773",
+    "verdict": "ACCEPTED_NARROW_REPAIR_RESULT_NO_BROAD_RECOVERY_AUTHORITY"
+  },
+  "schema_id": "POST_LINE_ENDING_REPAIR_MAINTENANCE_SELECTION_20260722_v0",
+  "scientific_posture": "B-BLOCKED",
+  "selected": "AUTHORIZE_BOUNDED_BROAD_PYTHON_FIRST_CAUSE_CLUSTERING",
+  "target": "prepare_repository_broad_python_first_cause_cluster_packet_v0"
+}

@@ -1,0 +1,672 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0",
+  "captured_at_utc": "2026-07-31T15:45:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION",
+  "attempt_sequence_number": 3,
+  "scientific_target": "reconstruct_toe_gravitational_requirement_and_action_family_lineages_v0",
+  "scope_hash": "af28fab6b424603cccbc2e7ef8663d8f8a1e88212285c1767a59f0cfccef9ebb",
+  "open_event": {
+    "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_03_OPEN_v0.json",
+    "event_hash": "415cfdab5d5172fc823e6add64c388370cebf1e326b41b506d6ea53f9c6cb4b5",
+    "sha256": "1b96deded40d2a54a0551a1c762597a6922fb40254e007c86cf4a957e50e136d"
+  },
+  "terminal_outcome": "LINEAGES_RECONSTRUCTED_WITH_BOUNDED_UNRESOLVED_RELATIONSHIPS",
+  "lifecycle_result": "PASSED",
+  "scientific_conclusion": "The ten requirements and seven frozen family labels have source-bound documentary lineages, but no preserved lineage supplies a sufficiently defined native gravitational action. One explicit R+alpha R^2 representative is recovered for F_FR only as the already nonnative scalar-only quadratic comparison branch; F_EXTRA_FIELD, F_NONLOCAL, and F_CONNECTION_TORSION remain verbal directions. Einstein-Hilbert remains a known-physics baseline, generic quadratic gravity remains REFERENCE_CONTROL_ONLY, and the equivalence probe remains a nonaction control.",
+  "workload_cap_accounting": {
+    "maximum_lineage_components": 32,
+    "lineage_components_used": 11,
+    "maximum_source_artifacts_for_deep_review": 96,
+    "source_artifacts_deep_reviewed": 31,
+    "maximum_total_bounded_source_excerpt_words": 24000,
+    "bounded_source_excerpt_words_used": 0,
+    "bounded_source_excerpt_policy": "No verbatim source excerpts are embedded in this result; controlled meanings and documentary evidence summaries are used instead.",
+    "maximum_unresolved_lineage_relationships": 32,
+    "unresolved_lineage_relationships_preserved": 9,
+    "all_caps_respected": true
+  },
+  "definition_state_vocabulary": [
+    "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+    "PARTIAL_ACTION_DEFINITION_RECOVERED",
+    "VERBAL_DIRECTION_ONLY",
+    "CONFLICTING_DEFINITIONS",
+    "SUPERSEDED_OR_REJECTED",
+    "NO_DEFINITION_RECOVERED"
+  ],
+  "relationship_type_vocabulary": [
+    "EXACT_PREDECESSOR",
+    "REVISED_DESCENDANT",
+    "DERIVED_SUMMARY",
+    "EXECUTION_OF",
+    "RESULT_REVIEW_OF",
+    "SUPERSEDED_BY",
+    "REJECTED_BY",
+    "MERGED_INTO",
+    "SPLIT_INTO_MULTIPLE_FAMILIES",
+    "PARALLEL_INCOMPATIBLE_BRANCH",
+    "UNRESOLVED_RELATIONSHIP"
+  ],
+  "requirement_lineage_graph": [
+    {
+      "requirement_id": "R1_DIMENSION",
+      "earliest_bound_source": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+      "earliest_bound_source_sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4",
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "DERIVED_SUMMARY",
+      "relationship_evidence": "The Stage 1 row binds the minimal-contract source hash and preserves its four-dimensional scope language.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": [],
+      "meaning_change": "Four-dimensionality remains a frozen comparison-envelope assumption and was not converted into a native derivation.",
+      "lineage_status": "RECONSTRUCTED"
+    },
+    {
+      "requirement_id": "R2_METRIC_ONLY",
+      "earliest_bound_source": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+      "earliest_bound_source_sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4",
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "DERIVED_SUMMARY",
+      "relationship_evidence": "The Stage 1 row binds the minimal-contract source hash and preserves the one-metric envelope as a scope restriction.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": [],
+      "meaning_change": "The one-metric restriction remains a bounded v0 scope choice and not a refutation of extra-field or independent-connection theories.",
+      "lineage_status": "RECONSTRUCTED"
+    },
+    {
+      "requirement_id": "R3_LOCALITY",
+      "earliest_bound_source": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+      "earliest_bound_source_sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4",
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "DERIVED_SUMMARY",
+      "relationship_evidence": "The Stage 1 row binds the minimal-contract source hash and preserves locality as an evaluation-envelope assumption.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": [],
+      "meaning_change": "Locality remains an imported field-theory comparison envelope and was not derived from distinctive ToE content.",
+      "lineage_status": "RECONSTRUCTED"
+    },
+    {
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "earliest_bound_source": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+      "earliest_bound_source_sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4",
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "DERIVED_SUMMARY",
+      "relationship_evidence": "The Stage 1 row binds the minimal-contract source hash and preserves covariance without adding selection power.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": [],
+      "meaning_change": "Diffeomorphism covariance remains an accepted project requirement shared by many action families and therefore does not select one.",
+      "lineage_status": "RECONSTRUCTED"
+    },
+    {
+      "requirement_id": "R5_CK_FIREWALL",
+      "earliest_bound_source": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+      "earliest_bound_source_sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d",
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "DERIVED_SUMMARY",
+      "relationship_evidence": "The Stage 1 row binds the C_k synthesis hash and states the same nondynamical firewall.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": [],
+      "meaning_change": "The C_k rule was preserved as a nondynamical admissibility firewall; no source converts it into a gravitational multiplier, penalty, field, or positive action principle.",
+      "lineage_status": "RECONSTRUCTED"
+    },
+    {
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "earliest_bound_source": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+      "earliest_bound_source_sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4",
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "DERIVED_SUMMARY",
+      "relationship_evidence": "The Stage 1 row binds the minimal-contract source hash and preserves compact-support local-bulk variation.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": [],
+      "meaning_change": "The compact-support bulk variation domain remains a comparison convention and does not transport global or boundary equivalence.",
+      "lineage_status": "RECONSTRUCTED"
+    },
+    {
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "earliest_bound_sources": [
+        {
+          "path": "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json",
+          "sha256": "7232643ab971c1f647421c81bb52ef37f0a636262bc172d3fffc73ed1c6a4d54"
+        },
+        {
+          "path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+          "sha256": "fdadf7cb74401fd1d994841c9dbbbce5f6333e86d967d0aa349ed8987c183e8f"
+        },
+        {
+          "path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+          "sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4"
+        }
+      ],
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "MERGED_INTO",
+      "relationship_evidence": "The Stage 1 row names all three source dependencies and keeps their distinct matter-selection, stress-policy, and gravitational-contract roles visible.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT_FOR_DOCUMENTARY_MERGE_NOT_SCIENTIFIC_CLOSURE",
+      "unresolved_alternatives": ["A future selected native matter action could supply a different descendant."],
+      "custody_limitations": [],
+      "meaning_change": "Matter selection, stress-definition policy, and variational conservation were combined into one conditional requirement; the missing native matter action remains explicit.",
+      "lineage_status": "RECONSTRUCTED_WITH_MISSING_DOWNSTREAM_INPUT"
+    },
+    {
+      "requirement_id": "R8_NEWTON_POISSON",
+      "earliest_bound_sources": [
+        {
+          "path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+          "sha256": "b2519245872eaed3d874c25836ce355cca9e3bc0f11914e806a74c691f8d14da"
+        },
+        {
+          "path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+          "sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4"
+        }
+      ],
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "MERGED_INTO",
+      "relationship_evidence": "The Stage 1 row binds both the Lean weak-field surface and the minimal contract as recovery inputs.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT_FOR_DOCUMENTARY_MERGE",
+      "unresolved_alternatives": [],
+      "custody_limitations": [],
+      "meaning_change": "The formal weak-field surface became a retained recovery target only; it was not promoted to a native action derivation.",
+      "lineage_status": "RECONSTRUCTED"
+    },
+    {
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "earliest_bound_sources": [
+        {
+          "path": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+          "sha256": "de305a72dc522fe807c037bbe7980d96e3308d0547645ccb9939d1889720d987"
+        },
+        {
+          "path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+          "sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4"
+        }
+      ],
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "MERGED_INTO",
+      "relationship_evidence": "The Stage 1 row binds the rotating-source review and minimal contract and preserves the upstream field-equation block.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT_FOR_DOCUMENTARY_MERGE",
+      "unresolved_alternatives": ["No later source-bound continuum 0i equation was recovered in the bounded review."],
+      "custody_limitations": [],
+      "meaning_change": "The blocked rotating-source route was retained as a future recovery obligation; no missing continuum field equation was recovered.",
+      "lineage_status": "RECONSTRUCTED_WITH_UPSTREAM_BLOCK"
+    },
+    {
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "earliest_bound_source": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0.json",
+      "earliest_bound_source_sha256": "e2468ea98384383654efe73dd054f5149beb6d4a62db45123109d962999dea66",
+      "current_controlled_descendant": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "current_controlled_descendant_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "relationship": "DERIVED_SUMMARY",
+      "relationship_evidence": "The Stage 1 row binds the response-selection source and preserves the unfrozen candidate-specific norm and thresholds.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": ["A future action-specific program may freeze different stability criteria."],
+      "custody_limitations": [],
+      "meaning_change": "Stability and no-fit remain evaluation obligations whose candidate-specific norm and thresholds have never been frozen.",
+      "lineage_status": "RECONSTRUCTED_WITH_MISSING_TEST_CONTRACT"
+    }
+  ],
+  "action_family_lineage_graph": [
+    {
+      "family_id": "F_EH",
+      "prior_classification_retained": "KNOWN_PHYSICS_BASELINE",
+      "definition_state": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+      "lineage_summary": "The standard Einstein-Hilbert comparator and a later provisional Einstein-scalar source route are source-defined. The scalar route is a classical on-shell source sandbox and explicitly supplies neither native matter nor a native gravitational principle.",
+      "primary_sources": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_FOR_PROVISIONAL_SCALAR_SOURCE_20260618_v0.json",
+          "sha256": "b5e1b96ece670de843dce3180daab429ec0716c212e31d7908050038586f6888"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+          "sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544"
+        }
+      ],
+      "native_action_recovered": false,
+      "compatibility_judgment_made": false
+    },
+    {
+      "family_id": "F_FR",
+      "prior_classification_retained": "INSUFFICIENTLY_DEFINED",
+      "definition_state": "PARTIAL_ACTION_DEFINITION_RECOVERED",
+      "lineage_summary": "A source-defined representative S proportional to integral sqrt(-g)(R+alpha R^2) and its bounded scalar-tensor representation were recovered. The same sources classify it as a supplied scalar-only quadratic comparison subfamily, leave alpha unselected, adopt no beta=0 native condition, and identify no native scalar bridge. This recovers one member, not the general f(R) function family.",
+      "primary_sources": [
+        {
+          "path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_20260718_v0.json",
+          "sha256": "70fa95ee3e09679d51e003034f925ad6ddbd963f69fd792cc53143cb446ee9fb"
+        },
+        {
+          "path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_20260718_v0.json",
+          "sha256": "a3c31696dcc3999ab8c42e1fa8276f9e1b551af725d8111f917c9122ae0f648f"
+        },
+        {
+          "path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_RESULT_REVIEW_20260718_v0.json",
+          "sha256": "278c9ad0d765891c92b6bfca2c5d50993c3d9ecee200657f44ac772d3f5057e9"
+        }
+      ],
+      "overlap_with_family": "F_QUADRATIC",
+      "overlap_scope": "beta=0 scalar-only R+alpha R^2 comparison representative",
+      "general_family_definition_recovered": false,
+      "native_action_recovered": false,
+      "compatibility_judgment_made": false
+    },
+    {
+      "family_id": "F_QUADRATIC",
+      "prior_classification_retained": "REFERENCE_CONTROL",
+      "definition_state": "SOURCE_DEFINED_ACTION_FAMILY_RECOVERED",
+      "lineage_summary": "The exploratory alpha-beta comparison led to a scalar-only branch and then to the exact frozen local quadratic control. Its five-stage bounded closeout fixed the role REFERENCE_CONTROL_ONLY and the result UNRESOLVED_AFTER_BOUNDED_ATTEMPT; later certificate corrections preserved that role while narrowing Stage 1 and Stage 2 proof strength.",
+      "primary_sources": [
+        {
+          "path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.json",
+          "sha256": "905d162d104fa3763199a88758476c9c9231a07a35b62c8711cb922b633c0d4b"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_20260728_v0.json",
+          "sha256": "9eb7d675c45dd3709c0f19d8263155c1d07ee5eafa5909087e0b4f98d88c33dc"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json",
+          "sha256": "33eaf34cffbe365b35a17a39e1ac946fc4dcc201d7f92baf546c3a91af024b46"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_QUADRATIC_CERTIFICATION_STATUS_INDEX_20260729_v0.json",
+          "sha256": "765d9b4a2ec94edf550f5d7e2bec951aca600029dd8b269d435baf8bc9e207e1"
+        }
+      ],
+      "native_action_recovered": false,
+      "compatibility_judgment_made": false
+    },
+    {
+      "family_id": "F_EXTRA_FIELD",
+      "prior_classification_retained": "INSUFFICIENTLY_DEFINED",
+      "definition_state": "VERBAL_DIRECTION_ONLY",
+      "lineage_summary": "No preserved source specifies an independent native extra gravitational field, its kinetic term, gauge or constraint structure, couplings, or coefficient domain. The scalaron derived from R+alpha R^2 is an equivalent representation of the F_FR/F_QUADRATIC comparison member, and the Einstein-scalar source is imported matter; neither defines this umbrella as a fundamental gravity family.",
+      "primary_sources": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        },
+        {
+          "path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_20260718_v0.json",
+          "sha256": "a3c31696dcc3999ab8c42e1fa8276f9e1b551af725d8111f917c9122ae0f648f"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_FOR_PROVISIONAL_SCALAR_SOURCE_20260618_v0.json",
+          "sha256": "b5e1b96ece670de843dce3180daab429ec0716c212e31d7908050038586f6888"
+        }
+      ],
+      "native_action_recovered": false,
+      "compatibility_judgment_made": false
+    },
+    {
+      "family_id": "F_NONLOCAL",
+      "prior_classification_retained": "INSUFFICIENTLY_DEFINED",
+      "definition_state": "VERBAL_DIRECTION_ONLY",
+      "lineage_summary": "The preserved envelope names nonlocal metric gravity only as an outside-scope direction. No kernel, form factor, causal prescription, boundary treatment, exact action, or native origin was recovered in the bounded source review.",
+      "primary_sources": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        }
+      ],
+      "native_action_recovered": false,
+      "compatibility_judgment_made": false
+    },
+    {
+      "family_id": "F_CONNECTION_TORSION",
+      "prior_classification_retained": "INSUFFICIENTLY_DEFINED",
+      "definition_state": "VERBAL_DIRECTION_ONLY",
+      "lineage_summary": "The preserved label combines Palatini, independent-connection, and torsion possibilities but supplies no common variables, local Lorentz or connection gauge structure, curvature or torsion invariants, constraints, matter coupling, or exact action. No source-bound common lineage among those inequivalent subfamilies was recovered.",
+      "primary_sources": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        }
+      ],
+      "native_action_recovered": false,
+      "compatibility_judgment_made": false
+    },
+    {
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "prior_classification_retained": "REFERENCE_CONTROL",
+      "definition_state": "NO_DEFINITION_RECOVERED",
+      "lineage_summary": "The source defines a property-scoped local-bulk equivalence audit, including algebraic identities, allowed divergences, topological densities, bounded field redefinitions, and normalization changes. It intentionally has no standalone action and therefore is not a missing gravitational law.",
+      "primary_sources": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        },
+        {
+          "path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.json",
+          "sha256": "905d162d104fa3763199a88758476c9c9231a07a35b62c8711cb922b633c0d4b"
+        }
+      ],
+      "nonaction_by_design": true,
+      "native_action_recovered": false,
+      "compatibility_judgment_made": false
+    }
+  ],
+  "source_to_review_and_source_to_result_edges": [
+    {
+      "source_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+      "source_sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634",
+      "target_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.json",
+      "target_sha256": "c7cbf6997b5414a83524a82c105e33e44426dd07f5b2a703d3f68e123795fa9c",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "source_to_review",
+      "evidence": "The review binds the v0 packet and blocks its incomplete selection contract.",
+      "authority_status": "CURRENT_TRACKED_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.json",
+      "source_sha256": "c7cbf6997b5414a83524a82c105e33e44426dd07f5b2a703d3f68e123795fa9c",
+      "target_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v1.json",
+      "target_sha256": "4121be7c310fde29a6a34e11b07817d410c7bfb0ae1a5a9996cb288efedc3ba1",
+      "relationship_type": "REVISED_DESCENDANT",
+      "direction": "blocked_review_to_contract_repair",
+      "evidence": "The v1 packet names the v0 review as authority and repairs statement classes and evaluator semantics without populating the real matrix.",
+      "authority_status": "HISTORICAL_CONTRACT_REPAIR",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v1.json",
+      "source_sha256": "4121be7c310fde29a6a34e11b07817d410c7bfb0ae1a5a9996cb288efedc3ba1",
+      "target_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v1.json",
+      "target_sha256": "e15e561c4f9124f7d234c26b40b071213da03454b8416a7cb5f5c75b3a3bde6d",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "source_to_review",
+      "evidence": "The v1 review binds and blocks the production-semantics contract while preserving the 0/70 real matrix.",
+      "authority_status": "HISTORICAL_CONTRACT_REVIEW",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v1.json",
+      "source_sha256": "e15e561c4f9124f7d234c26b40b071213da03454b8416a7cb5f5c75b3a3bde6d",
+      "target_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v2.json",
+      "target_sha256": "ae072cee52afca2e05f765d4aa4fe25939416b689284bf1ddb18ff9cad0cb0b6",
+      "relationship_type": "REVISED_DESCENDANT",
+      "direction": "blocked_review_to_contract_repair",
+      "evidence": "The v2 packet binds the v1 review and adds authority-derived requirements and typed evidence controls without executing the real matrix.",
+      "authority_status": "HISTORICAL_CONTRACT_REPAIR",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v2.json",
+      "source_sha256": "ae072cee52afca2e05f765d4aa4fe25939416b689284bf1ddb18ff9cad0cb0b6",
+      "target_path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.json",
+      "target_sha256": "1faacbd470ef5feed6aebb4dfad34e2e5a9214fa2e31a79d57c375a08f4d9051",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "source_to_review",
+      "evidence": "The review blocks and closes the automated action-selection tooling lane; it establishes no real family result.",
+      "authority_status": "HISTORICAL_BLOCKING_REVIEW",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_20260718_v0.json",
+      "source_sha256": "8cfbb0ce0129638fd688d255911ef8e076c6a1d48bb6736e49705dd266a92ac2",
+      "target_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_20260718_v0.json",
+      "target_sha256": "f597596e5c33179be7a199c73ec2ea7441cba03d1784961a9a09926bf8002dcb",
+      "relationship_type": "EXECUTION_OF",
+      "direction": "packet_to_bounded_execution",
+      "evidence": "The execution consumes the reviewed exploratory packet and leaves 48 of 70 cells unsurveyed.",
+      "authority_status": "NONAUTHORITATIVE_EXPLORATORY_LINEAGE",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_20260718_v0.json",
+      "source_sha256": "f597596e5c33179be7a199c73ec2ea7441cba03d1784961a9a09926bf8002dcb",
+      "target_path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.json",
+      "target_sha256": "905d162d104fa3763199a88758476c9c9231a07a35b62c8711cb922b633c0d4b",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "result_to_review",
+      "evidence": "The review accepts only the nonauthoritative opportunity map and authorizes preparation of the quadratic comparison packet.",
+      "authority_status": "ACCEPTED_EXPLORATORY_REVIEW",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_20260718_v0.json",
+      "source_sha256": "70fa95ee3e09679d51e003034f925ad6ddbd963f69fd792cc53143cb446ee9fb",
+      "target_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_20260718_v0.json",
+      "target_sha256": "a3c31696dcc3999ab8c42e1fa8276f9e1b551af725d8111f917c9122ae0f648f",
+      "relationship_type": "EXECUTION_OF",
+      "direction": "packet_to_bounded_execution",
+      "evidence": "The execution derives the scalar-tensor representation only for the supplied R+alpha R^2 comparison and identifies no native bridge.",
+      "authority_status": "ACCEPTED_COMPARISON_LINEAGE",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_20260718_v0.json",
+      "source_sha256": "a3c31696dcc3999ab8c42e1fa8276f9e1b551af725d8111f917c9122ae0f648f",
+      "target_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_RESULT_REVIEW_20260718_v0.json",
+      "target_sha256": "278c9ad0d765891c92b6bfca2c5d50993c3d9ecee200657f44ac772d3f5057e9",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "result_to_review",
+      "evidence": "The review accepts bounded comparison viability while retaining action not selected and native relevance not established.",
+      "authority_status": "ACCEPTED_COMPARISON_REVIEW",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_FOR_PROVISIONAL_SCALAR_SOURCE_20260618_v0.json",
+      "source_sha256": "b5e1b96ece670de843dce3180daab429ec0716c212e31d7908050038586f6888",
+      "target_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "target_sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "packet_to_result_review",
+      "evidence": "The review accepts only a provisional on-shell classical source route and explicitly denies native matter and QFT-GR closure.",
+      "authority_status": "ACCEPTED_CLASSICAL_SANDBOX_REVIEW",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_20260728_v0.json",
+      "source_sha256": "9eb7d675c45dd3709c0f19d8263155c1d07ee5eafa5909087e0b4f98d88c33dc",
+      "target_path": "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json",
+      "target_sha256": "33eaf34cffbe365b35a17a39e1ac946fc4dcc201d7f92baf546c3a91af024b46",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "frozen_control_to_terminal_role_review",
+      "evidence": "The terminal review fixes REFERENCE_CONTROL_ONLY plus UNRESOLVED_AFTER_BOUNDED_ATTEMPT.",
+      "authority_status": "CLOSED_BOUNDED_CONTROL",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json",
+      "source_sha256": "33eaf34cffbe365b35a17a39e1ac946fc4dcc201d7f92baf546c3a91af024b46",
+      "target_path": "formal/docs/release/QFT_GR_QUADRATIC_CERTIFICATION_STATUS_INDEX_20260729_v0.json",
+      "target_sha256": "765d9b4a2ec94edf550f5d7e2bec951aca600029dd8b269d435baf8bc9e207e1",
+      "relationship_type": "DERIVED_SUMMARY",
+      "direction": "closed_result_to_certificate_qualification_index",
+      "evidence": "The corrective index narrows Stage 1 confluence and Stage 2 algebraic certification without changing the control role or terminal result.",
+      "authority_status": "CUSTODY_CORRECTION",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "target_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+      "target_sha256": "3e6f8c74fe74d3c8a7bd177c025b1f722d386b493aaa177b06db2866b592705c",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "stage_result_to_independent_review",
+      "evidence": "The Stage 1 review independently accepts ten requirements without action selection.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    },
+    {
+      "source_path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+      "source_sha256": "397ff917c8332b4a71ccaa294f05dede3d2a43100824a66672c070f86b4dc578",
+      "target_path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_REVIEW_v0.json",
+      "target_sha256": "511f66369a95cf7569adce004d6d0d5be64f4a892fc0c4329df1c220554c9a48",
+      "relationship_type": "RESULT_REVIEW_OF",
+      "direction": "stage_result_to_independent_review",
+      "evidence": "The Stage 2 review independently accepts the seven-family inventory and carries the unresolved definitions into Stage 3.",
+      "authority_status": "CURRENT_BOUNDED_PROGRAM_HISTORY",
+      "confidence": "EXACT",
+      "unresolved_alternatives": [],
+      "custody_limitations": []
+    }
+  ],
+  "historical_hash_binding_resolution": {
+    "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+    "frozen_packet_stored_sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509",
+    "current_committed_blob_sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544",
+    "current_git_blob_id": "bde76bc1b6e3ef27e74971a7a16e781dfa9034cf",
+    "introduction_commit": "5223e2e83298893e010e4242dcf218790ec08b0a",
+    "resolution": "The stored hash is exactly the SHA-256 of the same JSON bytes after LF-to-CRLF checkout conversion. Git history contains one committed LF blob and no content revision. The discrepancy is normalization identity, not a missing historical scientific version.",
+    "lf_byte_length": 12946,
+    "crlf_byte_length": 13165,
+    "scientific_lineage_impact": "NONE",
+    "custody_rule": "Committed Git blob bytes remain authoritative; worktree-normalized SHA-256 is recorded separately where relevant."
+  },
+  "supersession_conflict_and_unresolved_relationship_ledger": [
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-001",
+      "subjects": ["F_FR", "F_QUADRATIC"],
+      "status": "PARTIAL_OVERLAP_NOT_FAMILY_IDENTITY",
+      "finding": "R+alpha R^2 is both one f(R) representative and the beta=0 scalar-only quadratic comparison branch. The sources do not justify merging the full f(R) family with generic quadratic gravity."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-002",
+      "subjects": ["F_FR", "F_EXTRA_FIELD"],
+      "status": "EQUIVALENT_REPRESENTATION_NOT_FUNDAMENTAL_FAMILY_IDENTITY",
+      "finding": "The derived scalaron description is a bounded representation of the supplied metric f(R) member; it does not recover an independently fundamental extra-field gravitational action."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-003",
+      "subjects": ["F_EXTRA_FIELD"],
+      "status": "NO_INDEPENDENT_NATIVE_ACTION_DEFINITION_RECOVERED",
+      "finding": "The family remains an umbrella over scalar, vector, tensor, and mixed possibilities without one preserved native action."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-004",
+      "subjects": ["F_NONLOCAL"],
+      "status": "NO_KERNEL_OR_CAUSAL_PRESCRIPTION_RECOVERED",
+      "finding": "No preserved source in the bounded review defines a nonlocal operator, kernel, form factor, boundary prescription, or exact action."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-005",
+      "subjects": ["F_CONNECTION_TORSION"],
+      "status": "COMBINED_LABEL_WITH_UNRESOLVED_SUBFAMILIES",
+      "finding": "Palatini, independent-connection, and torsion proposals remain combined under one label without evidence of one shared documentary or scientific lineage."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-006",
+      "subjects": ["R7_SOURCE_COMPATIBILITY"],
+      "status": "MISSING_NATIVE_MATTER_DESCENDANT",
+      "finding": "The provisional Einstein-scalar route supplies a classical source witness but no native matter action or closed source seam."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-007",
+      "subjects": ["R9_MOMENTUM_CURRENT"],
+      "status": "BLOCKED_LINEAGE_HAS_NO_FIELD_EQUATION_DESCENDANT",
+      "finding": "The preserved rotating-source route ends at the field-equation-surface block; no later source-bound recovery equation was found."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-008",
+      "subjects": ["R10_STABILITY_NO_FIT"],
+      "status": "NO_CANDIDATE_SPECIFIC_THRESHOLD_DESCENDANT",
+      "finding": "No preserved descendant freezes a universal norm, numerical threshold, or no-fit coefficient test applicable to all seven family labels."
+    },
+    {
+      "finding_id": "LINEAGE-UNRESOLVED-009",
+      "subjects": ["ARCHIVE_SEARCH_BOUNDARY"],
+      "status": "BOUNDED_SOURCE_REVIEW_NOT_REPOSITORY_CLAIM_EXHAUSTION",
+      "finding": "The two tracked archive index documents contained no action-level hits for the frozen f(R), nonlocal, Palatini, torsion, scalar-tensor, or gravitational-action search terms, but this negative keyword result cannot establish semantic exhaustion of the unreviewed repository corpus.",
+      "source_bindings": [
+        {
+          "path": "archive/docs/equation_inventory.md",
+          "sha256": "16faff54a0cf5a80d7f551df36b8961d02102f60ab514515abfb7dcd77ddd273"
+        },
+        {
+          "path": "archive/docs/Deepening.txt",
+          "sha256": "3e527859bfb1332daf9739b50118f12e3496155c61024f75a38649093b51f913"
+        }
+      ]
+    }
+  ],
+  "reconstruction_summary": {
+    "requirement_rows_reconstructed": 10,
+    "family_rows_reconstructed": 7,
+    "source_to_review_or_result_edges_established": 14,
+    "unresolved_relationships_preserved": 9,
+    "source_defined_baseline_action_families": 1,
+    "source_defined_control_action_families": 1,
+    "partial_comparison_action_definitions_recovered": 1,
+    "verbal_direction_only_families": 3,
+    "nonaction_controls": 1,
+    "defined_native_action_families_recovered": 0,
+    "requirements_or_families_promoted": 0,
+    "compatibility_cells_evaluated": 0,
+    "new_gravitational_calculations_executed": 0
+  },
+  "stage_boundary": {
+    "family_envelope_expanded": false,
+    "missing_physics_invented": false,
+    "compatibility_judgment_made": false,
+    "family_ranked_or_selected": false,
+    "Einstein_Hilbert_promoted": false,
+    "quadratic_gravity_promoted": false,
+    "historical_evidence_promoted": false,
+    "master_action_constructed_or_promoted": false,
+    "new_gravitational_calculation_executed": false,
+    "repository_claim_exhaustion_established": false,
+    "stage_4_authorized": false,
+    "stage_4_opened": false
+  },
+  "selected_next_target": "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED",
+  "nonclaim_boundary": [
+    "Documentary recovery establishes what preserved sources define; it does not establish physical viability, truth, compatibility, superiority, or native status.",
+    "The R+alpha R^2 representative is a comparison member shared by f(R) and scalar-only quadratic descriptions; it is not a recovered native ToE action.",
+    "No action family is promoted, no requirement-family matrix is populated, and no Stage 4 scientific authority is created."
+  ]
+}

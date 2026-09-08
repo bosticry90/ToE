@@ -1,0 +1,132 @@
+{
+  "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+  "captured_at_utc": "2026-08-01T01:49:00Z",
+  "execution_target": "close_toe_ccft_native_mathematical_core_and_operationalization_v0_after_bounded_result_v0",
+  "future_decision_boundary": {
+    "automatic_successor_selected": false,
+    "future_route_options_requiring_new_authority": [
+      "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY",
+      "EXPLICIT_BOUNDED_CCFT_POSTULATE_COMPLETION",
+      "USE_GENERIC_LINEAR_BASELINE_AS_CONTROL_ONLY",
+      "DEFER_CCFT_MODEL_CONSTRUCTION"
+    ],
+    "future_route_selected": "NONE",
+    "successor_program_authorized": false,
+    "successor_program_installed": false,
+    "successor_program_opened": false
+  },
+  "nonpromotion_boundary": {
+    "CCFT_action_constructed": false,
+    "CCFT_validated": false,
+    "canonical_evidence_promoted": false,
+    "combined_wave_rotor_model_constructed": false,
+    "distinctive_observable_defined": false,
+    "minimal_CCFT_core_selected": false,
+    "new_CCFT_postulate_inserted": false,
+    "physical_coherence_quantity_established": false,
+    "preferred_formulation_selected": false,
+    "representation_or_field_physically_promoted": false,
+    "seam_constructed": false,
+    "viability_test_executed": false
+  },
+  "program_closeout": {
+    "attempted_stage_count": 4,
+    "authorized_stage_count": 5,
+    "blocked_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+    "event_chain_event_count": 8,
+    "event_chain_tip_hash": "e384be2256d6c3494966ad2d6acf3e5bc8fb6ed875aa5992fbd5dc6582165a88",
+    "last_closed_attempt_number": 4,
+    "mandatory_exit_completed": true,
+    "mandatory_exit_selected": true,
+    "program_terminal_status": "CLOSED_AFTER_MANDATORY_EXIT",
+    "repair_attempt_count": 0,
+    "subsidiary_scientific_targets_created": 0,
+    "unattempted_stage_ids": [
+      "CCFT_VIABILITY_TEST_HANDOFF_DECISION"
+    ],
+    "unattempted_stages_prohibited": true
+  },
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "program_result_alias": "NO_CLOSED_CCFT_SURROGATE_CORE_RECOVERED",
+  "schema_id": "toe.ccft.native_mathematical_core_and_operationalization.bounded_closeout_result.v0",
+  "scientific_result": {
+    "CCFT_action": "NONE",
+    "CCFT_seam": "NONE",
+    "CCFT_validation_status": "UNVALIDATED_CANDIDATE",
+    "LCRD_v3_status": "EXPLICIT_PHENOMENOLOGICAL_EQUATIONS_BUT_INCOMPLETE_MODEL_AND_IMPLEMENTATION_CONTRACT",
+    "bounded_surrogate_interpretations": "AVAILABLE",
+    "closed_source_bound_surrogate_core": "NONE",
+    "distinctive_nonlinear_CP_NLSE_status": "INCOMPLETE",
+    "minimal_CCFT_core": "NONE",
+    "observable": "NONE",
+    "physical_coherence_quantity": "NONE",
+    "repository_claim_exhaustion": "NOT_ESTABLISHED",
+    "stage_results": [
+      {
+        "attempt": 1,
+        "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY",
+        "terminal_outcome": "CCFT_MATHEMATICAL_INVENTORY_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+        "terminal_result": "PASSED"
+      },
+      {
+        "attempt": 2,
+        "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+        "terminal_outcome": "CCFT_LINEAGES_RECONCILED_WITH_BOUNDED_CONFLICTS",
+        "terminal_result": "PASSED"
+      },
+      {
+        "attempt": 3,
+        "semantic_stage_id": "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION",
+        "terminal_outcome": "CCFT_OBJECTS_OPERATIONALIZED_ONLY_AS_BOUNDED_SURROGATES",
+        "terminal_result": "PASSED"
+      },
+      {
+        "attempt": 4,
+        "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+        "terminal_outcome": "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+        "terminal_result": "BLOCKED"
+      }
+    ],
+    "summary_counts": {
+      "bounded_surrogate_operational_records": 5,
+      "candidate_cores_assessed": 2,
+      "closure_cells": 24,
+      "fully_physically_operational_objects": 0,
+      "mathematical_inventory_entries": 33,
+      "mathematical_lineages": 9,
+      "operational_records": 20,
+      "preserved_conflict_families": 4,
+      "selected_minimal_cores": 0
+    },
+    "surrogate_findings": {
+      "CP_NLSE": "The generic linear or cancellation-tuned benchmark closes, but it is a known/generic comparator. The distinctive nonlinear branch lacks a complete source-bound data, parameter, conservation, and failure contract.",
+      "LCRD_v3": "The four phenomenological evolution equations are explicit, but initial-data, parameter, normalization, and reproducible implementation contracts remain incomplete.",
+      "combined_wave_rotor": "PROHIBITED_AND_NOT_CONSTRUCTED",
+      "shared_linear_baseline": "CONTROL_ONLY_NOT_DISTINCTIVE_CCFT_CONTENT"
+    }
+  },
+  "source_bindings": {
+    "event_chain_changed_by_mandatory_exit": false,
+    "event_chain_tip_hash": "e384be2256d6c3494966ad2d6acf3e5bc8fb6ed875aa5992fbd5dc6582165a88",
+    "stage_1_result_path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+    "stage_1_result_sha256": "9dbcc3402df99065d484cc83518c2d55916f3eacfbc98098bf64663028bcf0b4",
+    "stage_1_review_path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0.json",
+    "stage_1_review_sha256": "8974b4908e4cf73f48117432dfa7a380d39e7eb07afabbb0d56367cbadf51787",
+    "stage_2_result_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0.json",
+    "stage_2_result_sha256": "8cc3ed47abe59d11ec7ba39aa47c7a848800635e1f4ccc9e15e278c558d33bf1",
+    "stage_2_review_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_REVIEW_v0.json",
+    "stage_2_review_sha256": "0f63448045a41608b84bc8f08cd2b87a3e884e2181872106f73ed1784773d618",
+    "stage_3_result_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_v0.json",
+    "stage_3_result_sha256": "7f0b5c4d01bde1976ea4c933e7eda39a78eb3fcf50b4b952fc210f0b5b6a12e5",
+    "stage_3_review_path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_REVIEW_v0.json",
+    "stage_3_review_sha256": "b9908a8c414887eb46ba1d94e017ec26f9cde189468808372dfa8b90bc6ca27f",
+    "stage_4_close_event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_CLOSE_v0.json",
+    "stage_4_close_event_sha256": "da182d9d62e1dc6ad3a95903911445a9361fb9157b219bfc28ecd493555c96f4",
+    "stage_4_result_path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0.json",
+    "stage_4_result_sha256": "b731508223914d3c2172bd7e6a60c43f1bb85c7c2653c1775f2d63fff09a69bd",
+    "stage_4_review_path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_REVIEW_v0.json",
+    "stage_4_review_sha256": "641140aa550df9689ac01800b82b973850d07302afddb5f551152641201fc326"
+  },
+  "terminal_outcome": "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED",
+  "verdict": "CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_CLOSED_AFTER_STAGE_4_BLOCK_NO_SOURCE_BOUND_CLOSED_CORE_STAGE_5_UNATTEMPTED_NO_PHYSICAL_MODEL_POSTULATE_ACTION_SEAM_OBSERVABLE_VIABILITY_TEST_PROMOTION_OR_SUCCESSOR_AUTHORITY"
+}

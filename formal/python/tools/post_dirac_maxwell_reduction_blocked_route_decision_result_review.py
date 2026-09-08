@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -36,6 +40,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "552ebe36ec3f3d2e3739e01d9add879501e976e83ae5b0d06a1ed9561ec0d11e",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 WEIGHT_MAP = {
     "parent_action_fidelity": 5,
@@ -75,7 +80,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -166,7 +171,7 @@ def build_review_report() -> dict[str, Any]:
         "mutation_controls_and_no_oracle_boundary_hold": len(controls) == 8 and all(item["passed"] for item in controls) and "expected_winner" not in packet,
         "restricted_sector_hunting_is_not_default_repair": packet["restricted_spinor_sector_default_repair"] is False,
         "only_full_zero_mode_repair_preparation_is_authorized": packet["post_acceptance_target"] == ACCEPTED_TARGET and boundary["numerical_guardrail_authorized"] is False and boundary["execution_authorized"] is False,
-        "Prompt_and_all_nonpromotion_boundaries_hold": sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256 and boundary["C_k_audit_only"] is True and boundary["CCFT_resumed"] is False and boundary["master_action_promoted"] is False,
+        "Prompt_and_all_nonpromotion_boundaries_hold": prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE) and boundary["C_k_audit_only"] is True and boundary["CCFT_resumed"] is False and boundary["master_action_promoted"] is False,
     }
     ordered = [{"decision_id": item, "passed": decisions[item]} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

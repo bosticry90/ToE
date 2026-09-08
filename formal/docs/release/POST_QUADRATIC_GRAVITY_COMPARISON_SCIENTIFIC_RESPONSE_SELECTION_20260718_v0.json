@@ -1,0 +1,468 @@
+{
+  "authority": {
+    "consumed_review_gates": 16,
+    "consumed_verdict": "ACCEPTED_BOUNDED_SHARED_LINEARIZED_QUADRATIC_GRAVITY_COMPARISON_RESULT",
+    "frozen_result_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_RESULT_REVIEW_20260718_v0.md",
+        "sha256": "95f113c409ae2f4733c1eae90f26f3d3c0aa0bbdce33b7e2ae62c88f236398da"
+      },
+      {
+        "relative_path": "formal/docs/release/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_RESULT_REVIEW_20260718_v0.json",
+        "sha256": "69f59eba7c17f102a539e43b3155905772bad84dc2794a8d1a85129d112ba925"
+      },
+      {
+        "relative_path": "formal/python/tools/shared_linearized_quadratic_gravity_source_and_spectrum_comparison_result_review_v0.py",
+        "sha256": "28af172dfe7ffcfa3bbc6a1d74bd4f097f75ec675aa7699148511ff58e2a88da"
+      },
+      {
+        "relative_path": "formal/python/tests/test_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_result_review_v0.py",
+        "sha256": "71cbe7dd1137491595d232e25c449fa2528d4efb1ffac60d9d466f20e041bca8"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/SharedLinearizedQuadraticGravitySourceAndSpectrumComparisonResultReviewV0.lean",
+        "sha256": "b211f8681abf18b698068aefc4ce501114df04978989061782ea37624a3639aa"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_quadratic_gravity_comparison_scientific_response_selection_v0.py",
+      "sha256": "69013035788ff42402983f479260ae9483477f70f687f25f90cfe35e99af46fd"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_QUADRATIC_GRAVITY_COMPARISON_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+      "sha256": "883438f1540a3b75b6209370b9ba76d0cf68761bd6bf56966b968959c24e6ed0"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_quadratic_gravity_comparison_scientific_response_selection_v0.py",
+      "sha256": "b94840e1383f3204cdb948f3e82ff399e4261f2f03a6c20bdb5c3a4a7d41a6aa"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Response selection only. Preparation of one conditional mode-selection packet is authorized next. No condition, native principle, postulate, coupling, action, outside-family mechanism, empirical constraint, matter sector, orbital transport, frame-dragging result, V2 cell, or master-action change is created or authorized here.",
+  "conditional_mode_selection_envelope": {
+    "Sigma_definition": "Sigma=3 alpha+beta",
+    "authority_classes_required": [
+      "PROJECT_BOUND_NATIVE_PRINCIPLE",
+      "SUPPLIED_STANDARD_PHYSICS_CRITERION",
+      "PROPOSED_NEW_POSTULATE",
+      "EMPIRICAL_CONSTRAINT"
+    ],
+    "coincident_mass_rule": "2 alpha+beta=0 with beta!=0 gives coincident simple poles in orthogonal P2 and P0s channels; no cancellation or ghost repair",
+    "condition_adopted_now": null,
+    "m0_squared": "-1/(2 Sigma)",
+    "m2_squared": "1/beta",
+    "rows": [
+      {
+        "condition": "m0^2>0",
+        "condition_id": "NON_TACHYONIC_SCALAR",
+        "consequence": "Sigma=3 alpha+beta<0",
+        "exact_within_frozen_family": true,
+        "qualification": "DOES_NOT_REMOVE_SCALAR_OR_PROVE_FULL_STABILITY"
+      },
+      {
+        "condition": "m2^2>0",
+        "condition_id": "NON_TACHYONIC_ADDITIONAL_SPIN_2",
+        "consequence": "beta>0",
+        "exact_within_frozen_family": true,
+        "qualification": "NEGATIVE_SATURATED_RESIDUE_REMAINS"
+      },
+      {
+        "condition": "additional spin-2 pole absent for generic conserved sources",
+        "condition_id": "NO_NEGATIVE_RESIDUE_ADDITIONAL_SPIN_2_POLE",
+        "consequence": "beta=0",
+        "exact_within_frozen_family": true,
+        "qualification": "FINITE_LOCAL_QUADRATIC_METRIC_FAMILY_ONLY"
+      },
+      {
+        "condition": "additional scalar pole absent",
+        "condition_id": "NO_ADDITIONAL_SCALAR_POLE",
+        "consequence": "Sigma=0",
+        "exact_within_frozen_family": true,
+        "qualification": "ABSENT_OR_INFINITE_MASS_STRATUM"
+      },
+      {
+        "condition": "both additional poles absent",
+        "condition_id": "NO_ADDITIONAL_MODES",
+        "consequence": "beta=0 and Sigma=0 implies alpha=beta=0",
+        "exact_within_frozen_family": true,
+        "qualification": "CONDITIONAL_EINSTEIN_BASELINE_COLLAPSE_ONLY"
+      },
+      {
+        "condition": "beta=0 and m0^2>0",
+        "condition_id": "SCALAR_ALLOWED_SPIN_2_EXCLUDED_AND_SCALAR_NON_TACHYONIC",
+        "consequence": "beta=0 and alpha<0",
+        "exact_within_frozen_family": true,
+        "qualification": "CONVENTION_SPECIFIC_LINEARIZED_BRANCH"
+      },
+      {
+        "condition": "finite-range terms decay at tested long range",
+        "condition_id": "LONG_RANGE_EINSTEIN_RESPONSE_ONLY",
+        "consequence": "broad finite positive-mass or decoupling region remains",
+        "exact_within_frozen_family": false,
+        "qualification": "NONSELECTIVE_WITHOUT_RANGE_AND_PRECISION_BOUNDS"
+      },
+      {
+        "condition": "no finite-range spin-2 current kernel at any finite range",
+        "condition_id": "EXACT_UNMODIFIED_STATIONARY_0I_FOR_GENERIC_CURRENTS",
+        "consequence": "beta=0",
+        "exact_within_frozen_family": true,
+        "qualification": "EMPIRICAL_AGREEMENT_ONLY_BOUNDS_OR_SUPPRESSES_M2_RANGE"
+      }
+    ]
+  },
+  "preparation_gates": {
+    "failure_count": 0,
+    "gate_count": 12,
+    "pass_count": 12,
+    "rows": [
+      {
+        "gate_id": "ACCEPTED_RESULT_CUSTODY_AND_EXACT_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FROZEN_CONVENTIONS_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "GHOST_TACHYON_INSTABILITY_AND_DECOUPLING_DISTINCT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_REMOVAL_VS_EMPIRICAL_SUPPRESSION_DISTINCT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "COINCIDENT_MASS_IS_PROJECTOR_RESOLVED_WITH_NO_CANCELLATION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BETA_ZERO_EXTRA_SPIN_2_REMOVAL_SCOPED_TO_FROZEN_FAMILY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SIGMA_ZERO_SCALAR_REMOVAL_AND_EINSTEIN_LIMIT_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SCALAR_ONLY_NON_TACHYONIC_BRANCH_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EVERY_SELECTING_CONDITION_REQUIRES_AUTHORITY_CLASS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "LONG_RANGE_RECOVERY_REMAINS_NONSELECTIVE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "OUTSIDE_FAMILY_MECHANISMS_DEFERRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PACKET_PREPARATION_ONLY_AND_HARD_STOP",
+        "status": "PASS"
+      }
+    ]
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "kind": "PACKET_PREPARATION_ONLY",
+        "scientific_endpoint": "Map each proposed mode, stability, and source-response condition to its exact consequence inside the accepted quadratic comparison and to its current authority class, without adopting the condition.",
+        "scores": {
+          "avoids_scope_expansion": 5,
+          "bounded_endpoint_precision": 5,
+          "conditional_discrimination": 5,
+          "direct_use_of_accepted_result": 5,
+          "native_vs_supplied_clarity": 5,
+          "next_decision_leverage": 5,
+          "prevents_action_adoption": 5,
+          "stopping_rule_precision": 5
+        },
+        "target": "prepare_post_quadratic_gravity_comparison_conditional_mode_selection_packet_v0",
+        "weighted_score": 100
+      },
+      {
+        "candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "kind": "DOWNSTREAM_COMPARISON_TRANSPORT",
+        "scientific_endpoint": "Transport the comparison metric to orbital observables without first resolving which mode-selection condition has project authority.",
+        "scores": {
+          "avoids_scope_expansion": 5,
+          "bounded_endpoint_precision": 4,
+          "conditional_discrimination": 3,
+          "direct_use_of_accepted_result": 4,
+          "native_vs_supplied_clarity": 2,
+          "next_decision_leverage": 3,
+          "prevents_action_adoption": 4,
+          "stopping_rule_precision": 3
+        },
+        "target": "prepare_comparison_metric_to_orbit_transport_packet_v0",
+        "weighted_score": 69
+      },
+      {
+        "candidate_id": "PROPOSE_MINIMAL_GRAVITATIONAL_MODE_POSTULATE",
+        "kind": "NEW_POSTULATE",
+        "scientific_endpoint": "Adopt no-extra-mode content before demonstrating that this condition is native rather than supplied or newly proposed.",
+        "scores": {
+          "avoids_scope_expansion": 4,
+          "bounded_endpoint_precision": 4,
+          "conditional_discrimination": 5,
+          "direct_use_of_accepted_result": 4,
+          "native_vs_supplied_clarity": 1,
+          "next_decision_leverage": 4,
+          "prevents_action_adoption": 1,
+          "stopping_rule_precision": 3
+        },
+        "target": "propose_minimal_gravitational_mode_content_postulate_v0",
+        "weighted_score": 66
+      },
+      {
+        "candidate_id": "EXPAND_BEYOND_LOCAL_METRIC_QUADRATIC_FAMILY",
+        "kind": "THEORY_FAMILY_EXPANSION",
+        "scientific_endpoint": "Open nonlocal, extra-field, independent-connection, torsionful, or other mechanisms before extracting the accepted comparison's conditional fork.",
+        "scores": {
+          "avoids_scope_expansion": 1,
+          "bounded_endpoint_precision": 2,
+          "conditional_discrimination": 4,
+          "direct_use_of_accepted_result": 2,
+          "native_vs_supplied_clarity": 2,
+          "next_decision_leverage": 3,
+          "prevents_action_adoption": 4,
+          "stopping_rule_precision": 2
+        },
+        "target": "select_post_quadratic_gravity_family_expansion_v0",
+        "weighted_score": 50
+      }
+    ],
+    "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+    "runner_up_score": 69,
+    "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+    "selected_score": 100
+  },
+  "retained_boundaries": {
+    "authoritative_V2_matrix": "0_OF_70",
+    "comparison_action": "SUPPLIED_COMPARISON_ONLY",
+    "comparison_result": "ACCEPTED_16_OF_16_GATES",
+    "condition_or_postulate": "NONE_ADOPTED",
+    "frame_dragging": "NOT_RESUMED",
+    "native_gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED"
+  },
+  "schema_id": "POST_QUADRATIC_GRAVITY_COMPARISON_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0",
+  "scope": {
+    "alpha_or_beta_selected": false,
+    "authoritative_V2_matrix_populated": false,
+    "comparison_action_promoted": false,
+    "condition_adopted": false,
+    "conditional_packet_preparation_authorized": true,
+    "conditional_packet_prepared_now": false,
+    "empirical_constraint_derived": false,
+    "empirical_fitting_authorized": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_principle_identified": false,
+    "new_postulate_authorized": false,
+    "nonlinear_or_arbitrary_background_claimed": false,
+    "orbital_transport_authorized": false,
+    "outside_family_mechanism_opened": false,
+    "scientific_response_selection_executed": true
+  },
+  "selected_next_target": "prepare_post_quadratic_gravity_comparison_conditional_mode_selection_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_scale": "0..5",
+    "maximum_weighted_score": 100,
+    "weights": {
+      "avoids_scope_expansion": 2,
+      "bounded_endpoint_precision": 3,
+      "conditional_discrimination": 3,
+      "direct_use_of_accepted_result": 3,
+      "native_vs_supplied_clarity": 3,
+      "next_decision_leverage": 2,
+      "prevents_action_adoption": 2,
+      "stopping_rule_precision": 2
+    }
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 22,
+    "rows": [
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 57,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 85,
+        "variant": "omit_direct_use_of_accepted_result"
+      },
+      {
+        "runner_up_candidate_id": "PROPOSE_MINIMAL_GRAVITATIONAL_MODE_POSTULATE",
+        "runner_up_score": 63,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 85,
+        "variant": "omit_native_vs_supplied_clarity"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 60,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 85,
+        "variant": "omit_conditional_discrimination"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 57,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 85,
+        "variant": "omit_bounded_endpoint_precision"
+      },
+      {
+        "runner_up_candidate_id": "PROPOSE_MINIMAL_GRAVITATIONAL_MODE_POSTULATE",
+        "runner_up_score": 64,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 90,
+        "variant": "omit_prevents_action_adoption"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 63,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 90,
+        "variant": "omit_next_decision_leverage"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 59,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 90,
+        "variant": "omit_avoids_scope_expansion"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 63,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 90,
+        "variant": "omit_stopping_rule_precision"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 65,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "direct_use_of_accepted_result_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 73,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "direct_use_of_accepted_result_+1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 67,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "native_vs_supplied_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 71,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "native_vs_supplied_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 66,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "conditional_discrimination_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 72,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "conditional_discrimination_+1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 65,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "bounded_endpoint_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 73,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "bounded_endpoint_precision_+1"
+      },
+      {
+        "runner_up_candidate_id": "PROPOSE_MINIMAL_GRAVITATIONAL_MODE_POSTULATE",
+        "runner_up_score": 65,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "prevents_action_adoption_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 73,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "prevents_action_adoption_+1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 66,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "next_decision_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 72,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "next_decision_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 64,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "avoids_scope_expansion_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 74,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "avoids_scope_expansion_+1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 66,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 95,
+        "variant": "stopping_rule_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "RESUME_METRIC_TO_ORBIT_AND_FRAME_DRAGGING_TRANSPORT",
+        "runner_up_score": 72,
+        "selected_candidate_id": "PREPARE_CONDITIONAL_MODE_SELECTION_ENVELOPE",
+        "selected_score": 105,
+        "variant": "stopping_rule_precision_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_post_quadratic_gravity_comparison_scientific_response_v0",
+  "verdict": "SELECTED_CONDITIONAL_MODE_SELECTION_ENVELOPE_PACKET_PREPARATION"
+}

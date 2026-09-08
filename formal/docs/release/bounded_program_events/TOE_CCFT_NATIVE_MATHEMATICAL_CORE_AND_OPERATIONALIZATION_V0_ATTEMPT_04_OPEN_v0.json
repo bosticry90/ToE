@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 4,
+  "event_hash": "1042769e00fc09017e2cbcc1c2842a37f1da21820731fa7021733b62ff11a782",
+  "event_sequence_number": 7,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "92d2b355a1c134d5267d23bfc84bbc03db9993cc",
+  "previous_event_hash": "696d45dc21c1a8495f2cf6761fb39a232d1bd520b5c6bb79f93e0850620b80d4",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "19598092115c0ef91137d8e88b1cb44ace4a5013340e186191359ff8abbbf46d",
+  "scope_hash": "e8bd8faac099a9b1c9e759bfae544bbe8eb56ad631959b369dc595b9f9901adf",
+  "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+  "target": "select_or_reject_toe_minimal_closed_ccft_core_v0"
+}

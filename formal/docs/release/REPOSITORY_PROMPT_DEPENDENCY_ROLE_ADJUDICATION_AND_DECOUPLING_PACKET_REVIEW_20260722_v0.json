@@ -1,0 +1,26 @@
+{
+  "captured_at_utc": "2026-07-22T01:52:45Z",
+  "checks": {
+    "all_43_consumers_require_individual_adjudication": true,
+    "automatic_successor_prohibited": true,
+    "blind_global_hash_replacement_prohibited": true,
+    "dirty_main_custody_exactly_preserved": true,
+    "four_dispositions_are_closed_and_exhaustive": true,
+    "implementation_cycles": 1,
+    "independent_result_reviews": 1,
+    "lean_lane_remains_separate": true,
+    "prompt_substantive_content_change_authorized": false,
+    "scientific_or_governance_content_change_authorized": false,
+    "scientific_execution_authorized": false,
+    "test_retirement_requires_explicit_reviewed_obligation_decision": true,
+    "v2_enrollment_authorized": false
+  },
+  "packet": {
+    "path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_20260722_v0.json",
+    "sha256": "a877d83bbfc8e1bb0bc92a513d06b25f4de0f4fd4140b8a7b7c937dec60d6614"
+  },
+  "review_scope": "independent authorization-boundary review only",
+  "schema_id": "REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_PACKET_REVIEW_20260722_v0",
+  "verdict": "ACCEPT",
+  "verdict_basis": "The packet authorizes one bounded dependency-role implementation and one review, requires consumer-by-consumer justification, preserves Prompt and all scientific/authority content, and prohibits automatic follow-on activity."
+}

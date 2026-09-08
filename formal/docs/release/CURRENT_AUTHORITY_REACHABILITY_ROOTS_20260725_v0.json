@@ -1,0 +1,54 @@
+{
+  "schema_id": "CURRENT_AUTHORITY_REACHABILITY_ROOTS_20260725_v0",
+  "current_relative_to_commit": "43ce70246dea33ae691b7f1506e1d10af963e3e3",
+  "field_owners": {
+    "scientific_target": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0/current_target",
+    "scientific_posture": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0/scientific_verdict",
+    "unit_and_seam_states": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0",
+    "scientific_enrollment_state": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0",
+    "maintenance_target": "STRICT_CURRENT_AUTHORITY_PARSE(formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json)",
+    "maintenance_repair_scope": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+    "scientific_execution_permission": "EXPLICIT_SCIENTIFIC_SELECTOR_ONLY"
+  },
+  "current_scientific_state": {
+    "target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "total_unit_seam_rows": 12,
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "scientific_execution": "NOT_AUTHORIZED"
+  },
+  "current_scientific_evidence_roots": [
+    "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
+    "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_20260713_v2.json"
+  ],
+  "current_reproducibility_roots": [
+    "formal/toe_formal/ToeFormal/Constraints/AD00_AdmissibilityManifest.lean",
+    "formal/markdown locks/gates/admissibility_manifest.json",
+    "formal/docs/paper",
+    "State_of_the_Theory.md",
+    ".gitattributes"
+  ],
+  "current_authority_guards": [
+    "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+    "formal/python/tests/test_current_target_freshness_gate.py",
+    "formal/python/tests/test_loop_control_registry_envelope_integrity_gate.py",
+    "formal/python/tests/test_repository_authority_identity_gate.py",
+    "formal/python/tests/test_maintenance_authority_duplicate_selector_repair.py",
+    "formal/python/tests/test_governance_json.py",
+    "formal/python/tests/test_recovery_accepted_lineage_completeness.py",
+    "formal/python/tests/test_recovery_validation_profiles.py"
+  ],
+  "current_nonpassing_obligations": [
+    "NONPASSING-00145",
+    "NONPASSING-00147",
+    "NONPASSING-02535",
+    "NONPASSING-09138"
+  ],
+  "noncurrent_rules": {
+    "later_dirac_maxwell": "UNRATIFIED_POST_REGISTRY",
+    "post_v2_first_unit_selector": "UNRATIFIED_POST_REGISTRY",
+    "superseded_scientific_and_maintenance_packets": "HISTORICAL",
+    "historical_snapshot_guards": "HISTORICAL"
+  }
+}

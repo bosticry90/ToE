@@ -1,0 +1,474 @@
+{
+  "adjudication_summary": {
+    "checklist_status_counts": {
+      "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED": 3,
+      "EXACT_EVIDENCE_APPLICATION_BLOCKED_BY_CONFLICT": 1,
+      "EXACT_EVIDENCE_CONFIGURATION_BOUND_NOT_GENERAL_CONTRACT": 1,
+      "EXACT_EVIDENCE_INCOMPLETE_PARAMETER_RANGE": 1,
+      "NO_RELEVANT_EVIDENCE_NO_CONTRACT_RECOVERED": 1,
+      "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED": 7,
+      "RECOVERED_EXACT_CLOSURE_CONTRACT": 4
+    },
+    "conflicts_preserved": 3,
+    "contracts_not_recovered": 14,
+    "exact_candidates_adjudicated": 7,
+    "exact_contracts_recovered": 4
+  },
+  "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0",
+  "attempt_sequence_number": 3,
+  "captured_at_utc": "2026-08-02T01:42:20Z",
+  "contract_by_contract_completeness_matrix": [
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_FREQ_001",
+        "CP_FREQ_002"
+      ],
+      "stage_2_extraction_status": "CONFLICTING_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "BOUNDARY_CONDITIONS",
+      "recovered_contract_record_ids": [
+        "CP_BOUNDARY_001"
+      ],
+      "source_record_ids": [
+        "CP_BOUNDARY_001"
+      ],
+      "stage_2_extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "stage_3_adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "COEFFICIENT_DEFINITIONS_AND_ADMISSIBLE_RANGES",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_COEFF_001"
+      ],
+      "stage_2_extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "CONSERVED_OR_MONITORED_QUANTITIES",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_CONSERVE_001"
+      ],
+      "stage_2_extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "stage_3_adjudication_status": "EXACT_EVIDENCE_APPLICATION_BLOCKED_BY_CONFLICT"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_DISP_001",
+        "CP_DISP_002"
+      ],
+      "stage_2_extraction_status": "CONFLICTING_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "FAILURE_AND_INSTABILITY_CRITERIA",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_FAILURE_001"
+      ],
+      "stage_2_extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "stage_3_adjudication_status": "EXACT_EVIDENCE_CONFIGURATION_BOUND_NOT_GENERAL_CONTRACT"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_EQ_001",
+        "CP_EQ_002",
+        "CP_EQ_003"
+      ],
+      "stage_2_extraction_status": "CONFLICTING_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "INITIAL_DATA_RULES",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_DATA_001"
+      ],
+      "stage_2_extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "NONDIMENSIONALIZATION_OR_NORMALIZATION",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_NORM_001"
+      ],
+      "stage_2_extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "CP_NLSE",
+      "missing_contract_id": "NUMERICAL_IMPLEMENTATION_PROVENANCE",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "CP_IMPL_001"
+      ],
+      "stage_2_extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "recovered_contract_record_ids": [
+        "LCRD_STATE_001"
+      ],
+      "source_record_ids": [
+        "LCRD_STATE_001"
+      ],
+      "stage_2_extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "stage_3_adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "recovered_contract_record_ids": [
+        "LCRD_CLOSURE_001"
+      ],
+      "source_record_ids": [
+        "LCRD_CLOSURE_001"
+      ],
+      "stage_2_extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "stage_3_adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "INITIAL_AND_BOUNDARY_DATA",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "LCRD_DATA_001",
+        "LCRD_DATA_002"
+      ],
+      "stage_2_extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "LSDA_COARSE_GRAINING_MAP_OR_VARIATIONAL_EFFECTIVE_DERIVATION",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "LCRD_LSDA_001",
+        "LCRD_LSDA_002"
+      ],
+      "stage_2_extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "NORMALIZATION_CONVENTIONS",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [],
+      "stage_2_extraction_status": "NO_RELEVANT_EVIDENCE_IN_SELECTED_SET",
+      "stage_3_adjudication_status": "NO_RELEVANT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "PARAMETER_RANGES",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "LCRD_PARAM_001"
+      ],
+      "stage_2_extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "stage_3_adjudication_status": "EXACT_EVIDENCE_INCOMPLETE_PARAMETER_RANGE"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "REPRODUCIBLE_IMPLEMENTATION",
+      "recovered_contract_record_ids": [],
+      "source_record_ids": [
+        "LCRD_IMPL_001"
+      ],
+      "stage_2_extraction_status": "ONLY_NONEXACT_EVIDENCE_EXTRACTED",
+      "stage_3_adjudication_status": "ONLY_NONEXACT_EVIDENCE_NO_CONTRACT_RECOVERED"
+    },
+    {
+      "ccft_branch": "LCRD_V3",
+      "missing_contract_id": "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "recovered_contract_record_ids": [
+        "LCRD_COUPLING_001"
+      ],
+      "source_record_ids": [
+        "LCRD_COUPLING_001"
+      ],
+      "stage_2_extraction_status": "EXACT_EVIDENCE_EXTRACTED_PENDING_STAGE_3_ADJUDICATION",
+      "stage_3_adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT"
+    }
+  ],
+  "exact_candidate_adjudication_matrix": [
+    {
+      "adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT",
+      "ccft_branch": "CP_NLSE",
+      "criteria": {
+        "conflict_free": true,
+        "explicit_and_portable": true,
+        "general_enough_for_model_contract": true,
+        "materially_complete_for_declared_role": true,
+        "reduces_named_future_postulate": true,
+        "source_recovered_not_numerical_default": true
+      },
+      "future_postulate_reduction": "A CP-NLSE computational v0 may reuse the recovered one-dimensional periodic domain x in [0,L) and periodic boundary contract instead of newly postulating it.",
+      "missing_contract_id": "BOUNDARY_CONDITIONS",
+      "physical_or_mathematical_validity_established": false,
+      "portability": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "rationale": "The domain and periodic boundary are explicit, portable, unopposed, and stated as the operational numerical domain rather than a single test example.",
+      "record_id": "CP_BOUNDARY_001",
+      "source_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+      "source_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+    },
+    {
+      "adjudication_status": "EXACT_EVIDENCE_APPLICATION_BLOCKED_BY_CONFLICT",
+      "ccft_branch": "CP_NLSE",
+      "criteria": {
+        "conflict_free": false,
+        "explicit_and_portable": true,
+        "general_enough_for_model_contract": true,
+        "materially_complete_for_declared_role": true,
+        "reduces_named_future_postulate": false,
+        "source_recovered_not_numerical_default": true
+      },
+      "future_postulate_reduction": null,
+      "missing_contract_id": "CONSERVED_OR_MONITORED_QUANTITIES",
+      "physical_or_mathematical_validity_established": false,
+      "portability": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "rationale": "The norm statement is explicit, but Stage 3 cannot establish its applicability to CCFT-v0 before one of the mutually incompatible governing equations is selected or newly postulated and the invariant is derived for that equation.",
+      "record_id": "CP_CONSERVE_001",
+      "source_path": "formal/proving docs/Monograph.md",
+      "source_sha256": "aba07fb30833478cd94b483b0c75459b97ddba020d5cfe3cb785bc77b0ddb99c"
+    },
+    {
+      "adjudication_status": "EXACT_EVIDENCE_CONFIGURATION_BOUND_NOT_GENERAL_CONTRACT",
+      "ccft_branch": "CP_NLSE",
+      "criteria": {
+        "conflict_free": true,
+        "explicit_and_portable": true,
+        "general_enough_for_model_contract": false,
+        "materially_complete_for_declared_role": true,
+        "reduces_named_future_postulate": false,
+        "source_recovered_not_numerical_default": true
+      },
+      "future_postulate_reduction": null,
+      "missing_contract_id": "FAILURE_AND_INSTABILITY_CRITERIA",
+      "physical_or_mathematical_validity_established": false,
+      "portability": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "rationale": "The numerical tolerances are exact for named historical tests, but they are resolution and implementation criteria rather than general mathematical instability or model-rejection conditions.",
+      "record_id": "CP_FAILURE_001",
+      "source_path": "formal/proving docs/LOCK_SECOND_ORDER_NUMERICS.md",
+      "source_sha256": "fd917a27cd890f1014981526a41b2c583ca5aff1410b730e591d1d79a8fb10a3"
+    },
+    {
+      "adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT",
+      "ccft_branch": "LCRD_V3",
+      "criteria": {
+        "conflict_free": true,
+        "explicit_and_portable": true,
+        "general_enough_for_model_contract": true,
+        "materially_complete_for_declared_role": true,
+        "reduces_named_future_postulate": true,
+        "source_recovered_not_numerical_default": true
+      },
+      "future_postulate_reduction": "An LCRD-v3 candidate may reuse Q_rotor = c1 R_x + c2 K_xx and its insertion into the momentum equation as the recovered constitutive closure form.",
+      "missing_contract_id": "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "physical_or_mathematical_validity_established": false,
+      "portability": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "rationale": "The rotor-curvature closure is explicit, portable, algebraically complete for its stated role, and unopposed in the fixed evidence set.",
+      "record_id": "LCRD_CLOSURE_001",
+      "source_path": "archive/docs/LCRD_Reconstruction_v3.md",
+      "source_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+    },
+    {
+      "adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT",
+      "ccft_branch": "LCRD_V3",
+      "criteria": {
+        "conflict_free": true,
+        "explicit_and_portable": true,
+        "general_enough_for_model_contract": true,
+        "materially_complete_for_declared_role": true,
+        "reduces_named_future_postulate": true,
+        "source_recovered_not_numerical_default": true
+      },
+      "future_postulate_reduction": "An LCRD-v3 candidate may reuse the recovered directed evolution couplings R_t=-alpha_R R+b_R|u_x|+d_R K_x and K_t=-alpha_K K+b_K R_x.",
+      "missing_contract_id": "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "physical_or_mathematical_validity_established": false,
+      "portability": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "rationale": "Both coupling equations and coefficient roles are explicit, portable, complete as mathematical coupling definitions, and unopposed by another extracted formula.",
+      "record_id": "LCRD_COUPLING_001",
+      "source_path": "formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+      "source_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26"
+    },
+    {
+      "adjudication_status": "EXACT_EVIDENCE_INCOMPLETE_PARAMETER_RANGE",
+      "ccft_branch": "LCRD_V3",
+      "criteria": {
+        "conflict_free": true,
+        "explicit_and_portable": true,
+        "general_enough_for_model_contract": false,
+        "materially_complete_for_declared_role": false,
+        "reduces_named_future_postulate": false,
+        "source_recovered_not_numerical_default": true
+      },
+      "future_postulate_reduction": null,
+      "missing_contract_id": "PARAMETER_RANGES",
+      "physical_or_mathematical_validity_established": false,
+      "portability": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "rationale": "The record gives several values and positivity conditions, but nu_code remains undefined and the positive coefficients have no complete admissible ranges or calibrated values.",
+      "record_id": "LCRD_PARAM_001",
+      "source_path": "archive/docs/LCRD_Reconstruction_v3.md",
+      "source_sha256": "bea96ee446da977dc0b065aa43d476197192e4bbc9004c4444383d28694bd317"
+    },
+    {
+      "adjudication_status": "RECOVERED_EXACT_CLOSURE_CONTRACT",
+      "ccft_branch": "LCRD_V3",
+      "criteria": {
+        "conflict_free": true,
+        "explicit_and_portable": true,
+        "general_enough_for_model_contract": true,
+        "materially_complete_for_declared_role": true,
+        "reduces_named_future_postulate": true,
+        "source_recovered_not_numerical_default": true
+      },
+      "future_postulate_reduction": "An LCRD-v3 candidate may reuse the four-field state tuple (rho,u,R,K) and its mathematical field roles without inventing a different state inventory.",
+      "missing_contract_id": "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "physical_or_mathematical_validity_established": false,
+      "portability": "NONE_GIT_PORTABLE_CAPTURE_BOUND",
+      "rationale": "The four evolved fields and their state tuple are explicit, portable, complete for state specification, and not contradicted by another extracted contract.",
+      "record_id": "LCRD_STATE_001",
+      "source_path": "formal/proving docs/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+      "source_sha256": "c323dfba4b2c001e19861488c2b62eb426357d30ef506994fe5e5f08934a6a26"
+    }
+  ],
+  "exact_recovered_contract_count_by_branch": {
+    "CP_NLSE": 1,
+    "LCRD_V3": 3,
+    "TOTAL": 4
+  },
+  "future_new_postulate_reduction_ledger": [
+    {
+      "branch_selection_or_model_validation_implied": false,
+      "ccft_branch": "CP_NLSE",
+      "future_postulate_no_longer_required_if_branch_is_selected": "A CP-NLSE computational v0 may reuse the recovered one-dimensional periodic domain x in [0,L) and periodic boundary contract instead of newly postulating it.",
+      "missing_contract_id": "BOUNDARY_CONDITIONS",
+      "record_id": "CP_BOUNDARY_001"
+    },
+    {
+      "branch_selection_or_model_validation_implied": false,
+      "ccft_branch": "LCRD_V3",
+      "future_postulate_no_longer_required_if_branch_is_selected": "An LCRD-v3 candidate may reuse Q_rotor = c1 R_x + c2 K_xx and its insertion into the momentum equation as the recovered constitutive closure form.",
+      "missing_contract_id": "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "record_id": "LCRD_CLOSURE_001"
+    },
+    {
+      "branch_selection_or_model_validation_implied": false,
+      "ccft_branch": "LCRD_V3",
+      "future_postulate_no_longer_required_if_branch_is_selected": "An LCRD-v3 candidate may reuse the recovered directed evolution couplings R_t=-alpha_R R+b_R|u_x|+d_R K_x and K_t=-alpha_K K+b_K R_x.",
+      "missing_contract_id": "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "record_id": "LCRD_COUPLING_001"
+    },
+    {
+      "branch_selection_or_model_validation_implied": false,
+      "ccft_branch": "LCRD_V3",
+      "future_postulate_no_longer_required_if_branch_is_selected": "An LCRD-v3 candidate may reuse the four-field state tuple (rho,u,R,K) and its mathematical field roles without inventing a different state inventory.",
+      "missing_contract_id": "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "record_id": "LCRD_STATE_001"
+    }
+  ],
+  "lifecycle_result": "PASSED",
+  "nonclaim_boundary": {
+    "ccft_v0_selected_constructed_or_validated": false,
+    "cp_nlse_dispersion_selected_derived_or_repaired": false,
+    "cp_nlse_equation_selected_or_repaired": false,
+    "evidence_promoted": false,
+    "new_ccft_postulate_inserted": false,
+    "new_proof_counterexample_or_calculation_attempted": false,
+    "numerical_default_promoted": false,
+    "physical_operationalization_established": false,
+    "repository_claim_exhaustion_established": false,
+    "theorem_discovery_lane_opened": false
+  },
+  "open_event_binding": {
+    "event_hash": "a414202ec4a5e93bc06991e54c0c842d0c23505fcfe937548d3b2ff093bce53a",
+    "path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+    "sha256": "bd8506faf58bdd9302a3ef7049ea862a6555852c310c6b70415d1ffd88ad0606"
+  },
+  "primary_source_conflict_supersession_and_portability_adjudication": {
+    "all_evidence_sources_git_portable": true,
+    "chronology_used_to_select_a_contract": false,
+    "conflicts": [
+      {
+        "adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED",
+        "ccft_branch": "CP_NLSE",
+        "missing_contract_id": "FINAL_INTENDED_NONLINEAR_EQUATION",
+        "rationale": "The residual, background-shifted monograph equation, and higher-derivative operational equation are materially different; the fixed evidence supplies no authoritative supersession or derivation map.",
+        "record_ids": [
+          "CP_EQ_001",
+          "CP_EQ_002",
+          "CP_EQ_003"
+        ],
+        "supersession_established": false
+      },
+      {
+        "adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED",
+        "ccft_branch": "CP_NLSE",
+        "missing_contract_id": "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+        "rationale": "The squared and additive interaction-frequency formulas are not equivalent as written and no source-bound background or convention mapping resolves them.",
+        "record_ids": [
+          "CP_DISP_001",
+          "CP_DISP_002"
+        ],
+        "supersession_established": false
+      },
+      {
+        "adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED",
+        "ccft_branch": "CP_NLSE",
+        "missing_contract_id": "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION",
+        "rationale": "One source treats omega-squared as canonical while another records additive omega; Stage 3 contains no derivation that selects or reconciles either form.",
+        "record_ids": [
+          "CP_FREQ_001",
+          "CP_FREQ_002"
+        ],
+        "supersession_established": false
+      }
+    ],
+    "custody_or_provenance_block": false,
+    "supersession_established_for_any_conflict": false
+  },
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "schema_id": "toe.targeted_ccft.contract_completeness_and_conflict_adjudication.result.v0",
+  "scientific_target": "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0",
+  "scope_hash": "5b6cf39bbf3e4f8bf076dba1817778547410a8d7950164ce5b1c27d0f977410a",
+  "semantic_stage_id": "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION",
+  "stage_2_input_binding": {
+    "checklist_count": 18,
+    "contract_record_count": 23,
+    "exact_candidate_count": 7,
+    "frozen_source_count": 96,
+    "new_source_search_performed": false,
+    "overflow_sources_used": 0,
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0.json",
+    "sha256": "b58b12e816db18dbda12af9b53ead28fcfe40c359751dfa9934da7fcbb5df7cf"
+  },
+  "stage_4_handoff": {
+    "purpose": "select the program-level targeted recovery result and mandatory construction-preparation handoff",
+    "required_decision": "SEPARATE_STAGE_4_SCIENTIFIC_AUTHORITY_DECISION",
+    "selected_target": "select_toe_post_targeted_ccft_recovery_construction_handoff_v0",
+    "stage_4_authorized": false
+  },
+  "status": "STAGE_3_CLOSED_RESULT_READY_FOR_INDEPENDENT_REVIEW",
+  "terminal_outcome": "ONE_OR_MORE_EXACT_CCFT_CLOSURE_CONTRACTS_RECOVERED"
+}

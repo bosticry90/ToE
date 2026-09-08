@@ -1,0 +1,77 @@
+{
+  "schema_id": "VerifiedCalculatorQualificationAttemptRecordV1",
+  "attempt_id": "VPC_C03_RV_EXACT_V6_3307E355_WINDOWS_CLEAN_FINAL5",
+  "tested_commit": "3307e35514cc76d63b6039b240c625defbb737d5",
+  "platform": "Windows",
+  "initial_git_status_entry_count": 0,
+  "checkout_configuration": {
+    "core_autocrlf": false,
+    "hash_bound_source_attributes": "text: unset"
+  },
+  "environment_provisioning": {
+    "network_isolation": false,
+    "network_access_used": true,
+    "purpose": "Provision frozen Lean dependencies before trusted execution",
+    "lean_build": "lake build vpc_certificate_checker vpc_qualification_envelope_checker",
+    "lean_build_result": "PASS_9_JOBS"
+  },
+  "python_closure": {
+    "test_root_count": 8,
+    "tests": 270,
+    "passed": 270,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": "321.775",
+    "pytest_junit_path": "pytest.xml",
+    "pytest_junit_sha256": "e478afb7716b3b9d615eaf5e26439c4a930ff192cc801234e0e293b22f4c1895"
+  },
+  "frozen_bundle": {
+    "bundle_id": "b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc",
+    "repository_path": "formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json",
+    "filesystem_sha256": "2da78322b4d7767fe04e6a33a36ce1190449ea94d5f82f6fe56e31bb9841c84f",
+    "computation_id": "20a479ef428a9f079b7ea0c3b5506689383e26d2242579180777489818bbaeb8",
+    "dependency_closure_hash": "a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058",
+    "runtime_certificate_hash": "401d6aa6f502c751113931975d222f261d59849897b7e24e9e504404dfa88502",
+    "lean_qualification_envelope_hash": "ad7aef9e7039ce0412c782368c3c6c1d2a678ead68c7c1e4c3be26ebd2d1ca4c",
+    "verification_receipt_hash": "200720b0bb761941c9facc206f3dd72ffad38b9b474234d120101ecd5c88ed9e"
+  },
+  "replays": [
+    {
+      "process": "A",
+      "status": "MATCHED",
+      "structural_and_hash_bindings_checked": true
+    },
+    {
+      "process": "B",
+      "status": "MATCHED",
+      "structural_and_hash_bindings_checked": true
+    }
+  ],
+  "repair_acceptance": {
+    "path": "repair_acceptance.json",
+    "filesystem_sha256": "95a8ae1716e063e2ee8a72f50f0d2ee11efba2ab51922e4b91bc161bd23b9a6b",
+    "result_hash": "1ccabba6c20bfc8ef737e54c82e98df9dd396b744087a8943d645aceb3fae30c",
+    "D-01": "PASS",
+    "D-02": "PASS",
+    "D-07": "INCONCLUSIVE",
+    "status": "INCONCLUSIVE",
+    "inconclusive_reason": "LINUX_PEER_CLOSURE_NOT_EXECUTED"
+  },
+  "payload_equivalence": {
+    "path": "payload_equivalence.json",
+    "filesystem_sha256": "337522daad388d9ccd742a0e7eef7e967ff3b1f1f7b8cc1e805e3bde0bb15ee1",
+    "report_hash": "54930852ffc1b1e12cf0dbb3508b2e91aaa5ad74e0e69fdefc8f84b76aa338db",
+    "required_rows": 643,
+    "matched": 643,
+    "mismatched": 0,
+    "missing": 0,
+    "unclassified_delta": 0,
+    "status": "PASS"
+  },
+  "status": "INCONCLUSIVE",
+  "final_disposition": "WINDOWS_REPAIR_AND_PAYLOAD_GATES_PASSED__LINUX_PEER_NON_AUTHOR_REVIEW_AND_AUTHORITY_UNEARNED",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

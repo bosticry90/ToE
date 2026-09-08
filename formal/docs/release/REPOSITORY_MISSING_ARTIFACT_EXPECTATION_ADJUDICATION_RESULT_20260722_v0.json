@@ -1,0 +1,152 @@
+{
+  "schema_id": "REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_20260722_v0",
+  "captured_at_utc": "2026-07-22T22:15:57Z",
+  "result": "MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/missing-artifact-expectation-adjudication-v0",
+  "accepted_base_commit": "06f0ab649ff31c6983a42daeedfb9ad1a696cadd",
+  "authorization_commit": "df3c4c926a08fb80423ab90036769ca0a236e90a",
+  "scope": {
+    "diagnostic_only": true,
+    "expectation_level": true,
+    "latent_dependency_aware": true,
+    "repair_performed": false,
+    "reports_created_copied_regenerated_restored_or_promoted": 0,
+    "test_modifications": 0,
+    "scientific_content_changes": 0,
+    "registry_rotations": 0,
+    "lean_activity": false,
+    "v2_enrollment_authorized": false,
+    "scientific_resumption_authorized": false,
+    "automatic_successor_cycle": false
+  },
+  "outcome_accounting": {
+    "family_outcomes": 222,
+    "outcomes_with_actual_missing_file_condition": 221,
+    "outcomes_reclassified_nonmissing": 1,
+    "consumer_test_files": 147,
+    "unique_first_missing_paths": 122,
+    "all_outcomes_individually_classified": true,
+    "unclassified_outcomes": 0,
+    "reclassified_outcome": {
+      "nodeid": "formal/python/tests/test_phase5_m5_completion_closeout_gate.py::test_phase5_m5_completion_closeout_gate",
+      "classification": "STALE_EXPECTATION_TO_RETIRE",
+      "basis": "The observed failure is a stale committed hash assertion, not a missing-file condition. No repair is authorized in this cycle."
+    }
+  },
+  "first_missing_custody": {
+    "present_in_dirty_main": 122,
+    "ignored_by_git": 122,
+    "never_tracked_on_any_reachable_ref": 122,
+    "tracked_generator_reference_present": 104,
+    "tracked_generator_reference_absent": 18,
+    "at_or_beyond_90_day_retention": 115,
+    "current_decision_bearing_artifacts_established": 0,
+    "conclusion": "No first-missing report is a reproducible committed repository input. Dirty-workspace presence is custody evidence only and cannot establish current authority."
+  },
+  "latent_dependency_inventory": {
+    "unique_high_confidence_dependency_identities": 183,
+    "unique_static_report_path_literals": 206,
+    "fixture_only_literals_separately_recorded": 23,
+    "method": "Every complete consumer source was scanned. Report identities present in the preserved dirty workspace or observed as a first failure were retained as dependency identities; report-shaped literals absent from both were quarantined as fixture-only rather than promoted.",
+    "interpretation": "The prior 168-plus estimate was a lower bound. The dependency-complete static adjudication establishes 183 high-confidence identities without reading any report as authority."
+  },
+  "expectation_role_counts": {
+    "HISTORICAL_REPORT_BEYOND_RETENTION": 185,
+    "PROVENANCE_INCOMPLETE": 36,
+    "STALE_EXPECTATION_TO_RETIRE": 1,
+    "CURRENT_DECISION_BEARING_COMMITTED_ARTIFACT": 0,
+    "DETERMINISTIC_FIXTURE_REQUIRED_FOR_TEST": 0,
+    "AUTHORIZED_LIVE_REPORT_NOT_REPOSITORY_INPUT": 0,
+    "AUTHORIZED_ABSENCE": 0,
+    "UNRATIFIED_POST_REGISTRY_ARTIFACT": 0
+  },
+  "unique_identity_role_counts": {
+    "HISTORICAL_REPORT_BEYOND_RETENTION": 151,
+    "DETERMINISTIC_FIXTURE_REQUIRED_FOR_TEST": 3,
+    "PROVENANCE_INCOMPLETE": 29
+  },
+  "recommended_disposition_counts": {
+    "GENERATE_TEMPORARY_FIXTURE": 185,
+    "BLOCK_FOR_PROVENANCE_REVIEW": 36,
+    "RETIRE_STALE_EXPECTATION": 1
+  },
+  "bounded_repair_candidates": [
+    {
+      "candidate": "TRACKED_GENERATOR_TEMPORARY_FIXTURE_CONVERSION",
+      "affected_outcomes": 185,
+      "priority": 1,
+      "constraint": "Fixture generation must occur only in an ephemeral test directory with teardown; no live report may be committed or copied from dirty main.",
+      "authorized_now": false
+    },
+    {
+      "candidate": "PROVENANCE_REVIEW_FOR_UNGROUNDED_EXPECTATIONS",
+      "affected_outcomes": 36,
+      "unique_dependency_identities": 29,
+      "priority": 2,
+      "constraint": "No repair may be chosen until canonical provenance or explicit retirement authority is established.",
+      "authorized_now": false
+    },
+    {
+      "candidate": "PHASE5_STALE_HASH_FAMILY_RECLASSIFICATION",
+      "affected_outcomes": 1,
+      "priority": 3,
+      "constraint": "Keep separate from report lifecycle repair and decide the identity domain before any hash refresh.",
+      "authorized_now": false
+    }
+  ],
+  "historical_contract_finding": {
+    "contradiction": "CLEAN_CHECKOUT_ABSENT_IGNORED_REPORTS_VERSUS_BLOCKING_TEST_EXPECTATIONS",
+    "required_lifecycle_transition": [
+      "CANONICAL_CURRENT_ARTIFACT",
+      "ARCHIVED_TEST_FIXTURE",
+      "HISTORICAL_NONCURRENT",
+      "RETIRED_EXPECTATION"
+    ],
+    "repair_principle": "Current validation must test lifecycle classification and authority boundaries, not continued presence of historical ignored live reports."
+  },
+  "separate_currency_cohort": {
+    "post_decoupling_source_custody_outcomes": 13,
+    "absorbed_into_missing_artifact_family": false,
+    "treatment": "PRESERVE_FOR_LATER_NARROW_CURRENCY_REFRESH_REVIEW"
+  },
+  "external_evidence": {
+    "ledger": {
+      "path": ".toe-recovery/custody-v0/missing-artifact-expectation-adjudication-v0/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_LEDGER_20260722_v0.json",
+      "sha256": "020b59ec9d9cb8e59e256269d8459f9e95107a5b6926818fba66e64154e0a228",
+      "bytes": 776306
+    },
+    "builder": {
+      "path": ".toe-recovery/custody-v0/missing-artifact-expectation-adjudication-v0/build_missing_artifact_expectation_adjudication_v0.py",
+      "sha256": "9b84c35fab9ebc9322a33da45443e3a64d722f90705447bfcb9479616bcf4d2c"
+    }
+  },
+  "custody": {
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_status_digest_pre_post_equal": true,
+    "ignored_reports_tree_digest_pre_post_equal": true,
+    "dirty_main_touched_by_adjudication": false,
+    "validation_checkout_expected_clean_after_commit": true
+  },
+  "program_estimate": {
+    "known_recovery_obligations_completed": "SUBSTANTIAL",
+    "remaining_major_work_packages": 6,
+    "estimated_operational_completion": "ROUGHLY_55_TO_70_PERCENT",
+    "confidence": "MEDIUM",
+    "not_a_scientific_completion_metric": true
+  },
+  "scientific_state": {
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "total_unit_seam_rows": 12,
+    "native_unified_dynamics": "NOT_ESTABLISHED",
+    "qft_gr_source_seam": "OPEN",
+    "distinctive_native_prediction": "ABSENT",
+    "empirical_confirmation": "ABSENT"
+  },
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "next_cycle": "NOT_AUTOMATICALLY_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_ADJUDICATION_RESULT_ONLY"
+}

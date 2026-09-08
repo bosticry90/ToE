@@ -54,4 +54,4 @@ def test_only_repair_review_is_authorized() -> None:
 
 
 def test_prompt_is_preserved() -> None:
-    assert repair.sha256_path(repair.REPO_ROOT / repair.PROMPT_RELATIVE_PATH) == repair.PROMPT_SHA256
+    assert repair.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

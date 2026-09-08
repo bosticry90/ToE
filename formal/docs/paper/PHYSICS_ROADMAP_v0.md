@@ -18,6 +18,37 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
+Current native-hypothesis frontier (2026-07-30):
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0`
+- `ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`
+- `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
+- `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json`
+- `CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED`
+- Stage boundary: the closed coherence result is unchanged and now qualified to its 13 authorized sources; archive-wide and repository-wide evidence sufficiency remain untested. The five-stage census is installed under bounded governance but remains unopened with zero attempts and no scientific execution authority. Installation performs no archive adoption, claim promotion, representation, action, seam, or observable selection.
+- Scanner maintenance is complete on synthetic inputs: deterministic identity, caching, mutation detection, passive parsing limits, hostile-path rejection, and batch aggregation are ready. The bounded dependency-impact check passes without claiming exhaustive Python passage. A separate scientific authority decision is still required before Stage 1 can OPEN.
+- Supplemental archive boundary: `archive/ToE_Project` and `archive/ToE_Project_Starter_2025-09-24` are explicit read-only inputs to proposed Stage 1, are not covered by the legacy 7,331-file archive index, and must be canonically reindexed before any future scientific assessment. No claim from either tree is adjudicated or adopted here.
+- Pre-installation-control boundary: the prepared stage IDs and mandatory closeout target remain unchanged. Numeric workload limits, two-pass root snapshots, deterministic deep-review selection, hostile-file/parser limits, Git-blob and local-byte custody rules, versioned index/cache requirements, atomic CLOSE batches, terminal-state mappings, and separate promotion authority are frozen only. Exact local-root ignore protection is active, but no program installation, maintenance index/cache execution, Stage 1 OPEN, archive claim review, or successor selection follows.
+- Validation boundary: exhaustive Python passage is not established; the last reported exhaustive result remains `14,739 passed, 147 failed, 10 errors, 598 skipped` pending separate debt classification.
+- Accepted Phase A result: `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
+- Accepted Phase B system: exact vacuum generalized-harmonic equations for `U=(g_mn,R,r_a,c_mna,S_mn)`, with generic kinetic-map invertibility and algebraic equivalence only on the full constraint surface.
+- Accepted constraint result: finite homogeneous zero-addition subsidiary closure with a complete 69-component light-cone basis and one derivative of auxiliary-to-metric equivalence loss.
+- Accepted principal result: uniform auxiliary wave diagonalization in the adapted grading and a defective triangular metric-equivalence pencil with finite one-derivative loss.
+- Accepted energy preparation: all energy families, weighted-principal couplings, four proof levels, and 50 chains per root are frozen; propagator loss remains one-or-two derivative unresolved.
+- Accepted frozen growth: zero auxiliary loss and exact pure-principal quadratic-frequency metric-equivalence and linear-frequency physical TT growth. The block-order graph has no positive return cycle, but the complete generic frozen subprincipal matrix and both complete metric minima remain blocked.
+- Accepted exact-operator closure: the complete Minkowski 128-state companion is explicit and placeholder-free, but the generic operator remains unclosed because component remainders and independent background/gauge jets are absent.
+- Accepted linearization boundary: the generic component expansion is incomplete because the accepted metric-dependent gauge family is only `C2` while the differentiated block needs an `H` third jet; the generic trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen.
+- Accepted bounded Stage 1: strict harmonic gauge, the ten-chart trace-free atlas, compact regular strata, separate reduced/metric regularity ledgers, and a declared decreasing rewrite order are frozen; executable confluence, unique normalization, and idempotence remain uncertified.
+- Accepted bounded Stage 2: the strict-harmonic component graph is structurally complete with 3,950 closed nodes and 64 inventoried equations per trace chart. The stored Minkowski-control relation remains evidence, but entrywise generic-DAG specialization and generic tensor identities were not independently certified.
+- Accepted bounded Stage 3: the exact generic companion is not closed because no unique off-constraint 128-state wave-slot map or closed nine-variable trace chart is supplied.
+- Accepted role gate: quadratic gravity is `REFERENCE_CONTROL_ONLY` with `UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; no quadratic repair, quotient, or propagator stage follows.
+- Certification correction: Stage 1 is structurally preserved with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; Stage 2 is structurally complete with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. The correction supplies no missing proof, consumes no bounded stage, and leaves Program B closed.
+- Current native step: none is automatically selected. Any future coherence route requires a separately authorized program and new substantive input; another field proposal cannot repair the closed v0 route.
+- Quadratic continuation: none is authorized. Program B remains `REFERENCE_CONTROL_ONLY + UNRESOLVED_AFTER_BOUNDED_ATTEMPT`; variable-coefficient estimates and other unfinished quadratic questions remain closed control-model work unless a separately authorized future program reopens them.
+- Excluded: source extensions, regulator/fiducial modes, order reduction as the original theory, preserved-descendant adoption, and Yukawa work.
+
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
 POST_TRANSLATION_SELECTION_OUTCOME_v0: POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION
 POST_TRANSLATION_SELECTION_CATEGORY_v0: post_translation_next_target_selected

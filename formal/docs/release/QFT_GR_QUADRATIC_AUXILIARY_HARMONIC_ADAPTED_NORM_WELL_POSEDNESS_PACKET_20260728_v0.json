@@ -1,0 +1,179 @@
+{
+  "adapted_norm_candidate": {
+    "candidate": "E_ad,s = W_(s+1)[g] + W_s[S] + W_(s+1)[R]",
+    "candidate_pure_metric_derivative_loss": 1,
+    "component_regularities": {
+      "R": "H^(s+2) with dt R in H^(s+1)",
+      "S": "H^(s+1) with dt S in H^s",
+      "g": "H^(s+2) with dt g in H^(s+1)"
+    },
+    "continuous_dependence_established": false,
+    "linear_triangular_motivation": [
+      "Hessian(R) lies in H^s when R lies in H^(s+2).",
+      "R and S lie in H^(s+1), sufficient as metric-wave forcing at the displayed grading.",
+      "Translation back to pure metric initial data may require one extra derivative beyond E_metric,s."
+    ],
+    "minimum_loss_established": false,
+    "minimum_regularity_established": false,
+    "nonlinear_closure_established": false,
+    "safe_starting_integer_index": "s >= 3",
+    "wave_energy_definition": "W_q[u] = ||u||^2_H^(q+1) + ||dt u||^2_H^q"
+  },
+  "authorized_execution_after_review": {
+    "scope": "Derive and verify the exact vacuum generalized-harmonic auxiliary reduced system and its constraint propagation. Energy-estimate execution remains a successor decision.",
+    "target": "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0"
+  },
+  "auxiliary_variables": [
+    {
+      "definition": "scalar curvature of g",
+      "sector": "massive scalar",
+      "symbol": "R"
+    },
+    {
+      "definition": "R_mn - (1/4) g_mn R",
+      "sector": "trace-free massive spin-2 auxiliary tensor",
+      "symbol": "S_mn"
+    },
+    {
+      "definition": "spacetime metric",
+      "sector": "metric and massless spin-2",
+      "symbol": "g_mn"
+    }
+  ],
+  "candidate_reduced_system": {
+    "generalized_harmonic_metric_principal_equation": "Box_g g_mn = -2 S_mn - (1/2)g_mn R + lower(g,dg,H,dH)",
+    "mass_parameters_for_flat_control": {
+      "interpretation_requires": "c_R != 0",
+      "m0_squared": "c_R / [2(3 alpha + beta)]",
+      "m2_squared": "-c_R / beta",
+      "principal_result_depends_on_mass_signs": false
+    },
+    "scalar_trace_equation": "2(3 alpha + beta) Box_g R - c_R R - 2 c_Lambda = 0",
+    "status": "CANDIDATE_REQUIRING_TERM_BY_TERM_DERIVATION",
+    "trace_free_ricci_principal_equation": "beta Box_g S_mn - (2 alpha + beta)(nabla_m nabla_n R)^TF = lower(g,dg,R,dR,S,dS)",
+    "triangular_principal_order": [
+      "R wave equation",
+      "S_mn wave equation forced by the trace-free Hessian of R",
+      "g_mn generalized-harmonic wave equation forced by R and S_mn"
+    ]
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "constraints": [
+    {
+      "definition": "H_mu - g_mn g^ab Gamma^n_ab",
+      "id": "C_H_mu",
+      "required_propagation": "homogeneous wave system"
+    },
+    {
+      "definition": "R - scalar_curvature[g]",
+      "id": "C_R",
+      "required_propagation": "closed homogeneous definition-constraint system"
+    },
+    {
+      "definition": "S_mn - (R_mn[g] - (1/4)g_mn scalar_curvature[g])",
+      "id": "C_S_mn",
+      "required_propagation": "closed homogeneous definition-constraint system"
+    },
+    {
+      "definition": "g^mn S_mn",
+      "id": "C_trace",
+      "required_propagation": "zero if initially zero"
+    },
+    {
+      "definition": "nabla^m S_mn - (1/4)nabla_n R",
+      "id": "C_div_n",
+      "required_propagation": "contracted-Bianchi compatibility"
+    },
+    {
+      "definition": "normal projections of the metric equations",
+      "id": "C_Hamiltonian_and_momentum",
+      "required_propagation": "generalized-Bianchi compatibility"
+    }
+  ],
+  "consumed_phase_a_review": {
+    "accepted_results": [
+      "GENERIC_STRONG_HYPERBOLICITY_REFUTED",
+      "PHYSICAL_SPIN2_REPEATED_ROOT_DEFECT_IDENTIFIED"
+    ],
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_PHYSICAL_SPIN2_PRINCIPAL_BLOCK_RESULT_REVIEW_20260728_v0.json",
+    "sha256": "0dd0b3ed3205f7299708b8b3c16757f00802968b4af1e3b1e1f340b952c2ff11"
+  },
+  "decision_tree": {
+    "auxiliary_adapted_estimate": "OPEN",
+    "if_no_usable_iteration_closes": "GENERIC_LOCAL_WELL_POSEDNESS_BLOCKED",
+    "if_only_smooth_iteration_closes": "SMOOTH_EXISTENCE_WITHOUT_HADAMARD_WELL_POSEDNESS",
+    "if_picard_closes_with_fixed_loss": "ADAPTED_NORM_LOCAL_WELL_POSEDNESS_ESTABLISHED",
+    "same_order_metric_estimate": "REFUTED_BY_ACCEPTED_PHASE_A"
+  },
+  "frozen_scope": {
+    "dimension": 4,
+    "domain": [
+      "beta != 0",
+      "3 alpha + beta != 0"
+    ],
+    "gauge": "GENERALIZED_HARMONIC",
+    "gauge_source_boundary": "H_mu(x,g) is prescribed and contains no metric derivatives that change the second-order principal wave operator.",
+    "metric_signature": "(-,+,+,+)",
+    "source": "VACUUM",
+    "theory": "sqrt(-g) [c_R R + c_Lambda + alpha R^2 + beta R_mn R^mn]"
+  },
+  "initial_data": {
+    "auxiliary_data": [
+      "R",
+      "normal derivative of R",
+      "S_mn",
+      "normal derivative of S_mn"
+    ],
+    "compatibility": [
+      "generalized-harmonic gauge constraint",
+      "Hamiltonian and momentum constraints",
+      "C_R = 0",
+      "C_S_mn = 0",
+      "C_trace = 0",
+      "C_div_n = 0"
+    ],
+    "free_vs_derived_components_must_be_enumerated": true,
+    "metric_data": [
+      "g_ij",
+      "K_ij"
+    ]
+  },
+  "not_yet_authorized": [
+    "Nonlinear adapted-norm theorem claim.",
+    "Prescribed-source extension.",
+    "Dynamical matter extension.",
+    "Semiclassical source extension.",
+    "Maxwell-Dirac secondary calculation."
+  ],
+  "preparation_target": "prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0",
+  "prohibitions": [
+    "No order reduction presented as the original theory.",
+    "No regulator or fiducial mode added to close the estimate.",
+    "No numerical stability substituted for an energy estimate.",
+    "No smooth existence theorem relabeled strong hyperbolicity.",
+    "No source extension during the vacuum reduced-system derivation.",
+    "No preserved descendant adopted as the result.",
+    "No Yukawa work."
+  ],
+  "required_execution_checks": [
+    "Derive every lower-order term and verify no hidden principal derivative appears.",
+    "Verify trace and trace-free projections with the frozen curvature convention.",
+    "Construct the generalized-harmonic reduced equations without changing the physical action.",
+    "Derive a homogeneous propagation system for every listed constraint.",
+    "Prove or refute the candidate linear variable-coefficient energy estimate.",
+    "Determine whether the one-derivative-loss candidate is minimal.",
+    "Determine whether the loss is fixed or accumulates under nonlinear iteration.",
+    "Attempt Picard closure; if it loses derivatives, state whether Nash-Moser or a different scale is required.",
+    "State existence time, uniqueness class, and continuous-dependence topology separately.",
+    "Reconstruct a solution of the unreduced metric equations from constraint-satisfying reduced data."
+  ],
+  "schema_id": "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_20260728_v0",
+  "selected_next_target": "review_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0_result",
+  "standard_metric_norm_test": {
+    "claim_boundary": "This rules out the uniform same-order estimate for arbitrary lower terms; it does not by itself rule out a special triangular adapted norm.",
+    "energy_family": "E_metric,s = ||g||^2_H^(s+3) + ||dt g||^2_H^(s+2) + ||dt^2 g||^2_H^(s+1) + ||dt^3 g||^2_H^s",
+    "reason": "Accepted Phase A physical block has algebraic multiplicity 4 and geometric multiplicity 2 at each light-cone root.",
+    "same_order_estimate_available_generically": false
+  },
+  "verdict": "AUXILIARY_HARMONIC_AND_TWO_NORM_EXECUTION_OBLIGATIONS_PREPARED_FOR_REVIEW"
+}

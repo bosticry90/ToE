@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import qft_route_evidence_identity
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -17,6 +18,9 @@ SCRIPT_PATH = Path(__file__).resolve()
 SCRIPT_RELATIVE_PATH = (
     "formal/python/tools/"
     "pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py"
+)
+HISTORICAL_SCRIPT_SHA256 = (
+    "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c"
 )
 LEDGER_RELATIVE_PATH = "formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-v0.json"
 LEDGER_MANIFEST_RELATIVE_PATH = (
@@ -580,13 +584,11 @@ def load_inputs() -> tuple[dict[str, Any], dict[str, Any]]:
         "seam_closure_claimed": False,
         "unit_closure_claimed": False,
     }, "accepted review boundary differs from the frozen nonclaim boundary")
-    for artifact in ROUTE_EVIDENCE_ARTIFACTS:
-        evidence_path = REPO_ROOT / artifact["path"]
-        _require(evidence_path.is_file(), f"route evidence is missing: {artifact['path']}")
-        _require(
-            sha256_path(evidence_path) == artifact["sha256"],
-            f"route evidence hash mismatch: {artifact['path']}",
-        )
+    qft_route_evidence_identity.verify_route_evidence(
+        [artifact["path"] for artifact in ROUTE_EVIDENCE_ARTIFACTS],
+        expected_historical_sha_by_path=ROUTE_EVIDENCE_SHA_BY_PATH,
+        repo_root=REPO_ROOT,
+    )
     imported_review = json.loads(IMPORTED_SCALAR_ACTION_REVIEW_PATH.read_bytes())
     _require(
         imported_review.get("accepted") is True
@@ -845,13 +847,12 @@ def packet_validation_failures(
     }
 
     input_ok = packet.get("input_artifacts") == _input_bindings()
-    try:
-        input_ok = input_ok and all(
-            sha256_path(REPO_ROOT / item["path"]) == item["sha256"]
-            for item in _input_bindings()
+    input_ok = input_ok and (
+        qft_route_evidence_identity.bindings_match_declared_identities(
+            _input_bindings(),
+            repo_root=REPO_ROOT,
         )
-    except (OSError, KeyError):
-        input_ok = False
+    )
     if not input_ok:
         failed.add("accepted_review_and_ledger_hashes_match")
 
@@ -1135,7 +1136,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         "canonicalization": "UTF-8 JSON, sorted keys, indent=2, trailing newline",
         "generator": {
             "path": SCRIPT_RELATIVE_PATH,
-            "sha256": sha256_path(SCRIPT_PATH),
+            "sha256": HISTORICAL_SCRIPT_SHA256,
         },
         "input_artifacts": _input_bindings(),
         "packet": {

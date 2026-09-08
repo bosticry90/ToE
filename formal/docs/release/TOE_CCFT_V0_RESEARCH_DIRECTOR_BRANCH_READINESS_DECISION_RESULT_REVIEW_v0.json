@@ -1,0 +1,31 @@
+{
+  "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_REVIEW_v0",
+  "schema_id": "toe.ccft_v0.research_director_branch_readiness_decision.result_review.v0",
+  "captured_at_utc": "2026-08-02T04:33:38Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "semantic_stage_id": "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION",
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0.json",
+    "sha256": "9c6df6aaee209de817da67cb90a99beffd5cc7c756af39a2e4db2b17168a5b78"
+  },
+  "accepted": true,
+  "checks": {
+    "program_stage_target_and_scope_match_manifest": true,
+    "attempt_one_open_event_is_bound": true,
+    "director_packet_and_recovery_results_are_bound": true,
+    "exactly_one_canonical_outcome_is_selected": true,
+    "selected_outcome_is_cp_nlse": true,
+    "cp_nlse_selection_does_not_select_a_governing_equation": true,
+    "all_eight_decision_criteria_are_materially_addressed": true,
+    "lcrd_v3_distinctiveness_and_future_role_are_preserved": true,
+    "two_candidate_and_no_branch_lifecycle_rules_remain_blocking": true,
+    "stage_2_scope_is_named_but_not_authorized": true,
+    "all_future_model_elements_require_explicit_provenance": true,
+    "no_equation_postulate_model_theorem_or_physical_claim_was_created": true,
+    "terminal_lifecycle_result_passes": true
+  },
+  "review_conclusion": "CP_NLSE_IS_THE_BEST_BOUNDED_FIRST_CONSTRUCTION_BRANCH_DESPITE_ITS_PRESERVED_EQUATION_CONFLICT_BECAUSE_THE_CONFLICT_BECOMES_AN_EXPLICIT_STAGE_2_POSTULATE_DECISION_AND_AN_UPSTREAM_THEOREM_TARGET",
+  "stage_2_authorized": false,
+  "decision": "ACCEPT_STAGE_1_CP_NLSE_BRANCH_SELECTION_FOR_ATOMIC_CLOSE",
+  "status": "PASS"
+}

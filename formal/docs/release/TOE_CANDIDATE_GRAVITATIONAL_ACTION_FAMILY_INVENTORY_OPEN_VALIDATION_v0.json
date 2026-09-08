@@ -1,0 +1,45 @@
+{
+  "artifact_id": "TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_OPEN_v0.json",
+    "formal/python/tools/toe_candidate_gravitational_action_family_inventory_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 2,
+  "authority_decision": "AUTHORIZE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_STAGE_2_OPEN",
+  "captured_at_utc": "2026-07-31T13:35:00Z",
+  "event_hash": "ade54c01f99585299391dc760d6e2e9a8b69464b9115f0ffd3b03125a5d1c8a9",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_OPEN_v0.json",
+  "event_sequence_number": 3,
+  "event_sha256": "d33c9f901f49520fcd82e12c6f275961e3e37aa4f32f052a5566fb36d1462604",
+  "opened_from_commit": "360970f9f0d46fd19ae32a34f08093d89cbca17f",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "registry_snapshot_hash": "b4ae3f670cec680cddcc083015895a16f8ceb0c4ad50ed8ef3901df4bb2f7cfb",
+  "schema_id": "toe.candidate_gravitational_action_family_inventory.stage_2_open_validation.v0",
+  "scientific_output_at_open": {
+    "action_families_compared": false,
+    "action_families_inventoried": 0,
+    "evidence_promoted": false,
+    "gravitational_action_selected": false,
+    "gravitational_calculation_started": false,
+    "master_action_constructed": false,
+    "stage_3_output_created": false
+  },
+  "scope_hash": "8dc24a87cd882d67123278bc2da416a4efffe29866f96bbecc4dd7af7a7942ea",
+  "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+  "status": "STAGE_2_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "inventory_toe_candidate_gravitational_action_families_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_3_remains_unauthorized": true
+  }
+}

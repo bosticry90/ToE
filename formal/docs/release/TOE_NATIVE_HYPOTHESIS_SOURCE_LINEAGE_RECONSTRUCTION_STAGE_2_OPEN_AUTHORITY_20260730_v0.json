@@ -1,0 +1,98 @@
+{
+  "artifact_id": "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_STAGE_2_OPEN_AUTHORITY_20260730_v0",
+  "authorized_stage": {
+    "canonical_scope_hash": "3c3a7827a848f0cac2ea014a29b032bf50678e8a8773eeedbf77a2d111227e05",
+    "canonical_target": "reconstruct_toe_native_hypothesis_source_lineages_v0",
+    "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION",
+    "stage_number": 2
+  },
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "deterministic_lineage_rules": {
+    "contradictory_descendant_rule": "RECORD_ONLY_WHEN_EXPLICIT_DOCUMENTARY_RELATIONSHIP_EVIDENCE_EXISTS_WITHOUT_ADJUDICATING_SCIENTIFIC_TRUTH",
+    "derived_summary_rule": "REQUIRE_EXPLICIT_SOURCE_REFERENCE_OR_REPRODUCIBLE_DOCUMENTARY_EVIDENCE",
+    "exact_duplicate_rule": "SAME_VERIFIED_CONTENT_IDENTITY_ONLY; PRESERVE_EVERY_PATH_AND_CUSTODY ROLE",
+    "generated_copy_rule": "REQUIRE_EXPLICIT_GENERATOR_PROVENANCE_OR_BYTE_AND_METADATA_WITNESS",
+    "manual_preference_permitted": false,
+    "near_duplicate_rule": "CANDIDATE_ONLY_UNTIL_SOURCE_BOUND_RELATIONSHIP_EVIDENCE_IS_REVIEWED",
+    "parallel_lineage_rule": "PRESERVE_SEPARATELY_WHEN_COMMON_DESCENT_IS_NOT_ESTABLISHED",
+    "revision_rule": "REQUIRE_EXPLICIT_VERSION MARKER, SOURCE CROSS_REFERENCE, OR REPRODUCIBLE CONTENT DELTA WITH CHRONOLOGY",
+    "supersession_rule": "REQUIRE_EXPLICIT SUPERSESSION, REJECTION, OR AUTHORITY RECORD; NEWER DATE ALONE IS INSUFFICIENT",
+    "tie_breaking_order": [
+      "source_root_id",
+      "normalized_relative_path_utf8_bytes",
+      "sha256"
+    ]
+  },
+  "mandatory_exit_conditions": {
+    "blocked_or_failed": "CLOSE_ATTEMPT_2_AND_SELECT_close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0",
+    "pass": "CLOSE_ATTEMPT_2_AND_SELECT_STAGE_3_TARGET_WITHOUT_OPENING_STAGE_3",
+    "repair_or_subsidiary_target_permitted": false
+  },
+  "permitted_lineage_evidence": [
+    "Stage 1 custody records and exact-content duplicate candidates",
+    "committed Git blob identities and verified local SHA-256 identities",
+    "source-root, custody-path, provenance, and document metadata",
+    "explicit titles, version markers, dates with recorded confidence, and internal cross references",
+    "generator markers and source-to-output references",
+    "deterministic normalized-text and structural fingerprints used only as relationship candidates",
+    "existing authority, quarantine, rejection, and supersession records"
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "prohibited_outputs": [
+    "scientific claim extraction or adjudication",
+    "scientific truth from repetition, chronology, or symbolic similarity",
+    "archive evidence promotion or adoption",
+    "native pillar, seam, CCFT concept, representation, field, or master-action selection",
+    "empirical claim or prediction",
+    "automatic Stage 3 OPEN",
+    "same-stage repair, retry, prerequisite, or subsidiary scientific target"
+  ],
+  "required_stage_outputs": [
+    "exact_and_near_duplicate_groups",
+    "revision_and_derivation_lineages",
+    "source_to_summary_provenance_edges",
+    "supersession_and_contradiction_ledger",
+    "independent_source_count",
+    "unresolved_relationship_ledger",
+    "independent result review and validation record",
+    "one immutable CLOSE event"
+  ],
+  "schema_id": "toe.native_hypothesis_source_lineage_reconstruction.stage_2_open_authority.v0",
+  "scientific_execution_authorized": "ATOMIC_STAGE_2_OPEN_THEN_SOURCE_LINEAGE_RECONSTRUCTION_ONLY",
+  "stage_1_input_binding": {
+    "aggregate_hash": "a6cd29c2aa2bfff9d057819f55a4bcd2fe37a3e71d06a85a95b79f2e45cb7283",
+    "aggregate_manifest_path": "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/aggregate_manifest.json",
+    "aggregate_manifest_sha256": "900647ca8823b4e1c4f82f11f019d135106e65cd9bd9ea3d45d6e1fdf6dc3168",
+    "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_CLOSE_v0.json",
+    "close_event_sha256": "4ef49bfd70e999daed6250f0659ee855c5cc392ea87a2751f66817486c16ee26",
+    "exact_duplicate_group_count": 421,
+    "record_count": 13563,
+    "result_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0.json",
+    "result_review_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_REVIEW_v0.json",
+    "result_review_sha256": "404efacef70332710c8b66ab98545312fc139ade854a650814a1cc4aeb293e0a",
+    "result_sha256": "d8e5cd39b7d7ebf907120aaf1bab1d0d8763bf2a162984977f25e1cc24705ad2",
+    "validation_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_VALIDATION_v0.json",
+    "validation_sha256": "1aae3037f0cbaf114236b3b058671a832a205c0980061e380501a4c7468690f8"
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_2_OPEN_ONLY",
+  "terminal_outcomes": [
+    "SOURCE_LINEAGES_RECONSTRUCTED",
+    "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES",
+    "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED"
+  ],
+  "unresolved_relationship_treatment": {
+    "authority_or_supersession_inference_permitted": false,
+    "maximum_unresolved_lineage_relationships": 512,
+    "over_budget_result": "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED",
+    "within_budget_status": "PRESERVE_AS_UNRESOLVED_RELATIONSHIP"
+  },
+  "workload_limits": {
+    "all_stage_1_custody_records_available_for_deterministic_metadata_analysis": 13563,
+    "maximum_bounded_source_comparison_bytes": 1073741824,
+    "maximum_bounded_source_comparison_files": 640,
+    "maximum_claims_extracted": 0,
+    "maximum_evidence_promotions": 0,
+    "maximum_files_per_source_lineage": 8,
+    "maximum_unresolved_lineage_relationships": 512
+  }
+}

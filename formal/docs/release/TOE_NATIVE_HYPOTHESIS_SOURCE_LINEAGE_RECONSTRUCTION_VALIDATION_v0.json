@@ -1,0 +1,79 @@
+{
+  "artifact_id": "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_VALIDATION_v0",
+  "atomic_close_commit_expected_path_count": 9,
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+    "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_02_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisSourceLineageReconstructionResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-07-31T00:42:34Z",
+  "close_event": {
+    "event_hash": "828f3e068b3001681346bbe9e00ada79855a12d791de55bda2b7d400638cb212",
+    "open_event_hash": "a664edeb52d81126dac309fc0ca3eae1e5c94d6102872e80bae661ea9ee4603a",
+    "path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_02_CLOSE_v0.json",
+    "terminal_result": "PASSED"
+  },
+  "deterministic_producer": {
+    "analysis_hash": "f74cb30472a21829b0eb25aa4d855d3f94fcddbe0c9ea6ff1f49f62db0a9cdea",
+    "byte_identical_reruns": true,
+    "result_sha256": "5779c67ca1e573868f5620f11a92b559393bd2f3b45305bf8a371fb9edeb4a3d"
+  },
+  "exhaustive_python": {
+    "historical_debt_remains_disclosed": true,
+    "passage_claimed": false,
+    "suite_rerun": false
+  },
+  "focused_python": {
+    "deselected_obsolete_historical_state_assertions": 3,
+    "failed": 0,
+    "passed": 71,
+    "scope": "bounded governance, census installation and authority, custody enforcement, registry integrity, and Lean aggregate coverage excluding obsolete UNOPENED or pre-Stage-2 assertions"
+  },
+  "formal_validation": {
+    "aggregate_generation_check": "PASSED",
+    "focused_authority_modules": "PASSED",
+    "full_lean_aggregate": "PASSED",
+    "full_lean_job_count": 9061,
+    "full_lean_module_count": 1316
+  },
+  "independent_lineage_review": {
+    "accepted": true,
+    "all_selected_content_identities_reverified": 640,
+    "analysis_hash_recomputed": true,
+    "audit_hash": "f8eeeb5ebc4b33f6dae7946240af912fd09b8376714464d6b6116f1b095e6bb4",
+    "bounded_independent_complement_recomputed": 541,
+    "established_relationships_recomputed": 35,
+    "exact_duplicate_groups_recomputed": 421,
+    "lineage_components_recomputed": 16,
+    "stage_1_records_rebound": 13563,
+    "unresolved_relationships_recomputed": 16
+  },
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "program_state_after_close": "CLOSED",
+  "schema_id": "toe.native_hypothesis_source_lineage_reconstruction.validation.v0",
+  "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION",
+  "stage_3_state": "SELECTED_NOT_AUTHORIZED_NOT_OPENED",
+  "status": "STAGE_2_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "validation_checks": {
+    "all_421_exact_duplicate_groups_recomputed": true,
+    "all_640_selected_content_identities_reverified": true,
+    "authority_and_manifest_scope_preserved": true,
+    "bounded_selection_limits_preserved": true,
+    "close_event_links_the_stage_2_open_event": true,
+    "close_result_and_review_hashes_match_event": true,
+    "documentary_relationship_edges_independently_recomputed": true,
+    "evidence_promotion_absent": true,
+    "full_lean_aggregate_passed": true,
+    "native_frontier_selection_absent": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "scientific_claim_extraction_and_adjudication_absent": true,
+    "stage_3_not_opened": true,
+    "unresolved_similarity_and_mutable_output_paths_fail_closed": true
+  }
+}

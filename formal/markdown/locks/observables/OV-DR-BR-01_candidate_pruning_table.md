@@ -14,23 +14,23 @@ Record (computed)
     "extraction_rule": "collect FunctionDef names with prefix; sorted lexicographically",
     "function_prefix": "BR01_",
     "kind": "python_ast",
-    "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_candidates.py"
+    "path": "formal/python/toe/bridges/br01_candidates.py"
   },
   "date": "2026-01-25",
-  "fingerprint": "5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2",
+  "fingerprint": "a3d2f267d9c904f23f9aa01357f8a50997a3e304004291186260f35a9194a512",
   "inputs": {
     "OV-BR-05": {
       "locked_fingerprint": "428edbd0b97f696165ac0540d6888185e87410d575d9a1b6791b0def345286f8",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-05_bragg_lowk_slope_summary.md",
+      "path": "formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary.md",
       "present": true,
       "record_fingerprint": "428edbd0b97f696165ac0540d6888185e87410d575d9a1b6791b0def345286f8",
       "schema": "OV-BR-05_bragg_lowk_slope_summary/v1"
     },
     "OV-DR-BR-00": {
-      "locked_fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-DR-BR-00_br01_prediction_declarations.md",
+      "locked_fingerprint": "3dbe69bacb56466ed25f1bf5b3c332c7939550c4beb0027b7d3eb342b97f6690",
+      "path": "formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations.md",
       "present": true,
-      "record_fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
+      "record_fingerprint": "3dbe69bacb56466ed25f1bf5b3c332c7939550c4beb0027b7d3eb342b97f6690",
       "schema": "OV-DR-BR-00_br01_prediction_declarations/v1"
     }
   },
@@ -117,4 +117,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2`
+Record fingerprint: `a3d2f267d9c904f23f9aa01357f8a50997a3e304004291186260f35a9194a512`

@@ -129,4 +129,4 @@ def test_authority_and_semantic_nonconfusion_boundaries_hold() -> None:
     assert authority["robustness_execution_authorized"] is False
     assert authority["canonical_E_REPRO_result_remains_accepted"] is True
     assert all(value is False for value in packet["nonclaims"].values())
-    assert guardrail.sha256_path(guardrail.REPO_ROOT / guardrail.PROMPT_RELATIVE_PATH) == guardrail.PROMPT_SHA256
+    assert guardrail.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

@@ -1,0 +1,73 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactRepairLineageV4",
+  "as_of": "2026-09-05",
+  "supersedes": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v3.json",
+  "preserved_non_author_review": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+  "preserved_non_author_review_disposition": "SUPPORTED_WITH_REQUIRED_AMENDMENTS",
+  "review_required_amendments": [
+    {
+      "defect_id": "D-01",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "summary": "Lean certificate identity and the frozen runtime object are not independently cryptographically bound."
+    },
+    {
+      "defect_id": "D-02",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "summary": "The trusted evaluator does not enforce the complete frozen ValueTypeV1 metadata contract."
+    }
+  ],
+  "post_review_amendments": [
+    {
+      "defect_id": "D-04_SOURCE_CUSTODY",
+      "detected_by": "LINUX_EGRESS_DENIED_RUN_34009722386",
+      "status": "REPAIRED_AND_EXERCISED_BY_V4",
+      "summary": "Twenty-four required profile/source custody files were absent from the tested Git object.",
+      "repair": "The 24 files were tracked byte-for-byte and v4 proved all 25 source-custody files were Git-tracked and hash-bound before and during isolation.",
+      "source_values_changed": false,
+      "physics_profile_hash_changed": false,
+      "verification_policy_hash_changed": false,
+      "frozen_bundle_changed": false
+    },
+    {
+      "defect_id": "D-05_AUTHORITY_ATTACHMENT_CUSTODY",
+      "detected_by": "LINUX_EGRESS_DENIED_RUN_34010749703",
+      "status": "REPAIRED_PENDING_V5_REPLAY",
+      "summary": "Three authority attachment records required after exact verification were absent from the clean Git checkout, so v4 could not emit a complete result or bundle.",
+      "repair": "Track the three pre-existing hash-matching authority records byte-for-byte and expand the clean-commit and in-namespace custody gate to the complete 28-file source-plus-authority runtime corpus.",
+      "authority_content_changed": false,
+      "physics_profile_hash_changed": false,
+      "verification_policy_hash_changed": false,
+      "frozen_bundle_changed": false
+    },
+    {
+      "defect_id": "D-06_DEPENDENCY_CLOSURE_GIT_CUSTODY",
+      "detected_by": "PRE_V5_FROZEN_CLOSURE_CUSTODY_AUDIT",
+      "status": "REPAIRED_PENDING_V5_REPLAY",
+      "summary": "Two Python files already named and hash-bound in the frozen 73-file dependency closure were not Git objects, so a clean checkout did not contain the complete declared closure.",
+      "repair": "Track both files byte-for-byte at their existing frozen hashes and require every path/hash pair in the frozen dependency manifest to be Git-tracked and rechecked before and during isolated qualification.",
+      "dependency_content_changed": false,
+      "dependency_closure_hash_changed": false,
+      "physics_profile_hash_changed": false,
+      "verification_policy_hash_changed": false,
+      "frozen_bundle_changed": false
+    }
+  ],
+  "preservation": {
+    "reviewed_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "reviewed_packet_modified": false,
+    "review_result_modified": false,
+    "linux_v1_through_v4_results_preserved": true,
+    "new_exact_lineage_required_for_d01_d02": true
+  },
+  "current_disposition": {
+    "clean_non_author_qualification": "NOT_EARNED",
+    "linux_egress_denied_qualification": "V1_THROUGH_V4_INCONCLUSIVE__V5_DEFINED_NOT_EXECUTED",
+    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED",
+    "product_v1": "NOT_RELEASED",
+    "production_activation": false
+  },
+  "repair_lineage_hash": "86e9e84f2769acf2093961f7d07ba954b49e99d71916cf4223d6a5714e48fad0",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

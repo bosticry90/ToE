@@ -1,0 +1,619 @@
+{
+  "authorized_source_roots": [
+    {
+      "custody_class": "GIT_TRACKED",
+      "custody_locator": "repository tracked content outside the separately sharded formal and archive classes",
+      "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER"
+    },
+    {
+      "custody_class": "GIT_TRACKED_OR_REGENERABLE_AS_RECORDED",
+      "custody_locator": "formal/output and formal/docs/release",
+      "source_root_id": "FORMAL_OUTPUTS_AND_RELEASE_RECORDS"
+    },
+    {
+      "custody_class": "GIT_TRACKED",
+      "custody_locator": "formal/python and formal/toe_formal",
+      "source_root_id": "PYTHON_AND_LEAN_SCIENTIFIC_SOURCES"
+    },
+    {
+      "custody_class": "GIT_TRACKED_OR_LOCAL_AS_RECORDED",
+      "custody_locator": "quarantine dossiers already bound by the Stage 1 custody index",
+      "source_root_id": "QUARANTINE_DOSSIERS"
+    },
+    {
+      "custody_class": "GIT_TRACKED_OR_LOCAL_AS_RECORDED",
+      "custody_locator": "existing archive monographs and historical notes already bound by the Stage 1 custody index",
+      "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES"
+    },
+    {
+      "custody_class": "LOCAL_CUSTODY_ONLY",
+      "custody_locator": "archive/ToE_Project",
+      "source_root_id": "LOCAL_ARCHIVE_TOE_PROJECT"
+    },
+    {
+      "custody_class": "LOCAL_CUSTODY_ONLY",
+      "custody_locator": "archive/ToE_Project_Starter_2025-09-24",
+      "source_root_id": "LOCAL_ARCHIVE_TOE_PROJECT_STARTER_2025_09_24"
+    },
+    {
+      "custody_class": "EXTERNALLY_PRESERVED_OR_REFERENCE_ONLY",
+      "custody_locator": "external-evidence references already bound by the Stage 1 custody index",
+      "source_root_id": "EXTERNAL_EVIDENCE_AND_CUSTODY_REFERENCES"
+    }
+  ],
+  "authorized_stage_count": 4,
+  "deterministic_search_contract": {
+    "branch_terms": {
+      "CP_NLSE": [
+        "CP-NLSE",
+        "CP_NLSE",
+        "CPNLSE",
+        "nonlinear Schrodinger",
+        "nonlinear Schrödinger",
+        "UCFF",
+        "chi dynamics",
+        "interaction-modified dispersion"
+      ],
+      "LCRD_V3": [
+        "LCRD",
+        "LCRD-v3",
+        "rotor-curvature",
+        "rotor curvature",
+        "LSDA coarse-graining",
+        "constitutive relation",
+        "variational derivation"
+      ]
+    },
+    "candidate_gate": "A candidate must match at least one frozen branch term and at least one frozen contract term, or contain a structural equation/code signature tied to an enumerated missing contract.",
+    "contract_terms": [
+      "initial data",
+      "initial condition",
+      "boundary condition",
+      "parameter range",
+      "coefficient",
+      "normalization",
+      "nondimensionalization",
+      "conserved quantity",
+      "invariant",
+      "failure criterion",
+      "instability",
+      "dispersion relation",
+      "implementation",
+      "state variable",
+      "closure relation",
+      "coupling definition",
+      "derivation"
+    ],
+    "manual_preference_or_desired_model_may_affect_selection": false,
+    "search_input": "The immutable Stage 1 custody records and verified current bytes at a future scientific OPEN; proposal preparation performs no search.",
+    "selected_content_is_extracted_once_and_reused_by_later_stages": true,
+    "selection_priority": [
+      "previously unreviewed primary-source lineage heads",
+      "previously unreviewed earliest source in each candidate lineage",
+      "sources with unique structural signatures",
+      "sources named by internal references from already reviewed CCFT records",
+      "conflict or correction sources",
+      "derived summaries only when primary bytes are unavailable",
+      "deterministic stratified overflow by branch source class and root"
+    ],
+    "structural_signatures": [
+      "EVOLUTION_EQUATION_WITH_CUBIC_OR_QUARTIC_INTERACTION_AND_DEFINED_COEFFICIENTS",
+      "DISPERSION_RELATION_WITH_NONZERO_INTERACTION_TERM",
+      "INITIAL_OR_BOUNDARY_DATA_DECLARATION_BOUND_TO_CP_NLSE_OR_LCRD_STATE",
+      "PARAMETER_OR_NORMALIZATION_TABLE_BOUND_TO_A_CANDIDATE_BRANCH",
+      "INVARIANT_OR_FAILURE_ASSERTION_COMPUTABLE_FROM_A_CANDIDATE_STATE",
+      "LCRD_ROTOR_CURVATURE_CONSTITUTIVE_OR_COARSE_GRAINING_MAP",
+      "REPRODUCIBLE_IMPLEMENTATION_ENTRYPOINT_WITH_PARAMETER_AND_DATA_CONTRACT"
+    ],
+    "tie_breaking_rule": "branch ID, source class, lineage allocation, normalized custody-relative path, then verified SHA-256"
+  },
+  "duplicate_and_lineage_contract": {
+    "derived_summary_without_primary": "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING",
+    "exact_content_duplicates": "Inventory every custody path but deep-review the content once; duplicate paths add no independent evidentiary support.",
+    "historical_role_and_custody_are_preserved_for_identical_bytes": true,
+    "near_duplicates": "Candidate relationship only until source-bound lineage evidence adjudicates it.",
+    "no_source_gains_authority_from_recency_or_copy_count": true,
+    "primary_source_priority": true
+  },
+  "evidence_strength_vocabulary": [
+    "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+    "PARTIAL_CONTRACT_RECOVERED",
+    "CONFLICTING_SOURCE_CONTRACTS",
+    "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING",
+    "NUMERICAL_DEFAULT_ONLY",
+    "HEURISTIC_NOT_A_CONTRACT",
+    "NO_RELEVANT_EVIDENCE"
+  ],
+  "installation_envelope": {
+    "commit_exact_path_set": [
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+      "formal/docs/release/bounded_program_manifests/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_MANIFEST_v1.json",
+      "formal/python/tests/test_toe_targeted_ccft_recovery_program_governance_installation.py",
+      "formal/python/tools/bounded_program_governance.py",
+      "formal/python/tools/toe_targeted_ccft_recovery_program_governance_installation.py",
+      "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+      "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+      "formal/toe_formal/ToeFormal/Release/ToeTargetedCCFTRecoveryProgramGovernanceInstallationV0.lean",
+      "formal/toe_formal/ToeFormalAll.lean"
+    ],
+    "installed_from_commit": "9fddeb077e1fecf7cc77bb4846bfe887773a5f8c"
+  },
+  "mandatory_exit": {
+    "target": "close_toe_targeted_ccft_closure_evidence_recovery_v0_after_bounded_result_v0",
+    "terminal_outcomes": [
+      "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+      "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND"
+    ]
+  },
+  "manifest_hash": "949437643399f78456bf8fe83674eca55ae0c5ffa7f83fb1491bd2c8f57ddecb",
+  "manifest_mode": "PROSPECTIVE_STATIC",
+  "missing_contract_checklists": {
+    "CP_NLSE": [
+      "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "COEFFICIENT_DEFINITIONS_AND_ADMISSIBLE_RANGES",
+      "INITIAL_DATA_RULES",
+      "BOUNDARY_CONDITIONS",
+      "NONDIMENSIONALIZATION_OR_NORMALIZATION",
+      "CONSERVED_OR_MONITORED_QUANTITIES",
+      "FAILURE_AND_INSTABILITY_CRITERIA",
+      "NUMERICAL_IMPLEMENTATION_PROVENANCE",
+      "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+      "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION"
+    ],
+    "LCRD_V3": [
+      "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "INITIAL_AND_BOUNDARY_DATA",
+      "PARAMETER_RANGES",
+      "NORMALIZATION_CONVENTIONS",
+      "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "REPRODUCIBLE_IMPLEMENTATION",
+      "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "LSDA_COARSE_GRAINING_MAP_OR_VARIATIONAL_EFFECTIVE_DERIVATION"
+    ]
+  },
+  "native_hypothesis_tested": "HYP_TOE_CCFT_TARGETED_CLOSURE_EVIDENCE_RECOVERY_v0",
+  "native_relevance": {
+    "kind": "DIRECT_NATIVE_TEST",
+    "statement": "Tests one final bounded source-recovery pass for explicit CP-NLSE or LCRD-v3 closure contracts without repairing or constructing CCFT."
+  },
+  "no_subsidiary_scientific_targets": true,
+  "parser_and_tool_binding": {
+    "contract_version": "v1",
+    "parser_classes": [
+      "PASSIVE_TEXT_SOURCE_AND_MARKUP_DECODER_V1",
+      "PASSIVE_JSON_CSV_AND_STRUCTURED_TEXT_READER_V1",
+      "PASSIVE_PDF_TEXT_EXTRACTOR_V1",
+      "PASSIVE_OFFICE_TEXT_EXTRACTOR_V1"
+    ],
+    "policy_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PREINSTALLATION_CONTROLS_20260730_v0.json",
+    "policy_sha256": "d2cf7a292cc33334e666c0aeb27701de487f9757353b255a8c5260764d1ee63a",
+    "scanner_path": "formal/python/tools/native_hypothesis_census_index_v1.py",
+    "scanner_sha256": "84503bafb33fd7450e2c42302d21be3303481f5eaab62c47c0b17f8d5530b133"
+  },
+  "passive_content_contract": {
+    "archived_code_imported_compiled_or_executed": false,
+    "embedded_objects_executed": false,
+    "exact_software_versions_and_tool_hashes_bound_at_installation": true,
+    "filename_normalization_collisions_fail_closed": true,
+    "macros_executed": false,
+    "maximum_file_size_bytes": 33554432,
+    "maximum_office_worksheets_or_sections": 100,
+    "maximum_parser_memory_bytes": 536870912,
+    "maximum_parser_recursion_depth": 4,
+    "maximum_parser_runtime_seconds_per_file": 30,
+    "maximum_pdf_pages": 500,
+    "network_access_from_parsers": false,
+    "parser_classes": [
+      "PASSIVE_TEXT_SOURCE_AND_MARKUP_DECODER_V1",
+      "PASSIVE_JSON_CSV_AND_STRUCTURED_TEXT_READER_V1",
+      "PASSIVE_PDF_TEXT_EXTRACTOR_V1",
+      "PASSIVE_OFFICE_TEXT_EXTRACTOR_V1"
+    ],
+    "parser_failure_status": "PARSER_FAILURE_PRESERVED",
+    "recursive_archive_expansion_depth": 0,
+    "source_control_instructions_or_tool_definitions_obeyed": false,
+    "special_files_named_pipes_and_device_objects_fail_closed": true,
+    "symlink_junction_reparse_or_path_escape_allowed": false,
+    "unsupported_file_status": "UNSUPPORTED_FORMAT_PRESERVED"
+  },
+  "positive_recovery_admissibility_rule": {
+    "does_not_select_or_validate_a_ccft_model": true,
+    "may_reduce_future_new_postulate_count": true,
+    "minimum_exact_recovered_contract_count": 1,
+    "must_bind_primary_or_independently_auditable_source_bytes": true,
+    "must_define_required_symbols_scope_and_assumptions": true,
+    "must_materially_close_a_previously_missing_contract": true,
+    "must_supply_explicit_content_not_a_relevant_mention": true,
+    "partial_summary_default_heuristic_or_unavailable_primary_do_not_count": true,
+    "unresolved_conflict_disqualifies_positive_credit_for_that_contract": true
+  },
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "program_terminal_outcomes": [
+    "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+    "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND"
+  ],
+  "repair_attempt_count": 0,
+  "required_post_outcome_handoff": {
+    "additional_historical_recovery_after_handoff": false,
+    "applies_after_either_scientific_terminal_outcome": true,
+    "automatic_execution": false,
+    "preparation_authorized_by_recovery_program": false,
+    "separate_authority_required": true,
+    "target": "prepare_bounded_ccft_v0_theory_construction_program"
+  },
+  "result_state_mapping": {
+    "DETERMINISTIC_ARTIFACT_GENERATION_FAILED": "FAILED",
+    "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND": "PASS",
+    "STAGE_BLOCKED_BEFORE_SCIENTIFIC_OUTCOME": "BLOCKED",
+    "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED": "PASS"
+  },
+  "root_snapshot_contract": {
+    "absolute_paths_and_timestamps_excluded_from_snapshot_hash": true,
+    "deterministically_excluded_cache_mutation_exception_requires_explicit_record": true,
+    "material_root_mutation_blocks_the_program": true,
+    "snapshot_tuple_fields": [
+      "normalized_relative_path",
+      "file_type",
+      "size",
+      "SHA_256",
+      "custody_classification"
+    ],
+    "two_pass_process": [
+      "INITIAL_SOURCE_ROOT_SNAPSHOT",
+      "TARGETED_SELECTION_AND_SINGLE_CONTENT_PASS",
+      "FINAL_SOURCE_ROOT_SNAPSHOT",
+      "MUTATION_COMPARISON"
+    ]
+  },
+  "schema_id": "toe.bounded_program.immutable_manifest.v1",
+  "stages": [
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0",
+          "REPOSITORY_WIDE_SOURCE_CENSUS_AGGREGATE_MANIFEST_v1",
+          "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0",
+          "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0",
+          "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "normalized_scientific_question": "Which files pass the frozen targeted CCFT branch-and-contract gate within stable custody snapshots and the fixed source budget?",
+        "prohibited_claims": [
+          "CCFT model closure validation or empirical confirmation",
+          "equation repair completion or harmonization",
+          "parameter coefficient data or boundary-condition inference",
+          "new CCFT postulate insertion",
+          "CP-NLSE LCRD-v3 or CCFT-v0 core selection",
+          "matter gravity scale seam action or observable construction",
+          "canonical evidence promotion",
+          "automatic second search repair or successor authorization",
+          "repository claim exhaustion",
+          "contract recovery",
+          "equation repair or scientific interpretation",
+          "source authority from search match"
+        ],
+        "required_outputs": [
+          "initial_and_final_root_snapshot_records",
+          "deterministic_candidate_and_selected_source_ledger",
+          "branch_root_lineage_and_overflow_allocation",
+          "exact_duplicate_and_unsupported_or_parser_status_ledger"
+        ],
+        "semantic_stage_id": "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY",
+        "terminal_outcome_vocabulary": [
+          "TARGETED_CCFT_SOURCE_SET_BOUND",
+          "NO_TARGETED_CCFT_SOURCE_CANDIDATES_FOUND",
+          "SOURCE_ROOT_MUTATED_DURING_TARGETED_RECOVERY",
+          "TARGETED_SOURCE_SELECTION_BUDGET_EXCEEDED",
+          "SOURCE_ROOT_OR_CUSTODY_UNAVAILABLE"
+        ]
+      },
+      "canonical_scope_hash": "d2019a5d75347897cf4648ec88945b2a4cc2209be10ececf6e6c5b7f33d5d6aa",
+      "canonical_target": "discover_toe_targeted_ccft_closure_evidence_sources_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "TARGETED_CCFT_SOURCE_SET_BOUND",
+        "NO_TARGETED_CCFT_SOURCE_CANDIDATES_FOUND",
+        "SOURCE_ROOT_MUTATED_DURING_TARGETED_RECOVERY",
+        "TARGETED_SOURCE_SELECTION_BUDGET_EXCEEDED",
+        "SOURCE_ROOT_OR_CUSTODY_UNAVAILABLE"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureSourceDiscoveryResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+          "formal/python/tools/toe_targeted_ccft_closure_source_discovery_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY",
+      "stage_number": 1
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0",
+          "REPOSITORY_WIDE_SOURCE_CENSUS_AGGREGATE_MANIFEST_v1",
+          "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0",
+          "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0",
+          "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY"
+        ],
+        "normalized_scientific_question": "What explicit source-bound evidence addresses the frozen CP-NLSE and LCRD-v3 missing-contract checklists?",
+        "prohibited_claims": [
+          "CCFT model closure validation or empirical confirmation",
+          "equation repair completion or harmonization",
+          "parameter coefficient data or boundary-condition inference",
+          "new CCFT postulate insertion",
+          "CP-NLSE LCRD-v3 or CCFT-v0 core selection",
+          "matter gravity scale seam action or observable construction",
+          "canonical evidence promotion",
+          "automatic second search repair or successor authorization",
+          "repository claim exhaustion",
+          "equation completion from context",
+          "parameter or data inference",
+          "branch merging",
+          "new postulate insertion",
+          "physical interpretation or viability testing"
+        ],
+        "required_outputs": [
+          "source_bound_contract_record_ledger",
+          "seven_class_evidence_strength_assignments",
+          "explicit_equation_parameter_data_normalization_invariant_failure_and_implementation_records",
+          "branch_specific_unreviewed_and_parser_failure_counts"
+        ],
+        "semantic_stage_id": "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION",
+        "terminal_outcome_vocabulary": [
+          "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE",
+          "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE_WITH_ONLY_PARTIAL_OR_CONFLICTING_EVIDENCE",
+          "TARGETED_CCFT_CONTRACT_EXTRACTION_BUDGET_EXCEEDED",
+          "SOURCE_CONTENT_UNREADABLE_WITHIN_FROZEN_LIMITS"
+        ]
+      },
+      "canonical_scope_hash": "bf5a69abf0b8c49b1f5806afa6483a205201103126921af60fef6476348bb0e0",
+      "canonical_target": "extract_toe_targeted_ccft_closure_contracts_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE",
+        "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE_WITH_ONLY_PARTIAL_OR_CONFLICTING_EVIDENCE",
+        "TARGETED_CCFT_CONTRACT_EXTRACTION_BUDGET_EXCEEDED",
+        "SOURCE_CONTENT_UNREADABLE_WITHIN_FROZEN_LIMITS"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureContractExtractionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+          "formal/python/tools/toe_targeted_ccft_closure_contract_extraction_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureContractExtractionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION",
+      "stage_number": 2
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0",
+          "REPOSITORY_WIDE_SOURCE_CENSUS_AGGREGATE_MANIFEST_v1",
+          "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0",
+          "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0",
+          "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION"
+        ],
+        "normalized_scientific_question": "Does any extracted record explicitly, materially, and conflict-freely close a previously missing CCFT contract?",
+        "prohibited_claims": [
+          "CCFT model closure validation or empirical confirmation",
+          "equation repair completion or harmonization",
+          "parameter coefficient data or boundary-condition inference",
+          "new CCFT postulate insertion",
+          "CP-NLSE LCRD-v3 or CCFT-v0 core selection",
+          "matter gravity scale seam action or observable construction",
+          "canonical evidence promotion",
+          "automatic second search repair or successor authorization",
+          "repository claim exhaustion",
+          "resolving conflict by preference",
+          "repairing equations",
+          "selecting CP-NLSE LCRD-v3 or another CCFT-v0 core",
+          "physical or mathematical viability"
+        ],
+        "required_outputs": [
+          "contract_by_contract_completeness_matrix",
+          "primary_source_conflict_supersession_and_portability_adjudication",
+          "exact_recovered_contract_count_by_branch",
+          "future_new_postulate_reduction_ledger"
+        ],
+        "semantic_stage_id": "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION",
+        "terminal_outcome_vocabulary": [
+          "ONE_OR_MORE_EXACT_CCFT_CLOSURE_CONTRACTS_RECOVERED",
+          "NO_EXACT_CCFT_CLOSURE_CONTRACT_RECOVERED",
+          "CONTRACT_ADJUDICATION_BLOCKED_BY_UNRESOLVED_CUSTODY_OR_PROVENANCE"
+        ]
+      },
+      "canonical_scope_hash": "5b6cf39bbf3e4f8bf076dba1817778547410a8d7950164ce5b1c27d0f977410a",
+      "canonical_target": "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "ONE_OR_MORE_EXACT_CCFT_CLOSURE_CONTRACTS_RECOVERED",
+        "NO_EXACT_CCFT_CLOSURE_CONTRACT_RECOVERED",
+        "CONTRACT_ADJUDICATION_BLOCKED_BY_UNRESOLVED_CUSTODY_OR_PROVENANCE"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTContractAdjudicationResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+          "formal/python/tools/toe_targeted_ccft_contract_adjudication_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTContractAdjudicationAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION",
+      "stage_number": 3
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0",
+          "REPOSITORY_WIDE_SOURCE_CENSUS_AGGREGATE_MANIFEST_v1",
+          "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0",
+          "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0",
+          "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0"
+        ],
+        "dependency_artifact_ids": [
+          "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION"
+        ],
+        "normalized_scientific_question": "Which one of the two frozen recovery outcomes holds, and what separately authorized CCFT-v0 construction preparation follows?",
+        "prohibited_claims": [
+          "CCFT model closure validation or empirical confirmation",
+          "equation repair completion or harmonization",
+          "parameter coefficient data or boundary-condition inference",
+          "new CCFT postulate insertion",
+          "CP-NLSE LCRD-v3 or CCFT-v0 core selection",
+          "matter gravity scale seam action or observable construction",
+          "canonical evidence promotion",
+          "automatic second search repair or successor authorization",
+          "repository claim exhaustion",
+          "second archive search",
+          "CCFT-v0 program preparation installation or opening",
+          "equation core parameter or postulate selection",
+          "model construction viability test or physical claim"
+        ],
+        "required_outputs": [
+          "exactly_one_program_scientific_outcome",
+          "recovered_partial_conflicting_and_absent_contract_summary",
+          "new_postulate_reduction_summary",
+          "required_nonautomatic_construction_preparation_handoff"
+        ],
+        "semantic_stage_id": "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF",
+        "terminal_outcome_vocabulary": [
+          "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+          "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND"
+        ]
+      },
+      "canonical_scope_hash": "f6e792eae759877e5e0e6a263834dbdfd96fa8b2a1918a8a038257ab767af254",
+      "canonical_target": "select_toe_post_targeted_ccft_recovery_construction_handoff_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+        "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTRecoveryHandoffResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+          "formal/python/tools/toe_targeted_ccft_recovery_handoff_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTRecoveryHandoffAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF",
+      "stage_number": 4
+    }
+  ],
+  "status": "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST",
+  "targeted_content_search_pass_limit": 1,
+  "workload_caps": {
+    "maximum_attempt_count_proposed": 4,
+    "maximum_contract_records_per_missing_contract": 12,
+    "maximum_deep_review_files": 96,
+    "maximum_deep_review_files_per_branch": 48,
+    "maximum_deep_review_files_per_lineage": 12,
+    "maximum_extracted_text_bytes_per_file": 2097152,
+    "maximum_metadata_candidates": 256,
+    "maximum_parser_failures": 8,
+    "maximum_source_bound_contract_records": 192,
+    "maximum_source_root_mutations": 0,
+    "maximum_total_deep_review_bytes": 536870912,
+    "maximum_total_extracted_text_bytes": 33554432,
+    "maximum_unresolved_contract_conflicts": 32,
+    "maximum_unsupported_format_files": 32
+  }
+}

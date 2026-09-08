@@ -1,0 +1,47 @@
+{
+  "artifact_id": "TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_OPEN_v0.json",
+    "formal/python/tools/toe_ccft_mathematical_lineage_and_conflict_reconciliation_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTMathematicalLineageAndConflictReconciliationAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 2,
+  "authority_decision": "AUTHORIZE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_STAGE_2_OPEN",
+  "captured_at_utc": "2026-07-31T22:55:00Z",
+  "event_hash": "6765badd2ce94586a489dbe6a755fd2f57d0bb36114cfd0dc93bb976c0f2e943",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_OPEN_v0.json",
+  "event_sequence_number": 3,
+  "event_sha256": "237c3af042a312dd88178a025c97492968eca167f69c7e4dfedf9b1d1bbde77f",
+  "opened_from_commit": "f08e5e7d7c11ffb0cfba8c12d1cdcd7a4abb1e83",
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "b8151a2c74a3fec61a65681040a75d2ffeadba91d56a65b40bc1ad4be474191a",
+  "schema_id": "toe.ccft_mathematical_lineage_and_conflict_reconciliation.stage_2_open_validation.v0",
+  "scientific_output_at_open": {
+    "evidence_promoted": false,
+    "formulation_conflicts_resolved": 0,
+    "lineage_relationships_established": 0,
+    "physical_interpretation_established": false,
+    "preferred_formulation_or_minimal_core_selected": false,
+    "representation_field_action_seam_or_observable_selected": false,
+    "stage_3_output_created": false
+  },
+  "scope_hash": "f2b412494409a17fa3527481c43a993a99f5e56b863b60c427a2746535c37902",
+  "semantic_stage_id": "CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION",
+  "status": "STAGE_2_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0",
+  "validation_checks": {
+    "33_entries_and_four_conflicts_are_bound": true,
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_1_result_review_validation_and_close_hashes_match": true,
+    "stage_3_remains_unauthorized": true
+  }
+}

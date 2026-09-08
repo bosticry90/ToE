@@ -1,0 +1,20 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_profile": {
+    "commit": "380db2de3aca8c19fdf1ab9c43d0e6629d232009",
+    "path": "formal/docs/release/RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR",
+  "target": "repair_or_fail_closed_reclassify_four_reviewed_current_nonpassing_obligations_v0_once",
+  "execution_count_authorized": 1,
+  "historical_report_creation_authorized": true,
+  "evidence_based_reachability_correction_authorized": true,
+  "historical_artifact_restoration_authorized": false,
+  "lean_source_change_authorized": false,
+  "registry_or_v2_change_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

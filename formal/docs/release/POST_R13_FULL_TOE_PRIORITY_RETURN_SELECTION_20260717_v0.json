@@ -1,0 +1,47 @@
+{
+  "authority_inputs": {
+    "accepted_route_map_review": {
+      "relative_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260713_v2.json",
+      "sha256": "6dac3d95a29e7ab0d29a99d5903b682bf235b92e025b044890a2e927d8b6f875",
+      "verdict": "ACCEPT"
+    },
+    "accepted_selector_review": {
+      "relative_path": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_FIRST_UNIT_SELECTOR_PACKET_RESULT_REVIEW_20260713_v0.json",
+      "sha256": "e84d7a00a29a21dae59a8d3fb26f56a6a97cf3b6021766a6b176fde81a3d610d",
+      "selected_pillar_code": "SR",
+      "selected_weighted_score": 51,
+      "verdict": "ACCEPT"
+    },
+    "r13_result_review": {
+      "relative_path": "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_DESCENDANT_NECESSITY_AND_ROBUSTNESS_INSTRUMENTED_R13_MECHANISM_EXPERIMENT_OBSERVABLE_SEMANTICS_RECONCILIATION_RESULT_REVIEW_20260717_v2.json",
+      "sha256": "da2cbf87a042a387b84f469ffec106746f19976e6acdc193469e21aa3e0a619e",
+      "verdict": "BLOCKED_RECONCILIATION_PRETERMINAL_INPUT_CONTRACT_MISMATCH"
+    }
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Priority return and preparation-target selection only. No unit convention is chosen, no constant is restored, no calculation is executed, and no pillar, seam, Level 4/5, C_k, CCFT, GfE, master-action, or empirical claim is promoted.",
+  "consumed_target": "terminate_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_observable_semantics_reconciliation_lane_preserve_unresolved_r13",
+  "decision": {
+    "external_comparators_activated": false,
+    "gfe_comparator_remains_dormant": true,
+    "r13_reopened": false,
+    "selected_lane_executes_now": false,
+    "selected_pillar_code": "SR",
+    "selected_row_id": "PILLAR-SR-units_and_dimensions-v0",
+    "selected_route": "CONVENTION_AND_CONSTANT_RESTORATION",
+    "selection_basis": "The accepted cross-pillar unit selector independently ranked SR highest at 51/62 and stable across every frozen sensitivity threshold. R13 has consumed its bounded authorization, so authority returns to that existing non-R13 priority result.",
+    "unit_resolution_execution_authorized": false
+  },
+  "preserved_r13_status": {
+    "H_A_through_H_E": "NOT_EVALUATED",
+    "canonical_robustness": "NUMERICALLY_BLOCKED",
+    "lane_status": "TERMINATED",
+    "new_E_REPRO": "NONE",
+    "root_mechanism": "UNRESOLVED_EVIDENCE_SEMANTICS_BLOCK"
+  },
+  "schema_id": "POST_R13_FULL_TOE_PRIORITY_RETURN_SELECTION_20260717_v0",
+  "selected_next_target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet",
+  "selected_next_target_kind": "PREPARATION_ONLY_INTERNAL_PILLAR_UNIT_CONVENTION_TARGET",
+  "verdict": "RETURNED_TO_FULL_PRIORITY_MAP_SELECTED_SR_UNIT_CONVENTION_PREPARATION_ONLY"
+}
+

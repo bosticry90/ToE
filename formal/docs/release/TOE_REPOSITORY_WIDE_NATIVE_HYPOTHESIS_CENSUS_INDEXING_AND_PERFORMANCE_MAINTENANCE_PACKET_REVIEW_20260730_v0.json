@@ -1,0 +1,20 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_PACKET_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "consumed_artifact": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_PACKET_20260730_v0",
+  "decision": "CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_AUTHORIZED",
+  "maintenance_target": "prepare_toe_repository_wide_native_hypothesis_census_indexing_and_performance_maintenance_v0",
+  "nonclaim_boundary": [
+    "This review authorizes scanner, cache, snapshot, passive-parser, batching, profiling, and dependency-impact infrastructure only.",
+    "Trials must use synthetic or explicitly nonauthoritative inputs.",
+    "It does not authorize or emit a Stage 1 OPEN event.",
+    "It does not authorize an authoritative census index, scientific archive review, claim extraction, promotion, or frontier selection.",
+    "The census program remains installed and unopened with zero attempts."
+  ],
+  "preserved_program_state": "INSTALLED_UNOPENED",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "required_result_review_target": "review_toe_repository_wide_native_hypothesis_census_indexing_and_performance_maintenance_result_v0",
+  "schema_id": "toe.repository_wide_native_hypothesis_census.indexing_and_performance_maintenance_authority_review.v0",
+  "scientific_target_preserved": "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+  "status": "ACCEPTED_MAINTENANCE_AUTHORIZATION_ONLY"
+}

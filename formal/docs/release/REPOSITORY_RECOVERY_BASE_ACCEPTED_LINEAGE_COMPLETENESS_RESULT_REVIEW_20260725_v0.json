@@ -1,0 +1,55 @@
+{
+  "schema_id": "REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T03:10:18Z",
+  "accepted_result": {
+    "commit": "49279f066ec58273d1e0b4bdcaaa1eda050bdaaa",
+    "tree": "f5b5ebbf01912894a15baa18687fe9e1dd0bdf82",
+    "path": "formal/docs/release/REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_20260725_v0.json",
+    "sha256": "676309abd80042cd61d5354ff2d048e06abc294e043d8454fbc5eb30c9222b3c"
+  },
+  "independent_review": {
+    "checkout": "DETACHED",
+    "checkout_clean_before_and_after": true,
+    "manifest_regeneration": {
+      "tracked_manifest_sha256": "f3a257ebcefaff1f2f59a22ace051020f1bc925565cf28e45f9f454163578ae5",
+      "regenerated_manifest_path": ".toe-recovery/custody-v0/recovery-base-accepted-lineage-completeness-v0/INDEPENDENT_REGENERATED_LINEAGE_MANIFEST_v0.json",
+      "regenerated_manifest_sha256": "f3a257ebcefaff1f2f59a22ace051020f1bc925565cf28e45f9f454163578ae5",
+      "byte_identical": true
+    },
+    "lineage_tool_tests": {
+      "path": ".toe-recovery/custody-v0/recovery-base-accepted-lineage-completeness-v0/INDEPENDENT_LINEAGE_TOOL_TESTS_v0.xml",
+      "sha256": "138b28cc82ad78d3485fbbd250c81f692ccc34a4f62ea0972805dd94efaab43e",
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "errors": 0
+    },
+    "protected_invariant_guards": {
+      "path": ".toe-recovery/custody-v0/recovery-base-accepted-lineage-completeness-v0/INDEPENDENT_PROTECTED_INVARIANT_GUARDS_v0.xml",
+      "sha256": "5d04dcd2397c37ccb2377f73cc3bdf19b4b2e49c15eec112811d7b47de72b0ea",
+      "tests": 43,
+      "passed": 43,
+      "failed": 0,
+      "errors": 0
+    },
+    "checks": {
+      "accepted_recovery_commits_linear_and_complete": true,
+      "expected_implementation_tree_hashes_match": true,
+      "result_to_implementation_bindings_match": true,
+      "review_to_result_hash_bindings_match": true,
+      "external_bundle_heads_are_ancestors": true,
+      "accepted_commits_outside_proposed_base": 0,
+      "protected_invariants_preserved": "8_OF_8",
+      "historical_snapshot_guards_not_used_as_current_state_equality": true,
+      "superseded_guards_have_accepted_replacements": true,
+      "dirty_main_mutated": false
+    },
+    "verdict": "ACCEPT"
+  },
+  "terminal_outcome": "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE",
+  "repair_performed": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

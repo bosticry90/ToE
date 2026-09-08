@@ -1,0 +1,188 @@
+{
+  "accepted_base_commit": "b0df323ffb62f1a927a6608049d5e96c2a59cd1f",
+  "authorization_commit": "ee45baa4731c27b68180ab783dddb4a559baeecc",
+  "branch": "codex/post-equation-compendium-repair-baseline-reassessment-v0",
+  "broad_python_baseline": "REPRODUCIBLY_RED_AND_EXHAUSTIVELY_RECLUSTERED",
+  "captured_at_utc": "2026-07-24T04:53:32Z",
+  "comparability": {
+    "accepted_new_guards_executed_in_frozen_reassessment": false,
+    "current_collected_added_since_prior_current_inventory": 6,
+    "current_collected_common_with_frozen_inventory": 13756,
+    "current_collected_inventory_count": 13779,
+    "current_collected_removed_ids": 0,
+    "frozen_execution_inventory_count": 13756,
+    "frozen_execution_inventory_sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf",
+    "junit_ids_and_order_exactly_frozen": true
+  },
+  "custody": {
+    "all_reassessment_outputs_resolved_under_toe_recovery": true,
+    "dirty_main_existing_regular_file_bytes_unchanged": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_preserved_missing_tracked_deletions": 3,
+    "dirty_main_status_path_set_unchanged": true,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_touched_by_reassessment": false,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "maintenance_output_root": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0"
+  },
+  "delta_from_post_qft_route_baseline": {
+    "current_nonpassing": 390,
+    "net_nonpassing_reduction": 72,
+    "newly_nonpassing": 1,
+    "persistent_nonpassing": 389,
+    "prior_nonpassing": 462,
+    "recovered_prior_nonpassing": 73,
+    "status_transitions_within_persistent_nonpassing": 0
+  },
+  "equation_compendium_family_status": {
+    "focused_outcomes_previously_recovered": 50,
+    "frozen_inventory_outcomes_recovered": 50,
+    "new_equation_compendium_family_outcomes": 0,
+    "remaining_equation_compendium_family_outcomes": 0,
+    "status": "REMOVED_FROM_MEASURED_NONPASSING_BASELINE"
+  },
+  "execution": {
+    "elapsed_seconds": 8805.796999999991,
+    "errors": 19,
+    "failed": 371,
+    "finished_utc": "2026-07-24T04:48:01.336968+00:00",
+    "nonpassing": 390,
+    "passed": 12768,
+    "pytest_exit_code": 1,
+    "skipped": 598,
+    "started_utc": "2026-07-24T02:21:15.538362+00:00",
+    "tests": 13756,
+    "tracked_status_after": "EMPTY",
+    "unexpected_untracked_source": "NONE",
+    "validation_behavior": "READ_ONLY"
+  },
+  "exhaustive_accounting": {
+    "family_outcome_sum": 390,
+    "first_cause_clusters": 312,
+    "highest_leverage_remaining_concentrated_root": {
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 16,
+      "root_id": "PILLAR_ARTIFACT_CURRENCY_DRIFT"
+    },
+    "highest_leverage_remaining_family": "missing_artifacts",
+    "highest_leverage_remaining_family_outcomes": 218,
+    "thirteen_custody_currency_outcomes_remain_independently_classified": true,
+    "unclassified_outcomes": 0
+  },
+  "external_evidence": [
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_CURRENT_COLLECTION_COMPARABILITY_v0.json",
+      "sha256": "be2d6c6e5bd30a2c8b2fd55e5d5cb3a5747a7429ae6ea230bfe4ffa2e444b63d"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/post_equation_compendium_frozen_nonlean_junit_v0.xml",
+      "sha256": "4e0c9718398b65177f05ac544ce95707eb536a9e349913c867868aea665050c1"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/post_equation_compendium_frozen_nonlean_pytest_v0.log",
+      "sha256": "4b1ab904e0745bd1cb86934cc109ed64467b9dcb0807d6b2affc761d33f56706"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_OUTCOME_DELTA_v0.json",
+      "sha256": "7205bf0978dfa11fd8bc5732c75365206ee32027cb74fba9690db4753a3f5900"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_OUTCOME_ENTRIES_v0.json",
+      "sha256": "cbf2546a5e0f1dd90c1376dd9943d341533baf31f68744df164f8bcbab6f7376"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_MISSING_EXPECTATION_STATUS_v0.json",
+      "sha256": "82dbf3e1f4d014b1a9c74ed0c34977378494385dc8e472531066e2af38adcc12"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_FIRST_CAUSE_CLUSTERS_v0.json",
+      "sha256": "97350f2fd49f53b663280c1d2dd0e555bdac736fb4bfad92e1f3a491b19301f8"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/POST_EQUATION_COMPENDIUM_BASELINE_REASSESSMENT_EXECUTION_MANIFEST_v0.json",
+      "sha256": "7c66c027264391433d3ae920681adf97fb69257bb49004ea0eeb43fb9ceb3a2c"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-equation-compendium-repair-baseline-reassessment-v0/build_post_equation_compendium_analysis_v0.py",
+      "sha256": "214adfc5505bab65bede9e9f77eb3c76e95ddd2dd650f400e4df396a8423286e"
+    }
+  ],
+  "interaction_outcomes": {
+    "newly_nonpassing": {
+      "count": 1,
+      "interpretation": "An unrelated atomic registry-writer unit test received Windows WinError 5 from os.replace inside the pytest-owned external temporary directory. It does not consume the equation compendium, was previously passing, and validation left tracked source clean.",
+      "root_family": "environment_or_path_identity",
+      "root_id": "ATOMIC_REGISTRY_REPLACE_PERMISSION_DENIED"
+    },
+    "recovered_beyond_equation_compendium_family": {
+      "count": 23,
+      "interpretation": "Twenty-two pillar-ledger input-hash-chain outcomes and one pillar artifact-currency cascade recovered as beneficial downstream interactions with the current Git-blob identity contract.",
+      "roots": {
+        "PILLAR_ARTIFACT_CURRENCY_DRIFT": 1,
+        "PILLAR_LEDGER_INPUT_HASH_CHAIN_DRIFT": 22
+      }
+    }
+  },
+  "lean_status": "UNCHANGED_NOT_EXECUTED_IN_THIS_CYCLE",
+  "missing_artifact_expectation_status": {
+    "automatic_fixture_scaling_authorized": false,
+    "current_family_outcomes": 218,
+    "family_changed_by_equation_compendium_repair": false,
+    "fixture_candidates": 181,
+    "provenance_blocked": 36,
+    "stale_non_missing_hash_expectation": 1
+  },
+  "remaining_first_cause_families": [
+    {
+      "family": "missing_artifacts",
+      "outcomes": 218
+    },
+    {
+      "family": "other_packet_contract",
+      "outcomes": 65
+    },
+    {
+      "family": "other_artifact_currency",
+      "includes_independently_classified_post_decoupling_source_custody_drift": 13,
+      "outcomes": 50
+    },
+    {
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 38
+    },
+    {
+      "family": "authority_expectations",
+      "outcomes": 8
+    },
+    {
+      "family": "environment_or_path_identity",
+      "includes_new_unrelated_atomic_replace_permission_outcome": 1,
+      "outcomes": 7
+    },
+    {
+      "family": "other_committed_assertions",
+      "outcomes": 4
+    }
+  ],
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_REASSESSMENT_RESULT_ONLY",
+  "resolved_unit_seam_rows": "0/12",
+  "result": "POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "schema_id": "REPOSITORY_POST_EQUATION_COMPENDIUM_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "scope": {
+    "automatic_successor_cycle": false,
+    "diagnostic_only": true,
+    "fixture_conversion_scaled": false,
+    "lean_activity": false,
+    "repair_performed": false,
+    "reports_or_fixtures_created_in_source_tree": false,
+    "same_frozen_non_lean_test_inventory": true,
+    "scientific_activity": false,
+    "scientific_resumption_authorized": false,
+    "tests_identities_or_generators_modified": false,
+    "v2_enrollment_authorized": false
+  },
+  "v2_enrollment": "NOT_AUTHORIZED"
+}

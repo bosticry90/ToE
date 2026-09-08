@@ -1,0 +1,1950 @@
+{
+  "C03_nonpromotion": "Prior C03 I3/I4/I6/I8 gaps remain for the distinct cross-bilinear/historical controls. The five-map and six-E subobligations are closed here, not the entire C03 protocol.",
+  "authority": {
+    "new_physics_promotion": false,
+    "new_quarantine": [],
+    "production": "76/1188",
+    "route_c": "1/4",
+    "rows77_to96": "CLOSED",
+    "runner_patched": false,
+    "semantic_core_v0_2": "INTERNALLY_RELEASED",
+    "terminal_classification_adopted": false
+  },
+  "boundary_scope": {
+    "E_reporting_review": "CONFIRMED_UNEVALUATED_LITERAL_EMPTY",
+    "included_in_six_or_forty_denominator": false,
+    "mechanism": "SCALAR_ADJOINT_GAUGE",
+    "member_id": "P2-TOP-00fcecca539fc84e34f1f293f567ce800f88c64ba6041fba030c21693f8b8213",
+    "observed_other_kernel": {
+      "kinematic_kernel": "-xi2",
+      "momentum_route": "SCALAR_ADJOINT_LONGITUDINAL_KERNEL"
+    },
+    "pair_id": "Q2PAIR-401554bfebdd3050492b809b",
+    "remaining_five_other_branch_records": "NOT_EVALUATED_NOT_CLEARED",
+    "scientific_value_verdict": "UNDERDEFINED",
+    "two_fermion_pole_calls_A_B": [
+      0,
+      0
+    ]
+  },
+  "counts": {
+    "corrected_native_E_nonzero": 0,
+    "corrected_native_E_pending": 0,
+    "corrected_native_E_zero": 6,
+    "historical_computed_E_zeros_validated": 0,
+    "new_E_nonzero_content_vs_empty": 0,
+    "old_E_reporting_defects": 6,
+    "physical_changed_strata": 24,
+    "physical_rows_requiring_repair": 5,
+    "physical_same_coordinate_changed": 4,
+    "physical_same_coordinate_unchanged": 1,
+    "physical_unchanged_strata": 8,
+    "physical_wrong_channel_strata": 8,
+    "physical_wrong_source_channel": 1
+  },
+  "coverage": {
+    "modern_target_coordinate_entries": 60,
+    "modern_zero_target_entries": 20,
+    "record_strata": 40,
+    "records": 6
+  },
+  "next_action": "Complete independent C03 confirmation and freeze repair scope; then version only justified runner repairs. No modern patch or terminal-policy adoption in this pass.",
+  "record_strata": [
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(xi3 + 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(-xi3 - 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "2*g3**2*(xi3 + 3)/3"
+      },
+      "member_id": "P2-TOP-0233adaf603b8fe23cb7c07f1b881edb11021f760cbccbafdcdc9abf9b73e2b4",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV01",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g3**2*(-xi3 - 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho8",
+      "stratum_id": "SM_X_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(xi3 + 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(-xi3 - 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "2*g3**2*(xi3 + 3)/3"
+      },
+      "member_id": "P2-TOP-0233adaf603b8fe23cb7c07f1b881edb11021f760cbccbafdcdc9abf9b73e2b4",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV01",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g3**2*(-xi3 - 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho8+Delta",
+      "stratum_id": "SM_X_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(xi3 + 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(-xi3 - 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "2*g3**2*(xi3 + 3)/3"
+      },
+      "member_id": "P2-TOP-0233adaf603b8fe23cb7c07f1b881edb11021f760cbccbafdcdc9abf9b73e2b4",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV01",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g3**2*(-xi3 - 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8",
+      "stratum_id": "SM_X_rho3_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(xi3 + 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(-xi3 - 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO8::C4": "2*g3**2*(xi3 + 3)/3"
+      },
+      "member_id": "P2-TOP-0233adaf603b8fe23cb7c07f1b881edb11021f760cbccbafdcdc9abf9b73e2b4",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV01",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g3**2*(-xi3 - 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8+Delta",
+      "stratum_id": "SM_X_rho3_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-065bb05851240ed9d644229f0ca825d8602c50c0edc72a29d290d3b2e5c73a4b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV02",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3",
+      "stratum_id": "SM_X_rho3"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-065bb05851240ed9d644229f0ca825d8602c50c0edc72a29d290d3b2e5c73a4b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV02",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+Delta",
+      "stratum_id": "SM_X_rho3_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-065bb05851240ed9d644229f0ca825d8602c50c0edc72a29d290d3b2e5c73a4b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV02",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8",
+      "stratum_id": "SM_X_rho3_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+        "D6-P2P3-QQ-HDAG-X-RHO3::C3": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-065bb05851240ed9d644229f0ca825d8602c50c0edc72a29d290d3b2e5c73a4b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV02",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8+Delta",
+      "stratum_id": "SM_X_rho3_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X",
+      "stratum_id": "SM_X"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X+Delta",
+      "stratum_id": "SM_X_Delta"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X+rho3",
+      "stratum_id": "SM_X_rho3"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X+rho8",
+      "stratum_id": "SM_X_rho8"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X+rho3+Delta",
+      "stratum_id": "SM_X_rho3_Delta"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X+rho8+Delta",
+      "stratum_id": "SM_X_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8",
+      "stratum_id": "SM_X_rho3_rho8"
+    },
+    {
+      "certified_physical_delta": null,
+      "corrected_modern_target_coordinates": null,
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "corrected_primary_target_coordinates": {
+        "D5-QQ-X-HDAG-A": "-g2**2*(xi2+3)/4"
+      },
+      "exact_modern_target_coordinates": {
+        "D5-QQ-X-HDAG-A::CANONICAL_GAUGE_BASIS_1": "3*g2**2*(-xi2 - 3)/2"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP",
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8+Delta",
+      "stratum_id": "SM_X_rho3_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X",
+      "stratum_id": "SM_X"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X+Delta",
+      "stratum_id": "SM_X_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X+rho3",
+      "stratum_id": "SM_X_rho3"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X+rho8",
+      "stratum_id": "SM_X_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X+rho3+Delta",
+      "stratum_id": "SM_X_rho3_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X+rho8+Delta",
+      "stratum_id": "SM_X_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8",
+      "stratum_id": "SM_X_rho3_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(xi1 + 3)/12"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/12"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8+Delta",
+      "stratum_id": "SM_X_rho3_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X",
+      "stratum_id": "SM_X"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+Delta",
+      "stratum_id": "SM_X_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3",
+      "stratum_id": "SM_X_rho3"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho8",
+      "stratum_id": "SM_X_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+Delta",
+      "stratum_id": "SM_X_rho3_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho8+Delta",
+      "stratum_id": "SM_X_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8",
+      "stratum_id": "SM_X_rho3_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+      },
+      "corrected_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(xi3 + 3)/3"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "4*g3**2*(-xi3 - 3)/3"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "CHANGED",
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8+Delta",
+      "stratum_id": "SM_X_rho3_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X",
+      "stratum_id": "SM_X"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X+Delta",
+      "stratum_id": "SM_X_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X+rho3",
+      "stratum_id": "SM_X_rho3"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X+rho8",
+      "stratum_id": "SM_X_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X+rho3+Delta",
+      "stratum_id": "SM_X_rho3_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X+rho8+Delta",
+      "stratum_id": "SM_X_rho8_Delta"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8",
+      "stratum_id": "SM_X_rho3_rho8"
+    },
+    {
+      "certified_physical_delta": {
+        "D6-P2P3-UBAR-Q-X3::C1": "0"
+      },
+      "corrected_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "corrected_native_E": "0",
+      "corrected_native_E_status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+      "exact_modern_target_coordinates": {
+        "D6-P2P3-UBAR-Q-X3::C1": "g1**2*(xi1 + 3)/9"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "old_E_empty_if_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO",
+      "old_E_reporting": "DEFECT_CONFIRMED_NOT_EVALUATED",
+      "physical_status": "UNCHANGED",
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_graph_stratum": "SM+X+rho3+rho8+Delta",
+      "stratum_id": "SM_X_rho3_rho8_Delta"
+    }
+  ],
+  "records": [
+    {
+      "authority_effect": "NONE",
+      "corrected_native_evanescent": {
+        "analytic_absence_certificate": "uniform_chain_certificate.json",
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\run_A\\uniform_chain_certificate.json",
+          "sha256": "e7aaf27a0cabdf64081d0c3fbcf42b096adec98f747c4bb0611270c8b4643fa5"
+        },
+        "derivation": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\independent_e_review.json",
+          "sha256": "8a4970340313c8b206ed4d9e7861b2dd963898a2695c2cd70b5fce839d078d1a"
+        },
+        "finite_d_completion": "NOT_FIXED; finite h/epsilon scalar terms outside canonical E simple-pole scope",
+        "native_quotient_matrix_executed": false,
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\e_root_review.json",
+          "sha256": "20bea6c03cee4285b4bba7654091345b3e5f7e19d34b724b06c87531ff18f600"
+        },
+        "status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "value": "0",
+        "value_kind": "CANONICAL_EVANESCENT_SIMPLE_POLE_TENSOR"
+      },
+      "evanescent_comparison": {
+        "computed_old_vs_new_value": "NOT_COMPARABLE_OLD_UNEVALUATED",
+        "corrected_state": "EVALUATED_ZERO",
+        "new_nonzero_content_required": false,
+        "old_reporting_defect_repaired_retroactively": false,
+        "old_state": "NOT_EVALUATED",
+        "published_empty_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO"
+      },
+      "member_id": "P2-TOP-0233adaf603b8fe23cb7c07f1b881edb11021f760cbccbafdcdc9abf9b73e2b4",
+      "modern_evanescent_reporting": {
+        "encoded_value": {},
+        "epistemic_correction": "NOT_EVALUATED",
+        "evidence": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_revalidation_pass_0270_v0\\independent_source\\comparison_review\\comparison_review.json#/row_reviews/0",
+        "status": "DEFECT_CONFIRMED"
+      },
+      "pair_id": "Q2PAIR-b800513fc24ad88fa416fbd3",
+      "physical_comparison": {
+        "all_target_maps": [
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-QQ-HDAG-X-RHO8::C1",
+            "primary_id": "D6-P2P3-QQ-HDAG-X-RHO8::C1",
+            "scale": "1"
+          },
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-QQ-HDAG-X-RHO8::C2",
+            "primary_id": "D6-P2P3-QQ-HDAG-X-RHO8::C2",
+            "scale": "1"
+          },
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-QQ-HDAG-X-RHO8::C3",
+            "primary_id": "D6-P2P3-QQ-HDAG-X-RHO8::C3",
+            "scale": "1"
+          },
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-QQ-HDAG-X-RHO8::C4",
+            "primary_id": "D6-P2P3-QQ-HDAG-X-RHO8::C4",
+            "scale": "1"
+          }
+        ],
+        "metadata_caveat": null,
+        "modern_minus_corrected": {
+          "D6-P2P3-QQ-HDAG-X-RHO8::C1": "0",
+          "D6-P2P3-QQ-HDAG-X-RHO8::C2": "0",
+          "D6-P2P3-QQ-HDAG-X-RHO8::C3": "0",
+          "D6-P2P3-QQ-HDAG-X-RHO8::C4": "g3**2*(xi3 + 3)"
+        },
+        "source_and_target_normalization_applied": true,
+        "status": "CHANGED"
+      },
+      "row_id": "RV01",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g3**2*(-xi3 - 3)/3"
+      },
+      "source_operator_id": "D6-P2P3-QQ-HDAG-X-RHO8::C4",
+      "strata": [
+        "SM_X_rho8",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8",
+        "SM_X_rho3_rho8_Delta"
+      ]
+    },
+    {
+      "authority_effect": "NONE",
+      "corrected_native_evanescent": {
+        "analytic_absence_certificate": "uniform_chain_certificate.json",
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\run_A\\uniform_chain_certificate.json",
+          "sha256": "e7aaf27a0cabdf64081d0c3fbcf42b096adec98f747c4bb0611270c8b4643fa5"
+        },
+        "derivation": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\independent_e_review.json",
+          "sha256": "8a4970340313c8b206ed4d9e7861b2dd963898a2695c2cd70b5fce839d078d1a"
+        },
+        "finite_d_completion": "NOT_FIXED; finite h/epsilon scalar terms outside canonical E simple-pole scope",
+        "native_quotient_matrix_executed": false,
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\e_root_review.json",
+          "sha256": "20bea6c03cee4285b4bba7654091345b3e5f7e19d34b724b06c87531ff18f600"
+        },
+        "status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "value": "0",
+        "value_kind": "CANONICAL_EVANESCENT_SIMPLE_POLE_TENSOR"
+      },
+      "evanescent_comparison": {
+        "computed_old_vs_new_value": "NOT_COMPARABLE_OLD_UNEVALUATED",
+        "corrected_state": "EVALUATED_ZERO",
+        "new_nonzero_content_required": false,
+        "old_reporting_defect_repaired_retroactively": false,
+        "old_state": "NOT_EVALUATED",
+        "published_empty_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO"
+      },
+      "member_id": "P2-TOP-065bb05851240ed9d644229f0ca825d8602c50c0edc72a29d290d3b2e5c73a4b",
+      "modern_evanescent_reporting": {
+        "encoded_value": {},
+        "epistemic_correction": "NOT_EVALUATED",
+        "evidence": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_revalidation_pass_0270_v0\\independent_source\\comparison_review\\comparison_review.json#/row_reviews/1",
+        "status": "DEFECT_CONFIRMED"
+      },
+      "pair_id": "Q2PAIR-b800513fc24ad88fa416fbd3",
+      "physical_comparison": {
+        "all_target_maps": [
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-QQ-HDAG-X-RHO3::C1",
+            "primary_id": "D6-P2P3-QQ-HDAG-X-RHO3::C1",
+            "scale": "1"
+          },
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-QQ-HDAG-X-RHO3::C2",
+            "primary_id": "D6-P2P3-QQ-HDAG-X-RHO3::C2",
+            "scale": "1"
+          },
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-QQ-HDAG-X-RHO3::C3",
+            "primary_id": "D6-P2P3-QQ-HDAG-X-RHO3::C3",
+            "scale": "1"
+          }
+        ],
+        "metadata_caveat": null,
+        "modern_minus_corrected": {
+          "D6-P2P3-QQ-HDAG-X-RHO3::C1": "0",
+          "D6-P2P3-QQ-HDAG-X-RHO3::C2": "0",
+          "D6-P2P3-QQ-HDAG-X-RHO3::C3": "2*g3**2*(-xi3 - 3)"
+        },
+        "source_and_target_normalization_applied": true,
+        "status": "CHANGED"
+      },
+      "row_id": "RV02",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_operator_id": "D6-P2P3-QQ-HDAG-X-RHO3::C3",
+      "strata": [
+        "SM_X_rho3",
+        "SM_X_rho3_Delta",
+        "SM_X_rho3_rho8",
+        "SM_X_rho3_rho8_Delta"
+      ]
+    },
+    {
+      "authority_effect": "NONE",
+      "corrected_native_evanescent": {
+        "analytic_absence_certificate": "uniform_chain_certificate.json",
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\run_A\\uniform_chain_certificate.json",
+          "sha256": "e7aaf27a0cabdf64081d0c3fbcf42b096adec98f747c4bb0611270c8b4643fa5"
+        },
+        "derivation": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\independent_e_review.json",
+          "sha256": "8a4970340313c8b206ed4d9e7861b2dd963898a2695c2cd70b5fce839d078d1a"
+        },
+        "finite_d_completion": "NOT_FIXED; finite h/epsilon scalar terms outside canonical E simple-pole scope",
+        "native_quotient_matrix_executed": false,
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\e_root_review.json",
+          "sha256": "20bea6c03cee4285b4bba7654091345b3e5f7e19d34b724b06c87531ff18f600"
+        },
+        "status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "value": "0",
+        "value_kind": "CANONICAL_EVANESCENT_SIMPLE_POLE_TENSOR"
+      },
+      "evanescent_comparison": {
+        "computed_old_vs_new_value": "NOT_COMPARABLE_OLD_UNEVALUATED",
+        "corrected_state": "EVALUATED_ZERO",
+        "new_nonzero_content_required": false,
+        "old_reporting_defect_repaired_retroactively": false,
+        "old_state": "NOT_EVALUATED",
+        "published_empty_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO"
+      },
+      "member_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "modern_evanescent_reporting": {
+        "encoded_value": {},
+        "epistemic_correction": "NOT_EVALUATED",
+        "evidence": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_revalidation_pass_0270_v0\\independent_source\\comparison_review\\comparison_review.json#/row_reviews/2",
+        "status": "DEFECT_CONFIRMED"
+      },
+      "pair_id": "Q2PAIR-dd447313a6f8ab39bad934f5",
+      "physical_comparison": {
+        "modern_minus_corrected": null,
+        "reason": "Modern weak singlet with source A flavor has zero ordered Grassmann tree; primary triplet tree is nonzero. No scalar division or published-label subtraction is certified.",
+        "review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json",
+          "sha256": "de9390f5c06a48f5b8b4939e455fd6e6aa25e6bd83e4b9158cba718c9dae1d6c"
+        },
+        "source_semantic_failure": "CONFIRMED",
+        "status": "WRONG_SOURCE_CHANNEL_NO_SCALAR_MAP"
+      },
+      "row_id": "RV03",
+      "source_defined_physical_value": {
+        "certificate": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_damage_pass_0271_v0\\independent_review\\rv03_postexecution_review.json#/result/source_defined_physical_uv_pole",
+        "component_and_sign_review": "PASS",
+        "restriction": "This one exchange topology, not summed renormalization, cancelling counterterm, or ADM.",
+        "status": "EVALUATED",
+        "tree_normalization": "complete ordered derivative at both source and target",
+        "units": "coefficient of C_A*O_A in direct Gamma_UV after 1/(16*pi^2*epsilon) is stripped",
+        "value": "-g2**2*(xi2+3)/4"
+      },
+      "source_operator_id": "D5-QQ-X-HDAG-A",
+      "strata": [
+        "SM_X",
+        "SM_X_Delta",
+        "SM_X_rho3",
+        "SM_X_rho8",
+        "SM_X_rho3_Delta",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8",
+        "SM_X_rho3_rho8_Delta"
+      ]
+    },
+    {
+      "authority_effect": "NONE",
+      "corrected_native_evanescent": {
+        "analytic_absence_certificate": "uniform_chain_certificate.json",
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\run_A\\uniform_chain_certificate.json",
+          "sha256": "e7aaf27a0cabdf64081d0c3fbcf42b096adec98f747c4bb0611270c8b4643fa5"
+        },
+        "derivation": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\independent_e_review.json",
+          "sha256": "8a4970340313c8b206ed4d9e7861b2dd963898a2695c2cd70b5fce839d078d1a"
+        },
+        "finite_d_completion": "NOT_FIXED; finite h/epsilon scalar terms outside canonical E simple-pole scope",
+        "native_quotient_matrix_executed": false,
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\e_root_review.json",
+          "sha256": "20bea6c03cee4285b4bba7654091345b3e5f7e19d34b724b06c87531ff18f600"
+        },
+        "status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "value": "0",
+        "value_kind": "CANONICAL_EVANESCENT_SIMPLE_POLE_TENSOR"
+      },
+      "evanescent_comparison": {
+        "computed_old_vs_new_value": "NOT_COMPARABLE_OLD_UNEVALUATED",
+        "corrected_state": "EVALUATED_ZERO",
+        "new_nonzero_content_required": false,
+        "old_reporting_defect_repaired_retroactively": false,
+        "old_state": "NOT_EVALUATED",
+        "published_empty_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO"
+      },
+      "member_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "modern_evanescent_reporting": {
+        "encoded_value": {},
+        "epistemic_correction": "NOT_EVALUATED",
+        "evidence": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_revalidation_pass_0270_v0\\independent_source\\comparison_review\\comparison_review.json#/row_reviews/3",
+        "status": "DEFECT_CONFIRMED"
+      },
+      "pair_id": "Q2PAIR-ab2e2ad4ad031bed675021d6",
+      "physical_comparison": {
+        "all_target_maps": [
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1",
+            "primary_id": "D6-PSI4-DUQL",
+            "scale": "sqrt(3)/6"
+          }
+        ],
+        "metadata_caveat": null,
+        "modern_minus_corrected": {
+          "D6-PSI4-DUQL::CANONICAL_GAUGE_BASIS_1": "g1**2*(-xi1 - 3)/6"
+        },
+        "source_and_target_normalization_applied": true,
+        "status": "CHANGED"
+      },
+      "row_id": "RV04",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/12"
+      },
+      "source_operator_id": "D6-PSI4-DUQL",
+      "strata": [
+        "SM_X",
+        "SM_X_Delta",
+        "SM_X_rho3",
+        "SM_X_rho8",
+        "SM_X_rho3_Delta",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8",
+        "SM_X_rho3_rho8_Delta"
+      ]
+    },
+    {
+      "authority_effect": "NONE",
+      "corrected_native_evanescent": {
+        "analytic_absence_certificate": "uniform_chain_certificate.json",
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\run_A\\uniform_chain_certificate.json",
+          "sha256": "e7aaf27a0cabdf64081d0c3fbcf42b096adec98f747c4bb0611270c8b4643fa5"
+        },
+        "derivation": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\independent_e_review.json",
+          "sha256": "8a4970340313c8b206ed4d9e7861b2dd963898a2695c2cd70b5fce839d078d1a"
+        },
+        "finite_d_completion": "NOT_FIXED; finite h/epsilon scalar terms outside canonical E simple-pole scope",
+        "native_quotient_matrix_executed": false,
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\e_root_review.json",
+          "sha256": "20bea6c03cee4285b4bba7654091345b3e5f7e19d34b724b06c87531ff18f600"
+        },
+        "status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "value": "0",
+        "value_kind": "CANONICAL_EVANESCENT_SIMPLE_POLE_TENSOR"
+      },
+      "evanescent_comparison": {
+        "computed_old_vs_new_value": "NOT_COMPARABLE_OLD_UNEVALUATED",
+        "corrected_state": "EVALUATED_ZERO",
+        "new_nonzero_content_required": false,
+        "old_reporting_defect_repaired_retroactively": false,
+        "old_state": "NOT_EVALUATED",
+        "published_empty_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO"
+      },
+      "member_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "modern_evanescent_reporting": {
+        "encoded_value": {},
+        "epistemic_correction": "NOT_EVALUATED",
+        "evidence": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_revalidation_pass_0270_v0\\independent_source\\comparison_review\\comparison_review.json#/row_reviews/4",
+        "status": "DEFECT_CONFIRMED"
+      },
+      "pair_id": "Q2PAIR-d1edd8310110b32004127314",
+      "physical_comparison": {
+        "all_target_maps": [
+          {
+            "inverse_residual": "0",
+            "modern_id": "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1",
+            "primary_id": "D5-DD-X-H-A",
+            "scale": "-sqrt(3)/6"
+          }
+        ],
+        "metadata_caveat": null,
+        "modern_minus_corrected": {
+          "D5-DD-X-H-A::CANONICAL_GAUGE_BASIS_1": "2*g3**2*(-xi3 - 3)"
+        },
+        "source_and_target_normalization_applied": true,
+        "status": "CHANGED"
+      },
+      "row_id": "RV05",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "2*g3**2*(xi3 + 3)/3"
+      },
+      "source_operator_id": "D5-DD-X-H-A",
+      "strata": [
+        "SM_X",
+        "SM_X_Delta",
+        "SM_X_rho3",
+        "SM_X_rho8",
+        "SM_X_rho3_Delta",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8",
+        "SM_X_rho3_rho8_Delta"
+      ]
+    },
+    {
+      "authority_effect": "NONE",
+      "corrected_native_evanescent": {
+        "analytic_absence_certificate": "uniform_chain_certificate.json",
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\run_A\\uniform_chain_certificate.json",
+          "sha256": "e7aaf27a0cabdf64081d0c3fbcf42b096adec98f747c4bb0611270c8b4643fa5"
+        },
+        "derivation": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\independent_e_review.json",
+          "sha256": "8a4970340313c8b206ed4d9e7861b2dd963898a2695c2cd70b5fce839d078d1a"
+        },
+        "finite_d_completion": "NOT_FIXED; finite h/epsilon scalar terms outside canonical E simple-pole scope",
+        "native_quotient_matrix_executed": false,
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\e_root_review.json",
+          "sha256": "20bea6c03cee4285b4bba7654091345b3e5f7e19d34b724b06c87531ff18f600"
+        },
+        "status": "EVALUATED_ZERO_BY_UNIFORM_SOURCE_BOUND_ABSENCE",
+        "value": "0",
+        "value_kind": "CANONICAL_EVANESCENT_SIMPLE_POLE_TENSOR"
+      },
+      "evanescent_comparison": {
+        "computed_old_vs_new_value": "NOT_COMPARABLE_OLD_UNEVALUATED",
+        "corrected_state": "EVALUATED_ZERO",
+        "new_nonzero_content_required": false,
+        "old_reporting_defect_repaired_retroactively": false,
+        "old_state": "NOT_EVALUATED",
+        "published_empty_interpreted_as_zero": "AGREES_WITH_CORRECTED_CANONICAL_ZERO"
+      },
+      "member_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "modern_evanescent_reporting": {
+        "encoded_value": {},
+        "epistemic_correction": "NOT_EVALUATED",
+        "evidence": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_revalidation_pass_0270_v0\\independent_source\\comparison_review\\comparison_review.json#/row_reviews/5",
+        "status": "DEFECT_CONFIRMED"
+      },
+      "pair_id": "Q2PAIR-15e31877def1896db8788073",
+      "physical_comparison": {
+        "all_target_maps": [
+          {
+            "inverse_residual": "0",
+            "modern_id": "D6-P2P3-UBAR-Q-X3::C1",
+            "primary_id": "D6-P2P3-UBAR-Q-X3::C1",
+            "scale": "1"
+          }
+        ],
+        "metadata_caveat": "Pass0078 lorentz_class=SCALAR_ONLY is a classifier fallback, not a spinor-free source. The Pass0018 mixed-conjugation scalar and Pass0019 opposite-effective-chirality rule give bar(u_R) q_L = bar(u) P_L q. No spinor computation relies on that fallback.",
+        "modern_minus_corrected": {
+          "D6-P2P3-UBAR-Q-X3::C1": "0"
+        },
+        "source_and_target_normalization_applied": true,
+        "status": "UNCHANGED"
+      },
+      "row_id": "RV06",
+      "source_defined_physical_value": {
+        "certificate": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\physical_run_A\\physical_maps.json",
+          "sha256": "7a922cd2052999034658e45eb4bc17278f757a2d92a1e694092ca1c92c1c45be"
+        },
+        "non_author_review": {
+          "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\tooling\\scientific_compute\\model1_installation_preparation\\route_c03_values_pass_0272_v0\\independent_e_review\\physical_maps_review.json",
+          "sha256": "a92ae834266a05e649afad9b67422dd03c7a21f8cac6d3cb7543216b67d445e3"
+        },
+        "status": "EVALUATED_WITH_COMPLETE_SOURCE_TARGET_MAP",
+        "units": "coefficient of source C O after 1/(16*pi^2*epsilon) stripped",
+        "value": "g1**2*(xi1 + 3)/9"
+      },
+      "source_operator_id": "D6-P2P3-UBAR-Q-X3::C1",
+      "strata": [
+        "SM_X",
+        "SM_X_Delta",
+        "SM_X_rho3",
+        "SM_X_rho8",
+        "SM_X_rho3_Delta",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8",
+        "SM_X_rho3_rho8_Delta"
+      ]
+    }
+  ],
+  "remaining_C03_protocol": {
+    "I1": {
+      "disposition": "PASS",
+      "scope": "Bounded six-source independence/custody split and forensic receipts",
+      "unmet": "Not external expert review; declared file scope is not a hardware isolation proof; full historical corpus validation not independently performed."
+    },
+    "I2": {
+      "disposition": "PASS",
+      "scope": "Actual six modern branch reachability plus separate boundary",
+      "unmet": "No independent new C03 source/loop confirmation in this review."
+    },
+    "I3": {
+      "disposition": "UNDERDEFINED",
+      "scope": "Gauge-only reduction boundary confirmed; six local controls retained",
+      "unmet": "Required C03 omitted/sign-reversed specified color/Grassmann factors and discriminating cross-bilinear transverse test were not performed."
+    },
+    "I4": {
+      "disposition": "UNDERDEFINED",
+      "scope": "Six descendant source-defined P values and five admissible full comparison maps closed by Pass0272; RV03 wrong-channel map remains inapplicable.",
+      "unmet": "Separate C03 cross-bilinear source/loop/normalization confirmation has not been executed here."
+    },
+    "I5": {
+      "disposition": "PASS",
+      "scope": "Six producer dataflows and separate boundary E serializer",
+      "unmet": "No native E magnitude follows; repository-wide serializer footprint not exhausted."
+    },
+    "I6": {
+      "disposition": "UNDERDEFINED",
+      "scope": "Six descendant canonical E simple-pole zeros established by source-bound uniform absence; no DUUE quotient is needed for these single-chain graphs.",
+      "unmet": "Separate C03 nonzero 14-coordinate native quotient/residual confirmation is outside this one-active-chain proof."
+    },
+    "I7": {
+      "disposition": "PASS",
+      "scope": "Six records, exact forty strata, twenty zero target coordinates plus separate branch-negative/E-positive reporting control",
+      "unmet": "Other five boundary-population records remain untested; no global clearance or damage count."
+    },
+    "I8": {
+      "disposition": "UNDERDEFINED",
+      "scope": "No historical terminal classification review performed",
+      "unmet": "Historical E1/E7 inequivalence/exhaustion witnesses and reopening conditions not independently inspected."
+    }
+  },
+  "review": {
+    "AB": "Fresh deterministic repeats, not independent derivations.",
+    "E": "Separate source-bound uniform analytic derivation, parent non-author source/admission review and independent finite Clifford controls.",
+    "P": "Answer-aware separate non-author exact map review plus prior source-blind derivation.",
+    "human_expert_review_claimed": false
+  },
+  "schema_id": "PASS0272_SIX_RECORD_CORRECTED_VALUE_DAMAGE_MATRIX_v0",
+  "scope": {
+    "E": "Canonical simple-pole tensor, not the full d-dependent numerator or finite evanescent-sensitive amplitude. Analytic absence, not execution of a native quotient matrix.",
+    "counts": "Six selected record graphs, 40 exact stratum bindings, not 40 independent calculations. No global runner clearance.",
+    "generic_parameter_comparison": "CHANGED means different symbolic functions; they may coincide at special gauge/coupling values.",
+    "old_empty": "All six old reports remain unevaluated. Zero is now separately derived; no retroactive computation credited.",
+    "units": "Direct Gamma_UV, coefficient of C O with 1/(16*pi^2*epsilon) factored. Not cancelling counterterm, ADM, sum of all topologies or proton decay observable."
+  },
+  "status": "SIX_SOURCE_PHYSICAL_AND_CANONICAL_E_VALUES_REVIEWED__RUNNER_UNCHANGED"
+}

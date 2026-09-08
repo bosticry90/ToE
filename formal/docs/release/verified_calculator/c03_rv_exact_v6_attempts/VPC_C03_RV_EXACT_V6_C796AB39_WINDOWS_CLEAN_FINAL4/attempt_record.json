@@ -1,0 +1,31 @@
+{
+  "schema_id": "VerifiedCalculatorQualificationAttemptRecordV1",
+  "attempt_id": "VPC_C03_RV_EXACT_V6_C796AB39_WINDOWS_CLEAN_FINAL4",
+  "tested_commit": "c796ab39282bb68c4ea2e31b1d07896dacd3c92d",
+  "platform": "Windows",
+  "initial_git_status_entry_count": 0,
+  "checkout_configuration": {
+    "core_autocrlf": false,
+    "working_tree_text_form": "LF/GIT_BLOB_BYTES"
+  },
+  "stage": "PYTHON_CLOSURE_TESTS",
+  "status": "FAIL",
+  "failure_code": "HASH_BOUND_SOURCE_CHECKOUT_BYTES_NOT_PORTABLE",
+  "observed": {
+    "tests": 269,
+    "passed": 115,
+    "failed": 7,
+    "errors": 134,
+    "skipped": 13,
+    "duration_seconds": "41.841"
+  },
+  "evidence": {
+    "pytest_junit_path": "pytest.xml",
+    "pytest_junit_sha256": "6ddca09bcef8b4714a3f7e089d9370df4f6757176ef2a535a3acfc203645e584"
+  },
+  "disposition": "PRESERVED_FAILED_ATTEMPT__REPAIR_ONLY_PLATFORM_SPECIFIC_SOURCE_CHECKOUT_CUSTODY",
+  "scientific_payload_evaluated": false,
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

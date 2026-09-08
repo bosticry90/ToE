@@ -1,0 +1,299 @@
+{
+  "artifact_id": "TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_RESULT_v0",
+  "attempt_sequence_number": 4,
+  "candidate_assessments": [
+    {
+      "candidate_core_id": "CCFT-CORE-CANDIDATE-CP-NLSE-NUMERICAL-SURROGATE",
+      "closure_matrix": [
+        {
+          "criterion": "complete_state_specification",
+          "evidence": "CCFT-MATH-001 defines complex psi and derived rho=|psi|^2.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "closed_evolution_rule",
+          "evidence": "CCFT-MATH-003 gives a first-order nonlinear PDE for psi without an auxiliary chi or rotor equation.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "conservation_or_exchange_contract",
+          "evidence": "The authorized lock expressly excludes invariants beyond its measured linear-dispersion test; no nonlinear conservation or exchange contract is bound by CCFT-MATH-001 through 006.",
+          "status": "PARTIALLY_SATISFIED"
+        },
+        {
+          "criterion": "initial_data_contract",
+          "evidence": "CCFT-MATH-006 supplies one plane-wave benchmark. Its amplitude makes |psi|^2=rho0, so the nonlinear term cancels; no admissible nonlinear initial-data class or regularity contract is supplied.",
+          "status": "NUMERICALLY_SPECIFIED_ONLY"
+        },
+        {
+          "criterion": "boundary_data_contract",
+          "evidence": "CCFT-MATH-002 fixes a two-dimensional periodic box and uniform grid for the C6 benchmark.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "parameter_contract",
+          "evidence": "g and rho0 have mathematical roles and the linear test fixes g=0, but the distinctive nonlinear regime has no source-bound admissible ranges, normalization, or fixed parameter packet.",
+          "status": "PARTIALLY_SATISFIED"
+        },
+        {
+          "criterion": "domain_and_scale_contract",
+          "evidence": "The 32 by 32 periodic 2*pi box is computationally explicit; coordinate units, continuum regularity, and any physical mesoscopic scale are absent.",
+          "status": "NUMERICALLY_SPECIFIED_ONLY"
+        },
+        {
+          "criterion": "surrogate_operational_output",
+          "evidence": "CCFT-MATH-006 defines a sampled time series, FFT frequency estimate, theoretical comparator, and relative-error threshold in the linear limit.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "known_physics_comparator",
+          "evidence": "CCFT-MATH-004 and 005 supply the g=0 linear Schrodinger comparator and quadratic dispersion.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "conflict_isolation",
+          "evidence": "The candidate excludes CE-NWE, UCFF, chi, and rotor equations. The conflicting nonzero-interaction frequency statement is not used to close this PDE.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "new_postulates_required",
+          "evidence": "A distinctive nonlinear core would require an admissible nonlinear data class, parameter/normalization contract, nonlinear invariant or exchange rule, and nonlinear acceptance test not supplied by the authorized entries.",
+          "status": "REQUIRES_NEW_POSTULATE"
+        },
+        {
+          "criterion": "internal_failure_conditions",
+          "evidence": "The 0.1 dispersion-error threshold rejects only the generic g=0 benchmark; no source-bound failure condition adjudicates the distinctive nonlinear surrogate.",
+          "status": "PARTIALLY_SATISFIED"
+        }
+      ],
+      "closure_status": "NOT_CLOSED_AS_A_DISTINCTIVE_NONLINEAR_CCFT_SURROGATE",
+      "conflict_and_cross_lineage_exclusions": [
+        "CE-NWE is not imported.",
+        "UCFF dispersion is not used as the CP-NLSE dispersion.",
+        "Neither chi branch is selected.",
+        "No LCRD rotor or curvature equation is imported.",
+        "The inconsistent additive nonzero-interaction frequency is not repaired or used."
+      ],
+      "conservation_or_exchange_status": "No nonlinear source-bound conservation or exchange contract in the authorized candidate entries.",
+      "domain_and_scale_contract": "Closed only as a normalized finite periodic benchmark domain; continuum regularity and physical scale are unbound.",
+      "evolution_closure": "The PDE is explicit, but the only fully specified benchmark suppresses its nonlinear term.",
+      "initial_and_boundary_data": "Periodic boundary data and one linearizing plane-wave initial condition are explicit; a nonlinear admissible-data contract is absent.",
+      "internal_failure_conditions": "Linear frequency relative error below 0.1 only; no nonlinear-core rejection criterion.",
+      "known_physics_comparator": "Two-dimensional free linear Schrodinger equation at g=0.",
+      "lineage_scope": "CCFT-LINEAGE-CP-NLSE-2D only",
+      "new_postulate_ledger": [
+        "nonlinear admissible initial-data and regularity class",
+        "nonlinear parameter and nondimensionalization contract",
+        "nonlinear conservation or exchange contract",
+        "nonlinear reproducibility and failure benchmark"
+      ],
+      "parameter_contract": "Partial: names and the g=0 test value are present; the nonlinear parameter domain is not.",
+      "selection_or_rejection_rationale": "Rejected as the selected minimal CCFT surrogate. Its explicit closed benchmark is the generic linear or nonlinearity-canceling limit, while the potentially distinctive nonlinear system lacks the remaining frozen closure contracts.",
+      "source_entry_and_operational_record_ids": {
+        "entry_ids": [
+          "CCFT-MATH-001",
+          "CCFT-MATH-002",
+          "CCFT-MATH-003",
+          "CCFT-MATH-004",
+          "CCFT-MATH-005",
+          "CCFT-MATH-006"
+        ],
+        "operational_record_ids": [
+          "CCFT-OP-001",
+          "CCFT-OP-002",
+          "CCFT-OP-003",
+          "CCFT-OP-004"
+        ]
+      },
+      "state_specification": "psi(x,y,t) complex with rho=|psi|^2 on a periodic two-dimensional grid.",
+      "surrogate_operational_output": "A numerical field time series and linear-limit frequency residual; no physical observable.",
+      "terminal_candidate_classification": "ONLY_GENERIC_KNOWN_PHYSICS_BASELINE_CLOSES_WITHOUT_NEW_CONTENT"
+    },
+    {
+      "candidate_core_id": "CCFT-CORE-CANDIDATE-LCRD-V3-NUMERICAL-SURROGATE",
+      "closure_matrix": [
+        {
+          "criterion": "complete_state_specification",
+          "evidence": "CCFT-MATH-009 defines the four real fields rho, u, R, and K.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "closed_evolution_rule",
+          "evidence": "CCFT-MATH-011 through 014 give one first-order evolution equation for every state field within the LCRD-v3 branch.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "conservation_or_exchange_contract",
+          "evidence": "CCFT-MATH-016 records a CRFT reduction and an isolated zero-coupling numerical energy claim, but no general coupled invariant or exchange balance.",
+          "status": "PARTIALLY_SATISFIED"
+        },
+        {
+          "criterion": "initial_data_contract",
+          "evidence": "No authorized entry supplies explicit initial fields, admissibility constraints, regularity assumptions, or test-specific initial data.",
+          "status": "BLOCKED_BY_MISSING_DEFINITION"
+        },
+        {
+          "criterion": "boundary_data_contract",
+          "evidence": "CCFT-MATH-009 and 015 specify a one-dimensional periodic domain with Fourier differentiation.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "parameter_contract",
+          "evidence": "CCFT-MATH-010 names coefficient roles, but supplies no values, admissible ranges, dimensions, sign restrictions, or explicit declaration that arbitrary values form the surrogate contract.",
+          "status": "BLOCKED_BY_MISSING_DEFINITION"
+        },
+        {
+          "criterion": "domain_and_scale_contract",
+          "evidence": "A periodic length L and N-point spectral grid are stated symbolically; L, N, timestep, duration, normalization, and physical scale remain unspecified.",
+          "status": "NUMERICALLY_SPECIFIED_ONLY"
+        },
+        {
+          "criterion": "surrogate_operational_output",
+          "evidence": "The state fields, reduction check, isolated energy drift, reproducibility, and bounded-regime behavior are described, but no raw output or executable source is bound in the authorized packet.",
+          "status": "PARTIALLY_SATISFIED"
+        },
+        {
+          "criterion": "known_physics_comparator",
+          "evidence": "CCFT-MATH-016 specifies the R=K=0 and disabled-coupling reduction to CRFT hydrodynamics.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "conflict_isolation",
+          "evidence": "The assessment retains only the explicit historical LCRD-v3 branch and does not import alternative rotor drivers, a rotor functional, or an LSDA map.",
+          "status": "SATISFIED_BY_SOURCE_BOUND_EVIDENCE"
+        },
+        {
+          "criterion": "new_postulates_required",
+          "evidence": "A reproducible core requires an initial-data packet, coefficient/range/normalization contract, and executable implementation or equally complete numerical specification not present in the authorized entries.",
+          "status": "REQUIRES_NEW_POSTULATE"
+        },
+        {
+          "criterion": "internal_failure_conditions",
+          "evidence": "The lock describes tests and bounded-regime nondivergence, but the named implementation and test suite are not present at their source-bound paths and no raw results were retained in the candidate packet.",
+          "status": "PARTIALLY_SATISFIED"
+        }
+      ],
+      "closure_status": "NOT_CLOSED_WITHIN_THE_AUTHORIZED_SOURCE_PACKET",
+      "conflict_and_cross_lineage_exclusions": [
+        "Alternative rotor drivers are not selected.",
+        "The quadratic rotor functional is not treated as a variational derivation.",
+        "No LSDA-to-LCRD coarse-graining map is asserted.",
+        "No CP-NLSE, CE-NWE, UCFF, or chi equation is imported."
+      ],
+      "conservation_or_exchange_status": "Only limited reduction and isolated numerical-invariant claims; no general coupled balance contract.",
+      "domain_and_scale_contract": "A symbolic one-dimensional periodic numerical domain without a complete discretization, normalization, or physical scale packet.",
+      "evolution_closure": "All four phenomenological PDEs are explicit within the retained branch.",
+      "initial_and_boundary_data": "Periodic boundaries are explicit; initial-state and regularity contracts are absent.",
+      "internal_failure_conditions": "Described but not reproducible from the authorized packet because the named implementation/test bytes and raw results are unbound.",
+      "known_physics_comparator": "Disabled-coupling CRFT hydrodynamic reduction.",
+      "lineage_scope": "CCFT-LINEAGE-LCRD-V3 only",
+      "new_postulate_ledger": [
+        "initial-state and regularity contract",
+        "coefficient values ranges signs dimensions or explicit normalized-free-parameter rule",
+        "complete numerical grid timestep duration and convergence contract",
+        "portable implementation and diagnostic-output custody"
+      ],
+      "parameter_contract": "Blocked: coefficient roles exist, but the values/ranges/dimensions/free-parameter rule do not.",
+      "selection_or_rejection_rationale": "Rejected as the selected minimal CCFT surrogate. Explicit equations do not cure the missing data, parameter, normalization, and reproducibility contracts, and novelty cannot substitute for closure.",
+      "source_entry_and_operational_record_ids": {
+        "entry_ids": [
+          "CCFT-MATH-009",
+          "CCFT-MATH-010",
+          "CCFT-MATH-011",
+          "CCFT-MATH-012",
+          "CCFT-MATH-013",
+          "CCFT-MATH-014",
+          "CCFT-MATH-015",
+          "CCFT-MATH-016"
+        ],
+        "operational_record_ids": [
+          "CCFT-OP-007",
+          "CCFT-OP-008",
+          "CCFT-OP-009",
+          "CCFT-OP-010",
+          "CCFT-OP-011"
+        ]
+      },
+      "state_specification": "rho, u, R, and K real fields on a one-dimensional periodic domain.",
+      "surrogate_operational_output": "Phenomenological state evolution and stated reduction/invariant diagnostics; no physical observable.",
+      "terminal_candidate_classification": "EXPLICIT_PHENOMENOLOGICAL_EQUATIONS_WITH_INCOMPLETE_COMPUTATIONAL_CONTRACT"
+    }
+  ],
+  "captured_at_utc": "2026-08-01T01:11:05Z",
+  "closure_matrix_summary": {
+    "candidate_count": 2,
+    "cell_count": 24,
+    "status_counts": {
+      "BLOCKED_BY_MISSING_DEFINITION": 2,
+      "BLOCKED_BY_MISSING_DYNAMICS": 0,
+      "BLOCKED_BY_FORMULATION_CONFLICT": 0,
+      "NOT_APPLICABLE": 0,
+      "NUMERICALLY_SPECIFIED_ONLY": 3,
+      "PARTIALLY_SATISFIED": 6,
+      "REQUIRES_NEW_POSTULATE": 2,
+      "SATISFIED_BY_SOURCE_BOUND_EVIDENCE": 11
+    }
+  },
+  "implementation_availability_audit": {
+    "cp_nlse": "The lock's exact historical driver path is absent. A related tracked implementation and current tests exist outside the frozen Stage 3 source-entry bindings and were not imported to cure the Stage 4 closure gaps.",
+    "lcrd_v3": "The lock names lcrd_v3.py and fundamental_theory.lcrd.tests.lcrd_t1_to_t10, but those implementation and test paths are not present in the tracked checkout.",
+    "scientific_treatment": "Artifact availability is recorded only as a reproducibility fact; unreviewed files and absent historical bytes do not become source-bound closure evidence."
+  },
+  "input_bindings": {
+    "open_authority": {
+      "path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_STAGE_4_OPEN_AUTHORITY_v0.json",
+      "sha256": "7bf8e23c412863ae00d3ab93c7653e209ced4461a1bfbaeb98c8a6eaad65400d"
+    },
+    "open_authority_review": {
+      "path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_STAGE_4_OPEN_AUTHORITY_REVIEW_v0.json",
+      "sha256": "e3a4a099bb6873923abec744e0e3b0a08f1187bdd322e13f766553e59f4a101d"
+    },
+    "open_event": {
+      "event_hash": "1042769e00fc09017e2cbcc1c2842a37f1da21820731fa7021733b62ff11a782",
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_04_OPEN_v0.json",
+      "sha256": "10cbc7156d7e58fd6d3cff29d53f5230175d9a45f9ebf44243424267fbad556e"
+    },
+    "open_validation": {
+      "path": "formal/docs/release/TOE_MINIMAL_CLOSED_CCFT_CORE_DECISION_OPEN_VALIDATION_v0.json",
+      "sha256": "6aaf5ffe48606fc1dfb9c0f21df061e813fe03f9beab08cd89ceae4eea7b4708"
+    },
+    "stage_3_result": {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_v0.json",
+      "sha256": "7f0b5c4d01bde1976ea4c933e7eda39a78eb3fcf50b4b952fc210f0b5b6a12e5"
+    },
+    "stage_3_review": {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_RESULT_REVIEW_v0.json",
+      "sha256": "b9908a8c414887eb46ba1d94e017ec26f9cde189468808372dfa8b90bc6ca27f"
+    }
+  },
+  "lifecycle_result": "BLOCKED",
+  "minimal_core_selected": false,
+  "new_postulate_inserted": false,
+  "next_stage": {
+    "semantic_stage_id": "CCFT_VIABILITY_TEST_HANDOFF_DECISION",
+    "status": "PROHIBITED_AFTER_BLOCK",
+    "target": "select_toe_ccft_core_viability_testing_handoff_v0"
+  },
+  "nonclaim_boundary": [
+    "No physical CCFT variable, bearer, units, mesoscopic scale, operation, or measurement channel is established.",
+    "No preferred formulation or minimal surrogate core is selected.",
+    "No CP-NLSE/LCRD wave-rotor combination is constructed.",
+    "No equation, interaction-frequency conflict, chi dynamics, LSDA map, or coefficient contract is repaired.",
+    "No action, seam, observable, viability test, empirical claim, or evidence promotion is created.",
+    "The generic linear comparator is not presented as distinctive CCFT content.",
+    "Repository-wide claim exhaustion is not established."
+  ],
+  "physical_ccft_model_established": false,
+  "preferred_formulation_selected": false,
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "schema_id": "toe.ccft.minimal_closed_core_decision.result.v0",
+  "scientific_conclusion": "Neither authorized candidate closes as a distinctive, source-bound CCFT computational surrogate without new content. CP-NLSE closes only in the generic linear or nonlinearity-canceling benchmark, while LCRD-v3 has explicit phenomenological equations but lacks source-bound initial-data, parameter, normalization, and reproducibility contracts.",
+  "scientific_target": "select_or_reject_toe_minimal_closed_ccft_core_v0",
+  "scope_hash": "e8bd8faac099a9b1c9e759bfae544bbe8eb56ad631959b369dc595b9f9901adf",
+  "selected_next_target": "close_toe_ccft_native_mathematical_core_and_operationalization_v0_after_bounded_result_v0",
+  "selected_next_target_status": "MANDATORY_EXIT_SELECTED_NOT_EXECUTED",
+  "semantic_stage_id": "MINIMAL_CLOSED_CCFT_CORE_DECISION",
+  "stage_5_authorized": false,
+  "status": "STAGE_4_CLOSED_BLOCKED_NO_CORE_MANDATORY_EXIT_SELECTED",
+  "terminal_outcome": "NO_CLOSED_CCFT_MATHEMATICAL_CORE_RECOVERED"
+}

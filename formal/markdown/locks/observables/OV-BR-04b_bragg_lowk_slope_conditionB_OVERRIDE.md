@@ -12,7 +12,7 @@ Record (computed)
   "condition_key": "condition_B",
   "condition_semantic": "open circles",
   "date": "2026-01-25",
-  "fingerprint": "f4b947cd26cd67c371d6e31c1dda1e0f4f19d8b542b35b39391742baf7b171b6",
+  "fingerprint": "f6e110ce6ce5daa032c7d3f8ced24b6dfca5fd621a7cf4fda18ca841eb1b6d5a",
   "input_dataset": {
     "condition_key": "condition_B",
     "condition_semantic": "open circles",
@@ -117,7 +117,7 @@ Record (computed)
     },
     "blocked": false,
     "debug": {
-      "manifest_input_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
+      "manifest_input_path": "formal/markdown locks/gates/admissibility_manifest_ENABLED_OVERRIDE.json",
       "manifest_resolved_path": "formal/markdown locks/gates/admissibility_manifest_ENABLED_OVERRIDE.json",
       "manifest_sha256": "2f9c1aa1dbcc30451ac0740cb09d85c1d12b6490efb02d449e453cc0de94c13f",
       "manifest_version": 5
@@ -138,4 +138,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `f4b947cd26cd67c371d6e31c1dda1e0f4f19d8b542b35b39391742baf7b171b6`
+Record fingerprint: `f6e110ce6ce5daa032c7d3f8ced24b6dfca5fd621a7cf4fda18ca841eb1b6d5a`

@@ -22,15 +22,43 @@ function Write-Info([string]$msg) { Write-Host "[build] $msg" }
 # -----------------------
 # Hard-bound executables
 # -----------------------
-# Default WinGet shim location for lake (works even when PATH is broken)
-$LakeExe = Join-Path $env:LOCALAPPDATA "Microsoft\WinGet\Links\lake.exe"
+function Resolve-Tool(
+  [string]$override,
+  [string]$commandName,
+  [string[]]$fallbacks
+) {
+  if (-not [string]::IsNullOrWhiteSpace($override)) {
+    return $override
+  }
+  $command = Get-Command $commandName -CommandType Application -ErrorAction SilentlyContinue |
+    Select-Object -First 1
+  if ($command) {
+    return $command.Source
+  }
+  foreach ($fallback in $fallbacks) {
+    if (
+      -not [string]::IsNullOrWhiteSpace($fallback) -and
+      (Test-Path -LiteralPath $fallback)
+    ) {
+      return $fallback
+    }
+  }
+  throw "$commandName not found on PATH and no platform fallback exists."
+}
 
-# Pin a known Lean toolchain executable (override with TOE_LEAN_EXE if needed)
-$LeanExe = Join-Path $env:USERPROFILE ".elan\toolchains\leanprover--lean4---v4.27.0-rc1\bin\lean.exe"
+$lakeFallbacks = @()
+if (-not [string]::IsNullOrWhiteSpace($env:LOCALAPPDATA)) {
+  $lakeFallbacks += Join-Path $env:LOCALAPPDATA "Microsoft\WinGet\Links\lake.exe"
+}
+$leanFallbacks = @()
+if (-not [string]::IsNullOrWhiteSpace($env:USERPROFILE)) {
+  $leanFallbacks += Join-Path $env:USERPROFILE ".elan\toolchains\leanprover--lean4---v4.27.0-rc1\bin\lean.exe"
+}
 
-# Optional overrides
-if ($env:TOE_LAKE_EXE) { $LakeExe = $env:TOE_LAKE_EXE }
-if ($env:TOE_LEAN_EXE) { $LeanExe = $env:TOE_LEAN_EXE }
+# Explicit overrides remain highest priority.  Otherwise prefer the active
+# elan/toolchain shims on PATH, with the prior Windows paths as fallbacks.
+$LakeExe = Resolve-Tool $env:TOE_LAKE_EXE "lake" $lakeFallbacks
+$LeanExe = Resolve-Tool $env:TOE_LEAN_EXE "lean" $leanFallbacks
 
 function Assert-Exists([string]$path, [string]$label) {
   if (-not (Test-Path -LiteralPath $path)) {

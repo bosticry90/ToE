@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import equation_compendium_identity
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -151,6 +152,12 @@ NEGATIVE_CONTROLS = (
 
 
 def sha256_path(path: Path) -> str:
+    if path.resolve() == COMPENDIUM_PATH.resolve():
+        equation_compendium_identity.verify_equation_compendium(
+            expected_path=COMPENDIUM_PATH.relative_to(REPO_ROOT).as_posix(),
+            expected_historical_sha256=EXPECTED_COMPENDIUM_SHA256,
+        )
+        return EXPECTED_COMPENDIUM_SHA256
     digest = hashlib.sha256()
     with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):

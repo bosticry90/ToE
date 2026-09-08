@@ -1,0 +1,17 @@
+{
+  "artifact_id": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORITY_PACKET_REVIEW_20260729_v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "consumed_artifact": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORITY_PACKET_20260729_v0",
+  "corrective_target": "prepare_quadratic_stage_1_2_certificate_status_correction_packet_v0",
+  "decision": "QUADRATIC_STAGE_1_2_CERTIFICATE_STATUS_CORRECTION_AUTHORIZED",
+  "nonclaim_boundary": [
+    "The correction may qualify certification language but may not add the missing proofs.",
+    "The correction is outside the closed Program B attempt sequence and consumes no bounded stage.",
+    "The original artifacts remain immutable historical records.",
+    "Quadratic and native-surrogate terminal outcomes remain unchanged."
+  ],
+  "required_result_review_target": "review_quadratic_stage_1_2_certificate_status_correction_result_v0",
+  "schema_id": "toe.qft_gr.quadratic.stage_1_2_certificate_status_correction.authority_review.v0",
+  "scientific_target_preserved": "close_toe_native_surrogate_v0_after_bounded_result_v0",
+  "status": "ACCEPTED_NONADVANCING_SCIENTIFIC_CUSTODY_CORRECTION_AUTHORITY"
+}

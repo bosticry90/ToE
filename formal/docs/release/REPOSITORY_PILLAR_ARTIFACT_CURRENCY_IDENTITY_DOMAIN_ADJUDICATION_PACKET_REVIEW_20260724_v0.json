@@ -1,0 +1,24 @@
+{
+  "captured_at_utc": "2026-07-24T22:13:51Z",
+  "checks": {
+    "accepted_390_outcome_reassessment_and_commit_bound": true,
+    "all_16_consumer_rows_required": true,
+    "allowed_dispositions_exhaustively_enumerated": true,
+    "artifact_generator_packet_review_and_identity_roles_distinguished": true,
+    "automatic_successor_forbidden": true,
+    "current_historical_and_noncurrent_roles_distinguished": true,
+    "exact_16_outcome_pillar_artifact_currency_root_bound": true,
+    "hash_test_source_generator_artifact_scientific_registry_v2_and_lean_mutations_forbidden": true,
+    "independent_result_review_required": true,
+    "inventory_delta_reconciles_17_prior_guards_plus_6_new_guards": true,
+    "outputs_contained_under_toe_recovery": true,
+    "substantive_and_representational_mismatch_analysis_required": true
+  },
+  "review_basis": "INDEPENDENT_LINEAGE_ROOT_CARDINALITY_IDENTITY_ROLE_SCOPE_CONTAINMENT_INVENTORY_RECONCILIATION_AND_NONMUTATION_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260724_v0.json",
+    "sha256": "b57ecf8e4b87e4b2c192d6f5998fd10dc02adf2951011f61eae2b0b7eea4d549"
+  },
+  "schema_id": "REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_PACKET_REVIEW_20260724_v0",
+  "verdict": "ACCEPT"
+}

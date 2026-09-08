@@ -1,0 +1,81 @@
+{
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_PROPOSAL_PREPARATION_ONLY",
+  "authorized_target": "prepare_bounded_ccft_v0_theory_construction_program",
+  "branch_selection_authorized": false,
+  "captured_at_utc": "2026-08-02T02:52:50Z",
+  "consumed_terminal_checkpoint": [
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "role": "terminal targeted-recovery result",
+      "sha256": "f74e6adda53a5163c4719cfaeb76cacf5acb1ee9fd0a14ecc36e2b4696e90858"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+      "role": "independent terminal targeted-recovery review",
+      "sha256": "d9d492d7311ef8eb793b4554cd82b446aad530941867137efd922e5751ed438b"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_VALIDATION_v0.json",
+      "role": "terminal targeted-recovery validation",
+      "sha256": "cdce3ca3bca3835919057470e1d0a7fa65723de272b2a9c33f78cb43f631869a"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0.json",
+      "role": "positive targeted-recovery handoff result",
+      "sha256": "79acfadda56d2ef75ad3c061309c0bc5dbbf48c2366aa1f946ef3bd3208b4782"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_REVIEW_v0.json",
+      "role": "independent positive handoff review",
+      "sha256": "a5e15aff904fefd113ab2a79d23eb3f63e066be8a7d47fbd3fc8de0c7c43c343"
+    }
+  ],
+  "frozen_scientific_inputs": {
+    "closed_ccft_v0_model": "NONE",
+    "historical_recovery_complete_for_ccft_v0": true,
+    "new_ccft_postulates": 0,
+    "preserved_cp_nlse_conflicts": 3,
+    "repository_claim_exhaustion_established": false,
+    "selected_ccft_v0_branch": "NONE",
+    "source_recovered_contracts": 4
+  },
+  "permitted_work": [
+    "PREPARE_ONE_BOUNDED_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_PROGRAM_PROPOSAL",
+    "CREATE_A_NONSELECTING_RESEARCH_DIRECTOR_DECISION_PACKET_COMPARING_FOUR_FROZEN_OPTIONS",
+    "FREEZE_A_FIVE_STAGE_SCIENCE_CENTERED_SEQUENCE",
+    "FREEZE_PROVENANCE_LABELS_FOR_RECOVERED_BASELINE_POSTULATE_NUMERICAL_AND_CONTROL_CONTENT",
+    "FREEZE_BRANCH_SPECIFIC_FIRST_THEOREM_OR_COUNTEREXAMPLE_TARGETS",
+    "FREEZE_PROOF_DISPROOF_COUNTEREXAMPLE_SYMBOLIC_NUMERICAL_AND_LEAN_STATUS_SEPARATION",
+    "FREEZE_FINITE_APPROXIMATION_IDENTIFIABILITY_AND_COMPLEXITY_AS_EXTERNAL_EVALUATION_CHECKS",
+    "FREEZE_WORKLOAD_ATTEMPT_FAILURE_AND_MANDATORY_EXIT_CONTROLS",
+    "INDEPENDENTLY_REVIEW_THE_PROPOSAL_FOR_NONSELECTION_NONEXECUTION_AND_SCIENTIFIC_DECISION_VALUE"
+  ],
+  "postulate_or_model_construction_authorized": false,
+  "program_installation_authorized": false,
+  "prohibited_work": [
+    "INSTALL_THE_PROPOSED_PROGRAM",
+    "OPEN_ANY_SCIENTIFIC_STAGE",
+    "SELECT_CP_NLSE_LCRD_V3_TWO_CANDIDATES_OR_NEITHER",
+    "SELECT_REPAIR_OR_POSTULATE_A_GOVERNING_EQUATION",
+    "INSERT_ANY_NEW_CCFT_POSTULATE",
+    "FREEZE_OR_CONSTRUCT_CCFT_V0",
+    "CREATE_OR_RUN_A_REFERENCE_IMPLEMENTATION",
+    "ATTEMPT_A_PROOF_DISPROOF_COUNTEREXAMPLE_SYMBOLIC_OR_NUMERICAL_RESULT",
+    "INSTALL_C_FINITE_APPROXIMATION_C_IDENTIFIABILITY_OR_C_COMPLEXITY_AS_ACTION_TERMS",
+    "PHYSICALLY_INTERPRET_PROMOTE_OR_EMPIRICALLY_VALIDATE_CCFT",
+    "REOPEN_HISTORICAL_OR_TARGETED_ARCHIVE_RECOVERY"
+  ],
+  "proposal_preparation_authorized": true,
+  "required_director_packet_options": [
+    "OPTION_A_NONLINEAR_CP_NLSE_MINIMAL_COMPUTATIONAL_CORE",
+    "OPTION_B_LCRD_V3_MINIMAL_PHENOMENOLOGICAL_CORE",
+    "OPTION_C_TWO_SEPARATE_V0_CANDIDATES_WITHOUT_COMBINATION",
+    "OPTION_D_NEITHER_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE"
+  ],
+  "schema_id": "toe.ccft_v0.theory_construction.bounded_program_preparation_authority.v0",
+  "scientific_stage_open_authorized": false,
+  "status": "PROGRAM_PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED",
+  "theorem_discovery_authorized": false,
+  "user_authority": "EXPLICIT_CURRENT_REQUEST"
+}

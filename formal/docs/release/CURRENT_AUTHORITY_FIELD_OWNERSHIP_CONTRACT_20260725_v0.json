@@ -1,0 +1,54 @@
+{
+  "schema_id": "CURRENT_AUTHORITY_FIELD_OWNERSHIP_CONTRACT_20260725_v0",
+  "contract_version": "v0",
+  "current_relative_to_commit": "9f8a06e185c9084fdc720d3efa5f9719ee64298c",
+  "strict_current_authority_interpretation": "STRICT_CURRENT_AUTHORITY_PARSE_ONLY",
+  "owners": [
+    {
+      "field": "scientific_target",
+      "sole_owner": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0"
+    },
+    {
+      "field": "scientific_posture_or_verdict",
+      "sole_owner": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0"
+    },
+    {
+      "field": "unit_and_seam_states",
+      "sole_owner": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0"
+    },
+    {
+      "field": "scientific_enrollment_state",
+      "sole_owner": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json#/current_projection_v0"
+    },
+    {
+      "field": "maintenance_target",
+      "sole_owner": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json"
+    },
+    {
+      "field": "maintenance_repair_scope",
+      "sole_owner": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json"
+    },
+    {
+      "field": "maintenance_execution_count",
+      "sole_owner": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json"
+    },
+    {
+      "field": "scientific_execution_permission",
+      "sole_owner": "EXPLICIT_SCIENTIFIC_SELECTOR"
+    }
+  ],
+  "mirror_contract": {
+    "duplicate_representations": "GENERATED_READ_ONLY_MIRRORS",
+    "independent_writers_per_field": 1,
+    "mirror_disagreement": "BLOCKING",
+    "ordinary_json_parse_authoritative": false,
+    "forensic_historical_parse_authoritative": false
+  },
+  "current_state_boundary": {
+    "scientific_posture": "B-BLOCKED",
+    "resolved_unit_or_seam_rows": "0 / 12",
+    "qft_gr_seam": "OPEN",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "scientific_execution_permission": "NONE"
+  }
+}

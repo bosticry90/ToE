@@ -1,0 +1,41 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.bounded_closeout_review.v0",
+  "captured_at_utc": "2026-07-31T20:00:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "sha256": "4e065860ede6ac9955260fb223c802072ce4c8d9e6558890a673def13c7580b7"
+  },
+  "checks": {
+    "all_five_attempts_are_closed_and_passed": true,
+    "event_chain_has_five_matched_open_close_pairs": true,
+    "event_chain_is_unchanged_by_mandatory_exit": true,
+    "no_blocked_stage_or_repair_attempt_exists": true,
+    "zero_eligible_native_action_families_preserved": true,
+    "Einstein_Hilbert_remains_provisional_baseline_only": true,
+    "quadratic_gravity_remains_reference_control_only": true,
+    "positive_principle_derivation_route_preserved": true,
+    "native_principle_and_action_remain_none": true,
+    "mandatory_exit_completed": true,
+    "program_is_terminal": true,
+    "successor_is_named_but_not_authorized_installed_or_opened": true,
+    "stage_5_result_and_review_hashes_are_preserved": true
+  },
+  "failed_checks": [],
+  "accepted": true,
+  "program_terminal": true,
+  "scientific_success_claimed": false,
+  "automatic_successor_selected": false,
+  "terminal_status": {
+    "program": "CLOSED_AFTER_MANDATORY_EXIT",
+    "survey_scientific_work": "COMPLETE_FOR_THE_BOUNDED_SURVEY",
+    "terminal_outcome": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+    "eligible_native_action_families": 0,
+    "selected_route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "native_gravitational_principle": "NONE",
+    "native_gravitational_action": "NONE",
+    "successor_program": "NONE_AUTHORIZED_INSTALLED_OR_OPENED"
+  },
+  "verdict": "ACCEPT_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_TERMINAL_CLOSEOUT_NO_PRINCIPLE_ACTION_CALCULATION_PROMOTION_OR_AUTOMATIC_SUCCESSOR"
+}

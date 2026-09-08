@@ -1,0 +1,158 @@
+{
+  "accepted_base_commit": "59ba7728ea3814e973973d39249f5c95e3ee39a5",
+  "accepted_dispositions": {
+    "binding_counts": {
+      "REMOVE_STALE_CURRENCY_DEPENDENCY": 1,
+      "RETAIN_AS_FROZEN_GIT_BLOB_IDENTITY": 1,
+      "RETAIN_AS_HISTORICAL_GENERATOR_PIN": 15
+    },
+    "bindings": 17,
+    "consumer_outcomes": 16
+  },
+  "authorization_commit": "63ca62f7ddf758555480350aeda7bcba4551ea4e",
+  "branch": "codex/pillar-artifact-currency-identity-domain-adjudication-v0",
+  "captured_at_utc": "2026-07-24T22:25:18Z",
+  "consumer_mapping": {
+    "consumer_file_counts": {
+      "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py": 1,
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py": 5,
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py": 10
+    },
+    "consumer_files": 3,
+    "outcomes": 16,
+    "unique_nodeids": 16
+  },
+  "custody": {
+    "adjudication_checkout_clean": true,
+    "dirty_main_existing_regular_file_bytes_unchanged": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_manifest_mismatches": 0,
+    "dirty_main_manifest_rows": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622
+  },
+  "external_evidence": [
+    {
+      "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_LEDGER_20260724_v0.json",
+      "sha256": "d99f221d8b57d46d3b181a8c160e066cad2a84db9a21e3b356453a701199e7c6"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/PILLAR_ARTIFACT_CURRENCY_MASKED_ROOTS_v0.json",
+      "sha256": "66f68973e984f08cf3163fa9ad10d959a4bd87768db581b5b60f4ea53ec7f428"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/PILLAR_ARTIFACT_CURRENCY_HISTORY_EVIDENCE_v0.json",
+      "sha256": "b2d6941873416654d808e105f182d8fe55928494ec0eabcd93e1520ed65c209b"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/PILLAR_ARTIFACT_CURRENCY_READ_ONLY_DIAGNOSTICS_v0.json",
+      "sha256": "bcf012194ae8b2241ad1867be96909f3a7b30e8900a3a908bd70bc5dec625460"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/PILLAR_ARTIFACT_CURRENCY_INVENTORY_RECONCILIATION_v0.json",
+      "sha256": "ad8193d8ac1db48935ac04995b27272d89d4b4fd387aeb153aec79dcb1b0dddc"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_EXECUTION_MANIFEST_v0.json",
+      "sha256": "bc7c833e2cc452a10175ffcae818fea16f287bc19007dc0b7aa19201b09b7e2a"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/build_pillar_artifact_currency_adjudication_v0.py",
+      "sha256": "a34cb477c99cc2ccd0d54c21c84568e5bb83404cd926539ece15e2707407e6a7"
+    }
+  ],
+  "identity_role_roots": [
+    {
+      "affected_outcomes": 1,
+      "current_role": "EVOLVING_LIVE_REGISTRY",
+      "historical_role": "POST_REPAIR_CUSTODY_AT_COMMIT_310B9DD4",
+      "mismatch": "EXPECTED_SUBSTANTIVE_GOVERNANCE_PROGRESSION",
+      "root_id": "REGISTRY_POST_REPAIR_CURRENT_PATH_ROLE_COLLISION"
+    },
+    {
+      "affected_outcomes": 5,
+      "current_role": "QFT_ROUTE_IDENTITY_REPAIRED_GENERATOR",
+      "historical_role": "GENERATOR_AT_PREPARATION_COMMIT_5D111960",
+      "mismatch": "NONSCIENTIFIC_IDENTITY_RESOLVER_CHANGE",
+      "root_id": "BLOCKER_ROUTE_HISTORICAL_GENERATOR_CURRENT_PATH_COLLISION"
+    },
+    {
+      "affected_outcomes": 10,
+      "current_role": "FROZEN_GIT_BLOB_IDENTITY_CCD41B23",
+      "historical_role": "MIXED_EOL_RAW_GENERATOR_INPUT_PIN_7A7F9E56",
+      "mismatch": "REPRESENTATIONAL_EOL_IDENTITY_ONLY",
+      "root_id": "LEDGER_HISTORICAL_COMPENDIUM_CURRENT_PATH_COLLISION"
+    },
+    {
+      "affected_outcomes": 1,
+      "current_role": "EVOLVING_MAINTENANCE_AUTHORITY",
+      "historical_role": "EXECUTION_TIME_AUTHORITY_AT_COMMIT_2D261795",
+      "mismatch": "EXPECTED_SUBSTANTIVE_GOVERNANCE_PROGRESSION",
+      "root_id": "LEDGER_REVIEW_TIME_MAINTENANCE_AUTHORITY_CURRENCY_COLLISION"
+    }
+  ],
+  "inventory_reconciliation": {
+    "current_collection": 13779,
+    "current_only_total": 23,
+    "frozen_inventory": 13756,
+    "new_equation_compendium_guards": 6,
+    "previously_accepted_guards": 17,
+    "reconciled": true
+  },
+  "masked_root_adjudication": {
+    "all_16_share_one_root": false,
+    "baseline_cluster": "PILLAR_ARTIFACT_CURRENCY_DRIFT",
+    "masked_additional_roots": 3,
+    "true_identity_role_roots": 4
+  },
+  "narrow_implementation_recommendation": {
+    "authorized_by_this_result": false,
+    "requirements": [
+      "Resolve registry post-repair custody from the frozen 310b9dd4 Git blob instead of the live registry path.",
+      "Preserve the July 12 blocker-route generator pin and validate it against its preparation commit rather than current generator bytes.",
+      "Preserve the historical mixed-EOL compendium pin while routing current source validation through the existing frozen Git-blob identity contract.",
+      "Remove the requirement that current maintenance authority remain byte-identical to the historical execution-time authority record.",
+      "Preserve all committed historical packets and reviews byte-for-byte.",
+      "Run the exact 16-outcome cohort and stop for independent review before baseline reassessment."
+    ],
+    "selector": "AUTHORIZE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
+    "target": "implement_repository_pillar_historical_artifact_currency_role_separation_v0_once"
+  },
+  "qft_gr_seam": "OPEN",
+  "read_only_diagnostics": {
+    "blocker_historical_generator_substitution": {
+      "all_implemented_decisions_reproduced": true,
+      "committed_historical_report_byte_identical": true,
+      "fresh_subprocess_regeneration_passed": true,
+      "route_map_reproduced": true
+    },
+    "ledger_historical_compendium_substitution": {
+      "all_eight_committed_control_failure_sets_reproduced": true,
+      "all_sixteen_independent_decisions_pass": true
+    },
+    "repository_modifications": 0
+  },
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_ADJUDICATION_RESULT_ONLY",
+  "resolved_unit_seam_rows": "0/12",
+  "result": "PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_COMPLETE_ROLE_SEPARATION_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+  "schema_id": "REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "scope": {
+    "artifacts_regenerated": 0,
+    "automatic_successor": false,
+    "diagnostic_only": true,
+    "hashes_modified": 0,
+    "lean_activity": false,
+    "registry_rotated": false,
+    "scientific_content_changed": 0,
+    "tests_modified": 0,
+    "v2_enrolled": false
+  },
+  "scientific_significance": {
+    "current_authority_effect": "NONE",
+    "scientific_content_discrepancy_established": false,
+    "scientific_result_changed": false
+  },
+  "v2_enrollment": "NOT_AUTHORIZED"
+}

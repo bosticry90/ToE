@@ -1,0 +1,25 @@
+{
+  "captured_at_utc": "2026-07-22T00:31:10Z",
+  "checks": {
+    "automatic_successor_prohibited": true,
+    "classification_vocabulary_is_closed": true,
+    "contained_clean_checkout_required": true,
+    "exact_command_environment_order_and_first_exceptions_required": true,
+    "full_nonlean_inventory_runs": 1,
+    "independent_result_reviews": 1,
+    "lean_lane_remains_separate": true,
+    "repairs_authorized": 0,
+    "scientific_execution_authorized": false,
+    "source_or_test_modifications_authorized": false,
+    "tracked_source_cleanliness_guard_required": true,
+    "v2_enrollment_authorized": false
+  },
+  "packet": {
+    "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_20260722_v0.json",
+    "sha256": "34d47e81094bc1300795b499d6d2e88c0bc8c4b73ef587b8af049625d61b5384"
+  },
+  "review_scope": "independent authorization-boundary review only",
+  "schema_id": "REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_PACKET_REVIEW_20260722_v0",
+  "verdict": "ACCEPT",
+  "verdict_basis": "The packet authorizes one read-only post-repair non-Lean inventory and one independent result review, preserves exact diagnostic evidence, excludes Lean and all repair or scientific work, and requires clean tracked status."
+}

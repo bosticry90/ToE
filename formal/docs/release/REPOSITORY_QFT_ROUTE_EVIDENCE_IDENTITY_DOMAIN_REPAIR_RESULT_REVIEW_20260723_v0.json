@@ -1,0 +1,104 @@
+{
+  "acceptance_review": {
+    "canonical_artifact_identities": "1_OF_1_VERIFIED",
+    "checkout_bytes_treated_as_authority": false,
+    "em_current_identity": "FROZEN_GIT_BLOB_c255a820_SHA256_0a977bd4",
+    "frozen_git_blob_identities": "8_OF_8_VERIFIED",
+    "historical_v0_pins": "9_OF_9_PRESERVED",
+    "historical_v1_pins": "9_OF_9_PRESERVED",
+    "identity_resolvers": "1_REVIEWED_RESOLVER",
+    "nine_route_identities": "9_OF_9_EXPLICITLY_TYPED",
+    "underlying_source_or_artifact_contents": "9_OF_9_UNCHANGED"
+  },
+  "captured_at_utc": "2026-07-23T22:05:00Z",
+  "decision": {
+    "automatic_successor_authorized": false,
+    "bounded_implementation_accepted": true,
+    "fresh_selector_options": [
+      "AUTHORIZE_BOUNDED_POST_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_BASELINE_REASSESSMENT",
+      "PRESERVE_ACCEPTED_QFT_ROUTE_IDENTITY_REPAIR_AND_DEFER_RECOVERY"
+    ],
+    "global_baseline_reassessment_authorized": false,
+    "lean_activity_authorized": false,
+    "pillar_or_seam_resolution_authorized": false,
+    "qft_gr_seam_closure_authorized": false,
+    "registry_rotation_authorized": false,
+    "route_map_acceptance_authorized": false,
+    "scientific_execution_authorized": false,
+    "v2_enrollment_authorized": false
+  },
+  "independence": {
+    "detached_clean_checkout": true,
+    "focused_junit": {
+      "path": ".toe-recovery/custody-v0/qft-route-evidence-identity-domain-repair-v0/INDEPENDENT_REVIEW_FOCUSED_JUNIT_v0.xml",
+      "sha256": "9f62b8e8646b72f0cdd56cc181c1b825ae11eedd0966ffd1b317afc90a86be18"
+    },
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/qft-route-evidence-identity-domain-repair-v0/QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_INDEPENDENT_RECOMPUTATION_20260723_v0.json",
+      "sha256": "619bff43726ab0e3a1a7658177c5eb11c86ab6a025e1fd9f62c44aac16734ea8"
+    },
+    "recomputation_method": "Independent changed-path audit, typed-contract and historical-pin reconstruction, frozen Git-blob and canonical-artifact verification, focused pytest rerun, LF/CRLF evidence review, preserved-tree audit, and 629-row dirty-main custody rehash.",
+    "review_worktree": ".toe-recovery/disposable-workspaces/qft-route-evidence-identity-domain-repair-review-v0"
+  },
+  "outcome_treatment": {
+    "baseline_nonpassing_before": 526,
+    "focused_route_family_outcomes_after": 0,
+    "global_baseline_rerun": false,
+    "global_nonpassing_after": "NOT_MEASURED",
+    "global_nonpassing_delta_claimed": false,
+    "preexisting_passing_consumer_outcomes_preserved": 1,
+    "previously_failing_consumer_outcomes_recovered": 67
+  },
+  "preservation": {
+    "dirty_main_custody_manifest_mismatches": 0,
+    "dirty_main_custody_rows_byte_verified": 629,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "formal_output_tree_unchanged": true,
+    "lean_activity": false,
+    "loop_control_registry_unchanged": true,
+    "registry_rotated": false,
+    "scientific_authority_fields_unchanged": true,
+    "scientific_content_changed": false,
+    "toe_formal_tree_unchanged": true,
+    "v2_enrolled": false
+  },
+  "resolved_unit_seam_rows": "0_OF_12",
+  "reviewed_branch": "codex/qft-route-evidence-identity-domain-repair-v0",
+  "reviewed_commit": "eaebceeeed873369fe0385d7c90ec3cc284e937e",
+  "reviewed_result": {
+    "outcome": "QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0.json",
+    "sha256": "bf73766313d6b7d5e001306d264430e0aa5cf4edd88e484a4cb1fca55731df2a"
+  },
+  "schema_id": "REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_REVIEW_20260723_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_AND_STOP_FOR_FRESH_SELECTOR",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "validation": {
+    "crlf_fresh_checkout": {
+      "actual_crlf_route_sources": true,
+      "checkout_clean_after": true,
+      "failed": 0,
+      "passed": 76,
+      "tests": 76
+    },
+    "independent_review_checkout": {
+      "checkout_clean_after": true,
+      "failed": 0,
+      "passed": 76,
+      "tests": 76,
+      "unexpected_untracked_source": 0
+    },
+    "lf_fresh_checkout": {
+      "actual_lf_route_sources": true,
+      "checkout_clean_after": true,
+      "failed": 0,
+      "passed": 76,
+      "tests": 76
+    }
+  },
+  "verdict": "ACCEPT_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY"
+}

@@ -105,4 +105,4 @@ def test_nonclaims_and_prompt_are_preserved() -> None:
     assert authority["C_k_dynamics_claimed"] is False
     assert authority["CCFT_validation_claimed"] is False
     assert authority["master_action_promotion_claimed"] is False
-    assert repair.sha256_path(repair.REPO_ROOT / repair.PROMPT_RELATIVE_PATH) == repair.PROMPT_SHA256
+    assert repair.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

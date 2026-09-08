@@ -1,0 +1,167 @@
+{
+  "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_RESULT_v0",
+  "schema_id": "toe.ccft_v0.research_director_branch_readiness_decision.result.v0",
+  "captured_at_utc": "2026-08-02T04:33:38Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "semantic_stage_id": "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION",
+  "scientific_target": "select_toe_ccft_v0_branch_after_research_director_decision_v0",
+  "scope_hash": "f23a5be55905604125cb2752cefde7df3f4aa4a6d493aaaea9fcd14559c2c5d4",
+  "attempt_sequence_number": 1,
+  "open_event_binding": {
+    "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+    "sha256": "349ad33ca8271706e5e991d532a2c508eb5a867c3154db7c0f04e2d1af89417c",
+    "event_hash": "e3ab38ef767edf820e08bfe3c75a4f8c06d4cfb6eb1686ebd8618870627ce5c6"
+  },
+  "scientific_input_bindings": [
+    {
+      "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0.json",
+      "sha256": "28b0827797274df7307b59da8641778ff9e5da2ef72bc358d34a4b4a9fff731d"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+      "sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0.json",
+      "sha256": "79acfadda56d2ef75ad3c061309c0bc5dbbf48c2366aa1f946ef3bd3208b4782"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+      "sha256": "f495413aa44b6ef2d4f569e8d182a4909ed7b8f909ccd8425ee6b780b9e4654b"
+    }
+  ],
+  "exactly_one_selected_outcome": "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+  "selected_outcome": "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+  "selected_branch": "CP_NLSE",
+  "decision_standard": "Select the single branch that can be completed with the fewest and clearest explicit new assumptions while retaining a decisive test of potentially CCFT-specific content.",
+  "branch_comparison": {
+    "CP_NLSE": {
+      "source_recovered_model_content": [
+        "one-dimensional periodic domain x in [0,L)",
+        "periodic boundary conditions",
+        "numerical and diagnostic scaffolding preserved by the earlier bounded review"
+      ],
+      "required_future_postulates_or_decisions": [
+        "select one source branch or explicitly postulate one governing nonlinear equation",
+        "derive or explicitly postulate the nonlinear dispersion contract",
+        "parameter meanings and admissible ranges",
+        "admissible initial data and regularity",
+        "invariant monitoring and failure contract",
+        "reference implementation contract"
+      ],
+      "internal_conflicts": [
+        "three incompatible governing-equation records",
+        "squared versus additive interaction-frequency formulas",
+        "norm applicability blocked until one governing equation is frozen"
+      ],
+      "distance_to_closed_executable_model": "SHORTER_THAN_LCRD_V3_BUT_REQUIRES_AN_EXPLICIT_EQUATION_LEVEL_DECISION",
+      "distance_to_theorem_grade_question": "SHORT",
+      "first_theorem_grade_question": "For the future frozen equation and named background, derive the interaction-dependent dispersion and decide whether the historical squared and additive forms are compatible, special limits, or contradictory.",
+      "distinctively_ccft_specific_content": "UNESTABLISHED_AND_MUST_RESIDE_IN_THE_FUTURE_NONLINEAR_RESTRICTION",
+      "generic_model_equivalence_risk": "HIGH",
+      "decisive_negative_result_value": "HIGH_BECAUSE_DISPERSION_OR_EQUIVALENCE_FAILURE_CAN_REJECT_THE_PROPOSED_MODIFICATION_EARLY"
+    },
+    "LCRD_V3": {
+      "source_recovered_model_content": [
+        "four-field state tuple (rho,u,R,K)",
+        "Q_rotor = c1 R_x + c2 K_xx constitutive closure",
+        "rotor-curvature evolution couplings"
+      ],
+      "required_future_postulates_or_decisions": [
+        "general admissible initial and boundary data",
+        "normalization convention",
+        "complete parameter meanings and ranges including nu_code",
+        "reproducible implementation contract",
+        "failure and invariant rules",
+        "phenomenological-versus-derived status contract"
+      ],
+      "internal_conflicts_or_gaps": [
+        "no variational derivation",
+        "no accepted LSDA coarse-graining map",
+        "physical units bearer and scale absent"
+      ],
+      "distance_to_closed_executable_model": "LONGER_THAN_CP_NLSE",
+      "distance_to_theorem_grade_question": "MODERATE_TO_LONG",
+      "first_theorem_grade_question": "After future missing contracts are supplied, determine whether the four-field equations close as an evolution system or admit a counterexample to closure.",
+      "distinctively_ccft_specific_content": "STRONGER_ROTOR_CURVATURE_STRUCTURE",
+      "generic_model_equivalence_risk": "LOWER_THAN_CP_NLSE_BUT_UNAUDITED",
+      "decisive_negative_result_value": "MEANINGFUL_BUT_REQUIRES_MORE_SIMULTANEOUS_ASSUMPTIONS_FIRST"
+    }
+  },
+  "selection_rationale": {
+    "primary_reason": "CP-NLSE has the shorter path to one executable, falsifiable surrogate and one upstream theorem-grade dispersion decision.",
+    "equation_conflict_treatment": "The conflict is not resolved here. Stage 2 must either choose one explicitly identified source branch or label a newly authored governing equation as NEW_CCFT_POSTULATE.",
+    "computational_readiness_is_not_physical_evidence": true,
+    "generic_equivalence_risk_is_preserved": true,
+    "lcrd_v3_is_preserved": "LEADING_FUTURE_COMPETING_OR_EXTENSION_CANDIDATE_NOT_REJECTED"
+  },
+  "competing_outcome_adjudication": [
+    {
+      "outcome": "SELECT_LCRD_V3_AS_CCFT_V0_CORE",
+      "selected": false,
+      "reason": "Its recovered structure is more distinctive, but its data, normalization, parameter, and implementation burden makes it a longer and less bounded first construction route."
+    },
+    {
+      "outcome": "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES",
+      "selected": false,
+      "reason": "Two models would violate the installed one-model cap, duplicate postulate and implementation work, and prevent vertical completion."
+    },
+    {
+      "outcome": "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE",
+      "selected": false,
+      "reason": "A mathematical surrogate can be constructed and attacked without first claiming a physical bearer; delaying for ontology is not necessary for the bounded mathematical decision."
+    }
+  ],
+  "pass_consequence": {
+    "stage_1_lifecycle_result": "PASSED",
+    "stage_2_may_be_separately_considered": true,
+    "stage_2_automatically_authorized": false,
+    "selected_route_only": "CP_NLSE",
+    "construction_completed": false
+  },
+  "block_consequence": {
+    "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES": "BLOCK_SINGLE_MODEL_PROGRAM_AND_SELECT_MANDATORY_EXIT",
+    "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE": "BLOCK_SINGLE_MODEL_PROGRAM_AND_SELECT_MANDATORY_EXIT"
+  },
+  "proposed_stage_2_scope": {
+    "target": "complete_and_freeze_toe_ccft_v0_model_contract_v0",
+    "authority_status": "NOT_AUTHORIZED",
+    "required_model_elements": [
+      "state variables",
+      "one exact governing nonlinear equation",
+      "parameters and ranges",
+      "initial and periodic boundary data",
+      "normalization",
+      "constraints invariants and failure rules",
+      "known-physics comparator and zero-coupling control",
+      "reference implementation and test vectors"
+    ],
+    "required_provenance_labels": [
+      "SOURCE_RECOVERED",
+      "KNOWN_PHYSICS_BASELINE",
+      "NEW_CCFT_POSTULATE",
+      "NUMERICAL_CONVENTION",
+      "MATHEMATICAL_CONTROL"
+    ],
+    "maximum_new_ccft_postulates": 8,
+    "maximum_frozen_models": 1
+  },
+  "nonclaim_boundary": {
+    "governing_equation_selected_repaired_or_postulated": false,
+    "nonlinear_dispersion_selected_derived_or_repaired": false,
+    "new_ccft_postulates_created": 0,
+    "ccft_v0_model_constructed_or_frozen": false,
+    "primary_theorem_selected_or_attempted": false,
+    "lcrd_v3_rejected_or_superseded": false,
+    "physical_coherence_interpretation_established": false,
+    "stage_2_authorized_or_opened": false,
+    "evidence_promoted": false,
+    "repository_claim_exhaustion_established": false
+  },
+  "lifecycle_result": "PASSED",
+  "status": "STAGE_1_BRANCH_READINESS_RESULT_READY_FOR_INDEPENDENT_REVIEW_AND_ATOMIC_CLOSE"
+}

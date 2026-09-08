@@ -1,0 +1,62 @@
+........................................................................ [ 26%]
+...................................F.................................... [ 53%]
+........................................................................ [ 80%]
+...........................................F.........                    [100%]
+================================== FAILURES ===================================
+___________ test_composite_preserves_other_scientific_requirements ____________
+
+    def test_composite_preserves_other_scientific_requirements():
+        contract,profile=n.load_contract()
+        parent=n.exact.read_json((n.ROOT/contract['parent_dag_contract']['path']).read_bytes())
+>       composite=n.exact.read_json((n.ROOT/n.AREA/'effective_normalization_dag_contract_v1.json').read_bytes())
+
+formal\python\tests\test_c03_normalization_v1.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Program Files\Python310\lib\pathlib.py:1126: in read_bytes
+    with self.open(mode='rb') as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/v6b/formal/docs/research/project_situation_audit_20260904/c03_normalization_amendment_v1/effective_normalization_dag_contract_v1.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\v6b\\formal\\docs\\research\\project_situation_audit_20260904\\c03_normalization_amendment_v1\\effective_normalization_dag_contract_v1.json'
+
+C:\Program Files\Python310\lib\pathlib.py:1119: FileNotFoundError
+__________ test_implementation_status_is_truthful_and_closure_bound ___________
+
+    def test_implementation_status_is_truthful_and_closure_bound() -> None:
+        status = json.loads(Path("formal/docs/release/VERIFIED_CALCULATOR_V1_IMPLEMENTATION_STATUS_20260905_v1.json").read_text(encoding="utf-8"))
+        frozen = json.loads(Path(status["c03_rv_profile"]["frozen_bundle_artifact"]).read_text(encoding="utf-8"))
+        assert len(frozen["dependency_manifests"]) == 1
+        closure = frozen["dependency_manifests"][0]
+>       validate_dependency_closure(closure)
+
+formal\python\tests\test_verified_calculator_v1.py:690: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+formal\python\toe\generic_runner\verified_calculator\dependency_closure.py:200: in validate_dependency_closure
+    require({row.get("path") for row in closure.get("profile_policy_artifact_references", ())} == set(FIXED_ARTIFACT_REFERENCES), "DEPENDENCY_ARTIFACT_CLOSURE_NARROWED")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+condition = False, code = 'DEPENDENCY_ARTIFACT_CLOSURE_NARROWED', location = ''
+detail = ''
+
+    def require(condition: bool, code: str, location: str = "", detail: str = "") -> None:
+        if not condition:
+>           raise CalculatorError(code, location, detail)
+E           formal.python.toe.generic_runner.verified_calculator.errors.CalculatorError: DEPENDENCY_ARTIFACT_CLOSURE_NARROWED
+
+formal\python\toe\generic_runner\verified_calculator\errors.py:27: CalculatorError
+=========================== short test summary info ===========================
+FAILED formal/python/tests/test_c03_normalization_v1.py::test_composite_preserves_other_scientific_requirements
+FAILED formal/python/tests/test_verified_calculator_v1.py::test_implementation_status_is_truthful_and_closure_bound
+2 failed, 267 passed in 340.88s (0:05:40)

@@ -1,0 +1,226 @@
+{
+  "accepted_result": {
+    "analytic_oracle": "NOT_QUALIFIED_OR_REFUTED",
+    "cause_of_stage_a_failure": "UNRESOLVED",
+    "dft_root_cause": "NOT_DETERMINED",
+    "principal_outcome": "REFERENCE_ORACLE_INADEQUATE",
+    "production_cubature": "NOT_ADJUDICATED",
+    "scientific_diagnosis_completed": false,
+    "scientific_meaning": "REFERENCE_SYSTEM_NOT_QUALIFIED_WITHIN_FROZEN_WORK_BUDGET"
+  },
+  "authority": {
+    "authorized_diagnosis_execution_count": 1,
+    "consumed_diagnosis_execution_count": 1,
+    "diagnosis_rerun_authorized": false,
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_EXECUTION_20260719_v0.md",
+        "sha256": "05bbaf43e1b93daf83878ecf84f43d7fef3ac2636b743d9f2d153343760144e8"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_EXECUTION_20260719_v0.json",
+        "sha256": "3dbd49ee234b8a7354d5e1e0ff472f17c87fa9e44a769f5298d4193af81cf49c"
+      },
+      {
+        "relative_path": "formal/output/scalar_only_yukawa_sphere_kernel_diagnosis_v0/execution_result.json",
+        "sha256": "3dbd49ee234b8a7354d5e1e0ff472f17c87fa9e44a769f5298d4193af81cf49c"
+      },
+      {
+        "relative_path": "formal/output/scalar_only_yukawa_sphere_kernel_diagnosis_v0/launcher_timeout_evidence.json",
+        "sha256": "e33d1ae2831212128bc40c7de5877e9cd54e090eb620aacad9b118d18ac6466b"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0.py",
+        "sha256": "c7faf54b21904349c628fc4f2df4ee703ecdd6fbed7fd0c2777bc09c5055e45d"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0.py",
+        "sha256": "1f9a542bff45ee5594e00d247c7040429e5ed712057ef56de3d253a53ea86134"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOracleExecutionV0.lean",
+        "sha256": "f0f6e53f56cd146d7e313295fea41c4a51decd5448bd8bf459bcd339820d4337"
+      }
+    ],
+    "review_companion_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_EXECUTION_RESULT_REVIEW_20260719_v0.md",
+        "sha256": "1d562a65092b1b914b002f5715667af1b9a0613b800c768413841c0ccbb2b234"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_execution_result_review_v0.py",
+        "sha256": "bd554cb7c08a82968608c06c5b0b5ce6011c03c21898bf0b4a39bb2903343e72"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOracleExecutionResultReviewV0.lean",
+        "sha256": "56eb14eb4172530e4e9e138b2aae79ba1370e2b5d02e38e43b694fd8697f895e"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review accepts only the conservative computational-feasibility block: the reference system was not qualified within its frozen budget, so no production or DFT diagnosis is admissible. The raw launcher transcript and exact child termination timestamp were not persisted; that custody limitation is recorded and does not widen the scientific claim. No rerun, repair, Stage A, identifiability, or Stage B action is authorized.",
+  "independent_custody_reproduction": {
+    "canonical_result_copies_equal": true,
+    "exact_child_kill_timestamp_persisted": false,
+    "matching_execution_process_count": 0,
+    "orphan_process_disposition": "RECORDED_EXECUTION_ENGINE_DEFECT_NO_SCIENTIFIC_OUTPUT_ACCEPTED",
+    "output_files": [
+      "formal/output/scalar_only_yukawa_sphere_kernel_diagnosis_v0/execution_result.json",
+      "formal/output/scalar_only_yukawa_sphere_kernel_diagnosis_v0/launcher_timeout_evidence.json"
+    ],
+    "raw_launcher_transcript_persisted": false,
+    "result_created_utc": "2026-07-19T17:26:35.593137+00:00",
+    "timeout_evidence_created_utc": "2026-07-19T17:26:35.590107+00:00",
+    "timeout_provenance_disposition": "ACCEPTED_WITH_RAW_LOG_AND_EXACT_KILL_TIME_LIMITATION"
+  },
+  "review_gate_summary": {
+    "fail": 0,
+    "pass": 23,
+    "pass_with_qualification": 1,
+    "total": 24
+  },
+  "review_gates": [
+    {
+      "detail": "seven decision-bearing execution artifacts match frozen SHA-256 values",
+      "gate_id": "R01_FROZEN_EXECUTION_CUSTODY",
+      "status": "PASS"
+    },
+    {
+      "detail": "release and output execution JSON are byte-equivalent in content",
+      "gate_id": "R02_CANONICAL_RESULT_COPIES",
+      "status": "PASS"
+    },
+    {
+      "detail": "one authorized launch is recorded consumed",
+      "gate_id": "R03_SINGLE_EXECUTION_COUNT",
+      "status": "PASS"
+    },
+    {
+      "detail": "status is the bounded timeout state",
+      "gate_id": "R04_FAIL_CLOSED_STATUS",
+      "status": "PASS"
+    },
+    {
+      "detail": "launcher record pins exit 124, 3600 s cap, and 3604.1 s observed return",
+      "gate_id": "R05_TIMEOUT_EXIT_AND_LIMIT",
+      "status": "PASS"
+    },
+    {
+      "detail": "raw OS launcher transcript and exact child kill timestamp were not persisted; exact 4.1 s interpretation is not independently reproducible",
+      "gate_id": "R06_TIMEOUT_PROVENANCE_LIMITATION",
+      "status": "PASS_WITH_QUALIFICATION"
+    },
+    {
+      "detail": "two residual Python children are recorded before explicit cleanup and zero after",
+      "gate_id": "R07_ORPHAN_PROCESS_DEFECT_RECORDED",
+      "status": "PASS"
+    },
+    {
+      "detail": "independent current process query found 0 matching execution processes",
+      "gate_id": "R08_ZERO_CURRENT_SURVIVORS",
+      "status": "PASS"
+    },
+    {
+      "detail": "no retry, restart, or substituted calculation is recorded",
+      "gate_id": "R09_NO_RERUN",
+      "status": "PASS"
+    },
+    {
+      "detail": "output directory contains only execution_result.json and launcher_timeout_evidence.json",
+      "gate_id": "R10_ONLY_ALLOWED_OUTPUT_FILES",
+      "status": "PASS"
+    },
+    {
+      "detail": "no component, convergence, torque, DFT, mutation, or cost artifact exists",
+      "gate_id": "R11_NO_PARTIAL_SCIENTIFIC_ARTIFACTS",
+      "status": "PASS"
+    },
+    {
+      "detail": "manifest admits only the timeout evidence artifact",
+      "gate_id": "R12_MANIFEST_CUSTODY",
+      "status": "PASS"
+    },
+    {
+      "detail": "normal execution computes all artifacts before creating its output directory",
+      "gate_id": "R13_ATOMIC_SCIENTIFIC_WRITER",
+      "status": "PASS"
+    },
+    {
+      "detail": "timeout finalizer performs no oracle or production calculation",
+      "gate_id": "R14_TIMEOUT_FINALIZER_NONSCIENTIFIC",
+      "status": "PASS"
+    },
+    {
+      "detail": "in-memory partial values were neither recovered nor recomputed",
+      "gate_id": "R15_NO_PARTIAL_SALVAGE",
+      "status": "PASS"
+    },
+    {
+      "detail": "reference qualification remains incomplete",
+      "gate_id": "R16_REFERENCE_PLATEAU_NOT_ESTABLISHED",
+      "status": "PASS"
+    },
+    {
+      "detail": "no production judgment was issued",
+      "gate_id": "R17_PRODUCTION_NOT_ADJUDICATED",
+      "status": "PASS"
+    },
+    {
+      "detail": "only the preregistered reference-inadequate label is present",
+      "gate_id": "R18_OUTCOME_CEILING",
+      "status": "PASS"
+    },
+    {
+      "detail": "the analytic/reduced oracle is neither qualified nor refuted",
+      "gate_id": "R19_ANALYTIC_ORACLE_NOT_QUALIFIED_OR_REFUTED",
+      "status": "PASS"
+    },
+    {
+      "detail": "kernel replacement, Stage A, vector, Jacobian, identifiability, forecast, and Stage B remain false",
+      "gate_id": "R20_DOWNSTREAM_FIREWALLS",
+      "status": "PASS"
+    },
+    {
+      "detail": "independent result review is mandatory",
+      "gate_id": "R21_REVIEW_REQUIRED",
+      "status": "PASS"
+    },
+    {
+      "detail": "no automatic response follows review",
+      "gate_id": "R22_FRESH_SELECTOR_REQUIRED",
+      "status": "PASS"
+    },
+    {
+      "detail": "timeout evidence precedes the two canonical result copies",
+      "gate_id": "R23_RESULT_TIMING_ORDER",
+      "status": "PASS"
+    },
+    {
+      "detail": "execution handed authority only to this result review",
+      "gate_id": "R24_NEXT_AUTHORITY_BOUNDED",
+      "status": "PASS"
+    }
+  ],
+  "review_id": "SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_EXECUTION_RESULT_REVIEW_20260719_v0",
+  "schema_id": "toe.scalar_only_yukawa.sphere_kernel_diagnosis.execution_result_review.v0",
+  "scope": {
+    "automatic_analytic_oracle_packet_authorized": false,
+    "diagnosis_rerun_authorized": false,
+    "execution_result_accepted": true,
+    "fresh_scientific_response_selector_authorized": true,
+    "jacobian_or_identifiability_authorized": false,
+    "kernel_replacement_authorized": false,
+    "one_execution_consumed": true,
+    "orphan_process_cleanup_defect_recorded": true,
+    "partial_scientific_values_accepted": false,
+    "production_method_judgment_accepted": false,
+    "raw_timeout_provenance_fully_reproducible": false,
+    "stage_a_reopened": false,
+    "stage_b_authorized": false
+  },
+  "selected_next_target": "select_post_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_execution_result_scientific_response_v0",
+  "selected_next_target_kind": "FRESH_POST_DIAGNOSIS_SCIENTIFIC_RESPONSE_SELECTOR_ONLY",
+  "status": "ACCEPTED_WITH_TIMEOUT_PROVENANCE_QUALIFICATION",
+  "target": "review_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_execution_result",
+  "verdict": "ACCEPTED_REFERENCE_ORACLE_INADEQUATE_WITHIN_FROZEN_BUDGET"
+}

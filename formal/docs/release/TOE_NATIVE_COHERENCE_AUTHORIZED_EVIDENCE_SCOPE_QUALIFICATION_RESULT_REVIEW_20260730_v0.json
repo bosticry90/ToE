@@ -1,0 +1,27 @@
+{
+  "accepted": true,
+  "archive_evidence_adopted": false,
+  "artifact_id": "TOE_NATIVE_COHERENCE_AUTHORIZED_EVIDENCE_SCOPE_QUALIFICATION_RESULT_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "archive_census_is_not_claimed": true,
+    "archive_index_records_more_than_authorized_set": true,
+    "archive_material_is_not_adopted": true,
+    "authorized_source_count_is_13": true,
+    "closed_program_is_not_reopened": true,
+    "closed_scientific_outcome_is_unchanged": true,
+    "evidence_hashes_recompute": true,
+    "future_coherence_is_not_ruled_out": true,
+    "no_automatic_successor_is_selected": true,
+    "precise_scope_wording_is_present": true
+  },
+  "failed_checks": [],
+  "reviewed_result": {
+    "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-AUTHORIZED-EVIDENCE-SCOPE-QUALIFICATION-v0.json",
+    "sha256": "302e8208fa3c8b70232ec05617ba951a1d8ff9af89eecf1771fab123e6312ab3"
+  },
+  "schema_id": "toe.native_coherence.authorized_evidence_scope_qualification_review.v0",
+  "scientific_program_reopened": false,
+  "scientific_result_changed": false,
+  "verdict": "ACCEPT_SCOPE_QUALIFICATION_CLOSED_RESULT_UNCHANGED"
+}

@@ -319,7 +319,7 @@ Exit-row promotion token:
 
 Criteria evidence artifact token:
 - `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_full_derivation_discharge_criteria_cycle10_v0`
-- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1`
+- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3dddcb3e5928507fe04bb7427d39838af8363395a9d9a8f2a52480d8c031f13a`
 
 Criteria evidence artifact pointer:
 - `formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json`

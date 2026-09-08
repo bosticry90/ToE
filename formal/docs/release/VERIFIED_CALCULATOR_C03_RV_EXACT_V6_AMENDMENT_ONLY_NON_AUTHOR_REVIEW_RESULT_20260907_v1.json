@@ -1,0 +1,439 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactV6AmendmentOnlyNonAuthorReviewResultV1",
+  "review_id": "VPC_C03_RV_EXACT_V6_AMENDMENT_ONLY_NON_AUTHOR_REVIEW_20260907_V1",
+  "reviewed_brief": {
+    "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_AMENDMENT_ONLY_NON_AUTHOR_REVIEW_BRIEF_20260907_v2.md",
+    "sha256": "7bad95876d6e7b11fe71805e5a2eda4d014190ecc0dabbb07601be476a1445da"
+  },
+  "reviewer": {
+    "identity": "Codex task /root/v6_amendment_review",
+    "provider": "OpenAI Codex",
+    "reviewer_kind": "SAME_PROVIDER_AI_NON_AUTHOR_COMPUTATIONAL_REVIEW",
+    "authored_d07_d01_d02_repairs": false,
+    "authored_reviewed_qualification_evidence": false,
+    "review_date": "2026-09-07",
+    "completed_at_local": "2026-09-07T17:58:03-06:00",
+    "relevant_expertise": [
+      "software and evidence-chain review",
+      "exact-computation and mutation-test inspection",
+      "Git and cross-platform artifact-custody inspection",
+      "Lean build and runtime-certificate integration inspection"
+    ],
+    "conflicts_and_independence_limits": [
+      "The reviewer is a same-provider Codex AI subagent with inherited prompt and repository context.",
+      "The reviewer is not an external human expert, an independent model provider, an experimental physicist, or an independent scientific peer-review venue.",
+      "The reviewer did not author the D-07, D-01, or D-02 repairs or their reviewed evidence, but shares the wider author/AI development lineage and repository context.",
+      "The review is computational and amendment-scoped; it does not independently re-adjudicate already-supported unaffected SU(5) physics."
+    ]
+  },
+  "frozen_scope": {
+    "baseline_commit": "97311c3cdd5b8d78b7cd2283dad960c5779ac15b",
+    "tested_scientific_repair_commit": "3307e35514cc76d63b6039b240c625defbb737d5",
+    "windows_evidence_preservation_commit": "e2f19a424f50e05164a24e67d949d1b2959894a4",
+    "linux_qualification_lineage_commit": "eec9da7374515b0235d2b3d4cabca0871e4387a5",
+    "linux_result_preservation_commit": "5a822913557dc97e478ae96c97028d583973220f",
+    "original_v1_bundle_id": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "windows_v6_bundle_id": "b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc",
+    "linux_v6_bundle_id": "0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13",
+    "github_run_id": 34167712902,
+    "github_job_id": 101881966692,
+    "github_artifact_id": 10035287072,
+    "github_artifact_archive_sha256": "5e3244fd2a0745b0f62e7a1d03f0f30630a92e045f2f62ba8974396fdf449f39"
+  },
+  "independent_execution_summary": {
+    "clean_detached_worktree_commit": "3307e35514cc76d63b6039b240c625defbb737d5",
+    "lean_build": "PASS_9_JOBS",
+    "focused_pytest": "12_PASSED_IN_54.90_SECONDS",
+    "independent_repair_acceptance": {
+      "disposition": "PASS",
+      "raw_output_sha256": "3ed596c9b367339f763f50177ce381b1797748e22d761d031e77e491862ee93c",
+      "result_hash": "bcde562ed495453af854cee2da6769a553070803dee44777a26a17f98d10ae5d",
+      "D-01": "PASS_26_CONTROLS",
+      "D-02": "PASS_207_BASELINES_1656_METADATA_MUTATIONS_160_EDGE_MUTATIONS",
+      "D-07": "PASS"
+    },
+    "independent_v1_to_windows_v6_payload_comparison": {
+      "disposition": "643_OF_643_MATCH",
+      "raw_output_sha256": "432c7593eb0ccc5c3bf9570aa543440a40c441d8f490e0d60061f73c4d6513a3",
+      "report_hash": "d20947c1cf0baa79b13140b2ba0866db8e5ed7204a7ed2bac815c06bd518d42a"
+    },
+    "independent_windows_v6_to_linux_payload_comparison": {
+      "disposition": "643_OF_643_MATCH",
+      "raw_output_sha256": "30d1b62d97bd98c1cd6512e2fe95e90bb23fe280637d179833c12d9a265fe3fe",
+      "report_hash": "0328fbd77f3ff6485b9925777ef32d9cb33b70acf65cd094872d21a51c455fcd"
+    },
+    "bundle_replays": {
+      "original_v1": "MATCHED",
+      "windows_v6": "MATCHED",
+      "linux_v6": "MATCHED"
+    },
+    "historical_local_104_check_log": {
+      "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_EXECUTION_RUN_LOG_RESULT_20260907_3307e355.json",
+      "sha256": "a2a83600f7e5afe1afb1128cde6cf977cc212efc478dd4dd79a3c83f489ae42a",
+      "run_log_hash": "bae606d0451b49cdc1660f81b217c9b1579b88f0dc050cccc75710fd89dd8b06",
+      "observed_state": "80_PASS_1_INCONCLUSIVE_23_NOT_RUN",
+      "interpretation": "Preserved pre-Linux local checkpoint; not retroactively edited. Its Linux, review, and authority-dependent entries are resolved only by later separate evidence and adjudication."
+    },
+    "integrated_metadata_mutation_check": {
+      "axes_tested": [
+        "mathematical_kind",
+        "semantic_type",
+        "physical_dimension",
+        "unit_convention",
+        "shape",
+        "index_spaces",
+        "representation_tags",
+        "domain"
+      ],
+      "result": "ALL_EIGHT_REJECTED_AT_THE_RELEVANT_TRUSTED_CHECK"
+    }
+  },
+  "review_matrix": [
+    {
+      "row_id": "R01_REVIEWER_INDEPENDENCE",
+      "surface": "Reviewer identity and bounded independence",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_AMENDMENT_ONLY_NON_AUTHOR_REVIEW_BRIEF_20260907_v2.md",
+          "sha256": "7bad95876d6e7b11fe71805e5a2eda4d014190ecc0dabbb07601be476a1445da"
+        }
+      ],
+      "independent_action": "Recorded provider, role, non-authorship of the repairs/evidence, expertise, conflicts, inherited context, and limits on independence before disposition.",
+      "observed_result": "The reviewer satisfies the brief's non-author condition but only as a same-provider AI computational reviewer.",
+      "limitation": "Not external human expert review or independent-provider review.",
+      "disposition": "SUPPORTED",
+      "affects": ["ENVIRONMENT_METADATA"]
+    },
+    {
+      "row_id": "R02_D01_COMMITMENT_CHAIN",
+      "surface": "D-01 runtime certificate and Lean qualification-envelope commitments",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_REPAIR_ACCEPTANCE_RESULT_20260907_3307e355.json",
+          "sha256": "95a8ae1716e063e2ee8a72f50f0d2ee11efba2ab51922e4b91bc161bd23b9a6b"
+        },
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json",
+          "sha256": "2da78322b4d7767fe04e6a33a36ce1190449ea94d5f82f6fe56e31bb9841c84f"
+        }
+      ],
+      "independent_action": "Inspected qualification_envelope.py, independent.py, evidence.py, API assembly, and QualificationEnvelopeV1.lean; rebuilt both Lean executables from the tested commit and independently reran the repair acceptance gate.",
+      "observed_result": "The accepted envelope commits to the actual runtime certificate, request/profile/policy, sources, graph, trace, roots and values, Julia result, challenge evidence, type-signature set, non-promotion state, receipt, and bundle edge. Lean build succeeded.",
+      "limitation": "Lean checks the supported certificate/envelope semantics; it does not prove SU(5) or the external correctness of scientific source assumptions.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-01"]
+    },
+    {
+      "row_id": "R03_D01_ATTACK_CONTROLS",
+      "surface": "D-01 substitution and promotion attacks",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_REPAIR_ACCEPTANCE_RESULT_20260907_3307e355.json",
+          "sha256": "95a8ae1716e063e2ee8a72f50f0d2ee11efba2ab51922e4b91bc161bd23b9a6b"
+        }
+      ],
+      "independent_action": "Independently reran all D-01 controls from a detached worktree at 3307e355 and compared the generated control ledger with the preserved result.",
+      "observed_result": "All 26 controls had the required dispositions on their applicable direct and bundle routes, including certificate/context substitution and prohibited status promotion.",
+      "limitation": "The controls establish the frozen declared attack surface, not exhaustive resistance to every future implementation attack.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-01"]
+    },
+    {
+      "row_id": "R04_D01_RECEIPT_BUNDLE_EDGE",
+      "surface": "D-01 receipt and frozen-bundle binding",
+      "evidence": [
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json",
+          "sha256": "2da78322b4d7767fe04e6a33a36ce1190449ea94d5f82f6fe56e31bb9841c84f"
+        },
+        {
+          "path": "GitHub artifact 10035287072 :: bundles/0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13.json",
+          "sha256": "88c976cf6305457b79c40ce74dd11dc0a52cb9fe48bcf73e0fdf7deead5d9ba3"
+        }
+      ],
+      "independent_action": "Loaded and replayed the Windows and Linux bundles; inspected bundle reconstruction of envelope commitments rather than accepting stored summary values.",
+      "observed_result": "Both bundles replayed MATCHED, carry computation 20a479ef..., graph ddf90176..., runtime certificate 401d6aa6..., and Lean envelope ad7aef9e..., with bundle-level recomputation enforcing the edge.",
+      "limitation": "The Linux bundle is preserved through the GitHub artifact and its hash inventory rather than committed as a repository file.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-01", "LINUX_EXECUTION"]
+    },
+    {
+      "row_id": "R05_D02_TRUSTED_SIGNATURE_REGISTRY",
+      "surface": "D-02 type contracts independent of candidate claimed values",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_CHANGED_FILE_MANIFEST_20260907_3307e355.json",
+          "sha256": "43e80e55c4398836bd724e8df8a8000ff26f06b99d8edfdbff6afd3795f5dd68"
+        },
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_REPAIR_ACCEPTANCE_RESULT_20260907_3307e355.json",
+          "sha256": "95a8ae1716e063e2ee8a72f50f0d2ee11efba2ab51922e4b91bc161bd23b9a6b"
+        }
+      ],
+      "independent_action": "Inspected c03_rv_type_contracts.py and c03_rv_exact_verifier.py, traced registry construction, and independently evaluated the actual v2 candidate through the trusted verifier.",
+      "observed_result": "The 207 trusted signatures are derived from the trusted source/derived signature registry rather than candidate values; the evaluation emitted 207 TRUSTED_SIGNATURE_MATCHED receipts and 16 bound outputs.",
+      "limitation": "The trusted registry necessarily embodies the frozen profile's declared semantics and is not independent scientific authority for those semantics.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-02"]
+    },
+    {
+      "row_id": "R06_D02_METADATA_MUTATIONS",
+      "surface": "D-02 exhaustive value-preserving metadata mutations",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_REPAIR_ACCEPTANCE_RESULT_20260907_3307e355.json",
+          "sha256": "95a8ae1716e063e2ee8a72f50f0d2ee11efba2ab51922e4b91bc161bd23b9a6b"
+        }
+      ],
+      "independent_action": "Independently reran all 1,656 mutations and separately injected each of the eight ValueTypeV1-axis corruptions through the integrated verifier path while retaining the numeric value.",
+      "observed_result": "All 1,656 required mutations were rejected at the relevant node. The integrated check rejected mathematical kind, semantic type, dimension, unit convention, shape, index spaces, representation tags, and domain mutations.",
+      "limitation": "Applicability follows the frozen 207-node signature registry; future profiles require their own typed census.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-02"]
+    },
+    {
+      "row_id": "R07_D02_EDGE_MUTATIONS",
+      "surface": "D-02 parent/edge type and ancestry enforcement",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_REPAIR_ACCEPTANCE_RESULT_20260907_3307e355.json",
+          "sha256": "95a8ae1716e063e2ee8a72f50f0d2ee11efba2ab51922e4b91bc161bd23b9a6b"
+        }
+      ],
+      "independent_action": "Independently reran the frozen edge-mutation census and inspected trusted parent-signature validation.",
+      "observed_result": "All 160 edge mutations were rejected, with no unexpected survivor.",
+      "limitation": "This is exhaustive for the frozen derived-node edge census, not for arbitrary future graph vocabularies.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-02"]
+    },
+    {
+      "row_id": "R08_D02_EXECUTED_NODE_SURFACE",
+      "surface": "D-02 enforcement over the executed 207-node profile",
+      "evidence": [
+        {
+          "path": "GitHub artifact 10035287072 :: bundles/0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13.json",
+          "sha256": "88c976cf6305457b79c40ce74dd11dc0a52cb9fe48bcf73e0fdf7deead5d9ba3"
+        }
+      ],
+      "independent_action": "Recomputed the candidate graph locally and inspected the Linux frozen receipt census and output shapes.",
+      "observed_result": "The frozen execution contains 31 source, 160 derived, and 16 output nodes; 207 type-signature receipts are present, 16 outputs are VERIFIED_EXACT, and the one non-scalar root has shape [14].",
+      "limitation": "Opaque exact-document values use the profile-defined null shape; this is an explicit type definition, not inferred tensor structure.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-02", "LINUX_EXECUTION"]
+    },
+    {
+      "row_id": "R09_D07_HASH_DOMAINS",
+      "surface": "D-07 Git-blob, canonical-text, and byte-exact binary identities",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_REPAIR_ACCEPTANCE_RESULT_20260907_3307e355.json",
+          "sha256": "95a8ae1716e063e2ee8a72f50f0d2ee11efba2ab51922e4b91bc161bd23b9a6b"
+        },
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_CHANGED_FILE_MANIFEST_20260907_3307e355.json",
+          "sha256": "43e80e55c4398836bd724e8df8a8000ff26f06b99d8edfdbff6afd3795f5dd68"
+        }
+      ],
+      "independent_action": "Inspected dependency_closure.py and .gitattributes; reran LF/CRLF, BOM, invalid-UTF-8, binary, and genuine-content mutation controls.",
+      "observed_result": "Git-blob identity is primary; canonical-text observation normalizes newline form only; BOM, invalid UTF-8, whitespace/final-newline and genuine-content differences remain visible; binary identity is byte-exact.",
+      "limitation": "Filesystem-observation metadata can differ by checkout and is deliberately excluded from the domain-separated peer closure identity.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-07"]
+    },
+    {
+      "row_id": "R10_D07_LINUX_PEER_CLOSURE",
+      "surface": "D-07 Windows/Linux dependency-custody equivalence",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260907_v6.json",
+          "sha256": "ff6a0b98e302d6cbfe75f30542bcd2865a9834ec665cccc84f00b8e31abf8d15"
+        },
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6_linux_attempts/VPC_C03_RV_EXACT_V6_GITHUB_RUN_34167712902_ATTEMPT_1/attempt_record.json",
+          "sha256": "adf00ff3339d18af0db5311a72ef48673323779ec953828408282943c7e1a70c"
+        }
+      ],
+      "independent_action": "Downloaded artifact 10035287072, recomputed its archive SHA-256, validated all declared file hashes/sizes, and independently reran D-07 using the Linux peer closure.",
+      "observed_result": "All stable path identities match and the peer closure identity is a01b60485d9b9fcdd3b7307af16204d735abf1ee8ef9cff9177b77fc6773d058. D-07 passed.",
+      "limitation": "The artifact was provisioned and downloaded through connected infrastructure; the claim begins after environment provisioning.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-07", "LINUX_EXECUTION"]
+    },
+    {
+      "row_id": "R11_LINUX_NETWORK_BOUNDARY",
+      "surface": "Linux egress-denied trusted-execution boundary",
+      "evidence": [
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6_linux_attempts/VPC_C03_RV_EXACT_V6_GITHUB_RUN_34167712902_ATTEMPT_1/attempt_record.json",
+          "sha256": "adf00ff3339d18af0db5311a72ef48673323779ec953828408282943c7e1a70c"
+        },
+        {
+          "path": "GitHub artifact 10035287072",
+          "sha256": "5e3244fd2a0745b0f62e7a1d03f0f30630a92e045f2f62ba8974396fdf449f39"
+        }
+      ],
+      "independent_action": "Inspected timestamped provisioning/isolation evidence and byte-compared the before/after interface, route, and active-probe records from the downloaded artifact.",
+      "observed_result": "Provisioning completed before isolation; isolation exit code was 0; only lo existed; no IPv4 or IPv6 default route existed; IPv4 and IPv6 probes failed with errno 101 before and after; before/after evidence was identical; no connected fallback ran.",
+      "limitation": "This establishes egress-denied execution after connected provisioning, not offline environment construction or a hostile-code sandbox.",
+      "disposition": "SUPPORTED",
+      "affects": ["LINUX_EXECUTION"]
+    },
+    {
+      "row_id": "R12_LINUX_TRUSTED_EXECUTION",
+      "surface": "Complete Linux scientific-computation execution inside isolation",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260907_v6.json",
+          "sha256": "ff6a0b98e302d6cbfe75f30542bcd2865a9834ec665cccc84f00b8e31abf8d15"
+        },
+        {
+          "path": "GitHub artifact 10035287072 :: pytest.log",
+          "sha256": "e11e2ce8c05d4bdd01782d0b42547a3dd9cce46c39d452615b151cbf5da13e6a"
+        }
+      ],
+      "independent_action": "Mechanically validated the artifact inventory and inspected the isolated execution outputs, repair ledgers, bundle, challenge/corruption summaries, and replay A/B records.",
+      "observed_result": "270/270 tests passed in 891.59 seconds; the 207-node calculation, Python/Julia/Lean routes, 373 challenges, 160/160 corruption rejections, all three repair gates, entrypoint replay, and separate replay A/B completed successfully inside isolation.",
+      "limitation": "The review independently inspected preserved GitHub evidence; it did not itself allocate a second Linux runner.",
+      "disposition": "SUPPORTED",
+      "affects": ["LINUX_EXECUTION", "D-01", "D-02", "D-07"]
+    },
+    {
+      "row_id": "R13_LINUX_ARTIFACT_CUSTODY",
+      "surface": "GitHub run and artifact custody",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260907_v6.json",
+          "sha256": "ff6a0b98e302d6cbfe75f30542bcd2865a9834ec665cccc84f00b8e31abf8d15"
+        },
+        {
+          "path": "GitHub artifact 10035287072",
+          "sha256": "5e3244fd2a0745b0f62e7a1d03f0f30630a92e045f2f62ba8974396fdf449f39"
+        }
+      ],
+      "independent_action": "Queried GitHub run/job/artifact metadata, downloaded the artifact, recomputed archive hash 5e3244fd..., checked all 25 declared evidence files and all 27 payload-file hashes.",
+      "observed_result": "Run 34167712902 and job 101881966692 completed successfully at lineage eec9da73...; the artifact archive and every declared file matched with zero hash or size mismatch.",
+      "limitation": "GitHub-hosted metadata and artifact availability are externally hosted; the archive expires, while its identity and selected evidence are preserved in-repository.",
+      "disposition": "SUPPORTED",
+      "affects": ["LINUX_EXECUTION", "ENVIRONMENT_METADATA"]
+    },
+    {
+      "row_id": "R14_PAYLOAD_V1_TO_WINDOWS_V6",
+      "surface": "Original v1 to amended Windows v6 scientific-payload preservation",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_PAYLOAD_EQUIVALENCE_RESULT_20260907_3307e355.json",
+          "sha256": "337522daad388d9ccd742a0e7eef7e967ff3b1f1f7b8cc1e805e3bde0bb15ee1"
+        },
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+          "sha256": "7496caaa2f63915cf3adf5d81776ee3298decd204f745ae65e8a38b6c80b1bcf"
+        }
+      ],
+      "independent_action": "Regenerated the 643-row ledger, validated its self-hash, row uniqueness, exact PE00-PE09 census, projection hashes, evidence pairs, and mismatch fields, then compared it row-for-row with the preserved ledger.",
+      "observed_result": "643/643 MATCH; zero missing, duplicate, unclassified, or non-allowlisted scientific changes. The independently generated row array was identical to the preserved row array.",
+      "limitation": "The 643 rows are explicit equivalence obligations, not independent scientific experiments.",
+      "disposition": "SUPPORTED",
+      "affects": ["PAYLOAD_EQUIVALENCE"]
+    },
+    {
+      "row_id": "R15_PAYLOAD_WINDOWS_V6_TO_LINUX",
+      "surface": "Windows v6 to Linux v6 scientific-payload preservation",
+      "evidence": [
+        {
+          "path": "GitHub artifact 10035287072 :: windows_linux_payload_equivalence.json",
+          "sha256": "53707e2e5a558546c596b55585d0468b33a40057466ea74c80ab2c6c9b9d046b"
+        },
+        {
+          "path": "GitHub artifact 10035287072 :: bundles/0f64b6d71f536416755e599e2e3ad440d455a02b67a9927c0cdc2ecf5f505a13.json",
+          "sha256": "88c976cf6305457b79c40ce74dd11dc0a52cb9fe48bcf73e0fdf7deead5d9ba3"
+        }
+      ],
+      "independent_action": "Regenerated the 643-row Windows/Linux comparison, mechanically validated the same row-level invariants, and compared it with the artifact ledger.",
+      "observed_result": "643/643 MATCH with zero missing, duplicate, unclassified, or non-allowlisted change; the independently generated row array was identical to the artifact row array.",
+      "limitation": "Platform-specific environment metadata is outside the scientific projection by contract and remains separately visible.",
+      "disposition": "SUPPORTED",
+      "affects": ["PAYLOAD_EQUIVALENCE", "LINUX_EXECUTION"]
+    },
+    {
+      "row_id": "R16_NO_UNRELATED_SEMANTIC_CHANGE",
+      "surface": "Changed-file completeness and absence of unrelated scientific change",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_CHANGED_FILE_MANIFEST_20260907_3307e355.json",
+          "sha256": "43e80e55c4398836bd724e8df8a8000ff26f06b99d8edfdbff6afd3795f5dd68"
+        }
+      ],
+      "independent_action": "Compared git diff --name-only from 97311c3c... to 3307e355... with the manifest, inspected every changed implementation class, and ran git diff --check.",
+      "observed_result": "The manifest exactly covers all 23 changed paths; diff check is clean; there are zero new records, roots, physics operations, expected-answer changes, authority promotions, or mandatory challenge instances. No physics-operation implementation changed.",
+      "limitation": "The review is bounded to the declared baseline/tested commit delta and the transitive repair paths exercised by the gates.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-01", "D-02", "D-07", "PAYLOAD_EQUIVALENCE"]
+    },
+    {
+      "row_id": "R17_PRIOR_LINUX_ATTEMPTS",
+      "surface": "Three preserved Linux attempts preceding PASS",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_LINUX_EGRESS_DENIED_ATTEMPT_20260907_RUN_34162555952.json",
+          "sha256": "99b1d4620df1fce69a612e02690cda08e9be5c41dd5df2b4ce1db23305781d19"
+        },
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6_linux_attempts/VPC_C03_RV_EXACT_V6_GITHUB_RUN_34162706535_ATTEMPT_1/attempt_record.json",
+          "sha256": "47d834e18451f849e04f618fb5b258ba289fc6f03ca844e4c953ce3fcaa1e57a"
+        },
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6_linux_attempts/VPC_C03_RV_EXACT_V6_GITHUB_RUN_34165140494_ATTEMPT_1/attempt_record.json",
+          "sha256": "9a063b8c80d1e85b958567fd5621003cb91d2284a57bb3cbb8cad07b382d22d1"
+        }
+      ],
+      "independent_action": "Inspected each failed/inconclusive record and the corresponding workflow-only diffs leading to the PASS lineage.",
+      "observed_result": "Attempt 34162555952 was inconclusive before runner allocation because workflow validation rejected a runner-context reference; 34162706535 completed trusted execution but failed procedural comparison from a mistyped graph identity and overstrict full-receipt identity; 34165140494 failed because a copied bundle lost its content-addressed filename and replay correctly rejected it. Subsequent changes were narrow workflow/procedure corrections; no scientific-code or payload change was found.",
+      "limitation": "These attempts demonstrate fail-closed behavior and repaired procedures; only run 34167712902 supplies the accepted Linux qualification evidence.",
+      "disposition": "SUPPORTED",
+      "affects": ["LINUX_EXECUTION", "ENVIRONMENT_METADATA"]
+    },
+    {
+      "row_id": "R18_CLAIM_AND_AUTHORITY_BOUNDARY",
+      "surface": "Non-promotion and claim-ledger boundary",
+      "evidence": [
+        {
+          "path": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260907_v6.json",
+          "sha256": "ff6a0b98e302d6cbfe75f30542bcd2865a9834ec665cccc84f00b8e31abf8d15"
+        },
+        {
+          "path": "formal/docs/release/verified_calculator/c03_rv_exact_v6/b5482f305b6b45e8dc928640c7d7d837ec28d7b3a8009644a4cf304fccca4ccc.json",
+          "sha256": "2da78322b4d7767fe04e6a33a36ce1190449ea94d5f82f6fe56e31bb9841c84f"
+        }
+      ],
+      "independent_action": "Inspected all 16 claim-ledger entries and the review/receipt/bundle flags; exercised promotion-rejection controls through the independent D-01 rerun.",
+      "observed_result": "Each output remains VERIFIED_EXACT only as computation; claim ledgers explicitly withhold SU(5), CCFT, ToE, and global-runner claims. Scientific promotion, product-v1 release, and production activation remain false.",
+      "limitation": "A later authority body may separately adjudicate bounded computational requalification; this review does not do so.",
+      "disposition": "SUPPORTED",
+      "affects": ["D-01", "PAYLOAD_EQUIVALENCE"]
+    }
+  ],
+  "matrix_summary": {
+    "row_count": 18,
+    "SUPPORTED": 18,
+    "REQUIRED_AMENDMENT": 0,
+    "REJECTED": 0,
+    "INCONCLUSIVE": 0,
+    "material_required_amendments": []
+  },
+  "overall_disposition": "SUPPORTED",
+  "bounded_conclusion": "Within this amendment-only computational review scope, v6 closes D-01 and D-02, narrowly repairs D-07 custody, preserves the fixed C03/RV scientific payload, and reproduces it on Linux under egress-denied trusted execution without a newly demonstrated material trust bypass.",
+  "bounded_requalification": "NOT_ADJUDICATED_BY_THIS_REVIEW",
+  "authority_adjudication": "NOT_PERFORMED",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false,
+  "does_not_claim": [
+    "that SU(5) is true in nature",
+    "that CCFT or a Theory of Everything is validated",
+    "that the historical generic runner or all topology classes are globally qualified",
+    "that product v1 is released or the calculator is activated for production",
+    "that dependency provisioning occurred offline",
+    "that the Linux network namespace is a hostile-code sandbox",
+    "that this same-provider AI review is external human expert peer review"
+  ]
+}

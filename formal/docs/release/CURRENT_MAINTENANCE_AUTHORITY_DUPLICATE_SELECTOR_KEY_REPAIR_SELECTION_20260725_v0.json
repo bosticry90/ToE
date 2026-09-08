@@ -1,0 +1,17 @@
+{
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_lineage_result_review": {
+    "commit": "49e9216ec4727ccd0f421bf59392175e3a036d7c",
+    "path": "formal/docs/release/REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR",
+  "target": "repair_current_maintenance_authority_duplicate_selector_key_v0_once",
+  "ambiguous_current_maintenance_authority_used_as_authority": false,
+  "execution_count_authorized": 1,
+  "pillar_v1_repair_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

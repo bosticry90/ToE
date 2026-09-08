@@ -1,0 +1,907 @@
+{
+  "calculation_id": "CALC-TOE-REPOSITORY-WIDE-NATIVE-HYPOTHESIS-EVIDENCE-CENSUS-BOUNDED-PROGRAM-PREPARATION-v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "claim_boundary": {
+    "action_selected": false,
+    "archive_material_adopted": false,
+    "canonical_evidence_promoted": false,
+    "coherence_closeout_scope_qualified": true,
+    "field_selected": false,
+    "maintenance_index_or_cache_generated": false,
+    "native_hypothesis_selected": false,
+    "observable_selected": false,
+    "preinstallation_controls_frozen": true,
+    "program_installed": false,
+    "repository_wide_census_performed": false,
+    "representation_selected": false,
+    "scientific_claim_made": false,
+    "seam_executed": false,
+    "stage_1_opened": false,
+    "supplemental_archive_root_census_performed": false,
+    "supplemental_archive_root_claims_extracted": false
+  },
+  "evidence": {
+    "archive_candidate_ranking": {
+      "path": "formal/output/archive_candidate_ranking.json",
+      "sha256": "4faf70e406f9346234261282c5184347795c061293c19e8380eab994545ff0c6"
+    },
+    "archive_intake_index": {
+      "path": "formal/output/archive_intake_index.json",
+      "sha256": "106a991ab0cd2eab2df07fadf0cd213f3a7d8cd9121f486424504bb24fe8d005"
+    },
+    "archive_intake_tool": {
+      "path": "formal/python/tools/archive_intake_index.py",
+      "sha256": "1bfaf2652d66d700b90e64f2941262879fe01e583e0b567745f9d60f590f16d8"
+    },
+    "archive_retention_policy": {
+      "path": "formal/docs/release/SR_M5_ARCHIVE_RETENTION_POLICY_v0.md",
+      "sha256": "1fcac26319e4130b4ab28caef4200db01d94539c07285ccc3d27b487533d3254"
+    },
+    "coherence_scope_qualification": {
+      "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-AUTHORIZED-EVIDENCE-SCOPE-QUALIFICATION-v0.json",
+      "sha256": "302e8208fa3c8b70232ec05617ba951a1d8ff9af89eecf1771fab123e6312ab3"
+    },
+    "coherence_scope_qualification_review": {
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_AUTHORIZED_EVIDENCE_SCOPE_QUALIFICATION_RESULT_REVIEW_20260730_v0.json",
+      "sha256": "0a23c361a8a08572674b6bfc72c6e1bd1aeaf81e066e2b1f27d1240d07cce15a"
+    },
+    "preinstallation_controls": {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PREINSTALLATION_CONTROLS_20260730_v0.json",
+      "sha256": "d2cf7a292cc33334e666c0aeb27701de487f9757353b255a8c5260764d1ee63a"
+    }
+  },
+  "execution_target": "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+  "native_hypothesis_tested": "NONE_DIRECTLY_CONTROL_MODEL",
+  "native_relevance": {
+    "kind": "ONE_PREREQUISITE_FROM_NATIVE_CALCULATION",
+    "statement": "Recovers and reconciles the repository's native-hypothesis evidence before another physical representation, action, seam, or calculation is selected."
+  },
+  "preinstallation_control_contract": {
+    "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PREINSTALLATION_CONTROLS_20260730_v0",
+    "atomic_close_batch_contract_frozen": true,
+    "byte_identity_and_cache_contract_frozen": true,
+    "canonical_identifiers_preserved": true,
+    "completion_statuses_separated": true,
+    "deterministic_deep_review_selection_frozen": true,
+    "maintenance_infrastructure_executed": false,
+    "passive_parser_contract_frozen": true,
+    "promotion_remains_outside_program": true,
+    "scientific_census_executed": false,
+    "status": "PREINSTALLATION_CONTROLS_FROZEN_NOT_EXECUTED",
+    "terminal_state_map_frozen": true,
+    "two_pass_source_snapshot_frozen": true,
+    "workload_budgets_frozen": true
+  },
+  "prerequisite_scope": "AUTHORIZED_PROGRAM_ONLY",
+  "program_proposal": {
+    "archive_assessment_outcomes": [
+      "ARCHIVE_CONTAINS_NEW_OPERATIONAL_COHERENCE_EVIDENCE",
+      "ARCHIVE_CONTAINS_RELEVANT_BUT_STILL_NONOPERATIONAL_MATERIAL",
+      "ARCHIVE_CONTAINS_ONLY_DUPLICATE_OR_SUPERSEDED_CLAIMS",
+      "ARCHIVE_CENSUS_INCOMPLETE",
+      "NO_NEW_MATERIAL_EVIDENCE_FOUND"
+    ],
+    "attempt_count": 0,
+    "authorized": false,
+    "authorized_stage_count_proposed": 5,
+    "batch_and_atomic_close_contract": {
+      "aggregate_manifest_binds_each_batch_hash": true,
+      "batch_omission_permitted": false,
+      "batch_overlap_permitted": false,
+      "batch_union_equals_declared_inventory": true,
+      "final_close_commit_contains": [
+        "final_batch_manifests",
+        "aggregate_manifest",
+        "index_schema_and_tool_versions",
+        "source_root_snapshot_records",
+        "stage_result",
+        "independent_review",
+        "validation_record",
+        "immutable_CLOSE_event",
+        "registry_and_authority_transition"
+      ],
+      "intermediate_substantive_batch_commits_permitted": false,
+      "no_batch_is_a_subsidiary_scientific_target": true,
+      "working_cache_status": "LOCAL_REGENERABLE_NONAUTHORITATIVE"
+    },
+    "byte_identity_and_cache_contract": {
+      "cache_never_replaces_final_hash_verification": true,
+      "cache_path": ".toe_cache/native_hypothesis_census_v1.sqlite3",
+      "cache_schema_version": 1,
+      "cache_status": "LOCAL_REGENERABLE_NONAUTHORITATIVE",
+      "cache_transactions_are_atomic": true,
+      "effective_attributes_recorded_separately": true,
+      "historical_index_must_not_be_overwritten": "formal/output/archive_intake_index.json",
+      "local_final_manifest_requires_verified_sha256": true,
+      "local_metadata_is_change_detection_hint_only": true,
+      "new_versioned_index_required": true,
+      "tracked_blob_read_method": "git cat-file blob",
+      "tracked_primary_identity": "COMMITTED_GIT_BLOB_BYTES",
+      "tracked_sha256_cache_key": [
+        "git_object_format",
+        "git_object_id",
+        "hashing_schema_version"
+      ],
+      "worktree_sha256_recorded_separately_when_relevant": true
+    },
+    "claim_domains": [
+      "ONTOLOGY",
+      "PILLARS",
+      "SEAMS",
+      "CCFT",
+      "MASTER_ACTION",
+      "BRIDGE_CONDITIONS",
+      "GRAVITY",
+      "MATTER",
+      "QUANTUM_STRUCTURE",
+      "EMERGENCE",
+      "THERMODYNAMICS",
+      "SCALE_HIERARCHY",
+      "OBSERVABLES",
+      "PREDICTIONS",
+      "FALSIFICATION"
+    ],
+    "completion_status_contract": {
+      "bounded_deep_review_status": [
+        "BOUNDED_DEEP_REVIEW_COMPLETE",
+        "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+        "BOUNDED_DEEP_REVIEW_BLOCKED"
+      ],
+      "claim_exhaustion_status": [
+        "REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED"
+      ],
+      "custody_inventory_status": [
+        "CUSTODY_INVENTORY_COMPLETE",
+        "CUSTODY_INVENTORY_COMPLETE_WITH_LOCAL_LIMITATIONS",
+        "CUSTODY_INVENTORY_BLOCKED"
+      ],
+      "declared_root_discovery_status": [
+        "DECLARED_ROOT_METADATA_DISCOVERY_COMPLETE",
+        "DECLARED_ROOT_METADATA_DISCOVERY_INCOMPLETE"
+      ]
+    },
+    "custody_contract": {
+      "archive_is_read_only": true,
+      "claims_extracted_into_new_custody_dossiers": true,
+      "discovery_is_separate_from_scientific_adoption": true,
+      "independent_review_required_for_canonical_promotion": true,
+      "original_paths_and_hashes_preserved": true,
+      "provenance_and_licensing_recorded_where_available": true,
+      "source_documents_distinguished_from_generated_summaries": true,
+      "supplemental_archive_roots_are_explicit_stage_1_inputs": true,
+      "supplemental_archive_roots_are_not_adopted_evidence": true,
+      "supplemental_archive_roots_are_read_only": true,
+      "whole_documents_not_promoted_automatically": true
+    },
+    "deep_review_selection_contract": {
+      "conflict_allocation": "INCLUDE_BOTH_CONFLICT_ENDPOINTS_BEFORE_LOWER_PRIORITY_SOURCES",
+      "domain_order": [
+        "ONTOLOGY",
+        "PILLARS",
+        "SEAMS",
+        "CCFT",
+        "MASTER_ACTION",
+        "BRIDGE_CONDITIONS",
+        "GRAVITY",
+        "MATTER",
+        "QUANTUM_STRUCTURE",
+        "EMERGENCE",
+        "THERMODYNAMICS",
+        "SCALE_HIERARCHY",
+        "OBSERVABLES",
+        "PREDICTIONS",
+        "FALSIFICATION"
+      ],
+      "manual_preference_permitted": false,
+      "maximum_files_per_domain": 64,
+      "maximum_files_per_lineage": 8,
+      "minimum_slots_per_nonempty_domain_before_global_fill": 16,
+      "overflow_population_and_unreviewed_counts_recorded": true,
+      "overflow_sampling": "ROUND_ROBIN_OVER_DOMAIN_BY_SOURCE_CLASS_STRATA_SORTED_BY_FROZEN_DOMAIN_AND_SOURCE_CLASS_ORDER",
+      "primary_domain_assignment": "FIRST_MATCH_IN_FROZEN_DOMAIN_ORDER_AFTER_SOURCE_BOUND_TAGGING",
+      "priority_order": [
+        "CURRENT_CANONICAL_PRIMARY_SOURCES",
+        "ARCHIVED_PRIMARY_LINEAGE_HEADS",
+        "EARLIEST_PRIMARY_SOURCE_PER_LINEAGE",
+        "UNIQUE_DEFINITIONS_EQUATIONS_OR_PREDICTIONS",
+        "SOURCES_REPRESENTING_KNOWN_CONFLICTS",
+        "DERIVED_SUMMARY_WHEN_PRIMARY_UNAVAILABLE",
+        "DETERMINISTIC_STRATIFIED_OVERFLOW_SAMPLE"
+      ],
+      "tie_breaking_order": [
+        "source_root_id",
+        "normalized_relative_path_utf8_bytes",
+        "sha256"
+      ]
+    },
+    "discovery_strategy": {
+      "binary_generated_cache_and_dependency_trees_excluded_by_rule": true,
+      "broad_automated_discovery_first": true,
+      "deep_read_all_archive_files_required": false,
+      "deep_review_requires_relevance_and_provenance_gate": true,
+      "generated_outputs_are_classified_before_evidence_use": true,
+      "keyword_only_discovery_is_sufficient": false,
+      "metadata_and_hash_classification_before_deep_read": true,
+      "supplemental_archive_roots_require_stage_1_reindex": true,
+      "vendored_virtual_environments_are_not_scientific_evidence": true
+    },
+    "duplicate_contract": {
+      "every_duplicate_path_remains_in_custody_inventory": true,
+      "near_duplicate_similarity_is_nonauthoritative": true,
+      "scientific_lineage_and_supersession_are_stage_2_only": true,
+      "stage_1_classes": [
+        "EXACT_CONTENT_DUPLICATE",
+        "SUSPECTED_NEAR_DUPLICATE",
+        "DERIVED_SUMMARY_CANDIDATE",
+        "PENDING_LINEAGE_REVIEW"
+      ],
+      "stage_1_exact_hash_grouping_is_candidate_only": true
+    },
+    "frontier_classifications": [
+      "READY_FOR_BOUNDED_TEST",
+      "READY_AFTER_ONE_DEFINITION",
+      "READY_AFTER_ONE_DERIVATION",
+      "HISTORICAL_ONLY",
+      "CONTROL_MODEL_ONLY",
+      "BLOCKED_BY_CONFLICT",
+      "BLOCKED_BY_MISSING_EVIDENCE",
+      "REJECTED"
+    ],
+    "index_schema": {
+      "file_record_fields": [
+        "source_root_id",
+        "custody_relative_path",
+        "git_or_filesystem_status",
+        "git_object_id",
+        "committed_blob_sha256",
+        "worktree_sha256",
+        "local_verified_sha256",
+        "file_size",
+        "date_metadata_with_kind_and_confidence",
+        "file_type",
+        "content_fingerprint",
+        "duplicate_group_candidate",
+        "source_classification",
+        "content_extraction_status",
+        "domain_tags",
+        "source_lineage",
+        "provenance_status",
+        "licensing_or_redistribution_concern",
+        "custody_class",
+        "eligibility_for_deeper_review",
+        "exclusion_reason",
+        "source_snapshot_id",
+        "indexer_schema_version",
+        "parser_contract_version"
+      ],
+      "generated_index_path_pattern": "formal/output/native_hypothesis_census_v1/{stage_id}/{batch_id}.json",
+      "index_id": "TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_V1",
+      "schema_version": 1,
+      "source_snapshot_fields": [
+        "source_root_id",
+        "initial_snapshot_tuple_hash",
+        "final_snapshot_tuple_hash",
+        "stability_status"
+      ]
+    },
+    "installed": false,
+    "mandatory_exit_target_proposed": "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0",
+    "native_hypothesis_graph_schema": [
+      "source",
+      "claim",
+      "assumption",
+      "mathematical_object",
+      "derivation",
+      "result",
+      "seam_or_pillar",
+      "observable",
+      "authority_status"
+    ],
+    "no_subsidiary_scientific_targets_proposed": true,
+    "open_event_created": false,
+    "parser_contract_artifact": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PREINSTALLATION_CONTROLS_20260730_v0",
+    "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+    "program_terminal_outcomes": [
+      "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+      "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+      "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+      "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+    ],
+    "promotion_contract": {
+      "census_may_emit": "PROMOTION_CANDIDATE_DOSSIER",
+      "census_may_promote_claims": false,
+      "promotion_requires_separate_post_census_authority": true
+    },
+    "proposal_only": true,
+    "repair_attempt_count_proposed": 0,
+    "repository_exclusion_contract": {
+      "broad_archive_ignore_prohibited": true,
+      "curated_dossier_root": "formal/docs/release/native_hypothesis_evidence_dossiers/",
+      "curated_dossiers_must_not_be_ignored": true,
+      "ignore_rule_removal_requires_maintenance_authority": true,
+      "tracked_gitignore_rules": [
+        "/archive/ToE_Project/",
+        "/archive/ToE_Project_Starter_2025-09-24/",
+        "/archive/custody_bundles/",
+        "/.toe_cache/native_hypothesis_census_v1.sqlite3"
+      ]
+    },
+    "seam_classes": [
+      "CONCEPTUAL_RELATION",
+      "ADMISSIBILITY_CONDITION",
+      "SOURCE_MAP",
+      "LIMITING_PROCEDURE",
+      "VARIATIONAL_COUPLING",
+      "EQUIVALENCE_THEOREM",
+      "COMPUTED_BRIDGE",
+      "UNRESOLVED_PROPOSAL"
+    ],
+    "semantic_stages_proposed": [
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "current_tracked_repository",
+            "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+            "current_canonical_authority_surfaces",
+            "preinstallation_controls_v0",
+            "formal_outputs_and_release_records",
+            "calculation_and_validation_sources",
+            "Lean_modules",
+            "quarantine_dossiers",
+            "monographs_theory_specifications_and_historical_notes"
+          ],
+          "dependency_artifact_ids": [
+            "coherence_scope_qualification",
+            "coherence_scope_qualification_review",
+            "archive_intake_index",
+            "archive_candidate_ranking",
+            "archive_intake_tool",
+            "archive_retention_policy",
+            "preinstallation_controls"
+          ],
+          "normalized_scientific_question": "Which repository and archive files may contain substantive native-ToE hypotheses, derivations, bridge claims, or predictions, and what are their custody and authority states?",
+          "prohibited_claims": [
+            "automatic archive adoption",
+            "authority promotion without independent review",
+            "claim truth from repetition or symbolic similarity",
+            "field or representation selection",
+            "master-action construction",
+            "seam execution",
+            "empirical validation",
+            "completed ToE"
+          ],
+          "required_outputs": [
+            "path_hash_date_provenance_authority_catalog",
+            "domain_relevance_scores",
+            "machine_generated_and_binary_exclusion_ledger",
+            "deep_review_candidate_set_selected_by_explicit_gates",
+            "archive_specific_evidence_assessment"
+          ],
+          "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+          "terminal_outcome_vocabulary": [
+            "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE",
+            "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS",
+            "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS",
+            "SOURCE_ROOT_SNAPSHOT_STABLE",
+            "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+            "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE",
+            "SOURCE_ROOT_UNAVAILABLE",
+            "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED",
+            "CUSTODY_OR_PROVENANCE_BLOCKED",
+            "DETERMINISTIC_INDEX_GENERATION_FAILED"
+          ]
+        },
+        "canonical_scope_hash": "be877b7daf4bb24fa5fa9c49c75891394d8bb16ddf6e2658d7e7360fba94da64",
+        "canonical_target": "inventory_toe_repository_wide_native_hypothesis_sources_v0",
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE",
+            "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS",
+            "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS",
+            "SOURCE_ROOT_SNAPSHOT_STABLE",
+            "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+            "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE",
+            "SOURCE_ROOT_UNAVAILABLE",
+            "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED",
+            "CUSTODY_OR_PROVENANCE_BLOCKED",
+            "DETERMINISTIC_INDEX_GENERATION_FAILED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+        "stage_number": 1
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "current_tracked_repository",
+            "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+            "current_canonical_authority_surfaces",
+            "preinstallation_controls_v0",
+            "formal_outputs_and_release_records",
+            "calculation_and_validation_sources",
+            "Lean_modules",
+            "quarantine_dossiers",
+            "monographs_theory_specifications_and_historical_notes"
+          ],
+          "dependency_artifact_ids": [
+            "coherence_scope_qualification",
+            "coherence_scope_qualification_review",
+            "archive_intake_index",
+            "archive_candidate_ranking",
+            "archive_intake_tool",
+            "archive_retention_policy",
+            "preinstallation_controls"
+          ],
+          "normalized_scientific_question": "Which candidate sources are duplicates, revisions, generated copies, summaries, superseded descendants, parallel lineages, or contradictory descendants?",
+          "prohibited_claims": [
+            "automatic archive adoption",
+            "authority promotion without independent review",
+            "claim truth from repetition or symbolic similarity",
+            "field or representation selection",
+            "master-action construction",
+            "seam execution",
+            "empirical validation",
+            "completed ToE"
+          ],
+          "required_outputs": [
+            "exact_and_near_duplicate_groups",
+            "revision_and_derivation_lineages",
+            "source_to_summary_provenance_edges",
+            "supersession_and_contradiction_ledger",
+            "independent_source_count"
+          ],
+          "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION",
+          "terminal_outcome_vocabulary": [
+            "SOURCE_LINEAGES_RECONSTRUCTED",
+            "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES",
+            "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED"
+          ]
+        },
+        "canonical_scope_hash": "3c3a7827a848f0cac2ea014a29b032bf50678e8a8773eeedbf77a2d111227e05",
+        "canonical_target": "reconstruct_toe_native_hypothesis_source_lineages_v0",
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "SOURCE_LINEAGES_RECONSTRUCTED",
+            "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES",
+            "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION",
+        "stage_number": 2
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "current_tracked_repository",
+            "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+            "current_canonical_authority_surfaces",
+            "preinstallation_controls_v0",
+            "formal_outputs_and_release_records",
+            "calculation_and_validation_sources",
+            "Lean_modules",
+            "quarantine_dossiers",
+            "monographs_theory_specifications_and_historical_notes"
+          ],
+          "dependency_artifact_ids": [
+            "coherence_scope_qualification",
+            "coherence_scope_qualification_review",
+            "archive_intake_index",
+            "archive_candidate_ranking",
+            "archive_intake_tool",
+            "archive_retention_policy",
+            "preinstallation_controls"
+          ],
+          "normalized_scientific_question": "What source-bound native ontology, pillar, seam, action, bridge, gravity, matter, emergence, thermodynamic, prediction, and falsification claims are contained in the gated sources?",
+          "prohibited_claims": [
+            "automatic archive adoption",
+            "authority promotion without independent review",
+            "claim truth from repetition or symbolic similarity",
+            "field or representation selection",
+            "master-action construction",
+            "seam execution",
+            "empirical validation",
+            "completed ToE"
+          ],
+          "required_outputs": [
+            "source_bound_claim_records",
+            "claim_domain_and_authority_classification",
+            "pillar_and_seam_ledgers",
+            "master_action_term_and_origin_ledger",
+            "Ck_meaning_disambiguation_ledger",
+            "prediction_and_falsification_ledger"
+          ],
+          "semantic_stage_id": "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION",
+          "terminal_outcome_vocabulary": [
+            "NATIVE_CLAIM_EXTRACTION_COMPLETE",
+            "NATIVE_CLAIM_EXTRACTION_COMPLETE_WITH_CONFLICTS",
+            "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+            "NATIVE_CLAIM_EXTRACTION_BLOCKED"
+          ]
+        },
+        "canonical_scope_hash": "fc4386bc4490b5a913ad1b6353084592b8675cfdc852eb58535901fa8170c4fd",
+        "canonical_target": "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0",
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "NATIVE_CLAIM_EXTRACTION_COMPLETE",
+            "NATIVE_CLAIM_EXTRACTION_COMPLETE_WITH_CONFLICTS",
+            "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+            "NATIVE_CLAIM_EXTRACTION_BLOCKED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION",
+        "stage_number": 3
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "current_tracked_repository",
+            "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+            "current_canonical_authority_surfaces",
+            "preinstallation_controls_v0",
+            "formal_outputs_and_release_records",
+            "calculation_and_validation_sources",
+            "Lean_modules",
+            "quarantine_dossiers",
+            "monographs_theory_specifications_and_historical_notes"
+          ],
+          "dependency_artifact_ids": [
+            "coherence_scope_qualification",
+            "coherence_scope_qualification_review",
+            "archive_intake_index",
+            "archive_candidate_ranking",
+            "archive_intake_tool",
+            "archive_retention_policy",
+            "preinstallation_controls"
+          ],
+          "normalized_scientific_question": "Which claims support, conflict with, supersede, or depend on one another, which have mathematical or only philosophical support, and which extracted claims merit proposed canonical promotion under independent review?",
+          "prohibited_claims": [
+            "automatic archive adoption",
+            "authority promotion without independent review",
+            "claim truth from repetition or symbolic similarity",
+            "field or representation selection",
+            "master-action construction",
+            "seam execution",
+            "empirical validation",
+            "completed ToE"
+          ],
+          "required_outputs": [
+            "native_hypothesis_graph",
+            "support_conflict_dependency_and_supersession_edges",
+            "mathematical_backing_and_missing_definition_ledger",
+            "candidate_canonical_promotion_dossiers",
+            "independent_review_for_each_proposed_promotion"
+          ],
+          "semantic_stage_id": "CURRENT_HYPOTHESIS_RECONCILIATION",
+          "terminal_outcome_vocabulary": [
+            "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE",
+            "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS",
+            "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED"
+          ]
+        },
+        "canonical_scope_hash": "fd9d77680cd0ff775aac0cc4f48d061abced26c3515245fe608522c7f36a8b19",
+        "canonical_target": "reconcile_toe_current_native_hypothesis_evidence_v0",
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE",
+            "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS",
+            "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "CURRENT_HYPOTHESIS_RECONCILIATION",
+        "stage_number": 4
+      },
+      {
+        "canonical_scope": {
+          "authorized_inputs": [
+            "current_tracked_repository",
+            "archive_tree_read_only",
+            "archive/ToE_Project_read_only_pending_canonical_reindex",
+            "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+            "current_canonical_authority_surfaces",
+            "preinstallation_controls_v0",
+            "formal_outputs_and_release_records",
+            "calculation_and_validation_sources",
+            "Lean_modules",
+            "quarantine_dossiers",
+            "monographs_theory_specifications_and_historical_notes"
+          ],
+          "dependency_artifact_ids": [
+            "coherence_scope_qualification",
+            "coherence_scope_qualification_review",
+            "archive_intake_index",
+            "archive_candidate_ranking",
+            "archive_intake_tool",
+            "archive_retention_policy",
+            "preinstallation_controls"
+          ],
+          "normalized_scientific_question": "Which currently supportable native hypothesis is strongest for a separate bounded adjudication, or why is no hypothesis ready?",
+          "prohibited_claims": [
+            "automatic archive adoption",
+            "authority promotion without independent review",
+            "claim truth from repetition or symbolic similarity",
+            "field or representation selection",
+            "master-action construction",
+            "seam execution",
+            "empirical validation",
+            "completed ToE"
+          ],
+          "required_outputs": [
+            "frontier_classification_for_each_candidate",
+            "ranked_native_frontier_map",
+            "selected_next_hypothesis_or_explicit_no_selection",
+            "decision_rationale_and_missing_prerequisite_count",
+            "separate_next_program_preparation_target_if_selected"
+          ],
+          "semantic_stage_id": "NATIVE_FRONTIER_DECISION",
+          "terminal_outcome_vocabulary": [
+            "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+            "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+            "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+            "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+          ]
+        },
+        "canonical_scope_hash": "639b469cbaf5000a2382d9eb01f248facf65e21d2776c8600c5922a7b5d2f507",
+        "canonical_target": "select_toe_native_frontier_after_repository_wide_evidence_census_v0",
+        "proposed_close_event_scope": {
+          "block_or_failure_requires_mandatory_exit": true,
+          "event_type": "ATTEMPT_CLOSE",
+          "required_atomic_contents": [
+            "stage_result_or_failed_closed_result",
+            "independent_result_review",
+            "immutable_CLOSE_event",
+            "registry_and_authority_transition",
+            "validation_record"
+          ],
+          "terminal_outcomes": [
+            "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+            "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+            "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+            "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+          ]
+        },
+        "proposed_open_event_scope": {
+          "event_type": "ATTEMPT_OPEN",
+          "producer_may_run_before_open_commit": false,
+          "required_atomic_contents": [
+            "immutable_OPEN_event",
+            "registry_projection_update",
+            "generated_authority_surfaces",
+            "Lean_authority_mirrors"
+          ],
+          "substantive_stage_output_allowed": false
+        },
+        "semantic_stage_id": "NATIVE_FRONTIER_DECISION",
+        "stage_number": 5
+      }
+    ],
+    "source_authority_vocabulary": [
+      "CURRENT_CANONICAL",
+      "CURRENT_NONCANONICAL",
+      "HISTORICAL_AUTHORITATIVE_AT_TIME",
+      "SUPERSEDED",
+      "REJECTED",
+      "QUARANTINED",
+      "SPECULATIVE_NOTE",
+      "GENERATED_SUMMARY",
+      "DUPLICATE",
+      "EXTERNAL_EVIDENCE",
+      "UNKNOWN_PROVENANCE"
+    ],
+    "source_root_snapshot_contract": {
+      "absolute_paths_in_snapshot_hash": false,
+      "excluded_cache_mutation_exception": "ALLOWED_ONLY_WHEN_OUTSIDE_AUTHORITATIVE_INVENTORY_AND_QUANTIFIED_IN_EXCLUSION_LEDGER",
+      "material_mutation_blocks_stage": true,
+      "mutated_outcome": "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+      "passes": [
+        "INITIAL_SOURCE_ROOT_SCAN",
+        "FINAL_SOURCE_ROOT_SCAN",
+        "MUTATION_COMPARISON"
+      ],
+      "recorded_fields": [
+        "source_root_id",
+        "normalized_root_relative_path_inventory",
+        "initial_file_count",
+        "initial_aggregate_byte_count",
+        "final_file_count",
+        "final_aggregate_byte_count",
+        "initial_snapshot_tuple_hash",
+        "final_snapshot_tuple_hash",
+        "files_added_during_execution",
+        "files_removed_during_execution",
+        "files_changed_during_execution"
+      ],
+      "snapshot_hash": "SHA-256",
+      "snapshot_serialization": "RFC8785_AFTER_DECLARED_SET_NORMALIZATION",
+      "stable_outcome": "SOURCE_ROOT_SNAPSHOT_STABLE",
+      "timestamps_in_snapshot_hash": false,
+      "tuple_fields": [
+        "normalized_relative_path",
+        "file_type",
+        "size",
+        "sha256",
+        "custody_classification"
+      ],
+      "tuple_sort": "UTF8_BYTES_OF_NORMALIZED_RELATIVE_PATH"
+    },
+    "terminal_state_map": {
+      "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW": "PASS",
+      "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED": "BLOCKED",
+      "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE": "PASS",
+      "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS": "PASS",
+      "CUSTODY_OR_PROVENANCE_BLOCKED": "BLOCKED",
+      "DETERMINISTIC_INDEX_GENERATION_FAILED": "FAILED",
+      "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED": "BLOCKED",
+      "NATIVE_CLAIM_EXTRACTION_BLOCKED": "BLOCKED",
+      "NATIVE_CLAIM_EXTRACTION_COMPLETE": "PASS",
+      "NATIVE_CLAIM_EXTRACTION_COMPLETE_WITH_CONFLICTS": "PASS",
+      "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY": "PASS",
+      "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND": "PASS",
+      "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE": "BLOCKED",
+      "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE": "PASS",
+      "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS": "PASS",
+      "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS": "PASS",
+      "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE": "BLOCKED",
+      "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED": "BLOCKED",
+      "SOURCE_LINEAGES_RECONSTRUCTED": "PASS",
+      "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES": "PASS",
+      "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED": "BLOCKED",
+      "SOURCE_ROOT_MUTATED_DURING_CENSUS": "BLOCKED",
+      "SOURCE_ROOT_SNAPSHOT_STABLE": "PASS",
+      "SOURCE_ROOT_UNAVAILABLE": "BLOCKED"
+    },
+    "terminal_state_qualifiers": {
+      "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW": "PASS_REQUIRES_DETERMINISTIC_SELECTION_OVERFLOW_COUNTS_AND_REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED",
+      "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS": "PASS_ONLY_WHEN_EVERY_DECLARED_ROOT_IS_INVENTORIED_AND_ALL_GAPS_ARE_QUANTIFIED_NONMATERIAL_LOCAL_PORTABILITY_OR_DETERMINISTIC_EXCLUSION_LIMITATIONS",
+      "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES": "PASS_ONLY_WHEN_AMBIGUITIES_ARE_WITHIN_FROZEN_BUDGET_AND_PRESERVED_WITHOUT_SUPERSESSION_OR_AUTHORITY_INFERENCE"
+    },
+    "transition_rules": {
+      "any_block_or_failure_exits_without_repair": true,
+      "each_stage_consumes_only_accepted_prior_outputs": true,
+      "no_automatic_successor": true,
+      "positive_archive_finding_does_not_select_representation": true,
+      "separate_installation_authority_required": true,
+      "separate_stage_1_open_authority_required": true,
+      "stage_5_selects_but_does_not_execute_next_hypothesis": true
+    },
+    "workload_budgets": {
+      "budget_scope": "ELIGIBLE_CORPUS_AFTER_DETERMINISTIC_VENDOR_CACHE_TEMP_AND_UNSUPPORTED_ACTIVE_CONTENT_SEGREGATION",
+      "maximum_claims_per_file": 32,
+      "maximum_eligible_deep_review_bytes": 1073741824,
+      "maximum_eligible_deep_review_files": 640,
+      "maximum_extracted_claims": 4096,
+      "maximum_files_per_hypothesis_domain": 64,
+      "maximum_files_per_source_lineage": 8,
+      "maximum_parser_failures": 128,
+      "maximum_total_extracted_text_bytes": 268435456,
+      "maximum_unresolved_lineage_relationships": 512,
+      "maximum_unsupported_format_files": 1024,
+      "overflow_is_not_repository_claim_exhaustion": true,
+      "overflow_terminal_outcome": "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW"
+    }
+  },
+  "prohibited_claims": [
+    "repository-wide source exhaustion",
+    "archive evidence adequacy",
+    "archive material authority",
+    "supplemental archive root scientific adequacy",
+    "CCFT validation or rejection",
+    "native ontology selection",
+    "master-action selection",
+    "pillar or seam closure",
+    "unique empirical discriminator",
+    "completed ToE"
+  ],
+  "schema_id": "toe.repository_wide_native_hypothesis_evidence_census.bounded_program_preparation.v0",
+  "strict_terminal_outcome": "PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR",
+  "terminal_outcome": "REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED",
+  "triggering_scope_result": {
+    "authorized_evidence_sufficiency": "FAILED",
+    "closed_coherence_program_reopened": false,
+    "legacy_archive_index_is_complete_for_current_local_archive": false,
+    "legacy_archive_indexed_file_count_before_supplemental_roots": 7331,
+    "repository_wide_evidence_sufficiency": "NOT_TESTED",
+    "supplemental_archive_root_count": 2,
+    "supplemental_archive_roots": [
+      {
+        "intake_status": "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX",
+        "path": "archive/ToE_Project",
+        "scientific_status": "UNADJUDICATED"
+      },
+      {
+        "intake_status": "PRESENT_LOCALLY_PENDING_CANONICAL_REINDEX",
+        "path": "archive/ToE_Project_Starter_2025-09-24",
+        "scientific_status": "UNADJUDICATED"
+      }
+    ],
+    "supplemental_archive_scientific_content_adjudicated": false
+  },
+  "verdict": "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
+}

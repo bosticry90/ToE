@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 3,
+  "event_hash": "5d238fc2ef7e2015f381355cf8566e2505ca24775b31ec9d628b96a36820d001",
+  "event_sequence_number": 5,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "08e38fa145dd1811842fef4ebc069905104d5898",
+  "previous_event_hash": "828f3e068b3001681346bbe9e00ada79855a12d791de55bda2b7d400638cb212",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "registry_snapshot_hash": "f08dfafbeb6bf9900031a41e39a41c77db2accea57ce38f633a0530ffbbb69e9",
+  "scope_hash": "fc4386bc4490b5a913ad1b6353084592b8675cfdc852eb58535901fa8170c4fd",
+  "semantic_stage_id": "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION",
+  "target": "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0"
+}

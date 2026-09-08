@@ -1,0 +1,81 @@
+{
+  "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_VALIDATION_v0",
+  "schema_id": "toe.ccft_native_mathematical_core_and_operationalization.bounded_program_preparation_validation.v0",
+  "captured_at_utc": "2026-07-31T21:20:00Z",
+  "atomic_proposal_commit_expected_path_count": 13,
+  "atomic_proposal_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0.json",
+    "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_preparation_authority.py",
+    "formal/python/tests/test_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_preparation.py",
+    "formal/python/tests/test_toe_ccft_primary_native_positive_content_frontier_selection_result.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTNativeMathematicalCoreAndOperationalizationBoundedProgramPreparationResultReview.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "authority_timestamp_forward_correction": {
+    "status": "APPLIED_WITHOUT_SCOPE_OR_SCIENTIFIC_CHANGE",
+    "corrected_to_authority_commit_time_utc": "2026-07-31T21:19:27Z",
+    "authority_commit": "5002ff6eec85f2645bb99b045588ce046737f9b9"
+  },
+  "focused_python_validation": {
+    "passed": 34,
+    "status": "PASSED",
+    "suites": [
+      "test_toe_ccft_primary_native_positive_content_frontier_selection_authority.py",
+      "test_toe_ccft_primary_native_positive_content_frontier_selection_result.py",
+      "test_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_preparation_authority.py",
+      "test_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_preparation.py",
+      "test_loop_control_registry_envelope_integrity_gate.py"
+    ]
+  },
+  "full_lean_validation": {
+    "jobs": 9112,
+    "modules": 1367,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "deterministic_generation": {
+    "modules": 1367,
+    "scope": "working-tree",
+    "status": "PASSED"
+  },
+  "authority_consistency": {
+    "current_target": "prepare_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_v0",
+    "registry_and_evaluated_lean_agree": true,
+    "status": "PASSED"
+  },
+  "registry_integrity": {
+    "alias_count": 227,
+    "status": "PASSED"
+  },
+  "governance_validation": {
+    "installed_program_created": false,
+    "scientific_event_created": false,
+    "scientific_attempt_count": 0,
+    "status": "PASSED"
+  },
+  "nonclaim_boundary": {
+    "ccft_mathematical_core_recovered": false,
+    "operational_definition_established": false,
+    "representation_field_or_action_selected": false,
+    "seam_observable_or_discriminator_selected": false,
+    "evidence_promoted": false,
+    "program_installed": false,
+    "scientific_stage_opened": false
+  },
+  "result_path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+  "result_sha256": "5b9177fde7417a0a70acc6074c48b5d0cdc000ab0e9d73cf11ad97e7b9add90c",
+  "review_path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+  "review_sha256": "2eeabff93fb7912f7950c3336d56c8574f4d7f3601aa309fccdb6fb73e1b47fb",
+  "exhaustive_python_passage_claimed": false,
+  "legacy_authority_parser_and_freshness_debt_preserved": true,
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true,
+  "status": "PROGRAM_PROPOSAL_PREPARED_AND_REVIEWED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
+}

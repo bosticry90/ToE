@@ -1,0 +1,37 @@
+{
+  "authority_consumed_before_worker_authorized": true,
+  "child_termination_at_utc": "2026-07-19T18:58:45.264638Z",
+  "execution_id": "SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_ORACLE_QUALIFICATION_EXECUTION_20260719_v0",
+  "finalized": true,
+  "launch_count": 1,
+  "launch_identity_sha256": "57cdd03d7ae54668d32bb38761257b144f38e1d3e2808321539a1476fccc6f99",
+  "launched_at_utc": "2026-07-19T18:58:41.590773Z",
+  "memory_limit_mib": 2048,
+  "peak_job_memory_bytes": 23298048,
+  "peak_job_memory_within_limit": true,
+  "process_group_mechanism": "WINDOWS_JOB_OBJECT_KILL_ON_CLOSE_AND_JOB_MEMORY_LIMIT",
+  "raw_launcher_log_relative_path": "formal/output/scalar_only_yukawa_analytic_sphere_oracle_qualification_v0/raw_launcher.log",
+  "raw_launcher_log_sha256": "3f87c488727ce415a1c62b1400ec506990375a3fe93e03267b8a613b3caff725",
+  "run_id": "e844a8af-4c7e-4f17-8a09-0c3003b372ad",
+  "static_preflight": {
+    "authority_unused": true,
+    "case_count": 8,
+    "memory_limit_mib": 2048,
+    "review_verdict": "ANALYTIC_SPHERE_ORACLE_QUALIFICATION_CONTRACT_READY",
+    "stage_caps_seconds": {
+      "O1_PREFLIGHT_AND_CUSTODY": 20,
+      "O2_DERIVATION_DOMAIN_AND_DIMENSIONS": 60,
+      "O3_STABLE_EVALUATOR_AND_OVERLAPS": 90,
+      "O4_INDEPENDENT_RADIAL_CROSS_CHECK": 300,
+      "O5_MUTATIONS_AND_ADJUDICATION": 90,
+      "O6_ATOMIC_FINALIZATION": 40
+    },
+    "target": "execute_scalar_only_yukawa_analytic_sphere_oracle_qualification_v0_once",
+    "total_timeout_seconds": 600
+  },
+  "timeout_initiated_at_utc": null,
+  "timeout_seconds": 600,
+  "worker_exit_code": 0,
+  "worker_pid": 11244,
+  "zero_surviving_processes": true
+}

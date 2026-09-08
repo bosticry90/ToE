@@ -1,0 +1,384 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/NATIVE_CONTINUUM_ACTION_ABSENCE_SCIENTIFIC_TARGET_SELECTION_20260717_v0.json",
+        "sha256": "86717db3c1a23c8d9562a398db847668d9422fef0261e682038d25e531d9abab"
+      },
+      {
+        "relative_path": "formal/python/tools/native_continuum_action_absence_scientific_target_selection_v0.py",
+        "sha256": "1c91e2aae12390876810d698030d9ec61a3bfbd2eb1fc813e0b27ff52a05421a"
+      },
+      {
+        "relative_path": "formal/python/tests/test_native_continuum_action_absence_scientific_target_selection_v0.py",
+        "sha256": "ecc8af33edc2d9e944eeb9c1af5fd43fffd4ffe7ae2795ca97869009f1dd2610"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/NativeContinuumActionAbsenceScientificTargetSelectionV0.lean",
+        "sha256": "95e66c9f1a33ad4c02673af2eaa9355d5afa83aacdb6a7f48847a9b3e967e8a9"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "66ed74e9264c82eaa9715cc0369020f93b7956f9f3aa2f9b8b6abb5141fe2e64"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v3.json",
+        "sha256": "0dbe441d78de6eba0fe006f7b6b280b655a3feae3e1f9d66775eefae9e49a3b1"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/ActionRep32Def.lean",
+        "sha256": "da375e85850deb5d32da8a60c24d2fd7021c95143f8da036973d9575bd398458"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/FirstVariationRep32Def.lean",
+        "sha256": "8c7a6a3f3aa74f240945e3d2ac23a05c6e5fa6fa310977ba9c03db89f456d920"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/QFT/DocumentMasterActionMapping.lean",
+        "sha256": "56ad40bfe0443a27b1c35142c52ae2430958dace2b8e62eef8e4e14e31e54ddf"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+        "sha256": "b2519245872eaed3d874c25836ce355cca9e3bc0f11914e806a74c691f8d14da"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "de305a72dc522fe807c037bbe7980d96e3308d0547645ccb9939d1889720d987"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_NATIVE_CONTINUUM_METRIC_VARIATION_AND_TENSOR_SURFACE_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "4b894a31d1eb9ea29b06f70934913f42a007db31bbf3ac75f2ab8411674d1939"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+        "sha256": "fdadf7cb74401fd1d994841c9dbbbce5f6333e86d967d0aa349ed8987c183e8f"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json",
+        "sha256": "7232643ab971c1f647421c81bb52ef37f0a636262bc172d3fffc73ed1c6a4d54"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+      },
+      {
+        "relative_path": "formal/docs/lanes/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.md",
+        "sha256": "5fc170073b11907bb14c05984d577c9b68e0a8d6ebfcf8c7fedf081a4ef292d8"
+      },
+      {
+        "relative_path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+        "sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4"
+      },
+      {
+        "relative_path": "formal/python/tools/minimal_native_continuum_gravitational_sector_contract_packet_v0.py",
+        "sha256": "6a3a835bf6bd2040ed906518174aef6dc7afa8d26c35b0dfc79f5644ef643cc1"
+      },
+      {
+        "relative_path": "formal/python/tests/test_minimal_native_continuum_gravitational_sector_contract_packet_v0.py",
+        "sha256": "f415630d94c13d7c68db5bef92fec73e76457db4032ef3878c1d8201189e449a"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/MinimalNativeContinuumGravitationalSectorContractPacketV0.lean",
+        "sha256": "a2555ffb8a9e0bb231645b39cd8198bea13de4ff447054793608272d0201e30e"
+      },
+      {
+        "relative_path": "formal/docs/lanes/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_REVIEW_20260717_v0.md",
+        "sha256": "554e18d20bb3d6f2076cb4d6ea6c86480ee46d11f39f87c01673f37dfc8ec70c"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/minimal_native_continuum_gravitational_sector_contract_packet_review_v0.py",
+      "sha256": "ef92c485d3543d349af76ea3469027d71c2056e66e02c9cc259101c63955975e"
+    },
+    "reviewed_packet_id": "MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0",
+    "reviewed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "test": {
+      "relative_path": "formal/python/tests/test_minimal_native_continuum_gravitational_sector_contract_packet_review_v0.py",
+      "sha256": "5f0a07fc4aa5438a811228e058062952bbdec09b362b5a5320e06307d3c77a80"
+    }
+  },
+  "candidate_satisfaction_posture": {
+    "candidate_boundary_variation": "NOT_EVALUATED",
+    "candidate_dimensions": "NOT_EVALUATED",
+    "candidate_formula": "NOT_PROPOSED_OR_SELECTED",
+    "candidate_matter_source": "NOT_EVALUATED",
+    "candidate_symmetry_identity": "NOT_EVALUATED",
+    "metric_variation": "NOT_EXECUTED",
+    "recovery_stages_executed": 0
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Independent contract review only. The bounded contract design passes, but the current record contains no native gravitational principle and no explicitly selected postulated candidate. Candidate-first work is blocked as BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE. Matter coupling remains independently undefined. No action, postulate, successor theory, variation, stress-energy, tensor equation, comparator activation, GR recovery, route selection, promotion, empirical result, general tooling, or automation is created.",
+  "contract_design_review": {
+    "SI_and_compact_support_contract_complete": true,
+    "atomic_control_count": 8,
+    "authority_firewalls_complete": true,
+    "completeness_gate_count": 12,
+    "generic_matter_notation_is_not_existing_action": true,
+    "metric_field_count": 1,
+    "outcome_count": 6,
+    "provenance_class_count": 3,
+    "recovery_stage_count": 10,
+    "status": "PASS_COMPLETE_BOUNDED_REVIEW_CONTRACT"
+  },
+  "control_execution": {
+    "all_atomic_and_exact": true,
+    "control_count": 8,
+    "passed_count": 8,
+    "positive_baseline_passed": true,
+    "rows": [
+      {
+        "control_id": "CTRL_RELABELED_EINSTEIN_HILBERT_NATIVE",
+        "expected_diagnostic": "PROVENANCE_CLASSIFICATION_FAILURE",
+        "field": "provenance_evidence_valid",
+        "mutated_value": false,
+        "mutation_count": 1,
+        "observed_diagnostic": "PROVENANCE_CLASSIFICATION_FAILURE",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNDEFINED_NATIVE_CORRECTION",
+        "expected_diagnostic": "CANDIDATE_COMPLETENESS_FAILURE",
+        "field": "native_correction_defined",
+        "mutated_value": false,
+        "mutation_count": 1,
+        "observed_diagnostic": "CANDIDATE_COMPLETENESS_FAILURE",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_CK_EMBEDDED_OR_PENALIZED",
+        "expected_diagnostic": "CK_FIREWALL_VIOLATION",
+        "field": "C_k_embedded_or_penalized",
+        "mutated_value": true,
+        "mutation_count": 1,
+        "observed_diagnostic": "CK_FIREWALL_VIOLATION",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_RETAINED_STRESS_INSERTED_NOT_DERIVED",
+        "expected_diagnostic": "MATTER_SOURCE_DERIVATION_FAILURE",
+        "field": "stress_source_derived_from_matter_action",
+        "mutated_value": false,
+        "mutation_count": 1,
+        "observed_diagnostic": "MATTER_SOURCE_DERIVATION_FAILURE",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_REP32_NAME_IMPLIES_CONTINUUM_AUTHORITY",
+        "expected_diagnostic": "REP32_CONTINUUM_TRANSPORT_FAILURE",
+        "field": "Rep32_continuum_authority_claimed",
+        "mutated_value": true,
+        "mutation_count": 1,
+        "observed_diagnostic": "REP32_CONTINUUM_TRANSPORT_FAILURE",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_ONE_SI_DIMENSION_OMITTED",
+        "expected_diagnostic": "DIMENSIONAL_CONTRACT_FAILURE",
+        "field": "all_SI_dimensions_present",
+        "mutated_value": false,
+        "mutation_count": 1,
+        "observed_diagnostic": "DIMENSIONAL_CONTRACT_FAILURE",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_BOUNDARY_PRESCRIPTION_OMITTED",
+        "expected_diagnostic": "BOUNDARY_VARIATION_CONTRACT_FAILURE",
+        "field": "boundary_prescription_present",
+        "mutated_value": false,
+        "mutation_count": 1,
+        "observed_diagnostic": "BOUNDARY_VARIATION_CONTRACT_FAILURE",
+        "passed": true
+      },
+      {
+        "control_id": "CTRL_UNSELECTED_TETRAD_SPINOR_IMPORT",
+        "expected_diagnostic": "MINIMAL_FIELD_SCOPE_FAILURE",
+        "field": "unselected_tetrad_spinor_import",
+        "mutated_value": true,
+        "mutation_count": 1,
+        "observed_diagnostic": "MINIMAL_FIELD_SCOPE_FAILURE",
+        "passed": true
+      }
+    ]
+  },
+  "fail_fast_review": {
+    "failure_count": 1,
+    "first_failed_gate_order": 5,
+    "gate_count": 8,
+    "not_evaluated_count": 3,
+    "pass_count": 4,
+    "rows": [
+      {
+        "diagnostic": "CUSTODY_OR_CONTRACT_REPRODUCTION_FAILURE",
+        "gate": "custody and contract reproduction",
+        "order": 1,
+        "status": "PASS"
+      },
+      {
+        "diagnostic": "CONTRACT_DESIGN_COMPLETENESS_FAILURE",
+        "gate": "contract design completeness",
+        "order": 2,
+        "status": "PASS"
+      },
+      {
+        "diagnostic": "ATOMIC_CONTROL_CONTRACT_FAILURE",
+        "gate": "atomic control behavior",
+        "order": 3,
+        "status": "PASS"
+      },
+      {
+        "diagnostic": "AUTHORITY_FIREWALL_FAILURE",
+        "gate": "authority firewalls",
+        "order": 4,
+        "status": "PASS"
+      },
+      {
+        "diagnostic": "NO_BOUND_NATIVE_GRAVITATIONAL_PRINCIPLE_OR_POSTULATE",
+        "gate": "native gravitational principle or explicit postulate",
+        "order": 5,
+        "status": "FAIL"
+      },
+      {
+        "diagnostic": "BLOCKED_MATTER_COUPLING_UNDEFINED",
+        "gate": "candidate matter coupling",
+        "order": 6,
+        "status": "NOT_EVALUATED_AFTER_PRIOR_FAILURE"
+      },
+      {
+        "diagnostic": "BLOCKED_DIMENSIONAL_OR_BOUNDARY_CONTRACT",
+        "gate": "candidate dimensional and boundary satisfaction",
+        "order": 7,
+        "status": "NOT_EVALUATED_AFTER_PRIOR_FAILURE"
+      },
+      {
+        "diagnostic": "CANDIDATE_VARIATION_OR_RECOVERY_FAILURE",
+        "gate": "candidate variation and recovery ladder",
+        "order": 8,
+        "status": "NOT_EVALUATED_AFTER_PRIOR_FAILURE"
+      }
+    ]
+  },
+  "fresh_response_options": [
+    {
+      "authorized_now": false,
+      "route_id": "EXPLICIT_POSTULATED_NATIVE_GRAVITATIONAL_CANDIDATE"
+    },
+    {
+      "authorized_now": false,
+      "route_id": "NATIVE_DYNAMICAL_CORE_REQUIREMENTS_AND_NO_GO"
+    },
+    {
+      "authorized_now": false,
+      "route_id": "SUPPLIED_STANDARD_GR_COMPARATOR"
+    },
+    {
+      "authorized_now": false,
+      "route_id": "PIVOT_TO_OTHER_HIGH_LEVERAGE_PHYSICS_OBLIGATION"
+    }
+  ],
+  "matter_coupling_posture": {
+    "current_matter_field_content": "NOT_SELECTED",
+    "current_matter_lagrangian": "NOT_SELECTED",
+    "reason_not_primary": "NATIVE_PRINCIPLE_GATE_FAILS_FIRST",
+    "secondary_block_confirmed": true,
+    "selected_as_primary_outcome": false,
+    "variation_derived_stress_energy": "NOT_AVAILABLE"
+  },
+  "native_principle_review": {
+    "C_k_firewall_selects_candidate": false,
+    "GR01_selects_continuum_candidate": false,
+    "Rep32_selects_continuum_candidate": false,
+    "derived_action_family_bound": false,
+    "explicit_postulated_native_candidate_selected": false,
+    "project_principle_bound_that_selects_action": false,
+    "schematic_master_action_selects_candidate": false,
+    "standard_GR_comparator_exists": true,
+    "standard_GR_comparator_is_native": false,
+    "status": "FAIL"
+  },
+  "outcome_adjudication": {
+    "outcome_count": 6,
+    "rows": [
+      {
+        "outcome": "MINIMAL_NATIVE_GRAVITATIONAL_ACTION_CONTRACT_READY",
+        "reason": "NO_DERIVED_OR_EXPLICITLY_POSTULATED_CANDIDATE_BOUND",
+        "status": "NOT_SELECTED"
+      },
+      {
+        "outcome": "SUPPLIED_EINSTEIN_HILBERT_SECTOR_ONLY",
+        "reason": "COMPARATOR_EXISTS_BUT_REQUIRES_SEPARATE_ACTIVATION",
+        "status": "NOT_SELECTED_AS_PRIMARY"
+      },
+      {
+        "outcome": "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+        "reason": "NO_BOUND_NATIVE_GRAVITATIONAL_PRINCIPLE_OR_POSTULATE",
+        "status": "SELECTED"
+      },
+      {
+        "outcome": "BLOCKED_MATTER_COUPLING_UNDEFINED",
+        "reason": "CONFIRMED_SECONDARY_BLOCK_DOWNSTREAM_OF_PROVENANCE_FAILURE",
+        "status": "NOT_SELECTED_AS_PRIMARY"
+      },
+      {
+        "outcome": "BLOCKED_DIMENSIONAL_OR_BOUNDARY_CONTRACT",
+        "reason": "CONTRACT_DEFINITION_PASSES_CANDIDATE_SATISFACTION_UNEVALUATED",
+        "status": "NOT_SELECTED"
+      },
+      {
+        "outcome": "REQUIREMENTS_NO_GO_ROUTE_RECOMMENDED",
+        "reason": "LATER_STRATEGIC_FORK_REQUIRES_FRESH_PRIORITY_DECISION",
+        "status": "NOT_SELECTED"
+      }
+    ],
+    "selected_outcome_count": 1
+  },
+  "primary_diagnostic": "NO_BOUND_NATIVE_GRAVITATIONAL_PRINCIPLE_OR_POSTULATE",
+  "retained_scientific_posture": {
+    "C_k": "EXTERNAL_ADMISSIBILITY_AUDIT_ONLY",
+    "Rep32": "NO_CONTINUUM_ACTION_AUTHORITY",
+    "contract_design": "ACCEPTED_COMPLETE_BOUNDED_REVIEW_CONTRACT",
+    "gravitomagnetic_recovery": "BLOCKED_UPSTREAM",
+    "historical_master_action": "SCHEMATIC_ONLY",
+    "matter_action": "NOT_DEFINED",
+    "native_gravitational_candidate": "NOT_PROPOSED_OR_SELECTED",
+    "native_gravitational_principle": "NOT_FOUND",
+    "standard_GR": "SUPPLIED_COMPARATOR_ONLY",
+    "tensor_field_equation": "NOT_DERIVED"
+  },
+  "review_answer": "CONTRACT_COMPLETE_CURRENT_RECORD_BLOCKED_BEFORE_CANDIDATE_PREPARATION",
+  "schema_id": "MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_REVIEW_20260717_v0",
+  "scope": {
+    "C_k_embedded_or_varied": false,
+    "Einstein_equation_imported_or_derived": false,
+    "GR_pillar_completed": false,
+    "Newton_Poisson_or_tensor_calculation_executed": false,
+    "Rep32_continuum_transport_claimed": false,
+    "automation_created": false,
+    "contract_design_accepted": true,
+    "empirical_analysis_executed": false,
+    "general_symbolic_tooling_created": false,
+    "gravitational_action_proposed_selected_or_derived": false,
+    "gravitomagnetic_calculation_executed": false,
+    "independent_review_executed": true,
+    "master_action_promoted": false,
+    "metric_tetrad_spin_or_matter_variation_executed": false,
+    "native_postulate_selected": false,
+    "repository_migration_executed": false,
+    "requirements_no_go_route_selected": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "successor_master_action_prepared_or_created": false
+  },
+  "selected_next_target": "select_response_to_no_native_gravitational_principle_from_full_toe_priority_map",
+  "selected_next_target_kind": "FRESH_FULL_PRIORITY_RESPONSE_SELECTION_ONLY",
+  "target": "review_minimal_native_continuum_gravitational_sector_contract_packet_v0_result",
+  "verdict": "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE"
+}

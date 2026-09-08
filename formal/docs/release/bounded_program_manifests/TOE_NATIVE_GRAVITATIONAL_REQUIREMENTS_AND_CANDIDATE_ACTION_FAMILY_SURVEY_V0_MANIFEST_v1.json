@@ -1,0 +1,466 @@
+{
+  "authorized_stage_count": 5,
+  "installation_envelope": {
+    "commit_exact_path_set": [
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+      "formal/docs/release/bounded_program_manifests/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_MANIFEST_v1.json",
+      "formal/python/tests/test_toe_native_gravitational_requirements_and_candidate_action_family_survey_program_governance_installation.py",
+      "formal/python/tools/bounded_program_governance.py",
+      "formal/python/tools/toe_native_gravitational_survey_program_governance_installation.py",
+      "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+      "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+      "formal/toe_formal/ToeFormal/Release/ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyProgramGovernanceInstallationV0.lean",
+      "formal/toe_formal/ToeFormalAll.lean"
+    ],
+    "installed_from_commit": "f17c85820365dd67ccdde7a5ea53e4879df274b5"
+  },
+  "mandatory_exit": {
+    "target": "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0",
+    "terminal_outcomes": [
+      "ONE_OR_MORE_ACTION_FAMILIES_READY_FOR_SELECTION",
+      "ALL_CANDIDATES_REQUIRE_ONE_DEFINITION",
+      "ALL_CANDIDATES_REQUIRE_ONE_DERIVATION",
+      "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+      "GRAVITATIONAL_REQUIREMENTS_CONFLICT",
+      "SOURCE_EVIDENCE_INSUFFICIENT"
+    ]
+  },
+  "manifest_hash": "0ba846d6e9f389fb3563e87e16efc78d2d30dc6678b5d2c188d17701d5626cae",
+  "manifest_mode": "PROSPECTIVE_STATIC",
+  "native_hypothesis_tested": "HYP_TOE_NATIVE_GRAVITATIONAL_PRINCIPLE_ACTION_SELECTION_v0",
+  "native_relevance": {
+    "kind": "ONE_PREREQUISITE_FROM_NATIVE_CALCULATION",
+    "statement": "Surveys source-bound native gravitational requirements and seven preserved action families before any action-selection adjudication or gravitational calculation."
+  },
+  "no_subsidiary_scientific_targets": true,
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "program_terminal_outcomes": [
+    "ONE_OR_MORE_ACTION_FAMILIES_READY_FOR_SELECTION",
+    "ALL_CANDIDATES_REQUIRE_ONE_DEFINITION",
+    "ALL_CANDIDATES_REQUIRE_ONE_DERIVATION",
+    "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+    "GRAVITATIONAL_REQUIREMENTS_CONFLICT",
+    "SOURCE_EVIDENCE_INSUFFICIENT"
+  ],
+  "repair_attempt_count": 0,
+  "schema_id": "toe.bounded_program.immutable_manifest.v1",
+  "stages": [
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2",
+          "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "dependency_artifact_ids": [
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "normalized_scientific_question": "What do the ten preserved native-gravity requirement rows state, what authority and statement class does each possess, and which definitions, conflicts, or derivations remain missing?",
+        "prohibited_claims": [
+          "gravitational action adoption",
+          "native gravitational principle derivation",
+          "standard GR selection or promotion",
+          "quadratic gravity promotion from reference control",
+          "canonical evidence promotion",
+          "master action promotion",
+          "gravitational calculation",
+          "automatic successor authorization",
+          "requirement truth or native status from historical wording alone",
+          "action-family compatibility judgment",
+          "new gravitational postulate"
+        ],
+        "required_outputs": [
+          "ten_row_source_and_authority_ledger",
+          "statement_class_for_every_requirement",
+          "requirement_scope_units_symmetry_and_selection_power_ledger",
+          "conflict_supersession_and_missing_definition_ledger"
+        ],
+        "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+        "terminal_outcome_vocabulary": [
+          "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE",
+          "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+          "NATIVE_GRAVITATIONAL_REQUIREMENT_EVIDENCE_INSUFFICIENT"
+        ]
+      },
+      "canonical_scope_hash": "297276852be0fed5e7dafdb9a90a3dc26a2807665665dbefc69dd8572b31fb19",
+      "canonical_target": "inventory_toe_native_gravitational_requirements_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE",
+        "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+        "NATIVE_GRAVITATIONAL_REQUIREMENT_EVIDENCE_INSUFFICIENT"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+          "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeGravitationalRequirementInventoryResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_OPEN_v0.json",
+          "formal/python/tools/toe_native_gravitational_requirement_inventory_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeGravitationalRequirementInventoryAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+      "stage_number": 1
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2",
+          "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "dependency_artifact_ids": [
+          "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY"
+        ],
+        "normalized_scientific_question": "What are the exact source-bound field content, action terms, derivative order, symmetries, coefficients, limits, calculations, negative results, and historical roles of the seven preserved candidate gravitational action families?",
+        "prohibited_claims": [
+          "gravitational action adoption",
+          "native gravitational principle derivation",
+          "standard GR selection or promotion",
+          "quadratic gravity promotion from reference control",
+          "canonical evidence promotion",
+          "master action promotion",
+          "gravitational calculation",
+          "automatic successor authorization",
+          "family viability or superiority judgment",
+          "outside-scope family scientific refutation",
+          "family-envelope expansion"
+        ],
+        "required_outputs": [
+          "seven_family_source_and_lineage_ledger",
+          "field_content_action_terms_derivative_order_and_symmetry_ledger",
+          "coefficient_origin_limits_calculations_and_negative_result_ledger",
+          "native_control_historical_superseded_and_scope_classification"
+        ],
+        "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+        "terminal_outcome_vocabulary": [
+          "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_COMPLETE",
+          "ACTION_FAMILY_INVENTORY_COMPLETE_WITH_UNRESOLVED_MEANINGS",
+          "ACTION_FAMILY_SOURCE_EVIDENCE_INSUFFICIENT"
+        ]
+      },
+      "canonical_scope_hash": "8dc24a87cd882d67123278bc2da416a4efffe29866f96bbecc4dd7af7a7942ea",
+      "canonical_target": "inventory_toe_candidate_gravitational_action_families_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_COMPLETE",
+        "ACTION_FAMILY_INVENTORY_COMPLETE_WITH_UNRESOLVED_MEANINGS",
+        "ACTION_FAMILY_SOURCE_EVIDENCE_INSUFFICIENT"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+          "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCandidateGravitationalActionFamilyInventoryResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_OPEN_v0.json",
+          "formal/python/tools/toe_candidate_gravitational_action_family_inventory_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCandidateGravitationalActionFamilyInventoryAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+      "stage_number": 2
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2",
+          "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "dependency_artifact_ids": [
+          "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY"
+        ],
+        "normalized_scientific_question": "How do the source-bound gravitational requirements and action families descend, branch, conflict, supersede, or remain documentarily unresolved?",
+        "prohibited_claims": [
+          "gravitational action adoption",
+          "native gravitational principle derivation",
+          "standard GR selection or promotion",
+          "quadratic gravity promotion from reference control",
+          "canonical evidence promotion",
+          "master action promotion",
+          "gravitational calculation",
+          "automatic successor authorization",
+          "scientific truth from documentary descent",
+          "silent supersession",
+          "semantic equivalence from symbol similarity",
+          "compatibility judgment"
+        ],
+        "required_outputs": [
+          "requirement_lineage_graph",
+          "action_family_lineage_graph",
+          "source_to_review_and_source_to_result_edges",
+          "supersession_conflict_and_unresolved_relationship_ledger"
+        ],
+        "semantic_stage_id": "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION",
+        "terminal_outcome_vocabulary": [
+          "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGES_RECONSTRUCTED",
+          "LINEAGES_RECONSTRUCTED_WITH_BOUNDED_UNRESOLVED_RELATIONSHIPS",
+          "LINEAGE_RECONSTRUCTION_BLOCKED_BY_PROVENANCE"
+        ]
+      },
+      "canonical_scope_hash": "af28fab6b424603cccbc2e7ef8663d8f8a1e88212285c1767a59f0cfccef9ebb",
+      "canonical_target": "reconstruct_toe_gravitational_requirement_and_action_family_lineages_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGES_RECONSTRUCTED",
+        "LINEAGES_RECONSTRUCTED_WITH_BOUNDED_UNRESOLVED_RELATIONSHIPS",
+        "LINEAGE_RECONSTRUCTION_BLOCKED_BY_PROVENANCE"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_03_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_03_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_03_OPEN_v0.json",
+          "formal/python/tools/toe_gravitational_requirement_and_action_family_lineage_reconstruction_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeGravitationalRequirementAndActionFamilyLineageReconstructionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_03_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION",
+      "stage_number": 3
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2",
+          "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "dependency_artifact_ids": [
+          "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION"
+        ],
+        "normalized_scientific_question": "What provisional compatibility status does each of the bounded ten-by-seven requirement-family cells receive when every non-unresolved judgment is tied to independently reviewable source evidence?",
+        "prohibited_claims": [
+          "gravitational action adoption",
+          "native gravitational principle derivation",
+          "standard GR selection or promotion",
+          "quadratic gravity promotion from reference control",
+          "canonical evidence promotion",
+          "master action promotion",
+          "gravitational calculation",
+          "automatic successor authorization",
+          "population of the closed V2 automated matrix",
+          "self-attested scientific evidence",
+          "survivor-set or native-principle verdict"
+        ],
+        "required_outputs": [
+          "bounded_ten_by_seven_provisional_compatibility_survey",
+          "source_excerpt_and_domain_binding_for_every_non_unresolved_cell",
+          "independent_cell_review",
+          "uncertainty_conflict_and_missing_derivation_ledger",
+          "standard_GR_oracle_isolation_audit"
+        ],
+        "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+        "terminal_outcome_vocabulary": [
+          "SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE",
+          "COMPATIBILITY_SURVEY_COMPLETE_WITH_UNRESOLVED_CELLS",
+          "COMPATIBILITY_SURVEY_BLOCKED_BY_SOURCE_EVIDENCE"
+        ]
+      },
+      "canonical_scope_hash": "e81613ed69adbe5c5586a2b9fcb22217f721923758f7af0d85a71cce84a51c51",
+      "canonical_target": "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE",
+        "COMPATIBILITY_SURVEY_COMPLETE_WITH_UNRESOLVED_CELLS",
+        "COMPATIBILITY_SURVEY_BLOCKED_BY_SOURCE_EVIDENCE"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+          "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_OPEN_v0.json",
+          "formal/python/tools/toe_source_bound_gravitational_requirement_family_compatibility_survey_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+      "stage_number": 4
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0",
+          "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2",
+          "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0",
+          "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+          "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0"
+        ],
+        "dependency_artifact_ids": [
+          "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY"
+        ],
+        "normalized_scientific_question": "Which preserved candidate action families, if any, are eligible for a separately authorized bounded action-selection adjudication, and what exact definitions, derivations, conflicts, or evidence still block the others?",
+        "prohibited_claims": [
+          "gravitational action adoption",
+          "native gravitational principle derivation",
+          "standard GR selection or promotion",
+          "quadratic gravity promotion from reference control",
+          "canonical evidence promotion",
+          "master action promotion",
+          "gravitational calculation",
+          "automatic successor authorization",
+          "automatic action-selection program",
+          "standard GR promotion",
+          "empirical validation"
+        ],
+        "required_outputs": [
+          "eligibility_classification_for_all_seven_families",
+          "remaining_definition_derivation_conflict_and_evidence_ledger",
+          "exactly_one_program_terminal_outcome",
+          "separately_authorizable_action_selection_handoff_or_explicit_no_handoff"
+        ],
+        "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+        "terminal_outcome_vocabulary": [
+          "ONE_OR_MORE_ACTION_FAMILIES_READY_FOR_SELECTION",
+          "ALL_CANDIDATES_REQUIRE_ONE_DEFINITION",
+          "ALL_CANDIDATES_REQUIRE_ONE_DERIVATION",
+          "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+          "GRAVITATIONAL_REQUIREMENTS_CONFLICT",
+          "SOURCE_EVIDENCE_INSUFFICIENT"
+        ]
+      },
+      "canonical_scope_hash": "aec6355853132543dff1bf7c4aa90e65718ab1b192d56340efc9d5d584bd6dd8",
+      "canonical_target": "select_toe_gravitational_action_family_eligibility_handoff_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "ONE_OR_MORE_ACTION_FAMILIES_READY_FOR_SELECTION",
+        "ALL_CANDIDATES_REQUIRE_ONE_DEFINITION",
+        "ALL_CANDIDATES_REQUIRE_ONE_DERIVATION",
+        "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+        "GRAVITATIONAL_REQUIREMENTS_CONFLICT",
+        "SOURCE_EVIDENCE_INSUFFICIENT"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeGravitationalActionFamilyEligibilityHandoffResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_OPEN_v0.json",
+          "formal/python/tools/toe_gravitational_action_family_eligibility_handoff_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeGravitationalActionFamilyEligibilityHandoffAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_05_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+      "stage_number": 5
+    }
+  ],
+  "status": "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST",
+  "workload_caps": {
+    "maximum_action_families": 7,
+    "maximum_compatibility_cells": 70,
+    "maximum_evidence_references_per_cell": 8,
+    "maximum_extracted_evidence_statements": 512,
+    "maximum_lineage_components": 32,
+    "maximum_native_requirement_rows": 10,
+    "maximum_source_artifacts_for_deep_review": 96,
+    "maximum_total_bounded_source_excerpt_words": 24000,
+    "maximum_unresolved_lineage_relationships": 32
+  }
+}

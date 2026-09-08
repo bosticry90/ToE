@@ -1,0 +1,56 @@
+{
+  "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+    "formal/python/tools/toe_ccft_v0_branch_readiness_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0BranchReadinessAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 1,
+  "authority_decision": "AUTHORIZE_CCFT_V0_BRANCH_SELECTION_STAGE_1_OPEN",
+  "blocking_outcomes": [
+    "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES",
+    "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE"
+  ],
+  "canonical_terminal_outcomes": [
+    "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+    "SELECT_LCRD_V3_AS_CCFT_V0_CORE",
+    "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES",
+    "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE"
+  ],
+  "captured_at_utc": "2026-08-02T04:20:59Z",
+  "event_hash": "e3ab38ef767edf820e08bfe3c75a4f8c06d4cfb6eb1686ebd8618870627ce5c6",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+  "event_sha256": "349ad33ca8271706e5e991d532a2c508eb5a867c3154db7c0f04e2d1af89417c",
+  "opened_from_commit": "a91aa140e93ce81976d582510282b7ed3e7223de",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "registry_snapshot_hash": "6b54ab91a4b26f624691c6cd99d88abd518c2a33f7df4665e01ecc90fd5bfa8b",
+  "schema_id": "toe.ccft_v0.research_director_branch_readiness_decision.open_validation.v0",
+  "scientific_output_at_open": {
+    "branch_selected": "NONE",
+    "director_comparison_performed": false,
+    "equation_selected_or_repaired": false,
+    "model_frozen": false,
+    "new_postulates": 0,
+    "stage_2_output_created": false,
+    "theorem_attempted": false,
+    "theorem_packet_prepared": false
+  },
+  "scope_hash": "f23a5be55905604125cb2752cefde7df3f4aa4a6d493aaaea9fcd14559c2c5d4",
+  "semantic_stage_id": "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION",
+  "status": "STAGE_1_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "select_toe_ccft_v0_branch_after_research_director_decision_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "blocking_lifecycle_is_frozen": true,
+    "event_and_registry_projection_match": true,
+    "manifest_scope_and_target_match": true,
+    "open_checkpoint_contains_no_scientific_result": true,
+    "program_state_is_open": true,
+    "stage_2_remains_unauthorized": true
+  }
+}

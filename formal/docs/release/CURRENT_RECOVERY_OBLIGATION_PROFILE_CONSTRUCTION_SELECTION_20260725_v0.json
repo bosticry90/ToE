@@ -1,0 +1,17 @@
+{
+  "schema_id": "CURRENT_RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_staging_adjudication": {
+    "commit": "a15320d1ea0f029b47598afcca136790c2361971",
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_OBLIGATION_REGISTRY_AND_VALIDATION_PROFILE_CONSTRUCTION",
+  "target": "build_repository_obligation_registry_and_validation_profiles_v0",
+  "execution_count_authorized": 1,
+  "root_repair_authorized": false,
+  "historical_quarantine_implementation_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

@@ -1,27 +1,28 @@
-import ToeFormal.Derivation.DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessInstrumentedR13MechanismExperimentNumericalFreezePacketV1
-
-/-
-Thin current-target aggregate for tiered validation. This target follows the
-live strict target and avoids requiring a full ToeFormal aggregate build for
-routine packet checks.
--/
+import ToeFormal.Derivation.ToeCCFTV0TheoryConstructionAndTheoremDiscoveryV0BoundedCloseout
 
 namespace ToeFormal
 namespace Derivation
 namespace CurrentTarget
 
+open ToeCCFTV0TheoryConstructionAndTheoremDiscoveryV0BoundedCloseout
+
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
+def currentLiveTarget : String := executionTarget
+def currentEvidencePacketId : String := reviewId
+def currentBoundedProgramId : String := programId
+def currentBoundedProgramState : String := programTerminalStatus
+def currentTargetPhase : String := "CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANDATORY_EXIT_COMPLETE"
+def currentBoundedAttemptNumber : Nat := attemptedStageCount
+def lastClosedBoundedSemanticStage : String := "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF"
+def lastBoundedTerminalResult : String := terminalOutcome
 
-def currentLiveTarget : String :=
-  DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessInstrumentedR13MechanismExperimentNumericalFreezePacketV1.selectedNextTarget
-
-def currentEvidencePacketId : String :=
-  DiracMaxwellFullZeroModeDescendantNecessityAndRobustnessInstrumentedR13MechanismExperimentNumericalFreezePacketV1.packetId
-
-theorem current_target_selects_independent_instrumented_R13_numerical_freeze_v1_review :
-    currentLiveTarget =
-      "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_instrumented_r13_mechanism_experiment_numerical_freeze_packet_v1_result" := by
-  rfl
+theorem current_target_is_terminal_closeout_without_successor :
+    currentLiveTarget = "close_toe_ccft_v0_theory_construction_and_theorem_discovery_v0_after_bounded_result_v0" ∧
+    currentBoundedProgramState = "CLOSED_AFTER_MANDATORY_EXIT" ∧
+    frozenModelPreserved = true ∧ mathematicalNoveltyEstablished = false ∧
+    physicalInterpretationEstablished = false ∧ broaderCCFTRefuted = false ∧
+    scientificSuccessorAuthorized = false := by
+  decide
 
 end CurrentTarget
 end Derivation

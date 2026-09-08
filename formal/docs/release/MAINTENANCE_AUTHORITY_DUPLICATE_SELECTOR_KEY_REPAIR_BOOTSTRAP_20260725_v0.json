@@ -1,0 +1,81 @@
+{
+  "schema_id": "MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_BOOTSTRAP_20260725_v0",
+  "issuing_operator_or_governance_surface": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "operator_decision": {
+    "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_SELECTION_20260725_v0.json",
+    "sha256": "69b864f217ed8e061bd37b3114c933327233dd98a5cebc84616d581d7dbb1ece",
+    "selected": "AUTHORIZE_BOUNDED_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR"
+  },
+  "accepted_adjudication": {
+    "commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+    "result": {
+      "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_20260725_v0.json",
+      "sha256": "83c0ad99c98b0f84fe8975f43ffa0551fc829f5d95ef611cff88263b66bef70f"
+    },
+    "review": {
+      "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_REVIEW_20260725_v0.json",
+      "sha256": "9b5c8fd1d32d58c215d6cebe9bd2518daa4dacbd44234bbe4a8ff8118d3864e6"
+    }
+  },
+  "accepted_lineage_gate": {
+    "commit": "49e9216ec4727ccd0f421bf59392175e3a036d7c",
+    "path": "formal/docs/release/REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_REVIEW_20260725_v0.json",
+    "sha256": "57f81a01cd7c7b39a700c04f92d9c2b02393b60d94ee44d39bc241c6468eb38f"
+  },
+  "parent_recovery_state": {
+    "commit": "49e9216ec4727ccd0f421bf59392175e3a036d7c",
+    "tree": "ee5f4c61c10bfca892b385aae8043ab331f639e7"
+  },
+  "authorized_repair": "REMOVE_DUPLICATE_PRESERVE_AUTHORIZED_VALUE",
+  "authorized_second_selector_value": {
+    "path": "formal/docs/release/POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0.json",
+    "sha256": "18a36a738d11331f97c5354ffea22acfc879809880d29a65d2e017fe1032a63d"
+  },
+  "target": {
+    "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+    "before_bytes": 25798,
+    "before_sha256": "51a884e65da1aa4aa477b9d0f11671f704c799318513eae7c985de0020eccf81",
+    "permitted_deletion": {
+      "start_byte": 9609,
+      "end_byte_exclusive": 9827,
+      "bytes": 218,
+      "sha256": "f28a10533793dcd12793aa94090f92af860ed581b39137e72984e2788edcb778"
+    },
+    "expected_after_bytes": 25580,
+    "expected_after_sha256": "1d6604e25da32a886d1431c6eb3a92c16e4082d8b9ac5cda8bc16a469e99d224"
+  },
+  "authorized_implementation_tool": {
+    "path": "formal/python/tools/maintenance_authority_duplicate_selector_repair.py",
+    "sha256": "0a356dda64422ab62a77677773a139c9c26f9e453f34181aa272c7157061d29c",
+    "command": "python formal/python/tools/maintenance_authority_duplicate_selector_repair.py --repo-root . --bootstrap formal/docs/release/MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_BOOTSTRAP_20260725_v0.json --execute"
+  },
+  "authorized_support_files": [
+    {
+      "path": "formal/python/tools/governance_json.py",
+      "sha256": "de77525cdafb953df40fd46fe70ed375621ce7770a8bf0b6f63cfd93cfe593cc"
+    },
+    {
+      "path": "formal/python/tests/test_governance_json_authority_parsing.py",
+      "sha256": "af0641915b894d52dd76b41317dcd67fe0c39f89b1af3a9327a00fa9487cfc0f"
+    },
+    {
+      "path": "formal/python/tests/test_maintenance_authority_duplicate_selector_repair.py",
+      "sha256": "734d33c44e3d621493938b26040ea1e68823ada8baf0878729f10ea39d31eb12"
+    },
+    {
+      "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_PACKET_20260725_v0.json",
+      "sha256": "eb704f2d02ad20fa3405d915c39f1addc9ee40907c546c0ca581436111c709bc"
+    }
+  ],
+  "consumption_record": {
+    "path": "formal/docs/release/MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_BOOTSTRAP_CONSUMPTION_20260725_v0.json"
+  },
+  "execution_counter": 1,
+  "expiration_condition": "EXPIRES_IMMEDIATELY_AFTER_ONE_SUCCESSFUL_EXECUTION",
+  "authority_after_successful_execution": "PERMANENTLY_EXPIRED",
+  "ambiguous_json_used_as_sole_authority": false,
+  "pillar_v1_repair_authorized": false,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

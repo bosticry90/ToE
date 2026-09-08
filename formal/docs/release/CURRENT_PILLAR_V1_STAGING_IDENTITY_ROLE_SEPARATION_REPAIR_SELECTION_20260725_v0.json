@@ -1,0 +1,16 @@
+{
+  "schema_id": "CURRENT_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_adjudication": {
+    "commit": "a15320d1ea0f029b47598afcca136790c2361971",
+    "path": "formal/docs/release/REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR",
+  "target": "implement_repository_pillar_v1_staging_identity_role_separation_repair_v0_once",
+  "execution_count_authorized": 1,
+  "unrelated_current_root_repair_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

@@ -27,7 +27,7 @@ def test_regen_sw_only_is_content_stable() -> None:
 
     before = [p.read_text(encoding="utf-8") for p in lock_paths]
 
-    rc = regen_main(["--sw-only"])
+    rc = regen_main(["--sw-only", "--validate-only"])
     assert rc == 0
 
     after = [p.read_text(encoding="utf-8") for p in lock_paths]

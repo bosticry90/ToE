@@ -1,0 +1,35 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_INDEXING_AND_PERFORMANCE_MAINTENANCE_PACKET_20260730_v0",
+  "authority_lane": "repository_indexing_and_performance_maintenance_only",
+  "authorized_scope": {
+    "archive_mutation_detection_implementation": true,
+    "batch_sharding_and_atomic_close_support": true,
+    "cache_reuse_and_invalidation_tests": true,
+    "dependency_impact_review": true,
+    "deterministic_versioned_index_schema": true,
+    "git_blob_identity_cache": true,
+    "local_file_sha256_cache_rules": true,
+    "passive_parser_resource_limits": true,
+    "path_escape_and_special_file_fail_closed_controls": true,
+    "performance_profiling": true,
+    "stable_source_root_snapshot_implementation": true,
+    "synthetic_or_explicitly_nonauthoritative_trials": true
+  },
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "maintenance_target": "prepare_toe_repository_wide_native_hypothesis_census_indexing_and_performance_maintenance_v0",
+  "preserved_program_state": "INSTALLED_UNOPENED",
+  "preserved_scientific_target": "prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "prohibitions": [
+    "No Stage 1 OPEN event.",
+    "No authoritative census index or cache generated from the declared scientific corpus.",
+    "No scientific traversal or classification of archive documents.",
+    "No ToE claim extraction, lineage adjudication, evidence promotion, or native-frontier selection.",
+    "No execution, import, compilation, macro activation, embedded-object activation, or network retrieval from archived content.",
+    "No modification of either local archive root or the untracked reddit/ directory.",
+    "No scientific authority rotation and no bounded-program attempt consumption."
+  ],
+  "required_result_review_target": "review_toe_repository_wide_native_hypothesis_census_indexing_and_performance_maintenance_result_v0",
+  "schema_id": "toe.repository_wide_native_hypothesis_census.indexing_and_performance_maintenance_packet.v0",
+  "status": "AUTHORIZED_MAINTENANCE_INFRASTRUCTURE_ONLY_NO_SCIENTIFIC_OPEN"
+}

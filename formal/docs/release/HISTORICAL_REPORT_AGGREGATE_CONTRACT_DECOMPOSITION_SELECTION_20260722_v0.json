@@ -1,0 +1,18 @@
+{
+  "schema_id": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_SELECTION_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:19:24Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_HIGH_CONFIDENCE_HISTORICAL_FIXTURE_SCALING_PACKET",
+    "AUTHORIZE_HISTORICAL_AGGREGATE_CONTRACT_DECOMPOSITION_AND_RETIREMENT_REVIEW",
+    "PRESERVE_PILOT_RESULT_AND_DEFER_REPORT_CONTRACT_RECOVERY"
+  ],
+  "selected": "AUTHORIZE_HISTORICAL_AGGREGATE_CONTRACT_DECOMPOSITION_AND_RETIREMENT_REVIEW",
+  "target": "prepare_repository_historical_report_aggregate_contract_decomposition_packet_v0",
+  "selection_basis": "The accepted one-identity pilot proved fixture feasibility but recovered no aggregate cross-identity outcome. The two remaining aggregate outcomes bind nineteen heterogeneous historical identities, including fifteen absent ignored identities and four committed identities. A diagnostic decomposition and retirement review must therefore precede any scale, fixture, or test-repair authority.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_REVIEW_20260722_v0.json",
+    "sha256": "cd323104d3c6c0da2f61fd2ac3305eaae2e7f8c2398fcbffcf7107f38612784b",
+    "commit": "fb5222492d1932ffbe9ed519ded8222ea9cd59ca"
+  },
+  "scientific_posture": "B-BLOCKED"
+}

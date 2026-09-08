@@ -1,0 +1,89 @@
+{
+  "automatic_successor_selected": false,
+  "calculation_id": "CALC-TOE-NATIVE-COHERENCE-ONTOLOGY-AND-REPRESENTATION-V0-BOUNDED-CLOSEOUT-v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "event_chain": [
+    {
+      "event_hash": "61c0032f2755ddec053607d8d1744473818da59c6bee346156aebdf947cdcd89",
+      "event_type": "ATTEMPT_OPEN",
+      "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json",
+      "sha256": "5f21d6c665d6eb4ec421b2b958a38d815610af99060b87c4361858c92d8e2755",
+      "stage": "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
+    },
+    {
+      "event_hash": "d2194a5765ec714e23d7764637747769af0971fc0b9dfc4160de0c7f4522e76b",
+      "event_type": "ATTEMPT_CLOSE",
+      "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_CLOSE_v0.json",
+      "sha256": "3134884dc974fef395bd40cf59c23eb9d7052f5ac4af3dfc948dcc4e0892d52c",
+      "stage": "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
+    },
+    {
+      "event_hash": "36fe0ffd74adac2f62052ea700b8794fb4d9842559bbac10475a15326a952928",
+      "event_type": "ATTEMPT_OPEN",
+      "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_02_OPEN_v0.json",
+      "sha256": "4735936515c2a1f25f0d33c4708eaeff0273362c544f73637518881ad38cf88f",
+      "stage": "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+    },
+    {
+      "event_hash": "0c2b17578d368ac6c188810acd745e6256c4d3d3333367abcb534cbc548742c5",
+      "event_type": "ATTEMPT_CLOSE",
+      "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_02_CLOSE_v0.json",
+      "sha256": "e63f84dc56b5f65776d614989f157e2497d46353c4b1d5ba580422f0a16d6a6f",
+      "stage": "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+    }
+  ],
+  "execution_target": "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+  "program_closeout": {
+    "attempted_stage_count": 2,
+    "attempted_stage_ids": [
+      "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+      "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+    ],
+    "authorized_stage_count": 5,
+    "blocked_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+    "mandatory_exit_completed": true,
+    "repair_attempt_count": 0,
+    "subsidiary_scientific_targets_created": 0,
+    "unattempted_stage_ids": [
+      "COHERENCE_REPRESENTATION_COMPARISON",
+      "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION",
+      "MINIMAL_NATIVE_FIELD_HANDOFF"
+    ]
+  },
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "schema_id": "CALC_TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_BOUNDED_CLOSEOUT_v0",
+  "scientific_results": {
+    "calculation_status": "NOT_REACHED",
+    "native_model_status": "NOT_CONSTRUCTED",
+    "operational_result": "COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL",
+    "program_result": "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+    "representation_status": "NOT_REACHED",
+    "stage_1_inventory": {
+      "claim_count": 13,
+      "conflict_class_count": 6,
+      "selected_claim_id": "COH-CLAIM-001",
+      "status": "CLAIM_INVENTORY_COMPLETE_WITH_CONFLICTS"
+    },
+    "stage_2_operational_test": {
+      "failed_definition_criterion_count": 9,
+      "result_path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0.json",
+      "result_sha256": "55127f74ef6794b76ec5044330eb667ef3e9a78c5660ca0bedd6ca7386322c41",
+      "review_path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_REVIEW_20260729_v0.json",
+      "review_sha256": "2c0d0d73024082d89b64098bafdc74429a74a7403f1a2aa5f1531f17bd2148b4",
+      "terminal_outcome": "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED"
+    }
+  },
+  "terminal_boundaries": {
+    "ccft_rejected": false,
+    "ccft_validated": false,
+    "coherence_impossible_claimed": false,
+    "future_coherence_route_requires_new_program_and_new_substantive_input": true,
+    "master_action_modified": false,
+    "new_representation_or_action_authorized": false,
+    "program_closed": true,
+    "repair_authorized": false,
+    "stages_3_through_5_attempted": false
+  },
+  "terminal_outcome": "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+  "verdict": "COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_CLOSED_AFTER_STAGE_2_BLOCK_NO_REPAIR_NO_REPRESENTATION_OR_CALCULATION"
+}

@@ -1,0 +1,74 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "FROZEN_AUXILIARY_ZERO_LOSS_CONFIRMED",
+    "PURE_PRINCIPAL_METRIC_EQUIVALENCE_TWO_DERIVATIVE_GROWTH",
+    "PURE_PRINCIPAL_PHYSICAL_TT_ONE_DERIVATIVE_GROWTH",
+    "COMPLETE_GENERIC_FROZEN_METRIC_LOSS_BLOCKED_BY_MISSING_SUBPRINCIPAL_MATRIX",
+    "CONSTRAINT_RESTRICTED_LOSS_BLOCKED_BY_MISSING_TANGENT_PROJECTOR",
+    "BLOCK_ORDER_GRAPH_SCREEN_HAS_NO_POSITIVE_RETURN_CYCLE"
+  ],
+  "authority_rotation": {
+    "constraint_tangent_projection_authorized": false,
+    "exact_generic_frozen_companion_operator_authorized": true,
+    "frozen_frequency_growth_execution_accepted": true,
+    "ghost_analysis_authorized": false,
+    "iteration_closure_authorized": false,
+    "local_existence_theorem_authorized": false,
+    "phenomenology_authorized": false,
+    "quasilinear_estimate_authorized": false,
+    "source_extension_authorized": false,
+    "variable_coefficient_estimate_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "accepted_preparation_authority_was_consumed": true,
+    "all_chains_are_mapped_at_both_roots": true,
+    "auxiliary_zero_loss_is_exact": true,
+    "block_order_graph_screen_is_not_an_exact_operator": true,
+    "complete_frozen_claim_fails_closed": true,
+    "constraint_restricted_minimum_fails_closed": true,
+    "equivalence_and_evolution_losses_remain_separate": true,
+    "exact_companion_dimension_and_partition_close": true,
+    "exact_modal_exponentials_saturate_zero_one_two": true,
+    "no_variable_nonlinear_or_physical_extension_is_claimed": true,
+    "pure_principal_TT_growth_is_one_but_complete_loss_blocks": true,
+    "pure_principal_metric_growth_is_two_but_complete_loss_blocks": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "CONSTRAINT_RESTRICTED_MINIMUM_FROZEN_LOSS",
+    "COMPLETE_GENERIC_FROZEN_COMPANION_OPERATOR",
+    "COMPLETE_GENERIC_FROZEN_METRIC_MINIMUM_LOSS",
+    "COMPLETE_GENERIC_FROZEN_PHYSICAL_TT_MINIMUM_LOSS",
+    "FULL_128_STATE_CONSTRAINT_TANGENT_PROJECTOR",
+    "VARIABLE_COEFFICIENT_LINEAR_ESTIMATE",
+    "QUASILINEAR_TAME_ESTIMATE",
+    "LOSS_NONACCUMULATION",
+    "PICARD_CLOSURE",
+    "NASH_MOSER_REQUIREMENT",
+    "LOCAL_EXISTENCE",
+    "UNIQUENESS",
+    "CONTINUOUS_DEPENDENCE"
+  ],
+  "review_target": "review_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0_result",
+  "reviewed_calculation": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-FROZEN-COEFFICIENT-JORDAN-CHAIN-FREQUENCY-GROWTH-v0.json",
+    "sha256": "a082ac1f75ec543383d35ec0000676733bd30c0eb8f2df90629b5fbdc53b3953"
+  },
+  "reviewer_independence": {
+    "audits_claim_ceiling": true,
+    "audits_pure_principal_upper_and_lower_bounds": true,
+    "fails_closed_on_missing_constraint_projector": true,
+    "imports_calculation_module": false,
+    "recomputes_growth_exponents_from_exact_exponentials": true,
+    "recomputes_maximum_return_cycle_exponent": true,
+    "recomputes_partition_arithmetic": true,
+    "recomputes_root_component_coverage": true,
+    "rejects_order_graph_as_complete_frozen_operator": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v0",
+  "verdict": "ACCEPT_PURE_PRINCIPAL_CHAIN_GROWTH_KEEP_COMPLETE_GENERIC_FROZEN_AND_CONSTRAINT_RESTRICTED_MINIMA_BLOCKED_AUTHORIZE_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_ONLY_NO_VARIABLE_OR_NONLINEAR_ESTIMATE"
+}

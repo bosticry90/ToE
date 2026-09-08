@@ -1,0 +1,119 @@
+{
+  "artifact_hashes": {
+    "close_event_hash": "89d8390337f5e9ddfa75e4ab532b4ce1bffe12058f761cb280579ea27ce3dca4",
+    "close_event_sha256": "3e10351827896acc1d6f3247ce540c5f8d9007f4fb4ee52bc0349eeb6b04c29a",
+    "result_sha256": "eee46245fd59f0ecc7b127030dca0dcbba61ab3dc4e45fa756bbfe9e1bb9c058",
+    "review_sha256": "2dd8819c4733aaab749f64036e9e17af309db8ebdadb497a55b0090d7518f310"
+  },
+  "artifact_id": "TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_VALIDATION_v0",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+    "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_04_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 4,
+  "captured_at_utc": "2026-07-31T17:35:00Z",
+  "deterministic_generation": {
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "projected_committed_module_count": 1349,
+    "status": "PASS_PROJECTED_COMMITTED_FORM",
+    "temporary_working_tree_aggregate_removed": true,
+    "working_tree_module_count": 1349
+  },
+  "focused_lean": {
+    "job_count": 6,
+    "modules": [
+      "ToeFormal.Derivation.ToeSourceBoundGravitationalRequirementFamilyCompatibilitySurveyResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "status": "PASS"
+  },
+  "focused_python": {
+    "elapsed_seconds": "10.35",
+    "passed": 14,
+    "status": "PASS",
+    "test_surfaces": [
+      "independent seventy-cell result and review recomputation",
+      "Stage 4 authority",
+      "bounded-program governance-enforcement authority",
+      "registry custody gate"
+    ]
+  },
+  "full_lean_aggregate": {
+    "job_count": 9094,
+    "module_count": 1349,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "reason": "The immutable CLOSE artifact has no introduction commit until the exact atomic CLOSE commit is created.",
+    "registry_extension_reconstruction": "PASS_PRECOMMIT"
+  },
+  "known_validation_debt": {
+    "broad_legacy_authority_consistency_and_freshness_tests": {
+      "failed": 6,
+      "failure_classes": [
+        "legacy target-verb parser omits reconstruct reconcile extract and survey",
+        "four downstream assertions stop at the parser error instead of their intended mismatch checks",
+        "two legacy freshness/frontier assertions remain pinned to obsolete historical targets"
+      ],
+      "passed": 7
+    },
+    "current_bounded_authority": "VALIDATED_BY_MANIFEST_EVENT_REGISTRY_AND_LEAN_SURFACES",
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "scope_statement": "This known parser and freshness debt predates Stage 4 and is not repaired inside the exact scientific CLOSE envelope.",
+    "status": "DISCLOSED_NOT_REPAIRED_IN_STAGE_4"
+  },
+  "lifecycle_result": "PASSED",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "restructured_ancestry": "REQUIRED_POST_COMMIT",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT"
+  },
+  "scientific_result_recomputation": {
+    "accepted_negative_result_domain_isolation": "PASS",
+    "all_cell_source_hashes": "PASS",
+    "all_family_role_boundaries": "PASS",
+    "all_seventy_cell_states": "PASS",
+    "nonpromotion_and_no_calculation_boundary": "PASS",
+    "result_review_hash_binding": "PASS",
+    "status": "PASS"
+  },
+  "scientific_validation": {
+    "accepted_negative_result_applied_to_exactly_one_quadratic_stability_cell": true,
+    "all_non_missing_cells_bind_source_path_hash_excerpt_and_domain": true,
+    "all_seventy_cells_independently_reviewed": true,
+    "all_states_belong_to_frozen_vocabulary": true,
+    "cell_cross_product_is_exactly_ten_by_seven": true,
+    "compatibility_cell_count_is_seventy": true,
+    "Einstein_Hilbert_remains_known_physics_baseline": true,
+    "equivalence_probe_has_ten_not_applicable_cells": true,
+    "general_f_R_not_inferred_from_R_plus_alpha_R_squared": true,
+    "missing_definition_cells_are_not_failures": true,
+    "no_action_family_invented": true,
+    "no_canonical_evidence_promoted": true,
+    "no_gravitational_action_or_principle_selected": true,
+    "no_master_action_constructed_or_promoted": true,
+    "no_new_gravitational_calculation_executed": true,
+    "quadratic_gravity_remains_REFERENCE_CONTROL_ONLY": true,
+    "stage_5_eligibility_verdict_not_made": true,
+    "stage_5_not_authorized_or_opened": true,
+    "state_counts_sum_to_seventy": true,
+    "three_verbal_directions_remain_undefined": true,
+    "unknown_information_not_treated_as_failure": true,
+    "zero_source_defined_native_action_families_observed": true
+  },
+  "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+  "status": "STAGE_4_ATOMIC_CLOSE_READY_FOR_COMMIT",
+  "terminal_outcome": "SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE"
+}

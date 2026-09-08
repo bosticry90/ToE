@@ -1,0 +1,16 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_PROGRAM_GOVERNANCE_INSTALLATION_AUTHORITY_REVIEW_v0",
+  "authority_sha256": "b0ee62d76e16c8646c9d2467d18067d07f05b08b61a5835609d383ce80c7a166",
+  "captured_at_utc": "2026-08-02T03:50:14Z",
+  "checks": {
+    "branch_model_and_theorem_remain_unselected": true,
+    "five_stage_zero_repair_boundary_preserved": true,
+    "installation_only": true,
+    "proposal_prepared_and_reviewed": true,
+    "scientific_stage_remains_unopened": true
+  },
+  "decision": "ACCEPT_INSTALLATION_AUTHORITY_AWAIT_ATOMIC_INSTALLATION",
+  "schema_id": "toe.ccft_v0.theory_construction.program_governance_installation_authority_review.v0",
+  "status": "PASS"
+}

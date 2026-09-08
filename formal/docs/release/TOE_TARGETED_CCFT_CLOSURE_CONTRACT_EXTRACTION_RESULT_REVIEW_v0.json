@@ -1,0 +1,51 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-08-02T00:48:09Z",
+  "checks": {
+    "all_18_checklist_items_are_accounted_for_once": true,
+    "all_contract_records_have_unique_ids": true,
+    "all_contract_records_use_frozen_classes": true,
+    "attempt_two_open_event_is_bound": true,
+    "every_excerpt_reverifies_against_its_frozen_capture": true,
+    "fixed_96_source_set_is_complete_and_balanced": true,
+    "immutable_stage_one_result_is_bound": true,
+    "no_contract_adjudication_repair_postulate_construction_or_promotion_occurred": true,
+    "overflow_and_new_search_are_excluded": true,
+    "parser_cap_is_respected": true,
+    "program_stage_target_and_scope_match_manifest": true,
+    "record_and_conflict_caps_are_respected": true,
+    "source_ledger_accounts_for_every_record": true,
+    "stage_three_is_selected_but_unauthorized": true,
+    "summary_counts_close_exactly": true,
+    "terminal_outcome_is_frozen_stage_two_pass": true
+  },
+  "decision": "ACCEPT_CONTRACT_EXTRACTION_SELECT_STAGE_3_UNOPENED",
+  "failed_checks": [],
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0.json",
+    "sha256": "b58b12e816db18dbda12af9b53ead28fcfe40c359751dfa9934da7fcbb5df7cf"
+  },
+  "schema_id": "toe.targeted_ccft_closure.contract_extraction.result_review.v0",
+  "scientific_interpretation": {
+    "contract_records_extracted": 23,
+    "contract_recovery_or_rejection_established": false,
+    "exact_class_means_candidate_for_stage_3_not_final_adjudication": true,
+    "records_by_branch": {
+      "CP_NLSE": 14,
+      "LCRD_V3": 9
+    },
+    "records_by_evidence_class": {
+      "CONFLICTING_SOURCE_CONTRACTS": 7,
+      "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING": 2,
+      "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED": 7,
+      "HEURISTIC_NOT_A_CONTRACT": 2,
+      "NUMERICAL_DEFAULT_ONLY": 2,
+      "PARTIAL_CONTRACT_RECOVERED": 3
+    }
+  },
+  "semantic_stage_id": "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION",
+  "stage_3_authorized": false,
+  "status": "PASS"
+}

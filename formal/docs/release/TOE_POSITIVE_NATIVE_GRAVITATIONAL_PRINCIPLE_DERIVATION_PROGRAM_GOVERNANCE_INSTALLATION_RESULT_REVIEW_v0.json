@@ -1,0 +1,55 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0",
+  "attempted_stage_count": 0,
+  "captured_at_utc": "2026-07-31T20:30:00Z",
+  "checks": {
+    "all_five_canonical_stage_ids_targets_and_scope_hashes_match_the_prepared_proposal": true,
+    "authorized_stage_count_is_five": true,
+    "bounded_program_history_reconstructs_from_immutable_manifests_and_events": true,
+    "current_scientific_target_is_preserved": true,
+    "installation_commit_has_the_exact_manifest_bound_ten_path_envelope": true,
+    "installation_commit_parent_matches_installed_from_commit": true,
+    "mandatory_exit_target_is_preserved": true,
+    "manifest_hash_and_all_scope_hashes_reproduce": true,
+    "no_action_class_principle_or_gravitational_action_was_selected": true,
+    "no_open_or_close_event_was_created": true,
+    "no_scientific_output_or_calculation_was_created": true,
+    "registry_projects_zero_attempts_and_unopened_state": true,
+    "repair_attempt_count_is_zero": true,
+    "result_state_mapping_and_finite_workload_caps_are_frozen": true
+  },
+  "evidence_promoted": false,
+  "exhaustive_python_passage_established": false,
+  "gravitational_action_constructed_or_selected": false,
+  "gravitational_calculation_started": false,
+  "installation_commit": "ca32fd309c36764dca53b1204ec7eacdc08b34cd",
+  "manifest": {
+    "manifest_hash": "a18f496e79132d202388cd53a80f6a5a22c58fb39caca235b0e320c3a5136ad5",
+    "path": "formal/docs/release/bounded_program_manifests/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_MANIFEST_v1.json",
+    "sha256": "817b745a5acb1408e334dd998a68d0adfbbd1de5150a026f2cb4659abafd1e1b"
+  },
+  "native_gravitational_principle_selected_or_derived": false,
+  "next_permitted_decision": "AUTHORIZE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_STAGE_1_OPEN",
+  "next_prohibited_work": [
+    "Stage_1_execution_without_separate_scientific_authority",
+    "principle_candidate_adoption",
+    "gravitational_variable_or_action_class_selection",
+    "master_action_or_archived_evidence_promotion",
+    "Einstein_Hilbert_or_quadratic_gravity_promotion",
+    "gravitational_action_construction_or_variation",
+    "gravitational_calculation",
+    "automatic_successor_authorization"
+  ],
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "program_state": "UNOPENED",
+  "reviewed_installation": {
+    "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+    "sha256": "2170022198e5fcf2d0fa24b33db4d1fc8168374d4fc962bbc479bf1c93a19b08"
+  },
+  "schema_id": "toe.positive_native_gravitational_principle_derivation.program_governance_installation_review.v0",
+  "scientific_execution_authorized": false,
+  "scientific_output_created": false,
+  "stage_1_opened": false,
+  "status": "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+}

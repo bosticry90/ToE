@@ -1,0 +1,41 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_PACKET_20260725_v0",
+  "obligations": [
+    {
+      "obligation_id": "NONPASSING-00145",
+      "repair": "VERSIONED_COMMIT_RELATIVE_ADMISSIBILITY_GIT_BLOB_IDENTITY"
+    },
+    {
+      "obligation_id": "NONPASSING-00147",
+      "repair": "VERSIONED_COMMIT_RELATIVE_GATE_STUB_GIT_BLOB_IDENTITY"
+    },
+    {
+      "obligation_id": "NONPASSING-02535",
+      "repair": "SPLIT_CURRENT_REFERENCE_INTEGRITY_FROM_HISTORICAL_REFERENCE_DEBT"
+    },
+    {
+      "obligation_id": "NONPASSING-09138",
+      "repair": "ADJUDICATE_ASSERTION_AGAINST_ACCEPTED_EOL_POLICY_AND_FAIL_CLOSED_ON_CONFLICT"
+    }
+  ],
+  "required": {
+    "legacy_admissibility_manifest_preserved": true,
+    "lean_sources_preserved": true,
+    "current_references_resolve": true,
+    "historical_missing_references_visible": true,
+    "historical_reports_not_restored": true,
+    "gitattributes_preserved": true,
+    "four_outcomes_pass_or_explicitly_reclassified": true,
+    "lf_crlf_detached_clean": true
+  },
+  "prohibited": {
+    "blind_hash_refresh": true,
+    "historical_report_regeneration": true,
+    "historical_document_rewrite": true,
+    "lean_source_change": true,
+    "registry_or_v2_change": true,
+    "scientific_content_change": true,
+    "lean_build": true,
+    "automatic_successor": true
+  }
+}

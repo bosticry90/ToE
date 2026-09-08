@@ -1,0 +1,351 @@
+{
+  "accepted_bounded_claim": {
+    "angular_dft_refinement": "FAILED",
+    "automatic_v2": "NOT_AUTHORIZED",
+    "deterministic_apparatus_model": "NOT_VALIDATED",
+    "interpretation": "The current production kernel and harmonic-resolution path did not pass their preregistered numerical validation, so no Jacobian or identifiability conclusion is scientifically supported.",
+    "physical_identifiability": "NOT_TESTED",
+    "stage_b": "NOT_ELIGIBLE_AND_NOT_AUTHORIZED",
+    "uniform_sphere_validation": "FAILED"
+  },
+  "authority": {
+    "authorized_execution_count": 1,
+    "consumed_execution_count": 1,
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_EXECUTION_20260719_v1.md",
+        "sha256": "d6167c5619cd7205cbf376c355ac99b6ecf43b5e5f3df94448cc81b73e42bde9"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_EXECUTION_20260719_v1.json",
+        "sha256": "86d9c3a2b93ccf3ec480264522d532e9c3924536459e897fc74bf154abd64a13"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_EXECUTION_CUSTODY_ADDENDUM_20260719_v1.json",
+        "sha256": "0216083d8dfc65b8efa5cbdf3302c4ec7c36283e23dbdb8e29f3d40d9962819a"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_torsion_balance_production_v1.py",
+        "sha256": "4995c467f766466583c53c7904e2f1bb35b7c02970aece4a20e2315403ed8cac"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1.py",
+        "sha256": "ec0209a433027d8e8523d9e0f21ba3662ccec559de33ea042cb0a765b64571ae"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_execution_v1.py",
+        "sha256": "48e9ee2e773648485119d98ea3ab681ad13e135498ef22ae472bf35aedee3023"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationExecutionV1.lean",
+        "sha256": "5873c8420b23bc0d230a6f726894a01f27533f0fdf7969ae9e43e7239e5f4a12"
+      }
+    ],
+    "reviewed_execution_count": 1,
+    "verified_output_artifacts": [
+      {
+        "byte_count": 832,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/benchmarks.csv",
+        "sha256": "1c74fe053233a5c89b8b00ce69d22a671c3a45d2532cbaff39308a49961505b8"
+      },
+      {
+        "byte_count": 543,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/convergence.csv",
+        "sha256": "7874938aa114f77dfbcda6027604de5a585d958f4cc53cf064ee803c64ad02f0"
+      },
+      {
+        "byte_count": 661,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/execution_core.json",
+        "sha256": "2588f9eeb661dbb739a5980b22ca56feee84e889d4c5949f682ac3d28a9d71c1"
+      },
+      {
+        "byte_count": 49,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/jacobian_columns.csv",
+        "sha256": "3186383eae36e37a874919ec82e58537af177adab9cb411a61349030c631b3bc"
+      },
+      {
+        "byte_count": 279,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/mutations.csv",
+        "sha256": "2e2b47ffb0a0c8f4d2c159315f2dbb9d049db42a7310fa69a0e7baa781a0406b"
+      },
+      {
+        "byte_count": 15471,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/newtonian_real_150.csv",
+        "sha256": "14c4822ce277c9cd11735c1d045ca5e1391f0180c66eeccf925686d8e14149e7"
+      },
+      {
+        "byte_count": 14871,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/reference_total_real_150.csv",
+        "sha256": "394953b8561641ce8aab7fd2fb4889890c41cffe4044d72ef98841285d77a914"
+      },
+      {
+        "byte_count": 521,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/symmetry_controls.csv",
+        "sha256": "477525539719c72327d16843fcb61cd6ab0ace88abc6e00a26fb182f0530d223"
+      },
+      {
+        "byte_count": 32,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/v1_controls.csv",
+        "sha256": "bba8b37d3af2472dff5c82facd7575dc53b7aae3b592edbe7a6c7876b7466747"
+      },
+      {
+        "byte_count": 366255,
+        "relative_path": "formal/output/scalar_only_yukawa_deterministic_torsion_balance_v1/yukawa_real_150.csv",
+        "sha256": "c851a5da96adb2de0e9b097f7e2ca3936b591feb78dc28c8b14ce5024d3708c4"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This independent review accepts only the conservative Stage A block. It does not establish physical unidentifiability, reject the scalar branch, authorize another execution or V2, or authorize Stage B, stochastic forecasting, a sensitivity curve, or a parameter bound.",
+  "fresh_selector_options": [
+    "NUMERICAL_KERNEL_DIAGNOSIS",
+    "REPLACE_PRODUCTION_INTEGRATION_METHOD",
+    "SIMPLIFY_OR_REDESIGN_APPARATUS",
+    "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE"
+  ],
+  "independent_reproduction": {
+    "benchmark_reproduction": {
+      "benchmark_group_count": 4,
+      "benchmark_group_pass_count": 3,
+      "failure_rows": [
+        {
+          "benchmark_id": "UNIFORM_SPHERE_FORM_FACTOR",
+          "metric_id": "max_production_vs_order24_relative_error",
+          "pass": "FAIL",
+          "value": "+6.86790204140759891e-02"
+        },
+        {
+          "benchmark_id": "UNIFORM_SPHERE_FORM_FACTOR",
+          "metric_id": "max_order16_vs_order24_relative_error",
+          "pass": "FAIL",
+          "value": "+4.20277601862804162e-01"
+        }
+      ],
+      "order24_converged_reference": false,
+      "principal_outcome_reproduced": true,
+      "required_tolerance": 1e-06,
+      "uniform_sphere_order16_vs_order24_error": 0.4202776018628042,
+      "uniform_sphere_production_vs_order24_error": 0.06867902041407599
+    },
+    "convergence_reproduction": {
+      "angular_dft_error": 1.481612456806414e-06,
+      "angular_dft_tolerance": 1e-08,
+      "control_count": 6,
+      "failed_control_ids": [
+        "ANGULAR_DFT_256_VS_512",
+        "DENSITY_CUBATURE_16_VS_24"
+      ],
+      "failure_rows": [
+        {
+          "control_id": "ANGULAR_DFT_256_VS_512",
+          "metric": "+1.48161245680641391e-06",
+          "pass": "FAIL",
+          "step_rad": "",
+          "tolerance": "+1.00000000000000002e-08"
+        },
+        {
+          "control_id": "DENSITY_CUBATURE_16_VS_24",
+          "metric": "+4.20277601862804162e-01",
+          "pass": "FAIL",
+          "step_rad": "",
+          "tolerance": "+9.99999999999999955e-07"
+        }
+      ],
+      "pass_count": 4
+    },
+    "firewall": {
+      "eta_lambda_computed": false,
+      "jacobian_computed": false,
+      "jacobian_rows": [
+        {
+          "status": "NOT_COMPUTED_EARLY_PHYSICAL_CONTROL_BLOCK"
+        }
+      ],
+      "passed": true,
+      "physical_identifiability_evaluated": false,
+      "singular_values_computed": false
+    },
+    "launch_custody": {
+      "canonical_output_written_by_attempts": [
+        3
+      ],
+      "changed_production_kernel_or_geometry": false,
+      "changed_scientific_parameter_or_threshold": false,
+      "completed_canonical_execution_count": 1,
+      "launch_attempt_count": 3,
+      "production_compute_pass_count_across_all_attempts": 3,
+      "qualification": "One precommit compute pass failed during serialization and was repeated after a serialization-only repair; this is disclosed and is not represented as a pristine single process launch.",
+      "scientific_retry_or_silent_replacement": false,
+      "technical_relaunch_disclosed": true
+    },
+    "relative_error_denominators": {
+      "all_independent_denominators_above_floor": true,
+      "cubature_refinement_denominator": "max(abs(order24_energy), 1e-300)",
+      "independent_closed_form_rows": [
+        {
+          "absolute_denominator_J": 3.225227314649147e-24,
+          "center_distance_m": 0.011,
+          "denominator_above_floor": true,
+          "denominator_floor_J": 1e-300,
+          "independent_closed_form_energy_J": -3.225227314649147e-24,
+          "lambda_m": 0.0001
+        },
+        {
+          "absolute_denominator_J": 2.274618571751374e-16,
+          "center_distance_m": 0.03,
+          "denominator_above_floor": true,
+          "denominator_floor_J": 1e-300,
+          "independent_closed_form_energy_J": -2.274618571751374e-16,
+          "lambda_m": 0.005
+        },
+        {
+          "absolute_denominator_J": 1.2700907357438663e-14,
+          "center_distance_m": 0.08,
+          "denominator_above_floor": true,
+          "denominator_floor_J": 1e-300,
+          "independent_closed_form_energy_J": -1.2700907357438663e-14,
+          "lambda_m": 0.1
+        }
+      ],
+      "production_comparison_denominator": "max(abs(production_energy), 1e-300)"
+    },
+    "separate_components": {
+      "newtonian_classes": [
+        "NEWTONIAN"
+      ],
+      "newtonian_row_count": 150,
+      "passed": true,
+      "reference_classes": [
+        "TOTAL"
+      ],
+      "reference_total_row_count": 150,
+      "yukawa_classes": [
+        "YUKAWA"
+      ],
+      "yukawa_row_count": 3750
+    },
+    "static_path_audit": {
+      "all_cubature_dimensions_and_weights_present": true,
+      "cubature_dimension_checks": {
+        "attractor_cosine": true,
+        "attractor_radius": true,
+        "detector_cosine": true,
+        "detector_radius": true,
+        "one_order_routes_to_all_dimensions": true,
+        "radial_volume_elements": true,
+        "two_azimuth_reductions": true
+      },
+      "executor_token_count": 7,
+      "executor_tokens_present": true,
+      "production_token_count": 15,
+      "production_tokens_present": true,
+      "review_imports_or_calls_production_module": false
+    },
+    "structural_controls": {
+      "mutation_count": 5,
+      "mutation_pass_count": 5,
+      "symmetry_count": 6,
+      "symmetry_pass_count": 6
+    }
+  },
+  "principal_review_outcome": "BLOCKED_PRODUCTION_KERNEL_VALIDATION",
+  "review_disposition": "ACCEPTED_CONSERVATIVE_STAGE_A_EXECUTION_RESULT",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 11,
+    "pass_count": 11,
+    "rows": [
+      {
+        "detail": "7 execution surfaces and 10 manifested artifacts hash-verified",
+        "gate_id": "R01_EXECUTION_AND_OUTPUT_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "detail": "production and benchmark constants, cases, and kernel paths match the frozen implementation",
+        "gate_id": "R02_FROZEN_GEOMETRY_UNITS_KERNEL_AND_SOURCES",
+        "status": "PASS"
+      },
+      {
+        "detail": "closed-form sphere factors and reduced four-coordinate density integral are structurally complete",
+        "gate_id": "R03_UNIFORM_SPHERE_TARGET_IMPLEMENTATION",
+        "status": "PASS"
+      },
+      {
+        "detail": "all three independent closed-form denominators are finite and above 1e-300",
+        "gate_id": "R04_RELATIVE_ERROR_DENOMINATORS",
+        "status": "PASS"
+      },
+      {
+        "detail": "the selected Gauss-Legendre order supplies both radii and both cosine coordinates",
+        "gate_id": "R05_CUBATURE_ORDER_ROUTES_ALL_DIMENSIONS",
+        "status": "PASS"
+      },
+      {
+        "detail": "150 Newtonian, 150 total-reference, and 3750 Yukawa rows remain separately inspectable",
+        "gate_id": "R06_NEWTONIAN_AND_YUKAWA_COMPONENT_SEPARATION",
+        "status": "PASS"
+      },
+      {
+        "detail": "1/N, exp(-in theta), uniform 2pi grids, and 256-versus-512 comparison are preserved",
+        "gate_id": "R07_FROZEN_DFT_REFINEMENT",
+        "status": "PASS"
+      },
+      {
+        "detail": "Jacobian, SVD, eta_lambda, and physical-identifiability evaluation were not performed",
+        "gate_id": "R08_EARLY_IDENTIFIABILITY_FIREWALL",
+        "status": "PASS"
+      },
+      {
+        "detail": "import/serialization recovery is disclosed and changed no scientific rule or kernel",
+        "gate_id": "R09_LAUNCH_RECOVERY_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "detail": "One precommit compute pass failed during serialization and was repeated after a serialization-only repair; this is disclosed and is not represented as a pristine single process launch.",
+        "gate_id": "R10_ONE_COMMITTED_EXECUTION_NO_SILENT_REPLACEMENT",
+        "status": "PASS"
+      },
+      {
+        "detail": "sphere benchmark failure reproduced; 5/5 mutations and 6/6 symmetry controls passed",
+        "gate_id": "R11_PRINCIPAL_FAILURE_REPRODUCED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_EXECUTION_RESULT_REVIEW_20260719_v1",
+  "schema_id": "toe.scalar_only_yukawa.deterministic_torsion_balance_forward_model_validation.execution_result_review.v1",
+  "scope": {
+    "additional_deterministic_execution_authorized": false,
+    "apparatus_redesign_authorized": false,
+    "automatic_v2_authorized": false,
+    "blocked_production_kernel_validation_result_accepted": true,
+    "deterministic_forward_model_validated": false,
+    "empirical_constraint_claimed": false,
+    "eta_lambda_computed": false,
+    "execution_custody_accepted_with_disclosed_technical_relaunch": true,
+    "gaussian_noise_used": false,
+    "independent_result_review_executed": true,
+    "jacobian_computed": false,
+    "monte_carlo_executed": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_kernel_diagnosis_authorized": false,
+    "physical_identifiability_evaluated": false,
+    "production_integration_replacement_authorized": false,
+    "profile_likelihood_executed": false,
+    "scalar_branch_adopted": false,
+    "scientific_real_150_vector_accepted": false,
+    "scientific_response_selection_authorized": true,
+    "scientific_response_selection_executed": false,
+    "sensitivity_forecast_produced": false,
+    "singular_values_computed": false,
+    "stage_b_authorized": false,
+    "stage_b_eligible": false,
+    "stochastic_packet_preparation_authorized": false,
+    "torsion_balance_lane_closure_authorized": false
+  },
+  "secondary_review_outcome": "PHYSICAL_IDENTIFIABILITY_NOT_TESTED",
+  "selected_next_target": "select_post_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_execution_result_scientific_response_v0",
+  "selected_next_target_kind": "FRESH_SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_V2_NO_STAGE_B",
+  "target": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_execution_result",
+  "verdict": "BLOCKED_PRODUCTION_KERNEL_VALIDATION"
+}

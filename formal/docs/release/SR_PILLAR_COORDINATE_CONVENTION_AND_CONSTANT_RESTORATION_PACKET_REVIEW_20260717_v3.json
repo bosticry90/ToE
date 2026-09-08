@@ -1,0 +1,387 @@
+{
+  "blocking_findings": {
+    "all_confirmed": true,
+    "count": 3,
+    "findings": [
+      {
+        "confirmed": true,
+        "evidence": "The frozen dataclass blocks ordinary assignment and the issuance registry rejects copies, binding/convention changes, and AST changes. The registry does not snapshot the provenance trace, so an altered trace on the exact issued object is accepted.",
+        "finding_id": "ISSUED_PROVENANCE_TRACE_MUTATION_NOT_REVALIDATED",
+        "materiality": "FOUNDATIONAL_BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "Only POS_UNCHANGED_SIX_PRODUCTION_PATHS invokes restore and suppress; the scalar and operator positives call canonical directly and therefore do not exercise binding preflight, oracle comparison, issuance, or suppression.",
+        "finding_id": "TWO_OF_THREE_POSITIVE_CONTROLS_BYPASS_FULL_PRODUCTION_PATH",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "ADV_OBJECT_MAP_MUTATED replaces both RewriteRule.target and RewriteRule.meaning while reporting one changed premise; only 13/14 rows are one-field mutations.",
+        "finding_id": "OBJECT_MAP_NEGATIVE_CONTROL_CHANGES_TARGET_AND_MEANING_FIELDS",
+        "materiality": "BLOCKING"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "The selected SR-facing convention and the independently reproduced operator, derivative, scalar, source-binding, oracle, and six intended round-trip results are retained. V3 is not accepted because its issued provenance trace can be modified without rejection and its control-path/atomicity contract is incomplete.",
+  "control_path_and_atomicity_audit": {
+    "atomic_negative_controls": {
+      "all_single_change": false,
+      "exact_diagnostic_passed_count": 14,
+      "independently_atomic_count": 13,
+      "reported_count": 14,
+      "rows": [
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_WRONG_SI_ORACLE",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_REQUIRED_MAP_REMOVED",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": false,
+          "changed_fields": [
+            "RewriteRule.target",
+            "RewriteRule.meaning"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 2,
+          "mutation_id": "ADV_OBJECT_MAP_MUTATED",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_EXTRA_MAP_ADDED",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_PUBLIC_ENTRY_WITHOUT_MANUAL_PREFLIGHT",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_T_PSI_REPLACED_BY_T_MATTER",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_INVALID_ADAPTER",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_UNTRUSTED_SUMMARY_ONLY",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_SUPPRESS_STORED_TARGET_WITHOUT_LINEAGE",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_QUANTUM_HBAR_OMITTED",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_QUANTUM_OPERATOR_ORDER_REVERSED",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_QUANTUM_DERIVATIVE_SCOPE_CHANGED",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_MANUAL_TRANSFORM_RESULT_COPY",
+          "reported_changed_premise_count": 1
+        },
+        {
+          "atomic_single_change": true,
+          "changed_fields": [
+            "registered_single_premise"
+          ],
+          "exact_diagnostic_passed": true,
+          "independently_observed_changed_field_count": 1,
+          "mutation_id": "ADV_VALID_RESULT_WRONG_BINDING",
+          "reported_changed_premise_count": 1
+        }
+      ]
+    },
+    "convention_controls": {
+      "all_failed_before_output": true,
+      "passed_count": 8,
+      "reported_count": 8
+    },
+    "positive_control_source": "def _positive_controls() -> list[dict[str, Any]]:\n    valid_rows = _valid_round_trips()\n    gamma = V(\"gamma\", \"SI\", MU_U)\n    dop = V(\"D\", \"SI\", MU_D)\n    psi = Symbol(\"psi\", \"SI\")\n    return [\n        {\n            \"control_id\": \"POS_UNCHANGED_SIX_PRODUCTION_PATHS\",\n            \"mutation_count\": 0,\n            \"passed\": len(valid_rows) == 6 and all(row[\"semantic_round_trip_passed\"] for row in valid_rows),\n        },\n        {\n            \"control_id\": \"POS_SAFE_SCALAR_CONSTANT_REORDERING\",\n            \"mutation_count\": 0,\n            \"passed\": canonical(P(HBAR, C)) == canonical(P(C, HBAR)),\n        },\n        {\n            \"control_id\": \"POS_OPERATOR_ORDER_AND_SCOPE_REMAIN_DISTINCT\",\n            \"mutation_count\": 0,\n            \"passed\": (\n                canonical(APP(OP(gamma, dop), psi)) != canonical(APP(OP(dop, gamma), psi))\n                and canonical(APP(OP(gamma, dop), psi)) != canonical(APP(gamma, APP(dop, psi)))\n            ),\n        },\n    ]\n",
+    "positive_controls": {
+      "all_use_full_production_path": false,
+      "full_production_path_count": 1,
+      "passed_count": 3,
+      "reported_count": 3,
+      "rows": [
+        {
+          "control_id": "POS_UNCHANGED_SIX_PRODUCTION_PATHS",
+          "full_production_path": true,
+          "uses_restore": true,
+          "uses_suppress": true
+        },
+        {
+          "control_id": "POS_SAFE_SCALAR_CONSTANT_REORDERING",
+          "full_production_path": false,
+          "uses_restore": false,
+          "uses_suppress": false
+        },
+        {
+          "control_id": "POS_OPERATOR_ORDER_AND_SCOPE_REMAIN_DISTINCT",
+          "full_production_path": false,
+          "uses_restore": false,
+          "uses_suppress": false
+        }
+      ]
+    }
+  },
+  "first_diagnostic": "ISSUED_PROVENANCE_TRACE_MUTATION_NOT_REVALIDATED",
+  "hard_stop": {
+    "automatic_successor_packet_authorized": false,
+    "lane_closed": true,
+    "migration_authorized": false,
+    "next_action": "select_next_high_leverage_scientific_obligation_from_full_toe_priority_map",
+    "restoration_authorized": false,
+    "v3_is_final_automatic_attempt": true
+  },
+  "issued_lineage_audit": {
+    "bounded_conclusion": "The frozen dataclass blocks ordinary assignment and the issuance registry rejects copies, binding/convention changes, and AST changes. The registry does not snapshot the provenance trace, so an altered trace on the exact issued object is accepted.",
+    "issuance_registry_snapshots_provenance_trace": false,
+    "manual_visible_field_and_capability_copy_diagnostic": "LINEAGE_PROVENANCE_FAILURE",
+    "normal_public_assignment_rejected": true,
+    "reflectively_modified_exact_object_ast_diagnostic": "LINEAGE_PROVENANCE_FAILURE",
+    "reflectively_modified_exact_object_trace_diagnostic": "NO_DIAGNOSTIC",
+    "reflectively_modified_exact_object_trace_was_accepted": true,
+    "replaced_ast_copy_diagnostic": "LINEAGE_PROVENANCE_FAILURE",
+    "replaced_trace_copy_diagnostic": "LINEAGE_PROVENANCE_FAILURE",
+    "result_dataclass_frozen": true,
+    "valid_exact_issued_object_suppressed": true,
+    "wrong_binding_diagnostic": "LINEAGE_PROVENANCE_FAILURE",
+    "wrong_convention_diagnostic": "LINEAGE_PROVENANCE_FAILURE"
+  },
+  "retained_results": {
+    "authoritative_equations_unchanged": true,
+    "electromagnetic_quantum_stress_and_derivative_conventions_retained": true,
+    "exact_T_psi_identity_retained": true,
+    "exact_source_content_bindings_audit": {
+      "passed": true,
+      "passed_count": 6,
+      "required_count": 6,
+      "rows": [
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "SR_INTERVAL_INVARIANCE",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "SR_MASS_SHELL",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "CURRENT_CONSERVATION",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "SOURCED_MAXWELL",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "MATTER_STRESS_ENERGY_EXCHANGE",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        },
+        {
+          "artifact_hash_matches": true,
+          "claim_class_increased": false,
+          "corroborating_matches": true,
+          "equation_id": "GAUGE_STRESS_ENERGY_NORMALIZATION",
+          "exact_content_hash_matches": true,
+          "exact_expression_matches": true,
+          "passed": true
+        }
+      ]
+    },
+    "operator_derivative_and_scalar_audit": {
+      "checks": {
+        "all_i_hbar_c_permutations_equal": true,
+        "derivative_index_variance_preserved": true,
+        "derivative_operand_preserved": true,
+        "derivative_scope_preserved": true,
+        "gamma_D_differs_from_D_gamma": true,
+        "gamma_D_differs_from_D_of_gamma_psi": true,
+        "gamma_D_differs_from_gamma_of_D_psi": true,
+        "generic_AB_differs_from_BA": true,
+        "operator_objects_rejected_from_scalar_product": true,
+        "partial_nabla_spin_gauge_all_distinct": true
+      },
+      "passed": true,
+      "passed_count": 10,
+      "required_count": 10
+    },
+    "oracle_and_six_path_audit": {
+      "actual_functions_called": [
+        "restore",
+        "suppress",
+        "canonical"
+      ],
+      "all_inverse_inputs_are_issued_forward_objects": true,
+      "all_six_passed": true,
+      "oracle_independence_passed": true,
+      "six_path_passed_count": 6,
+      "six_path_required_count": 6,
+      "wrong_oracle_did_not_change_computed_ast": true,
+      "wrong_oracle_rejected": true
+    },
+    "physical_convention": "x^0=c t; (+,-,-,-); SI",
+    "physical_convention_reconsidered": false
+  },
+  "review_authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_20260717_v3.json",
+        "sha256": "27f589084a1608d718c6a77136e40d96363190bcfdf0de09f1a4f0f0f92e1c66"
+      },
+      {
+        "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_v3.py",
+        "sha256": "f77c3ed95ae3344d696185656f9203ba8b675b6582268884d705acc806243e84"
+      },
+      {
+        "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_v3.py",
+        "sha256": "1d783eb29e73afbb89df342d0cdbf61cbf8bcfabf8431ea8999bb1805d6caeb7"
+      }
+    ],
+    "review_test": {
+      "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v3.py",
+      "sha256": "f1410e7dab5d2d9ef97481d4a183e38e03e97a0f37935e9a8a4213c977e7a94c"
+    },
+    "reviewer": {
+      "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v3.py",
+      "sha256": "7bf91d4fc501142e9946102b4f488ef3ab5d66d5abf00acefc6c22232c5e9387"
+    }
+  },
+  "schema_id": "SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v3",
+  "scope_and_authorization": {
+    "authoritative_equation_restoration_executed": false,
+    "automatic_v4_authorized": false,
+    "automation_created": false,
+    "bounded_six_surface_restoration_authorized": false,
+    "external_comparator_activated": false,
+    "full_project_priority_selection_authorized": true,
+    "historical_artifacts_modified": false,
+    "packet_v3_accepted": false,
+    "physical_convention_reopened": false,
+    "r13_reopened": false,
+    "repository_wide_migration_authorized": false,
+    "scientific_equation_migration_executed": false
+  },
+  "selected_next_target": "select_next_high_leverage_scientific_obligation_from_full_toe_priority_map",
+  "target": "review_sr_pillar_coordinate_convention_and_constant_restoration_packet_v3_result",
+  "terminal_lane_closeout": {
+    "authority_returned_to_full_project_priority_map": true,
+    "automated_restoration_deferred": true,
+    "classification": "BLOCKED_SR_RESTORATION_TOOLING_CONTRACT",
+    "fresh_full_project_priority_decision_required_for_v4": true,
+    "lane": "SR_AUTOMATED_CONSTANT_RESTORATION_TOOLING",
+    "physical_convention_policy_retained": true,
+    "status": "CLOSED",
+    "v4_automatically_authorized": false,
+    "v4_prepared": false
+  },
+  "verdict": "BLOCKED_SR_RESTORATION_TOOLING_CONTRACT"
+}

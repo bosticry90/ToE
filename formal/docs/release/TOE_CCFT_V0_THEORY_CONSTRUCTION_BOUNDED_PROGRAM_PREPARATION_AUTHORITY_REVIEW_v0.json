@@ -1,0 +1,21 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_REVIEW_v0",
+  "authority_path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0.json",
+  "authority_sha256": "a600bdf3bbe8fdc96b3793dd840a367dd847170cb2ebd0e15413be00a4adccc4",
+  "captured_at_utc": "2026-08-02T02:52:50Z",
+  "checks": {
+    "all_four_director_options_are_required_without_selection": true,
+    "archive_recovery_cannot_reopen": true,
+    "authority_is_proposal_preparation_only": true,
+    "four_recovered_contracts_and_three_conflicts_are_frozen": true,
+    "historical_recovery_is_complete_without_exhaustion_claim": true,
+    "installation_stage_open_postulate_model_and_theorem_work_are_unauthorized": true,
+    "terminal_closeout_is_hash_bound": true
+  },
+  "decision": "ACCEPT_CCFT_V0_CONSTRUCTION_PROGRAM_PROPOSAL_PREPARATION_ONLY",
+  "failed_checks": [],
+  "schema_id": "toe.ccft_v0.theory_construction.bounded_program_preparation_authority_review.v0",
+  "scientific_execution_authorized": false,
+  "status": "PASS"
+}

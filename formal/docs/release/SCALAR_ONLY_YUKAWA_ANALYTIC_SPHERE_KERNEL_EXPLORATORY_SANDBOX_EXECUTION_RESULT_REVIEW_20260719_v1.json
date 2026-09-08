@@ -1,0 +1,557 @@
+{
+  "authority": {
+    "consumed_execution_outcome": "EXPLORATORY_IMPLEMENTATION_COMPLETED_WITH_RECORDED_FAILURES",
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v1.json",
+        "sha256": "3a6bc5738f774668c3d1387d7557d0c0654bb0db2a875f0237b655f539dec4ee"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v1.json.sha256",
+        "sha256": "35ec83791117b22dab1138c671d7ab5902a45650b4b42cab3d141062ed492b76"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v1.authority_consumed.json",
+        "sha256": "2213b473aa598dbcbe0e161c0ba073cafef6775db82422115ceb8bf45cabb53a"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v1.stages.json",
+        "sha256": "da924eaf4f7ddfea4f1efe69be11f15a809e8be69ac293eb5911c5524131cf6c"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v1.log",
+        "sha256": "8ee1fbaa7fb9d0a4ab599807599d245586bad486df517c09ff12357487b71290"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1.py",
+        "sha256": "ebadb20d9a256af4251e488c0fc010e30cd90510de7b373191147f085fed1eca"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0.py",
+        "sha256": "27a32f540465ed78cb2094629033a4aa30e3142c1f75aa113fc88eb10c7563ae"
+      },
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_20260719_v1.md",
+        "sha256": "66458c40d00291d55e01a4e7ae3aec6a7c9f542c8945496948af021b95dc17f1"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_execution_result_review_v1.py",
+      "sha256": "dba60badab321c57ba073f2368e87d6d099e1bbca64bb8c1e7b248ce0fa67c59"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_REVIEW_20260719_v1.md",
+      "sha256": "8dd8ae4326ae0e43162fa323f97536b3c311ffbf6cf01fb9e682be90829f0a91"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelExploratorySandboxExecutionResultReviewV1.lean",
+      "sha256": "21f0388b0d1e6c3e9f741c9106b6e98ca21ca03cf9be5824503ced76b6b9e107"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_execution_result_review_v1.py",
+      "sha256": "b4b708393784b3a2fca5b794f218ba43e794c6d7433c90387e4f8bcaf48ff716"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review accepts complete V1 custody, the canonical-preservation pass, and bounded positive exploratory observations. It localizes a Windows child-pipe transfer failure in the mandatory mutation harness before adjudication. It does not qualify or refute the analytic kernel, adjudicate cubature, authorize a pipe repair or rerun, change production, rerun Stage A, compute torque, DFT, vector, Jacobian, SVD, or identifiability, or authorize Stage B.",
+  "custody_review": {
+    "all_required_records_preserved": true,
+    "authorized_execution_count": 1,
+    "canonical_result_written_and_verified": true,
+    "completed_stage_boundary_count": 8,
+    "consumed_execution_count": 1,
+    "run_id": "7b25175b-e5ab-4145-9427-1412bf913ecd",
+    "source_frozen_after_execution": true,
+    "surviving_process_count": 0
+  },
+  "defect_attribution": {
+    "candidate_kernel_defect_established": false,
+    "further_mechanism_adjudicated": false,
+    "possible_unadjudicated_mechanisms": [
+      "WINDOWS_CRT_DESCRIPTOR_MAPPING",
+      "OS_HANDLE_INHERITANCE_CONFIGURATION",
+      "COMBINATION_OF_BOTH"
+    ],
+    "principal_classification": "VALIDATION_INFRASTRUCTURE_IMPLEMENTATION_FAILURE",
+    "proven_boundary": "THE_CHILD_PROCESS_DID_NOT_POSSESS_A_VALID_NUMERIC_FILE_DESCRIPTOR_FOR_THE_PARENT_CAPABILITY_PIPE",
+    "scientific_mutation_disagreement_established": false,
+    "secondary_classification": "MUTATION_HARNESS_WINDOWS_PLATFORM_PORTABILITY_DEFECT"
+  },
+  "mutation_failure_review": {
+    "adjudication_executed": false,
+    "candidate_called": false,
+    "common_error_message": "[Errno 9] Bad file descriptor",
+    "common_error_type": "builtins.OSError",
+    "common_failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+    "fixture_loaded": false,
+    "kernel_mutation_count": 12,
+    "mutation_injected": false,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "predicate_executed": false,
+    "rows": [
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M01_SCALE_BY_TWO",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M02_FLIP_SIGN",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M03_SUPPRESS_EXCEPTION",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M04_CAST_FLOAT32",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M05_BYPASS_CAPABILITY",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M06_INSERT_FORBIDDEN_IMPORT",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M07_DUPLICATE_KEY_INPUT",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "ROUTE_M08_UNKNOWN_ENUM_INPUT",
+        "child_kind": "synthetic-route",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M01_GAP_SUBSTITUTED_FOR_CENTER_DISTANCE",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M02_MISSING_SECOND_SPHERE_FACTOR",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M03_MISSING_A_Y_ONE_THIRD",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M04_REVERSED_ATTRACTIVE_SIGN",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M05_WRONG_RADIAL_DERIVATIVE_SIGN",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M06_DIRECT_LARGE_X_HYPERBOLIC_OVERFLOW",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M07_DIRECT_SMALL_X_CANCELLATION",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M08_TOUCHING_OR_OVERLAPPING_INPUT_ACCEPTED",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M09_NONPOSITIVE_YUKAWA_RANGE_ACCEPTED",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M10_X_ABOVE_QUALIFIED_MAXIMUM_ACCEPTED",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M11_OUTPUT_SHAPE_OR_DTYPE_CHANGED",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      },
+      {
+        "candidate_or_predicate_entered": false,
+        "child_id": "M12_REFERENCE_HELPER_SHARED_WITH_CANDIDATE",
+        "child_kind": "kernel-mutation",
+        "error_message": "[Errno 9] Bad file descriptor",
+        "error_type": "builtins.OSError",
+        "failure_boundary": "FIRST_CHILD_CAPABILITY_PIPE_READ",
+        "returncode": 1
+      }
+    ],
+    "synthetic_route_count": 8,
+    "total_child_failure_count": 20,
+    "validation_session_constructed": false
+  },
+  "next_response_boundary": {
+    "additional_prerequisite": "PROHIBITED",
+    "automatic_rerun": "PROHIBITED",
+    "direct_pipe_repair_and_rerun": "PROHIBITED",
+    "fresh_selector_required": true,
+    "production_or_scientific_advance": "PROHIBITED",
+    "retire_or_defer_available": true,
+    "sandbox_v2": "PROHIBITED",
+    "separately_governed_nonrerun_use_of_preserved_observations_may_be_selected": true
+  },
+  "preserved_exploratory_observations": {
+    "boundary_probe_count": 13,
+    "derivative_reference_case_count": 8,
+    "evaluator_overlap_count": 6,
+    "median_10000_call_duration_ns": 868499900,
+    "qualifies_kernel": false,
+    "regression_case_count": 8,
+    "runtime_trial_count": 5,
+    "status": "BOUNDED_NONQUALIFYING_POSITIVE_OBSERVATIONS",
+    "surfaces": {
+      "boundary_and_limits": true,
+      "derivative_references": true,
+      "evaluator_overlap": true,
+      "interface": true,
+      "regressions": true,
+      "runtime": true
+    }
+  },
+  "principal_review_outcome": "VALIDATION_INFRASTRUCTURE_CHILD_PIPE_TRANSFER_FAILED_BEFORE_ADJUDICATION",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 40,
+    "pass_count": 40,
+    "rows": [
+      {
+        "finding": "canonical result hash exact",
+        "gate_id": "E01_RESULT_HASH",
+        "status": "PASS"
+      },
+      {
+        "finding": "hash sidecar frozen",
+        "gate_id": "E02_SIDECAR_HASH",
+        "status": "PASS"
+      },
+      {
+        "finding": "authority marker frozen",
+        "gate_id": "E03_AUTHORITY_MARKER_HASH",
+        "status": "PASS"
+      },
+      {
+        "finding": "stage checkpoint frozen",
+        "gate_id": "E04_STAGE_CHECKPOINT_HASH",
+        "status": "PASS"
+      },
+      {
+        "finding": "raw log frozen",
+        "gate_id": "E05_RAW_LOG_HASH",
+        "status": "PASS"
+      },
+      {
+        "finding": "executed V1 source frozen",
+        "gate_id": "E06_V1_SOURCE_HASH",
+        "status": "PASS"
+      },
+      {
+        "finding": "execution handoff frozen",
+        "gate_id": "E07_HUMAN_HANDOFF_HASH",
+        "status": "PASS"
+      },
+      {
+        "finding": "exactly one launch consumed",
+        "gate_id": "E08_ONE_SHOT_AUTHORITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "result and marker run IDs agree",
+        "gate_id": "E09_RUN_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "marker forbids rerun",
+        "gate_id": "E10_NO_RERUN_STATUS",
+        "status": "PASS"
+      },
+      {
+        "finding": "all eight stage boundaries complete",
+        "gate_id": "E11_EIGHT_STAGES",
+        "status": "PASS"
+      },
+      {
+        "finding": "all required records preserved",
+        "gate_id": "E12_COMPLETE_RECORD_SET",
+        "status": "PASS"
+      },
+      {
+        "finding": "actual aggregate serialization passed",
+        "gate_id": "E13_SERIALIZATION_CONTROL",
+        "status": "PASS"
+      },
+      {
+        "finding": "nested Decimal normalization exact",
+        "gate_id": "E14_DECIMAL_NORMALIZATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "atomic write and verification passed",
+        "gate_id": "E15_ATOMIC_PRESERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "interface checks preserved as passing",
+        "gate_id": "E16_INTERFACE_OBSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "eight regressions preserved as passing",
+        "gate_id": "E17_REGRESSION_OBSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "derivative references preserved as passing",
+        "gate_id": "E18_DERIVATIVE_OBSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "thirteen boundary probes preserved as passing",
+        "gate_id": "E19_BOUNDARY_OBSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "six evaluator overlaps preserved as passing",
+        "gate_id": "E20_OVERLAP_OBSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "runtime workload preserved as passing",
+        "gate_id": "E21_RUNTIME_OBSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "all synthetic child records present",
+        "gate_id": "E22_EIGHT_SYNTHETIC_CHILDREN",
+        "status": "PASS"
+      },
+      {
+        "finding": "all kernel child records present",
+        "gate_id": "E23_TWELVE_KERNEL_CHILDREN",
+        "status": "PASS"
+      },
+      {
+        "finding": "all twenty errors are builtins.OSError",
+        "gate_id": "E24_COMMON_ERROR_TYPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "all twenty report bad file descriptor",
+        "gate_id": "E25_COMMON_ERROR_MESSAGE",
+        "status": "PASS"
+      },
+      {
+        "finding": "all traces fail on first pipe read",
+        "gate_id": "E26_FIRST_CHILD_READ_BOUNDARY",
+        "status": "PASS"
+      },
+      {
+        "finding": "validation session construction not reached",
+        "gate_id": "E27_SESSION_NOT_CONSTRUCTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "fixture loading not reached",
+        "gate_id": "E28_FIXTURE_NOT_LOADED",
+        "status": "PASS"
+      },
+      {
+        "finding": "mutation injection not reached",
+        "gate_id": "E29_MUTATION_NOT_INJECTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "candidate mutation call not reached",
+        "gate_id": "E30_CANDIDATE_NOT_CALLED",
+        "status": "PASS"
+      },
+      {
+        "finding": "mutation predicate not reached",
+        "gate_id": "E31_PREDICATE_NOT_RUN",
+        "status": "PASS"
+      },
+      {
+        "finding": "mutation adjudication not reached",
+        "gate_id": "E32_ADJUDICATION_NOT_RUN",
+        "status": "PASS"
+      },
+      {
+        "finding": "failure observed on frozen Windows platform",
+        "gate_id": "E33_WINDOWS_PLATFORM",
+        "status": "PASS"
+      },
+      {
+        "finding": "numeric descriptor invalid in child",
+        "gate_id": "E34_PIPE_TRANSFER_LOCALIZED",
+        "status": "PASS"
+      },
+      {
+        "finding": "harness platform-portability defect localized",
+        "gate_id": "E35_PORTABILITY_ATTRIBUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "mandatory failures suppress qualification",
+        "gate_id": "E36_FAIL_CLOSED_PRECEDENCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "four nonclaim labels preserved",
+        "gate_id": "E37_NONCLAIM_LABELS",
+        "status": "PASS"
+      },
+      {
+        "finding": "kernel remains neither qualified nor refuted",
+        "gate_id": "E38_NO_KERNEL_INFERENCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "production and scientific work remain closed",
+        "gate_id": "E39_DOWNSTREAM_FIREWALLS",
+        "status": "PASS"
+      },
+      {
+        "finding": "review rotates only to fresh response selector",
+        "gate_id": "E40_SELECTOR_ONLY",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_REVIEW_20260719_v1",
+  "schema_id": "toe.scalar_only_yukawa.analytic_sphere_kernel.exploratory_sandbox_execution_result_review.v1",
+  "scientific_admissibility": {
+    "canonical_preservation": "PASSED",
+    "historical_cubature": "UNADJUDICATED",
+    "kernel_pass_or_fail": "UNRESOLVED",
+    "mandatory_mutation_controls": "FAILED_BEFORE_ADJUDICATION",
+    "primary_numerical_and_interface_rows": "PRESERVED_EXPLORATORY_OBSERVATIONS",
+    "scientific_claim": "NONE",
+    "validation_infrastructure": "NOT_QUALIFIED"
+  },
+  "scope": {
+    "additional_prerequisite_authorized": false,
+    "analytic_kernel_qualified": false,
+    "analytic_kernel_refuted": false,
+    "bounded_positive_exploratory_observations_accepted": true,
+    "canonical_preservation_pass_accepted": true,
+    "fresh_scientific_response_selector_authorized": true,
+    "historical_cubature_adjudicated": false,
+    "implementation_edit_authorized": false,
+    "independent_execution_result_review_performed": true,
+    "jacobian_or_identifiability_authorized": false,
+    "mutation_adjudication_completed": false,
+    "one_shot_custody_accepted": true,
+    "pipe_repair_authorized": false,
+    "production_change_authorized": false,
+    "sandbox_rerun_authorized": false,
+    "sandbox_v2_authorized": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "torque_or_dft_authorized": false,
+    "validation_infrastructure_child_pipe_failure_accepted": true,
+    "validation_infrastructure_qualified": false,
+    "windows_mutation_harness_portability_defect_localized": true
+  },
+  "secondary_review_outcomes": [
+    "MUTATION_HARNESS_WINDOWS_PLATFORM_PORTABILITY_DEFECT_LOCALIZED",
+    "PRIMARY_NUMERICAL_AND_INTERFACE_OBSERVATIONS_PRESERVED",
+    "KERNEL_QUALIFICATION_REMAINS_UNRESOLVED"
+  ],
+  "selected_next_target": "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1_execution_result_review_scientific_response_v0",
+  "selected_next_target_kind": "FRESH_TERMINAL_CONSTRAINT_SCIENTIFIC_RESPONSE_SELECTOR",
+  "target": "review_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1_execution_result",
+  "verdict": "ACCEPTED_EXPLORATORY_IMPLEMENTATION_COMPLETED_WITH_RECORDED_FAILURES"
+}

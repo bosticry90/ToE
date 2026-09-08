@@ -1,0 +1,51 @@
+{
+  "schema_id": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITION_RESULT_REVIEW_20260725_v0",
+  "verdict": "DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITIONS_ACCEPTED",
+  "reviewed_result": {
+    "path": "formal/docs/release/DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITION_RESULT_20260725_v0.json",
+    "sha256": "d28bc2cdcf334c44cd068a747968888025f2891d725371a899895fcd6a1a6a64",
+    "commit": "beeef54ba71096238a02bcba91a0e02edb6dc2cc",
+    "tree": "201b27402a8fa82ec90e57ace926dc0b7a328675"
+  },
+  "independent_review": {
+    "checkout": "C:/toe-custody-review-v0",
+    "checkout_commit": "beeef54ba71096238a02bcba91a0e02edb6dc2cc",
+    "checkout_tree": "201b27402a8fa82ec90e57ace926dc0b7a328675",
+    "policy_tests": "12 / 12 PASS",
+    "independent_recomputation": {
+      "path": ".toe-recovery/custody-v0/dirty-main-terminal-dispositions-v0/DIRTY_MAIN_TERMINAL_CUSTODY_DISPOSITION_INDEPENDENT_RECOMPUTATION_20260725_v0.json",
+      "sha256": "75d3e68da9b496a86ecd60c1a94dee1bcf26c123e478fb1e0191d511e9a2266c",
+      "size_bytes": 672324,
+      "byte_identical_to_reviewed_ledger": true
+    },
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "manifest_entries": 629,
+    "unique_terminal_dispositions": 629,
+    "live_paths_or_absences_verified": 629,
+    "custody_objects_verified": 629,
+    "manual_review_required_remaining": 0,
+    "unmatched_paths": 0,
+    "approved_for_clean_integration": 0,
+    "preserved_noncurrent_research": 435,
+    "preserved_execution_evidence": 71,
+    "historical_custody_only": 123,
+    "dirty_main_byte_preserved": true
+  },
+  "accepted_boundary": {
+    "dirty_main_merged_wholesale": false,
+    "scientific_or_authority_promotion": false,
+    "approved_items_unaccounted_for": 0,
+    "integration_candidate_requires_dirty_main_import": false,
+    "clean_integration_base": "ACCEPTED_RECOVERY_LINEAGE",
+    "recovery_control_plane_complete": false
+  },
+  "required_next_gate": "CLEAN_INTEGRATION_CANDIDATE_CONSTRUCTION_AND_VALIDATION",
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_or_seam_rows": "0 / 12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

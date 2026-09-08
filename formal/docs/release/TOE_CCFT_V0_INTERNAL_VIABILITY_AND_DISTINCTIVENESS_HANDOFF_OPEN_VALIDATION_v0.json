@@ -1,0 +1,84 @@
+{
+  "artifact_id": "TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_OPEN_VALIDATION_v0",
+  "assessment_surfaces": [
+    "MATHEMATICAL_VIABILITY",
+    "GENERIC_MODEL_EQUIVALENCE",
+    "C_FINITE_APPROXIMATION",
+    "C_IDENTIFIABILITY",
+    "C_COMPLEXITY",
+    "FUTURE_ROLE_AND_HANDOFF"
+  ],
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_OPEN_v0.json",
+    "formal/python/tools/toe_ccft_v0_viability_handoff_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ViabilityHandoffAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 5,
+  "authority_decision": "AUTHORIZE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_STAGE_5_OPEN",
+  "canonical_terminal_outcomes": [
+    "CCFT_V0_MATHEMATICALLY_VIABLE_DISTINCTIVE_SURROGATE",
+    "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+    "CCFT_V0_INTERNALLY_INCONSISTENT",
+    "VIABILITY_OR_DISTINCTIVENESS_UNRESOLVED"
+  ],
+  "captured_at_utc": "2026-08-03T02:04:48Z",
+  "event_hash": "a08b62a7a34b6cc94dd09cf84c50b9940cd64ecea8e09f4542f4af8d559bd2f2",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_05_OPEN_v0.json",
+  "event_sha256": "fadc9c5d232ade38552c373ef1b9527504fe1d54b2428d4ef70c648b5d4cd0f9",
+  "frozen_stage_4_result_binding": {
+    "frozen_model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "gauge_equivalence": "PROVED",
+    "known_model_equivalence": "ESTABLISHED_FOR_THE_FROZEN_V0_EQUATION",
+    "status": "BOUND_UNCHANGED_AT_OPEN",
+    "unit_background_dispersion": "PROVED",
+    "zero_background_dispersion": "PROVED"
+  },
+  "opened_from_commit": "3cce8c7cb50d93e7bc44961338aabf6883fb2966",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "registry_snapshot_hash": "792dcfa6443a466fce5c1a7302ceabb876e9db5177ad2682fc181938ec235127",
+  "required_outputs": [
+    "mathematical_viability_status",
+    "numerical_reproducibility_status",
+    "finite_approximation_identifiability_and_complexity_audit",
+    "generic_model_equivalence_audit",
+    "nonautomatic_future_handoff"
+  ],
+  "schema_id": "toe.ccft_v0.internal_viability_and_distinctiveness_handoff.open_validation.v0",
+  "scientific_output_at_open": {
+    "CCFT_v1_constructed": false,
+    "C_COMPLEXITY": "UNADJUDICATED",
+    "C_FINITE_APPROXIMATION": "UNADJUDICATED",
+    "C_IDENTIFIABILITY": "UNADJUDICATED",
+    "empirical_claim": "NONE",
+    "frozen_model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "frozen_model_mutated": false,
+    "frozen_packet_mutated": false,
+    "future_role": "NONE_SELECTED",
+    "generic_model_equivalence_audit": "UNADJUDICATED",
+    "mathematical_viability_status": "UNADJUDICATED",
+    "new_postulates_added": 0,
+    "numerical_reproducibility_status": "UNADJUDICATED",
+    "physical_interpretation": "NONE",
+    "successor_program": "NONE_AUTHORIZED"
+  },
+  "scope_hash": "77f37cfde12e8a243aaace9e27fafbfa4611c11bc5f30918323f414b3c51f124",
+  "semantic_stage_id": "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF",
+  "status": "STAGE_5_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "assess_toe_ccft_v0_internal_viability_and_distinctiveness_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "event_and_registry_projection_match": true,
+    "frozen_model_and_packet_are_unchanged": true,
+    "manifest_scope_target_outputs_and_outcomes_match": true,
+    "open_checkpoint_contains_no_stage_5_result": true,
+    "physical_empirical_and_successor_promotion_remain_unauthorized": true,
+    "program_state_is_open": true,
+    "six_assessment_surfaces_are_bound": true,
+    "stage_4_result_review_validation_and_close_bindings_match": true
+  }
+}

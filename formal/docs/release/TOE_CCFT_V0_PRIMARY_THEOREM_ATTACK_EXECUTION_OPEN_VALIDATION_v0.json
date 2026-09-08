@@ -1,0 +1,71 @@
+{
+  "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+    "formal/python/tools/toe_ccft_v0_primary_theorem_attack_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0PrimaryTheoremAttackAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 4,
+  "authority_decision": "AUTHORIZE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_OPEN",
+  "canonical_terminal_outcomes": [
+    "THEOREM_GRADE_RESULT_ESTABLISHED",
+    "COUNTEREXAMPLE_OR_NO_GO_RESULT_ESTABLISHED",
+    "RESULT_CONDITIONALLY_SUPPORTED_NOT_FORMALIZED",
+    "MODEL_DEFINITION_INSUFFICIENT_FOR_THEOREM"
+  ],
+  "captured_at_utc": "2026-08-03T00:56:11Z",
+  "event_hash": "9a21cb1508ced6573bbdfa2b7a3fdc9d9517e7c6f9a8074d47448d40dfdade8b",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+  "event_sha256": "93837b350e0d2846ccb126795913378e6879acf4b9736b47e4201d6d56367117",
+  "frozen_packet_binding": {
+    "execution_contract_count": 3,
+    "formal_negation_count": 4,
+    "formal_proposition_count": 4,
+    "linked_claim_count": 4,
+    "packet_count": 1,
+    "packet_id": "CCFT_V0_GAUGE_EQUIVALENCE_AND_BACKGROUND_RESOLVED_DISPERSION_PACKET_v0",
+    "status": "FROZEN_UNCHANGED_AND_UNADJUDICATED_AT_OPEN"
+  },
+  "opened_from_commit": "e4248bf9a22e609b4f00d93f25f9d0ee02acec59",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "registry_snapshot_hash": "06b5c9a3bd4c086ab8ef11d8ec7828c3b46549b52642b67e931cafe0cc960e8d",
+  "schema_id": "toe.ccft_v0.primary_theorem_attack_execution.open_validation.v0",
+  "scientific_output_at_open": {
+    "Lean_theorem_proofs_created": 0,
+    "claims_refuted": 0,
+    "counterexamples_found": 0,
+    "frozen_model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "frozen_model_mutated": false,
+    "frozen_packet_mutated": false,
+    "gauge_equivalence_result": "UNADJUDICATED",
+    "historical_formula_classification": "UNADJUDICATED",
+    "new_postulates_added": 0,
+    "numerical_results_generated": 0,
+    "physical_promotion": false,
+    "proofs_completed": 0,
+    "stage_5_output_created": false,
+    "symbolic_results_generated": 0,
+    "unit_background_dispersion_result": "UNADJUDICATED",
+    "zero_background_dispersion_result": "UNADJUDICATED"
+  },
+  "scope_hash": "7ff303d25def2c116cf548eaa5c0d3a08438c8c98a4a847323cac38bca0a9e15",
+  "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION",
+  "status": "STAGE_4_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "execute_toe_ccft_v0_primary_theorem_attack_lanes_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "event_and_registry_projection_match": true,
+    "frozen_model_and_packet_are_unchanged": true,
+    "manifest_scope_target_and_outcomes_match": true,
+    "one_packet_four_claim_execution_scope_is_bound": true,
+    "open_checkpoint_contains_no_mathematical_result": true,
+    "program_state_is_open": true,
+    "stage_3_result_review_validation_and_close_bindings_match": true,
+    "stage_5_remains_unauthorized": true
+  }
+}

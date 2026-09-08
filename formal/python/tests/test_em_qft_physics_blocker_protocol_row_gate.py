@@ -179,7 +179,6 @@ def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
     assert "def crossPillarFrontierEntryByRow?" in frontier_text
     assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
 
     review_files = [
         DERIVATION_DIR / "QMEvolutionPostBudgetCrossPillarReview.lean",

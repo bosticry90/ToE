@@ -1,0 +1,414 @@
+{
+  "authority": {
+    "consumed_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+    "consumed_response_selection_verdict": "SELECTED_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_PREPARATION",
+    "frozen_artifact_count": 6,
+    "frozen_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+        "sha256": "3e7b98d0e4b65e3beeb49e7833d0a1dc8ee288825184394f1655a603765546cf"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.json",
+        "sha256": "2d2f354fc2ce3db5efd23fba2724f9b0e9295d82da301dc9f22d2b287019fda2"
+      },
+      {
+        "relative_path": "formal/python/tools/post_scalar_only_quadratic_gravity_viability_and_native_relevance_scientific_response_selection_v0.py",
+        "sha256": "acbcf53f9718300d77af042f228fe586c6465a5a84cc01397fe8c66c7b921e9a"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_scalar_only_quadratic_gravity_viability_and_native_relevance_scientific_response_selection_v0.py",
+        "sha256": "0d2dc4749ec131c76f70fbac6dac4931466fccf1101025cfca2940ca209413d8"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyQuadraticGravityViabilityAndNativeRelevanceScientificResponseSelectionV0.lean",
+        "sha256": "4fb91c86dcbeea0b36f194f2bc9220c90359e71fa96e6955c36599e994f10ba5"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_RESULT_REVIEW_20260718_v0.json",
+        "sha256": "278c9ad0d765891c92b6bfca2c5d50993c3d9ecee200657f44ac772d3f5057e9"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Preparation and public-source sufficiency audit only for a fixed-amplitude scalar comparison constraint. The selected short-range observable class and theory-to-torque contract are frozen, but public numerical custody is not yet sufficient for execution. No real likelihood, lambda0 or alpha bound, branch adoption, native scalar bridge, native gravitational principle, gravitational action, orbital result, frame-dragging result, or master-action change is computed, selected, claimed, or authorized.",
+  "comparison_model": {
+    "alpha_map": "alpha_packet=-lambda0^2/6<0",
+    "alpha_value_or_bound_selected": false,
+    "beta_zero_status": "COMPARISON_RESTRICTION_ONLY_NOT_ADOPTED",
+    "fixed_yukawa_amplitude": "A_Y=1/3",
+    "inverse_length_mass": "m0=1/lambda0 [m^-1]",
+    "metric_response": "h00=-2GM/(c^2 r) [1+(1/3) exp(-r/lambda0)]",
+    "newtonian_potential": "Phi_N=-GM/r [1+A_Y exp(-r/lambda0)]",
+    "particle_mass": "M0=hbar/(c lambda0) [kg]",
+    "particle_rest_energy": "M0 c^2=hbar c/lambda0",
+    "range": "lambda0=sqrt(-6 alpha_packet)>0",
+    "scalar_branch_adopted": false,
+    "status": "SUPPLIED_SCALAR_ONLY_QUADRATIC_GRAVITY_COMPARISON",
+    "toe_native": false
+  },
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "cross_check": "DEFERRED",
+    "execution_readiness": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+    "gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "native_relevance": "UNESTABLISHED",
+    "next_authority": "review_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0_result",
+    "numerical_bound": "NONE",
+    "packet": "PREPARED_BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "primary_observable_class": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_only_comparison": "COMPLETED_AND_ACCEPTED",
+    "selected_response": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY"
+  },
+  "degeneracy_contract": {
+    "deferred_long_range": {
+      "lambda_much_greater_than_r": "Yukawa response approaches a 4/3 rescaling and can be absorbed in G, M, or GM without independent calibration",
+      "status": "DEFERRED_NO_EPHEMERIS_OR_GM_COVARIANCE_FROZEN"
+    },
+    "primary_short_range": {
+      "GM_degeneracy": "MITIGATED_BY_GEOMETRIC_HARMONICS_NOT_ASSUMED_ABSENT",
+      "restricted_parameters_may_be_fixed_only_if_NUMERICAL_ERROR_IS_REPRODUCED": true,
+      "separation_and_centering": "PROFILE_X0_Y0_S0_WITH_PRIMARY_PRIORS",
+      "surface_model": "PROFILE_ROUGHNESS_CORRECTION",
+      "torque_scale": "PROFILE_GAMMA_WITH_PRIMARY_GAUSSIAN_PRIOR"
+    }
+  },
+  "extended_source_contract": {
+    "geometry_model_available_for_execution": false,
+    "point_source_validity_criterion": "forbidden unless a quantified form-factor error is below the preregistered numerical tolerance across the complete scanned lambda0 domain",
+    "required_inputs": [
+      "detector and attractor density masks",
+      "material densities and removed masses",
+      "detector and attractor thicknesses",
+      "hole-filling glue density and geometry",
+      "isolation foil and face-layer thicknesses",
+      "x y s displacement record",
+      "attractor runout and tilt",
+      "surface roughness model",
+      "rotation phase convention",
+      "torque calibration and transfer function"
+    ]
+  },
+  "future_execution_controls": {
+    "control_count": 9,
+    "executed_count": 0,
+    "rows": [
+      "lambda0_to_zero_Einstein_limit",
+      "A_Y_to_zero_software_null",
+      "published_Newtonian_baseline_reproduction",
+      "synthetic_fixed_amplitude_signal_recovery",
+      "synthetic_null_coverage",
+      "extended_geometry_integration_convergence",
+      "point_source_shortcut_rejection",
+      "nuisance_prior_and_profile_recovery",
+      "SI_round_trip_lambda_m0_M0_alpha"
+    ]
+  },
+  "observable_selection": {
+    "candidate_count": 3,
+    "cross_check_selected": false,
+    "observable_class_cap": 2,
+    "rows": [
+      {
+        "candidate_id": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+        "data_analysis_selected": false,
+        "disposition": "SELECTED_FOR_PACKET_CONTRACT_ONLY",
+        "observable_class": "SHORT_RANGE_INVERSE_SQUARE_LAW_TORSION_BALANCE",
+        "reason": "direct extended-source Yukawa test at 52 micrometre to 3 millimetre separations with sensitivity reaching gravitational-strength coupling",
+        "source": "https://arxiv.org/abs/2002.11761"
+      },
+      {
+        "candidate_id": "VECTOR_FORCE_SENSOR_2024_2026",
+        "data_analysis_selected": false,
+        "disposition": "DEFERRED_INSUFFICIENT_FIXED_AMPLITUDE_SENSITIVITY",
+        "observable_class": "MICRON_SCALE_OPTICALLY_LEVITATED_FORCE_SENSOR",
+        "reason": "reported strength sensitivity is about 10^6 or larger in the relevant range, far above the fixed A_Y=1/3 comparison signal",
+        "source": "https://arxiv.org/abs/2412.13167"
+      },
+      {
+        "candidate_id": "SOLAR_SYSTEM_ORBITAL_WEAK_FIELD_CLASS",
+        "data_analysis_selected": false,
+        "disposition": "DEFERRED_TRANSPORT_AND_DEGENERACY_UNRESOLVED",
+        "observable_class": "LONG_RANGE_ORBITAL_DYNAMICS",
+        "reason": "requires a complete observable model, ephemeris likelihood, and explicit G-or-GM nuisance calibration; light propagation also needs more than h00",
+        "source": "https://arxiv.org/abs/2305.06752"
+      }
+    ],
+    "selected_primary_count": 1
+  },
+  "outcome_contract": {
+    "future_numerical_outcome": null,
+    "independent_review_may_upgrade_to_ready_only_if_all_unblock_requirements_pass": true,
+    "packet_review_outcomes": [
+      "READY_FOR_ONE_BOUNDED_CONSTRAINT_EXECUTION",
+      "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+      "BLOCKED_OBSERVABLE_TRANSPORT_INCOMPLETE",
+      "BLOCKED_EXTENDED_SOURCE_MODEL",
+      "BLOCKED_PARAMETER_DEGENERACY_UNRESOLVED",
+      "BLOCKED_SCOPE_OR_PROVENANCE"
+    ],
+    "provisional_packet_review_outcome": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE"
+  },
+  "packet_id": "SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_20260718_v0",
+  "preparation_controls": {
+    "control_count": 20,
+    "failure_count": 0,
+    "pass_count": 20,
+    "rows": [
+      {
+        "control_id": "EXACT_RESPONSE_SELECTION_AND_AUTHORITY_CUSTODY",
+        "passed": true
+      },
+      {
+        "control_id": "COMPARISON_ONLY_SCALAR_PROVENANCE_RETAINED",
+        "passed": true
+      },
+      {
+        "control_id": "FIXED_YUKAWA_AMPLITUDE_ONE_THIRD",
+        "passed": true
+      },
+      {
+        "control_id": "ONE_PRIMARY_OBSERVABLE_CLASS_ONLY",
+        "passed": true
+      },
+      {
+        "control_id": "WEAKER_VECTOR_SENSOR_REJECTED_FOR_FIXED_AMPLITUDE",
+        "passed": true
+      },
+      {
+        "control_id": "SOLAR_SYSTEM_CROSS_CHECK_DEFERRED",
+        "passed": true
+      },
+      {
+        "control_id": "POINT_SOURCE_SHORTCUT_FORBIDDEN",
+        "passed": true
+      },
+      {
+        "control_id": "EXTENDED_SOURCE_DENSITY_INTEGRAL_FROZEN",
+        "passed": true
+      },
+      {
+        "control_id": "HARMONIC_TORQUE_OBSERVABLE_CHAIN_FROZEN",
+        "passed": true
+      },
+      {
+        "control_id": "RAW_VECTOR_AND_UNCERTAINTY_CUSTODY_REQUIRED",
+        "passed": true
+      },
+      {
+        "control_id": "FIVE_PROFILED_NUISANCE_PRIORS_RETAINED",
+        "passed": true
+      },
+      {
+        "control_id": "CALIBRATION_AND_GEOMETRY_DEGENERACIES_EXPLICIT",
+        "passed": true
+      },
+      {
+        "control_id": "FIXED_AMPLITUDE_NOT_READ_FROM_GENERIC_EXCLUSION_PLOT",
+        "passed": true
+      },
+      {
+        "control_id": "BOUNDARY_NULL_REQUIRES_CALIBRATED_COVERAGE",
+        "passed": true
+      },
+      {
+        "control_id": "SI_RANGE_INVERSE_LENGTH_PARTICLE_MASS_AND_ALPHA_MAP",
+        "passed": true
+      },
+      {
+        "control_id": "NULL_BASELINE_INJECTION_AND_GEOMETRY_CONTROLS_FROZEN",
+        "passed": true
+      },
+      {
+        "control_id": "PROVISIONAL_EXECUTION_BLOCK_FAILS_CLOSED",
+        "passed": true
+      },
+      {
+        "control_id": "NO_NUMERICAL_DATA_ANALYSIS_OR_BOUND",
+        "passed": true
+      },
+      {
+        "control_id": "NO_ALPHA_BRANCH_ACTION_OR_NATIVE_ADOPTION",
+        "passed": true
+      },
+      {
+        "control_id": "ROTATION_ONLY_TO_INDEPENDENT_PACKET_REVIEW",
+        "passed": true
+      }
+    ]
+  },
+  "primary_data_audit": {
+    "complete_uncertainty_model_frozen": false,
+    "executable_extended_source_model_frozen": false,
+    "execution_sufficient_count": 0,
+    "machine_readable_measurement_vector_frozen": false,
+    "provisional_block": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+    "row_count": 7,
+    "rows": [
+      {
+        "detail": "J. G. Lee et al., Phys. Rev. Lett. 124, 101101 (2020), arXiv:2002.11761; 95 displacement settings and three harmonic torques",
+        "execution_sufficient": false,
+        "item_id": "PRIMARY_PAPER_AND_ACCEPTED_MANUSCRIPT",
+        "status": "AVAILABLE_AND_INSPECTED"
+      },
+      {
+        "detail": "the audited paper states that numerical gravitational torques are in Supplemental Material, but no complete machine-readable 95x3 vector was obtained in packet custody",
+        "execution_sufficient": false,
+        "item_id": "PRIMARY_NUMERICAL_MEASUREMENT_VECTOR",
+        "status": "NOT_OBTAINED_AND_FROZEN"
+      },
+      {
+        "detail": "publisher supplement is referenced by the paper; interactive publisher access was not sufficient to freeze its bytes during this audit",
+        "execution_sufficient": false,
+        "item_id": "SUPPLEMENTAL_MATERIAL",
+        "status": "IDENTIFIED_BUT_NOT_INGESTED"
+      },
+      {
+        "detail": "paper gives a penalized chi-square with torque errors, separation-error transport, and five Gaussian nuisance priors, but the complete numerical inputs and correlation justification are not frozen",
+        "execution_sufficient": false,
+        "item_id": "UNCERTAINTY_AND_COVARIANCE_MODEL",
+        "status": "STRUCTURE_DESCRIBED_NUMERICAL_CUSTODY_INCOMPLETE"
+      },
+      {
+        "detail": "Fourier-Bessel detector-attractor model and 17 experimental parameters are described, but no verified executable geometry/torque implementation with complete numerical inputs is frozen",
+        "execution_sufficient": false,
+        "item_id": "EXTENDED_SOURCE_GEOMETRY_AND_TORQUE_MODEL",
+        "status": "DESCRIBED_NOT_EXECUTABLE_IN_PACKET_CUSTODY"
+      },
+      {
+        "detail": "J. G. Lee, A Fourier-Bessel Test of the Gravitational Inverse-Square Law, University of Washington (2020); not a substitute for frozen data",
+        "execution_sufficient": false,
+        "item_id": "DISSERTATION_METHODS_RECORD",
+        "source": "https://digital.lib.washington.edu/researchworks/items/971237d1-100a-41ae-9027-d1bbce8cf315/full",
+        "status": "AVAILABLE_AS_SUPPORTING_PRIMARY_METHODS_SOURCE"
+      },
+      {
+        "detail": "published 95 percent gravitational-strength range limit is not the fixed A_Y=1/3 result and may not be read off or rescaled as this packet's bound",
+        "execution_sufficient": false,
+        "item_id": "PUBLISHED_GENERIC_YUKAWA_LIMIT",
+        "status": "AVAILABLE_AS_POST_EXECUTION_ORACLE_ONLY"
+      }
+    ]
+  },
+  "provisional_execution_readiness": "BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "beta_zero_adopted": false,
+    "constraint_execution_authorized": false,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": false,
+    "likelihood_evaluated": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "orbital_or_light_propagation_analysis_executed": false,
+    "packet_preparation_executed": true,
+    "primary_data_custody_complete": false,
+    "primary_dataset_selected_for_contract_audit": true,
+    "published_limit_imported_as_packet_result": false,
+    "real_data_analysis_executed": false,
+    "scalar_branch_adopted": false
+  },
+  "selected_next_target": "review_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_REVIEW_ONLY",
+  "selected_primary_contract": {
+    "arxiv": "https://arxiv.org/abs/2002.11761",
+    "dataset_id": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+    "doi": "10.1103/PhysRevLett.124.101101",
+    "experimental_parameter_count": 17,
+    "harmonics": [
+      "18 omega",
+      "54 omega",
+      "120 omega"
+    ],
+    "measurement_count": 285,
+    "measurement_settings": 95,
+    "paper": "J. G. Lee et al., New Test of the Gravitational 1/r^2 Law at Separations down to 52 micrometres, PRL 124, 101101 (2020)",
+    "profiled_nuisance_count": 5,
+    "profiled_nuisances": [
+      "x0 horizontal offset",
+      "y0 horizontal offset",
+      "s0 separation offset",
+      "surface roughness correction",
+      "autocollimator torque-scale gamma"
+    ],
+    "published_baseline": "chi_squared=275.0 for nu=285, P=0.654",
+    "published_generic_limit_is_packet_result": false,
+    "real_data_analysis_authorized": false,
+    "selection_status": "SELECTED_FOR_CONTRACT_AUDIT_ONLY",
+    "separation_domain": "52 micrometres to 3.0 millimetres"
+  },
+  "si_conversion_contract": {
+    "M0": "hbar/(c lambda0) in kilograms",
+    "M0_c2": "hbar c/lambda0 in joules or electronvolts",
+    "allowed_range_translation": "if 0<lambda0<lambda_max, then -lambda_max^2/6<alpha_packet<0",
+    "alpha_packet": "-lambda0^2/6 in square metres",
+    "exact_alpha_zero_from_finite_data_licensed": false,
+    "lambda0": "metres",
+    "m0": "1/lambda0 in inverse metres"
+  },
+  "sources": [
+    {
+      "role": "SELECTED_PRIMARY_SHORT_RANGE_EXPERIMENT",
+      "source": "https://arxiv.org/abs/2002.11761"
+    },
+    {
+      "role": "PRIMARY_METHODS_DISSERTATION",
+      "source": "https://digital.lib.washington.edu/researchworks/items/971237d1-100a-41ae-9027-d1bbce8cf315/full"
+    },
+    {
+      "role": "CURRENT_VECTOR_SENSOR_SENSITIVITY_CROSS_CHECK",
+      "source": "https://arxiv.org/abs/2412.13167"
+    },
+    {
+      "role": "DEFERRED_SOLAR_SYSTEM_TRANSPORT_ORACLE",
+      "source": "https://arxiv.org/abs/2305.06752"
+    }
+  ],
+  "statistical_contract": {
+    "allowed_set_rule": "report the complete connected or disconnected allowed lambda0 set; report a single lambda_max only if topology and monotonicity are demonstrated",
+    "analysis_status": "PREREGISTERED_STRUCTURE_NOT_EXECUTABLE",
+    "boundary_rule": "do not assume a textbook Delta-chi-square law; calibrate the test statistic and simultaneous scan coverage by parametric bootstrap or an equivalent validated Neyman construction",
+    "combination_rule": "NO_DATASET_COMBINATION_IN_V0",
+    "confidence_level": "95 percent one-sided exclusion after coverage calibration",
+    "failure_rule": "block on missing numerical vector, singular or unjustified uncertainty model, failed baseline reproduction, or failed injection coverage",
+    "likelihood_family": "primary penalized Gaussian chi-square with torque errors, propagated separation uncertainty, and five Gaussian nuisance priors",
+    "nuisance_rule": "profile all five primary nuisances at every lambda0",
+    "null": "lambda0 approaches 0; software cross-check A_Y=0",
+    "numerical_threshold_selected": false,
+    "physical_parameters": [
+      "lambda0>0 with fixed A_Y=1/3"
+    ],
+    "scan_rule": "log-spaced lambda0 grid spanning only the validated geometry/data domain, with adaptive refinement near likelihood transitions"
+  },
+  "target": "prepare_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0",
+  "theory_to_observable_transport": {
+    "extended_source_yukawa_energy": "U_Y=-G A_Y integral d3x d3x' rho_D(x) rho_A(x') exp(-|x-x'|/lambda0)/|x-x'|",
+    "measured_harmonics": "Fourier components N_18omega, N_54omega, N_120omega",
+    "measured_torque": "N_Y(phi)=-partial U_Y/partial phi",
+    "point_mass_approximation_allowed": false,
+    "point_source_potential": "Phi(r)=-GM/r [1+A_Y exp(-r/lambda0)]",
+    "point_source_radial_acceleration": "a_r=-GM/r^2 [1+A_Y (1+r/lambda0) exp(-r/lambda0)]",
+    "required_implementation": "one verified Fourier-Bessel or direct density-integration model for both Newtonian and fixed-amplitude Yukawa torques",
+    "transport_executed": false
+  },
+  "unblock_requirements": {
+    "all_required": true,
+    "requirement_count": 5,
+    "rows": [
+      "freeze the complete 95x3 numerical torque vector and displacement metadata",
+      "freeze the complete numerical uncertainty model and five nuisance priors",
+      "freeze or independently reproduce a verified extended-source torque model",
+      "reproduce the published Newtonian baseline before exposing A_Y=1/3",
+      "pass null and signal-injection coverage controls under the frozen scan rule"
+    ],
+    "satisfied_count": 0
+  },
+  "verdict": "PREPARED_BLOCKED_PRIMARY_DATA_OR_COVARIANCE_INCOMPLETE_PENDING_INDEPENDENT_REVIEW"
+}

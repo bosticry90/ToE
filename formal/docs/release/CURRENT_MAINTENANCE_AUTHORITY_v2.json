@@ -1,0 +1,54 @@
+{
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v2",
+  "captured_at_utc": "2026-07-27T00:00:00Z",
+  "status": "COMPLETE_ACCEPTED_NO_AUTOMATIC_SUCCESSOR",
+  "current_maintenance_target": "execute_july_16_19_repository_integration_and_live_authority_repair_v0",
+  "current_maintenance_target_kind": "completed_repository_integration_and_live_authority_repair_execution",
+  "current_maintenance_target_status": "COMPLETE_ACCEPTED_BY_RESULT_REVIEW",
+  "completion_result_review": {
+    "path": "formal/docs/release/JULY_16_19_REPOSITORY_INTEGRATION_AND_LIVE_AUTHORITY_REPAIR_EXECUTION_RESULT_REVIEW_20260727_v0.json",
+    "sha256": "79a68a13b6d1d58115ad6c723e1e2cb39a3e3c6956ea34f858ed0f4a399bb8ff",
+    "verdict": "ACCEPTED_MAINTENANCE_INTEGRATION_COMPLETE_SCIENTIFIC_RECONCILIATION_PENDING",
+    "binding_mode": "SAME_CLOSEOUT_COMMIT_PATH_AND_SHA256"
+  },
+  "previous_maintenance_authority": {
+    "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v1.json",
+    "sha256": "92cba51d7af551823f38b1edab6149747d8b9347def4fa668cf727396a3d2ff2",
+    "status": "SUPERSEDED_AS_CURRENT_RETAINED_IMMUTABLE_ACTIVE_EXECUTION_HISTORY",
+    "target": "execute_july_16_19_repository_integration_and_live_authority_repair_v0"
+  },
+  "scientific_authority": {
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506",
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "target_rotated": false
+  },
+  "post_maintenance_handoff": {
+    "path": "formal/docs/release/JULY_16_19_POST_MAINTENANCE_SCIENTIFIC_ADOPTION_OR_BOUNDED_REPLAY_DECISION_HANDOFF_20260727_v0.json",
+    "sha256": "c04d912dfb6185347c3f78130b0c253bc2ed12f97b9ff3881025b6120be34f44",
+    "status": "PENDING_SEPARATE_SCIENTIFIC_AUTHORITY",
+    "selected_route": null,
+    "binding_mode": "SAME_CLOSEOUT_COMMIT_PATH_AND_SHA256"
+  },
+  "successor": {
+    "automatic_maintenance_successor": null,
+    "automatic_scientific_successor": null,
+    "scientific_reconciliation_required": true,
+    "maintenance_authority_may_select_scientific_route": false
+  },
+  "boundary": {
+    "maintenance_execution_complete": true,
+    "maintenance_result_review_accepted": true,
+    "maintenance_target_inserted_into_scientific_workstreams": false,
+    "scientific_target_displaced": false,
+    "scientific_target_rotated": false,
+    "july_16_19_scientific_chain_adopted": false,
+    "post_recovery_scientific_lineage_adopted": false,
+    "new_physics_authorized": false,
+    "yukawa_execution_or_rerun_authorized": false,
+    "pipe_repair_and_rerun_authorized": false,
+    "preserved_observations_validation_use_authorized": false,
+    "terminal_yukawa_selection_authorized": false,
+    "production_change_authorized": false
+  }
+}

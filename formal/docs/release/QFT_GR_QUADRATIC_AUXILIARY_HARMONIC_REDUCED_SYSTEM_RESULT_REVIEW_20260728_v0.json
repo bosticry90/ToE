@@ -1,0 +1,59 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "EXACT_VACUUM_AUXILIARY_HARMONIC_REDUCED_SYSTEM_DERIVED",
+    "GENERIC_TRACE_TRACEFREE_KINETIC_MAP_INVERTIBLE",
+    "ALGEBRAIC_EQUIVALENCE_ON_FULL_CONSTRAINT_SURFACE_DERIVED"
+  ],
+  "authority_rotation": {
+    "constraint_propagation_derivation_authorized": true,
+    "energy_estimate_execution_authorized": false,
+    "preserved_descendant_adoption_authorized": false,
+    "reduced_principal_symbol_execution_authorized": false,
+    "reduced_system_result_accepted": true,
+    "source_extension_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "accepted_preparation_and_vacuum_scope_are_bound": true,
+    "all_coefficients_are_independently_reproduced": true,
+    "all_five_second_order_equations_are_present": true,
+    "closed_unknown_vector_has_only_definition_auxiliaries": true,
+    "constraint_propagation_and_well_posedness_remain_unproved": true,
+    "differential_order_ledger_is_complete_and_nontrivial": true,
+    "equivalence_is_bidirectional_only_on_full_constraint_surface": true,
+    "execution_target_and_review_handoff_are_exact": true,
+    "gauge_definition_integrability_and_initial_constraints_are_listed": true,
+    "generic_invertibility_and_controls_are_explicit": true,
+    "historical_comparator_is_not_imported_as_theorem": true,
+    "initial_data_free_versus_derived_boundary_is_honest": true,
+    "operator_remainders_are_exactly_defined": true,
+    "prohibited_mutations_and_extensions_were_not_used": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "CONSTRAINT_PROPAGATION_SYSTEM_CLOSED",
+    "REDUCED_SYSTEM_STRONG_HYPERBOLICITY",
+    "ONE_DERIVATIVE_LOSS_IS_SUFFICIENT_OR_MINIMAL",
+    "LINEAR_ADAPTED_NORM_ENERGY_ESTIMATE",
+    "PICARD_OR_NASH_MOSER_CLOSURE",
+    "LOCAL_WELL_POSEDNESS",
+    "SOURCE_EXTENSION_ADMISSIBILITY"
+  ],
+  "review_target": "review_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0_result",
+  "reviewed_calculation": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-AUXILIARY-HARMONIC-REDUCED-SYSTEM-v0.json",
+    "sha256": "a0b1d73895ed9f9c92ea523117ecc17421b0b03b32736258f144cf23370f1390"
+  },
+  "reviewer_independence": {
+    "audits_equations_constraints_and_claim_ceiling": true,
+    "imports_calculation_module": false,
+    "rederives_trace_coefficients": true,
+    "rederives_trace_free_coefficients": true,
+    "tests_both_generic_rank_controls": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_REDUCED_SYSTEM_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "derive_qft_gr_quadratic_gauge_and_auxiliary_constraint_propagation_system_v0",
+  "verdict": "ACCEPT_REDUCED_SYSTEM_DERIVATION_AUTHORIZE_CONSTRAINT_PROPAGATION_ONLY"
+}

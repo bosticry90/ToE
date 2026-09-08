@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 2,
+  "event_hash": "60b996e6d1c5eb202eff506d57357fc3a5878531a371335d2e5e2727f3dcf03a",
+  "event_sequence_number": 3,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "2d842bd118bdb09eba1b50dd157d5fac3062436e",
+  "previous_event_hash": "0940185d0ac9974b9c387789d166c76856970bf8bd513c39a36f14fbd74bd380",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "registry_snapshot_hash": "9b8438e0b17001ae91253ff7b9b63d84470d2fa610429b10f43e1c98bff13004",
+  "scope_hash": "b80489e0e609397bdc4b9d24c78a47f0f30578e124c67dcb47114d091e781f87",
+  "semantic_stage_id": "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE",
+  "target": "complete_and_freeze_toe_ccft_v0_model_contract_v0"
+}

@@ -23,7 +23,7 @@ def test_committed_freeze_custody_is_exact(report: dict) -> None:
     assert custody["freeze_parent"] == review.FREEZE_PARENT
     assert custody["ten_committed_paths"] == review.EXPECTED_FREEZE_HASHES
     assert len(custody["immutable_working_paths_verified"]) == 8
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"
     assert report["freeze_generator_imported"] is False
     assert report["classifier_imported"] is False
 

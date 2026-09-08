@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 1,
+  "event_hash": "61c0032f2755ddec053607d8d1744473818da59c6bee346156aebdf947cdcd89",
+  "event_sequence_number": 1,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "6e793e2922dc4fa7e3ed561cf2669fade29c055f",
+  "previous_event_hash": null,
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "registry_snapshot_hash": "9417077310e62e839bcfdd2a09a9f4716c66d360e2485c88a2960ce9f754c702",
+  "scope_hash": "1d0ca35f49260b8194c9a24f2ff8200af0b1c8fe1c043fa437407a6e71a13e0e",
+  "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+  "target": "inventory_toe_native_controlled_coherence_claims_v0"
+}

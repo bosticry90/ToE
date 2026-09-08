@@ -1,0 +1,193 @@
+{
+  "schema_id": "REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_20260723_v0",
+  "result": "POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/post-historical-aggregate-decomposition-baseline-reassessment-v0",
+  "accepted_base_commit": "b9779540452294216b3dd1850f2f698e9dca4ca1",
+  "authorization_commit": "d2a285ae673db4784b908131a2480ffc5b756dbc",
+  "scope": {
+    "diagnostic_only": true,
+    "same_canonical_frozen_non_lean_test_inventory": true,
+    "one_for_one_aggregate_test_id_mapping": true,
+    "repair_performed": false,
+    "tests_or_generators_modified": false,
+    "reports_or_fixtures_created_in_source_tree": false,
+    "fixture_conversion_scaled": false,
+    "lean_activity": false,
+    "scientific_activity": false,
+    "automatic_successor_cycle": false,
+    "v2_enrollment_authorized": false,
+    "scientific_resumption_authorized": false
+  },
+  "comparability": {
+    "prior_frozen_inventory_count": 13756,
+    "prior_frozen_inventory_sha256": "9fb439dcb59609622b7151355461b3fccb21600e53d48d5f963db89a5e8df139",
+    "mapped_execution_inventory_count": 13756,
+    "mapped_execution_inventory_sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf",
+    "unchanged_test_ids_in_place": 13754,
+    "one_for_one_substitutions": 2,
+    "canonicalized_execution_ids_exactly_prior_frozen_ids_in_prior_order": true,
+    "current_collected_inventory_count": 13765,
+    "current_collected_common_with_mapped_inventory": 13756,
+    "current_collected_added_guards": 9,
+    "current_collected_removed_ids": 0,
+    "added_guards_executed_in_frozen_reassessment": false,
+    "added_guard_sources": "EIGHT_ACCEPTED_PROMPT_DECOUPLING_GUARDS_PLUS_ONE_ACCEPTED_FIXTURE_PILOT_GUARD"
+  },
+  "execution": {
+    "pytest_exit_code": 1,
+    "started_utc": "2026-07-23T00:01:46.623579+00:00",
+    "finished_utc": "2026-07-23T02:27:23.543647+00:00",
+    "elapsed_seconds": 8736.905999999999,
+    "tests": 13756,
+    "passed": 12632,
+    "skipped": 598,
+    "failed": 469,
+    "errors": 57,
+    "nonpassing": 526,
+    "tracked_status_after": "EMPTY",
+    "unexpected_untracked_source": "NONE",
+    "validation_behavior": "READ_ONLY"
+  },
+  "delta_from_post_prompt_decoupling_baseline": {
+    "prior_nonpassing": 530,
+    "current_nonpassing": 526,
+    "net_nonpassing_reduction": 4,
+    "recovered_prior_nonpassing": 4,
+    "newly_nonpassing": 0,
+    "persistent_nonpassing": 526,
+    "status_transitions_within_persistent_nonpassing": 0,
+    "interpretation": "The accepted one-identity fixture pilot recovered two dependency-local baseline-snapshot outcomes, and the accepted aggregate decomposition replaced two invalid aggregate obligations with passing reviewed assertions. No identity-local route newly failed."
+  },
+  "former_aggregate_obligations": {
+    "test_all_remediation_reports_exist": "FORMALLY_RETIRED_AND_REPLACEMENT_ASSERTION_PASSING",
+    "test_all_report_controls_preserve_invariance": "DECOMPOSED_AND_REPLACEMENT_ASSERTION_PASSING",
+    "replacement_assertions_passing": 2,
+    "identity_local_routes_newly_nonpassing": 0,
+    "identity_local_semantic_controls_retired_by_this_reassessment": 0
+  },
+  "missing_artifact_expectation_status": {
+    "accepted_prior_family_outcomes": 222,
+    "current_family_outcomes": 218,
+    "recovered_outcomes": 4,
+    "prior_fixture_candidates": 185,
+    "remaining_fixture_candidates": 181,
+    "provenance_blocked": 36,
+    "stale_non_missing_hash_expectation": 1,
+    "fixture_candidate_concentration": {
+      "consumer_files": 122,
+      "first_missing_identities": 103,
+      "generator_reference_sets": 101,
+      "latent_paths": 160,
+      "largest_generator_reference_set_outcomes": 18,
+      "largest_first_missing_identity_outcomes": 14,
+      "assessment": "DISTRIBUTED_ACROSS_MANY_IDENTITY_LOCAL_GENERATOR_AND_CONSUMER_ROOTS_NOT_ONE_SMALL_COMMON_AGGREGATE_ROOT"
+    },
+    "automatic_fixture_scaling_authorized": false,
+    "provenance_blocked_repairs_authorized": false
+  },
+  "remaining_first_cause_families": [
+    {
+      "family": "missing_artifacts",
+      "outcomes": 218
+    },
+    {
+      "family": "qft_route_hash",
+      "outcomes": 67
+    },
+    {
+      "family": "other_packet_contract",
+      "outcomes": 65
+    },
+    {
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 58
+    },
+    {
+      "family": "other_artifact_currency",
+      "outcomes": 50,
+      "includes_independently_classified_post_decoupling_source_custody_drift": 13
+    },
+    {
+      "family": "equation_compendium_hash",
+      "outcomes": 50
+    },
+    {
+      "family": "authority_expectations",
+      "outcomes": 8
+    },
+    {
+      "family": "environment_or_path_identity",
+      "outcomes": 6
+    },
+    {
+      "family": "other_committed_assertions",
+      "outcomes": 4
+    }
+  ],
+  "exhaustive_accounting": {
+    "family_outcome_sum": 526,
+    "unclassified_outcomes": 0,
+    "first_cause_clusters": 314,
+    "highest_leverage_remaining_family": "missing_artifacts",
+    "highest_leverage_remaining_family_outcomes": 218,
+    "thirteen_custody_currency_outcomes_remain_independently_classified": true
+  },
+  "custody": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_status_path_set_unchanged": true,
+    "dirty_main_existing_regular_file_bytes_unchanged": true,
+    "dirty_main_preserved_missing_tracked_deletions": 3,
+    "dirty_main_touched_by_reassessment": false,
+    "maintenance_output_root": ".toe-recovery/custody-v0/post-historical-aggregate-decomposition-baseline-reassessment-v0",
+    "all_reassessment_outputs_resolved_under_toe_recovery": true
+  },
+  "external_evidence": [
+    {
+      "path": "POST_AGGREGATE_CURRENT_COLLECTION_COMPARABILITY_v0.json",
+      "sha256": "a8258134d27b87733585677f31ad1fa357e3d9af6de6a747f4b245c39bbed688"
+    },
+    {
+      "path": "post_aggregate_mapped_frozen_nonlean_junit_v0.xml",
+      "sha256": "84a6ac25c724b2f03eddb65c645fc22119778d17f0f3af96193e3a611255279c"
+    },
+    {
+      "path": "post_aggregate_mapped_frozen_nonlean_pytest_v0.log",
+      "sha256": "9048e7f5391c80da31aaab633cc9770138371cceae8e6295343b6db62270cf1e"
+    },
+    {
+      "path": "POST_AGGREGATE_OUTCOME_DELTA_v0.json",
+      "sha256": "2e31aa04ac34c170b43a2de1201b3b24daac4e21f6ed2187bafbf344c5f26ea3"
+    },
+    {
+      "path": "POST_AGGREGATE_OUTCOME_ENTRIES_v0.json",
+      "sha256": "e1672e5f586d3638fe18a28e9f0c18fbcf6424b77f2f5b8310468908789fd620"
+    },
+    {
+      "path": "POST_AGGREGATE_MISSING_EXPECTATION_STATUS_v0.json",
+      "sha256": "3d571a35f3468a7c5831af3e9d87674d56e03f0eecb3a1c58af0028b35c8472a"
+    },
+    {
+      "path": "POST_AGGREGATE_FIRST_CAUSE_CLUSTERS_v0.json",
+      "sha256": "23495ff7047294db7076251c44d63f1117480bf023f7e647b1b5ef386db11ac2"
+    },
+    {
+      "path": "POST_AGGREGATE_BASELINE_REASSESSMENT_EXECUTION_MANIFEST_v0.json",
+      "sha256": "b1b4ab9853799bbc9fd4a3bb00dcf05336916c61e15e0fd23ebd45fe1ef7c8b8"
+    },
+    {
+      "path": "build_post_aggregate_analysis_v0.py",
+      "sha256": "c36e7df6442da2a0917223c2d536b9d7e45c05409bb0e2c7695f2b2cc2b893f3"
+    }
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "broad_python_baseline": "REPRODUCIBLY_RED_AND_EXHAUSTIVELY_RECLUSTERED",
+  "lean_status": "UNCHANGED_NOT_EXECUTED_IN_THIS_CYCLE",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "next_cycle": "NOT_AUTOMATICALLY_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_REASSESSMENT_RESULT_ONLY"
+}

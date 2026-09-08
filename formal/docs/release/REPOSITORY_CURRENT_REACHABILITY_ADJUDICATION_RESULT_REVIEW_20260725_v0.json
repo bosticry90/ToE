@@ -1,0 +1,54 @@
+{
+  "schema_id": "REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T05:58:00Z",
+  "status": "CURRENT_REACHABILITY_ADJUDICATION_ACCEPTED",
+  "accepted": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_20260725_v0.json",
+    "sha256": "4159a696cc564787a4c6fc84eab19b5a6a199b163a74ee089d9ef2062c97a00a",
+    "result_commit": "f4c3bbaec9c416d4858df5b71ba600dbe81f7e61",
+    "result_tree": "a14f51f8b8df8e7e3110c06c6d1aa9e5bf7840c8"
+  },
+  "independent_detached_review": {
+    "checkout": "current-reachability-adjudication-review-v0",
+    "head": "f4c3bbaec9c416d4858df5b71ba600dbe81f7e61",
+    "tree": "a14f51f8b8df8e7e3110c06c6d1aa9e5bf7840c8",
+    "ledger_check": "PASS",
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "errors": 0,
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "candidate_obligations": 126,
+    "individually_mapped": 126,
+    "current_repair_required": 4,
+    "historical_quarantine_candidates": 89,
+    "unratified_quarantine_candidates": 33,
+    "unknown_current_reachability_after": 0,
+    "provenance_axis_preserved": true,
+    "historical_failures_remain_visible": true,
+    "historical_isolation_still_required": true
+  },
+  "accepted_current_repair_obligations": [
+    "NONPASSING-00145",
+    "NONPASSING-00147",
+    "NONPASSING-02535",
+    "NONPASSING-09138"
+  ],
+  "scope": {
+    "profile_membership_changed": false,
+    "historical_quarantine_executed": false,
+    "root_repair_performed": false,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "automatic_successor": false
+  },
+  "terminal_result": "CURRENT_REACHABILITY_ADJUDICATION_ACCEPTED_FOUR_CURRENT_REPAIRS_REQUIRED",
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,461 @@
+{
+  "artifact_id": "TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_RESULT_v0",
+  "captured_at_utc": "2026-07-31T20:20:40Z",
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "semantic_stage_id": "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY",
+  "attempt_sequence_number": 1,
+  "scientific_target": "inventory_toe_positive_native_gravitational_principle_sources_v0",
+  "scope_hash": "adec5050977697a470c1ef6afb4d136bc415f1a592008c9b7c2546a74f80ab90",
+  "open_event": {
+    "path": "formal/docs/release/bounded_program_events/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_ATTEMPT_01_OPEN_v0.json",
+    "sha256": "0531ff3cdde2aecabedbebef7b3cfc813f9ac14ea12970b4d0980a6939021d41"
+  },
+  "terminal_outcome": "NO_SOURCE_BOUND_POSITIVE_PRINCIPLE_CANDIDATE_FOUND",
+  "lifecycle_result": "BLOCKED",
+  "scientific_conclusion": "The authorized evidence contains gravitational evaluation requirements, known-physics baselines, one project-native exclusionary firewall, and unresolved ontology, seam, emergence, and master-action sketches. It contains no source-bound statement with both a claimed native physical basis and a positive gravitational consequence sufficient to enter Stage 2 as a positive principle candidate.",
+  "scope_qualification": "This result exhausts the ten authorized Stage 1 inputs only. It does not establish repository-wide claim exhaustion; the repository-wide census retained 12,923 custody records outside bounded deep review.",
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+      "sha256": "bb5bf184bdddd796551010a25dc20e78a1b9630db6607a7a63dc26287054a0a5"
+    },
+    {
+      "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+      "sha256": "968cf36b4026d07ef6cf479dd9b272f831f3a527c2ca869821135ae4c2f87e04"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "4e065860ede6ac9955260fb223c802072ce4c8d9e6558890a673def13c7580b7"
+    },
+    {
+      "path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+      "sha256": "8f29a6d5912478a2143f751fcbb9aa817a097acc79d274bd825865dfa2e43821"
+    },
+    {
+      "path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+      "sha256": "eee46245fd59f0ecc7b127030dca0dcbba61ab3dc4e45fa756bbfe9e1bb9c058"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+    },
+    {
+      "path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+      "sha256": "d887d34ae482e1e6427b0137b6d8aff691d6df27d8c2eb11c82c6138864a474d"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34"
+    },
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+      "sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f"
+    }
+  ],
+  "classification_vocabulary": [
+    "POSITIVE_GENERATIVE_PRINCIPLE_CANDIDATE",
+    "ACTION_CLASS_CONSTRAINING_PRINCIPLE_CANDIDATE",
+    "EVALUATION_REQUIREMENT_ONLY",
+    "KNOWN_PHYSICS_BASELINE",
+    "ARCHITECTURAL_FIREWALL_ONLY",
+    "HEURISTIC_OR_ANALOGY_ONLY",
+    "BLOCKED_BY_MISSING_ONTOLOGY",
+    "BLOCKED_BY_MISSING_SEAM_INPUT",
+    "CONTRADICTED_OR_SUPERSEDED"
+  ],
+  "source_and_hash_bound_principle_statement_ledger": [
+    {
+      "statement_id": "PGP-SRC-001",
+      "controlled_wording": "The comparison envelope is four-dimensional.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/0",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A frozen continuum comparison scope, not a native derivation of dimensionality.",
+      "proposed_gravitational_consequence": "Excludes non-four-dimensional families inside this survey only.",
+      "variables_or_structures_constrained": ["spacetime dimension"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["Does not explain why reality is four-dimensional."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-002",
+      "controlled_wording": "The comparison envelope admits one metric and no additional gravitational fields.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/1",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A frozen comparison envelope, not a source-bound ontology of gravitational variables.",
+      "proposed_gravitational_consequence": "Excludes extra-field candidates from this survey.",
+      "variables_or_structures_constrained": ["metric count", "additional gravitational fields"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["No native reason for metric-only gravity is supplied."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-003",
+      "controlled_wording": "The comparison envelope is restricted to local scalar-density actions.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/2",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A bounded local-action survey assumption.",
+      "proposed_gravitational_consequence": "Excludes nonlocal actions from the v0 comparison.",
+      "variables_or_structures_constrained": ["locality", "action density"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["No native locality principle is derived."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-004",
+      "controlled_wording": "An evaluated action must be diffeomorphism covariant.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/3",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "An accepted project evaluation requirement overlapping standard metric gravity.",
+      "proposed_gravitational_consequence": "Rejects non-covariant candidate actions.",
+      "variables_or_structures_constrained": ["action covariance"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["Does not select a gravitational invariant or coefficient."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-005",
+      "controlled_wording": "C_k objects remain external admissibility checks and cannot be varied or embedded as gravitational action terms.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/4",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER_WITH_RWC_CLAIM_13fe7f08d652ed5dc3c3_AND_RWC_CLAIM_562979e256dae8982708_SUPPORT",
+      "claimed_physical_basis": "A distinctively project-native governance and architecture firewall.",
+      "proposed_gravitational_consequence": "Excludes C_k multiplier, penalty, and varied-field constructions.",
+      "variables_or_structures_constrained": ["C_k role", "action-term eligibility"],
+      "classification": "ARCHITECTURAL_FIREWALL_ONLY",
+      "dependencies_or_limits": ["Exclusionary only; it does not positively select any remaining gravitational invariant."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-006",
+      "controlled_wording": "Bulk comparison uses smooth compactly supported local metric variations.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/5",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A variational comparison convention.",
+      "proposed_gravitational_consequence": "Defines the admissible test variation class.",
+      "variables_or_structures_constrained": ["metric variation", "support class"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["Does not generate an action."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-007",
+      "controlled_wording": "A source-coupled candidate must admit variational matter stress-energy and the corresponding conservation identity.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/6",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A generic source-coupling consistency obligation.",
+      "proposed_gravitational_consequence": "Constrains future matter-coupled candidates after a matter action exists.",
+      "variables_or_structures_constrained": ["matter stress-energy", "source conservation"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["Native matter action and retained metric source are not selected."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-008",
+      "controlled_wording": "A viable candidate must recover the Newton-Poisson weak-field 00 sector.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/7",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A known-physics recovery obligation.",
+      "proposed_gravitational_consequence": "Rejects candidates without the required weak-field limit.",
+      "variables_or_structures_constrained": ["stationary weak-field 00 response"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["Recovery is not a uniquely native generating principle."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-009",
+      "controlled_wording": "A viable candidate must represent conserved momentum-current sourcing and recover a weak-field 0i response.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/8",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A retained known-physics recovery obligation.",
+      "proposed_gravitational_consequence": "Requires a future gravitomagnetic source response.",
+      "variables_or_structures_constrained": ["T_0i source", "weak-field 0i response"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["The continuum tensor field equation remains absent."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-010",
+      "controlled_wording": "A candidate must later pass a frozen stability test and recover coefficients without fitting them to force agreement.",
+      "source_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "source_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+      "source_location": "/requirement_ledger/9",
+      "source_authority_and_lineage": "CURRENT_AUTHORIZED_DERIVED_REQUIREMENT_LEDGER",
+      "claimed_physical_basis": "A scientific evaluation and anti-fitting rule.",
+      "proposed_gravitational_consequence": "Rejects unstable or coefficient-fitted candidates after they exist.",
+      "variables_or_structures_constrained": ["stability norm", "coefficient provenance"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["Candidate-specific norm and acceptance thresholds do not yet exist."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-011",
+      "controlled_wording": "A strong project-specific principle would need demonstrated selection power, such as fixing a coefficient, excluding a family, linking a pillar by derivation, or producing an invariant consequence.",
+      "source_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+      "source_sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f",
+      "source_location": "lines:248-263",
+      "source_authority_and_lineage": "CURRENT_TRACKED_SOURCE_IN_AUTHORIZED_LINEAGE",
+      "claimed_physical_basis": "A criterion for recognizing a future principle, not a physical principle itself.",
+      "proposed_gravitational_consequence": "Defines the evidence threshold a candidate principle would have to meet.",
+      "variables_or_structures_constrained": ["principle evidence standard"],
+      "classification": "EVALUATION_REQUIREMENT_ONLY",
+      "dependencies_or_limits": ["The source does not supply a statement that meets its own criterion."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-012",
+      "controlled_wording": "Einstein-Hilbert gravity is a comparison oracle and provisional baseline, not a native derivation or uniqueness result.",
+      "source_path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+      "source_sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f",
+      "source_location": "lines:194-216",
+      "source_authority_and_lineage": "CURRENT_TRACKED_SOURCE_IN_AUTHORIZED_LINEAGE_WITH_RWC_CLAIM_2b49bcfab30533429b67_AND_RWC_CLAIM_442c1cb26fa0473440a9_SUPPORT",
+      "claimed_physical_basis": "Established comparison physics.",
+      "proposed_gravitational_consequence": "Supplies a recovery and normalization comparator only.",
+      "variables_or_structures_constrained": ["comparison equations", "known-physics limit"],
+      "classification": "KNOWN_PHYSICS_BASELINE",
+      "dependencies_or_limits": ["Compatibility cannot be converted into native derivation or uniqueness."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-013",
+      "controlled_wording": "GR01 records a bounded discrete Newton-Poisson emergence route under explicit assumptions.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/770",
+      "upstream_claim_id": "RWC-CLAIM-1056d4ca071e7924165e",
+      "upstream_scientific_source": "formal/docs/paper/TOE_GR01_PILLAR_SUMMARY_v0.md line 12; sha256 6c7f0e68ee4fb1b0dab15c672dd0c8ad80a2e14156eb5ca80cb2783142d8b03b",
+      "source_authority_and_lineage": "SOURCE_TEXT_BOUND_NOT_ADJUDICATED",
+      "claimed_physical_basis": "A bounded known-physics emergence benchmark.",
+      "proposed_gravitational_consequence": "Recovers a Newton-Poisson surface within its assumptions.",
+      "variables_or_structures_constrained": ["bounded discrete weak-field route"],
+      "classification": "KNOWN_PHYSICS_BASELINE",
+      "dependencies_or_limits": ["Does not supply a full native gravitational principle or relativistic action."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-014",
+      "controlled_wording": "A historical master-action sketch lists geometry, field, gauge, interaction, and admissibility blocks.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/576",
+      "upstream_claim_id": "RWC-CLAIM-21340e194de9292df2dc",
+      "source_authority_and_lineage": "SOURCE_TEXT_BOUND_NOT_ADJUDICATED",
+      "claimed_physical_basis": "A schematic organizational proposal.",
+      "proposed_gravitational_consequence": "Names a geometry block without deriving its physical form.",
+      "variables_or_structures_constrained": ["master-action block structure"],
+      "classification": "HEURISTIC_OR_ANALOGY_ONLY",
+      "dependencies_or_limits": ["Geometry variables, coefficients, and native principle are not supplied; the master action is not promoted."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-015",
+      "controlled_wording": "A candidate master-action note associates L_geometry with an Einstein-Hilbert-type geometry block.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/752",
+      "upstream_claim_id": "RWC-CLAIM-510c8233b6e5566b8308",
+      "source_authority_and_lineage": "SOURCE_TEXT_BOUND_NOT_ADJUDICATED",
+      "claimed_physical_basis": "A historical illustrative assignment.",
+      "proposed_gravitational_consequence": "Suggests a baseline geometry block without native derivation.",
+      "variables_or_structures_constrained": ["L_geometry label"],
+      "classification": "HEURISTIC_OR_ANALOGY_ONLY",
+      "dependencies_or_limits": ["The note does not derive Einstein-Hilbert gravity from ToE ontology."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-016",
+      "controlled_wording": "A formal route lists scalar variation, stress-energy, conservation residual, source admissibility, and a classical gravity source route.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/1696",
+      "upstream_claim_id": "RWC-CLAIM-8e0ff17cb15155c67b84",
+      "source_authority_and_lineage": "FORMAL_DECLARATION_SOURCE_BOUND_NOT_PHYSICAL_TRUTH_ADJUDICATED",
+      "claimed_physical_basis": "A proposed source-admissibility sequence.",
+      "proposed_gravitational_consequence": "Would connect a selected matter route to a classical gravity source route.",
+      "variables_or_structures_constrained": ["matter source map", "bridge sequence"],
+      "classification": "BLOCKED_BY_MISSING_SEAM_INPUT",
+      "dependencies_or_limits": ["The scalar representation and source-admissibility semantics are not accepted native inputs."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-017",
+      "controlled_wording": "A matter-sector record says the stress-energy route is blocked pending statistical-state coupling to geometry and source-admissibility semantics.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/1172",
+      "upstream_claim_id": "RWC-CLAIM-e9fc0ca17dc067816599",
+      "source_alias_claim_id": "RWC-CLAIM-3b1bfabd0734a08f621b",
+      "source_authority_and_lineage": "HISTORICAL_METADATA_SOURCE_BOUND_NOT_ADJUDICATED",
+      "claimed_physical_basis": "An unresolved statistical-state-to-geometry seam proposal.",
+      "proposed_gravitational_consequence": "Would type a matter source for geometry if the missing seam existed.",
+      "variables_or_structures_constrained": ["statistical state", "stress-energy", "geometry source"],
+      "classification": "BLOCKED_BY_MISSING_SEAM_INPUT",
+      "dependencies_or_limits": ["The coupling and source-admissibility semantics are explicitly missing; duplicate wording adds no independent support."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-018",
+      "controlled_wording": "A formal artifact asks whether a phi route connects a scalar field, QFT-GR source ladder, and master-action structure.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/1694",
+      "upstream_claim_id": "RWC-CLAIM-d58df46622b75e03b8ac",
+      "source_authority_and_lineage": "FORMAL_DECLARATION_SOURCE_BOUND_NOT_PHYSICAL_TRUTH_ADJUDICATED",
+      "claimed_physical_basis": "An unresolved bridge question.",
+      "proposed_gravitational_consequence": "None established; the source poses rather than answers the admissibility question.",
+      "variables_or_structures_constrained": ["phi route", "QFT-GR source ladder"],
+      "classification": "BLOCKED_BY_MISSING_SEAM_INPUT",
+      "dependencies_or_limits": ["No accepted bridge relation or native matter representation is supplied."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-019",
+      "controlled_wording": "A source mentions an emergent-spacetime claim only inside a nonclaim boundary.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/57",
+      "upstream_claim_id": "RWC-CLAIM-49d0538b9a3bd66d6b26",
+      "source_authority_and_lineage": "SOURCE_TEXT_BOUND_NOT_ADJUDICATED",
+      "claimed_physical_basis": "No source-bound ontology is stated in the supporting fragment.",
+      "proposed_gravitational_consequence": "None.",
+      "variables_or_structures_constrained": [],
+      "classification": "BLOCKED_BY_MISSING_ONTOLOGY",
+      "dependencies_or_limits": ["Terminology alone cannot supply an emergence mechanism or gravitational consequence."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-020",
+      "controlled_wording": "A benchmark registry warns that a QCD-vacuum result is not proof of vacuum ontology.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/48",
+      "upstream_claim_id": "RWC-CLAIM-e5ec533c7adb90ae9b99",
+      "source_authority_and_lineage": "SOURCE_TEXT_BOUND_NOT_ADJUDICATED",
+      "claimed_physical_basis": "A caution against ontology inference from a control benchmark.",
+      "proposed_gravitational_consequence": "None.",
+      "variables_or_structures_constrained": [],
+      "classification": "BLOCKED_BY_MISSING_ONTOLOGY",
+      "dependencies_or_limits": ["The record explicitly denies the ontology inference needed for a positive gravity principle."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-021",
+      "controlled_wording": "Historical CCFT material discusses rotor-curvature interactions and a rotor-curvature hydrodynamic closure.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/855 and /source_bound_claim_records/880",
+      "upstream_claim_ids": ["RWC-CLAIM-cb37290d90033e379937", "RWC-CLAIM-63ee30dcc6e35a2c3342"],
+      "source_authority_and_lineage": "HISTORICAL_ARCHIVE_SOURCE_NOT_PROMOTED",
+      "claimed_physical_basis": "A CCFT or CRFT continuum-model analogy and effective structure.",
+      "proposed_gravitational_consequence": "None source-bound; the word curvature refers to the internal rotor-curvature model, not a demonstrated spacetime-gravity law.",
+      "variables_or_structures_constrained": ["CCFT/CRFT rotor-curvature model"],
+      "classification": "HEURISTIC_OR_ANALOGY_ONLY",
+      "dependencies_or_limits": ["Semantic transport from internal curvature terminology to native spacetime gravity is prohibited."],
+      "eligible_for_stage_2": false
+    },
+    {
+      "statement_id": "PGP-SRC-022",
+      "controlled_wording": "A formal substrate toy law defines an Euler beta-function scale-flow candidate.",
+      "source_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+      "source_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+      "source_location": "/source_bound_claim_records/2672",
+      "upstream_claim_id": "RWC-CLAIM-7bd5e697aad1714f5948",
+      "source_authority_and_lineage": "FORMAL_DECLARATION_SOURCE_BOUND_NOT_PHYSICAL_TRUTH_ADJUDICATED",
+      "claimed_physical_basis": "A toy substrate scale-flow law.",
+      "proposed_gravitational_consequence": "None stated or derived.",
+      "variables_or_structures_constrained": ["toy beta-function scale flow"],
+      "classification": "HEURISTIC_OR_ANALOGY_ONLY",
+      "dependencies_or_limits": ["No relation to geometry, gravitational variables, sources, or an action is established."],
+      "eligible_for_stage_2": false
+    }
+  ],
+  "source_authority_lineage_supersession_and_conflict_ledger": {
+    "authorized_artifact_count": 10,
+    "authorized_hashes_verified": true,
+    "inventory_statement_count": 22,
+    "independent_positive_candidate_count": 0,
+    "duplicate_or_alias_support_not_double_counted": [
+      "RWC-CLAIM-13fe7f08d652ed5dc3c3 and RWC-CLAIM-562979e256dae8982708 support one C_k firewall statement",
+      "RWC-CLAIM-e9fc0ca17dc067816599 and RWC-CLAIM-3b1bfabd0734a08f621b preserve duplicate blocked seam wording"
+    ],
+    "authority_findings": [
+      "Current requirement and survey results are authoritative as bounded scientific results, not as native laws.",
+      "Repository-wide claim extraction and reconciliation are authorized derived inputs that retain upstream source bindings but did not promote their source claims.",
+      "Historical archive and formal declarations retain their recorded nonpromoted or non-truth-adjudicated status.",
+      "No statement gains authority from repetition, terminology, formal encoding, or historical age."
+    ],
+    "conflicts_and_limits": [
+      "The metric-only, local, and four-dimensional restrictions are frozen evaluation-envelope choices rather than native ontology derivations.",
+      "Diffeomorphism covariance, variational consistency, stability, conservation, and known-physics recovery filter candidate theories but do not generate one.",
+      "The C_k firewall is distinctively project-native but only exclusionary.",
+      "Master-action and Einstein-Hilbert-type geometry sketches do not contain a source-bound native derivation.",
+      "Matter-to-geometry and statistical-state-to-geometry routes remain blocked by missing source and seam semantics.",
+      "Emergence and rotor-curvature terminology does not establish a spacetime-gravity ontology or law."
+    ],
+    "supersession_result": "NO_SUPERSEDED_STATEMENT_WAS_REACTIVATED_AND_NO_HISTORICAL_SOURCE_WAS_PROMOTED"
+  },
+  "principle_requirement_baseline_firewall_and_heuristic_classification": {
+    "POSITIVE_GENERATIVE_PRINCIPLE_CANDIDATE": 0,
+    "ACTION_CLASS_CONSTRAINING_PRINCIPLE_CANDIDATE": 0,
+    "EVALUATION_REQUIREMENT_ONLY": 10,
+    "KNOWN_PHYSICS_BASELINE": 2,
+    "ARCHITECTURAL_FIREWALL_ONLY": 1,
+    "HEURISTIC_OR_ANALOGY_ONLY": 4,
+    "BLOCKED_BY_MISSING_ONTOLOGY": 2,
+    "BLOCKED_BY_MISSING_SEAM_INPUT": 3,
+    "CONTRADICTED_OR_SUPERSEDED": 0,
+    "total": 22
+  },
+  "stage_2_eligibility": {
+    "eligible_statement_ids": [],
+    "eligible_count": 0,
+    "stage_2_authorized": false,
+    "stage_2_opened": false,
+    "consequence": "BLOCKED_STAGE_1_REQUIRES_MANDATORY_PROGRAM_EXIT"
+  },
+  "bounded_overflow_and_nonexhaustion_statement": {
+    "authorized_stage_1_inputs_exhausted": true,
+    "repository_claim_exhaustion_established": false,
+    "repository_wide_census_deep_review_source_count": 640,
+    "repository_wide_census_unreviewed_custody_record_count": 12923,
+    "scientific_boundary": "No candidate was found in the authorized evidence. This does not prove that no candidate exists in every unreviewed repository or archive record."
+  },
+  "nonpromotion_and_scope_audit": {
+    "positive_principle_selected_or_derived": false,
+    "gravitational_variables_selected": false,
+    "action_class_selected": false,
+    "gravitational_action_constructed_or_selected": false,
+    "Einstein_Hilbert_promoted": false,
+    "quadratic_gravity_reopened_or_promoted": false,
+    "master_action_promoted": false,
+    "C_k_embedded_in_dynamics": false,
+    "canonical_evidence_promoted": false,
+    "gravitational_calculation_executed": false,
+    "stage_2_output_created": false
+  },
+  "mandatory_exit": {
+    "selected_target": "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0",
+    "completed": false,
+    "automatic_successor_authorized": false
+  }
+}

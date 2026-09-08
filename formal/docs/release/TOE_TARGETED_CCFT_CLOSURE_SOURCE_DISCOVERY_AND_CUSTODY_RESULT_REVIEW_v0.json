@@ -1,0 +1,49 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-08-01T23:23:23Z",
+  "checks": {
+    "all_eight_roots_are_stable": true,
+    "all_selected_sources_were_previously_unreviewed": true,
+    "branch_allocation_is_balanced_and_within_cap": true,
+    "candidate_population_is_deterministically_bounded": true,
+    "every_selected_source_passes_the_frozen_gate": true,
+    "immutable_census_population_is_complete": true,
+    "inventory_visible_excluded_formats_do_not_enter_deep_review": true,
+    "lineage_cap_is_respected": true,
+    "no_contract_extraction_or_adjudication_occurred": true,
+    "no_equation_repair_parameter_inference_postulate_or_model_construction_occurred": true,
+    "program_stage_target_and_scope_match_manifest": true,
+    "selected_content_identities_are_unique": true,
+    "selected_parser_and_unsupported_caps_are_respected": true,
+    "selected_set_hits_the_frozen_file_cap_without_exceeding_it": true,
+    "selected_source_and_text_byte_caps_are_respected": true,
+    "selected_text_is_hash_bound_for_stage_2_reuse": true,
+    "single_content_pass_consumed_exactly_once": true,
+    "stage_2_is_selected_but_unauthorized": true,
+    "terminal_outcome_is_the_frozen_positive_stage_1_result": true
+  },
+  "decision": "ACCEPT_TARGETED_CCFT_SOURCE_SET_BOUND_SELECT_STAGE_2_UNOPENED",
+  "failed_checks": [],
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_v0.json",
+    "sha256": "2c4a32b16dd35d798d95a14a3a0ac466b4fff5dbafd7ae0a70e0755cef9bb81f"
+  },
+  "schema_id": "toe.targeted_ccft_closure.source_discovery_and_custody.result_review.v0",
+  "scientific_interpretation": {
+    "candidate_match_establishes_source_authority": false,
+    "candidate_path_count": 393,
+    "contract_recovery_established": false,
+    "metadata_candidate_count": 256,
+    "selected_by_branch": {
+      "CP_NLSE": 48,
+      "LCRD_V3": 48
+    },
+    "selected_local_custody_source_count": 0,
+    "selected_unique_content_count": 96
+  },
+  "semantic_stage_id": "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY",
+  "stage_2_authorized": false,
+  "status": "PASS"
+}

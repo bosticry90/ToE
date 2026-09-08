@@ -1,0 +1,33 @@
+{
+  "boundary": {
+    "automatic_maintenance_successor_authorized": false,
+    "historical_bytes_rewritten": false,
+    "new_physics_authorized": false,
+    "scientific_target_rotated": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "completion_result_review": {
+    "path": "formal/docs/release/CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_RESULT_REVIEW_20260729_v0.json",
+    "sha256": "24f6ed5ab692d5807f45236a20b0d4e81edcbd5610d56a945057754d1c4ca3a1",
+    "verdict": "CANONICAL_TEXT_ATTRIBUTE_POLICY_REPAIR_ACCEPTED"
+  },
+  "current_maintenance_target": "execute_canonical_text_attribute_policy_repair_v0",
+  "current_maintenance_target_status": "COMPLETE_ACCEPTED_BY_RESULT_REVIEW",
+  "previous_maintenance_authority": {
+    "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v3.json",
+    "sha256": "3cb51e860defa284ab37f67ee7dd75b8dab960b3a5479510ce5ddac32f6c2d3d",
+    "status": "SUPERSEDED_AS_CURRENT_RETAINED_IMMUTABLE_ACTIVE_EXECUTION_HISTORY"
+  },
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v4",
+  "scientific_authority": {
+    "current_target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "target_rotated": false
+  },
+  "status": "COMPLETE_ACCEPTED_NO_AUTOMATIC_SUCCESSOR",
+  "successor": {
+    "automatic_maintenance_successor": null,
+    "automatic_scientific_successor": null,
+    "maintenance_authority_may_select_scientific_route": false
+  }
+}

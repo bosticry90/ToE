@@ -1,0 +1,45 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_OPEN_v0.json",
+    "formal/python/tools/toe_native_gravitational_requirement_inventory_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeGravitationalRequirementInventoryAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 1,
+  "authority_decision": "AUTHORIZE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_STAGE_1_OPEN",
+  "captured_at_utc": "2026-07-31T14:30:00Z",
+  "event_hash": "1923f7662b72f713d6182a94e4f3973ef381e995e7aed9881b2f604fbfea9a23",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_OPEN_v0.json",
+  "event_sequence_number": 1,
+  "event_sha256": "1cf552890812c910c127edb9fec50f0595571999b790834a0538696f0111989d",
+  "opened_from_commit": "8669a803dcacb025e71d5b8ad33b1b9dcb4f5371",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "registry_snapshot_hash": "290d303c08c674e5ce52928f64c777d9acfc91ce6a2f1634c50c4bb3ed64ce01",
+  "schema_id": "toe.native_gravitational_requirement_inventory.stage_1_open_validation.v0",
+  "scientific_output_at_open": {
+    "action_families_compared": false,
+    "evidence_promoted": false,
+    "gravitational_action_selected": false,
+    "gravitational_calculation_started": false,
+    "native_gravitational_principle_selected": false,
+    "requirement_rows_adjudicated": 0,
+    "stage_2_output_created": false
+  },
+  "scope_hash": "297276852be0fed5e7dafdb9a90a3dc26a2807665665dbefc69dd8572b31fb19",
+  "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+  "status": "STAGE_1_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "inventory_toe_native_gravitational_requirements_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_2_remains_unauthorized": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "captured_at_utc": "2026-07-22T01:26:26Z",
+  "checks": {
+    "all_715_nonpassing_outcomes_are_accounted_for": true,
+    "automatic_repair_or_successor_is_not_authorized": true,
+    "classification_vocabulary_is_respected": true,
+    "collection_comparison_distinguishes_one_semantic_addition_from_four_escaped_id_pairs": true,
+    "exact_environment_command_order_and_first_exception_evidence_is_preserved": true,
+    "frozen_202_cohort_reports_one_recovery_and_201_remaining": true,
+    "full_nonlean_inventory_runs_consumed": 1,
+    "full_nonlean_inventory_runs_permitted": 1,
+    "lean_lane_remained_separate": true,
+    "order_dependence_is_not_claimed_without_reordered_execution": true,
+    "pytest_totals_reconcile_to_13756_collected_tests": true,
+    "repairs_or_source_test_modifications": 0,
+    "scientific_execution": 0,
+    "source_evidence_hashes_verify": true,
+    "tracked_terminal_status_is_empty": true,
+    "v2_enrollment_authorized": false
+  },
+  "review_basis": [
+    "The raw pytest log, JUnit record, ordered node-ID inventory, execution environment, exit record, and generated analyses are present in external custody with verified SHA-256 identities.",
+    "The result reports 595 failures and 120 errors, matching both JUnit and the short test summary.",
+    "The result does not interpret all 222 missing-artifact outcomes as one primary defect; it preserves them as 222 distinct root clusters within one expectation family.",
+    "The Prompt finding is checkout-identity evidence: the LF working file equals the frozen Git blob while 43 Python consumers retain the pinned CRLF raw-byte hash.",
+    "Only one test from the previously frozen 202-test checkout-sensitive cohort recovered, so the prior focused repair remains valid but did not close the broader Prompt identity family.",
+    "No retry or reordered run occurred, so ORDER_DEPENDENT_FAILURE remains unassigned rather than disproven.",
+    "The clean terminal checkout establishes read-only validation for this cycle; it does not establish a green broad baseline."
+  ],
+  "review_scope": "independent diagnostic-result review only",
+  "reviewed_result": {
+    "commit": "ab74e977f403857db149e51ebd9d2060396e77c2",
+    "path": "formal/docs/release/REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_20260722_v0.json",
+    "sha256": "6cec054257c83c756e07e64514adb1e0866c786bf5a18d7a6af5587ea6b86c55"
+  },
+  "schema_id": "REPOSITORY_BROAD_PYTHON_FIRST_CAUSE_CLUSTER_RESULT_REVIEW_20260722_v0",
+  "scientific_posture": "B-BLOCKED",
+  "verdict": "ACCEPTED_DIAGNOSTIC_RESULT_STILL_BLOCKED_NO_REPAIR_AUTHORITY",
+  "v2_enrollment": "NOT_AUTHORIZED"
+}

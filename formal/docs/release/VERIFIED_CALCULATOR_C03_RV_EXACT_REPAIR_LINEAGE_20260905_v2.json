@@ -1,0 +1,65 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactRepairLineageV2",
+  "as_of": "2026-09-05",
+  "trigger": {
+    "review_result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+    "review_result_sha256_zeroed_field": "d415ae3d690b4bcf87d6222f8618371af2d1a28b0c624843f95b8649cb816b15",
+    "disposition": "SUPPORTED_WITH_REQUIRED_AMENDMENTS",
+    "reviewed_frozen_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f"
+  },
+  "preservation": {
+    "reviewed_packet_modified": false,
+    "review_result_modified": false,
+    "pre_release_milestone_retroactively_rewritten": false,
+    "new_versioned_lineage_required": true
+  },
+  "required_amendments": [
+    {
+      "defect_id": "D-01",
+      "title": "Lean checker accepts caller-asserted certificate identity",
+      "severity": "MATERIAL",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "required_work": [
+        "create a new versioned runtime-certificate schema and Lean checker",
+        "derive or recompute the accepted certificate identity instead of echoing caller input",
+        "bind computation, candidate, profile, policy, graph, source receipts, exact outputs, trace output digests, status ceiling, and non-promotion fields",
+        "reject every mutation enumerated in review finding D-01",
+        "generate a new evidence bundle and review lineage without modifying the v1 bundle"
+      ],
+      "affected_review_rows": [
+        "GOV-03",
+        "FRM-02",
+        "FRM-03",
+        "ROOT-01..ROOT-16"
+      ]
+    },
+    {
+      "defect_id": "D-02",
+      "title": "Trusted evaluator does not enforce complete per-node ValueTypeV1 metadata",
+      "severity": "MATERIAL",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "required_work": [
+        "define executable exact source and derived ValueTypeV1 signatures",
+        "enforce representation tags, dimensions, unit conventions, index spaces, domains, and edge compatibility",
+        "add mechanically complete metadata-mutation challenges",
+        "reject every mutation enumerated in review finding D-02",
+        "generate a new evidence bundle and review lineage without modifying the v1 bundle"
+      ],
+      "affected_review_rows": [
+        "OP-01..OP-19",
+        "ROOT-01..ROOT-16"
+      ]
+    }
+  ],
+  "current_disposition": {
+    "c03_rv_exact_computation_pre_release_milestone": "PRESERVED_AS_HISTORICAL_EXECUTION_EVIDENCE",
+    "clean_non_author_qualification": "NOT_EARNED",
+    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED",
+    "product_v1": "NOT_RELEASED",
+    "production_activation": false
+  },
+  "repair_lineage_hash": "cad2c1cc7d88ab6a515f199745ba6b166d9ec00802f135615fab991fcd8a9483",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

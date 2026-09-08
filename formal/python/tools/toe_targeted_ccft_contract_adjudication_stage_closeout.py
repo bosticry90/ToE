@@ -1,0 +1,399 @@
+from __future__ import annotations
+
+"""Review and atomically close targeted CCFT contract adjudication Stage 3."""
+
+if __name__ == "__main__" and (__package__ is None or __package__ == ""):
+    from pathlib import Path as _Path
+    raise SystemExit(
+        "Run this tool as a module:\n\n"
+        f"  .\\py.ps1 -m formal.python.tools.{_Path(__file__).stem} --help"
+    )
+
+import argparse
+import hashlib
+import json
+import subprocess
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+from formal.python.tools.bounded_program_governance import (
+    REGISTRY_PATH,
+    _registry_json_bytes,
+    close_attempt,
+    strict_json_loads,
+    validate_registry_extension,
+    write_event,
+)
+from formal.python.tools.loop_control_registry_integrity import atomic_write_registry, repair_registry
+from formal.python.tools.toe_targeted_ccft_contract_adjudication_stage_execution import (
+    MANIFEST,
+    NEXT_TARGET,
+    OPEN_EVENT,
+    OUTCOME,
+    PROGRAM_ID,
+    RELEASE_ROOT,
+    REPO_ROOT,
+    RESULT_PATH,
+    STAGE2_RESULT,
+    STAGE_ID,
+    TARGET,
+)
+
+
+REVIEW_PATH = RELEASE_ROOT / "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0.json"
+VALIDATION_PATH = RELEASE_ROOT / "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_VALIDATION_v0.json"
+RESULT_RELATIVE = RESULT_PATH.relative_to(REPO_ROOT).as_posix()
+REVIEW_RELATIVE = REVIEW_PATH.relative_to(REPO_ROOT).as_posix()
+RESULT_MODULE_PATH = REPO_ROOT / "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTContractAdjudicationResult.lean"
+CURRENT_TARGET_PATH = REPO_ROOT / "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean"
+CURRENT_AUTHORITY_PATH = REPO_ROOT / "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+RESULT_MODULE = "ToeFormal.Derivation.ToeTargetedCCFTContractAdjudicationResult"
+RESULT_KIND = "toe_targeted_ccft_recovery_result_and_construction_handoff_stage_4_selected_unopened_v0"
+STRICT_OUTCOME = (
+    "STAGE_3_CLOSED_PASSED_4_EXACT_CONTRACTS_RECOVERED_3_CP_CONFLICTS_PRESERVED_"
+    "NO_EQUATION_SELECTION_REPAIR_POSTULATE_CCFT_V0_THEOREM_PROMOTION_OR_STAGE_4_OPEN"
+)
+
+
+def _load(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _sha(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _write(path: Path, value: dict[str, Any]) -> None:
+    if path.exists():
+        raise ValueError(f"immutable closeout artifact already exists: {path}")
+    path.write_text(
+        json.dumps(value, indent=2, sort_keys=True, ensure_ascii=True) + "\n",
+        encoding="ascii", newline="\n",
+    )
+
+
+def _head() -> str:
+    return subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=REPO_ROOT, check=True,
+        capture_output=True, text=True,
+    ).stdout.strip()
+
+
+def _stage() -> dict[str, Any]:
+    return _load(MANIFEST)["stages"][2]
+
+
+def _review(result: dict[str, Any], captured_at_utc: str) -> dict[str, Any]:
+    stage2 = _load(STAGE2_RESULT)
+    records = {row["contract_record_id"]: row for row in stage2["source_bound_contract_record_ledger"]}
+    exact = result["exact_candidate_adjudication_matrix"]
+    matrix = result["contract_by_contract_completeness_matrix"]
+    conflict = result["primary_source_conflict_supersession_and_portability_adjudication"]
+    counts = result["exact_recovered_contract_count_by_branch"]
+    recovered = [row for row in exact if row["adjudication_status"] == "RECOVERED_EXACT_CLOSURE_CONTRACT"]
+    exact_ids = {
+        record_id for record_id, row in records.items()
+        if row["evidence_strength_classification"] == "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED"
+    }
+    checks = {
+        "program_stage_target_and_scope_match_manifest": (
+            result["program_id"] == PROGRAM_ID and result["semantic_stage_id"] == STAGE_ID
+            and result["scientific_target"] == TARGET and result["scope_hash"] == _stage()["canonical_scope_hash"]
+        ),
+        "attempt_three_open_event_is_bound": result["attempt_sequence_number"] == 3 and result["open_event_binding"]["sha256"] == _sha(OPEN_EVENT),
+        "immutable_stage_two_result_is_bound": result["stage_2_input_binding"]["sha256"] == _sha(STAGE2_RESULT),
+        "all_seven_exact_candidates_are_adjudicated_once": len(exact) == 7 and {row["record_id"] for row in exact} == exact_ids,
+        "all_18_contracts_have_one_terminal_adjudication": len(matrix) == 18 and len({(row["ccft_branch"], row["missing_contract_id"]) for row in matrix}) == 18,
+        "recovered_contracts_pass_all_six_criteria": len(recovered) == 4 and all(all(row["criteria"].values()) for row in recovered),
+        "recovered_contract_counts_close_by_branch": counts == {"CP_NLSE": 1, "LCRD_V3": 3, "TOTAL": 4},
+        "future_postulate_reduction_ledger_matches_recovered_set": {row["record_id"] for row in result["future_new_postulate_reduction_ledger"]} == {row["record_id"] for row in recovered},
+        "all_three_cp_conflicts_are_preserved_without_supersession": (
+            len(conflict["conflicts"]) == 3
+            and all(row["adjudication_status"] == "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED" for row in conflict["conflicts"])
+            and conflict["supersession_established_for_any_conflict"] is False
+            and conflict["chronology_used_to_select_a_contract"] is False
+        ),
+        "all_sources_are_portable_and_no_custody_block_exists": conflict["all_evidence_sources_git_portable"] is True and conflict["custody_or_provenance_block"] is False,
+        "no_new_search_overflow_or_external_evidence_was_used": result["stage_2_input_binding"]["new_source_search_performed"] is False and result["stage_2_input_binding"]["overflow_sources_used"] == 0,
+        "no_model_theorem_repair_postulate_promotion_or_physical_claim_occurred": all(value is False for value in result["nonclaim_boundary"].values()),
+        "stage_four_is_selected_but_unauthorized": result["stage_4_handoff"]["selected_target"] == NEXT_TARGET and result["stage_4_handoff"]["stage_4_authorized"] is False,
+        "terminal_outcome_is_positive_bounded_recovery": result["terminal_outcome"] == OUTCOME and result["lifecycle_result"] == "PASSED",
+    }
+    failed = [name for name, passed in checks.items() if not passed]
+    if failed:
+        raise ValueError(f"independent Stage-3 review failed: {failed}")
+    return {
+        "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0",
+        "schema_id": "toe.targeted_ccft.contract_adjudication.result_review.v0",
+        "captured_at_utc": captured_at_utc,
+        "program_id": PROGRAM_ID,
+        "semantic_stage_id": STAGE_ID,
+        "reviewed_result": {"path": RESULT_RELATIVE, "sha256": _sha(RESULT_PATH)},
+        "checks": checks,
+        "failed_checks": [],
+        "accepted": True,
+        "decision": "ACCEPT_FOUR_EXACT_CONTRACTS_RECOVERED_SELECT_STAGE_4_UNOPENED",
+        "scientific_interpretation": {
+            "exact_contracts_recovered": 4,
+            "cp_nlse_recovered": 1,
+            "lcrd_v3_recovered": 3,
+            "cp_nlse_equation_or_dispersion_resolved": False,
+            "ccft_v0_model_established": False,
+            "theorem_discovery_authorized": False,
+        },
+        "stage_4_authorized": False,
+        "status": "PASS",
+    }
+
+
+def _project(registry: dict[str, Any], result_sha256: str) -> None:
+    projection = registry["current_projection_v0"]
+    if projection["current_target"] != TARGET:
+        raise ValueError("open Stage-3 target is not current")
+    evidence = "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTContractAdjudicationResult.lean"
+    report = RESULT_RELATIVE
+    projection.update({
+        "active_lane": NEXT_TARGET, "current_target": NEXT_TARGET,
+        "current_target_kind": RESULT_KIND, "current_target_evidence": evidence,
+        "current_target_report": report, "current_target_outcome": OUTCOME,
+        "current_target_strict_outcome": STRICT_OUTCOME, "previous_target": TARGET,
+        "workstream_id": NEXT_TARGET,
+    })
+    registry.update({
+        "active_lane": NEXT_TARGET, "ACTIVE_LANE_v0": NEXT_TARGET,
+        "CURRENT_LIVE_NEXT_TARGET_v0": NEXT_TARGET, "PREVIOUS_LIVE_NEXT_TARGET_v0": TARGET,
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0": evidence, "CURRENT_LIVE_TARGET_REPORT_v0": report,
+        "CURRENT_LIVE_TARGET_OUTCOME_v0": OUTCOME, "CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0": STRICT_OUTCOME,
+        "CURRENT_LIVE_TARGET_KIND_v0": RESULT_KIND, "current_live_next_target": NEXT_TARGET,
+        "current_live_target": NEXT_TARGET, "current_live_target_evidence": evidence,
+        "current_live_target_kind": RESULT_KIND, "current_live_target_outcome": OUTCOME,
+        "current_live_target_report": report, "current_live_target_strict_outcome": STRICT_OUTCOME,
+        "current_target": NEXT_TARGET, "current_target_evidence": evidence,
+        "current_target_kind": RESULT_KIND, "current_target_outcome": OUTCOME,
+        "current_target_report": report, "current_target_strict_outcome": STRICT_OUTCOME,
+        "live_next_target": NEXT_TARGET, "live_next_target_evidence": evidence,
+        "live_next_target_kind": RESULT_KIND, "live_next_target_outcome": OUTCOME,
+        "live_next_target_report": report, "live_next_target_strict_outcome": STRICT_OUTCOME,
+    })
+    active = [item for item in registry["workstreams"] if item.get("status") == "active"]
+    if len(active) != 1 or active[0]["workstream_id"] != TARGET:
+        raise ValueError("active workstream is not open Stage 3")
+    workstream = active[0]
+    workstream.update({
+        "workstream_id": NEXT_TARGET, "active_lane": NEXT_TARGET,
+        "authorized_target": NEXT_TARGET, "authorized_next_strict_target": NEXT_TARGET,
+        "selected_next_target": NEXT_TARGET, "selected_next_target_kind": RESULT_KIND,
+        "authorization_evidence": evidence, "report": report, "report_path": report,
+        "report_sha256": result_sha256, "packet_result": OUTCOME,
+        "strict_packet_result": STRICT_OUTCOME, "consumed_target": TARGET,
+        "consumed_target_kind": "completed_bounded_scientific_stage",
+        "queue_scope": "Stage 3 recovered four exact contracts and preserved three CP conflicts; Stage 4 handoff remains separately unauthorized",
+        "claim_status": "No equation selection repair postulate CCFT-v0 theorem physical interpretation promotion or Stage 4 OPEN",
+    })
+    registry["active_lanes"] = [NEXT_TARGET]
+    registry["active_workstream"] = NEXT_TARGET
+    registry["active_workstreams"] = [dict(workstream)]
+    if NEXT_TARGET not in registry["next_strict_target_coverage"]:
+        registry["next_strict_target_coverage"].append(NEXT_TARGET)
+        registry["next_strict_target_coverage"].sort()
+    registry["current_target_state"].update({
+        "active_lane": NEXT_TARGET, "live_next_target": NEXT_TARGET,
+        "previous_live_next_target": TARGET, "live_next_target_kind": RESULT_KIND,
+        "live_next_target_evidence": evidence, "live_next_target_report": report,
+        "live_next_target_outcome": OUTCOME, "live_next_target_strict_outcome": STRICT_OUTCOME,
+    })
+
+
+def _write_lean(result: dict[str, Any]) -> None:
+    counts = result["exact_recovered_contract_count_by_branch"]
+    RESULT_MODULE_PATH.write_text(f'''namespace ToeFormal
+namespace Derivation
+namespace ToeTargetedCCFTContractAdjudicationResult
+
+def resultId : String := "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0"
+def reviewId : String := "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0"
+def programId : String := "{PROGRAM_ID}"
+def semanticStageId : String := "{STAGE_ID}"
+def terminalOutcome : String := "{OUTCOME}"
+def selectedNextTarget : String := "{NEXT_TARGET}"
+
+def attemptSequenceNumber : Nat := 3
+def exactCandidatesAdjudicated : Nat := 7
+def exactContractsRecovered : Nat := {counts['TOTAL']}
+def cpNlseContractsRecovered : Nat := {counts['CP_NLSE']}
+def lcrdV3ContractsRecovered : Nat := {counts['LCRD_V3']}
+def conflictsPreserved : Nat := 3
+def checklistCount : Nat := 18
+def equationOrDispersionSelected : Bool := false
+def newCCFTPostulateInserted : Bool := false
+def ccftV0Constructed : Bool := false
+def theoremDiscoveryOpened : Bool := false
+def evidencePromoted : Bool := false
+def stageFourAuthorized : Bool := false
+def reviewAccepted : Bool := true
+
+theorem four_exact_contracts_are_recovered_with_conflicts_preserved :
+    terminalOutcome = "{OUTCOME}" ∧ attemptSequenceNumber = 3 ∧
+    exactCandidatesAdjudicated = 7 ∧ exactContractsRecovered = 4 ∧
+    cpNlseContractsRecovered = 1 ∧ lcrdV3ContractsRecovered = 3 ∧
+    conflictsPreserved = 3 ∧ checklistCount = 18 ∧ reviewAccepted = true := by
+  decide
+
+theorem result_is_nonconstructive_and_stage_four_unopened :
+    equationOrDispersionSelected = false ∧ newCCFTPostulateInserted = false ∧
+    ccftV0Constructed = false ∧ theoremDiscoveryOpened = false ∧
+    evidencePromoted = false ∧ stageFourAuthorized = false := by
+  decide
+
+end ToeTargetedCCFTContractAdjudicationResult
+end Derivation
+end ToeFormal
+''', encoding="utf-8", newline="\n")
+    CURRENT_TARGET_PATH.write_text(f'''import {RESULT_MODULE}
+
+namespace ToeFormal
+namespace Derivation
+namespace CurrentTarget
+
+open ToeTargetedCCFTContractAdjudicationResult
+
+def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
+def currentLiveTarget : String := selectedNextTarget
+def currentEvidencePacketId : String := resultId
+def currentBoundedProgramId : String := programId
+def currentBoundedProgramState : String := "CLOSED"
+def currentTargetPhase : String := "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_STAGE_3_CLOSED_PASSED"
+def currentBoundedAttemptNumber : Nat := attemptSequenceNumber
+def lastClosedBoundedSemanticStage : String := semanticStageId
+def lastBoundedTerminalResult : String := "PASSED"
+
+theorem current_target_selects_stage_four_without_authorizing_it :
+    currentLiveTarget = "{NEXT_TARGET}" ∧ currentBoundedProgramId = "{PROGRAM_ID}" ∧
+    currentBoundedProgramState = "CLOSED" ∧ currentBoundedAttemptNumber = 3 ∧
+    exactContractsRecovered = 4 ∧ conflictsPreserved = 3 ∧
+    theoremDiscoveryOpened = false ∧ stageFourAuthorized = false := by
+  decide
+
+end CurrentTarget
+end Derivation
+end ToeFormal
+''', encoding="utf-8", newline="\n")
+    CURRENT_AUTHORITY_PATH.write_text(f'''import ToeFormal.Derivation.CurrentTarget
+import ToeFormal.Release.BoundedProgramGovernanceControlInstallationV0
+import ToeFormal.Release.BoundedProgramGovernanceControlInstallationResultReviewV0
+import ToeFormal.Release.ToeTargetedCCFTClosureContractExtractionStage2OpenAuthorityV0
+import ToeFormal.Release.ToeTargetedCCFTClosureSourceDiscoveryStage1OpenAuthorityV0
+import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityReviewV0
+import ToeFormal.Release.ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityV0
+
+namespace ToeFormal
+namespace Release
+namespace CurrentAuthority
+
+def aggregateTargetId : String := "ToeFormal.Release.CurrentAuthority"
+def currentTarget : String := Derivation.CurrentTarget.currentLiveTarget
+def currentEvidencePacketId : String := Derivation.CurrentTarget.currentEvidencePacketId
+def boundedProgramId : String := Derivation.CurrentTarget.currentBoundedProgramId
+def boundedProgramState : String := Derivation.CurrentTarget.currentBoundedProgramState
+def currentTargetPhase : String := Derivation.CurrentTarget.currentTargetPhase
+def boundedAttemptNumber : Nat := Derivation.CurrentTarget.currentBoundedAttemptNumber
+
+theorem current_authority_tracks_selected_unopened_stage_four :
+    currentTarget = "{NEXT_TARGET}" ∧ boundedProgramId = "{PROGRAM_ID}" ∧
+    boundedProgramState = "CLOSED" ∧ boundedAttemptNumber = 3 ∧
+    Derivation.ToeTargetedCCFTContractAdjudicationResult.exactContractsRecovered = 4 ∧
+    Derivation.ToeTargetedCCFTContractAdjudicationResult.stageFourAuthorized = false := by
+  native_decide
+
+theorem bounded_program_governance_installation_preserved_its_then_current_target :
+    BoundedProgramGovernanceControlInstallationV0.scientificTarget =
+      "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" ∧
+    BoundedProgramGovernanceControlInstallationV0.scientificTargetRotated = false := by
+  native_decide
+
+theorem bounded_program_governance_review_preserved_its_then_current_target :
+    BoundedProgramGovernanceControlInstallationResultReviewV0.scientificTarget =
+      "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0" := by
+  native_decide
+
+theorem stage_three_authority_and_review_remain_bound :
+    ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityV0.stageThreeOpenAuthorized = true ∧
+    ToeTargetedCCFTContractAdjudicationStage3OpenAuthorityReviewV0.accepted = true := by
+  native_decide
+
+end CurrentAuthority
+end Release
+end ToeFormal
+''', encoding="utf-8", newline="\n")
+
+
+def close_stage(*, closed_from_commit: str, captured_at_utc: str) -> str:
+    if _head() != closed_from_commit:
+        raise ValueError("closed_from_commit must equal current HEAD")
+    result = _load(RESULT_PATH)
+    review = _review(result, captured_at_utc)
+    _write(REVIEW_PATH, review)
+    registry = strict_json_loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+    migrated, relative_path, event = close_attempt(
+        registry, program_id=PROGRAM_ID, result_artifact_path=RESULT_RELATIVE,
+        review_artifact_path=REVIEW_RELATIVE, terminal_result="PASSED",
+        closed_from_commit=closed_from_commit,
+    )
+    event_path = REPO_ROOT / relative_path
+    write_event(event_path, event)
+    try:
+        _project(migrated, _sha(RESULT_PATH))
+        migrated = repair_registry(migrated)
+        validate_registry_extension(migrated)
+        _write_lean(result)
+        validation = {
+            "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_VALIDATION_v0",
+            "schema_id": "toe.targeted_ccft.contract_adjudication.validation.v0",
+            "captured_at_utc": captured_at_utc,
+            "program_id": PROGRAM_ID,
+            "semantic_stage_id": STAGE_ID,
+            "terminal_outcome": OUTCOME,
+            "lifecycle_result": "PASSED",
+            "artifact_hashes": {
+                "result_sha256": _sha(RESULT_PATH), "review_sha256": _sha(REVIEW_PATH),
+                "close_event_sha256": _sha(event_path), "close_event_hash": event["event_hash"],
+            },
+            "atomic_close_commit_expected_paths": _stage()["prospective_envelope"]["close_commit_exact_path_set"],
+            "scientific_validation": review["checks"],
+            "focused_python": {"status": "PENDING_PRECOMMIT"},
+            "focused_lean": {"status": "PENDING_PRECOMMIT"},
+            "full_lean_aggregate": {"status": "PENDING_PRECOMMIT"},
+            "deterministic_generation": {"status": "PENDING_PRECOMMIT"},
+            "governance_validation": {
+                "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+                "git_history_chronology": "REQUIRED_POST_COMMIT",
+                "precommit_full_history_validator_result": "EXPECTED_SINGLE_FAILURE_CLOSE_ARTIFACT_HAS_ZERO_INTRODUCTION_COMMITS",
+            },
+            "repository_validation": {
+                "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+                "git_diff_check": "PENDING_PRECOMMIT", "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+                "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+            },
+            "status": "STAGE_3_ATOMIC_CLOSE_READY_FOR_VALIDATION",
+        }
+        _write(VALIDATION_PATH, validation)
+        atomic_write_registry(REGISTRY_PATH, _registry_json_bytes(migrated))
+    except Exception:
+        REVIEW_PATH.unlink(missing_ok=True); event_path.unlink(missing_ok=True)
+        VALIDATION_PATH.unlink(missing_ok=True); RESULT_MODULE_PATH.unlink(missing_ok=True)
+        raise
+    return relative_path
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--closed-from-commit", required=True)
+    parser.add_argument("--captured-at-utc", required=True)
+    args = parser.parse_args(argv)
+    print(close_stage(closed_from_commit=args.closed_from_commit, captured_at_utc=args.captured_at_utc))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

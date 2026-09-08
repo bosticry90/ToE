@@ -1,0 +1,1035 @@
+{
+  "accepted_contract": {
+    "case_count": 39,
+    "diagnosis_execution_authorized": 1,
+    "diagnosis_execution_performed": 0,
+    "evaluation_path_count": 4,
+    "mutation_count": 10,
+    "oracle_availability_outcome_count": 2,
+    "principal_root_cause_outcome_count": 7,
+    "required_stop": "INDEPENDENT_DIAGNOSIS_RESULT_REVIEW",
+    "work_package_count": 9
+  },
+  "authority": {
+    "authorized_diagnosis_execution_count": 1,
+    "consumed_packet_verdict": "PREPARED_BOUNDED_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_V0",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_20260719_v0.md",
+        "sha256": "3d628f876acaed975011d9f14ae44f2d613322a8fe56f5f829699d3f616b67e3"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_20260719_v0.json",
+        "sha256": "0fbbc9f57f0c591248509f4f9621a9aa751bc17dcb9ba2e179360759350e2414"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_v0.py",
+        "sha256": "4041e7722bdec724dfc30d61bf12f0eeded7628f5f6b1e3514906f3d7d601aab"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_v0.py",
+        "sha256": "c7af9699b41e84c65b1ce3307a7f98ee59bc831852bc5b379d1a3baca0ab22d8"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOraclePacketV0.lean",
+        "sha256": "16fc52d04d649007d7e94b467d3c0a94cfc2f451e108f6e3bde1abecb808c946"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_review_v0.py",
+      "sha256": "478c7b3039322e9fc6d7ecbb591c9f98c05f2ef6801b6c9f9c20ac550a76ed82"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_REVIEW_20260719_v0.md",
+      "sha256": "aadba4fbfd969462a3b5394cba2e42848ba94126b6a438c9803e244775d5ff44"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOraclePacketReviewV0.lean",
+      "sha256": "4c0a0efe439cc7329dfc16d6830e910c07503969836badf29715a7bee653a35c"
+    },
+    "performed_diagnosis_execution_count": 0,
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_review_v0.py",
+      "sha256": "6c16c0c8f4ffd71de5a18f15fe16e5c7390b860cd3c58ec31a829bf2111a7d7b"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review accepts one bounded diagnostic contract and authorizes one diagnosis execution only. It performs no diagnostic calculation, accepts no root cause, changes no production method, and does not authorize repair, Stage A reopening, identifiability, V2, or Stage B.",
+  "independent_decision_contract_reproduction": {
+    "component_separation": {
+      "cancellation_ratio_frozen": true,
+      "combined_cannot_decide": true,
+      "components": [
+        "NEWTONIAN",
+        "YUKAWA",
+        "COMBINED_DIAGNOSTIC_ONLY"
+      ],
+      "passed": true
+    },
+    "dft_isolation": {
+      "alias_harmonic": 258,
+      "classification_rule": {
+        "analytic_fails": "ANGULAR_DFT_RESOLUTION_INDEPENDENTLY_INADEQUATE",
+        "analytic_passes_production_fails": "KERNEL_NOISE_DRIVES_DFT_FAILURE"
+      },
+      "convention": "c_n=(1/N)*sum_k(tau(theta_k)*exp(-i*n*theta_k))",
+      "expected_coefficient": "c_n=(A_n/2)*exp(i*phi_n)",
+      "passed": true,
+      "retained_harmonics": [
+        2,
+        4,
+        6
+      ],
+      "sample_counts": [
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    "mutation_routing": {
+      "distinct_designated_controls": 10,
+      "live_production_path_required": true,
+      "mutation_count": 10,
+      "passed": true,
+      "row_count": 10,
+      "test_substitute_forbidden": "FORBIDDEN"
+    },
+    "near_contact": {
+      "chi_edges": [
+        0.0,
+        0.25,
+        1.0,
+        4.0,
+        "INF"
+      ],
+      "dominance_threshold": "absolute_fraction_chi_le_1>=0.90",
+      "improvement_factor": 10.0,
+      "passed": true,
+      "record_count": 4
+    },
+    "root_cause_labels": {
+      "economic_predicate": "validated_error_extrapolation_cannot_reach_tolerance_within_frozen_3600_s_4096_MiB_budget",
+      "fixed_order_predicate": "oracle_passes_and_last_three_fixed_orders_improve_monotonically_but_order48_fails_accuracy_or_cost_rule",
+      "implementation_predicate": "one_specific_mutation_fingerprint_matches_and_independent_oracle_passes_and_error_is_not_removed_by_valid_refinement",
+      "multilabel": true,
+      "near_contact_predicate": "chi_le_1_absolute_fraction_at_least_0.90_and_decomposition_improves_error_at_least_10x",
+      "oracle_availability_count": 2,
+      "passed": true,
+      "principal_outcome_count": 7,
+      "priority_is_permutation": true,
+      "reference_predicate": "any_required_oracle_plateau_or_cross_oracle_check_fails",
+      "unresolved_behavior": "UNRESOLVED_IF_NO_FROZEN_PREDICATE_IS_SATISFIED"
+    },
+    "torque_ordering": {
+      "execution_order": "PAIR_ENERGY_ORACLES_MUST_PASS_BEFORE_TORQUE_TESTS",
+      "finite_difference_steps": [
+        0.001,
+        0.0005,
+        0.00025,
+        0.000125
+      ],
+      "passed": true,
+      "path_count": 3
+    }
+  },
+  "independent_domain_reproduction": {
+    "all_D_gt_R1_plus_R2": true,
+    "all_reconstructed_gaps_positive": true,
+    "all_reported_gaps_positive": true,
+    "case_count": 39,
+    "lambda_comparable_to_gap_present": true,
+    "lambda_comparable_to_radius_present": true,
+    "lambda_much_greater_than_geometry_present": true,
+    "lambda_much_less_than_gap_present": true,
+    "lambda_roles": [
+      "GAP_TRANSITION",
+      "LEGACY_FROZEN",
+      "LONG_VS_GEOMETRY",
+      "RADIUS_TRANSITION",
+      "SHORT_VS_GAP"
+    ],
+    "legacy_case_ids": [
+      "LEGACY_STAGE_A_00",
+      "LEGACY_STAGE_A_01",
+      "LEGACY_STAGE_A_02"
+    ],
+    "maximum_gap_reconstruction_absolute_error_m": 2.3445871979999033e-18,
+    "minimum_surface_gap_m": 0.0001,
+    "ratio_ranges": {
+      "R1_over_lambda": {
+        "maximum": 499.99999999999994,
+        "minimum": 0.02
+      },
+      "R2_over_lambda": {
+        "maximum": 999.9999999999999,
+        "minimum": 0.03
+      },
+      "g_over_R1": {
+        "maximum": 13.999999999999998,
+        "minimum": 0.02
+      },
+      "g_over_R2": {
+        "maximum": 13.999999999999998,
+        "minimum": 0.01
+      },
+      "g_over_lambda": {
+        "maximum": 10.0,
+        "minimum": 0.001414213562373095
+      }
+    },
+    "rows": [
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 200.0,
+        "R2_over_lambda": 300.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_SHORT_VS_GAP",
+        "g_over_R1": 0.05,
+        "g_over_R2": 0.03333333333333333,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 2.574980159653073e-19,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 20.0,
+        "R2_over_lambda": 30.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_GAP_TRANSITION",
+        "g_over_R1": 0.05,
+        "g_over_R2": 0.03333333333333333,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 2.574980159653073e-19,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.816496580927726,
+        "R2_over_lambda": 1.224744871391589,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_RADIUS_TRANSITION",
+        "g_over_R1": 0.05,
+        "g_over_R2": 0.03333333333333333,
+        "g_over_lambda": 0.0408248290463863,
+        "gap_reconstruction_absolute_error_m": 2.574980159653073e-19,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.0816496580927726,
+        "R2_over_lambda": 0.1224744871391589,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_LONG_VS_GEOMETRY",
+        "g_over_R1": 0.05,
+        "g_over_R2": 0.03333333333333333,
+        "g_over_lambda": 0.00408248290463863,
+        "gap_reconstruction_absolute_error_m": 2.574980159653073e-19,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 20.0,
+        "R2_over_lambda": 30.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_SHORT_VS_GAP",
+        "g_over_R1": 0.5,
+        "g_over_R2": 0.3333333333333333,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 2.0,
+        "R2_over_lambda": 3.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_GAP_TRANSITION",
+        "g_over_R1": 0.5,
+        "g_over_R2": 0.3333333333333333,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.816496580927726,
+        "R2_over_lambda": 1.224744871391589,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_RADIUS_TRANSITION",
+        "g_over_R1": 0.5,
+        "g_over_R2": 0.3333333333333333,
+        "g_over_lambda": 0.408248290463863,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.0816496580927726,
+        "R2_over_lambda": 0.1224744871391589,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_LONG_VS_GEOMETRY",
+        "g_over_R1": 0.5,
+        "g_over_R2": 0.3333333333333333,
+        "g_over_lambda": 0.0408248290463863,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 2.0,
+        "R2_over_lambda": 3.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_SHORT_VS_GAP",
+        "g_over_R1": 5.0,
+        "g_over_R2": 3.3333333333333335,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.2,
+        "R2_over_lambda": 0.3,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_GAP_TRANSITION",
+        "g_over_R1": 5.0,
+        "g_over_R2": 3.3333333333333335,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.816496580927726,
+        "R2_over_lambda": 1.224744871391589,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_RADIUS_TRANSITION",
+        "g_over_R1": 5.0,
+        "g_over_R2": 3.3333333333333335,
+        "g_over_lambda": 4.0824829046386295,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.02,
+        "R2_over_lambda": 0.03,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_LONG_VS_GEOMETRY",
+        "g_over_R1": 5.0,
+        "g_over_R2": 3.3333333333333335,
+        "g_over_lambda": 0.09999999999999999,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 499.99999999999994,
+        "R2_over_lambda": 499.99999999999994,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_SHORT_VS_GAP",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.02,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 6.098637220230962e-19,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 50.0,
+        "R2_over_lambda": 50.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_GAP_TRANSITION",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.02,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 6.098637220230962e-19,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 1.0,
+        "R2_over_lambda": 1.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_RADIUS_TRANSITION",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.02,
+        "g_over_lambda": 0.02,
+        "gap_reconstruction_absolute_error_m": 6.098637220230962e-19,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.09999999999999999,
+        "R2_over_lambda": 0.09999999999999999,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_LONG_VS_GEOMETRY",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.02,
+        "g_over_lambda": 0.002,
+        "gap_reconstruction_absolute_error_m": 6.098637220230962e-19,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 50.0,
+        "R2_over_lambda": 50.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_SHORT_VS_GAP",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.2,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 5.0,
+        "R2_over_lambda": 5.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_GAP_TRANSITION",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.2,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 1.0,
+        "R2_over_lambda": 1.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_RADIUS_TRANSITION",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.2,
+        "g_over_lambda": 0.2,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.09999999999999999,
+        "R2_over_lambda": 0.09999999999999999,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_LONG_VS_GEOMETRY",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.2,
+        "g_over_lambda": 0.02,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 5.0,
+        "R2_over_lambda": 5.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_SHORT_VS_GAP",
+        "g_over_R1": 2.0,
+        "g_over_R2": 2.0,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.5,
+        "R2_over_lambda": 0.5,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_GAP_TRANSITION",
+        "g_over_R1": 2.0,
+        "g_over_R2": 2.0,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 1.0,
+        "R2_over_lambda": 1.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_RADIUS_TRANSITION",
+        "g_over_R1": 2.0,
+        "g_over_R2": 2.0,
+        "g_over_lambda": 2.0,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.049999999999999996,
+        "R2_over_lambda": 0.049999999999999996,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_LONG_VS_GEOMETRY",
+        "g_over_R1": 2.0,
+        "g_over_R2": 2.0,
+        "g_over_lambda": 0.09999999999999999,
+        "gap_reconstruction_absolute_error_m": 1.734723475976807e-18,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 499.99999999999994,
+        "R2_over_lambda": 999.9999999999999,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_SHORT_VS_GAP",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.01,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 2.3445871979999033e-18,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 50.0,
+        "R2_over_lambda": 100.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_GAP_TRANSITION",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.01,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 2.3445871979999033e-18,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.7071067811865476,
+        "R2_over_lambda": 1.4142135623730951,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_RADIUS_TRANSITION",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.01,
+        "g_over_lambda": 0.01414213562373095,
+        "gap_reconstruction_absolute_error_m": 2.3445871979999033e-18,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.07071067811865475,
+        "R2_over_lambda": 0.1414213562373095,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_LONG_VS_GEOMETRY",
+        "g_over_R1": 0.02,
+        "g_over_R2": 0.01,
+        "g_over_lambda": 0.001414213562373095,
+        "gap_reconstruction_absolute_error_m": 2.3445871979999033e-18,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 50.0,
+        "R2_over_lambda": 100.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_SHORT_VS_GAP",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.1,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 5.0,
+        "R2_over_lambda": 10.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_GAP_TRANSITION",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.1,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.7071067811865476,
+        "R2_over_lambda": 1.4142135623730951,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_RADIUS_TRANSITION",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.1,
+        "g_over_lambda": 0.1414213562373095,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.07071067811865475,
+        "R2_over_lambda": 0.1414213562373095,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_LONG_VS_GEOMETRY",
+        "g_over_R1": 0.2,
+        "g_over_R2": 0.1,
+        "g_over_lambda": 0.01414213562373095,
+        "gap_reconstruction_absolute_error_m": 8.673617379884035e-19,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 5.0,
+        "R2_over_lambda": 10.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_SHORT_VS_GAP",
+        "g_over_R1": 2.0,
+        "g_over_R2": 1.0,
+        "g_over_lambda": 10.0,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "SHORT_VS_GAP",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.5,
+        "R2_over_lambda": 1.0,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_GAP_TRANSITION",
+        "g_over_R1": 2.0,
+        "g_over_R2": 1.0,
+        "g_over_lambda": 1.0,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "GAP_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.7071067811865476,
+        "R2_over_lambda": 1.4142135623730951,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_RADIUS_TRANSITION",
+        "g_over_R1": 2.0,
+        "g_over_R2": 1.0,
+        "g_over_lambda": 1.4142135623730951,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "RADIUS_TRANSITION",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.049999999999999996,
+        "R2_over_lambda": 0.09999999999999999,
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_LONG_VS_GEOMETRY",
+        "g_over_R1": 2.0,
+        "g_over_R2": 1.0,
+        "g_over_lambda": 0.09999999999999999,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 50.0,
+        "R2_over_lambda": 50.0,
+        "case_class": "LEGACY_STAGE_A_REPRODUCTION",
+        "case_id": "LEGACY_STAGE_A_00",
+        "g_over_R1": 0.19999999999999982,
+        "g_over_R2": 0.19999999999999982,
+        "g_over_lambda": 9.999999999999991,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "LEGACY_FROZEN",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 1.0,
+        "R2_over_lambda": 1.0,
+        "case_class": "LEGACY_STAGE_A_REPRODUCTION",
+        "case_id": "LEGACY_STAGE_A_01",
+        "g_over_R1": 3.999999999999999,
+        "g_over_R2": 3.999999999999999,
+        "g_over_lambda": 3.999999999999999,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "LEGACY_FROZEN",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      },
+      {
+        "D_gt_R1_plus_R2": true,
+        "R1_over_lambda": 0.049999999999999996,
+        "R2_over_lambda": 0.049999999999999996,
+        "case_class": "LEGACY_STAGE_A_REPRODUCTION",
+        "case_id": "LEGACY_STAGE_A_02",
+        "g_over_R1": 13.999999999999998,
+        "g_over_R2": 13.999999999999998,
+        "g_over_lambda": 0.6999999999999998,
+        "gap_reconstruction_absolute_error_m": 0.0,
+        "lambda_role": "LEGACY_FROZEN",
+        "reconstructed_gap_positive": true,
+        "reported_gap_positive": true
+      }
+    ],
+    "small_positive_gap_present": true,
+    "wide_separation_present": true
+  },
+  "independent_oracle_contract_reproduction": {
+    "newtonian_derivation": {
+      "energy_formula": "U_N(D)=-G*M1*M2/D",
+      "external_shell_theorem_domain": "STRICTLY_NONOVERLAPPING_HOMOGENEOUS_SPHERES_ONLY",
+      "mass_formula": "M_i=(4*pi/3)*rho_i*R_i^3",
+      "passed": true,
+      "unit_reduction": "(m^3*kg^-1*s^-2)*kg^2/m=kg*m^2*s^-2=J"
+    },
+    "path_independence": {
+      "adaptive_numeric_path": "ADAPTIVE_ARBITRARY_PRECISION_DIRECT_DENSITY",
+      "analytic_mathematical_path": "CLOSED_FORM_EXTERNAL_SPHERE_FIELD",
+      "analytic_production_import_forbidden": true,
+      "nearby_order_is_not_oracle": true,
+      "passed": true,
+      "path_ids": [
+        "P0_FROZEN_BINARY64_FOUR_DIMENSIONAL_GAUSS_LEGENDRE",
+        "R1_INDEPENDENT_ANALYTIC_SHELL_AND_FORM_FACTOR",
+        "R2_HIGH_PRECISION_RADIAL_FORM_FACTOR_INTEGRAL",
+        "R3_ADAPTIVE_ARBITRARY_PRECISION_DIRECT_FOUR_DIMENSIONAL_DENSITY"
+      ],
+      "production_coordinate_path": "FIXED_TENSOR_4D",
+      "reduced_mathematical_path": "ONE_DIMENSIONAL_RADIAL_FORM_FACTOR_INTEGRAL",
+      "unique_path_ids": true
+    },
+    "self_convergence": {
+      "absolute_tolerance_J": 1e-36,
+      "budget_exhaustion_behavior": "FAIL_CLOSED_REFERENCE_ORACLE_INADEQUATE",
+      "direct_adaptive_degree_ladder": [
+        6,
+        8,
+        10
+      ],
+      "direct_precision_ladder": [
+        50,
+        80,
+        120
+      ],
+      "passed": true,
+      "plateau_before_production_judgment": true,
+      "plateau_levels": [
+        "80_DIGITS_DEGREE_8",
+        "120_DIGITS_DEGREE_10"
+      ],
+      "relative_tolerance": 1e-10,
+      "semi_analytic_precision_ladder": [
+        50,
+        80,
+        120
+      ],
+      "work_caps": {
+        "evaluations_per_anchor": 2000000,
+        "memory_mib": 4096,
+        "seconds_per_anchor": 180,
+        "total_seconds": 3600
+      }
+    },
+    "stable_evaluation": {
+      "large_x_scaled_branch_required": true,
+      "passed": true,
+      "radial_cross_oracle_covers_all_frozen_cases": true,
+      "small_x_branch_active_on_frozen_grid": false,
+      "small_x_branch_max": 0.001,
+      "small_x_series": "F(x)=1+x^2/10+x^4/280+x^6/15120+O(x^8)",
+      "stable_combined_yukawa": "U_Y=-A_Y*G*M1*M2*H(x1)*H(x2)*exp(-g/lambda)/D",
+      "stable_scaled_factor": "H(x)=exp(-x)*F(x)=3*((x-1)+(x+1)*exp(-2*x))/(2*x^3)",
+      "x_max": 999.9999999999999,
+      "x_min": 0.02
+    },
+    "yukawa_derivation": {
+      "amplitude": 0.3333333333333333,
+      "both_form_factors_present": true,
+      "center_distance_exponential_present": true,
+      "form_factor": "F(x)=3*(x*cosh(x)-sinh(x))/x^3",
+      "mass_formula": "M_i=(4*pi/3)*rho_i*R_i^3",
+      "passed": true,
+      "separate_from_newtonian_shell_statement": true,
+      "stable_gap_exponential_present": true,
+      "unit_reduction": "dimensionless_A_Y_F1_F2_exp_times_G*M1*M2/D=J"
+    }
+  },
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 36,
+    "pass_count": 36,
+    "rows": [
+      {
+        "detail": "five packet surfaces hash-verified",
+        "gate_id": "R01_EXACT_PACKET_CUSTODY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "detail": "0/9 work packages and no kernel/oracle calls",
+        "gate_id": "R02_PENDING_REVIEW_AND_ZERO_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "detail": "minimum gap 1.00000000000000005e-04 m",
+        "gate_id": "R03_ALL_39_CASES_STRICTLY_NONOVERLAPPING",
+        "status": "PASS"
+      },
+      {
+        "detail": "D=R1+R2+g reproduced independently",
+        "gate_id": "R04_CENTER_DISTANCE_GAP_RADIUS_SEMANTICS",
+        "status": "PASS"
+      },
+      {
+        "detail": "g/R, R/lambda, and g/lambda strata reproduced",
+        "gate_id": "R05_DIMENSIONLESS_REGIME_COVERAGE",
+        "status": "PASS"
+      },
+      {
+        "detail": "all accepted failure configurations retained",
+        "gate_id": "R06_THREE_LEGACY_FAILURE_CASES_PRESENT",
+        "status": "PASS"
+      },
+      {
+        "detail": "external nonoverlap shell theorem and joule units",
+        "gate_id": "R07_NEWTONIAN_SHELL_ORACLE_DERIVATION",
+        "status": "PASS"
+      },
+      {
+        "detail": "separate Yukawa exterior-field derivation obligations",
+        "gate_id": "R08_YUKAWA_FORM_FACTOR_DERIVATION",
+        "status": "PASS"
+      },
+      {
+        "detail": "A_Y=1/3, sphere mass formula, energy in J",
+        "gate_id": "R09_A_Y_MASS_DENSITY_AND_UNITS",
+        "status": "PASS"
+      },
+      {
+        "detail": "exp(-D/lambda)*F1*F2 and stable exp(-g/lambda)*H1*H2",
+        "gate_id": "R10_CENTER_EXPONENT_AND_TWO_FORM_FACTORS",
+        "status": "PASS"
+      },
+      {
+        "detail": "small-x series frozen; grid minimum x exceeds branch threshold",
+        "gate_id": "R11_SMALL_X_SERIES_STABILITY",
+        "status": "PASS"
+      },
+      {
+        "detail": "scaled H form avoids separate cosh/sinh overflow through x=1000",
+        "gate_id": "R12_LARGE_X_SCALED_STABILITY",
+        "status": "PASS"
+      },
+      {
+        "detail": "production, analytic, radial, and adaptive identities distinct",
+        "gate_id": "R13_FOUR_PATH_IDENTITIES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "detail": "closed-form and radial paths do not import production form factor",
+        "gate_id": "R14_GENUINE_REFERENCE_INDEPENDENCE",
+        "status": "PASS"
+      },
+      {
+        "detail": "orders 8 through 48 route all four dimensions",
+        "gate_id": "R15_ALL_PRODUCTION_DIMENSIONS_REFINE",
+        "status": "PASS"
+      },
+      {
+        "detail": "precision and adaptive-degree ladders plus absolute/relative plateaus",
+        "gate_id": "R16_REFERENCE_SELF_CONVERGENCE",
+        "status": "PASS"
+      },
+      {
+        "detail": "evaluation, time, memory, and total-work caps frozen",
+        "gate_id": "R17_WORK_CAP_FAIL_CLOSED_BEHAVIOR",
+        "status": "PASS"
+      },
+      {
+        "detail": "combined total cannot decide component accuracy",
+        "gate_id": "R18_NEWTONIAN_YUKAWA_COMPONENT_SEPARATION",
+        "status": "PASS"
+      },
+      {
+        "detail": "chi bins, contribution fractions, and tenfold improvement rule",
+        "gate_id": "R19_NEAR_CONTACT_NUMERICAL_PROFILE",
+        "status": "PASS"
+      },
+      {
+        "detail": "four precision and four summation modes plus explicit azimuth control",
+        "gate_id": "R20_PRECISION_SUMMATION_SCALING_SYMMETRY",
+        "status": "PASS"
+      },
+      {
+        "detail": "torque receives no verdict until energy oracles pass",
+        "gate_id": "R21_PAIR_ENERGY_PRECEDES_TORQUE",
+        "status": "PASS"
+      },
+      {
+        "detail": "analytic, force/lever, and five-point derivative paths",
+        "gate_id": "R22_THREE_TORQUE_PATHS_AND_REFINEMENT",
+        "status": "PASS"
+      },
+      {
+        "detail": "known n=2,4,6 coefficients under Stage A phase convention",
+        "gate_id": "R23_ANALYTIC_DFT_COEFFICIENT_PHASE_NORMALIZATION",
+        "status": "PASS"
+      },
+      {
+        "detail": "n=258 aliases at N=256 but not retained N=512 coefficients",
+        "gate_id": "R24_HIGH_HARMONIC_ALIAS_PROBE",
+        "status": "PASS"
+      },
+      {
+        "detail": "DFT implementation and kernel-noise classifications remain separable",
+        "gate_id": "R25_PRODUCTION_DFT_AFTER_VALIDATED_TORQUE_ONLY",
+        "status": "PASS"
+      },
+      {
+        "detail": "geometry, weights, Yukawa, torque, and DFT mutations exact",
+        "gate_id": "R26_EXACT_TEN_MUTATIONS",
+        "status": "PASS"
+      },
+      {
+        "detail": "production diagnostic path required; substitutes forbidden",
+        "gate_id": "R27_MUTATIONS_USE_LIVE_DIAGNOSTIC_PATH",
+        "status": "PASS"
+      },
+      {
+        "detail": "distinct oracle, implementation, cubature, near-contact, DFT, and cost predicates",
+        "gate_id": "R28_EVIDENCE_TRIGGERED_ROOT_CAUSE_PREDICATES",
+        "status": "PASS"
+      },
+      {
+        "detail": "simultaneous causes allowed; principal label priority frozen",
+        "gate_id": "R29_MULTILABEL_AND_PRINCIPAL_PRIORITY",
+        "status": "PASS"
+      },
+      {
+        "detail": "no final vector, Jacobian, SVD, eta, forecast, or alpha claim",
+        "gate_id": "R30_DIAGNOSTIC_OUTPUT_CEILING",
+        "status": "PASS"
+      },
+      {
+        "detail": "contract metadata only",
+        "gate_id": "R31_PREPARATION_DID_NOT_EXECUTE_SCIENCE",
+        "status": "PASS"
+      },
+      {
+        "detail": "review acceptance authorizes one bounded diagnosis only",
+        "gate_id": "R32_EXACTLY_ONE_DIAGNOSIS_EXECUTION_ELIGIBLE",
+        "status": "PASS"
+      },
+      {
+        "detail": "diagnosis cannot fix and rerun",
+        "gate_id": "R33_NO_REPAIR_OR_METHOD_REPLACEMENT",
+        "status": "PASS"
+      },
+      {
+        "detail": "Stage A remains closed",
+        "gate_id": "R34_NO_STAGE_A_VECTOR_OR_IDENTIFIABILITY",
+        "status": "PASS"
+      },
+      {
+        "detail": "stochastic firewall preserved",
+        "gate_id": "R35_NO_AUTOMATIC_V2_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "detail": "no remedy is self-authorized by diagnosis",
+        "gate_id": "R36_POST_DIAGNOSIS_REVIEW_AND_SELECTOR_REQUIRED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_REVIEW_20260719_v0",
+  "schema_id": "toe.scalar_only_yukawa.sphere_kernel_diagnosis_and_reference_oracle.packet_review.v0",
+  "scope": {
+    "automatic_v2_authorized": false,
+    "diagnosis_execution_performed": false,
+    "eta_lambda_authorized": false,
+    "final_real_150_vector_authorized": false,
+    "identifiability_authorized": false,
+    "immediate_diagnostic_retry_authorized": false,
+    "implementation_correction_authorized": false,
+    "independent_packet_review_executed": true,
+    "interaction_value_computed_during_review": false,
+    "jacobian_authorized": false,
+    "kernel_diagnosis_contract_ready": true,
+    "numerical_alpha_bound_computed": false,
+    "one_bounded_diagnosis_execution_authorized": true,
+    "packet_custody_verified": true,
+    "production_integration_method_replacement_authorized": false,
+    "production_kernel_called_during_review": false,
+    "reference_oracle_called_during_review": false,
+    "root_cause_computed_during_review": false,
+    "scalar_branch_adopted": false,
+    "sensitivity_forecast_authorized": false,
+    "stage_a_reopening_authorized": false,
+    "stage_b_authorized": false,
+    "stage_b_eligible": false,
+    "stochastic_packet_preparation_authorized": false,
+    "svd_authorized": false
+  },
+  "selected_next_target": "execute_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_v0_once",
+  "selected_next_target_kind": "ONE_BOUNDED_DIAGNOSIS_EXECUTION_ONLY_NO_REPAIR_NO_STAGE_A_RERUN",
+  "status": "INDEPENDENT_PACKET_REVIEW_COMPLETE",
+  "target": "review_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_v0_result",
+  "verdict": "KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_CONTRACT_READY"
+}

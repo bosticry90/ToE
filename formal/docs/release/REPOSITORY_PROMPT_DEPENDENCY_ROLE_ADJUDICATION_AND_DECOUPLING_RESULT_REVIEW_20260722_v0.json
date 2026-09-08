@@ -1,0 +1,96 @@
+{
+  "schema_id": "REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_REVIEW_20260722_v0",
+  "reviewed_result_commit": "a5ceca5f6ac47ef0f7beacda0b0d17aae97217d8",
+  "reviewed_result_path": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_20260722_v0.json",
+  "reviewed_result_sha256": "88a9007e0891d9222a29fd5d598cf5f4eb1021219f4c117577273d6748ec7182",
+  "review_execution": {
+    "clean_detached_worktree": true,
+    "worktree_head": "a5ceca5f6ac47ef0f7beacda0b0d17aae97217d8",
+    "recomputation_log_external_path": "INDEPENDENT_REVIEW_RECOMPUTATION_v0.log",
+    "recomputation_log_sha256": "1f681ecbc957a584ada410524d064c9bffd50799afb7d726dccd780536b71cef",
+    "recomputation_log_bytes": 1689,
+    "review_guard_tests": {
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "tracked_status_after": "EMPTY"
+    }
+  },
+  "independently_recomputed_checks": {
+    "accepted_line_ending_repair_ancestor": true,
+    "accepted_clustering_result_ancestor": true,
+    "implementation_commit_ancestor": true,
+    "all_43_consumers_have_one_disposition": true,
+    "disposition_counts_exact": true,
+    "blind_global_hash_replacement_absent": true,
+    "legacy_hash_path_set_equals_inventory": true,
+    "demoted_consumers_read_prompt_checkout_bytes": 0,
+    "frozen_v2_blob_identity_preserved": true,
+    "prompt_git_blob_unchanged": true,
+    "formal_output_tree_unchanged": true,
+    "toeformal_tree_unchanged": true,
+    "claim_registry_target_unchanged": true,
+    "original_family_inventory_count": 206,
+    "passed_after_decoupling": 195,
+    "explicitly_reclassified_with_evidence": 11,
+    "reclassified_failure_mentions_prompt_identity": 0,
+    "unclassified_outcomes": 0,
+    "lf_focused_passed": 214,
+    "lf_focused_failed": 0,
+    "crlf_focused_passed": 214,
+    "crlf_focused_failed": 0,
+    "lf_validation_status_after": "EMPTY",
+    "crlf_validation_status_after": "EMPTY",
+    "dirty_main_tracked_count": 7,
+    "dirty_main_untracked_count": 622,
+    "dirty_main_total_count": 629
+  },
+  "acceptance_criteria": {
+    "all_43_consumers_role_adjudicated": "PASS",
+    "blind_global_hash_replacement_prohibited": "PASS",
+    "prompt_substantive_content_unchanged": "PASS",
+    "scientific_and_governance_artifacts_unchanged": "PASS",
+    "registry_target_unchanged": "PASS",
+    "v2_enrollment_not_authorized": "PASS",
+    "lf_focused_checkout": "PASS",
+    "crlf_focused_checkout": "PASS",
+    "tracked_status_after_validation": "EMPTY",
+    "unexpected_untracked_source": "NONE",
+    "original_206_outcomes": "195_PASS_11_EXPLICITLY_RECLASSIFIED_WITH_EVIDENCE"
+  },
+  "reclassification_review": {
+    "environment_identity_defect_outcomes": 6,
+    "stale_v2_packet_expectation_outcomes": 5,
+    "prompt_identity_outcomes_remaining": 0,
+    "finding": "The 11 residual outcomes demonstrate independent environment/path and stale selector-input causes; they are not Prompt dependency failures and were not repaired in this bounded packet."
+  },
+  "preservation_review": {
+    "prompt_classification": "NONAUTHORITATIVE_WORKFLOW_INPUT",
+    "scientific_role": "NONSCIENTIFIC",
+    "authority_effect": "NONE",
+    "decision_effect": "NONE",
+    "v2_scientific_or_governance_content_changed": false,
+    "maxwell_dirac_or_scalar_yukawa_artifacts_changed": false,
+    "scientific_authority_changed": false
+  },
+  "limitations": {
+    "broad_python_baseline_reassessed": false,
+    "broad_repository_recovery_established": false,
+    "lean_dependency_bootstrap_assessed": false,
+    "v2_enrollment_established": false,
+    "scientific_resumption_established": false
+  },
+  "verdict": "ACCEPT_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_STILL_BLOCKED",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "authority_closure": {
+    "repair_implementation_cycles_remaining": 0,
+    "independent_result_reviews_remaining": 0,
+    "automatic_successor_authorized": false
+  },
+  "next_fresh_selector_options": [
+    "AUTHORIZE_BOUNDED_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT",
+    "PRESERVE_DECOUPLING_RESULT_AND_DEFER_RECOVERY"
+  ]
+}

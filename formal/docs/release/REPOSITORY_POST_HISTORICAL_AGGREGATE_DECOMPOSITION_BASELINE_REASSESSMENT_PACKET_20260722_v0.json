@@ -1,0 +1,106 @@
+{
+  "schema_id": "REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_PACKET_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:54:37Z",
+  "target": "execute_bounded_post_historical_aggregate_decomposition_baseline_reassessment_v0",
+  "status": "AUTHORIZED_ONE_NONMUTATING_MAPPED_FROZEN_INVENTORY_REASSESSMENT",
+  "accepted_lineage": {
+    "aggregate_implementation_commit": "b9779540452294216b3dd1850f2f698e9dca4ca1",
+    "aggregate_implementation_review": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0.json",
+    "aggregate_implementation_review_sha256": "03f15009105afb50173c303cc72c3519311b1f164fcb97e8f02e4d2054d7ed3b"
+  },
+  "prior_frozen_inventory": {
+    "external_path": ".toe-recovery/custody-v0/broad-python-first-cause-clustering-v0/post_repair_nonlean_collected_node_ids.txt",
+    "sha256": "9fb439dcb59609622b7151355461b3fccb21600e53d48d5f963db89a5e8df139",
+    "node_id_count": 13756
+  },
+  "reviewed_node_id_substitutions": [
+    {
+      "prior_node_id": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py::test_all_remediation_reports_exist",
+      "current_node_id": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py::test_aggregate_report_existence_expectation_is_formally_retired",
+      "disposition": "FORMALLY_RETIRED_OBLIGATION_SLOT"
+    },
+    {
+      "prior_node_id": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py::test_all_report_controls_preserve_invariance",
+      "current_node_id": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py::test_aggregate_control_invariance_is_decomposed_to_identity_local_routes",
+      "disposition": "DECOMPOSED_OBLIGATION_SLOT"
+    }
+  ],
+  "execution_inventory_contract": {
+    "method": "Replace exactly the two reviewed retired node IDs in place; preserve the other 13,754 node IDs and complete ordering exactly.",
+    "canonical_obligation_slots": 13756,
+    "substitutions": 2,
+    "unmapped_additions_executed": 0,
+    "unreviewed_removals": 0,
+    "canonicalize_replacement_ids_back_to_prior_ids_for_status_delta": true
+  },
+  "prior_outcome_baseline": {
+    "entries_path": ".toe-recovery/custody-v0/post-prompt-decoupling-baseline-reassessment-v0/POST_PROMPT_DECOUPLING_OUTCOME_ENTRIES_v0.json",
+    "entries_sha256": "7d0d0394a535ce9f9c0beb3333adfae5d162f168cf469a766f6eebe043857c29",
+    "nonpassing": 530,
+    "family_summary_path": ".toe-recovery/custody-v0/post-prompt-decoupling-baseline-reassessment-v0/POST_PROMPT_DECOUPLING_FIRST_CAUSE_CLUSTERS_v0.json",
+    "family_summary_sha256": "b906b542a060cfc04e7737813a2a0eaed6b4634d9a7ae798b0bb4d9ee8e49222"
+  },
+  "current_collection_comparison": {
+    "required": true,
+    "scope": "formal/python/tests with the same nine Lean build-gate exclusions",
+    "record_added_removed_common_ids": true,
+    "newly_collected_tests_not_automatically_added_to_execution_inventory": true,
+    "replacement_ids_must_be_reported_separately_from_unrelated_additions": true
+  },
+  "required_measurements": [
+    "exact pass/fail/error/skip totals for the 13,756 mapped obligation slots",
+    "status of the two former aggregate outcomes and their reviewed replacements",
+    "new identity-local failures attributable to routing decomposition",
+    "remaining outcomes from the original 222 missing-artifact family",
+    "remaining status and causal structure of the 185 fixture-candidate cohort",
+    "status of the thirteen post-decoupling custody-currency outcomes",
+    "exhaustive remaining first-cause family totals",
+    "tracked and unexpected-untracked status after validation",
+    "highest-leverage remaining maintenance family"
+  ],
+  "authorized_cycle": {
+    "full_mapped_frozen_inventory_runs": 1,
+    "current_collection_comparisons": 1,
+    "independent_result_reviews": 1,
+    "repair_actions": 0,
+    "test_or_source_modifications": 0,
+    "report_or_fixture_generation": 0,
+    "lean_actions": 0,
+    "scientific_actions": 0,
+    "automatic_successor_actions": 0
+  },
+  "validation_guard": "formal.python.tools.validation_source_cleanliness --require-clean-start",
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/post-historical-aggregate-decomposition-baseline-reassessment-v0",
+    "pytest_cache": "DISABLED",
+    "python_bytecode": "DISABLED",
+    "pytest_basetemp": "AUTHORIZED_RECOVERY_ROOT",
+    "canonical_worktrees": "WRITE_PROHIBITED"
+  },
+  "acceptance_requirements": {
+    "mapped_execution_slots": 13756,
+    "exact_prior_order_except_two_reviewed_substitutions": true,
+    "all_outcomes_exhaustively_classified": true,
+    "validation_behavior": "READ_ONLY",
+    "tracked_checkout_after": "CLEAN",
+    "unexpected_untracked_source": 0,
+    "dirty_main": "BYTE_UNCHANGED",
+    "broad_baseline_delta_claim_only_from_measured_run": true,
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "modifying a test or source file",
+    "repairing any measured failure",
+    "creating or regenerating reports or fixtures",
+    "scaling the fixture pilot",
+    "reading dirty-main report contents for analysis",
+    "Lean work",
+    "registry rotation",
+    "V2 enrollment",
+    "scientific execution",
+    "automatic successor cycle"
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,115 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_STAGE_3_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_STAGE_3_OPEN",
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_v0.json",
+      "role": "passed Stage 2 result containing 23 source-bound evidence records and the complete 18-item checklist ledger",
+      "sha256": "b58b12e816db18dbda12af9b53ead28fcfe40c359751dfa9934da7fcbb5df7cf"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_RESULT_REVIEW_v0.json",
+      "role": "independent Stage 2 result review and nonadjudication boundary",
+      "sha256": "4a11d7b8fb6ce6031943cec88f3921ffba828678fc3929af6821ab547d4940ec"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_VALIDATION_v0.json",
+      "role": "Stage 2 validation record",
+      "sha256": "f34aff54553dadc67a72cf6a602c7bb157ec685cf8016b1c0b8f7cf8f0ea699d"
+    },
+    {
+      "path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_02_CLOSE_v0.json",
+      "role": "immutable passed Stage 2 CLOSE event",
+      "sha256": "4457e5de142f8ed1abf9846d7c6417fea2263e88bb3a7e13bf86bfe68d55b402"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "5b6cf39bbf3e4f8bf076dba1817778547410a8d7950164ce5b1c27d0f977410a",
+    "canonical_target": "adjudicate_toe_targeted_ccft_contract_completeness_and_conflicts_v0",
+    "semantic_stage_id": "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION",
+    "stage_number": 3
+  },
+  "captured_at_utc": "2026-08-02T01:18:00Z",
+  "conflict_preservation_boundary": {
+    "additive_frequency_conflict_resolution_record_ids": [
+      "CP_FREQ_001",
+      "CP_FREQ_002"
+    ],
+    "conflicted_checklist_count": 3,
+    "final_nonlinear_equation_record_ids": [
+      "CP_EQ_001",
+      "CP_EQ_002",
+      "CP_EQ_003"
+    ],
+    "interaction_dispersion_record_ids": [
+      "CP_DISP_001",
+      "CP_DISP_002"
+    ],
+    "selection_or_repair_authorized": false
+  },
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 3 scope",
+      "sha256": "f69d6072ce6e86954ebb47d79ecf08b0101b6b6bca288a9318f684377acc891f"
+    }
+  ],
+  "exact_candidate_adjudication_criteria": [
+    "source_bound_evidence_is_explicit_and_portable",
+    "contract_content_is_materially_complete_for_its_declared_role",
+    "no incompatible source record defeats the contract",
+    "contract_is_general_enough_for_a_model contract rather than only one numerical example",
+    "contract_is source recovered rather than inferred from a numerical default",
+    "contract can reduce a specifically named future CCFT-v0 postulate"
+  ],
+  "exact_candidate_record_ids": [
+    "CP_BOUNDARY_001",
+    "CP_CONSERVE_001",
+    "CP_FAILURE_001",
+    "LCRD_STATE_001",
+    "LCRD_PARAM_001",
+    "LCRD_CLOSURE_001",
+    "LCRD_COUPLING_001"
+  ],
+  "permitted_work": [
+    "adjudicate every one of the seven exact-class records against completeness conflict generality provenance portability and future-postulate-reduction criteria",
+    "classify every one of the 18 frozen checklist contracts without reading new sources or replacing the Stage 2 evidence set",
+    "preserve the three CP-NLSE equation and dispersion conflicts without choosing or repairing a formula",
+    "distinguish a complete recovered contract from an exact excerpt whose applicability is blocked or whose scope is configuration-bound",
+    "produce a contract-by-contract completeness matrix primary-source conflict and portability adjudication exact count by branch and future-postulate-reduction ledger",
+    "produce an independently reviewed atomic Stage 3 CLOSE"
+  ],
+  "prohibited_work": [
+    "traverse repository or archive roots or consume any additional content-search pass",
+    "use or rerank any of the 137 overflow sources",
+    "resolve a source conflict by preference chronology elegance or convenience",
+    "repair harmonize derive or select the CP-NLSE governing equation or interaction dispersion",
+    "promote a numerical default test example or documentary summary into a model contract",
+    "insert a new CCFT postulate or construct select or validate CCFT-v0",
+    "open a theorem-discovery lane prepare a theorem packet or attempt a proof counterexample or new calculation",
+    "add C_FINITE_APPROXIMATION C_IDENTIFIABILITY or C_COMPLEXITY to any physical action",
+    "promote evidence claim physical operationalization or repository exhaustion",
+    "open Stage 4 automatically"
+  ],
+  "required_outputs": [
+    "contract_by_contract_completeness_matrix",
+    "primary_source_conflict_supersession_and_portability_adjudication",
+    "exact_recovered_contract_count_by_branch",
+    "future_new_postulate_reduction_ledger"
+  ],
+  "scientific_input_summary": {
+    "checklist_items": 18,
+    "conflicted_checklist_items": 3,
+    "contract_records": 23,
+    "exact_candidate_records": 7,
+    "frozen_sources": 96,
+    "new_source_search_authorized": false,
+    "overflow_sources_available_to_stage_3": 0
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_3_OPEN_ONLY",
+  "terminal_outcomes": [
+    "ONE_OR_MORE_EXACT_CCFT_CLOSURE_CONTRACTS_RECOVERED",
+    "NO_EXACT_CCFT_CLOSURE_CONTRACT_RECOVERED",
+    "CONTRACT_ADJUDICATION_BLOCKED_BY_UNRESOLVED_CUSTODY_OR_PROVENANCE"
+  ]
+}

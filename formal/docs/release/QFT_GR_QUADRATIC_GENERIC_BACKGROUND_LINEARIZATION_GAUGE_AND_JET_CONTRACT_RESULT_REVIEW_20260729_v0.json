@@ -1,0 +1,55 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE"
+  ],
+  "authority_rotation": {
+    "stage_1_result_accepted": true,
+    "stage_2_component_expansion_authorized": true,
+    "stage_3_companion_operator_authorized": false,
+    "stage_4_constraint_quotient_authorized": false,
+    "stage_5_propagator_growth_authorized": false,
+    "subsidiary_scientific_target_authorized": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "Minkowski_control_is_exact": true,
+    "accepted_64_equations_remain_input_not_stage_1_conclusion": true,
+    "bounded_open_event_consumed": true,
+    "claim_ceiling_is_respected": true,
+    "finite_jet_order_is_explicit": true,
+    "reduced_and_metric_regularity_are_separate": true,
+    "regular_stratum_is_local_and_conditioned": true,
+    "rewrite_termination_and_confluence_are_structural": true,
+    "strict_harmonic_zero_jet_contract_is_exact": true,
+    "ten_chart_tracefree_atlas_is_complete": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "GENERIC_BACKGROUND_LINEARIZATION_COMPONENT_COMPLETE",
+    "EXACT_GENERIC_FROZEN_COMPANION_OPERATOR",
+    "CONSTRAINT_TANGENT_PROJECTOR",
+    "GENERIC_FINITE_SOBOLEV_LOSS",
+    "VARIABLE_COEFFICIENT_LINEAR_ESTIMATE",
+    "QUASILINEAR_OR_LOCAL_WELL_POSEDNESS"
+  ],
+  "review_target": "review_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0_result",
+  "reviewed_calculation": {
+    "canonical_bytes_match": true,
+    "canonical_sha256_recomputed": "f3e73a52a9c8a311eb49675fdf6b786a5bce32bba3ffa58264c1e977837eaae2",
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-GENERIC-BACKGROUND-LINEARIZATION-GAUGE-AND-JET-CONTRACT-v0.json",
+    "sha256": "f3e73a52a9c8a311eb49675fdf6b786a5bce32bba3ffa58264c1e977837eaae2"
+  },
+  "reviewer_independence": {
+    "audits_claim_ceiling": true,
+    "audits_regularity_boundary": true,
+    "imports_calculation_module": false,
+    "recomputes_Minkowski_sparse_hash": true,
+    "recomputes_atlas_inventory": true,
+    "recomputes_rewrite_dependency_order": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_RESULT_REVIEW_20260729_v0",
+  "selected_next_target": "derive_qft_gr_quadratic_component_expanded_generic_background_linearization_v1",
+  "terminal_result": "PASSED",
+  "verdict": "ACCEPT_STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_AUTHORIZE_BOUNDED_STAGE_2_ONLY"
+}

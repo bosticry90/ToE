@@ -1,0 +1,19 @@
+{
+  "schema_id": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_SELECTION_20260724_v0",
+  "captured_at_utc": "2026-07-24T22:54:52Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
+    "PRESERVE_PILLAR_ARTIFACT_CURRENCY_ADJUDICATION_AND_DEFER_REPAIR"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
+  "target": "implement_repository_pillar_historical_artifact_currency_role_separation_repair_v0_once",
+  "selection_basis": "The accepted adjudication maps all 16 outcomes and 17 bindings to four fully proven historical-versus-current role collisions, establishes exact frozen identities where required, finds no provenance gap or scientific discrepancy, and justifies one narrow role-separation repair.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "56920ed033823c50a88e2664536b68b4c5cebd3edf01f1f9008d32fc130ea6f4",
+    "commit": "3dab04288d861758d3d3fe06d1a664b055cf079a"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

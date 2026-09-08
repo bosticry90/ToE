@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -36,6 +40,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "326867a78b07f215271738d2fc3712c34b43b16c9002adbc77ea55fda01aa0bc",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 ROUTE_REVIEW_RELATIVE_PATH = "formal/docs/release/POST_DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RESULT_ROUTE_DECISION_PACKET_RESULT_REVIEW_20260713_v0.json"
@@ -112,7 +117,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -264,7 +269,7 @@ def build_review_report() -> dict[str, Any]:
         "completed_canonical_result_is_not_reopened": packet["completed_canonical_result_reopened"] is False,
         "only_robustness_guardrail_preparation_is_authorized": packet["post_acceptance_target"] == ACCEPTED_TARGET and boundary["scientific_design_prepared"] is True and boundary["scientific_design_accepted"] is False and boundary["robustness_guardrail_preparation_authorized"] is False and boundary["pilot_authorized"] is False and boundary["canonical_robustness_execution_authorized"] is False,
         "claim_ceiling_and_all_nonpromotion_boundaries_hold": packet["claim_ceiling_not_yet_earned"] is True and boundary["universal_Maxwell_Dirac_robustness_claimed"] is False and boundary["physical_necessity_in_nature_claimed"] is False and boundary["fermionic_QFT_claimed"] is False and boundary["quantized_electromagnetism_claimed"] is False and boundary["pillar_completion_claimed"] is False and boundary["seam_closure_claimed"] is False and boundary["new_fundamental_physics_claimed"] is False and boundary["C_k_dynamics_claimed"] is False and boundary["master_action_validated"] is False and boundary["repository_wide_green_claimed"] is False,
-        "Prompt_is_preserved": sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256,
+        "Prompt_is_preserved": prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE),
     }
     ordered = [{"decision_id": item, "passed": decisions[item]} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

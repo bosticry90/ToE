@@ -1,0 +1,121 @@
+{
+  "artifact_id": "TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_VALIDATION_v0",
+  "captured_at_utc": "2026-07-31T16:08:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION",
+  "attempt_sequence_number": 3,
+  "terminal_outcome": "LINEAGES_RECONSTRUCTED_WITH_BOUNDED_UNRESOLVED_RELATIONSHIPS",
+  "lifecycle_result": "PASSED",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+    "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_03_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "artifact_hashes": {
+    "result_sha256": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5",
+    "review_sha256": "a65d14d5bfcb517b8dfb0be24197b4b12879e99cfcdbe605e587af295f0c50a2",
+    "close_event_hash": "63c33a5b0115209f07e5cc9de1d65d4e48e52cccec36c089144f181a9209e82c",
+    "close_event_sha256": "32564b81d3e00a77e67abe8adaf146cc98380d5c63e3d32c97e1b45c83847388"
+  },
+  "scientific_validation": {
+    "ten_requirement_rows_present_and_unique": true,
+    "seven_family_rows_present_and_unique": true,
+    "requirement_and_family_ids_match_frozen_envelopes": true,
+    "thirty_one_source_bindings_recomputed": true,
+    "fourteen_documentary_edges_reconstructed": true,
+    "nine_unresolved_relationships_preserved": true,
+    "all_relationship_edges_bind_paths_hashes_direction_evidence_authority_confidence_and_custody": true,
+    "all_workload_caps_respected": true,
+    "Einstein_scalar_CRLF_and_LF_hash_identity_recomputed": true,
+    "R_plus_alpha_R_squared_recovered_only_as_comparison_member": true,
+    "general_f_R_family_not_overgeneralized": true,
+    "effective_scalaron_not_promoted_to_fundamental_extra_field": true,
+    "nonlocal_and_connection_torsion_action_definitions_not_invented": true,
+    "Einstein_Hilbert_remains_known_physics_baseline": true,
+    "quadratic_gravity_remains_REFERENCE_CONTROL_ONLY": true,
+    "equivalence_probe_remains_nonaction_control": true,
+    "defined_native_action_family_count_is_zero": true,
+    "compatibility_cells_evaluated_is_zero": true,
+    "no_gravitational_principle_or_action_selected": true,
+    "no_evidence_promoted": true,
+    "no_master_action_constructed_or_promoted": true,
+    "no_new_gravitational_calculation_executed": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "stage_4_not_authorized_or_opened": true
+  },
+  "focused_python": {
+    "status": "PASS",
+    "passed": 27,
+    "elapsed_seconds": "12.89",
+    "test_surfaces": [
+      "Stage 3 authority",
+      "Stage 2 authority",
+      "Stage 1 authority",
+      "bounded-program governance",
+      "governance-enforcement authority",
+      "registry custody gate"
+    ]
+  },
+  "scientific_result_recomputation": {
+    "status": "PASS",
+    "checked_source_bindings": 31,
+    "result_review_hash_binding": "PASS",
+    "requirement_family_edge_and_unresolved_counts": "PASS",
+    "nonpromotion_and_no_compatibility_boundary": "PASS"
+  },
+  "focused_lean": {
+    "status": "PASS",
+    "modules": [
+      "ToeFormal.Derivation.ToeGravitationalRequirementAndActionFamilyLineageReconstructionResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "job_count": 6
+  },
+  "full_lean_aggregate": {
+    "status": "PASS",
+    "module_count": 1345,
+    "job_count": 9090
+  },
+  "deterministic_generation": {
+    "status": "PASS_PROJECTED_COMMITTED_FORM",
+    "working_tree_module_count": 1345,
+    "projected_committed_module_count": 1345,
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "temporary_working_tree_aggregate_removed": true
+  },
+  "governance_validation": {
+    "registry_extension_reconstruction": "PASS_PRECOMMIT",
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "reason": "The immutable CLOSE artifact has no introduction commit until the exact atomic CLOSE commit is created."
+  },
+  "known_validation_debt": {
+    "status": "DISCLOSED_NOT_REPAIRED_IN_STAGE_3",
+    "broad_legacy_authority_consistency_and_freshness_tests": {
+      "passed": 7,
+      "failed": 6,
+      "failure_classes": [
+        "legacy target-verb parser omits reconstruct reconcile extract and survey",
+        "four downstream assertions stop at the parser error instead of their intended mismatch checks",
+        "two legacy freshness/frontier assertions remain pinned to obsolete historical targets"
+      ]
+    },
+    "scope_statement": "This known parser and freshness debt predates Stage 3 and is not repaired inside the exact scientific CLOSE envelope.",
+    "current_bounded_authority": "VALIDATED_BY_MANIFEST_EVENT_REGISTRY_AND_LEAN_SURFACES",
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS"
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "restructured_ancestry": "REQUIRED_POST_COMMIT"
+  },
+  "status": "STAGE_3_ATOMIC_CLOSE_READY_FOR_COMMIT"
+}

@@ -1,0 +1,50 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+    "formal/python/tools/toe_targeted_ccft_closure_source_discovery_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureSourceDiscoveryAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 1,
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN",
+  "captured_at_utc": "2026-08-01T04:20:00Z",
+  "event_hash": "6bf67032efaf1d36bb4715936dfdef12b3a65bbb2c20ea319f3c6c12e15cbc9f",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_OPEN_v0.json",
+  "event_sequence_number": 1,
+  "event_sha256": "3472594ee945cb58b461bfe009c81562fd8372a07068fe2bd57a70f5a2d1c64c",
+  "opened_from_commit": "1823c490421c5a56c81453512638104cf4cc0882",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "registry_snapshot_hash": "9ae917e46e4bdb0f74a751de99093be45d80ec6f8aa348ac6436344ad6d239c7",
+  "schema_id": "toe.targeted_ccft_closure_source_discovery_and_custody.stage_1_open_validation.v0",
+  "scientific_output_at_open": {
+    "archive_or_repository_roots_traversed": 0,
+    "candidate_files_discovered": 0,
+    "candidate_source_set_created": false,
+    "ccft_v0_constructed": false,
+    "closure_contract_recovered_or_rejected": false,
+    "content_passes_consumed": 0,
+    "deep_review_files_selected": 0,
+    "equation_repaired_or_selected": false,
+    "evidence_promoted": false,
+    "new_ccft_postulate_inserted": false,
+    "stage_2_output_created": false
+  },
+  "scope_hash": "d2019a5d75347897cf4648ec88945b2a4cc2209be10ececf6e6c5b7f33d5d6aa",
+  "semantic_stage_id": "TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY",
+  "status": "STAGE_1_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "discover_toe_targeted_ccft_closure_evidence_sources_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "canonical_manifest_binding_matches": true,
+    "event_and_registry_projection_match": true,
+    "one_pass_and_zero_repair_controls_match": true,
+    "open_checkpoint_contains_no_scientific_output": true,
+    "program_state_is_open": true,
+    "stage_2_remains_unauthorized": true
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "authorized_stage_count": 5,
+  "installation_envelope": {
+    "commit_exact_path_set": [
+      ".gitattributes",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "formal/docs/release/TOE_NATIVE_COHERENCE_ONTOLOGY_PROGRAM_GOVERNANCE_INSTALLATION_20260729_v0.json",
+      "formal/docs/release/bounded_program_manifests/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_MANIFEST_v1.json",
+      "formal/python/tests/test_toe_native_coherence_ontology_program_governance_installation.py",
+      "formal/python/tools/bounded_program_governance.py",
+      "formal/toe_formal/ToeFormal/Release/ToeNativeCoherenceOntologyProgramGovernanceInstallationV0.lean",
+      "formal/toe_formal/ToeFormalAll.lean"
+    ],
+    "installed_from_commit": "46d89693dd9633d5d524bc9fa471b86beee9f720"
+  },
+  "mandatory_exit": {
+    "target": "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+    "terminal_outcomes": [
+      "COHERENCE_OPERATIONALLY_REPRESENTABLE",
+      "COHERENCE_REPRESENTABLE_ONLY_AS_BOUNDED_SURROGATE",
+      "COHERENCE_BETTER_TREATED_AS_DERIVED_FUNCTIONAL",
+      "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+      "NO_ADMISSIBLE_REPRESENTATION_FOUND"
+    ]
+  },
+  "manifest_hash": "1b2d3bdcdb246019d03d185ebb296bdf24cd564fcf473008f544163685c198d5",
+  "manifest_mode": "PROSPECTIVE_STATIC",
+  "native_hypothesis_tested": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+  "native_relevance": {
+    "kind": "DIRECT_NATIVE_TEST",
+    "statement": "Tests whether one preserved ToE or CCFT coherence claim has enough operational meaning to support a bounded mathematical representation."
+  },
+  "no_subsidiary_scientific_targets": true,
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "program_terminal_outcomes": [
+    "COHERENCE_OPERATIONALLY_REPRESENTABLE",
+    "COHERENCE_REPRESENTABLE_ONLY_AS_BOUNDED_SURROGATE",
+    "COHERENCE_BETTER_TREATED_AS_DERIVED_FUNCTIONAL",
+    "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+    "NO_ADMISSIBLE_REPRESENTATION_FOUND"
+  ],
+  "repair_attempt_count": 0,
+  "schema_id": "toe.bounded_program.immutable_manifest.v1",
+  "stages": [
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "frontier_selection",
+          "frontier_selection_review",
+          "coherence_admissibility_hypothesis",
+          "ccft_to_toe_object_crosswalk",
+          "candidate_master_action",
+          "ccft_variational_program",
+          "ccft_discriminator_map",
+          "pillar_seam_readiness",
+          "closed_real_scalar_review",
+          "closed_native_surrogate",
+          "bounded_governance_validator",
+          "quadratic_closed_program_manifest",
+          "native_surrogate_closed_program_manifest"
+        ],
+        "dependency_artifact_ids": [
+          "frontier_selection_review"
+        ],
+        "normalized_scientific_question": "Which preserved ToE and CCFT coherence statements are serious candidate claims, what do they mean in their own source, and which single claim—if any—may advance to operational testing?",
+        "prohibited_claims": [
+          "CCFT validation",
+          "coherence fundamentality",
+          "coherence field selection before Stage 4",
+          "master-action derivation",
+          "QFT-GR closure",
+          "unique observable",
+          "empirical confirmation",
+          "completed ToE",
+          "representation selection",
+          "symbolic similarity as evidence of physical identity"
+        ],
+        "required_outputs": [
+          "source_bound_claim_inventory",
+          "claim_classification_table",
+          "provenance_and_conflict_ledger",
+          "symbolic_similarity_meaning_transport_firewall",
+          "exactly_one_claim_selected_for_stage_2_or_failed_closed",
+          "legacy_UEFM_context_admissibility_record"
+        ],
+        "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+        "terminal_outcome_vocabulary": [
+          "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE",
+          "NO_SERIOUS_COHERENCE_CLAIM_SURVIVES_INVENTORY",
+          "COHERENCE_CLAIM_PROVENANCE_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "1d0ca35f49260b8194c9a24f2ff8200af0b1c8fe1c043fa437407a6e71a13e0e",
+      "canonical_target": "inventory_toe_native_controlled_coherence_claims_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "CONTROLLED_COHERENCE_CLAIM_INVENTORY_COMPLETE",
+        "NO_SERIOUS_COHERENCE_CLAIM_SURVIVES_INVENTORY",
+        "COHERENCE_CLAIM_PROVENANCE_BLOCKED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "README.md",
+          "State_of_the_Theory.md",
+          "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+          "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+          "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_VALIDATION_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_CLOSE_v0.json",
+          "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+          "formal/python/tests/test_current_target_freshness_gate.py",
+          "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "README.md",
+          "State_of_the_Theory.md",
+          "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+          "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+          "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_STAGE_1_OPEN_VALIDATION_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json",
+          "formal/python/tests/test_current_authoritative_surfaces_gate.py",
+          "formal/python/tests/test_current_target_freshness_gate.py",
+          "formal/python/tools/toe_native_controlled_coherence_claim_inventory_stage_1_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeControlledCoherenceClaimInventoryAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_01_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_REVIEW_20260729_v0.json"
+      },
+      "semantic_stage_id": "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+      "stage_number": 1
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "CONTROLLED_COHERENCE_CLAIM_INVENTORY",
+          "exactly_one_selected_coherence_claim"
+        ],
+        "dependency_artifact_ids": [
+          "CONTROLLED_COHERENCE_CLAIM_INVENTORY"
+        ],
+        "normalized_scientific_question": "Does the one Stage-1-selected claim define a possessor, change, zero, scale, preparation or destruction operation, units, and a measurement-sensitive distinction from standard correlation, order, entanglement, synchronization, entropy, phase alignment, and field amplitude?",
+        "prohibited_claims": [
+          "CCFT validation",
+          "coherence fundamentality",
+          "coherence field selection before Stage 4",
+          "master-action derivation",
+          "QFT-GR closure",
+          "unique observable",
+          "empirical confirmation",
+          "completed ToE",
+          "representation selection",
+          "observable validation"
+        ],
+        "required_outputs": [
+          "operational_definition_contract",
+          "physical_possessor_and_change_ledger",
+          "zero_and_scale_semantics",
+          "preparation_transport_destruction_operations",
+          "units_or_dimension_classification",
+          "standard_quantity_distinction_matrix",
+          "candidate_measurement_operation"
+        ],
+        "semantic_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+        "terminal_outcome_vocabulary": [
+          "COHERENCE_OPERATIONAL_DEFINITION_ACCEPTED",
+          "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+          "COHERENCE_OPERATIONAL_DEFINITION_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "03d471493a6d5ee6784a2b33e7b1101023f54ce721350faf69693af170232575",
+      "canonical_target": "test_toe_native_coherence_claim_operational_definition_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "COHERENCE_OPERATIONAL_DEFINITION_ACCEPTED",
+        "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+        "COHERENCE_OPERATIONAL_DEFINITION_BLOCKED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0.json",
+          "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_02_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOperationalDefinitionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_02_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_02_OPEN_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOperationalDefinitionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_02_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_REVIEW_20260729_v0.json"
+      },
+      "semantic_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+      "stage_number": 2
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+          "REAL_SCALAR",
+          "COMPLEX_ORDER_PARAMETER",
+          "PHASE_FIELD",
+          "DENSITY_AND_CURRENT",
+          "VECTOR_OR_TENSOR_ORDER_PARAMETER",
+          "ROTOR_OR_GEOMETRIC_ALGEBRA_OBJECT",
+          "STATISTICAL_FUNCTIONAL",
+          "NONLOCAL_RELATION",
+          "NO_INDEPENDENT_FIELD"
+        ],
+        "dependency_artifact_ids": [
+          "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+        ],
+        "normalized_scientific_question": "Which candidate mathematical representation families preserve the accepted operational claim, and what meaning, symmetry, degree-of-freedom, locality, conservation, background, and information-loss costs does each impose?",
+        "prohibited_claims": [
+          "CCFT validation",
+          "coherence fundamentality",
+          "coherence field selection before Stage 4",
+          "master-action derivation",
+          "QFT-GR closure",
+          "unique observable",
+          "empirical confirmation",
+          "completed ToE",
+          "representation promotion before comparative review",
+          "field assumption from terminology alone"
+        ],
+        "required_outputs": [
+          "representation_family_comparison_matrix",
+          "component_meaning_and_units_ledger",
+          "symmetry_and_degree_of_freedom_ledger",
+          "locality_and_relativistic_transformation_ledger",
+          "conservation_exchange_and_background_requirements",
+          "CCFT_information_loss_ledger",
+          "standard_quantity_renaming_audit",
+          "mathematical_and_experimental_tractability_assessment"
+        ],
+        "semantic_stage_id": "COHERENCE_REPRESENTATION_COMPARISON",
+        "terminal_outcome_vocabulary": [
+          "COHERENCE_REPRESENTATION_COMPARISON_COMPLETE",
+          "NO_ADMISSIBLE_REPRESENTATION_FOUND",
+          "COHERENCE_REPRESENTATION_COMPARISON_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "7ab19595242ee4d45bf320d8124cfbcab223c9311ce031719fc7af3928441e94",
+      "canonical_target": "compare_toe_native_coherence_representation_families_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "COHERENCE_REPRESENTATION_COMPARISON_COMPLETE",
+        "NO_ADMISSIBLE_REPRESENTATION_FOUND",
+        "COHERENCE_REPRESENTATION_COMPARISON_BLOCKED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_COMPARISON_RESULT_20260729_v0.json",
+          "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_COMPARISON_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_03_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationComparisonResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_03_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_03_OPEN_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceRepresentationComparisonAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_03_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_COMPARISON_RESULT_20260729_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_COMPARISON_RESULT_REVIEW_20260729_v0.json"
+      },
+      "semantic_stage_id": "COHERENCE_REPRESENTATION_COMPARISON",
+      "stage_number": 3
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "COHERENCE_REPRESENTATION_COMPARISON",
+          "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+        ],
+        "dependency_artifact_ids": [
+          "COHERENCE_REPRESENTATION_COMPARISON",
+          "COHERENCE_OPERATIONAL_DEFINITION_TEST"
+        ],
+        "normalized_scientific_question": "Is the frozen operational coherence claim representable, only surrogately representable, better treated as a derived functional, insufficiently defined, or unsupported by every admissible representation?",
+        "prohibited_claims": [
+          "CCFT validation",
+          "coherence fundamentality",
+          "coherence field selection before Stage 4",
+          "master-action derivation",
+          "QFT-GR closure",
+          "unique observable",
+          "empirical confirmation",
+          "completed ToE",
+          "nature_contains_selected_object",
+          "automatic action or interaction authorization"
+        ],
+        "required_outputs": [
+          "exact_preserved_claim_represented_or_blocked",
+          "selected_mathematical_type_or_nonfield_classification",
+          "controlled_physical_meaning",
+          "omitted_structure_ledger",
+          "enabled_later_calculation",
+          "representation_adequacy_falsifier",
+          "terminal_representability_decision"
+        ],
+        "semantic_stage_id": "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION",
+        "terminal_outcome_vocabulary": [
+          "COHERENCE_OPERATIONALLY_REPRESENTABLE",
+          "COHERENCE_REPRESENTABLE_ONLY_AS_BOUNDED_SURROGATE",
+          "COHERENCE_BETTER_TREATED_AS_DERIVED_FUNCTIONAL",
+          "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+          "NO_ADMISSIBLE_REPRESENTATION_FOUND"
+        ]
+      },
+      "canonical_scope_hash": "d0dfc157e3d39dfa2de392dd4ecf7a67c196817fdd14d643537cc7a6e1b223b8",
+      "canonical_target": "select_toe_native_coherence_operational_representation_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "COHERENCE_OPERATIONALLY_REPRESENTABLE",
+        "COHERENCE_REPRESENTABLE_ONLY_AS_BOUNDED_SURROGATE",
+        "COHERENCE_BETTER_TREATED_AS_DERIVED_FUNCTIONAL",
+        "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+        "NO_ADMISSIBLE_REPRESENTATION_FOUND"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION_RESULT_20260729_v0.json",
+          "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_04_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOperationalRepresentabilityDecisionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_04_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_04_OPEN_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeCoherenceOperationalRepresentabilityDecisionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_04_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION_RESULT_20260729_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_NATIVE_COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION_RESULT_REVIEW_20260729_v0.json"
+      },
+      "semantic_stage_id": "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION",
+      "stage_number": 4
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION",
+          "positive_stage_4_representation_result_only"
+        ],
+        "dependency_artifact_ids": [
+          "COHERENCE_OPERATIONAL_REPRESENTABILITY_DECISION"
+        ],
+        "normalized_scientific_question": "After a positive Stage-4 representation result only, what minimal native field-content or nonfield-content decision may be prepared for a separately authorized future program?",
+        "prohibited_claims": [
+          "CCFT validation",
+          "coherence fundamentality",
+          "coherence field selection before Stage 4",
+          "master-action derivation",
+          "QFT-GR closure",
+          "unique observable",
+          "empirical confirmation",
+          "completed ToE",
+          "field content execution",
+          "action construction",
+          "interaction construction",
+          "seam calculation",
+          "pillar recovery"
+        ],
+        "required_outputs": [
+          "minimal_content_handoff_contract",
+          "representation_to_content_dependency_map",
+          "explicit_omission_and_nonclaim_boundary",
+          "separate_future_authority_requirement"
+        ],
+        "semantic_stage_id": "MINIMAL_NATIVE_FIELD_HANDOFF",
+        "terminal_outcome_vocabulary": [
+          "MINIMAL_NATIVE_CONTENT_HANDOFF_PREPARED",
+          "MINIMAL_NATIVE_CONTENT_HANDOFF_NOT_APPLICABLE",
+          "MINIMAL_NATIVE_CONTENT_HANDOFF_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "2cf4ca375edc955bb6cd06ded2724adc19ef24901ae6ce927ef67ba368a79437",
+      "canonical_target": "prepare_toe_native_minimal_field_content_after_coherence_representation_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "MINIMAL_NATIVE_CONTENT_HANDOFF_PREPARED",
+        "MINIMAL_NATIVE_CONTENT_HANDOFF_NOT_APPLICABLE",
+        "MINIMAL_NATIVE_CONTENT_HANDOFF_BLOCKED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_MINIMAL_FIELD_CONTENT_HANDOFF_RESULT_20260729_v0.json",
+          "formal/docs/release/TOE_NATIVE_MINIMAL_FIELD_CONTENT_HANDOFF_RESULT_REVIEW_20260729_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_05_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeMinimalFieldContentHandoffResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_05_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_05_OPEN_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeMinimalFieldContentHandoffAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0_ATTEMPT_05_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_NATIVE_MINIMAL_FIELD_CONTENT_HANDOFF_RESULT_20260729_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_NATIVE_MINIMAL_FIELD_CONTENT_HANDOFF_RESULT_REVIEW_20260729_v0.json"
+      },
+      "semantic_stage_id": "MINIMAL_NATIVE_FIELD_HANDOFF",
+      "stage_number": 5
+    }
+  ],
+  "status": "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST"
+}

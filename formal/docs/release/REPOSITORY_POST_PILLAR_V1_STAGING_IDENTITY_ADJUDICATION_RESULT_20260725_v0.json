@@ -1,0 +1,121 @@
+{
+  "schema_id": "REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T03:58:54Z",
+  "status": "POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_COMPLETE_REPAIR_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_base": {
+    "commit": "c88c40c14f0ea4908f487784f6c0bbee8a9e4d62",
+    "pillar_v1_repair_review": "formal/docs/release/REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0.json"
+  },
+  "authorization": {
+    "selection": {
+      "path": "formal/docs/release/CURRENT_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_SELECTION_20260725_v0.json",
+      "sha256": "6423ff079d8898dae8f301f850ce330a0a79ef0293027e400aea5a42316d6868"
+    },
+    "packet": {
+      "path": "formal/docs/release/REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_PACKET_20260725_v0.json",
+      "sha256": "3e6d72240f3d50518009ecf854f6d86608c3fbdd81bc74d8380d54ed3a5b528d"
+    },
+    "execution_count_consumed": 1,
+    "successor_authority": "NONE"
+  },
+  "inventories": {
+    "FROZEN_COMPARABILITY_INVENTORY": {
+      "manifest": "formal/docs/release/FROZEN_COMPARABILITY_INVENTORY_20260725_v0.json",
+      "count": 13756,
+      "sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf",
+      "role": "OUTCOME_COMPARABILITY_ONLY"
+    },
+    "CURRENT_ACCEPTANCE_INVENTORY": {
+      "manifest": "formal/docs/release/CURRENT_ACCEPTANCE_INVENTORY_20260725_v0.json",
+      "count": 13818,
+      "sha256": "551127a481d51c016f0cc1918ecfa3a6621a894b3fe0d7efe12cfb82d6e1bc0b",
+      "added_over_frozen": 62,
+      "removed_from_frozen": 0,
+      "role": "COMPLETE_CURRENT_NON_LEAN_ACCEPTANCE_UNIVERSE"
+    }
+  },
+  "reproduced_surface": {
+    "path": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1_result_review.py",
+    "tests": 15,
+    "passed": 2,
+    "errors": 13,
+    "first_exception": "isolated staging hash mismatch",
+    "official_full_baseline_reassessed": false,
+    "official_nonpassing_baseline": 410
+  },
+  "adjudication": {
+    "consumer_outcomes": 13,
+    "consumer_files": 1,
+    "staged_dependencies": 23,
+    "staged_dependencies_individually_mapped": 23,
+    "provenance_blocked_dependencies": 0,
+    "unratified_dependencies": 0,
+    "role_counts": {
+      "CANONICAL_ARTIFACT_IDENTITY": 8,
+      "HISTORICAL_SOURCE_PIN": 15
+    },
+    "representation_counts": {
+      "ACCEPTED_MIXED_EOL_RECONSTRUCTION": 1,
+      "CRLF_FROM_FROZEN_GIT_BLOB": 7,
+      "GIT_BLOB_EXACT": 15
+    },
+    "masked_roots": [
+      "LIVE_BYTES_USED_TO_STAGE_HISTORICAL_INPUTS",
+      "HISTORICAL_SOURCE_PINS_COMPARED_TO_CURRENT_SOURCE_BYTES",
+      "HISTORICAL_RUNTIME_CUSTODY_COMPARED_TO_CURRENT_RUNTIME_BYTES"
+    ]
+  },
+  "in_memory_causal_probe": {
+    "persisted_substitutions": 0,
+    "dirty_main_reads": 0,
+    "isolated_runs": 2,
+    "isolated_generation": "BYTE_IDENTICAL_AND_COMMITTED_HISTORICAL_OUTPUTS_REPRODUCED",
+    "historical_decisions": "25 / 26 REPRODUCED",
+    "sole_failed_decision": "supporting_sources_have_authorized_bounded_class",
+    "sole_failed_decision_role": "ORIGINAL_ACCEPTED_V1_AUTHORITY_CLASS_MISMATCH",
+    "new_masked_roots_after_role_substitution": 0
+  },
+  "terminal_outcome": "PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_JUSTIFIED",
+  "recommended_repair": {
+    "materialize_from_frozen_commit_and_typed_representation": true,
+    "preserve_historical_generator_and_packet_bytes": true,
+    "replace_live_byte_equality_with_typed_historical_identity": true,
+    "copy_from_dirty_main": false,
+    "refresh_historical_pins": false,
+    "fresh_selector_required": true
+  },
+  "external_evidence": [
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-v1-staging-identity-adjudication-v0/PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_LEDGER_20260725_v0.json",
+      "sha256": "ced9fb3ee7279d2aa39ce46390e4165d3eee0620d8c956983b66f67edcc1c653"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-v1-staging-identity-adjudication-v0/pillar_v1_staging_current_v0.xml",
+      "sha256": "1ad4e8ea5ce7fb717c88dc1efcda05710b2d78cb9649fd4c9c160dbcb1e9a862"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-v1-staging-identity-adjudication-v0/POST_PILLAR_ROLE_SEPARATION_CURRENT_COLLECTION_COMPARABILITY_v0.json",
+      "sha256": "c59a14bf3e4252224f2fe901003218e93b5c82897a9ae1a746c338fc36197e3b"
+    }
+  ],
+  "scope": {
+    "diagnostic_only": true,
+    "staging_consumer_modified": false,
+    "historical_inputs_modified": false,
+    "persisted_hash_substitutions": 0,
+    "scientific_content_changed": 0,
+    "registry_or_v2_changed": 0,
+    "lean_activity": 0,
+    "automatic_successor": false
+  },
+  "custody": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_paths": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_mutated": false
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_ADJUDICATION_ONLY"
+}

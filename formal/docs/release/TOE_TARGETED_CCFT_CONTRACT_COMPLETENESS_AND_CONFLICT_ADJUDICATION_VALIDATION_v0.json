@@ -1,0 +1,73 @@
+{
+  "artifact_hashes": {
+    "close_event_hash": "e3e8ae25913cb051c5590b3736547b7d11de6f946ad6504844e7293aa2634e03",
+    "close_event_sha256": "7d305274be2c392b6162116b2778a0e8b07c6cd13cfff0a35d2237d4d4dcad1d",
+    "result_sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20",
+    "review_sha256": "6d64911801183311e05e7fa5b1ec08f0baa352346d90b51d2d8fef68a18c77fa"
+  },
+  "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_VALIDATION_v0",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTContractAdjudicationResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-08-02T01:42:29Z",
+  "deterministic_generation": {
+    "module_count": 1404,
+    "scope": "committed",
+    "status": "PASS"
+  },
+  "focused_lean": {
+    "included_in_full_aggregate": true,
+    "status": "PASS"
+  },
+  "focused_python": {
+    "governance_passed": 38,
+    "stage_scoped_passed": 23,
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "job_count": 8853,
+    "module_count": 1404,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "precommit_full_history_validator_result": "EXPECTED_SINGLE_FAILURE_CLOSE_ARTIFACT_HAS_ZERO_INTRODUCTION_COMMITS"
+  },
+  "lifecycle_result": "PASSED",
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "repository_validation": {
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "git_diff_check": "PASS",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT"
+  },
+  "schema_id": "toe.targeted_ccft.contract_adjudication.validation.v0",
+  "scientific_validation": {
+    "all_18_contracts_have_one_terminal_adjudication": true,
+    "all_seven_exact_candidates_are_adjudicated_once": true,
+    "all_sources_are_portable_and_no_custody_block_exists": true,
+    "all_three_cp_conflicts_are_preserved_without_supersession": true,
+    "attempt_three_open_event_is_bound": true,
+    "future_postulate_reduction_ledger_matches_recovered_set": true,
+    "immutable_stage_two_result_is_bound": true,
+    "no_model_theorem_repair_postulate_promotion_or_physical_claim_occurred": true,
+    "no_new_search_overflow_or_external_evidence_was_used": true,
+    "program_stage_target_and_scope_match_manifest": true,
+    "recovered_contract_counts_close_by_branch": true,
+    "recovered_contracts_pass_all_six_criteria": true,
+    "stage_four_is_selected_but_unauthorized": true,
+    "terminal_outcome_is_positive_bounded_recovery": true
+  },
+  "semantic_stage_id": "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION",
+  "status": "STAGE_3_ATOMIC_CLOSE_VALIDATED_READY_FOR_COMMIT",
+  "terminal_outcome": "ONE_OR_MORE_EXACT_CCFT_CLOSURE_CONTRACTS_RECOVERED"
+}

@@ -1,0 +1,193 @@
+{
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+  "attempt_cap_proposed": 5,
+  "authority_binding": {
+    "path": "formal/docs/release/TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0.json",
+    "sha256": "a600bdf3bbe8fdc96b3793dd840a367dd847170cb2ebd0e15413be00a4adccc4"
+  },
+  "authorized_stage_count_proposed": 5,
+  "automatic_successor_proposed": "NONE",
+  "branch_selected": "NONE",
+  "ccft_v0_model": "NONE",
+  "external_checks_are_not_action_terms": true,
+  "external_evaluation_checks": [
+    "C_FINITE_APPROXIMATION",
+    "C_IDENTIFIABILITY",
+    "C_COMPLEXITY"
+  ],
+  "historical_recovery_reopened": false,
+  "independent_attack_lanes": [
+    "PROVE",
+    "DISPROVE",
+    "CONSTRUCT",
+    "FIND_COUNTEREXAMPLE"
+  ],
+  "mandatory_exit_target_proposed": "close_toe_ccft_v0_theory_construction_and_theorem_discovery_v0_after_bounded_result_v0",
+  "maximum_frozen_model_versions": 1,
+  "maximum_new_ccft_postulates": 8,
+  "maximum_primary_theorem_packets": 1,
+  "new_postulates_created": 0,
+  "physical_interpretation_established": false,
+  "preparation_target": "prepare_bounded_ccft_v0_theory_construction_program",
+  "program_id_proposed": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "program_installation_status": "UNINSTALLED",
+  "provenance_vocabulary": [
+    "SOURCE_RECOVERED",
+    "KNOWN_PHYSICS_BASELINE",
+    "NEW_CCFT_POSTULATE",
+    "NUMERICAL_CONVENTION",
+    "MATHEMATICAL_CONTROL"
+  ],
+  "repair_attempt_count_proposed": 0,
+  "research_director_packet_binding": {
+    "path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0.json",
+    "sha256": "28b0827797274df7307b59da8641778ff9e5da2ef72bc358d34a4b4a9fff731d"
+  },
+  "schema_id": "toe.ccft_v0.theory_construction.bounded_program_preparation_result.v0",
+  "scientific_attempts": 0,
+  "scientific_purpose": "Construct one explicit provenance-labeled CCFT-v0 surrogate and subject it to a decisive theorem or counterexample before physical interpretation.",
+  "stage_definitions_proposed": [
+    {
+      "outcomes": [
+        "SELECT_CP_NLSE_AS_CCFT_V0_CORE",
+        "SELECT_LCRD_V3_AS_CCFT_V0_CORE",
+        "RETAIN_TWO_SEPARATE_CONSTRUCTION_CANDIDATES",
+        "NO_BRANCH_READY_WITHOUT_FOUNDATIONAL_POSTULATE"
+      ],
+      "prohibited": [
+        "equation selection",
+        "new postulate insertion",
+        "model construction",
+        "theorem execution"
+      ],
+      "question": "Which one of the four frozen construction options offers the best bounded decision value without treating convenience as evidence?",
+      "required_outputs": [
+        "reviewed_director_decision_packet",
+        "option_by_option_postulate_burden",
+        "exactly_one_branch_route_or_no_route_result"
+      ],
+      "semantic_stage_id": "CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION",
+      "stage_number": 1,
+      "target": "select_toe_ccft_v0_branch_after_research_director_decision_v0"
+    },
+    {
+      "outcomes": [
+        "CCFT_V0_MODEL_CONTRACT_COMPLETED",
+        "MODEL_CONTRACT_REQUIRES_MORE_THAN_FROZEN_POSTULATE_BUDGET",
+        "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED"
+      ],
+      "prohibited": [
+        "unlabeled assumption insertion",
+        "physical promotion",
+        "branch combination without Stage 1 selection",
+        "theorem execution"
+      ],
+      "question": "What minimum explicit contract closes the selected route while labeling every recovered, imported, postulated, numerical, and control element?",
+      "required_outputs": [
+        "complete_model_contract",
+        "component_provenance_ledger",
+        "postulate_count_and_justification",
+        "failure_contract"
+      ],
+      "semantic_stage_id": "CCFT_V0_EXPLICIT_MODEL_CONTRACT_COMPLETION",
+      "stage_number": 2,
+      "target": "complete_toe_ccft_v0_model_contract_with_explicit_provenance_v0"
+    },
+    {
+      "outcomes": [
+        "CCFT_V0_FROZEN_FOR_THEOREM_ADJUDICATION",
+        "REFERENCE_IMPLEMENTATION_NOT_REPRODUCIBLE",
+        "MODEL_FREEZE_BLOCKED_BY_CONTRACT_CONFLICT"
+      ],
+      "prohibited": [
+        "post-freeze feature expansion",
+        "physical validation claim",
+        "theorem result claim"
+      ],
+      "question": "Can the provenance-labeled model be frozen as one reproducible mathematical and computational object?",
+      "required_outputs": [
+        "immutable_model_version",
+        "initial_boundary_parameter_normalization_contract",
+        "reference_implementation",
+        "comparator_and_test_vectors"
+      ],
+      "semantic_stage_id": "CCFT_V0_MODEL_FREEZE_AND_REFERENCE_IMPLEMENTATION",
+      "stage_number": 3,
+      "target": "freeze_toe_ccft_v0_model_and_reference_implementation_v0"
+    },
+    {
+      "outcomes": [
+        "THEOREM_GRADE_RESULT_ESTABLISHED",
+        "COUNTEREXAMPLE_OR_NO_GO_RESULT_ESTABLISHED",
+        "RESULT_CONDITIONALLY_SUPPORTED_NOT_FORMALIZED",
+        "MODEL_DEFINITION_INSUFFICIENT_FOR_THEOREM"
+      ],
+      "prohibited": [
+        "claiming theorem failure proves physical truth",
+        "changing the frozen model to rescue a result",
+        "collapsing mathematical and physical status"
+      ],
+      "question": "What is the first decisive proof, disproof, construction, counterexample, or no-go result for the frozen model?",
+      "required_outputs": [
+        "research_director_question_packet",
+        "formal_proposition_and_negation",
+        "independent_proof_and_counterexample_attempts",
+        "symbolic_and_numerical_checks",
+        "Lean_status_and_fidelity_review"
+      ],
+      "semantic_stage_id": "CCFT_V0_FIRST_THEOREM_OR_COUNTEREXAMPLE_ADJUDICATION",
+      "stage_number": 4,
+      "target": "adjudicate_toe_ccft_v0_first_theorem_or_counterexample_v0"
+    },
+    {
+      "outcomes": [
+        "CCFT_V0_MATHEMATICALLY_VIABLE_DISTINCTIVE_SURROGATE",
+        "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+        "CCFT_V0_INTERNALLY_INCONSISTENT",
+        "VIABILITY_OR_DISTINCTIVENESS_UNRESOLVED"
+      ],
+      "prohibited": [
+        "physical bearer assignment",
+        "seam or gravity coupling",
+        "empirical promotion",
+        "automatic successor"
+      ],
+      "question": "Does the frozen model survive internal checks and remain distinct from known generic systems strongly enough for later physical operationalization?",
+      "required_outputs": [
+        "mathematical_viability_status",
+        "numerical_reproducibility_status",
+        "generic_model_equivalence_audit",
+        "nonautomatic_physical_operationalization_handoff"
+      ],
+      "semantic_stage_id": "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF",
+      "stage_number": 5,
+      "target": "assess_toe_ccft_v0_internal_viability_and_distinctiveness_v0"
+    }
+  ],
+  "status": "PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY",
+  "theorem_or_counterexample_attempted": false,
+  "theorem_packet_required_fields": [
+    "exact_definitions",
+    "domains_and_regularity",
+    "assumptions",
+    "target_theorem",
+    "formal_negation",
+    "allowed_lemmas",
+    "forbidden_conclusions",
+    "known_examples",
+    "known_counterexamples",
+    "symbolic_test_suite",
+    "numerical_test_suite",
+    "Lean_theorem_signature",
+    "physical_claim_boundary"
+  ],
+  "theorem_status_vocabulary": [
+    "MATHEMATICALLY_CONJECTURED",
+    "COMPUTATIONALLY_SUPPORTED",
+    "HUMAN_ARGUMENT_COMPLETE",
+    "LEAN_FORMALIZED",
+    "INDEPENDENTLY_REVIEWED",
+    "PHYSICALLY_INTERPRETED",
+    "EMPIRICALLY_TESTED"
+  ]
+}

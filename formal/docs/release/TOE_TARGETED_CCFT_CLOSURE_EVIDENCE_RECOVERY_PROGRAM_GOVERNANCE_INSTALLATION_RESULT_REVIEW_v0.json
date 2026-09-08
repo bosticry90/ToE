@@ -1,0 +1,59 @@
+{
+  "accepted": true,
+  "archive_traversal_executed": false,
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0",
+  "attempted_stage_count": 0,
+  "captured_at_utc": "2026-08-01T03:45:00Z",
+  "ccft_equation_repaired_or_selected": false,
+  "ccft_v0_constructed": false,
+  "checks": {
+    "all_four_canonical_stage_ids_targets_and_scope_hashes_match_the_prepared_proposal": true,
+    "authorized_stage_count_is_four": true,
+    "bounded_program_history_reconstructs_from_immutable_manifests_and_events": true,
+    "current_scientific_target_is_preserved": true,
+    "exactly_two_scientific_terminal_outcomes_are_frozen": true,
+    "installation_commit_has_the_exact_manifest_bound_ten_path_envelope": true,
+    "installation_commit_parent_matches_installed_from_commit": true,
+    "mandatory_construction_handoff_is_bound_but_not_authorized": true,
+    "mandatory_exit_target_is_preserved": true,
+    "manifest_hash_and_all_scope_hashes_reproduce": true,
+    "no_archive_search_candidate_ranking_contract_recovery_or_rejection_occurred": true,
+    "no_ccft_equation_postulate_model_or_evidence_promotion_was_created": true,
+    "no_open_or_close_event_was_created": true,
+    "one_targeted_content_pass_and_zero_repairs_are_frozen": true,
+    "parser_policy_scanner_hashes_resource_limits_and_hostile_content_rules_are_frozen": true,
+    "registry_projects_zero_attempts_and_unopened_state": true,
+    "workload_caps_duplicate_lineage_snapshot_and_positive_recovery_rules_are_frozen": true
+  },
+  "closure_contract_recovered_or_rejected": false,
+  "evidence_promoted": false,
+  "exhaustive_python_passage_established": false,
+  "installation_commit": "fae55ff958d6ffc09aec7c9024494f95081233da",
+  "manifest": {
+    "manifest_hash": "949437643399f78456bf8fe83674eca55ae0c5ffa7f83fb1491bd2c8f57ddecb",
+    "path": "formal/docs/release/bounded_program_manifests/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_MANIFEST_v1.json",
+    "sha256": "f69d6072ce6e86954ebb47d79ecf08b0101b6b6bca288a9318f684377acc891f"
+  },
+  "new_ccft_postulate_inserted": false,
+  "next_permitted_decision": "AUTHORIZE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_STAGE_1_OPEN",
+  "next_prohibited_work": [
+    "Stage_1_execution_without_separate_scientific_authority",
+    "archive_or_repository_content_search_or_candidate_ranking",
+    "CP_NLSE_or_LCRD_v3_contract_recovery_or_rejection",
+    "equation_repair_parameter_inference_or_new_postulate",
+    "CCFT_v0_core_model_action_seam_or_observable selection",
+    "canonical_evidence_promotion",
+    "automatic_second_search_repair_or_construction_handoff_authorization"
+  ],
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "program_state": "UNOPENED",
+  "reviewed_installation": {
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+    "sha256": "17ea00f2ca80e8809d166d45cc13b1ec9acffbb331a1823d4e1049cf6c3bd4be"
+  },
+  "schema_id": "toe.targeted_ccft_closure_evidence_recovery.program_governance_installation_review.v0",
+  "scientific_execution_authorized": false,
+  "scientific_output_created": false,
+  "stage_1_opened": false,
+  "status": "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+}

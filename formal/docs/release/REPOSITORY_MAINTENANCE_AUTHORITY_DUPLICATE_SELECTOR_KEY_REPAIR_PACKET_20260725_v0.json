@@ -1,0 +1,38 @@
+{
+  "schema_id": "REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_PACKET_20260725_v0",
+  "bootstrap_authority_source": "ACCEPTED_ADJUDICATION_PLUS_OPERATOR",
+  "ambiguous_json_used_as_sole_authority": false,
+  "accepted_adjudication": {
+    "commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+    "result": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_20260725_v0.json",
+    "review": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "permitted": {
+    "remove_stale_first_selector_member": true,
+    "preserve_authorized_second_selector_member": true,
+    "add_strict_current_authority_parser": true,
+    "add_forensic_historical_parser": true,
+    "add_exact_repair_and_negative_controls": true,
+    "write_one_consumption_record": true
+  },
+  "prohibited": {
+    "whole_file_reformat": true,
+    "key_reordering": true,
+    "maintenance_target_rotation": true,
+    "scientific_authority_change": true,
+    "pillar_v1_repair": true,
+    "registry_rotation": true,
+    "v2_enrollment": true,
+    "lean_activity": true,
+    "automatic_successor": true
+  },
+  "acceptance": {
+    "top_level_selector_keys": 1,
+    "strict_current_authority_parse": "PASS",
+    "removed_bytes": "STALE_SELECTOR_MEMBER_AND_REQUIRED_SEPARATOR_ONLY",
+    "all_other_authority_file_bytes": "UNCHANGED",
+    "bootstrap_execution_count": 1,
+    "bootstrap_after_execution": "PERMANENTLY_EXPIRED",
+    "checkout_after_validation": "CLEAN"
+  }
+}

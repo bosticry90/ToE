@@ -1,0 +1,48 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactRepairLineageV3",
+  "as_of": "2026-09-05",
+  "supersedes": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v2.json",
+  "preserved_non_author_review": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+  "preserved_non_author_review_disposition": "SUPPORTED_WITH_REQUIRED_AMENDMENTS",
+  "review_required_amendments": [
+    {
+      "defect_id": "D-01",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "summary": "Lean certificate identity and the frozen runtime object are not independently cryptographically bound."
+    },
+    {
+      "defect_id": "D-02",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "summary": "The trusted evaluator does not enforce the complete frozen ValueTypeV1 metadata contract."
+    }
+  ],
+  "post_review_amendment": {
+    "defect_id": "D-04_SOURCE_CUSTODY",
+    "detected_by": "LINUX_EGRESS_DENIED_RUN_34009722386",
+    "status": "REPAIRED_PENDING_V4_REPLAY",
+    "summary": "Twenty-four required profile/source custody files matched their pre-existing frozen hashes locally but were not Git objects, so the frozen profile could not start from a clean checkout.",
+    "repair": "Track the 24 files byte-for-byte and make the Linux provisioning manifest derive, hash-check, count, and prove Git membership for all 25 runtime source-custody files before isolation; recheck the same manifest inside isolation before qualification.",
+    "source_values_changed": false,
+    "physics_profile_hash_changed": false,
+    "verification_policy_hash_changed": false,
+    "frozen_bundle_changed": false
+  },
+  "preservation": {
+    "reviewed_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "reviewed_packet_modified": false,
+    "review_result_modified": false,
+    "linux_v1_v2_v3_results_preserved": true,
+    "new_exact_lineage_required_for_d01_d02": true
+  },
+  "current_disposition": {
+    "clean_non_author_qualification": "NOT_EARNED",
+    "linux_egress_denied_qualification": "V1_V2_V3_INCONCLUSIVE__V4_DEFINED_NOT_EXECUTED",
+    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED",
+    "product_v1": "NOT_RELEASED",
+    "production_activation": false
+  },
+  "repair_lineage_hash": "076737fa64e5a8871743883b3fe934628a61644ca3aa9f7f2a969ff1572ea840",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

@@ -1,0 +1,25 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_STAGE_4_OPEN_AUTHORITY_REVIEW_v0",
+  "captured_at_utc": "2026-08-02T02:13:00Z",
+  "checks": {
+    "authority_binds_exact_manifest_stage_number_id_target_and_scope_hash": true,
+    "authority_binds_the_passed_stage_3_result_review_validation_and_close_event": true,
+    "authority_binds_four_exact_contracts_and_three_preserved_conflicts": true,
+    "authority_requires_exactly_one_frozen_program_outcome": true,
+    "authority_requires_recovery_summary_postulate_reduction_and_nonautomatic_handoff": true,
+    "authority_ends_historical_recovery_and_forbids_a_second_search": true,
+    "authority_does_not_select_cp_nlse_lcrd_v3_or_ccft_v0": true,
+    "authority_does_not_prepare_install_or_open_construction_or_theorem_discovery": true,
+    "authority_preserves_mandatory_exit_as_the_only_immediate_successor": true,
+    "authority_requires_independent_review_and_atomic_close": true,
+    "source_hashes_reproduce": true
+  },
+  "construction_or_theorem_work_authorized": false,
+  "decision": "AUTHORIZE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_STAGE_4_OPEN",
+  "failed_checks": [],
+  "handoff_selected": false,
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "scientific_result_created": false,
+  "status": "STAGE_4_OPEN_AUTHORITY_ACCEPTED_NO_SCIENTIFIC_RESULT"
+}

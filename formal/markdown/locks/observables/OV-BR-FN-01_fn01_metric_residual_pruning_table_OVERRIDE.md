@@ -12,15 +12,15 @@ Record (computed)
 {
   "candidate_source": {
     "kind": "declared_surface",
-    "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
+    "path": "formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
     "row_key": "candidate_id",
     "source_lock": "OV-BR-FN-00"
   },
   "date": "2026-01-25",
-  "fingerprint": "b3b7e410ee594c5eb9d4f0061b0b3daa0f653b47d6f207d4bcc3f18dc8ce4597",
+  "fingerprint": "5bf01ad41550e3fe60b0d1b108dcc93c351f8cf70ab58d784138817d84e7aa40",
   "inputs": {
     "FN-01_cross_fit_metric_residual_DR02_DR03": {
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+      "path": "formal/markdown/locks/functionals/FN-01_cross_fit_metric_residual_DR02_DR03.md",
       "present": true,
       "present_fields": [
         "R_metric",
@@ -33,10 +33,10 @@ Record (computed)
       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
     },
     "OV-BR-FN-00": {
-      "locked_fingerprint": "bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
+      "locked_fingerprint": "c2bc73fdf9a3d2341b68f549db4a6a789dc2eddeab8c5b4a786c8ae102d862e4",
+      "path": "formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
       "present": true,
-      "record_fingerprint": "bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195",
+      "record_fingerprint": "c2bc73fdf9a3d2341b68f549db4a6a789dc2eddeab8c5b4a786c8ae102d862e4",
       "schema": "OV-BR-FN-00_fn01_metric_residual_prediction_declarations/v1"
     }
   },
@@ -86,4 +86,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `b3b7e410ee594c5eb9d4f0061b0b3daa0f653b47d6f207d4bcc3f18dc8ce4597`
+Record fingerprint: `5bf01ad41550e3fe60b0d1b108dcc93c351f8cf70ab58d784138817d84e7aa40`

@@ -1,0 +1,59 @@
+{
+  "authoritative_census_index_generated": false,
+  "batch_coverage": true,
+  "bottleneck_classification": "CPU_OR_PROCESS_OVERHEAD_DOMINANT_ON_SYNTHETIC_CORPUS",
+  "cold_verified_scan": {
+    "bytes_read_for_hashing": 253849,
+    "content_extraction_failures": 0,
+    "duplicate_groups_found": 192,
+    "elapsed_cpu_seconds": 1.46875,
+    "elapsed_wall_seconds": 1.666628,
+    "files_discovered": 512,
+    "files_hashed": 512,
+    "files_reused_from_cache": 0,
+    "peak_memory_bytes": 2595979,
+    "worker_count": 1
+  },
+  "final_verified_scan": {
+    "bytes_read_for_hashing": 253849,
+    "content_extraction_failures": 0,
+    "duplicate_groups_found": 192,
+    "elapsed_cpu_seconds": 1.375,
+    "elapsed_wall_seconds": 1.637741,
+    "files_discovered": 512,
+    "files_hashed": 512,
+    "files_reused_from_cache": 0,
+    "peak_memory_bytes": 2534174,
+    "worker_count": 1
+  },
+  "recommendation_boundary": "Stage-1 worker count must be re-profiled on authorized metadata batches; this synthetic profile does not characterize archive IO.",
+  "recommended_maintenance_worker_count": 1,
+  "schema_id": "toe.native_hypothesis_census.maintenance_profile.v1",
+  "scientific_archive_traversed": false,
+  "snapshot_stability": "SOURCE_ROOT_SNAPSHOT_STABLE",
+  "status": "SYNTHETIC_NONAUTHORITATIVE_PROFILE_COMPLETE",
+  "synthetic_corpus": {
+    "aggregate_bytes": 253849,
+    "corpus_sha256": "af2662f8a55c8eb5269624e6687aafc7d95df0ac3b77c9c86d27908d17cc4b37",
+    "file_count": 512,
+    "type_counts": {
+      "csv": 102,
+      "json": 103,
+      "md": 103,
+      "py": 102,
+      "zip": 102
+    }
+  },
+  "warm_metadata_hint_cache_scan": {
+    "bytes_read_for_hashing": 0,
+    "content_extraction_failures": 0,
+    "duplicate_groups_found": 192,
+    "elapsed_cpu_seconds": 0.921875,
+    "elapsed_wall_seconds": 0.916217,
+    "files_discovered": 512,
+    "files_hashed": 0,
+    "files_reused_from_cache": 512,
+    "peak_memory_bytes": 2529022,
+    "worker_count": 1
+  }
+}

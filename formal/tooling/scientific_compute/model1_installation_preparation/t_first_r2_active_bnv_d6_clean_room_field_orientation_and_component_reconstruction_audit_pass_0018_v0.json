@@ -1,0 +1,5989 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_D6_CLEAN_ROOM_FIELD_ORIENTATION_AND_COMPONENT_RECONSTRUCTION_AUDIT_PASS_v0",
+  "pass_id": "T_FIRST_R2_ACTIVE_BNV_D6_CLEAN_ROOM_FIELD_ORIENTATION_AND_COMPONENT_RECONSTRUCTION_AUDIT_PASS_0018",
+  "date": "2026-08-22",
+  "status": "CLEAN_ROOM_FIELD_ORIENTATION_ENUMERATION_REPRODUCES_THE_PRIOR_SAME_CHIRALITY_AND_PURE_SCALAR_MULTIPLICITIES_BUT_FINDS_TWO_ADDITIONAL_NONZERO_MIXED_CONJUGATION_D6_FIELD_MULTISETS_OUTSIDE_PASS0017_SO_OPERATOR_BY_OPERATOR_RECONCILIATION_FAILS_BEFORE_THE_GLOBAL_QUOTIENT_AND_NO_PHYSICAL_BASIS_COUNT_OR_LOOP_AUTHORITY_IS_PROMOTED",
+  "authority": {
+    "clean_room_field_content_enumeration": "AUTHORIZED_AND_EXECUTED",
+    "clean_room_exact_character_counting": "AUTHORIZED_AND_EXECUTED",
+    "clean_room_explicit_component_witnesses": "AUTHORIZED_AND_EXECUTED_FOR_THE_MIXED_CONJUGATION_DISCREPANCY",
+    "operator_by_operator_reconstruction": "FAILED_EARLY_ON_FIELD_SIGNATURE_SET_MISMATCH",
+    "corrected_global_quotient": "NOT_AUTHORIZED_AFTER_RECONSTRUCTION_MISMATCH",
+    "d6_basis_candidate": "REOPENED_INCOMPLETE",
+    "one_loop_closure_analysis": "UNAUTHORIZED",
+    "adm_calculation": "UNAUTHORIZED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "novelty": "UNKNOWN"
+  },
+  "clean_room_boundary": {
+    "theory_definition_used": [
+      "ACTIVE_FIELD_REPRESENTATIONS",
+      "HYPERCHARGE_BARYON_AND_LEPTON_ASSIGNMENTS",
+      "LORENTZ_CHIRALITY_OF_FERMION_BILINEARS",
+      "COMMUTING_IDENTICAL_SCALAR_STATISTICS"
+    ],
+    "pass0017_registry_loaded_during_generation": false,
+    "pass0017_component_arrays_loaded_during_generation": false,
+    "pass0017_fusion_labels_loaded_during_generation": false,
+    "pass0017_loaded_only_after_clean_candidate_and_witness_construction": true
+  },
+  "frozen_inputs": [
+    {
+      "role": "HISTORICAL_PASS0007_CHARGE_SCREEN_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_rho8_connectivity_and_d6_raw_inventory_pass_0007_v0.json",
+      "bytes": 14406,
+      "sha256": "6f03fd5bdc18827b16b7a172c52f0dbe40c09d4e29a7ca12d7ba5885e078bd10"
+    },
+    {
+      "role": "HISTORICAL_PASS0008_CHARACTER_SCREEN_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_nonderivative_contraction_screen_pass_0008_v0.json",
+      "bytes": 16445,
+      "sha256": "625ed7f31994e668533a6bd65c1ea1a114328c5fed244d94eabfb0351f0e6711"
+    },
+    {
+      "role": "HISTORICAL_PASS0009_DERIVATIVE_SCREEN_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_derivative_field_strength_screen_pass_0009_v0.json",
+      "bytes": 14767,
+      "sha256": "c54a187bdaa0fefae1a082da9b2d60f191740dd4cf2a9486e9a6468269a8a313"
+    },
+    {
+      "role": "PASS0017_COMPONENT_REGISTRY_POST_CONSTRUCTION_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_component_cg_phase_and_eom_target_closure_pass_0017_v0.json",
+      "bytes": 1177464,
+      "sha256": "e86d536ce2f028c418fa8711f7cf72941afb18c15333dcf052377943cbd448f8"
+    },
+    {
+      "role": "PROVENANCE_TRANCHE_0132",
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0132-arxiv-2006-16532.json",
+      "bytes": 42800,
+      "sha256": "98754ad4596804913f2e6e582a189ebcbc0814101353ec4dd4ebd766f958c8f2"
+    }
+  ],
+  "same_chirality_psi2phi3_reconstruction": {
+    "charge_admissible_multiset_count": 15,
+    "nonzero_multiset_count": 13,
+    "exact_gauge_contraction_multiplicity_total": 23,
+    "rows": [
+      {
+        "fields": [
+          "qL",
+          "qL",
+          "H",
+          "X",
+          "Deltadag"
+        ],
+        "multiplicity": {
+          "total": 3,
+          "fermion_exchange_symmetric": 1,
+          "fermion_exchange_antisymmetric": 2
+        }
+      },
+      {
+        "fields": [
+          "qL",
+          "qL",
+          "Hdag",
+          "X",
+          "rho3"
+        ],
+        "multiplicity": {
+          "total": 3,
+          "fermion_exchange_symmetric": 1,
+          "fermion_exchange_antisymmetric": 2
+        }
+      },
+      {
+        "fields": [
+          "qL",
+          "qL",
+          "Hdag",
+          "X",
+          "rho8"
+        ],
+        "multiplicity": {
+          "total": 4,
+          "fermion_exchange_symmetric": 2,
+          "fermion_exchange_antisymmetric": 2
+        }
+      },
+      {
+        "fields": [
+          "qL",
+          "lL",
+          "X",
+          "X",
+          "rho3"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "qL",
+          "lL",
+          "X",
+          "X",
+          "rho8"
+        ],
+        "multiplicity": {
+          "total": 2,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "uR",
+          "uR",
+          "Hdag",
+          "X",
+          "Deltadag"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": 0,
+          "fermion_exchange_antisymmetric": 1
+        }
+      },
+      {
+        "fields": [
+          "uR",
+          "dR",
+          "H",
+          "X",
+          "Deltadag"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "uR",
+          "dR",
+          "Hdag",
+          "X",
+          "rho3"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "uR",
+          "dR",
+          "Hdag",
+          "X",
+          "rho8"
+        ],
+        "multiplicity": {
+          "total": 2,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "uR",
+          "eR",
+          "X",
+          "X",
+          "rho3"
+        ],
+        "multiplicity": {
+          "total": 0,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "uR",
+          "eR",
+          "X",
+          "X",
+          "rho8"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "dR",
+          "dR",
+          "H",
+          "X",
+          "rho3"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": 0,
+          "fermion_exchange_antisymmetric": 1
+        }
+      },
+      {
+        "fields": [
+          "dR",
+          "dR",
+          "H",
+          "X",
+          "rho8"
+        ],
+        "multiplicity": {
+          "total": 2,
+          "fermion_exchange_symmetric": 1,
+          "fermion_exchange_antisymmetric": 1
+        }
+      },
+      {
+        "fields": [
+          "dR",
+          "dR",
+          "Hdag",
+          "X",
+          "Delta"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": 0,
+          "fermion_exchange_antisymmetric": 1
+        }
+      },
+      {
+        "fields": [
+          "dR",
+          "eR",
+          "X",
+          "X",
+          "Delta"
+        ],
+        "multiplicity": {
+          "total": 0,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      }
+    ],
+    "agrees_with_pass0007_0008_aggregate": true
+  },
+  "pure_scalar_phi6_reconstruction": {
+    "charge_admissible_multiset_count": 8,
+    "nonzero_multiset_count": 3,
+    "exact_gauge_contraction_multiplicity_total": 3,
+    "rows": [
+      {
+        "fields": [
+          "H",
+          "Hdag",
+          "Hdag",
+          "X",
+          "X",
+          "X"
+        ],
+        "multiplicity": 0
+      },
+      {
+        "fields": [
+          "H",
+          "X",
+          "X",
+          "X",
+          "rho3",
+          "Deltadag"
+        ],
+        "multiplicity": 0
+      },
+      {
+        "fields": [
+          "H",
+          "X",
+          "X",
+          "X",
+          "rho8",
+          "Deltadag"
+        ],
+        "multiplicity": 1
+      },
+      {
+        "fields": [
+          "Hdag",
+          "X",
+          "X",
+          "X",
+          "X",
+          "Xdag"
+        ],
+        "multiplicity": 0
+      },
+      {
+        "fields": [
+          "Hdag",
+          "X",
+          "X",
+          "X",
+          "rho3",
+          "rho3"
+        ],
+        "multiplicity": 0
+      },
+      {
+        "fields": [
+          "Hdag",
+          "X",
+          "X",
+          "X",
+          "rho3",
+          "rho8"
+        ],
+        "multiplicity": 1
+      },
+      {
+        "fields": [
+          "Hdag",
+          "X",
+          "X",
+          "X",
+          "rho8",
+          "rho8"
+        ],
+        "multiplicity": 1
+      },
+      {
+        "fields": [
+          "Hdag",
+          "X",
+          "X",
+          "X",
+          "Delta",
+          "Deltadag"
+        ],
+        "multiplicity": 0
+      }
+    ],
+    "agrees_with_pass0007_0008_aggregate": true
+  },
+  "derivative_field_content_cross_check": {
+    "psi2phi2D_nonzero_multisets_with_multiplicity": [
+      [
+        "qL",
+        "uR",
+        "X",
+        "Deltadag",
+        "1"
+      ],
+      [
+        "qL",
+        "dR",
+        "X",
+        "rho3",
+        "1"
+      ],
+      [
+        "qL",
+        "dR",
+        "X",
+        "rho8",
+        "2"
+      ]
+    ],
+    "psi2phi2D_gauge_channel_total": 4,
+    "phi4D2_forced_scalar_multiset": [
+      "X",
+      "X",
+      "X",
+      "Hdag"
+    ],
+    "phi4D2_nonzero_derivative_decorations": 3,
+    "prior_derivative_rank_15_to_5_reopened": false,
+    "scope_note": "THE_NEW_DISCREPANCY_IS_NONDERIVATIVE_FIELD_ORIENTATION_COVERAGE_NOT_THE_PREVIOUS_DERIVATIVE_INCIDENCE_RANK"
+  },
+  "mixed_conjugation_psi_bar_psi_phi3_reconstruction": {
+    "charge_admissible_multiset_count": 4,
+    "nonzero_multiset_count": 3,
+    "exact_gauge_contraction_multiplicity_total": 3,
+    "rows": [
+      {
+        "fields": [
+          "barqL",
+          "dR",
+          "X",
+          "X",
+          "X"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "baruR",
+          "qL",
+          "X",
+          "X",
+          "X"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "barlL",
+          "dR",
+          "Hdag",
+          "X",
+          "X"
+        ],
+        "multiplicity": {
+          "total": 1,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      },
+      {
+        "fields": [
+          "barlL",
+          "eR",
+          "X",
+          "X",
+          "X"
+        ],
+        "multiplicity": {
+          "total": 0,
+          "fermion_exchange_symmetric": null,
+          "fermion_exchange_antisymmetric": null
+        }
+      }
+    ],
+    "conventional_quantum_numbers_for_nonzero_rows": {
+      "DeltaB": 1,
+      "DeltaL": -3
+    },
+    "explicit_component_witnesses": {
+      "barqL_dR_X3": {
+        "dims": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "sparse_entries": [
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          }
+        ],
+        "nonzero_component_count": 180,
+        "norm_squared": "1",
+        "first_nonzero_component": {
+          "index": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(2)/24"
+        },
+        "phase_fingerprint_sha256": "371a53f789f38fe7cd5b73e245f9d7c3f13edff8a70911c7107b422e48d1c24f"
+      },
+      "baruR_qL_X3": {
+        "dims": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "sparse_entries": [
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              1,
+              2,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              0,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              1,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(2)/24"
+          },
+          {
+            "index": [
+              2,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(2)/24"
+          }
+        ],
+        "nonzero_component_count": 180,
+        "norm_squared": "1",
+        "first_nonzero_component": {
+          "index": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(2)/24"
+        },
+        "phase_fingerprint_sha256": "371a53f789f38fe7cd5b73e245f9d7c3f13edff8a70911c7107b422e48d1c24f",
+        "same_numeric_tensor_different_field_assignment": true
+      },
+      "barlL_dR_Hdag_X2": {
+        "dims": [
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "sparse_entries": [
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              0,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              0,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": "-sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": "sqrt(6)/12"
+          },
+          {
+            "index": [
+              2,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": "-sqrt(6)/12"
+          }
+        ],
+        "nonzero_component_count": 24,
+        "norm_squared": "1",
+        "first_nonzero_component": {
+          "index": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "coefficient": "sqrt(6)/12"
+        },
+        "phase_fingerprint_sha256": "8eac1984305eadaad6cebb0fcd114d8cbc71e09f4398f2b802b7371b8de4033f"
+      },
+      "barlL_eR_X3": {
+        "dims": [
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "sparse_entries": [],
+        "nonzero_component_count": 0,
+        "norm_squared": "0",
+        "first_nonzero_component": null,
+        "phase_fingerprint_sha256": "3a98d0db2a45971133cf9707b5228fe52a17a56d3dba3b2ed1cbd2283ca38db8"
+      }
+    }
+  },
+  "pass0017_reconciliation": {
+    "known_shadow_exact_span_comparison": {
+      "clean_room_fields": [
+        "barlL",
+        "dR",
+        "X",
+        "X",
+        "Hdag"
+      ],
+      "pass0017_fields_after_alias_normalization": [
+        "barlL",
+        "dR",
+        "X",
+        "X",
+        "Hdag"
+      ],
+      "exact_overlap": "1",
+      "exact_residual_norm_squared": "0",
+      "same_one_dimensional_component_span": true
+    },
+    "new_nonzero_field_signatures_absent_from_pass0017": [
+      [
+        "X",
+        "X",
+        "X",
+        "barqL",
+        "dR"
+      ],
+      [
+        "X",
+        "X",
+        "X",
+        "baruR",
+        "qL"
+      ]
+    ],
+    "field_signature_set_agreement": false,
+    "operator_by_operator_span_agreement": false,
+    "global_corrected_quotient_rerun_authorized": false,
+    "reason": "A_COMPLETE_OPERATOR_BY_OPERATOR_BIJECTION_CANNOT_EXIST_WHILE_TWO_NONZERO_CLEAN_ROOM_FIELD_SIGNATURES_HAVE_NO_PASS0017_COUNTERPART"
+  },
+  "historical_disposition": {
+    "pass0009_raw_skeleton_class_exhaustion": "RETAINED_AT_CANONICAL_DIMENSION_SKELETON_LEVEL",
+    "pass0009_field_orientation_inventory_completeness": "WITHDRAWN_MIXED_CONJUGATION_PSI_BAR_PSI_PHI3_ORIENTATIONS_WERE_NOT_ENUMERATED",
+    "pass0016_derivative_rank_15_to_5": "RETAINED_WITHIN_ITS_DECLARED_DERIVATIVE_SCOPE",
+    "pass0017_exact_EOM_TARGET_RECOUPLINGS": "RETAINED_FOR_THE_REGISTERED_TARGETS",
+    "pass0017_repaired_operator_ledger_completeness": "SUPERSEDED_BY_THIS_CLEAN_ROOM_FIELD_SIGNATURE_MISMATCH",
+    "physical_d6_basis_count": "UNDETERMINED_DO_NOT_PROMOTE_35_36_37_OR_38"
+  },
+  "milestones": {
+    "D6_CLEAN_ROOM_FIELD_CONTENT_ENUMERATION_COMPLETE": false,
+    "D6_CLEAN_ROOM_MIXED_CONJUGATION_SCREEN_COMPLETE_FOR_PSI_BAR_PSI_PHI3": true,
+    "D6_TWO_INDEPENDENT_OPERATOR_LEVEL_RECONSTRUCTIONS_AGREE": false,
+    "D6_GLOBAL_CORRECTED_PHYSICAL_BASIS_QUOTIENT_COMPLETE": false,
+    "D6_BASIS_CANDIDATE_COMPLETE": false,
+    "ONE_LOOP_CLOSURE_AUTHORIZATION_EARNED": false,
+    "ADM_AUTHORIZATION_EARNED": false
+  },
+  "hard_nonclaims": {
+    "new_rows_independently_physical": false,
+    "thirty_five_family_basis_claimed": false,
+    "thirty_six_family_basis_claimed": false,
+    "thirty_seven_family_basis_claimed": false,
+    "thirty_eight_family_basis_claimed": false,
+    "one_loop_closure_started": false,
+    "one_loop_closure_authorized": false,
+    "adm_started": false,
+    "adm_authorized": false,
+    "parameter_evaluation_count": 0
+  },
+  "next_native_action": "EXTEND_THE_RAW_NONDERIVATIVE_LEDGER_TO_ALL_LORENTZ_BILINEAR_ORIENTATIONS_EXPLICITLY_REDUCE_THE_TWO_NEW_MIXED_CONJUGATION_CHANNELS_WITH_EOM_HERMITIAN_CONJUGATION_AND_ANY_RELEVANT_FIERZ_IDENTITIES_THEN_RESTART_THE_INDEPENDENT_OPERATOR_BY_OPERATOR_RECONSTRUCTION_FROM_THE_REPAIRED_FIELD_SIGNATURE_UNIVERSE"
+}

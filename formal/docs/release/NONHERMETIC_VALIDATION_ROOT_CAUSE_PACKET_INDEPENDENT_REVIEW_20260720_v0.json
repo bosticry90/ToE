@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "checks": {
+    "automatic_repair_after_failure_disabled": true,
+    "containment_outcome_preserved": true,
+    "diagnostic_cycle_exactly_one": true,
+    "evidence_hashes_exact": true,
+    "exact_five_file_mutator_in_scope": true,
+    "lean_timeout_separated_from_source_failure": true,
+    "no_branch_checkout_in_dirty_main": true,
+    "no_repair_implementation_authorized": true,
+    "no_scientific_execution_authorized": true,
+    "no_test_modification_authorized": true,
+    "prior_failed_stabilization_result_preserved": true,
+    "python_first_cause_clustering_in_scope": true,
+    "source_cleanliness_invariant_fail_closed": true,
+    "two_choice_selector_exact": true,
+    "v2_byte_identity_diagnosis_only": true
+  },
+  "outcome": "ACCEPT_BOUNDED_NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET_AUTHORIZATION",
+  "packet": {
+    "bytes": 6007,
+    "path": "formal/docs/release/NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET_20260720_v0.json",
+    "sha256": "22bd7c67bfcdf4fd0b90dfe4fe24eca1544a12446bb46d632226b26268f1797b"
+  },
+  "phase_b_authorized": false,
+  "phase_c_authorized": false,
+  "schema_id": "NONHERMETIC_VALIDATION_ROOT_CAUSE_PACKET_INDEPENDENT_REVIEW_20260720_v0",
+  "scientific_execution_authorized": false,
+  "scientific_status_changed": false,
+  "selected_next_action": "execute_one_nonhermetic_validation_root_cause_packet_v0",
+  "selector": {
+    "bytes": 2238,
+    "path": "formal/docs/release/POST_BASELINE_STABILIZATION_FAILED_NONHERMETIC_VALIDATION_MAINTENANCE_RESPONSE_SELECTION_20260720_v0.json",
+    "sha256": "b0e6bb5eef49b76509db1ea53f7d82c754cbd869df740e07b6b6517e9a0eaa1f"
+  },
+  "status": "ACCEPTED_GOVERNANCE_ONLY_DIAGNOSTIC_AUTHORIZATION",
+  "verdict": "ACCEPT"
+}

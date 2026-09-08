@@ -1,0 +1,17 @@
+{
+  "schema_id": "CURRENT_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_pillar_v1_repair_review": {
+    "commit": "c88c40c14f0ea4908f487784f6c0bbee8a9e4d62",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_POST_PILLAR_V1_REASSESSMENT_AND_STAGING_IDENTITY_ADJUDICATION",
+  "target": "prepare_repository_post_pillar_v1_staging_identity_adjudication_packet_v0",
+  "execution_count_authorized": 1,
+  "staging_identity_repair_authorized": false,
+  "obligation_profile_changes_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

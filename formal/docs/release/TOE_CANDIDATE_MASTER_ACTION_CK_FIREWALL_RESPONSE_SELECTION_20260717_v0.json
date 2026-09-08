@@ -1,0 +1,380 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/GR_NATIVE_CONTINUUM_METRIC_VARIATION_AND_TENSOR_SURFACE_PACKET_REVIEW_20260717_v0.md",
+        "sha256": "70b33f70e3389d68b0feea9a8d0f41c9f833b58db6f0a86e8ff81384a74dad92"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_NATIVE_CONTINUUM_METRIC_VARIATION_AND_TENSOR_SURFACE_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "4b894a31d1eb9ea29b06f70934913f42a007db31bbf3ac75f2ab8411674d1939"
+      },
+      {
+        "relative_path": "formal/python/tools/gr_native_continuum_metric_variation_and_tensor_surface_packet_review_v0.py",
+        "sha256": "87a53a683d9adb53db898f68c9e6eee1fa7d4a1d2366711d4e5d489364845ed5"
+      },
+      {
+        "relative_path": "formal/python/tests/test_gr_native_continuum_metric_variation_and_tensor_surface_packet_review_v0.py",
+        "sha256": "2197d37c1aa8b4dd7f85e118e5c085a1f860fde4b4616800ec7c0d328a3a7712"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/GRNativeContinuumMetricVariationAndTensorSurfacePacketReviewV0.lean",
+        "sha256": "039fb416af71f77c6893448e60e47366ddedcf751c9fdf1c701b5738dc6aa760"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "78aea408a5cf0838a63cd13d73e2c07ed716f2d2863daefe11eccfd7c0582860"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json",
+        "sha256": "122943f1fbf55720ee78b1d9df662f499cefe91c625f0b6ffe1a595b2a581c16"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_20260626_v0.json",
+        "sha256": "54eae29c2e3567a10b0c1b9163b40c1b5db0d5dcc32ec7ba4f1e5e0f95d099a1"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/toe_candidate_master_action_ck_firewall_response_selection_v0.py",
+      "sha256": "e5330831431a4694a7666ffdecfeb9e39f4796bdad2346fb524cd66b1f68b3a6"
+    },
+    "terminal_diagnostic": "CK_FIREWALL_ACTION_SOURCE_CONFLICT",
+    "terminal_verdict": "BLOCKED_INCOMPLETE_CONTINUUM_ACTION_CONTRACT",
+    "test": {
+      "relative_path": "formal/python/tests/test_toe_candidate_master_action_ck_firewall_response_selection_v0.py",
+      "sha256": "3e77bd65c4194574e73d3c0e7d6b421bf7a6d34d903ee0f65e4b5fa2e7f500ec"
+    }
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Fresh response selection only. It selects preparation of one bounded authority-reconciliation packet while retaining the C_k firewall and the terminal incomplete-action block. It creates no precedence ruling, action rewrite, successor action, C_k dynamics, metric/tetrad variation, comparator result, GR recovery, master-action promotion, empirical result, or automation.",
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "kind": "BOUNDED_AUTHORITY_RECONCILIATION_WITHOUT_ACTION_REWRITE",
+        "scientific_endpoint": "Determine whether later admissibility-only C_k authority explicitly supersedes the displayed multiplier term, leaves the master action schematic-only, requires new-theory selection, or cannot resolve precedence.",
+        "scores": {
+          "authority_correctness": 4,
+          "avoids_unselected_theory_change": 5,
+          "direct_blocker_resolution": 5,
+          "downstream_native_gr_unlock_value": 5,
+          "endpoint_precision": 5,
+          "infrastructure_avoidance": 5,
+          "preserves_claim_boundaries": 5,
+          "scientific_leverage": 5
+        },
+        "target": "prepare_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0",
+        "weighted_score": 97
+      },
+      {
+        "candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "kind": "NO_NATIVE_ACTION_CLASSIFICATION",
+        "scientific_endpoint": "Classify the current master action as a sector inventory or organizing hypothesis and record that no native continuum action presently exists.",
+        "scores": {
+          "authority_correctness": 5,
+          "avoids_unselected_theory_change": 5,
+          "direct_blocker_resolution": 4,
+          "downstream_native_gr_unlock_value": 2,
+          "endpoint_precision": 5,
+          "infrastructure_avoidance": 5,
+          "preserves_claim_boundaries": 5,
+          "scientific_leverage": 4
+        },
+        "target": "prepare_master_action_schematic_only_classification_packet_v0",
+        "weighted_score": 88
+      },
+      {
+        "candidate_id": "ACTIVATE_SUPPLIED_STANDARD_GR_COMPARATOR",
+        "kind": "SUPPLIED_STANDARD_GR_COMPARATOR_ONLY",
+        "scientific_endpoint": "Supply the Einstein-Hilbert sector explicitly and reproduce its variation without making a ToE-native gravity claim.",
+        "scores": {
+          "authority_correctness": 5,
+          "avoids_unselected_theory_change": 5,
+          "direct_blocker_resolution": 1,
+          "downstream_native_gr_unlock_value": 2,
+          "endpoint_precision": 5,
+          "infrastructure_avoidance": 5,
+          "preserves_claim_boundaries": 4,
+          "scientific_leverage": 3
+        },
+        "target": "prepare_supplied_standard_gr_variational_comparator_packet_v0",
+        "weighted_score": 74
+      },
+      {
+        "candidate_id": "MAKE_CK_GENUINELY_DYNAMICAL",
+        "kind": "MATERIAL_THEORY_REDESIGN",
+        "scientific_endpoint": "Reverse the current firewall and define C_k multiplier or penalty dynamics as a separately selected theory redesign.",
+        "scores": {
+          "authority_correctness": 1,
+          "avoids_unselected_theory_change": 0,
+          "direct_blocker_resolution": 3,
+          "downstream_native_gr_unlock_value": 3,
+          "endpoint_precision": 2,
+          "infrastructure_avoidance": 1,
+          "preserves_claim_boundaries": 1,
+          "scientific_leverage": 3
+        },
+        "target": "select_ck_dynamical_embedding_as_new_theory_route",
+        "weighted_score": 37
+      }
+    ],
+    "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+    "runner_up_score": 88,
+    "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+    "selected_score": 97
+  },
+  "retained_boundaries": {
+    "C_k": "ADMISSIBILITY_AUDIT_ONLY",
+    "GR_gravitomagnetic_recovery": "BLOCKED_FIELD_EQUATION_SURFACE_FAILURE",
+    "Rep32_transport": "NOT_EVALUATED",
+    "candidate_master_action": "WORKING_FORM_NONCANONICAL_UNPROMOTED",
+    "native_continuum_action_contract": "BLOCKED_INCOMPLETE_CONTINUUM_ACTION_CONTRACT",
+    "stress_energy_generation": "NOT_EVALUATED",
+    "tetrad_spinor_surface": "NOT_EVALUATED"
+  },
+  "schema_id": "TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_RESPONSE_SELECTION_20260717_v0",
+  "scope": {
+    "C_k_action_variation_authorized": false,
+    "C_k_declared_inactive_inside_v0": false,
+    "C_k_dynamical_embedding_selected": false,
+    "GR_pillar_completed": false,
+    "authority_precedence_adjudicated_now": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "gravitomagnetic_route_reopened": false,
+    "lambda_k_set_to_zero": false,
+    "master_action_promoted": false,
+    "metric_or_tetrad_variation_executed": false,
+    "packet_preparation_authorized": true,
+    "packet_prepared_now": false,
+    "response_selection_executed": true,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "successor_action_created": false,
+    "v0_action_deleted_or_modified": false
+  },
+  "selected_next_target": "prepare_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_MASTER_ACTION_AUTHORITY_RECONCILIATION",
+  "selected_scientific_obligation": {
+    "allowed_terminal_results": [
+      "CK_FIREWALL_SUPERSEDES_ACTION_TERM",
+      "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY",
+      "CK_DYNAMICAL_EMBEDDING_REQUIRES_NEW_THEORY_SELECTION",
+      "BLOCKED_AUTHORITY_PRECEDENCE_UNRESOLVED"
+    ],
+    "obligation_class": "AUTHORITY_CHRONOLOGY_AND_PRECEDENCE_RECONCILIATION",
+    "packet_must_freeze": [
+      "byte-exact original candidate action containing sum_k lambda_k C_k",
+      "every later accepted C_k admissibility-only and no-embedding authority",
+      "authority levels, consumed-target lineage, and dates without assuming later-date precedence",
+      "whether any later artifact explicitly supersedes, amends, or merely conflicts with v0",
+      "exactly one terminal resolution",
+      "no claim inheritance into any possible successor action",
+      "all downstream tetrad, unit, boundary, stress-energy, statistical, and Rep32 gates remain closed"
+    ],
+    "possible_successor_classification": "WORKING_FORM_NONCANONICAL_UNPROMOTED_UNVARIED",
+    "question": "Does the later admissibility-only C_k authority supersede the displayed multiplier term, thereby licensing preparation of a new candidate action without C_k dynamics, or must the existing master action be downgraded to schematic-only status?",
+    "stopping_rule": "Prepare one authority-reconciliation packet and stop for independent review; do not rewrite v0, create a successor action, select C_k dynamics, execute variation, activate a comparator, or resume gravitomagnetism."
+  },
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_scale": "0..5",
+    "maximum_weighted_score": 100,
+    "weights": {
+      "authority_correctness": 3,
+      "avoids_unselected_theory_change": 2,
+      "direct_blocker_resolution": 3,
+      "downstream_native_gr_unlock_value": 2,
+      "endpoint_precision": 3,
+      "infrastructure_avoidance": 2,
+      "preserves_claim_boundaries": 2,
+      "scientific_leverage": 3
+    }
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 3,
+    "rows": [
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 76,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 82,
+        "variant": "omit_direct_blocker_resolution"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 73,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 85,
+        "variant": "omit_authority_correctness"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 76,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 82,
+        "variant": "omit_scientific_leverage"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 73,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 82,
+        "variant": "omit_endpoint_precision"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 78,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 87,
+        "variant": "omit_avoids_unselected_theory_change"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 78,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 87,
+        "variant": "omit_preserves_claim_boundaries"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 84,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 87,
+        "variant": "omit_downstream_native_gr_unlock_value"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 78,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 87,
+        "variant": "omit_infrastructure_avoidance"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 84,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 92,
+        "variant": "direct_blocker_resolution_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 92,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 102,
+        "variant": "direct_blocker_resolution_+1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 83,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 93,
+        "variant": "authority_correctness_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 93,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 101,
+        "variant": "authority_correctness_+1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 84,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 92,
+        "variant": "scientific_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 92,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 102,
+        "variant": "scientific_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 83,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 92,
+        "variant": "endpoint_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 93,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 102,
+        "variant": "endpoint_precision_+1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 83,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 92,
+        "variant": "avoids_unselected_theory_change_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 93,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 102,
+        "variant": "avoids_unselected_theory_change_+1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 83,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 92,
+        "variant": "preserves_claim_boundaries_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 93,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 102,
+        "variant": "preserves_claim_boundaries_+1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 86,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 92,
+        "variant": "downstream_native_gr_unlock_value_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 90,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 102,
+        "variant": "downstream_native_gr_unlock_value_+1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 83,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 92,
+        "variant": "infrastructure_avoidance_-1"
+      },
+      {
+        "runner_up_candidate_id": "CLASSIFY_MASTER_ACTION_SCHEMATIC_ONLY",
+        "runner_up_score": 93,
+        "selected_candidate_id": "PRESERVE_CK_FIREWALL_AND_RECONCILE_MASTER_ACTION_AUTHORITY",
+        "selected_score": 102,
+        "variant": "infrastructure_avoidance_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_response_to_gr_native_continuum_action_contract_block_from_full_toe_priority_map",
+  "verdict": "SELECTED_CK_FIREWALL_AUTHORITY_RECONCILIATION_PREPARATION"
+}

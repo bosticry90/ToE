@@ -23,7 +23,7 @@ def test_accepted_guardrail_authorizes_exactly_this_pilot() -> None:
     assert binding["review_commit"] == pilot.REVIEW_COMMIT
     assert binding["review_parent"] == pilot.REVIEW_PARENT
     assert len(binding["bound_inputs"]) == 5
-    assert pilot.sha256_path(pilot.REPO_ROOT / pilot.PROMPT_RELATIVE_PATH) == pilot.PROMPT_SHA256
+    assert pilot.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 
 
 def test_fixed_five_row_subset_and_run_inventory_are_exact(

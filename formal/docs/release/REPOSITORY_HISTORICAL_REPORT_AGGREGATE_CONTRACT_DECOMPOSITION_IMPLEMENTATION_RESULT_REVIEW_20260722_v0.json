@@ -1,0 +1,96 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:48:15Z",
+  "verdict": "ACCEPT_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_STILL_BLOCKED_NO_SCALE_NO_SUCCESSOR_AUTHORITY",
+  "reviewed_branch": "codex/historical-aggregate-contract-decomposition-implementation-v0",
+  "reviewed_commit": "1832efd1588613e2183f485b562475bb24274aa9",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_RESULT_20260722_v0.json",
+    "sha256": "78c2e6f5283184dfa4b91210c1b43d953050515e8e9bb110941755c3a90df077",
+    "outcome": "HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "independence": {
+    "review_worktree": ".toe-recovery/disposable-workspaces/historical-aggregate-contract-decomposition-implementation-review-v0",
+    "detached_clean_checkout": true,
+    "recomputation_method": "Independent changed-path audit, old/new AST comparison, direct route and Git-blob reconstruction, ignored/committed report partition checks, focused pytest rerun, preservation audit, and 629-path dirty-main custody rehash.",
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-implementation-v0/HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_INDEPENDENT_RECOMPUTATION_20260722_v0.json",
+      "sha256": "5abc46ed38192fdd7ee6c1041a75aeef5c9f43222019998d2958a8ac3d250917"
+    },
+    "review_script": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-implementation-v0/independent_review_historical_report_aggregate_contract_decomposition_implementation_v0.py",
+      "sha256": "a5efdc3a573de49350d40272dddba807860cd0f59f6f0a9395f626ed2d7a63f4"
+    },
+    "focused_junit": {
+      "path": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-implementation-v0/INDEPENDENT_REVIEW_FOCUSED_JUNIT_v0.xml",
+      "sha256": "bf54ea9166968a67fbc05d43832d6cd63e987141541a42ba2f4e317da5201e88"
+    }
+  },
+  "recomputed_scope": {
+    "modified_test_files": 1,
+    "modified_test_nodes": 2,
+    "preserved_nonselected_functions": "16_OF_16_AST_IDENTICAL",
+    "preserved_routed_identity_local_gate_files": "19_OF_19_BYTE_IDENTICAL",
+    "modified_generator_files": 0,
+    "modified_report_files": 0,
+    "created_report_or_fixture_artifacts": 0,
+    "scientific_actions": 0,
+    "scale_actions": 0
+  },
+  "acceptance_review": {
+    "aggregate_existence_expectation": "RETIRED_WITH_REVIEWED_RATIONALE",
+    "aggregate_invariance_coupling": "DECOMPOSED",
+    "identity_local_semantic_controls": "PRESERVED",
+    "identity_routes": "19_OF_19_DISTINCT_AND_BOUND",
+    "ignored_reports_absent_before_and_after": "15_OF_15",
+    "committed_t15_t18_reports_present_and_tracked": "4_OF_4",
+    "committed_t15_t18_local_gates": "12_OF_12_PASS",
+    "accepted_baseline_fixture_gate": "4_OF_4_PASS_NO_SCALE",
+    "replacement_nodes": "2_OF_2_PASS",
+    "fourteen_provenance_blocked_identities": "STILL_BLOCKED_UNCHANGED"
+  },
+  "recomputed_validation": {
+    "focused_tests": 18,
+    "focused_passed": 18,
+    "focused_failed": 0,
+    "review_checkout_clean_after": true,
+    "unexpected_untracked_source": 0,
+    "broad_baseline_rerun": false,
+    "global_nonpassing_delta_claimed": false
+  },
+  "preservation": {
+    "generators_unchanged": true,
+    "formal_output_reports_unchanged": true,
+    "loop_control_registry_unchanged": true,
+    "toe_formal_tree_unchanged": true,
+    "state_of_the_theory_unchanged": true,
+    "scientific_authority_fields_unchanged": true,
+    "dirty_main_manifest_rows_byte_verified": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736"
+  },
+  "decision": {
+    "bounded_implementation_accepted": true,
+    "two_invalid_aggregate_constraints_removed": true,
+    "identity_local_historical_obligations_retired": false,
+    "fixture_scale_authorized": false,
+    "provenance_blocked_identity_repair_authorized": false,
+    "broader_historical_cohort_repair_authorized": false,
+    "automatic_successor_authorized": false,
+    "v2_enrollment_authorized": false,
+    "registry_rotation_authorized": false,
+    "lean_activity_authorized": false,
+    "scientific_execution_authorized": false,
+    "fresh_selector_options": [
+      "AUTHORIZE_FOURTEEN_IDENTITY_GENERATOR_PROVENANCE_REVIEW",
+      "AUTHORIZE_NEXT_HIGH_LEVERAGE_HASH_AND_AUTHORITY_SUBSTRATE_ADJUDICATION",
+      "PRESERVE_ACCEPTED_IMPLEMENTATION_AND_DEFER_FURTHER_REPORT_CONTRACT_RECOVERY"
+    ]
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0_OF_12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_AND_STOP_FOR_FRESH_SELECTOR"
+}

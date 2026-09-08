@@ -1,0 +1,127 @@
+{
+  "administrative": {
+    "authority_consumption_preserved": true,
+    "automatic_retry_or_rerun": false,
+    "failure_location": "_outer_main final _canonical_bytes(result)",
+    "failure_message": "Object of type Decimal is not JSON serializable",
+    "failure_type": "builtins.TypeError",
+    "launcher_exit_code": 1,
+    "raw_log_relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v0.log",
+    "result_created_after_launch_from_preserved_custody_only": true,
+    "result_writer_completed_in_authorized_process": false,
+    "stage_checkpoint_relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v0.stages.json",
+    "surviving_sandbox_processes": 0
+  },
+  "authority_consumed": true,
+  "claim_ceiling": "Non-production, non-adjudicative exploratory implementation failure record only. No kernel qualification, cubature adjudication, physical conclusion, Stage A result, torque or DFT result, identifiability result, or Stage B authority.",
+  "completeness": {
+    "all_eight_stage_boundaries_completed": true,
+    "all_required_decision_records_serialized": false,
+    "canonical_result_written_by_sandbox": false,
+    "scientific_or_qualification_classification_suppressed": true
+  },
+  "execution_count": 1,
+  "implementation": {
+    "implementation_created": true,
+    "implementation_launched": true,
+    "production_code_or_dispatch_changed": false,
+    "source_relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0.py",
+    "source_sha256": "27a32f540465ed78cb2094629033a4aa30e3142c1f75aa113fc88eb10c7563ae"
+  },
+  "next_authority": "review_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0_execution_result",
+  "preserved_custody": {
+    "authority_consumption_sha256": "ee3ca18499c38e2480155e8b7d51394c2dde198612e0b270e5975ae333f1d572",
+    "raw_log_sha256": "04b010afc7fd1025dd1da23b4cac34b86c828fb5f9ec772b701e4d5599fb351b",
+    "stage_checkpoint_sha256": "0314b322cb5ae1b6f5279c88f15194733f00ebae9278c504120575d259c08b51"
+  },
+  "result_labels": [
+    "EXPLORATORY_IMPLEMENTATION_RESULT",
+    "NON_PRODUCTION",
+    "NON_ADJUDICATIVE",
+    "NO_SCIENTIFIC_CLAIM"
+  ],
+  "run_id": "fc9577fb-9fe5-45eb-b416-778a04ee51ce",
+  "schema_id": "toe.scalar_only_yukawa.analytic_sphere_kernel.exploratory_sandbox_result.v0",
+  "sections": {
+    "analytic_regression_performance": {
+      "decision_records_preserved": false,
+      "scientific_pass_or_fail": "NOT_ADJUDICATED",
+      "stage_boundary": "COMPLETE"
+    },
+    "boundary_and_limit_behavior": {
+      "decision_records_preserved": false,
+      "scientific_pass_or_fail": "NOT_ADJUDICATED",
+      "stage_boundaries": [
+        "S05_EVALUATOR_OVERLAP_PROBES:COMPLETE",
+        "S06_THIRTEEN_BOUNDARY_AND_LIMIT_PROBES:COMPLETE"
+      ]
+    },
+    "derivative_reference_performance": {
+      "decision_records_preserved": false,
+      "scientific_pass_or_fail": "NOT_ADJUDICATED",
+      "stage_boundary": "COMPLETE"
+    },
+    "implementation_completion": {
+      "source_preserved": true,
+      "stage_boundary": "COMPLETE"
+    },
+    "infrastructure_control_completion": {
+      "control_records_preserved": false,
+      "pass_or_fail": "NOT_ADJUDICATED",
+      "stage_boundary": "COMPLETE"
+    },
+    "mutation_detection_performance": {
+      "decision_records_preserved": false,
+      "pass_or_fail": "NOT_ADJUDICATED",
+      "stage_boundary": "COMPLETE"
+    },
+    "runtime_results": {
+      "decision_records_preserved": false,
+      "pass_or_fail": "NOT_ADJUDICATED",
+      "stage_boundary": "COMPLETE"
+    }
+  },
+  "stage_custody": [
+    {
+      "duration_ns": 4633000,
+      "stage_id": "S01_AUTHORITY_AND_CONTRACT_CUSTODY",
+      "status": "COMPLETE"
+    },
+    {
+      "duration_ns": 2854808000,
+      "stage_id": "S02_VALIDATION_INFRASTRUCTURE_AND_SYNTHETIC_CONTROLS",
+      "status": "COMPLETE"
+    },
+    {
+      "duration_ns": 1503100,
+      "stage_id": "S03_INTERFACE_AND_PRIVATE_HOOK_ISOLATION",
+      "status": "COMPLETE"
+    },
+    {
+      "duration_ns": 2270200,
+      "stage_id": "S04_EIGHT_FROZEN_ENERGY_AND_DERIVATIVE_REGRESSIONS",
+      "status": "COMPLETE"
+    },
+    {
+      "duration_ns": 597400,
+      "stage_id": "S05_EVALUATOR_OVERLAP_PROBES",
+      "status": "COMPLETE"
+    },
+    {
+      "duration_ns": 2008800,
+      "stage_id": "S06_THIRTEEN_BOUNDARY_AND_LIMIT_PROBES",
+      "status": "COMPLETE"
+    },
+    {
+      "duration_ns": 3873945900,
+      "stage_id": "S07_TWELVE_ISOLATED_KERNEL_MUTATIONS",
+      "status": "COMPLETE"
+    },
+    {
+      "duration_ns": 3801067500,
+      "stage_id": "S08_FROZEN_RUNTIME_WORKLOAD",
+      "status": "COMPLETE"
+    }
+  ],
+  "terminal_outcome": "EXPLORATORY_IMPLEMENTATION_RESULT_SERIALIZATION_FAILED_INCOMPLETE"
+}

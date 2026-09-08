@@ -1,0 +1,145 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_STAGE_2_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION_STAGE_2_OPEN",
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_v0.json",
+      "role": "passed Stage 1 result containing the immutable 96-source ledger and captured passive text",
+      "sha256": "2c4a32b16dd35d798d95a14a3a0ac466b4fff5dbafd7ae0a70e0755cef9bb81f"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_RESULT_REVIEW_v0.json",
+      "role": "independent Stage 1 result review and nonclaim boundary",
+      "sha256": "b402ae4d6871490ab1cc64a5867b203784684dcdf8e514b918d649f5912a2a24"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_SOURCE_DISCOVERY_AND_CUSTODY_VALIDATION_v0.json",
+      "role": "Stage 1 validation and disclosed legacy authority-parser debt",
+      "sha256": "24ecf00b5f8786ef7d434badda6bfc32a29208786096d6565b6f5af679601303"
+    },
+    {
+      "path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_01_CLOSE_v0.json",
+      "role": "immutable passed Stage 1 CLOSE event",
+      "sha256": "0c179c8438d99da8d16642d50abc354a1fca40d9203894f5324f6293cb29aef6"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "bf5a69abf0b8c49b1f5806afa6483a205201103126921af60fef6476348bb0e0",
+    "canonical_target": "extract_toe_targeted_ccft_closure_contracts_v0",
+    "semantic_stage_id": "TARGETED_CCFT_CLOSURE_CONTRACT_EXTRACTION",
+    "stage_number": 2
+  },
+  "captured_at_utc": "2026-08-02T00:06:00Z",
+  "contract_extraction_boundary": {
+    "captured_passive_text_bytes": 11376563,
+    "content_search_passes_consumed": 1,
+    "cp_nlse_selected_source_count": 48,
+    "lcrd_v3_selected_source_count": 48,
+    "local_only_selected_source_count": 0,
+    "overflow_source_count": 137,
+    "overflow_substitution_authorized": false,
+    "previously_deep_reviewed_selected_source_count": 0,
+    "repository_claim_exhaustion_established": false,
+    "selected_source_count": 96,
+    "selected_source_total_bytes": 12141428,
+    "selected_sources_git_portable_count": 96,
+    "stage_1_parser_failure_count": 0
+  },
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 2 scope",
+      "sha256": "f69d6072ce6e86954ebb47d79ecf08b0101b6b6bca288a9318f684377acc891f"
+    }
+  ],
+  "evidence_strength_vocabulary": [
+    "EXACT_SOURCE_BOUND_CONTRACT_RECOVERED",
+    "PARTIAL_CONTRACT_RECOVERED",
+    "CONFLICTING_SOURCE_CONTRACTS",
+    "DERIVED_SUMMARY_WITH_PRIMARY_SOURCE_MISSING",
+    "NUMERICAL_DEFAULT_ONLY",
+    "HEURISTIC_NOT_A_CONTRACT",
+    "NO_RELEVANT_EVIDENCE"
+  ],
+  "frozen_missing_contract_checklists": {
+    "CP_NLSE": [
+      "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "COEFFICIENT_DEFINITIONS_AND_ADMISSIBLE_RANGES",
+      "INITIAL_DATA_RULES",
+      "BOUNDARY_CONDITIONS",
+      "NONDIMENSIONALIZATION_OR_NORMALIZATION",
+      "CONSERVED_OR_MONITORED_QUANTITIES",
+      "FAILURE_AND_INSTABILITY_CRITERIA",
+      "NUMERICAL_IMPLEMENTATION_PROVENANCE",
+      "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+      "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION"
+    ],
+    "LCRD_V3": [
+      "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "INITIAL_AND_BOUNDARY_DATA",
+      "PARAMETER_RANGES",
+      "NORMALIZATION_CONVENTIONS",
+      "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "REPRODUCIBLE_IMPLEMENTATION",
+      "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "LSDA_COARSE_GRAINING_MAP_OR_VARIATIONAL_EFFECTIVE_DERIVATION"
+    ]
+  },
+  "permitted_work": [
+    "reuse only the 96 Stage 1 selected-source passive-text captures after verifying each capture hash and source binding",
+    "extract bounded source-supported records against the frozen CP-NLSE and LCRD-v3 missing-contract checklists",
+    "transcribe explicit equations parameters data conditions normalization invariants failure rules and implementation provenance without repair or inference",
+    "bind every record to branch checklist contract source path source hash lineage custody portability bounded excerpt and evidence class",
+    "preserve partial conflicting derivative-summary numerical-default heuristic and absent evidence without upgrading it",
+    "record branch-specific parser failure unreadable and unreviewed counts",
+    "produce an independently reviewed atomic Stage 2 CLOSE"
+  ],
+  "prohibited_work": [
+    "traverse repository or archive roots or consume a second content-search pass",
+    "substitute any of the 137 overflow paths into the selected evidence set",
+    "repair complete harmonize or choose a nonlinear equation or interaction dispersion",
+    "infer coefficients ranges initial data boundary data normalization invariants failure rules or provenance",
+    "convert numerical defaults heuristics or unsupported summaries into theoretical contracts",
+    "resolve conflicting source contracts by preference",
+    "merge CP-NLSE and LCRD-v3 or select either as CCFT-v0",
+    "insert a new CCFT postulate or begin model construction viability testing physical interpretation seam action or observable work",
+    "promote evidence claim repository exhaustion or open Stage 3 automatically"
+  ],
+  "required_contract_record_fields": [
+    "contract_record_id",
+    "ccft_branch",
+    "missing_contract_id",
+    "source_record_id_path_hash_lineage_and_custody",
+    "bounded_supporting_excerpt_and_location",
+    "mathematical_transcription",
+    "definitions_of_all_symbols",
+    "parameter_values_or_ranges",
+    "initial_and_boundary_conditions",
+    "normalization_or_nondimensionalization",
+    "conservation_invariant_or_monitoring_rule",
+    "failure_or_instability_criterion",
+    "implementation_provenance",
+    "conflicting_source_records",
+    "evidence_strength_classification",
+    "portability_limitation",
+    "stage_3_eligibility"
+  ],
+  "schema_id": "toe.targeted_ccft_closure_contract_extraction.stage_2_open_authority.v0",
+  "scientific_limits": {
+    "maximum_contract_records_per_missing_contract": 12,
+    "maximum_extracted_text_bytes_per_file": 2097152,
+    "maximum_parser_failures": 8,
+    "maximum_source_bound_contract_records": 192,
+    "maximum_total_extracted_text_bytes": 33554432,
+    "maximum_unresolved_contract_conflicts": 32,
+    "selected_source_count": 96,
+    "targeted_content_search_pass_limit": 1
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_2_OPEN_ONLY",
+  "terminal_outcomes": [
+    "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE",
+    "TARGETED_CCFT_CONTRACT_EXTRACTION_COMPLETE_WITH_ONLY_PARTIAL_OR_CONFLICTING_EVIDENCE",
+    "TARGETED_CCFT_CONTRACT_EXTRACTION_BUDGET_EXCEEDED",
+    "SOURCE_CONTENT_UNREADABLE_WITHIN_FROZEN_LIMITS"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_STAGE_2_OPEN_AUTHORITY_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "checks": {
+    "canonical_manifest_stage_2_binding_matches": true,
+    "claim_extraction_and_adjudication_prohibited": true,
+    "deterministic_lineage_rules_frozen": true,
+    "exact_duplicate_paths_retain_distinct_custody_roles": true,
+    "mandatory_exit_behavior_bound": true,
+    "near_duplicate_similarity_remains_nonauthoritative": true,
+    "stage_1_aggregate_and_close_artifacts_hash_bound": true,
+    "stage_1_is_closed_passed": true,
+    "stage_3_automatic_open_prohibited": true,
+    "unresolved_relationships_preserved_without_inference": true,
+    "workload_limits_frozen": true
+  },
+  "consumed_authority": "TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_STAGE_2_OPEN_AUTHORITY_20260730_v0",
+  "decision": "AUTHORIZE_STAGE_2_OPEN",
+  "nonclaim_boundary": "This authority permits source-lineage reconstruction only. It does not extract or adjudicate scientific claims, promote archive evidence, select a native hypothesis, or open Stage 3.",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "review_status": "ACCEPTED_FOR_SEPARATE_ATOMIC_STAGE_2_OPEN",
+  "schema_id": "toe.native_hypothesis_source_lineage_reconstruction.stage_2_open_authority_review.v0"
+}

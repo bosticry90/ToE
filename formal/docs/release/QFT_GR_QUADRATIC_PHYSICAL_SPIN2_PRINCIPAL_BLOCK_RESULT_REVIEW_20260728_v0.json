@@ -1,0 +1,56 @@
+{
+  "accepted": true,
+  "accepted_results": [
+    "GENERIC_STRONG_HYPERBOLICITY_REFUTED",
+    "PHYSICAL_SPIN2_REPEATED_ROOT_DEFECT_IDENTIFIED"
+  ],
+  "authority_rotation": {
+    "phase_a_result_accepted": true,
+    "phase_b_c_execution_authorized": false,
+    "phase_b_c_packet_preparation_authorized": true,
+    "preserved_descendant_adoption_authorized": false,
+    "source_extension_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "adapted_norm_and_existence_claims_remain_open": true,
+    "calculation_target_is_exact": true,
+    "coefficient_controls_change_the_expected_ranks": true,
+    "frozen_vacuum_dependency_is_bound": true,
+    "generic_strong_and_symmetric_hyperbolicity_are_refuted": true,
+    "historical_comparator_boundary_is_retained": true,
+    "light_cone_multiplicities_are_defective": true,
+    "metric_equation_contains_all_fourth_order_terms": true,
+    "physical_pencil_is_independently_reproduced": true,
+    "physical_quotient_invariance_boundary_is_explicit": true,
+    "tt_projection_removes_R2_spin2_principal_term": true
+  },
+  "failed_checks": [],
+  "not_established": [
+    "ADAPTED_NORM_LOCAL_WELL_POSEDNESS_ESTABLISHED",
+    "SMOOTH_EXISTENCE_WITHOUT_HADAMARD_WELL_POSEDNESS",
+    "GENERIC_LOCAL_WELL_POSEDNESS_BLOCKED",
+    "SOURCE_EXTENSION_CHANGES_PRINCIPAL_STRUCTURE"
+  ],
+  "reconciliation": {
+    "adapted_derivative_loss_estimate": "REQUIRES_FRESH_PHASE_B_C_PACKET",
+    "continuous_dependence_in_required_sobolev_norm": "NOT_ESTABLISHED",
+    "older_smooth_existence_results": "NOT_REFUTED",
+    "ordinary_same_order_metric_derivative_estimate": "UNAVAILABLE_IN_GENERIC_SPIN2_SECTOR"
+  },
+  "review_target": "review_qft_gr_quadratic_physical_spin2_principal_block_v0_result",
+  "reviewed_calculation": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-PHYSICAL-SPIN2-PRINCIPAL-BLOCK-v0.json",
+    "sha256": "c4eb5928f39a7b540a0c9803dc65841767aed3ed5542c76222a355d7ac06ecd2"
+  },
+  "reviewer_independence": {
+    "imports_calculation_module": false,
+    "rebuilds_symbolic_pencil": true,
+    "rechecks_claim_boundaries": true,
+    "recomputes_quadratic_and_einstein_multiplicities": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_PHYSICAL_SPIN2_PRINCIPAL_BLOCK_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "prepare_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0",
+  "verdict": "ACCEPT_GENERIC_WEAK_HYPERBOLICITY_OBSTRUCTION_PREPARE_ADAPTED_NORM_PACKET"
+}

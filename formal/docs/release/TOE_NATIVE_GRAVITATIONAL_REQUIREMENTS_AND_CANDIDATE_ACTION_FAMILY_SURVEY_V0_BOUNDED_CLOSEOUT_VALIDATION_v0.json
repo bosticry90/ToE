@@ -1,0 +1,69 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_VALIDATION_v0",
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.bounded_closeout_validation.v0",
+  "captured_at_utc": "2026-07-31T20:00:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "result_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+  "result_sha256": "4e065860ede6ac9955260fb223c802072ce4c8d9e6558890a673def13c7580b7",
+  "review_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+  "review_sha256": "1c0dfe17b96f1ccd2bb72df416e5165dbbf165f63acb926a3844405f90cc29fe",
+  "governance_validation": {
+    "status": "PASSED_WITH_GIT_HISTORY",
+    "event_count": 10,
+    "event_chain_changed": false,
+    "mandatory_exit_completed": true,
+    "repair_attempt_count": 0
+  },
+  "focused_python_validation": {
+    "status": "PASSED",
+    "passed": 35,
+    "suites": [
+      "test_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_bounded_closeout.py",
+      "test_toe_gravitational_action_family_eligibility_handoff_stage_5_authority.py",
+      "test_bounded_program_governance.py",
+      "test_bounded_program_governance_enforcement_completion_authority.py",
+      "test_loop_control_registry_envelope_integrity_gate.py",
+      "test_loop_control_registry_integrity_repair_custody_gate.py"
+    ]
+  },
+  "full_lean_validation": {
+    "status": "PASSED",
+    "target": "ToeFormalAll",
+    "modules": 1354,
+    "jobs": 9099
+  },
+  "nonclaim_boundary": {
+    "proposed_future_preparation_target": "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0",
+    "positive_native_gravitational_principle_derived_or_selected": false,
+    "native_gravitational_action_selected_or_adopted": false,
+    "Einstein_Hilbert_promoted_to_native": false,
+    "quadratic_gravity_promoted_or_reopened": false,
+    "new_gravitational_calculation_executed": false,
+    "canonical_evidence_promoted": false,
+    "master_action_constructed_or_promoted": false,
+    "successor_program_authorized": false,
+    "successor_program_installed": false,
+    "successor_program_opened": false,
+    "automatic_successor_selected": false
+  },
+  "known_validation_debt": {
+    "broad_legacy_authority_consistency_and_freshness_failures": 6,
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "status": "DISCLOSED_NOT_REPAIRED_IN_MANDATORY_EXIT"
+  },
+  "atomic_closeout_commit_expected_path_count": 9,
+  "atomic_closeout_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+    "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_bounded_closeout.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeGravitationalRequirementsAndCandidateActionFamilySurveyV0BoundedCloseout.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true,
+  "status": "MANDATORY_EXIT_CLOSEOUT_READY_FOR_ATOMIC_COMMIT"
+}

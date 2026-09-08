@@ -1,0 +1,152 @@
+{
+  "schema_id": "REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_20260723_v0",
+  "captured_at_utc": "2026-07-23T03:37:22Z",
+  "result": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_COMPLETE_REBINDING_JUSTIFIED_AWAITING_INDEPENDENT_REVIEW",
+  "terminal_outcome": "EM_SOURCE_PIN_REBINDING_JUSTIFIED",
+  "branch": "codex/em-route-source-pin-provenance-authority-review-v0",
+  "accepted_base_commit": "e1219237d083bdd6fe1805a3b36c853814b73725",
+  "authorization_commit": "94b23772151662398651d1748f5c65702832f924",
+  "reviewed_identity": {
+    "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "old_pinned_sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+    "old_identity_domain": "RAW_MIXED_EOL_WORKING_TREE_BYTES",
+    "old_identity_role": "OBSOLETE_NONHERMETIC_SERIALIZATION"
+  },
+  "decisive_findings": {
+    "exact_old_bytes_recovered": true,
+    "exact_old_bytes_location": "preserved dirty-main working copy",
+    "exact_old_bytes_size": 92151,
+    "exact_old_bytes_crlf_pairs": 1,
+    "exact_old_bytes_git_status": "CLEAN_AFTER_GIT_TEXT_NORMALIZATION",
+    "old_pin_matches_any_committed_blob": false,
+    "old_pin_is_generated_evidence": false,
+    "git_cleaned_bytes_match_original_route_capture_blob": true,
+    "route_capture_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
+    "route_capture_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+    "route_capture_blob_sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c",
+    "source_content_changed_in_route_capture_commit": false,
+    "first_pin_appearance_is_post_registry": true,
+    "tracked_deterministic_em_source_generator_found": false
+  },
+  "rebind_identity": {
+    "identity_type": "GIT_BLOB_SHA256",
+    "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+    "sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c",
+    "direct_recomputation_from_git_cat_file": "PASS",
+    "current_v2_manifest_binding_match": "PASS",
+    "current_v2_packet_binding_match": "PASS"
+  },
+  "authority_basis": {
+    "accepted_nonhermetic_diagnosis": {
+      "result_path": ".toe-recovery/manifests/NONHERMETIC_VALIDATION_ROOT_CAUSE_RESULT_20260720_v0.json",
+      "result_sha256": "979cd00358c9f99fcfdd9c0788ec5491967c1b2ab5bda275626311d08b423a23",
+      "review_path": ".toe-recovery/manifests/NONHERMETIC_VALIDATION_ROOT_CAUSE_INDEPENDENT_REVIEW_20260720_v0.json",
+      "review_sha256": "abfef94f09392ce89939970ff0ce5f9bf443ef2ee58143095634a7ce4b354b79",
+      "review_verdict": "ACCEPT"
+    },
+    "accepted_frozen_blob_identity_repair": {
+      "freeze_record": "formal/docs/release/V2_TRACKED_BLOB_IDENTITY_FREEZE_20260721_v0.json",
+      "freeze_record_sha256": "823331aba47abebcb49c230a697baa2f2ad1a038fd38852d776239329b504a3a",
+      "result": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_20260721_v0.json",
+      "result_sha256": "f18c8efc0a65270891957481552c0b62ace72be6d373f776a3960b6693549967",
+      "result_review": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_REVIEW_20260721_v0.json",
+      "result_review_sha256": "2ad83053fdeb578a3b5e733e453cc0f87389b78c31de8262175fdf69831246d4",
+      "review_verdict": "ACCEPT",
+      "regenerated_v2_artifact_commit": "b804dbd2f758319f664942d05b5695ae403ecd47"
+    },
+    "current_scientific_role": {
+      "source_declared_claim_label": "P-POLICY",
+      "authority_class": "BOUNDED_PLANNING_NONCLAIM",
+      "evidence_role": "PLANNING_AUTHORITY",
+      "scope_ceiling": "PLANNING_ROUTE_SELECTION",
+      "supported_proposition": "The EM source explicitly identifies gauge-potential and field-strength objects while recording UNITS_NOT_SELECTED.",
+      "scientific_result_authority": "NONE"
+    }
+  },
+  "occurrence_and_consumer_mapping": {
+    "tracked_pin_paths_at_authorization_commit": 12,
+    "tracked_pin_occurrences_at_authorization_commit": 17,
+    "first_appearance_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
+    "direct_test_pin_occurrences": 0,
+    "transitive_v0_test_outcomes": 28,
+    "transitive_v1_test_outcomes": 39,
+    "total_blocked_consumer_outcomes": 67,
+    "old_raw_pin_survives_in": "V0_AND_V1_ROUTE_CONTRACTS_AND_HISTORICAL_RECORDS",
+    "v2_uses_old_raw_pin": false
+  },
+  "search_completion": {
+    "git_history_and_all_relevant_refs": "COMPLETE",
+    "pre_registry_and_post_registry_lineage": "COMPLETE",
+    "packets_tests_tools_results_reviews": "COMPLETE",
+    "generator_and_manifest_records": "COMPLETE",
+    "dirty_main_ignored_and_untracked_search": "COMPLETE",
+    "custody_objects_and_manifests": "COMPLETE",
+    "patches": "COMPLETE_ZERO_FILES_PRESENT",
+    "logs": "COMPLETE_ZERO_FILES_PRESENT",
+    "bundles": "COMPLETE_SIX_BUNDLE_HEADS",
+    "historical_disposable_snapshots": "COMPLETE_SIXTEEN_EM_SOURCE_COPIES",
+    "competing_authoritative_identity_found": false,
+    "competing_untracked_or_ignored_pin_source_found": false
+  },
+  "terminal_outcome_adjudication": {
+    "EM_SOURCE_PIN_PROVENANCE_VERIFIED": {
+      "selected": false,
+      "reason": "The exact bytes are recovered, but the mixed-EOL checkout serialization was never an authoritative identity domain."
+    },
+    "EM_SOURCE_PIN_REBINDING_JUSTIFIED": {
+      "selected": true,
+      "reason": "The old pin is completely explained by one checkout-only CR byte; Git-cleaned content equals the unchanged committed source blob, and an independently accepted maintenance repair already binds that exact blob under a frozen Git-blob identity."
+    },
+    "EM_SOURCE_PIN_HISTORICAL_NONCURRENT": {
+      "selected": false,
+      "reason": "The raw v0/v1 serialization is obsolete, but the underlying EM source remains bounded current planning evidence in v2."
+    },
+    "EM_SOURCE_PIN_PROVENANCE_UNRESOLVED": {
+      "selected": false,
+      "reason": "Both provenance and the proper replacement identity are now established."
+    }
+  },
+  "scope": {
+    "read_only_provenance_review_completed": true,
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "tools_modified": 0,
+    "artifacts_regenerated": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "automatic_successor_cycle": false
+  },
+  "custody": {
+    "validation_checkout_before_result_write": "CLEAN_AT_AUTHORIZATION_COMMIT",
+    "unexpected_untracked_source": 0,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_total_paths": 629,
+    "dirty_main_em_raw_sha256": "7b1c0bdd683e5d5891a77cf27772df239967ca210b3a7c9fd88ba75f7a1e85e9",
+    "dirty_main_bytes": "UNCHANGED"
+  },
+  "external_evidence": {
+    "path": ".toe-recovery/custody-v0/em-route-source-pin-provenance-authority-review-v0/EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_LEDGER_20260723_v0.json",
+    "sha256": "eae43b9a5b0848326b19358e005525530a96d787a3cede8b351e2ebf44db9641"
+  },
+  "future_boundary": {
+    "automatic_route_table_change": false,
+    "automatic_67_outcome_repair": false,
+    "fresh_selector_required": true,
+    "recommended_future_selector": "AUTHORIZE_BOUNDED_QFT_ROUTE_TABLE_IDENTITY_DOMAIN_REPAIR",
+    "future_repair_note": "Use the already accepted frozen EM Git-blob identity and adjudicate v0/v1 historical contract treatment without changing scientific content or authority.",
+    "route_map_acceptance": "NOT_AUTHORIZED",
+    "first_unit_selection": "NOT_AUTHORIZED"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "next_cycle": "NOT_AUTOMATICALLY_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_PROVENANCE_AND_AUTHORITY_RESULT_ONLY"
+}

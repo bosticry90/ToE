@@ -1,0 +1,206 @@
+{
+  "schema_id": "REPOSITORY_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0",
+  "captured_at_utc": "2026-07-25T01:22:36Z",
+  "accepted_base_commit": "4603c611260fcece6613f0f515641082928b9802",
+  "authorization_commit": "b6e6d6f3d64776a6e50eeb1039987b5de2dcd951",
+  "branch": "codex/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0",
+  "result": "POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_NEWLY_EXPOSED_ROOTS_AWAITING_INDEPENDENT_REVIEW",
+  "broad_python_baseline": "REPRODUCIBLY_RED_AND_EXHAUSTIVELY_RECLUSTERED",
+  "execution": {
+    "tests": 13756,
+    "passed": 12748,
+    "skipped": 598,
+    "failed": 391,
+    "errors": 19,
+    "nonpassing": 410,
+    "pytest_exit_code": 1,
+    "started_utc": "2026-07-24T23:33:04.206142+00:00",
+    "finished_utc": "2026-07-25T01:17:32.102683+00:00",
+    "elapsed_seconds": 6267.8910000000005,
+    "validation_behavior": "READ_ONLY",
+    "tracked_status_after": "EMPTY",
+    "unexpected_untracked_source": "NONE"
+  },
+  "comparability": {
+    "frozen_execution_inventory_count": 13756,
+    "frozen_execution_inventory_sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf",
+    "junit_ids_and_order_exactly_frozen": true,
+    "current_collected_inventory_count": 13786,
+    "current_collected_common_with_frozen_inventory": 13756,
+    "current_collected_added_over_frozen_inventory": 30,
+    "current_collected_added_since_prior_current_inventory": 7,
+    "current_collected_removed_ids": 0,
+    "accepted_new_guards_executed_in_frozen_reassessment": false
+  },
+  "delta_from_post_equation_compendium_baseline": {
+    "prior_nonpassing": 390,
+    "current_nonpassing": 410,
+    "net_nonpassing_change": 20,
+    "recovered_prior_nonpassing": 20,
+    "newly_nonpassing": 40,
+    "persistent_nonpassing": 370,
+    "status_transitions_within_persistent_nonpassing": 0
+  },
+  "accepted_repair_effect": {
+    "authorized_outcomes": 16,
+    "authorized_outcomes_recovered": 16,
+    "authorized_outcomes_persistent": 0,
+    "additional_pillar_packet_contract_outcomes_recovered": 3,
+    "new_identity_local_routes_failing": 0,
+    "interpretation": "The accepted role-separation repair recovered every intended outcome and three downstream packet-contract outcomes. No intended identity-local control regressed."
+  },
+  "environment_interaction": {
+    "prior_one_off_atomic_replace_permission_outcome_recovered": 1,
+    "root_id": "ATOMIC_REGISTRY_REPLACE_PERMISSION_DENIED",
+    "interpretation": "The prior Windows WinError 5 event did not recur. This is recorded as environmental nonrecurrence, not a repository repair."
+  },
+  "newly_exposed_roots": [
+    {
+      "root_id": "PILLAR_V1_FROZEN_REVIEW_SOURCE_PIN_DRIFT",
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 39,
+      "consumer_files": 1,
+      "shared_loader_roots": 1,
+      "first_mismatch": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py",
+      "interpretation": "The accepted role-separation repair changed this tracked review source. One v1 frozen-input loader retains its earlier source hash and masks 39 consumer outcomes. This is a concentrated identity-role question; no hash was refreshed."
+    },
+    {
+      "root_id": "DUPLICATE_MAINTENANCE_AUTHORITY_SELECTOR_KEY",
+      "family": "other_committed_assertions",
+      "outcomes": 1,
+      "accepted_base_occurrences": 2,
+      "accepted_base_commit": "4603c611260fcece6613f0f515641082928b9802",
+      "interpretation": "The strict tracked-JSON gate newly exposes two exact top-level selector keys in CURRENT_MAINTENANCE_AUTHORITY_v0.json. Both occurrences pre-exist in the accepted base; the reassessment did not create or repair them."
+    }
+  ],
+  "masked_persistent_root_transition": {
+    "root_id": "PILLAR_V1_ISOLATED_STAGING_HASH_DRIFT",
+    "outcomes": 13,
+    "prior_first_mismatch": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+    "current_first_mismatch": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "interpretation": "The thirteen outcomes remain nonpassing in the same v1 isolated-staging root. The prior QM mismatch is no longer first; the EM identity is the next masked mismatch."
+  },
+  "exhaustive_accounting": {
+    "family_outcome_sum": 410,
+    "unclassified_outcomes": 0,
+    "first_cause_clusters": 312,
+    "highest_leverage_remaining_family": "missing_artifacts",
+    "highest_leverage_remaining_family_outcomes": 218,
+    "highest_leverage_remaining_concentrated_root": {
+      "root_id": "PILLAR_V1_FROZEN_REVIEW_SOURCE_PIN_DRIFT",
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 39
+    },
+    "thirteen_custody_currency_outcomes_remain_independently_classified": true
+  },
+  "remaining_first_cause_families": [
+    {
+      "family": "missing_artifacts",
+      "outcomes": 218
+    },
+    {
+      "family": "other_packet_contract",
+      "outcomes": 65
+    },
+    {
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 58,
+      "includes_new_v1_frozen_review_source_pin_outcomes": 39,
+      "includes_persistent_v1_isolated_staging_outcomes": 13
+    },
+    {
+      "family": "other_artifact_currency",
+      "outcomes": 50,
+      "includes_independently_classified_post_decoupling_source_custody_drift": 13
+    },
+    {
+      "family": "authority_expectations",
+      "outcomes": 8
+    },
+    {
+      "family": "environment_or_path_identity",
+      "outcomes": 6
+    },
+    {
+      "family": "other_committed_assertions",
+      "outcomes": 5,
+      "includes_duplicate_maintenance_authority_selector_key": 1
+    }
+  ],
+  "missing_artifact_expectation_status": {
+    "current_family_outcomes": 218,
+    "fixture_candidates": 181,
+    "provenance_blocked": 36,
+    "stale_non_missing_hash_expectation": 1,
+    "family_changed_by_pillar_role_separation_repair": false,
+    "automatic_fixture_scaling_authorized": false
+  },
+  "custody": {
+    "maintenance_output_root": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0",
+    "all_reassessment_outputs_resolved_under_toe_recovery": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_existing_regular_file_bytes_unchanged": true,
+    "dirty_main_status_path_set_unchanged": true,
+    "dirty_main_touched_by_reassessment": false
+  },
+  "external_evidence": [
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/POST_PILLAR_ROLE_SEPARATION_CURRENT_COLLECTION_COMPARABILITY_v0.json",
+      "sha256": "571f970b3b3cdb1d168d6923482653f99863d95c7d2811a0af194f49b4009cec"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/post_pillar_role_separation_frozen_nonlean_junit_v0.xml",
+      "sha256": "4ec47cf390a219b74d9fd48312ec67a6dc094d38cdd7572c91288f06d4d9acaf"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/post_pillar_role_separation_frozen_nonlean_pytest_v0.log",
+      "sha256": "227748dc6a41ec4a94b1f8ec0b86870a83d0fc08a0e18de78148ceb8f88e425e"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/POST_PILLAR_ROLE_SEPARATION_OUTCOME_DELTA_v0.json",
+      "sha256": "aa3c8ef40534f3f6b727c44090d057e7764d646ba2c5e90171d766bc6ad48a59"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/POST_PILLAR_ROLE_SEPARATION_OUTCOME_ENTRIES_v0.json",
+      "sha256": "9b9c34289144c02b346f15a2eab1e3648bd57355338d39f67d404e82bb41692a"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/POST_PILLAR_ROLE_SEPARATION_MISSING_EXPECTATION_STATUS_v0.json",
+      "sha256": "1fbd2ba57131b98acc24d41f2f58113b35da8b49c378ffedfde38b2ff44b8a57"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/POST_PILLAR_ROLE_SEPARATION_FIRST_CAUSE_CLUSTERS_v0.json",
+      "sha256": "79361f8950c91195d56180a41746cddae8fe5eba12cea7b4cd00d9cd77f59d8b"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/POST_PILLAR_ROLE_SEPARATION_BASELINE_REASSESSMENT_EXECUTION_MANIFEST_v0.json",
+      "sha256": "c074fd19af4e55b0d1b7a9aabe86987c50292ad5d26350a518ae77aaaca9d2f8"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-pillar-historical-artifact-currency-role-separation-repair-baseline-reassessment-v0/build_post_pillar_role_separation_analysis_v0.py",
+      "sha256": "72eec63f173e6346ebf8eafc17adf84d9b34de7b49f42b45752e74cac700e6ea"
+    }
+  ],
+  "scope": {
+    "diagnostic_only": true,
+    "same_frozen_non_lean_test_inventory": true,
+    "repair_performed": false,
+    "tests_identities_or_generators_modified": false,
+    "reports_or_fixtures_created_in_source_tree": false,
+    "fixture_conversion_scaled": false,
+    "lean_activity": false,
+    "scientific_activity": false,
+    "v2_enrollment_authorized": false,
+    "scientific_resumption_authorized": false,
+    "automatic_successor_cycle": false
+  },
+  "lean_status": "UNCHANGED_NOT_EXECUTED_IN_THIS_CYCLE",
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_REASSESSMENT_RESULT_ONLY"
+}

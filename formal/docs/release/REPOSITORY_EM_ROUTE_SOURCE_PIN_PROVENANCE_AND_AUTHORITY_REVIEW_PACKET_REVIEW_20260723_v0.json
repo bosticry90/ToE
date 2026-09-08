@@ -1,0 +1,23 @@
+{
+  "schema_id": "REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_PACKET_REVIEW_20260723_v0",
+  "captured_at_utc": "2026-07-23T03:11:43Z",
+  "review_basis": "INDEPENDENT_LINEAGE_IDENTITY_SCOPE_EVIDENCE_HIERARCHY_TERMINAL_OUTCOME_CONTAINMENT_AND_NONMUTATION_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_PACKET_20260723_v0.json",
+    "sha256": "2b570f2c6d741be60ad341a92b2ce869e1b1760fa9544931f86ae024ec8a5537"
+  },
+  "checks": {
+    "accepted_qft_route_identity_adjudication_and_commit_bound": true,
+    "exact_em_path_pin_and_route_capture_commit_bound": true,
+    "reachable_git_custody_dirty_main_patch_bundle_log_and_snapshot_search_required": true,
+    "first_appearance_and_all_occurrences_required": true,
+    "source_generated_and_intermediate_identity_domains_distinguished": true,
+    "scientific_and_governance_authority_assessment_required": true,
+    "dirty_main_content_limited_to_nonauthoritative_leads": true,
+    "terminal_outcomes_exhaustively_enumerated": true,
+    "hash_route_test_tool_source_artifact_scientific_registry_v2_and_lean_mutations_forbidden": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

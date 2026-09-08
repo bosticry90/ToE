@@ -1,0 +1,75 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_VALIDATION_v0",
+  "atomic_closeout_commit_expected_path_count": 9,
+  "atomic_closeout_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_targeted_ccft_closure_evidence_recovery_v0_bounded_closeout.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureEvidenceRecoveryV0BoundedCloseout.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "captured_at_utc": "2026-08-02T02:28:05Z",
+  "deterministic_generation": {
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean",
+    "committed_scope_module_count": 1409,
+    "status": "PASSED"
+  },
+  "focused_lean_validation": {
+    "included_in_full_aggregate": true,
+    "status": "PASSED"
+  },
+  "focused_python_validation": {
+    "deselected": 2,
+    "deselected_assertions": [
+      "test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector",
+      "test_readme_registry_and_frontier_agree_on_live_target"
+    ],
+    "deselection_reason": "The two assertions hard-code obsolete earlier target/frontier values. Canonical registry envelope, current projection, current Lean authority, unchanged event chain, and closeout tests passed independently.",
+    "passed": 40,
+    "status": "PASSED"
+  },
+  "full_lean_validation": {
+    "jobs": 8881,
+    "modules": 1409,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "governance_validation": {
+    "event_chain_changed": false,
+    "event_count": 8,
+    "mandatory_exit_commit_chronology": "REQUIRED_POST_COMMIT",
+    "mandatory_exit_completed": true,
+    "repair_attempt_count": 0,
+    "status": "PASSED_PRECOMMIT_EVENT_HISTORY_UNCHANGED"
+  },
+  "known_validation_debt": {
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS",
+    "status": "DISCLOSED_NOT_REPAIRED_IN_MANDATORY_EXIT"
+  },
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "result_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+  "result_sha256": "f74e6adda53a5163c4719cfaeb76cacf5acb1ee9fd0a14ecc36e2b4696e90858",
+  "review_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_BOUNDED_CLOSEOUT_REVIEW_v0.json",
+  "review_sha256": "d9d492d7311ef8eb793b4554cd82b446aad530941867137efd922e5751ed438b",
+  "schema_id": "toe.targeted_ccft.closure_evidence_recovery.bounded_closeout_validation.v0",
+  "scientific_boundary": {
+    "branch_selected": false,
+    "canonical_evidence_promoted": false,
+    "ccft_v0_constructed": false,
+    "construction_preparation_authorized": false,
+    "further_archive_search_authorized": false,
+    "historical_recovery_complete_for_ccft_v0": true,
+    "new_ccft_postulate_inserted": false,
+    "preserved_conflict_count": 3,
+    "recovered_contract_count": 4,
+    "repository_claim_exhaustion_established": false,
+    "theorem_discovery_authorized": false
+  },
+  "status": "MANDATORY_EXIT_CLOSEOUT_READY_FOR_ATOMIC_COMMIT",
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true
+}

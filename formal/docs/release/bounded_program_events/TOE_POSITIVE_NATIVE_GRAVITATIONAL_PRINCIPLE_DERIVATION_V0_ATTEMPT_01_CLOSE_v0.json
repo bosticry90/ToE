@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 1,
+  "closed_from_commit": "021188c330b4330bf9679c08d80c6c2f75a8eec0",
+  "event_hash": "b2b96e204808146c305d10a31250f58f7719d9910a89bfdd95fc17f2dd72e221",
+  "event_sequence_number": 2,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "3a0cbecced692a38c34fd9d4393db471a0242e2dbfe830863ca2cba5069db2e7",
+  "previous_event_hash": "3a0cbecced692a38c34fd9d4393db471a0242e2dbfe830863ca2cba5069db2e7",
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "result_artifact_hash": "4c172441fde540e85b073ae4387f1f64f33ff961b8b0ee36db2be29478f9636f",
+  "result_artifact_path": "formal/docs/release/TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_RESULT_v0.json",
+  "review_artifact_hash": "f129369274a495978d0c4ad35f6f9d978917ff2a088fa5db8cf7e3a5540aff15",
+  "review_artifact_path": "formal/docs/release/TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_RESULT_REVIEW_v0.json",
+  "terminal_result": "BLOCKED"
+}

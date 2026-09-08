@@ -1,0 +1,58 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_RESULT_REVIEW_20260725_v0",
+  "verdict": "CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_ACCEPTED",
+  "reviewed_result": {
+    "path": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_RESULT_20260725_v0.json",
+    "sha256": "26b7ef803321177b910f20aa8a002d441e5bc09eb7d7702a60cd79f8753510f3",
+    "commit": "d558ae4417949df59a8ca3e41fc07bacc2712b57",
+    "tree": "efe6f602d71b2660bbbf0eb9adc25fecc5478ecb"
+  },
+  "independent_review": {
+    "checkout": "C:/toe-lean-rv0",
+    "checkout_commit": "d558ae4417949df59a8ca3e41fc07bacc2712b57",
+    "lineage_prompt_profile_and_lean_guards": "20 / 20 PASS",
+    "duration_seconds": 128.01,
+    "checkout_after": "CLEAN",
+    "stdout": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/exposed_root_repair_independent_review.stdout.log",
+      "sha256": "47291055e065bd8d9544faaec5377e9076d0856a7afbe094210cbeff63e1f06b",
+      "size_bytes": 272
+    },
+    "stderr": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/exposed_root_repair_independent_review.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "junit": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/exposed_root_repair_independent_review.junit.xml",
+      "sha256": "c5b7c3fe9bf7bfcde6a018c2832ae0ce4be83fdef13d38791889b7930e17b84b",
+      "size_bytes": 3716
+    }
+  },
+  "findings": {
+    "versioned_lineage_contract_valid": true,
+    "prompt_protected_invariants_valid": true,
+    "accepted_validation_profile_outputs_do_not_violate_prompt_decoupling": true,
+    "four_lean_backed_guards_pass": true,
+    "lean_source_or_type_error_observed": false,
+    "overlapping_dependency_checkout_classification_confirmed": true,
+    "disk_exhaustion_classification_confirmed": true,
+    "deep_windows_path_replay_classification_confirmed": true,
+    "short_path_dependency_and_target_build_reproducible": true,
+    "tracked_or_custody_artifact_removed": false,
+    "dirty_main_preserved": true,
+    "scientific_or_authority_state_changed": false
+  },
+  "accepted_boundary": {
+    "current_profile_exposed_outcomes_recovered": 8,
+    "full_current_profile_green": "NOT_YET_MEASURED",
+    "historical_isolation": "NOT_YET_PROVEN",
+    "complete_recovery_lineage_lean_graph": "NOT_YET_EXECUTED",
+    "recovery_control_plane_complete": false
+  },
+  "required_next_action": "REGENERATE_AND_FREEZE_CURRENT_ACCEPTANCE_PROFILE_V3_THEN_EXECUTE_CURRENT_CONTROL_PLANE",
+  "automatic_successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

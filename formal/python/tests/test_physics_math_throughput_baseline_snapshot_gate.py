@@ -2,7 +2,11 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+
+import pytest
+
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import physics_math_throughput_baseline_snapshot as baseline_tool
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -11,8 +15,10 @@ DECLARATION_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "PHYS_MATH_THROUGHPUT_IMPLEMENTATION_TRANCHE_00_BASELINE_20260407_v0.md"
 )
 TOOL_PATH = REPO_ROOT / "formal" / "python" / "tools" / "physics_math_throughput_baseline_snapshot.py"
-ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "physics_math_throughput_baseline_20260407_v0.json"
+HISTORICAL_REPORT_NAME = "physics_math_throughput_baseline_20260407_v0.json"
+LIVE_ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "reports" / HISTORICAL_REPORT_NAME
 MANIFEST_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
+FROZEN_GENERATED_AT_UTC = "2026-04-07T00:00:00Z"
 
 
 def _read(path: Path) -> str:
@@ -24,11 +30,26 @@ def _read_json(path: Path) -> dict:
     return json.loads(_read(path))
 
 
-def test_phase0_baseline_files_exist() -> None:
+@pytest.fixture(scope="module")
+def historical_baseline_fixture(tmp_path_factory: pytest.TempPathFactory) -> tuple[Path, Path]:
+    fixture_root = tmp_path_factory.mktemp("physics_math_throughput_baseline")
+    first = fixture_root / "first" / HISTORICAL_REPORT_NAME
+    second = fixture_root / "second" / HISTORICAL_REPORT_NAME
+
+    baseline_tool.build_snapshot(first, generated_at_utc=FROZEN_GENERATED_AT_UTC)
+    baseline_tool.build_snapshot(second, generated_at_utc=FROZEN_GENERATED_AT_UTC)
+
+    assert first.read_bytes() == second.read_bytes()
+    assert not LIVE_ARTIFACT_PATH.exists()
+    return first, second
+
+
+def test_phase0_baseline_files_exist(historical_baseline_fixture: tuple[Path, Path]) -> None:
     assert PROGRAM_PATH.exists(), "Missing throughput remediation program doc."
     assert DECLARATION_PATH.exists(), "Missing throughput tranche declaration."
     assert TOOL_PATH.exists(), "Missing throughput baseline tool."
-    assert ARTIFACT_PATH.exists(), "Missing throughput baseline artifact."
+    assert historical_baseline_fixture[0].exists(), "Missing temporary throughput baseline fixture."
+    assert not LIVE_ARTIFACT_PATH.exists(), "Historical live report must remain absent."
 
 
 def test_phase0_program_tokens_present() -> None:
@@ -47,8 +68,8 @@ def test_phase0_program_tokens_present() -> None:
     assert not missing, "Missing throughput program token(s): " + ", ".join(missing)
 
 
-def test_phase0_baseline_artifact_schema() -> None:
-    payload = _read_json(ARTIFACT_PATH)
+def test_phase0_baseline_artifact_schema(historical_baseline_fixture: tuple[Path, Path]) -> None:
+    payload = _read_json(historical_baseline_fixture[0])
     manifest = _read_json(MANIFEST_PATH)
 
     assert payload.get("schema_id") == "PHYS_MATH_THROUGHPUT_BASELINE_v0"
@@ -72,3 +93,13 @@ def test_phase0_baseline_artifact_schema() -> None:
 
     baseline_context = payload.get("baseline_context", {})
     assert "Measurement-only artifact" in baseline_context.get("nonclaim_boundary", "")
+
+
+def test_phase0_historical_fixture_is_byte_deterministic_and_live_path_absent(
+    historical_baseline_fixture: tuple[Path, Path],
+) -> None:
+    first, second = historical_baseline_fixture
+    assert first.name == HISTORICAL_REPORT_NAME
+    assert second.name == HISTORICAL_REPORT_NAME
+    assert first.read_bytes() == second.read_bytes()
+    assert not LIVE_ARTIFACT_PATH.exists()

@@ -1,0 +1,183 @@
+{
+  "binding_count": 17,
+  "bindings": [
+    {
+      "binding_id": "PAC-001",
+      "consumer": "formal/python/tests/test_loop_control_registry_integrity_repair_custody_gate.py::test_registry_repair_custody_binds_pre_and_post_bytes",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543",
+      "identity_id": "registry_post_repair",
+      "role": "HISTORICAL_SOURCE_BLOB"
+    },
+    {
+      "binding_id": "PAC-002",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py::test_all_frozen_hashes_match_without_trusting_preparation_flags",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c",
+      "identity_id": "blocker_route_generator",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-003",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py::test_exact_twelve_routes_and_counts_are_independently_reproduced",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c",
+      "identity_id": "blocker_route_generator",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-004",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py::test_all_sixteen_preparation_decisions_are_recomputed",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c",
+      "identity_id": "blocker_route_generator",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-005",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py::test_evidence_wording_correction_would_remove_only_named_mismatches",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c",
+      "identity_id": "blocker_route_generator",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-006",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py::test_committed_review_report_is_canonical_and_current",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c",
+      "identity_id": "blocker_route_generator",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-007",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[dropped_source_row]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-008",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[duplicate_source_row_id]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-009",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[source_status_promotion]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-010",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[missing_evidence_pointer]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-011",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[implicit_natural_unit_conversion]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-012",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[dimensionless_test_value_promoted_to_physical_calibration]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-013",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[dimension_vector_mismatch_marked_compatible]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-014",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_each_of_eight_controls_uses_a_fresh_copy_and_detects_its_defect[unresolved_assignment_silently_filled]",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-015",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_all_eight_controls_are_complete_deterministic_and_nonleaking",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-016",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_review_report_is_canonical_deterministic_and_cli_check_passes",
+      "current_successor_role": "CURRENT_CANONICAL_IDENTITY",
+      "expected_historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "identity_id": "equation_compendium",
+      "role": "HISTORICAL_GENERATOR_PIN"
+    },
+    {
+      "binding_id": "PAC-017",
+      "consumer": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_result_review.py::test_review_report_is_canonical_deterministic_and_cli_check_passes",
+      "current_successor_role": "CURRENT_LIVE_AUTHORITY",
+      "expected_historical_sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b",
+      "identity_id": "ledger_review_authority",
+      "role": "REVIEW_TIME_AUTHORITY"
+    }
+  ],
+  "contract_id": "PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_CONTRACT_20260724_v0",
+  "identities": {
+    "blocker_route_generator": {
+      "bytes": 52127,
+      "frozen_commit": "5d11196086e12f161f51785fb86dc88bbd803081",
+      "git_blob_oid": "2edf61181178c8629980e51b52f61aaaef628b1a",
+      "path": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
+      "resolution": "FROZEN_GIT_BLOB",
+      "sha256": "27ad363691f34279e5a9e0d0ffc916096af0f21ca189c284ff7ad005927c730c"
+    },
+    "equation_compendium": {
+      "current_identity_contract": "formal/docs/release/EQUATION_COMPENDIUM_IDENTITY_DOMAIN_CONTRACT_20260724_v0.json",
+      "historical_bytes": 13743,
+      "historical_domain": "HISTORICAL_MIXED_EOL_WORKING_TREE_SHA256",
+      "historical_sha256": "7a7f9e564fd2e902b731b6ddceb7adb687e854d3a7970462c8ba29b51c05427e",
+      "path": "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md",
+      "resolution": "EQUATION_COMPENDIUM_DOMAIN_CONTRACT"
+    },
+    "ledger_review_authority": {
+      "bytes": 1768,
+      "equality_with_current_live_authority_required": false,
+      "frozen_commit": "2d2617950437b7465e6f322b89463d6417d8cf35",
+      "git_blob_oid": "dca311d6abe38a872495c07f302d13ad886c0232",
+      "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+      "resolution": "REVIEW_TIME_GIT_BLOB_WITH_LIVE_SUCCESSOR",
+      "sha256": "ada2c9c9c4622c64f0ab0fb7033b8e39b790d55a29ee492dd03fea06afc3695b"
+    },
+    "registry_post_repair": {
+      "bytes": 52340650,
+      "frozen_commit": "310b9dd426e3eea4585226467c4361f09104e6c8",
+      "git_blob_oid": "e6c5b3773dccd92fde9c0a8d486a56f993d6b235",
+      "path": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "resolution": "FROZEN_GIT_BLOB",
+      "sha256": "eda451133e8bbfe1ba0e815b29735f874e8b33e61d7fc5085999c4ba38df0543"
+    }
+  },
+  "identity_count": 4,
+  "registry_rotated": false,
+  "schema_id": "toe.pillar_historical_artifact_currency_role_contract.v0",
+  "scientific_content_changed": false,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment_authorized": false
+}

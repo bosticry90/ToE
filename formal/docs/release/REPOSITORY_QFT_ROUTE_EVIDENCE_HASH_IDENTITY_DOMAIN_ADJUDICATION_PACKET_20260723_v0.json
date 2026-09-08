@@ -1,0 +1,105 @@
+{
+  "schema_id": "REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PACKET_20260723_v0",
+  "captured_at_utc": "2026-07-23T02:48:20Z",
+  "target": "execute_repository_qft_route_evidence_hash_identity_domain_adjudication_v0_once",
+  "status": "AUTHORIZED_ONE_READ_ONLY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION",
+  "accepted_lineage": {
+    "commit": "9aae6deb5778c3618b21647941d38dac9f06ac7c",
+    "reassessment_result_review": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_RESULT_REVIEW_20260723_v0.json",
+    "reassessment_result_review_sha256": "c4f1be6e3092366655f3c88ef54a31d44ce9bce3b6c6abfccc2fc8e12bd85bf2"
+  },
+  "bound_baseline_evidence": {
+    "outcome_entries_external_path": ".toe-recovery/custody-v0/post-historical-aggregate-decomposition-baseline-reassessment-v0/POST_AGGREGATE_OUTCOME_ENTRIES_v0.json",
+    "outcome_entries_sha256": "e1672e5f586d3638fe18a28e9f0c18fbcf6424b77f2f5b8310468908789fd620",
+    "first_cause_clusters_external_path": ".toe-recovery/custody-v0/post-historical-aggregate-decomposition-baseline-reassessment-v0/POST_AGGREGATE_FIRST_CAUSE_CLUSTERS_v0.json",
+    "first_cause_clusters_sha256": "23495ff7047294db7076251c44d63f1117480bf023f7e647b1b5ef386db11ac2",
+    "baseline_nonpassing": 526,
+    "target_root_id": "QFT_ROUTE_EVIDENCE_HASH_DRIFT",
+    "target_root_family": "qft_route_hash",
+    "target_outcomes": 67,
+    "observed_route_evidence_path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md"
+  },
+  "required_expectation_ledger_fields": [
+    "expectation_id",
+    "consumer_nodeid",
+    "consumer_file",
+    "consumer_role",
+    "referenced_path",
+    "pinned_hash_value",
+    "current_git_blob_oid",
+    "current_canonical_byte_sha256",
+    "identity_comparison_domain_used_by_consumer",
+    "producing_tool_or_manual_provenance",
+    "frozen_commit_or_authority_binding",
+    "scientific_or_authority_significance",
+    "current_historical_or_unenrolled_role",
+    "primary_or_cascade_relationship",
+    "recommended_disposition",
+    "disposition_rationale"
+  ],
+  "allowed_dispositions": [
+    "REMOVE_DEPENDENCY",
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+    "RETAIN_AS_GIT_BLOB_IDENTITY",
+    "RETAIN_AS_CANONICAL_ARTIFACT_IDENTITY",
+    "RETAIN_AS_EXPLICIT_GENERATED_EVIDENCE_IDENTITY",
+    "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW"
+  ],
+  "required_questions": [
+    "Which exact artifact or source does each of the 67 consumers reference?",
+    "Does each pinned value represent Git source, canonical bytes, generated evidence, or checkout bytes?",
+    "What frozen commit, path, and producing tool or manual provenance controls the dependency?",
+    "Is the dependency scientific, authority-bearing, historical, provenance-only, or unenrolled?",
+    "Do all 67 outcomes share the same primary causal root after direct source inspection?",
+    "Should any dependency be removed or demoted rather than rebound?",
+    "Does the route evidence belong to current authority, historical evidence, or an unenrolled packet chain?"
+  ],
+  "authorized_cycle": {
+    "diagnostic_adjudication_executions": 1,
+    "independent_result_reviews": 1,
+    "hash_modifications": 0,
+    "test_modifications": 0,
+    "artifact_regenerations": 0,
+    "source_or_scientific_modifications": 0,
+    "registry_or_v2_actions": 0,
+    "lean_actions": 0,
+    "automatic_successor_actions": 0
+  },
+  "acceptance_requirements": {
+    "all_67_outcomes_individually_mapped": true,
+    "primary_causal_roots_exhaustively_identified": true,
+    "consumer_dispositions_restricted_to_allowed_values": true,
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "artifacts_regenerated": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "validation_checkout": "CLEAN",
+    "dirty_main": "BYTE_UNCHANGED",
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "refreshing any pinned hash",
+    "modifying any consumer test or source",
+    "regenerating or rewriting route evidence",
+    "promoting an unenrolled packet chain",
+    "reading dirty-main content as canonical evidence",
+    "repairing any of the 67 outcomes",
+    "fixture scaling",
+    "Lean work",
+    "registry rotation",
+    "V2 enrollment",
+    "scientific execution",
+    "automatic successor cycle"
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/qft-route-evidence-hash-identity-domain-adjudication-v0",
+    "canonical_worktree_writes": "AUTHORITY_AND_RESULT_RECORDS_ONLY",
+    "test_source_artifact_and_report_writes": "PROHIBITED"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

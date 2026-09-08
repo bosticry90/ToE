@@ -1,0 +1,52 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T11:00:00Z",
+  "checks": {
+    "all_source_hashes_reproduce": true,
+    "automated_v2_action_selection_lane_remains_closed": true,
+    "candidate_family_inventory_is_exactly_seven": true,
+    "compatibility_vocabulary_is_provisional_and_closed": true,
+    "deep_review_selection_is_deterministic_and_outcome_blind": true,
+    "five_stage_order_matches_the_selected_prerequisite": true,
+    "mandatory_exit_is_exact_and_nonexecuting": true,
+    "maximum_compatibility_cell_count_is_seventy": true,
+    "no_action_or_native_principle_can_be_selected": true,
+    "no_evidence_can_self_attest_or_promote_itself": true,
+    "no_program_installation_or_stage_open_is_present": true,
+    "no_repair_or_subsidiary_scientific_target_is_permitted": true,
+    "program_terminal_outcomes_are_closed": true,
+    "requirement_inventory_is_exactly_ten": true,
+    "stage_4_cannot_populate_the_closed_v2_matrix": true,
+    "stage_5_can_only_prepare_an_eligibility_handoff": true,
+    "standard_gr_remains_an_isolated_comparator": true,
+    "workload_caps_are_finite": true
+  },
+  "failed_checks": [],
+  "independent_reproduction": {
+    "candidate_action_family_count": 7,
+    "compatibility_cell_ceiling": 70,
+    "mandatory_exit_target": "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0",
+    "native_requirement_count": 10,
+    "proposed_program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+    "repair_attempt_count": 0,
+    "stage_count": 5
+  },
+  "nonclaim_boundary": [
+    "The proposal does not install or open the survey program.",
+    "The proposal does not validate any requirement or family as physical truth.",
+    "The provisional compatibility vocabulary is a bounded evidence-triage device and not the closed V2 scientific matrix.",
+    "No action family, Einstein-Hilbert gravity, quadratic gravity, postulate, or native gravitational principle is selected.",
+    "Any eligible family remains only a candidate for a separately authorized later action-selection program."
+  ],
+  "program_installed": false,
+  "proposal_only": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+    "sha256": "28789fd7edb3be5c23ed2a2a783c786f623ecae3dfdee72cac5f57050f1900be"
+  },
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.bounded_program_preparation_result_review.v0",
+  "scientific_result_claimed": false,
+  "scientific_stage_opened": false,
+  "verdict": "ACCEPT_GRAVITATIONAL_SURVEY_PROGRAM_PROPOSAL_AWAIT_SEPARATE_INSTALLATION_AUTHORITY"
+}

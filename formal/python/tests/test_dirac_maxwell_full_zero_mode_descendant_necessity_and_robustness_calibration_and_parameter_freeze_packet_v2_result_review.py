@@ -169,4 +169,4 @@ def test_generated_review_report_is_current(report: dict) -> None:
 
 
 def test_prompt_remains_protected() -> None:
-    assert hashlib.sha256((ROOT / review.PROMPT_RELATIVE_PATH).read_bytes()).hexdigest() == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

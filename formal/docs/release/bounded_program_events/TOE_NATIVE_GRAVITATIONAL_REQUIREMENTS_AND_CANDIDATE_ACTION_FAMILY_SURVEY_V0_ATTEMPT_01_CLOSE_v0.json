@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 1,
+  "closed_from_commit": "59ac0934c2668a9f0f923f2c00f6056ab44f1283",
+  "event_hash": "11f77ea8ff2d5e08edb135fb21c2c1dd99cc5c402903f99f793064da001c241d",
+  "event_sequence_number": 2,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "1923f7662b72f713d6182a94e4f3973ef381e995e7aed9881b2f604fbfea9a23",
+  "previous_event_hash": "1923f7662b72f713d6182a94e4f3973ef381e995e7aed9881b2f604fbfea9a23",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "result_artifact_hash": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+  "result_artifact_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+  "review_artifact_hash": "3e6f8c74fe74d3c8a7bd177c025b1f722d386b493aaa177b06db2866b592705c",
+  "review_artifact_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

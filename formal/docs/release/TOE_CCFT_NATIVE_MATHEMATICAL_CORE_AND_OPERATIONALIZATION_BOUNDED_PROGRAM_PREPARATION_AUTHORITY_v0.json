@@ -1,0 +1,38 @@
+{
+  "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_BOUNDED_PROGRAM_PREPARATION_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_PROPOSAL_PREPARATION_ONLY",
+  "authorized_target": "prepare_toe_ccft_native_mathematical_core_and_operationalization_bounded_program_v0",
+  "captured_at_utc": "2026-07-31T21:19:27Z",
+  "consumed_frontier_checkpoint": {
+    "selection_result_path": "formal/docs/release/TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_v0.json",
+    "selection_result_sha256": "1d9f06a1e8d914d88603eff9b0539b78ef1f5141b327cc2f2255f0c1531b128b",
+    "selection_review_path": "formal/docs/release/TOE_CCFT_PRIMARY_NATIVE_POSITIVE_CONTENT_FRONTIER_SELECTION_RESULT_REVIEW_v0.json",
+    "selection_review_sha256": "912c40c66ca56920fe8cb0ba1213267d84e39a72f9d55ddd440d6235c9820446",
+    "selected_frontier": "HYP_TOE_CCFT_MINIMAL_NATIVE_MATHEMATICAL_CORE_OPERATIONALIZATION_v0",
+    "selected_frontier_readiness": "AFTER_ONE_PREREQUISITE"
+  },
+  "permitted_work": [
+    "prepare one bounded five-stage CCFT mathematical-core recovery and operationalization program proposal",
+    "freeze source-selection, custody, workload, parser, review, terminal-outcome, and mandatory-exit contracts",
+    "define how earlier coherence blocks, census overflow, conflicts, and negative results remain binding",
+    "independently review the proposal for boundedness, nonpromotion, and nonexecution",
+    "prepare registry and Lean mirrors for this proposal-preparation checkpoint"
+  ],
+  "prohibited_work": [
+    "install the proposed CCFT program",
+    "open any scientific stage",
+    "traverse or classify CCFT source content scientifically under preparation authority",
+    "recover or adjudicate CCFT mathematics",
+    "select a coherence representation or field",
+    "construct a CCFT action or evolution law",
+    "couple CCFT to matter or gravity",
+    "define a CCFT observable or discriminator",
+    "promote archived or noncanonical evidence",
+    "claim that the earlier coherence block has been overcome",
+    "authorize or open a viability-testing successor"
+  ],
+  "schema_id": "toe.ccft_native_mathematical_core_and_operationalization.bounded_program_preparation_authority.v0",
+  "status": "PROGRAM_PROPOSAL_PREPARATION_AUTHORIZED_NOT_EXECUTED",
+  "user_authority": "EXPLICIT_CURRENT_REQUEST",
+  "zero_scientific_execution": true
+}

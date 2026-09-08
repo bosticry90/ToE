@@ -1,0 +1,114 @@
+{
+  "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_VALIDATION_v0",
+  "schema_id": "toe.ccft_v0.primary_theorem_attack_execution.validation.v0",
+  "captured_at_utc": "2026-08-03T01:28:35Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION",
+  "terminal_outcome": "THEOREM_GRADE_RESULT_ESTABLISHED",
+  "lifecycle_result": "PASSED",
+  "artifact_hashes": {
+    "result_sha256": "3cd01d459622de9f2bf2de13ce586150a55c5e7e3c0b2cd0e61b744a8315261a",
+    "review_sha256": "08663516a12241fd68d75e602bfdbeaffe6b9835f82fcd5315fea71970471d41",
+    "close_event_sha256": "45c9ea8b1a602b27593b537df652ce525cd9eab33e468d3f8efd21d81c26c987",
+    "close_event_hash": "0e449c9477fe94f2e174b7b29098a70e4fb43ac018551fe9b61012249215aedd",
+    "open_event_sha256": "93837b350e0d2846ccb126795913378e6879acf4b9736b47e4201d6d56367117",
+    "open_event_hash": "9a21cb1508ced6573bbdfa2b7a3fdc9d9517e7c6f9a8074d47448d40dfdade8b",
+    "Lean_result_module_sha256": "fcd5de5c95a1787e012283ff4292c6b29034d0fd77ffc9959bb1f9b66469930a"
+  },
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0PrimaryTheoremAttackResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "scientific_validation": {
+    "frozen_model_and_packet_unchanged": true,
+    "linked_claim_count": 4,
+    "exact_mathematical_claims_proved": 3,
+    "historical_records_adjudicated": 2,
+    "gauge_equivalence_proved_on_declared_solution_class": true,
+    "unit_background_linearization_and_dispersion_proved": true,
+    "zero_background_linearization_and_dispersion_proved": true,
+    "CP_FREQ_001_primary_classification": "HISTORICAL_CONTEXT_INSUFFICIENT",
+    "CP_FREQ_002_primary_classification": "VALID_SPECIAL_LIMITS",
+    "CP_FREQ_002_parameter_map": "k maps to q, lam maps to 0, g rho0 maps to kappa",
+    "same_model_background_or_gauge_context_invented": false,
+    "proof_disproof_construction_and_counterexample_lanes_completed": true,
+    "counterexample_within_frozen_contract_found": false,
+    "q_zero_secular_generalized_direction_disclosed": true,
+    "norm_energy_well_posedness_stability_or_full_viability_claimed": false,
+    "distinctively_CCFT_mathematics_claimed": false,
+    "physical_interpretation_or_empirical_promotion_claimed": false,
+    "new_postulates_added": 0,
+    "Stage_5_authorized": false
+  },
+  "symbolic_execution": {
+    "engine": "SymPy 1.14.0",
+    "gauge_residual_difference": "0",
+    "unit_dispersion_identity_difference": "0",
+    "zero_background_frequency": "-kappa+q^2/2",
+    "historical_squared_special_limit_difference": "0",
+    "historical_additive_natural_map_difference": "2*kappa",
+    "status": "PASS"
+  },
+  "numerical_execution": {
+    "engine": "NumPy 2.2.6",
+    "gauge_max_relative_l2": 5.5858507391677104e-15,
+    "unit_max_relative_frequency_error_nonzero_reference": 2.0387508779388783e-06,
+    "unit_max_absolute_frequency_error_zero_reference": 0.0,
+    "zero_max_relative_frequency_error_nonzero_reference": 9.000500232614335e-08,
+    "zero_max_absolute_frequency_error_zero_reference": 0.0,
+    "minimum_temporal_refinement_ratio": 15.979072777932307,
+    "all_predeclared_gates_pass": true,
+    "continuum_theorem_claim_from_numerics": false,
+    "status": "PASS_AS_SUPPORTING_REGRESSION"
+  },
+  "Lean_execution": {
+    "module": "ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremAttackResult",
+    "proved_theorem_count": 10,
+    "sorry_or_axiom_placeholder_count": 0,
+    "algebraic_residual_phase_inverse_modulus_dispersion_zero_frequency_and_context_rules_formalized": true,
+    "full_function_space_bijection_formalized": false,
+    "fidelity_boundary_disclosed": true,
+    "status": "PASS"
+  },
+  "focused_python": {
+    "passed": 38,
+    "deselected": 1,
+    "deselected_assertion": "test_toe_ccft_v0_theory_construction_program_governance_installation.py::test_program_is_registered_unopened",
+    "deselection_reason": "The installation-only assertion is obsolete after valid Stage 1 through Stage 4 lifecycle events; all other selected CCFT-v0 installation, authority, registry, and governance tests passed.",
+    "custom_result_review_close_checks": "PASS",
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "jobs": 9175,
+    "modules": 1430,
+    "status": "PASS_WITH_PREEXISTING_LINTER_WARNINGS"
+  },
+  "deterministic_generation": {
+    "module_count": 1430,
+    "scope": "committed index after exact nine-path staging",
+    "expected_scope_header_and_count_name_difference_only": false,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "registry_integrity_aliases": 227,
+    "registry_integrity_status": "PASS",
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "full_history_validator_precommit_result": "EXPECTED_SINGLE_FAILURE_CLOSE_EVENT_HAS_ZERO_INTRODUCTION_COMMITS",
+    "git_history_chronology": "REQUIRED_POST_COMMIT"
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "atomic_nine_path_envelope": "PASS_PRECOMMIT",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "exhaustive_python_status": "NOT_CLAIMED"
+  },
+  "status": "STAGE_4_ATOMIC_CLOSE_PRECOMMIT_VALIDATED"
+}

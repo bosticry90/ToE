@@ -1,0 +1,2584 @@
+{
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-FROZEN-COEFFICIENT-JORDAN-CHAIN-FREQUENCY-GROWTH-v0",
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "claim_boundary": {
+    "all_fifty_chains_each_root_mapped": true,
+    "block_level_weighted_order_graph_screened": true,
+    "complete_generic_frozen_operator_constructed": false,
+    "complete_generic_physical_TT_minimum_loss_established": false,
+    "complete_generic_unrestricted_minimum_loss_established": false,
+    "constraint_restricted_minimum_loss_established": false,
+    "constraint_tangent_projector_constructed": false,
+    "continuous_dependence_established": false,
+    "exact_128_component_companion_ordering_frozen": true,
+    "finite_frozen_loss_for_bounded_background_class": false,
+    "local_existence_established": false,
+    "loss_nonaccumulation_established": false,
+    "positive_subprincipal_return_cycle_found": false,
+    "pure_chain_fourier_exponentials_computed": true,
+    "pure_principal_physical_TT_minimum_loss_established": true,
+    "pure_principal_unrestricted_minimum_loss_established": true,
+    "quasilinear_tame_estimate_established": false,
+    "uniqueness_established": false,
+    "variable_coefficient_energy_estimate_established": false
+  },
+  "consumed_authority": {
+    "accepted_results": [
+      "ADAPTED_ENERGY_HIERARCHY_READY",
+      "JORDAN_CHAIN_LOSS_GRADING_UNRESOLVED",
+      "KNOWN_WEIGHTED_PRINCIPAL_CONTAMINATION_INCLUDED_NOT_YET_ESTIMATED",
+      "COMPLETE_FIFTY_CHAIN_LEDGER_AT_EACH_ROOT"
+    ],
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_RESULT_REVIEW_20260728_v0.json",
+    "sha256": "7c2311bbdfe0adbe31d9ca69d4e8d6a2995d8839ff357c6f04a5ce42cb99cd40"
+  },
+  "consumed_energy_hierarchy": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_ADAPTED_DERIVATIVE_LOSS_ENERGY_HIERARCHY_20260728_v0.json",
+    "prepared_chain_partition": "4J_3+6J_2+40J_1",
+    "prepared_loss_candidates": [
+      1,
+      2
+    ],
+    "sha256": "8d43ba283d7459ccee477fbcc257fb6582d4a025a46fcb415723cf190282586d"
+  },
+  "exact_companion": {
+    "all_chain_mapping": {
+      "chain_similarity_note": "The accepted root-dependent Jordan similarity only reorders and combines the 64 weighted field components; the displayed position and velocity ranges are exact in that chain basis.",
+      "physical_variable_order_before_chain_similarity": [
+        "g_mn[10]",
+        "c_mna[40]",
+        "R[1]",
+        "r_a[4]",
+        "S_mn[9]"
+      ],
+      "roots": {
+        "-1": [
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L3_r_0",
+            "chain_length": 3,
+            "companion_position_range": [
+              0,
+              2
+            ],
+            "companion_velocity_range": [
+              64,
+              66
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              0,
+              2
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L3_r_1",
+            "chain_length": 3,
+            "companion_position_range": [
+              3,
+              5
+            ],
+            "companion_velocity_range": [
+              67,
+              69
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              3,
+              5
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L3_r_2",
+            "chain_length": 3,
+            "companion_position_range": [
+              6,
+              8
+            ],
+            "companion_velocity_range": [
+              70,
+              72
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              6,
+              8
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L3_r_3",
+            "chain_length": 3,
+            "companion_position_range": [
+              9,
+              11
+            ],
+            "companion_velocity_range": [
+              73,
+              75
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              9,
+              11
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L2_R_scalar",
+            "chain_length": 2,
+            "companion_position_range": [
+              12,
+              13
+            ],
+            "companion_velocity_range": [
+              76,
+              77
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "AUXILIARY_SCALAR_CURVATURE",
+            "root_component_range": [
+              12,
+              13
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L2_S_TT_plus",
+            "chain_length": 2,
+            "companion_position_range": [
+              14,
+              15
+            ],
+            "companion_velocity_range": [
+              78,
+              79
+            ],
+            "constraint_status_from_predecessor": "TANGENT_TO_PHYSICAL_CONSTRAINT_SURFACE_IN_TT_SECTOR",
+            "leading_mode": "PHYSICAL_SPIN2_TT_PLUS",
+            "root_component_range": [
+              14,
+              15
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L2_S_TT_cross",
+            "chain_length": 2,
+            "companion_position_range": [
+              16,
+              17
+            ],
+            "companion_velocity_range": [
+              80,
+              81
+            ],
+            "constraint_status_from_predecessor": "TANGENT_TO_PHYSICAL_CONSTRAINT_SURFACE_IN_TT_SECTOR",
+            "leading_mode": "PHYSICAL_SPIN2_TT_CROSS",
+            "root_component_range": [
+              16,
+              17
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L2_S_aux_00",
+            "chain_length": 2,
+            "companion_position_range": [
+              18,
+              19
+            ],
+            "companion_velocity_range": [
+              82,
+              83
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "NON_TT_AUXILIARY_CURVATURE_QUOTIENT",
+            "root_component_range": [
+              18,
+              19
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L2_S_aux_02",
+            "chain_length": 2,
+            "companion_position_range": [
+              20,
+              21
+            ],
+            "companion_velocity_range": [
+              84,
+              85
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "NON_TT_AUXILIARY_CURVATURE_QUOTIENT",
+            "root_component_range": [
+              20,
+              21
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L2_S_aux_03",
+            "chain_length": 2,
+            "companion_position_range": [
+              22,
+              23
+            ],
+            "companion_velocity_range": [
+              86,
+              87
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "NON_TT_AUXILIARY_CURVATURE_QUOTIENT",
+            "root_component_range": [
+              22,
+              23
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_00_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              24,
+              24
+            ],
+            "companion_velocity_range": [
+              88,
+              88
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              24,
+              24
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_01_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              25,
+              25
+            ],
+            "companion_velocity_range": [
+              89,
+              89
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              25,
+              25
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_02_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              26,
+              26
+            ],
+            "companion_velocity_range": [
+              90,
+              90
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              26,
+              26
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_03_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              27,
+              27
+            ],
+            "companion_velocity_range": [
+              91,
+              91
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              27,
+              27
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_11_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              28,
+              28
+            ],
+            "companion_velocity_range": [
+              92,
+              92
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              28,
+              28
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_12_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              29,
+              29
+            ],
+            "companion_velocity_range": [
+              93,
+              93
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              29,
+              29
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_13_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              30,
+              30
+            ],
+            "companion_velocity_range": [
+              94,
+              94
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              30,
+              30
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_22_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              31,
+              31
+            ],
+            "companion_velocity_range": [
+              95,
+              95
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              31,
+              31
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_23_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              32,
+              32
+            ],
+            "companion_velocity_range": [
+              96,
+              96
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              32,
+              32
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_33_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              33,
+              33
+            ],
+            "companion_velocity_range": [
+              97,
+              97
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              33,
+              33
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_00_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              34,
+              34
+            ],
+            "companion_velocity_range": [
+              98,
+              98
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              34,
+              34
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_01_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              35,
+              35
+            ],
+            "companion_velocity_range": [
+              99,
+              99
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              35,
+              35
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_02_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              36,
+              36
+            ],
+            "companion_velocity_range": [
+              100,
+              100
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              36,
+              36
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_03_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              37,
+              37
+            ],
+            "companion_velocity_range": [
+              101,
+              101
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              37,
+              37
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_11_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              38,
+              38
+            ],
+            "companion_velocity_range": [
+              102,
+              102
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              38,
+              38
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_12_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              39,
+              39
+            ],
+            "companion_velocity_range": [
+              103,
+              103
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              39,
+              39
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_13_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              40,
+              40
+            ],
+            "companion_velocity_range": [
+              104,
+              104
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              40,
+              40
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_22_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              41,
+              41
+            ],
+            "companion_velocity_range": [
+              105,
+              105
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              41,
+              41
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_23_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              42,
+              42
+            ],
+            "companion_velocity_range": [
+              106,
+              106
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              42,
+              42
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_33_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              43,
+              43
+            ],
+            "companion_velocity_range": [
+              107,
+              107
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              43,
+              43
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_00_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              44,
+              44
+            ],
+            "companion_velocity_range": [
+              108,
+              108
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              44,
+              44
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_01_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              45,
+              45
+            ],
+            "companion_velocity_range": [
+              109,
+              109
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              45,
+              45
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_02_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              46,
+              46
+            ],
+            "companion_velocity_range": [
+              110,
+              110
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              46,
+              46
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_03_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              47,
+              47
+            ],
+            "companion_velocity_range": [
+              111,
+              111
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              47,
+              47
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_11_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              48,
+              48
+            ],
+            "companion_velocity_range": [
+              112,
+              112
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              48,
+              48
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_12_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              49,
+              49
+            ],
+            "companion_velocity_range": [
+              113,
+              113
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              49,
+              49
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_13_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              50,
+              50
+            ],
+            "companion_velocity_range": [
+              114,
+              114
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              50,
+              50
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_22_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              51,
+              51
+            ],
+            "companion_velocity_range": [
+              115,
+              115
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              51,
+              51
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_23_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              52,
+              52
+            ],
+            "companion_velocity_range": [
+              116,
+              116
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              52,
+              52
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_33_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              53,
+              53
+            ],
+            "companion_velocity_range": [
+              117,
+              117
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              53,
+              53
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_00_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              54,
+              54
+            ],
+            "companion_velocity_range": [
+              118,
+              118
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              54,
+              54
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_01_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              55,
+              55
+            ],
+            "companion_velocity_range": [
+              119,
+              119
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              55,
+              55
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_02_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              56,
+              56
+            ],
+            "companion_velocity_range": [
+              120,
+              120
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              56,
+              56
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_03_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              57,
+              57
+            ],
+            "companion_velocity_range": [
+              121,
+              121
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              57,
+              57
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_11_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              58,
+              58
+            ],
+            "companion_velocity_range": [
+              122,
+              122
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              58,
+              58
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_12_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              59,
+              59
+            ],
+            "companion_velocity_range": [
+              123,
+              123
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              59,
+              59
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_13_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              60,
+              60
+            ],
+            "companion_velocity_range": [
+              124,
+              124
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              60,
+              60
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_22_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              61,
+              61
+            ],
+            "companion_velocity_range": [
+              125,
+              125
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              61,
+              61
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_23_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              62,
+              62
+            ],
+            "companion_velocity_range": [
+              126,
+              126
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              62,
+              62
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_-1_L1_c_33_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              63,
+              63
+            ],
+            "companion_velocity_range": [
+              127,
+              127
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              63,
+              63
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          }
+        ],
+        "1": [
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L3_r_0",
+            "chain_length": 3,
+            "companion_position_range": [
+              0,
+              2
+            ],
+            "companion_velocity_range": [
+              64,
+              66
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              0,
+              2
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L3_r_1",
+            "chain_length": 3,
+            "companion_position_range": [
+              3,
+              5
+            ],
+            "companion_velocity_range": [
+              67,
+              69
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              3,
+              5
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L3_r_2",
+            "chain_length": 3,
+            "companion_position_range": [
+              6,
+              8
+            ],
+            "companion_velocity_range": [
+              70,
+              72
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              6,
+              8
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L3_r_3",
+            "chain_length": 3,
+            "companion_position_range": [
+              9,
+              11
+            ],
+            "companion_velocity_range": [
+              73,
+              75
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_AS_ISOLATED_CHAIN; constraint-compatible only after C_r,C_S,C_c are imposed",
+            "leading_mode": "AUXILIARY_DEFINITION_RECONSTRUCTION",
+            "root_component_range": [
+              9,
+              11
+            ],
+            "unrestricted_metric_growth_exponent": 2
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L2_R_scalar",
+            "chain_length": 2,
+            "companion_position_range": [
+              12,
+              13
+            ],
+            "companion_velocity_range": [
+              76,
+              77
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "AUXILIARY_SCALAR_CURVATURE",
+            "root_component_range": [
+              12,
+              13
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L2_S_TT_plus",
+            "chain_length": 2,
+            "companion_position_range": [
+              14,
+              15
+            ],
+            "companion_velocity_range": [
+              78,
+              79
+            ],
+            "constraint_status_from_predecessor": "TANGENT_TO_PHYSICAL_CONSTRAINT_SURFACE_IN_TT_SECTOR",
+            "leading_mode": "PHYSICAL_SPIN2_TT_PLUS",
+            "root_component_range": [
+              14,
+              15
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L2_S_TT_cross",
+            "chain_length": 2,
+            "companion_position_range": [
+              16,
+              17
+            ],
+            "companion_velocity_range": [
+              80,
+              81
+            ],
+            "constraint_status_from_predecessor": "TANGENT_TO_PHYSICAL_CONSTRAINT_SURFACE_IN_TT_SECTOR",
+            "leading_mode": "PHYSICAL_SPIN2_TT_CROSS",
+            "root_component_range": [
+              16,
+              17
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L2_S_aux_00",
+            "chain_length": 2,
+            "companion_position_range": [
+              18,
+              19
+            ],
+            "companion_velocity_range": [
+              82,
+              83
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "NON_TT_AUXILIARY_CURVATURE_QUOTIENT",
+            "root_component_range": [
+              18,
+              19
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L2_S_aux_02",
+            "chain_length": 2,
+            "companion_position_range": [
+              20,
+              21
+            ],
+            "companion_velocity_range": [
+              84,
+              85
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "NON_TT_AUXILIARY_CURVATURE_QUOTIENT",
+            "root_component_range": [
+              20,
+              21
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L2_S_aux_03",
+            "chain_length": 2,
+            "companion_position_range": [
+              22,
+              23
+            ],
+            "companion_velocity_range": [
+              86,
+              87
+            ],
+            "constraint_status_from_predecessor": "UNRESOLVED_REQUIRES_EXACT_CONSTRAINT_TANGENT_PROJECTION",
+            "leading_mode": "NON_TT_AUXILIARY_CURVATURE_QUOTIENT",
+            "root_component_range": [
+              22,
+              23
+            ],
+            "unrestricted_metric_growth_exponent": 1
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_00_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              24,
+              24
+            ],
+            "companion_velocity_range": [
+              88,
+              88
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              24,
+              24
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_01_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              25,
+              25
+            ],
+            "companion_velocity_range": [
+              89,
+              89
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              25,
+              25
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_02_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              26,
+              26
+            ],
+            "companion_velocity_range": [
+              90,
+              90
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              26,
+              26
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_03_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              27,
+              27
+            ],
+            "companion_velocity_range": [
+              91,
+              91
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              27,
+              27
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_11_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              28,
+              28
+            ],
+            "companion_velocity_range": [
+              92,
+              92
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              28,
+              28
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_12_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              29,
+              29
+            ],
+            "companion_velocity_range": [
+              93,
+              93
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              29,
+              29
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_13_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              30,
+              30
+            ],
+            "companion_velocity_range": [
+              94,
+              94
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              30,
+              30
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_22_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              31,
+              31
+            ],
+            "companion_velocity_range": [
+              95,
+              95
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              31,
+              31
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_23_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              32,
+              32
+            ],
+            "companion_velocity_range": [
+              96,
+              96
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              32,
+              32
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_33_0",
+            "chain_length": 1,
+            "companion_position_range": [
+              33,
+              33
+            ],
+            "companion_velocity_range": [
+              97,
+              97
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              33,
+              33
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_00_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              34,
+              34
+            ],
+            "companion_velocity_range": [
+              98,
+              98
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              34,
+              34
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_01_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              35,
+              35
+            ],
+            "companion_velocity_range": [
+              99,
+              99
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              35,
+              35
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_02_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              36,
+              36
+            ],
+            "companion_velocity_range": [
+              100,
+              100
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              36,
+              36
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_03_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              37,
+              37
+            ],
+            "companion_velocity_range": [
+              101,
+              101
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              37,
+              37
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_11_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              38,
+              38
+            ],
+            "companion_velocity_range": [
+              102,
+              102
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              38,
+              38
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_12_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              39,
+              39
+            ],
+            "companion_velocity_range": [
+              103,
+              103
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              39,
+              39
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_13_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              40,
+              40
+            ],
+            "companion_velocity_range": [
+              104,
+              104
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              40,
+              40
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_22_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              41,
+              41
+            ],
+            "companion_velocity_range": [
+              105,
+              105
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              41,
+              41
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_23_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              42,
+              42
+            ],
+            "companion_velocity_range": [
+              106,
+              106
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              42,
+              42
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_33_1",
+            "chain_length": 1,
+            "companion_position_range": [
+              43,
+              43
+            ],
+            "companion_velocity_range": [
+              107,
+              107
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              43,
+              43
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_00_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              44,
+              44
+            ],
+            "companion_velocity_range": [
+              108,
+              108
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              44,
+              44
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_01_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              45,
+              45
+            ],
+            "companion_velocity_range": [
+              109,
+              109
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              45,
+              45
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_02_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              46,
+              46
+            ],
+            "companion_velocity_range": [
+              110,
+              110
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              46,
+              46
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_03_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              47,
+              47
+            ],
+            "companion_velocity_range": [
+              111,
+              111
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              47,
+              47
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_11_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              48,
+              48
+            ],
+            "companion_velocity_range": [
+              112,
+              112
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              48,
+              48
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_12_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              49,
+              49
+            ],
+            "companion_velocity_range": [
+              113,
+              113
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              49,
+              49
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_13_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              50,
+              50
+            ],
+            "companion_velocity_range": [
+              114,
+              114
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              50,
+              50
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_22_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              51,
+              51
+            ],
+            "companion_velocity_range": [
+              115,
+              115
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              51,
+              51
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_23_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              52,
+              52
+            ],
+            "companion_velocity_range": [
+              116,
+              116
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              52,
+              52
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_33_2",
+            "chain_length": 1,
+            "companion_position_range": [
+              53,
+              53
+            ],
+            "companion_velocity_range": [
+              117,
+              117
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              53,
+              53
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_00_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              54,
+              54
+            ],
+            "companion_velocity_range": [
+              118,
+              118
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              54,
+              54
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_01_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              55,
+              55
+            ],
+            "companion_velocity_range": [
+              119,
+              119
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              55,
+              55
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_02_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              56,
+              56
+            ],
+            "companion_velocity_range": [
+              120,
+              120
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              56,
+              56
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_03_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              57,
+              57
+            ],
+            "companion_velocity_range": [
+              121,
+              121
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              57,
+              57
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_11_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              58,
+              58
+            ],
+            "companion_velocity_range": [
+              122,
+              122
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              58,
+              58
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_12_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              59,
+              59
+            ],
+            "companion_velocity_range": [
+              123,
+              123
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              59,
+              59
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_13_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              60,
+              60
+            ],
+            "companion_velocity_range": [
+              124,
+              124
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              60,
+              60
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_22_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              61,
+              61
+            ],
+            "companion_velocity_range": [
+              125,
+              125
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              61,
+              61
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_23_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              62,
+              62
+            ],
+            "companion_velocity_range": [
+              126,
+              126
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              62,
+              62
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          },
+          {
+            "adapted_auxiliary_growth_exponent": 0,
+            "chain_id": "lambda_1_L1_c_33_3",
+            "chain_length": 1,
+            "companion_position_range": [
+              63,
+              63
+            ],
+            "companion_velocity_range": [
+              127,
+              127
+            ],
+            "constraint_status_from_predecessor": "TRANSVERSE_TO_C_c=0 AS_ISOLATED_VECTOR; constraint-compatible only when paired with g",
+            "leading_mode": "METRIC_DEFINITION_SEMISIMPLE",
+            "root_component_range": [
+              63,
+              63
+            ],
+            "unrestricted_metric_growth_exponent": 0
+          }
+        ]
+      },
+      "state_order": "(rho W U_1,...,rho W U_64,W partial_t U_1,...,W partial_t U_64)"
+    },
+    "chain_block_formula": "A_m(rho)=[[0,rho I_m],[-rho(I_m-N_m),0]]",
+    "dimension": 128,
+    "ordering": "X=(rho W U,W partial_t U), U=(g[10],c[40],R[1],r[4],S[9])",
+    "partition_checks": {
+      "algebraic_dimension_each_root": 64,
+      "chain_count_each_root": 50,
+      "chain_partition_each_root": {
+        "length_1": 40,
+        "length_2": 6,
+        "length_3": 4
+      },
+      "component_count": 64,
+      "eigenvector_deficit_each_root": 14,
+      "exact_single_chain_companion_checks_at_rho_2": {
+        "1": {
+          "characteristic_polynomial": "lambda**2 + 4",
+          "lambda_-1_cube_kernel_dimension": 1,
+          "lambda_-1_kernel_dimension": 1,
+          "lambda_-1_square_kernel_dimension": 1,
+          "lambda_1_cube_kernel_dimension": 1,
+          "lambda_1_kernel_dimension": 1,
+          "lambda_1_square_kernel_dimension": 1,
+          "state_dimension": 2
+        },
+        "2": {
+          "characteristic_polynomial": "(lambda**2 + 4)**2",
+          "lambda_-1_cube_kernel_dimension": 2,
+          "lambda_-1_kernel_dimension": 1,
+          "lambda_-1_square_kernel_dimension": 2,
+          "lambda_1_cube_kernel_dimension": 2,
+          "lambda_1_kernel_dimension": 1,
+          "lambda_1_square_kernel_dimension": 2,
+          "state_dimension": 4
+        },
+        "3": {
+          "characteristic_polynomial": "(lambda**2 + 4)**3",
+          "lambda_-1_cube_kernel_dimension": 3,
+          "lambda_-1_kernel_dimension": 1,
+          "lambda_-1_square_kernel_dimension": 2,
+          "lambda_1_cube_kernel_dimension": 3,
+          "lambda_1_kernel_dimension": 1,
+          "lambda_1_square_kernel_dimension": 2,
+          "state_dimension": 6
+        }
+      },
+      "first_order_state_count": 128,
+      "geometric_dimension_each_root": 50
+    },
+    "root_modal_formula": "A_(m,lambda)^ME=i lambda rho I_m+rho N_m; A_(m,lambda)^A=i lambda rho I_m+N_m"
+  },
+  "execution_target": "compute_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0",
+  "frequency_growth": {
+    "complete_generic_frozen_operator": {
+      "consequence": "The pure-principal polynomial growth is exact, but the minimum loss of the complete generic frozen metric operator remains blocked. In particular, the order graph alone cannot rule out background-dependent fractional root splitting or prove a finite Sobolev-loss bound.",
+      "constructed": false,
+      "missing_matrices": [
+        "the exact background-jet linearization B_0(Ubar,partial Ubar,khat) of every lower-order term",
+        "the exact 128-state conjugation of B_0 into the root-chain companion basis at lambda=+1 and -1",
+        "the exact full-constraint tangent projector and its intertwining relation with the frozen companion"
+      ]
+    },
+    "complete_metric_weighted_linearized_edge_inventory": [
+      {
+        "generator_frequency_exponent": 0,
+        "raw_order": 0,
+        "source": "c",
+        "target": "g",
+        "weighted_order": 1
+      },
+      {
+        "generator_frequency_exponent": 1,
+        "raw_order": 0,
+        "source": "R",
+        "target": "g",
+        "weighted_order": 2
+      },
+      {
+        "generator_frequency_exponent": 1,
+        "raw_order": 0,
+        "source": "S",
+        "target": "g",
+        "weighted_order": 2
+      },
+      {
+        "generator_frequency_exponent": -1,
+        "raw_order": 1,
+        "source": "g",
+        "target": "c",
+        "weighted_order": 0
+      },
+      {
+        "generator_frequency_exponent": 0,
+        "raw_order": 1,
+        "source": "c",
+        "target": "c",
+        "weighted_order": 1
+      },
+      {
+        "generator_frequency_exponent": 1,
+        "raw_order": 1,
+        "source": "R",
+        "target": "c",
+        "weighted_order": 2
+      },
+      {
+        "generator_frequency_exponent": 1,
+        "raw_order": 1,
+        "source": "S",
+        "target": "c",
+        "weighted_order": 2
+      },
+      {
+        "generator_frequency_exponent": -3,
+        "raw_order": 0,
+        "source": "g",
+        "target": "R",
+        "weighted_order": -2
+      },
+      {
+        "generator_frequency_exponent": -2,
+        "raw_order": 0,
+        "source": "c",
+        "target": "R",
+        "weighted_order": -1
+      },
+      {
+        "generator_frequency_exponent": -1,
+        "raw_order": 0,
+        "source": "R",
+        "target": "R",
+        "weighted_order": 0
+      },
+      {
+        "generator_frequency_exponent": 0,
+        "raw_order": 0,
+        "source": "r",
+        "target": "R",
+        "weighted_order": 1
+      },
+      {
+        "generator_frequency_exponent": -4,
+        "raw_order": 0,
+        "source": "g",
+        "target": "r",
+        "weighted_order": -3
+      },
+      {
+        "generator_frequency_exponent": -2,
+        "raw_order": 1,
+        "source": "c",
+        "target": "r",
+        "weighted_order": -1
+      },
+      {
+        "generator_frequency_exponent": -1,
+        "raw_order": 1,
+        "source": "R",
+        "target": "r",
+        "weighted_order": 0
+      },
+      {
+        "generator_frequency_exponent": 0,
+        "raw_order": 1,
+        "source": "r",
+        "target": "r",
+        "weighted_order": 1
+      },
+      {
+        "generator_frequency_exponent": -3,
+        "raw_order": 0,
+        "source": "g",
+        "target": "S",
+        "weighted_order": -2
+      },
+      {
+        "generator_frequency_exponent": -1,
+        "raw_order": 1,
+        "source": "c",
+        "target": "S",
+        "weighted_order": 0
+      },
+      {
+        "generator_frequency_exponent": -1,
+        "raw_order": 0,
+        "source": "R",
+        "target": "S",
+        "weighted_order": 0
+      },
+      {
+        "generator_frequency_exponent": 1,
+        "raw_order": 1,
+        "source": "r",
+        "target": "S",
+        "weighted_order": 2
+      },
+      {
+        "generator_frequency_exponent": 0,
+        "raw_order": 1,
+        "source": "S",
+        "target": "S",
+        "weighted_order": 1
+      }
+    ],
+    "exact_root_modal_exponentials": {
+      "1": {
+        "adapted_auxiliary": "Matrix([[exp(I*rho*time)]])",
+        "adapted_minimum_growth_exponent": "0",
+        "metric_equivalence": "Matrix([[exp(I*rho*time)]])",
+        "metric_minimum_growth_exponent": "0",
+        "saturating_component": "(rho*time)^0/1"
+      },
+      "2": {
+        "adapted_auxiliary": "Matrix([\n[exp(I*rho*time), time*exp(I*rho*time)],\n[              0,      exp(I*rho*time)]])",
+        "adapted_minimum_growth_exponent": "0",
+        "metric_equivalence": "Matrix([\n[exp(I*rho*time), rho*time*exp(I*rho*time)],\n[              0,          exp(I*rho*time)]])",
+        "metric_minimum_growth_exponent": "1",
+        "saturating_component": "(rho*time)^1/1"
+      },
+      "3": {
+        "adapted_auxiliary": "Matrix([\n[exp(I*rho*time), time*exp(I*rho*time), time**2*exp(I*rho*time)/2],\n[              0,      exp(I*rho*time),      time*exp(I*rho*time)],\n[              0,                    0,           exp(I*rho*time)]])",
+        "adapted_minimum_growth_exponent": "0",
+        "metric_equivalence": "Matrix([\n[exp(I*rho*time), rho*time*exp(I*rho*time), rho**2*time**2*exp(I*rho*time)/2],\n[              0,          exp(I*rho*time),         rho*time*exp(I*rho*time)],\n[              0,                        0,                  exp(I*rho*time)]])",
+        "metric_minimum_growth_exponent": "2",
+        "saturating_component": "(rho*time)^2/2"
+      }
+    },
+    "maximum_return_cycle_exponent_sum": 0,
+    "metric_generator_edge_rule": "a weighted second-order coupling of order p contributes rho^(p-1) to the energy-scaled first-order companion",
+    "order_screen_conclusion": "No positive-frequency return cycle appears in the block-level differential-order graph. This is a necessary structural screen only. It does not replace the exact background-jet linearization, its 128 by 128 coefficient matrices, or their conjugation into the root-chain basis, so it cannot exclude subprincipal root splitting for the complete frozen operator.",
+    "simple_return_cycles": [
+      {
+        "cycle": "R->R",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "R->S->c->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->S->c->g->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->S->c->g->r->R",
+        "generator_frequency_exponent_sum": -4
+      },
+      {
+        "cycle": "R->S->c->r->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->S->g->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->S->g->c->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->S->g->c->r->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->S->g->r->R",
+        "generator_frequency_exponent_sum": -4
+      },
+      {
+        "cycle": "R->c->R",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "R->c->S->g->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->c->S->g->r->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->c->g->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->c->g->r->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->c->r->R",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "R->c->r->S->g->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->g->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->g->S->c->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->g->S->c->r->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->g->c->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->g->c->r->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->g->r->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->g->r->S->c->R",
+        "generator_frequency_exponent_sum": -3
+      },
+      {
+        "cycle": "R->r->R",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "R->r->S->c->R",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "R->r->S->c->g->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->r->S->g->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "R->r->S->g->c->R",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "S->S",
+        "generator_frequency_exponent_sum": 0
+      },
+      {
+        "cycle": "S->c->S",
+        "generator_frequency_exponent_sum": 0
+      },
+      {
+        "cycle": "S->c->g->S",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "S->c->g->r->S",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "S->c->r->S",
+        "generator_frequency_exponent_sum": 0
+      },
+      {
+        "cycle": "S->g->S",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "S->g->c->S",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "S->g->c->r->S",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "S->g->r->S",
+        "generator_frequency_exponent_sum": -2
+      },
+      {
+        "cycle": "c->c",
+        "generator_frequency_exponent_sum": 0
+      },
+      {
+        "cycle": "c->g->c",
+        "generator_frequency_exponent_sum": -1
+      },
+      {
+        "cycle": "r->r",
+        "generator_frequency_exponent_sum": 0
+      }
+    ],
+    "subprincipal_sensitivity_controls": [
+      {
+        "actual_order_graph_status": "not exhibited by the block-order screen; exclusion requires the exact frozen coefficient matrix",
+        "chain": "J_2",
+        "forbidden_positive_return_model": "i lambda rho I + rho N_2 + b E_21",
+        "growth_if_present": "exp(c rho^(1/2) t)",
+        "root_shift": "delta^2=b rho"
+      },
+      {
+        "actual_order_graph_status": "not exhibited by the block-order screen; exclusion requires the exact frozen coefficient matrix",
+        "chain": "J_3",
+        "forbidden_positive_return_model": "i lambda rho I + rho N_3 + b E_31",
+        "growth_if_present": "exp(c rho^(2/3) t)",
+        "root_shift": "delta^3=b rho^2"
+      }
+    ],
+    "upper_and_lower_bound_contract": {
+      "lower": "Choose the terminal generalized vector and any fixed 0<t_0<=T. The first chain component contains (rho t_0)^(m-1)/(m-1)!, so a uniform bound with a smaller integer exponent is impossible.",
+      "uniform_in_direction_for_pure_principal_chains": true,
+      "uniform_in_roots_for_pure_principal_chains": true,
+      "upper": "For each chain of length m, ||G(t,rho)||<=C_T(1+rho)^(m-1)."
+    }
+  },
+  "frozen_background_contract": {
+    "coefficient_domain": [
+      "beta != 0",
+      "gamma:=3alpha+beta != 0"
+    ],
+    "constraint_satisfying_background": "The same frozen class with every accepted gauge, definition, trace, divergence, integrability, Hamiltonian, and momentum background constraint set to zero.",
+    "controls": [
+      "Minkowski with c_Lambda=0, H=0, R=r=S=c=0",
+      "constant-curvature Einstein background with r=0 and trace-free Ricci S=0",
+      "2alpha+beta=0 internal rank control"
+    ],
+    "generic_admissible_jet": "A pointwise frozen jet of the exact zero-constraint-addition vacuum reduced equations, in a local orthonormal frame, with Lorentzian metric, prescribed C^2 H(x,g), and all displayed coefficient matrices bounded by a declared finite constant B.",
+    "uniformity_boundary": "Bounds are uniform for fixed positive distance from beta=0 and gamma=0, fixed B, both roots, and every normalized nonzero spatial direction. They are not uniform as an excluded coefficient surface is approached or B is allowed to diverge."
+  },
+  "prohibitions_respected": {
+    "constraint_restricted_loss_inferred_without_projector": false,
+    "equivalence_shift_called_propagator_loss": false,
+    "ghost_analysis_executed": false,
+    "order_reduction_presented_as_original_theory": false,
+    "phenomenology_executed": false,
+    "principal_matrix_alone_called_variable_coefficient_estimate": false,
+    "regularizer_or_fiducial_mode_added": false,
+    "source_extension_executed": false,
+    "yukawa_work_executed": false
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_FROZEN_COEFFICIENT_JORDAN_CHAIN_FREQUENCY_GROWTH_v0",
+  "sector_results": {
+    "adapted_auxiliary": {
+      "minimum_frozen_loss": 0,
+      "outcome": "FROZEN_AUXILIARY_ZERO_LOSS_CONFIRMED",
+      "saturating_lower_bound_established": true,
+      "upper_bound_established": true
+    },
+    "constraint_compatible": {
+      "TT_lower_bound": 1,
+      "blocking_input": "The predecessor supplies the 69-component subsidiary symbol and qualitative chain constraint labels, but not a single explicit 128-state tangent projector intertwining both companion roots and all definition, curvature, gauge, Hamiltonian, and momentum constraints.",
+      "minimum_frozen_loss": "BLOCKED",
+      "outcome": "CONSTRAINT_RESTRICTED_LOSS_BLOCKED_BY_MISSING_TANGENT_PROJECTOR",
+      "proved_bounds": [
+        1,
+        2
+      ],
+      "unrestricted_upper_bound": 2,
+      "why_no_inference": "C_r and C_c can pair reconstruction variables and may reduce the effective J_3 contribution. Strong hyperbolicity of the subsidiary system alone does not decide the restricted propagator minimum."
+    },
+    "equal_order_auxiliary": {
+      "minimum_frozen_loss": 0,
+      "outcome": "FROZEN_AUXILIARY_ZERO_LOSS_CONFIRMED",
+      "saturating_lower_bound_established": true,
+      "upper_bound_established": true
+    },
+    "physical_TT": {
+      "chain_length": 2,
+      "complete_generic_frozen_minimum_loss": "BLOCKED",
+      "complete_operator_lower_bound_established": false,
+      "complete_operator_upper_bound_established": false,
+      "outcome": "PURE_PRINCIPAL_PHYSICAL_TT_ONE_DERIVATIVE_GROWTH_COMPLETE_GENERIC_FROZEN_LOSS_BLOCKED",
+      "polarization_count": 2,
+      "pure_principal_minimum_loss": 1,
+      "pure_principal_saturating_lower_bound_established": true,
+      "pure_principal_upper_bound_established": true
+    },
+    "semisimple": {
+      "chain_count": 40,
+      "minimum_frozen_loss": 0,
+      "saturating_lower_bound_established": true,
+      "upper_bound_established": true
+    },
+    "unrestricted_metric_equivalence": {
+      "complete_generic_frozen_minimum_loss": "BLOCKED",
+      "complete_operator_lower_bound_established": false,
+      "complete_operator_upper_bound_established": false,
+      "length_three_saturating_chain_count": 4,
+      "length_two_saturating_chain_count": 6,
+      "outcome": "PURE_PRINCIPAL_METRIC_EQUIVALENCE_TWO_DERIVATIVE_GROWTH_COMPLETE_GENERIC_FROZEN_LOSS_BLOCKED",
+      "pure_principal_minimum_loss_on_2alpha_plus_beta_zero_control": 1,
+      "pure_principal_minimum_loss_when_2alpha_plus_beta_nonzero": 2,
+      "pure_principal_saturating_lower_bound_established": true,
+      "pure_principal_upper_bound_established": true
+    }
+  },
+  "selected_next_target": "review_qft_gr_quadratic_frozen_coefficient_jordan_chain_frequency_growth_v0_result",
+  "separate_loss_maps": {
+    "known_equivalence_map_shift": 1,
+    "r_in": {
+      "reason": "The accepted one-derivative equivalence shift is a data/reconstruction-map statement, not evolution.",
+      "value": "NOT_COMPOSED_IN_THIS_CALCULATION"
+    },
+    "r_out": {
+      "reason": "No independent input/output map factorization with a bounded inverse was established.",
+      "value": "NOT_COMPOSED_IN_THIS_CALCULATION"
+    },
+    "r_prop": {
+      "auxiliary": 0,
+      "constraint_compatible": "BLOCKED_BETWEEN_1_AND_2",
+      "physical_TT": "PURE_PRINCIPAL_1_COMPLETE_GENERIC_FROZEN_BLOCKED",
+      "unrestricted_metric_equivalence": "PURE_PRINCIPAL_2_COMPLETE_GENERIC_FROZEN_BLOCKED"
+    },
+    "total_metric_loss_summed": false
+  },
+  "terminal_outcomes": [
+    "FROZEN_AUXILIARY_ZERO_LOSS_CONFIRMED",
+    "PURE_PRINCIPAL_METRIC_EQUIVALENCE_TWO_DERIVATIVE_GROWTH",
+    "PURE_PRINCIPAL_PHYSICAL_TT_ONE_DERIVATIVE_GROWTH",
+    "COMPLETE_GENERIC_FROZEN_METRIC_LOSS_BLOCKED_BY_MISSING_SUBPRINCIPAL_MATRIX",
+    "CONSTRAINT_RESTRICTED_LOSS_BLOCKED_BY_MISSING_TANGENT_PROJECTOR"
+  ],
+  "verdict": "FROZEN_AUXILIARY_ZERO_LOSS_PURE_PRINCIPAL_METRIC_TWO_DERIVATIVE_AND_TT_ONE_DERIVATIVE_GROWTH_COMPLETE_GENERIC_FROZEN_LOSS_BLOCKED_PENDING_EXACT_SUBPRINCIPAL_MATRIX_AND_CONSTRAINT_TANGENT_PROJECTOR_NO_VARIABLE_OR_NONLINEAR_CLAIM"
+}

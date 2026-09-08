@@ -1,0 +1,1270 @@
+{
+  "accepted_failure_anchor": {
+    "angular_dft_256_vs_512_error": 1.481612456806414e-06,
+    "order16_vs_order24_error": 0.4202776018628042,
+    "physical_identifiability": "NOT_TESTED",
+    "principal_result": "BLOCKED_PRODUCTION_KERNEL_VALIDATION",
+    "production_vs_order24_error": 0.06867902041407599,
+    "stage_a_angular_dft_tolerance": 1e-08,
+    "stage_a_cubature_tolerance": 1e-06,
+    "stage_a_execution_count": 1,
+    "stage_a_rerun": "NOT_AUTHORIZED"
+  },
+  "analytic_oracle_contract": {
+    "derivation_obligations": [
+      "NEWTONIAN_SHELL_THEOREM_EXTERNAL_FIELD",
+      "YUKAWA_SPHERE_EXTERNAL_FIELD_RADIAL_INTEGRATION",
+      "TWO_SPHERE_NONOVERLAP_COMPOSITION",
+      "PROJECT_NORMALIZATION_AND_A_Y_ONE_THIRD",
+      "STABLE_SCALED_FACTOR_ALGEBRA"
+    ],
+    "dimensionless_radius": "x_i=R_i/lambda",
+    "domain": "STRICTLY_NONOVERLAPPING_HOMOGENEOUS_SPHERES_ONLY",
+    "independent_implementation_required": true,
+    "mass": "M_i=(4*pi/3)*rho_i*R_i^3",
+    "newtonian": "U_N(D)=-G*M1*M2/D",
+    "production_form_factor_function_import_forbidden": true,
+    "small_x_branch_max": 0.001,
+    "small_x_series": "F(x)=1+x^2/10+x^4/280+x^6/15120+O(x^8)",
+    "sphere_form_factor": "F(x)=3*(x*cosh(x)-sinh(x))/x^3",
+    "stable_scaled_factor": "H(x)=exp(-x)*F(x)=3*((x-1)+(x+1)*exp(-2*x))/(2*x^3)",
+    "stable_yukawa": "U_Y=-A_Y*G*M1*M2*H(x1)*H(x2)*exp(-g/lambda)/D",
+    "yukawa": "U_Y(D)=-A_Y*G*M1*M2*F(x1)*F(x2)*exp(-D/lambda)/D"
+  },
+  "angular_dft_contract": {
+    "alias_probe": {
+      "amplitude_N_m": 1e-16,
+      "harmonic": 258,
+      "phase_rad": 0.241660973353061,
+      "required_finding": "ALIASES_IN_N256_BUT_NOT_IN_RETAINED_N512_COEFFICIENTS"
+    },
+    "analytic_signal": {
+      "absolute_tolerance_N_m": 1e-28,
+      "expected_coefficient": "c_n=(A_n/2)*exp(i*phi_n)",
+      "formula": "sum_n A_n*cos(n*theta+phi_n)",
+      "relative_tolerance": 1e-12,
+      "rows": [
+        {
+          "amplitude_N_m": 2e-15,
+          "n": 2,
+          "phase_rad": 0.4487989505128276
+        },
+        {
+          "amplitude_N_m": 7e-16,
+          "n": 4,
+          "phase_rad": -0.3490658503988659
+        },
+        {
+          "amplitude_N_m": 3e-16,
+          "n": 6,
+          "phase_rad": 0.28559933214452665
+        }
+      ]
+    },
+    "classification_rule": {
+      "analytic_fails": "ANGULAR_DFT_RESOLUTION_INDEPENDENTLY_INADEQUATE",
+      "analytic_passes_production_fails": "KERNEL_NOISE_DRIVES_DFT_FAILURE"
+    },
+    "convention": "c_n=(1/N)*sum_k(tau(theta_k)*exp(-i*n*theta_k))",
+    "production_sample_counts": [
+      128,
+      256,
+      512,
+      1024
+    ],
+    "production_torque_test_gate": "PAIR_ENERGY_AND_TORQUE_ORACLES_PASS_FIRST",
+    "retained_harmonics": [
+      2,
+      4,
+      6
+    ],
+    "sample_counts": [
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "theta_grid": "theta_k=2*pi*k/N"
+  },
+  "authority": {
+    "consumed_selector_route": "BOUNDED_PRODUCTION_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE",
+    "consumed_selector_verdict": "SELECTED_BOUNDED_PRODUCTION_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_PREPARATION",
+    "frozen_selector_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_V1_EXECUTION_RESULT_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+        "sha256": "948a0712ae8693dad2c8d0b3041397eca0255b85f9fb4c9e2b577cf5cfe3c2b0"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_V1_EXECUTION_RESULT_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.json",
+        "sha256": "311685e057d5f1e9f99218775ea841d33198ef85de2f7a41bdc85f20e85b5cd8"
+      },
+      {
+        "relative_path": "formal/python/tools/post_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_execution_result_scientific_response_selection_v0.py",
+        "sha256": "6ff38f90ec5a92f1919fb75c62fcd4680c31a5b897d2debabf610b33e1134324"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_v1_execution_result_scientific_response_selection_v0.py",
+        "sha256": "d745ee1e5705c2206b3b178cf512ae99dd11d38a61a04c0eed5deadeac6af380"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationV1ExecutionResultScientificResponseSelectionV0.lean",
+        "sha256": "5cd2aef53c4f6ba463a8ac211580cfe24fd5f9203898bdbecc929b7897211c8a"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_v0.py",
+      "sha256": "4041e7722bdec724dfc30d61bf12f0eeded7628f5f6b1e3514906f3d7d601aab"
+    },
+    "human_packet": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_20260719_v0.md",
+      "sha256": "3d628f876acaed975011d9f14ae44f2d613322a8fe56f5f829699d3f616b67e3"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaSphereKernelDiagnosisAndReferenceOraclePacketV0.lean",
+      "sha256": "16fc52d04d649007d7e94b467d3c0a94cfc2f451e108f6e3bde1abecb808c946"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_v0.py",
+      "sha256": "c7af9699b41e84c65b1ce3307a7f98ee59bc831852bc5b379d1a3baca0ab22d8"
+    }
+  },
+  "authorized_diagnostic_outputs": [
+    "COMPONENT_LEVEL_INTERACTION_VALUES",
+    "EXACT_OR_HIGH_PRECISION_REFERENCE_VALUES",
+    "CONVERGENCE_TABLES",
+    "ERROR_VS_GAP_RANGE_AND_RADIUS",
+    "NEAR_CONTACT_CONTRIBUTION_PROFILES",
+    "PRECISION_SUMMATION_SCALING_AND_SYMMETRY_COMPARISONS",
+    "TORQUE_DERIVATIVE_COMPARISONS",
+    "ANALYTIC_AND_PRODUCTION_DFT_REFINEMENT",
+    "ROOT_CAUSE_CLASSIFICATION",
+    "RECOMMENDED_REPLACEMENT_METHOD_AND_ESTIMATED_COST"
+  ],
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This packet preregisters one bounded diagnostic contract. It performs no kernel, oracle, torque, harmonic, cost, or root-cause calculation; changes no production implementation; authorizes no execution before independent review; and does not reopen Stage A or Stage B.",
+  "component_contract": {
+    "cancellation_ratio": "(abs(U_N)+abs(U_Y))/max(abs(U_N+U_Y),1e-300_J)",
+    "combined_records": [
+      "VALUE_J",
+      "CANCELLATION_RATIO"
+    ],
+    "combined_value_may_decide_component_accuracy": false,
+    "components": [
+      "NEWTONIAN",
+      "YUKAWA",
+      "COMBINED_DIAGNOSTIC_ONLY"
+    ],
+    "newtonian_limits": [
+      "U_N=-G*M1*M2/D",
+      "D*U_N=-G*M1*M2"
+    ],
+    "per_component_records": [
+      "VALUE_J",
+      "ABSOLUTE_ERROR_J",
+      "RELATIVE_ERROR",
+      "CONVERGENCE_BY_PATH_AND_LEVEL",
+      "DIMENSIONAL_CHECK",
+      "LIMITING_BEHAVIOR"
+    ],
+    "yukawa_limits": [
+      "lambda_to_infinity_F_to_1_and_exp_to_1",
+      "lambda_much_less_than_gap_U_Y_to_0"
+    ]
+  },
+  "diagnostic_domain": {
+    "high_precision_anchor_count": 12,
+    "lambda_formulas": {
+      "GAP_TRANSITION": "g",
+      "LONG_VS_GEOMETRY": "10*max(g,sqrt(R1*R2))",
+      "RADIUS_TRANSITION": "sqrt(R1*R2)",
+      "SHORT_VS_GAP": "g/10"
+    },
+    "legacy_case_count": 3,
+    "legacy_cases": [
+      {
+        "case_id": "LEGACY_STAGE_A_00",
+        "center_distance_m": 0.011,
+        "lambda_m": 0.0001
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_01",
+        "center_distance_m": 0.03,
+        "lambda_m": 0.005
+      },
+      {
+        "case_id": "LEGACY_STAGE_A_02",
+        "center_distance_m": 0.08,
+        "lambda_m": 0.1
+      }
+    ],
+    "post_result_case_selection": "FORBIDDEN",
+    "radius_pairs_m": [
+      {
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "role": "SMALL_ASYMMETRIC"
+      },
+      {
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "role": "PRODUCTION_EQUAL"
+      },
+      {
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "role": "LARGE_ASYMMETRIC"
+      }
+    ],
+    "rows": [
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_SHORT_VS_GAP",
+        "center_distance_m": 0.0051,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 1e-05,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_GAP_TRANSITION",
+        "center_distance_m": 0.0051,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.0001,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_RADIUS_TRANSITION",
+        "center_distance_m": 0.0051,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.0024494897427831783,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G0_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.0051,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.024494897427831782,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_SHORT_VS_GAP",
+        "center_distance_m": 0.006,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.0001,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_GAP_TRANSITION",
+        "center_distance_m": 0.006,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.001,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_RADIUS_TRANSITION",
+        "center_distance_m": 0.006,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.0024494897427831783,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G1_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.006,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.024494897427831782,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_SHORT_VS_GAP",
+        "center_distance_m": 0.015,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.001,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_GAP_TRANSITION",
+        "center_distance_m": 0.015,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.01,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_RADIUS_TRANSITION",
+        "center_distance_m": 0.015,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.0024494897427831783,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R0_G2_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.015,
+        "effective_radius_m": 0.0024494897427831783,
+        "high_precision_anchor": false,
+        "lambda_m": 0.1,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.002,
+        "radius_2_m": 0.003,
+        "radius_role": "SMALL_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_SHORT_VS_GAP",
+        "center_distance_m": 0.0101,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 1e-05,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_GAP_TRANSITION",
+        "center_distance_m": 0.0101,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.0001,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_RADIUS_TRANSITION",
+        "center_distance_m": 0.0101,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.005,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G0_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.0101,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": false,
+        "lambda_m": 0.05,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_SHORT_VS_GAP",
+        "center_distance_m": 0.011,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.0001,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_GAP_TRANSITION",
+        "center_distance_m": 0.011,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.001,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_RADIUS_TRANSITION",
+        "center_distance_m": 0.011,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.005,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G1_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.011,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": false,
+        "lambda_m": 0.05,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_SHORT_VS_GAP",
+        "center_distance_m": 0.02,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.001,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_GAP_TRANSITION",
+        "center_distance_m": 0.02,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.01,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_RADIUS_TRANSITION",
+        "center_distance_m": 0.02,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.005,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R1_G2_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.02,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": false,
+        "lambda_m": 0.1,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_SHORT_VS_GAP",
+        "center_distance_m": 0.015099999999999999,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 1e-05,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_GAP_TRANSITION",
+        "center_distance_m": 0.015099999999999999,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.0001,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_RADIUS_TRANSITION",
+        "center_distance_m": 0.015099999999999999,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.007071067811865475,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G0_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.015099999999999999,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.07071067811865475,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_SHORT_VS_GAP",
+        "center_distance_m": 0.016,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.0001,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_GAP_TRANSITION",
+        "center_distance_m": 0.016,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.001,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_RADIUS_TRANSITION",
+        "center_distance_m": 0.016,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.007071067811865475,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G1_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.016,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.07071067811865475,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.001
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_SHORT_VS_GAP",
+        "center_distance_m": 0.025,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.001,
+        "lambda_role": "SHORT_VS_GAP",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_GAP_TRANSITION",
+        "center_distance_m": 0.025,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.01,
+        "lambda_role": "GAP_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_RADIUS_TRANSITION",
+        "center_distance_m": 0.025,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.007071067811865475,
+        "lambda_role": "RADIUS_TRANSITION",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "STRATIFIED",
+        "case_id": "STRATIFIED_R2_G2_LONG_VS_GEOMETRY",
+        "center_distance_m": 0.025,
+        "effective_radius_m": 0.007071067811865475,
+        "high_precision_anchor": false,
+        "lambda_m": 0.1,
+        "lambda_role": "LONG_VS_GEOMETRY",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.01,
+        "radius_role": "LARGE_ASYMMETRIC",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.01
+      },
+      {
+        "case_class": "LEGACY_STAGE_A_REPRODUCTION",
+        "case_id": "LEGACY_STAGE_A_00",
+        "center_distance_m": 0.011,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.0001,
+        "lambda_role": "LEGACY_FROZEN",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.0009999999999999992
+      },
+      {
+        "case_class": "LEGACY_STAGE_A_REPRODUCTION",
+        "case_id": "LEGACY_STAGE_A_01",
+        "center_distance_m": 0.03,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.005,
+        "lambda_role": "LEGACY_FROZEN",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.019999999999999997
+      },
+      {
+        "case_class": "LEGACY_STAGE_A_REPRODUCTION",
+        "case_id": "LEGACY_STAGE_A_02",
+        "center_distance_m": 0.08,
+        "effective_radius_m": 0.005,
+        "high_precision_anchor": true,
+        "lambda_m": 0.1,
+        "lambda_role": "LEGACY_FROZEN",
+        "radius_1_m": 0.005,
+        "radius_2_m": 0.005,
+        "radius_role": "PRODUCTION_EQUAL",
+        "strictly_nonoverlapping": true,
+        "surface_gap_m": 0.06999999999999999
+      }
+    ],
+    "stratified_case_count": 36,
+    "surface_gaps_m": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "total_case_count": 39
+  },
+  "evaluation_paths": {
+    "adaptive_direct_density": {
+      "anchor_case_count": 12,
+      "coordinates": [
+        "u1=r1/R1",
+        "mu1",
+        "u2=r2/R2",
+        "mu2"
+      ],
+      "path_id": "R3_ADAPTIVE_ARBITRARY_PRECISION_DIRECT_FOUR_DIMENSIONAL_DENSITY",
+      "precision_decimal_digits": [
+        50,
+        80,
+        120
+      ],
+      "scientific_role": "DIRECT_NUMERIC_CROSS_ORACLE_ON_FROZEN_ANCHORS",
+      "tanh_sinh_max_degrees": [
+        6,
+        8,
+        10
+      ]
+    },
+    "analytic_closed_form": {
+      "all_39_cases": true,
+      "path_id": "R1_INDEPENDENT_ANALYTIC_SHELL_AND_FORM_FACTOR",
+      "precision_decimal_digits": 120,
+      "scientific_role": "EXACT_CANDIDATE_ORACLE_SUBJECT_TO_DERIVATION_CONTROLS"
+    },
+    "nearby_order_same_path_is_independent_oracle": false,
+    "path_count": 4,
+    "production_fixed_tensor": {
+      "all_39_cases": true,
+      "dimensions_refined_together": [
+        "r1",
+        "mu1",
+        "r2",
+        "mu2"
+      ],
+      "orders": [
+        8,
+        12,
+        16,
+        24,
+        32,
+        48
+      ],
+      "path_id": "P0_FROZEN_BINARY64_FOUR_DIMENSIONAL_GAUSS_LEGENDRE",
+      "scientific_role": "DIAGNOSED_PRODUCTION_PATH_NOT_REFERENCE_ORACLE",
+      "summation": "PAIRWISE_NUMPY_BINARY64_AS_FROZEN"
+    },
+    "semi_analytic_radial": {
+      "adaptive_method": "TANH_SINH",
+      "all_39_cases": true,
+      "formula": "F(x)=3/x^3*integral_0^x(t*sinh(t),dt)",
+      "path_id": "R2_HIGH_PRECISION_RADIAL_FORM_FACTOR_INTEGRAL",
+      "precision_decimal_digits": [
+        50,
+        80,
+        120
+      ],
+      "scientific_role": "INDEPENDENT_REDUCED_REFERENCE"
+    }
+  },
+  "forbidden_outputs": [
+    "FINAL_REAL_150_APPARATUS_VECTOR",
+    "SEVENTEEN_COLUMN_JACOBIAN",
+    "SINGULAR_VALUES",
+    "ETA_LAMBDA",
+    "IDENTIFIABILITY_RESULT",
+    "SYNTHETIC_NOISE",
+    "SENSITIVITY_FORECAST",
+    "SCALAR_RANGE_OR_ALPHA_CONCLUSION"
+  ],
+  "mutation_controls": {
+    "acceptance": "ALL_TEN_MUTATIONS_MUST_FAIL_THEIR_DESIGNATED_PRODUCTION_ROUTED_CONTROL",
+    "mutation_count": 10,
+    "production_diagnostic_path_required": true,
+    "rows": [
+      {
+        "designated_control": "NEWTONIAN_SHELL_ORACLE_AND_DIMENSIONAL_CHECK",
+        "mutation_id": "REMOVE_ONE_RADIAL_VOLUME_FACTOR_R_SQUARED"
+      },
+      {
+        "designated_control": "MASS_AND_NONOVERLAP_GEOMETRY_ORACLE",
+        "mutation_id": "INTERPRET_RADIUS_AS_DIAMETER"
+      },
+      {
+        "designated_control": "CENTER_DISTANCE_AND_NEWTONIAN_SHELL_ORACLE",
+        "mutation_id": "USE_SURFACE_GAP_AS_CENTER_DISTANCE"
+      },
+      {
+        "designated_control": "YUKAWA_ANALYTIC_ORACLE",
+        "mutation_id": "REPLACE_A_Y_ONE_THIRD_BY_ONE"
+      },
+      {
+        "designated_control": "SHORT_RANGE_LIMIT_AND_YUKAWA_ORACLE",
+        "mutation_id": "FLIP_YUKAWA_EXPONENTIAL_SIGN"
+      },
+      {
+        "designated_control": "TORQUE_THREE_PATH_COMPARISON",
+        "mutation_id": "FLIP_NEGATIVE_ANGULAR_ENERGY_DERIVATIVE_SIGN"
+      },
+      {
+        "designated_control": "ALL_DIMENSION_REFINEMENT_CUSTODY",
+        "mutation_id": "LEAVE_MU2_AT_ORDER_8_WHILE_OTHER_DIMENSIONS_REFINE"
+      },
+      {
+        "designated_control": "YUKAWA_ANALYTIC_AND_RADIAL_ORACLES",
+        "mutation_id": "REMOVE_ONE_SPHERE_FORM_FACTOR"
+      },
+      {
+        "designated_control": "ANALYTIC_DFT_COEFFICIENT_ORACLE",
+        "mutation_id": "DOUBLE_DFT_NORMALIZATION"
+      },
+      {
+        "designated_control": "ANALYTIC_DFT_PHASE_ORACLE",
+        "mutation_id": "REVERSE_DFT_PHASE_SIGN"
+      }
+    ],
+    "test_only_substitute_path": "FORBIDDEN"
+  },
+  "near_contact_contract": {
+    "chi_bin_edges": [
+      0.0,
+      0.25,
+      1.0,
+      4.0,
+      "INF"
+    ],
+    "domain_decomposition_probe": {
+      "chi_boundaries": [
+        0.25,
+        1.0,
+        4.0
+      ],
+      "classification": "NEAR_CONTACT_DOMAIN_DECOMPOSITION_REQUIRED",
+      "independent_adaptation_per_subdomain": true,
+      "required_improvement_factor": 10.0
+    },
+    "dominant_near_contact_rule": "absolute_fraction_chi_le_1>=0.90",
+    "excess_coordinate": "chi=(s-g)/max(g,lambda)",
+    "global_normalization_signature": "error_nearly_constant_across_gap_lambda_and_refinement_and_matches_one_frozen_mutation_fingerprint",
+    "minimum_separation": "s_min=g",
+    "point_pair_separation": "s=norm(x1-x2)",
+    "records": [
+      "SIGNED_ENERGY_FRACTION_BY_CHI_BIN",
+      "ABSOLUTE_INTEGRAND_FRACTION_BY_CHI_BIN",
+      "NODE_FRACTION_BY_CHI_BIN",
+      "LOCAL_KERNEL_MAX_MIN_RATIO_BY_CHI_BIN"
+    ]
+  },
+  "oracle_convergence_and_work_contract": {
+    "absolute_energy_tolerance_J": 1e-36,
+    "budget_exhaustion_behavior": "FAIL_CLOSED_REFERENCE_ORACLE_INADEQUATE",
+    "cross_oracle_rule": "abs(R_i-R_j)<=1e-36_J+1e-10*abs(R1_ANALYTIC)",
+    "failed_reference_plateau_outcome": "REFERENCE_ORACLE_INADEQUATE",
+    "higher_cost_alone_implies_correctness": false,
+    "maximum_function_evaluations_per_direct_anchor": 2000000,
+    "maximum_memory_mib": 4096,
+    "maximum_total_wall_clock_seconds": 3600,
+    "maximum_wall_clock_seconds_per_direct_anchor": 180,
+    "plateau_levels": [
+      "80_DIGITS_DEGREE_8",
+      "120_DIGITS_DEGREE_10"
+    ],
+    "plateau_rule": "abs(last-prev)<=1e-36_J+1e-10*abs(last)",
+    "production_accuracy_rule": "abs(P-R)<=1e-36_J+1e-6*abs(R)",
+    "reference_must_plateau_before_judging_production": true,
+    "relative_energy_tolerance": 1e-10,
+    "result_dependent_tolerance_or_budget_change": "FORBIDDEN"
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_20260719_v0",
+  "packet_review_contract": {
+    "independent_review_required": true,
+    "post_diagnosis_fresh_selector_required": true,
+    "post_diagnosis_independent_result_review_required": true,
+    "ready_outcome_authorizes": "ONE_BOUNDED_DIAGNOSIS_EXECUTION_ONLY",
+    "ready_outcome_does_not_authorize": [
+      "INTEGRATION_REPLACEMENT",
+      "IMPLEMENTATION_CORRECTION_AND_IMMEDIATE_RERUN",
+      "STAGE_A_REOPENING",
+      "V2",
+      "IDENTIFIABILITY",
+      "STAGE_B"
+    ],
+    "review_outcomes": [
+      "KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_CONTRACT_READY",
+      "BLOCKED_NONOVERLAP_ORACLE_DOMAIN",
+      "BLOCKED_REFERENCE_ORACLE_CONTRACT",
+      "BLOCKED_DIAGNOSTIC_GRID_CONTRACT",
+      "BLOCKED_NEAR_CONTACT_LOCALIZATION_CONTRACT",
+      "BLOCKED_DFT_ISOLATION_CONTRACT",
+      "BLOCKED_DIAGNOSTIC_MUTATION_ROUTING",
+      "BLOCKED_SCOPE_OR_PROVENANCE"
+    ]
+  },
+  "physical_constants_and_conventions": {
+    "angle_unit": "rad",
+    "center_distance_definition": "D=R1+R2+g",
+    "density_kg_m3": 19250.0,
+    "energy_unit": "J",
+    "gravitational_constant_m3_kg_s2": 6.6743e-11,
+    "nonoverlap_rule": "g>0",
+    "positive_lambda_required": true,
+    "surface_gap_definition": "g=D-R1-R2",
+    "torque_unit": "N_m",
+    "yukawa_amplitude": 0.3333333333333333
+  },
+  "precision_summation_and_symmetry_contract": {
+    "component_evaluation_modes": [
+      "SEPARATE_U_N_AND_U_Y",
+      "DIRECT_COMBINED_DIAGNOSTIC_ONLY"
+    ],
+    "coordinate_modes": [
+      "RAW_SI",
+      "NONDIMENSIONALIZED_BY_MAX_D_R1_R2_LAMBDA"
+    ],
+    "energy_scale": "G*rho1*rho2*R1^3*R2^3/D",
+    "explicit_azimuth_control": {
+      "acceptance_rule": "abs(reduced-unreduced)<=1e-34_J+1e-8*abs(reduced)",
+      "azimuth_sample_counts": [
+        32,
+        64
+      ],
+      "case_ids": [
+        "LEGACY_STAGE_A_00",
+        "LEGACY_STAGE_A_01",
+        "LEGACY_STAGE_A_02"
+      ],
+      "radial_polar_order": 12
+    },
+    "precision_levels": [
+      "IEEE_BINARY64",
+      "MP_50_DIGITS",
+      "MP_80_DIGITS",
+      "MP_120_DIGITS"
+    ],
+    "roundoff_dominance_rule": "precision_change_improves_error_by_at_least_100x_while_method_and_domain_are_fixed",
+    "summation_methods": [
+      "ORDINARY",
+      "PAIRWISE",
+      "KAHAN",
+      "MATH_FSUM_OR_MP_EXACT_ACCUMULATION"
+    ],
+    "symmetry_modes": [
+      "AZIMUTH_ANALYTICALLY_REDUCED",
+      "EXPLICIT_AZIMUTH_CONTROL"
+    ]
+  },
+  "preparation_gates": {
+    "failure_count": 0,
+    "gate_count": 30,
+    "pass_count": 30,
+    "rows": [
+      {
+        "gate_id": "EXACT_SELECTOR_AUTHORITY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ACCEPTED_STAGE_A_FAILURE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PACKET_PREPARATION_ONLY_NO_DIAGNOSIS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THIRTY_SIX_STRATIFIED_CASES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THREE_LEGACY_FAILURE_CASES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ALL_THIRTY_NINE_CASES_STRICTLY_NONOVERLAPPING",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "THREE_RADIUS_PAIRS_AND_THREE_GAPS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FOUR_LAMBDA_REGIMES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NEWTONIAN_AND_YUKAWA_COMPONENTS_SEPARATE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "COMBINED_VALUE_AND_CANCELLATION_RATIO_REPORTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_NEWTONIAN_SHELL_ORACLE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_YUKAWA_FORM_FACTOR_ORACLE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "STABLE_SCALED_FORM_FACTOR_BRANCH_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FIXED_ORDER_PRODUCTION_PATH_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SEMI_ANALYTIC_RADIAL_REFERENCE_PATH_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ADAPTIVE_ARBITRARY_PRECISION_PATH_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "REFERENCE_SELF_CONVERGENCE_AND_CROSS_ORACLE_RULES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MAXIMUM_WORK_AND_FAIL_CLOSED_RULES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NEAR_CONTACT_EXCESS_SEPARATION_PROFILE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRECISION_SUMMATION_SCALING_AND_SYMMETRY_PROBES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PAIR_ENERGY_BEFORE_TORQUE_ORDER_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_PRODUCTION_AND_FINITE_DIFFERENCE_TORQUE_PATHS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_ANALYTIC_DFT_SIGNAL_AND_EXPECTED_COEFFICIENTS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "KNOWN_HIGH_HARMONIC_ALIAS_PROBE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TEN_PRODUCTION_ROUTED_MUTATIONS_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MULTILABEL_ROOT_CAUSE_AND_PRIORITY_RULES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_ORACLE_AVAILABILITY_REPORTED_SEPARATELY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "DIAGNOSTIC_OUTPUTS_ONLY_FINAL_VECTOR_AND_JACOBIAN_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ONE_DIAGNOSIS_ONLY_AFTER_INDEPENDENT_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_REPAIR_RERUN_V2_IDENTIFIABILITY_OR_STAGE_B_AUTHORITY",
+        "status": "PASS"
+      }
+    ]
+  },
+  "root_cause_adjudication": {
+    "economic_failure_requires": "validated_error_extrapolation_cannot_reach_tolerance_within_frozen_3600_s_4096_MiB_budget",
+    "fixed_order_inadequate_requires": "oracle_passes_and_last_three_fixed_orders_improve_monotonically_but_order48_fails_accuracy_or_cost_rule",
+    "implementation_defect_requires": "one_specific_mutation_fingerprint_matches_and_independent_oracle_passes_and_error_is_not_removed_by_valid_refinement",
+    "multilabel_reporting": true,
+    "near_contact_requires": "chi_le_1_absolute_fraction_at_least_0.90_and_decomposition_improves_error_at_least_10x",
+    "no_root_cause_rounding": "UNRESOLVED_IF_NO_FROZEN_PREDICATE_IS_SATISFIED",
+    "oracle_availability_outcomes": [
+      "ANALYTIC_OR_REDUCED_SPHERE_ORACLE_AVAILABLE",
+      "ANALYTIC_OR_REDUCED_SPHERE_ORACLE_NOT_VALIDATED"
+    ],
+    "principal_outcomes": [
+      "IMPLEMENTATION_DEFECT_LOCALIZED",
+      "FIXED_ORDER_CUBATURE_INADEQUATE",
+      "REFERENCE_ORACLE_INADEQUATE",
+      "NEAR_CONTACT_DOMAIN_DECOMPOSITION_REQUIRED",
+      "ANGULAR_DFT_RESOLUTION_INDEPENDENTLY_INADEQUATE",
+      "KERNEL_NOISE_DRIVES_DFT_FAILURE",
+      "INTERNAL_APPARATUS_FORWARD_MODEL_NOT_ECONOMICALLY_VALIDATABLE"
+    ],
+    "principal_priority": [
+      "REFERENCE_ORACLE_INADEQUATE",
+      "IMPLEMENTATION_DEFECT_LOCALIZED",
+      "NEAR_CONTACT_DOMAIN_DECOMPOSITION_REQUIRED",
+      "FIXED_ORDER_CUBATURE_INADEQUATE",
+      "ANGULAR_DFT_RESOLUTION_INDEPENDENTLY_INADEQUATE",
+      "KERNEL_NOISE_DRIVES_DFT_FAILURE",
+      "INTERNAL_APPARATUS_FORWARD_MODEL_NOT_ECONOMICALLY_VALIDATABLE"
+    ],
+    "reference_inadequate_requires": "any_required_oracle_plateau_or_cross_oracle_check_fails"
+  },
+  "schema_id": "toe.scalar_only_yukawa.sphere_kernel_diagnosis_and_reference_oracle.packet.v0",
+  "scope": {
+    "additional_stage_a_execution_authorized": false,
+    "automatic_v2_authorized": false,
+    "component_interaction_value_computed": false,
+    "convergence_table_computed": false,
+    "diagnosis_executed": false,
+    "diagnosis_execution_authorized": false,
+    "diagnosis_packet_independent_review_required": true,
+    "diagnosis_packet_prepared": true,
+    "diagnostic_case_grid_constructed_as_contract_metadata": true,
+    "empirical_constraint_claimed": false,
+    "eta_lambda_authorized": false,
+    "final_real_150_vector_authorized": false,
+    "full_forward_model_rerun_authorized": false,
+    "identifiability_classification_authorized": false,
+    "implementation_corrected": false,
+    "jacobian_authorized": false,
+    "numerical_alpha_bound_computed": false,
+    "production_integration_method_changed": false,
+    "production_kernel_called_during_preparation": false,
+    "reference_oracle_called_during_preparation": false,
+    "root_cause_classification_computed": false,
+    "scalar_branch_adopted": false,
+    "selector_authority_consumed": true,
+    "sensitivity_forecast_authorized": false,
+    "stage_b_authorized": false,
+    "stage_b_eligible": false,
+    "stochastic_packet_preparation_authorized": false,
+    "svd_authorized": false,
+    "synthetic_noise_authorized": false
+  },
+  "selected_next_target": "review_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_PACKET_REVIEW_ONLY_NO_DIAGNOSIS_EXECUTION",
+  "status": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+  "target": "prepare_scalar_only_yukawa_sphere_kernel_diagnosis_and_reference_oracle_packet_v0",
+  "torque_isolation_contract": {
+    "acceptance_rule": "abs(delta_tau)<=1e-22_N_m+1e-8*abs(tau_oracle)",
+    "angles_rad": [
+      0.4487989505128276,
+      0.9424777960769379
+    ],
+    "component_modes": [
+      "NEWTONIAN",
+      "YUKAWA"
+    ],
+    "execution_order": "PAIR_ENERGY_ORACLES_MUST_PASS_BEFORE_TORQUE_TESTS",
+    "final_apparatus_harmonic_vector_prohibited": true,
+    "finite_difference_refinement_required": true,
+    "finite_difference_steps_rad": [
+      0.001,
+      0.0005,
+      0.00025,
+      0.000125
+    ],
+    "gaps_m": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "lambda_m": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "torque_paths": [
+      "ANALYTIC_PAIR_ENERGY_DERIVATIVE",
+      "FROZEN_PRODUCTION_FORCE_LEVER_ROUTE",
+      "FIVE_POINT_ENERGY_FINITE_DIFFERENCE_CHECK"
+    ]
+  },
+  "verdict": "PREPARED_BOUNDED_SPHERE_KERNEL_DIAGNOSIS_AND_REFERENCE_ORACLE_PACKET_V0",
+  "work_packages": {
+    "count": 9,
+    "executed_count": 0,
+    "rows": [
+      "WP1_NONOVERLAP_GEOMETRY_AND_DIMENSIONAL_CUSTODY",
+      "WP2_NEWTONIAN_COMPONENT_ORACLE",
+      "WP3_YUKAWA_ANALYTIC_AND_RADIAL_ORACLES",
+      "WP4_ADAPTIVE_DIRECT_HIGH_PRECISION_ANCHORS",
+      "WP5_FIXED_ORDER_AND_NEAR_CONTACT_PROFILES",
+      "WP6_PRECISION_SUMMATION_SCALING_AND_SYMMETRY",
+      "WP7_PAIR_ENERGY_TO_TORQUE_ISOLATION",
+      "WP8_ANALYTIC_AND_PRODUCTION_DFT_ISOLATION",
+      "WP9_ROOT_CAUSE_COST_AND_METHOD_RECOMMENDATION"
+    ]
+  }
+}

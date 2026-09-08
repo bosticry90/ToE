@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 5,
+  "closed_from_commit": "94c50006c1d0c361ac85f005ba12ea3b8272a6a9",
+  "event_hash": "771441eb4574a7f14809cb4989d8ef7928c4ca46bec58ff8078485d65ba87418",
+  "event_sequence_number": 10,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "bbdd500b2e82f6dbef9520be77266dd8f5020adb91dfa926775b94d1578c0bce",
+  "previous_event_hash": "bbdd500b2e82f6dbef9520be77266dd8f5020adb91dfa926775b94d1578c0bce",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "result_artifact_hash": "58602db2ff2ffaa6820c68ab80f55985c50f106be3b9c5a934dba696c615f4d5",
+  "result_artifact_path": "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0.json",
+  "review_artifact_hash": "47d474e99b3ce08f74c17c55c37cfda127f18202906979883dd9061af0682b26",
+  "review_artifact_path": "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

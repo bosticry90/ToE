@@ -1,0 +1,22 @@
+{
+  "detail": {
+    "identifiability": {
+      "status": "NOT_COMPUTED_EARLY_PHYSICAL_CONTROL_BLOCK"
+    },
+    "pre_identifiability": {
+      "benchmark_count": 4,
+      "benchmark_pass_count": 3,
+      "convergence_control_count": 6,
+      "convergence_pass_count": 4,
+      "mutation_count": 5,
+      "mutation_pass_count": 5,
+      "symmetry_control_count": 6,
+      "symmetry_pass_count": 6
+    },
+    "v1_control_count": 0,
+    "v1_control_pass_count": 0
+  },
+  "outcome": "BLOCKED_PRODUCTION_KERNEL_VALIDATION",
+  "pre_identifiability_controls_pass": false,
+  "secondary_outcome": "NO_IDENTIFIABILITY_CALCULATION_DUE_TO_EARLY_PHYSICAL_CONTROL_FAILURE"
+}

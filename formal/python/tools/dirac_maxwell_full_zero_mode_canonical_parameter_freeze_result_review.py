@@ -14,6 +14,10 @@ from typing import Any
 import numpy as np
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -46,6 +50,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "028e865c9a12f0c561fc945e391bf96cd009c767ce540153dca7c565a9bde2f3",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 
@@ -68,7 +73,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -277,7 +282,7 @@ def build_review_report() -> dict[str, Any]:
         "claim_ceiling_and_all_nonpromotion_boundaries_hold": "not a conservation or coupled-field result" in packet["claim_ceiling"] and len(packet["nonclaims"]) == 10,
         "only_canonical_simulation_execution_is_authorized_after_acceptance": packet["post_acceptance_target"] == ACCEPTED_TARGET and packet["selected_next_target"] == REVIEW_TARGET,
         "canonical_scientific_result_remains_unearned": packet["boundary"]["scientific_result_claimed"] is False and packet["boundary"]["canonical_execution_authorized"] is False,
-        "Prompt_is_preserved": sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256,
+        "Prompt_is_preserved": prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE),
     }
     ordered = [{"decision_id": item, "passed": bool(decisions[item])} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

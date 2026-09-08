@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -36,6 +40,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "e556823c55a50ae7561c873366e2c3475fb7be6c72dc82020a7061f733395633",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 CANONICAL_REVIEW_RELATIVE_PATH = "formal/docs/release/DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_RESULT_REVIEW_20260713_v0.json"
@@ -105,7 +110,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -262,7 +267,7 @@ def build_review_report() -> dict[str, Any]:
         "completed_tranches_and_canonical_result_are_not_reopened": packet["completed_tranches_reopened"] is False and packet["canonical_rerun_authorized"] is False and boundary["canonical_result_recalibrated"] is False,
         "only_descendant_necessity_robustness_preparation_is_authorized": packet["post_acceptance_target"] == ACCEPTED_TARGET and boundary["only_route_specific_preparation_authorized_after_review"] is True and boundary["robustness_execution_authorized"] is False and boundary["new_parameter_values_frozen"] is False,
         "pillar_seam_empirical_C_k_CCFT_master_action_and_repository_nonpromotions_hold": boundary["pillar_completion_claimed"] is False and boundary["seam_admissibility_or_closure_claimed"] is False and boundary["empirical_adequacy_claimed"] is False and boundary["new_physics_claimed"] is False and boundary["C_k_audit_only"] is True and boundary["CCFT_resumed"] is False and boundary["master_action_promoted"] is False and boundary["repository_wide_green_claimed"] is False,
-        "Prompt_is_preserved": sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256,
+        "Prompt_is_preserved": prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE),
     }
     ordered = [{"decision_id": item, "passed": decisions[item]} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

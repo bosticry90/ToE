@@ -1013,7 +1013,7 @@ def test_loop_control_registry_schema_and_core_controls() -> None:
     payload = _registry()
 
     assert payload["schema_id"] == "LOOP_CONTROL_REGISTRY_v0"
-    assert payload["schema_version"] == 0
+    assert payload["schema_version"] == 2
     assert payload["status"] == "ACTIVE_NONLIVE_NONCLAIM"
     assert "not enrolled in GOVERNANCE_TEST_MANIFEST_v1.json" in payload["authority_boundary"]
     assert "no Phase 2 authorization" in payload["non_claim_boundary"]

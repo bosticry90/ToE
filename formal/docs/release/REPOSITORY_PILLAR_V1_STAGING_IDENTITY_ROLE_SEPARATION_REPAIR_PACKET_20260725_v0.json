@@ -1,0 +1,30 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_PACKET_20260725_v0",
+  "permitted": {
+    "materialize_frozen_historical_inputs_from_git": true,
+    "apply_reviewed_crlf_representation": true,
+    "apply_accepted_em_mixed_eol_reconstruction": true,
+    "validate_review_time_source_bindings_as_historical": true,
+    "validate_runtime_custody_against_preparation_commit": true,
+    "preserve_corruption_and_authority_class_controls": true
+  },
+  "prohibited": {
+    "copy_dirty_main_bytes": true,
+    "refresh_historical_pins": true,
+    "rewrite_historical_generator": true,
+    "rewrite_historical_outputs": true,
+    "repair_original_authority_class_mismatch": true,
+    "registry_or_v2_change": true,
+    "scientific_content_change": true,
+    "lean_activity": true,
+    "automatic_successor": true
+  },
+  "acceptance": {
+    "thirteen_outcomes": "13 / 13 PASS",
+    "isolated_runs": 2,
+    "historical_outputs": "BYTE_IDENTICAL",
+    "historical_review_decisions": "25 / 26",
+    "sole_failed_decision": "supporting_sources_have_authorized_bounded_class",
+    "checkout_after": "CLEAN"
+  }
+}

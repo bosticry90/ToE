@@ -1,0 +1,17 @@
+{
+  "captured_at_utc": "2026-07-22T01:52:45Z",
+  "custody_precondition": {
+    "path": "formal/docs/release/DIRTY_MAIN_CUSTODY_COUNT_REVERIFICATION_20260722_v0.json",
+    "sha256": "7893622be169df9dd4bffef245142845bdb827508492a01dafaf6dc8ba8e02c8",
+    "status": "CUSTODY_PATH_SET_EXACTLY_PRESERVED"
+  },
+  "options": [
+    "AUTHORIZE_BOUNDED_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING",
+    "PRESERVE_CLUSTERING_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "schema_id": "POST_BROAD_PYTHON_CLUSTERING_MAINTENANCE_SELECTION_20260722_v0",
+  "selected": "AUTHORIZE_BOUNDED_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING",
+  "selection_basis": "The 206-outcome Prompt family reflects dependency inflation around a nonauthoritative workflow input. Each of the 43 consumers must be individually adjudicated before removal, provenance demotion, or stable retained identity is implemented.",
+  "scientific_posture": "B-BLOCKED",
+  "target": "prepare_repository_prompt_dependency_role_adjudication_and_decoupling_packet_v0"
+}

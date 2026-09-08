@@ -1,0 +1,25 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_STAGE_3_OPEN_AUTHORITY_REVIEW_20260730_v0",
+  "captured_at_utc": "2026-07-31T00:00:00Z",
+  "checks": {
+    "canonical_manifest_stage_3_binding_matches": true,
+    "claim_record_and_classification_vocabulary_frozen": true,
+    "conflicts_preserved_without_truth_adjudication": true,
+    "content_safety_and_passive_parser_boundaries_preserved": true,
+    "evidence_promotion_and_archive_adoption_prohibited": true,
+    "lineage_aware_duplicate_and_revision_rules_frozen": true,
+    "mandatory_exit_behavior_bound": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "stage_2_result_review_validation_and_close_hash_bound": true,
+    "stage_2_is_closed_passed": true,
+    "stage_4_automatic_open_prohibited": true,
+    "workload_limits_frozen": true
+  },
+  "consumed_authority": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_STAGE_3_OPEN_AUTHORITY_20260730_v0",
+  "decision": "AUTHORIZE_STAGE_3_OPEN",
+  "nonclaim_boundary": "This authority permits bounded source-bound claim extraction and classification only. It does not adjudicate scientific truth, promote evidence, select a native hypothesis, construct a field or action, close a pillar or seam, or open Stage 4.",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "review_status": "ACCEPTED_FOR_SEPARATE_ATOMIC_STAGE_3_OPEN",
+  "schema_id": "toe.repository_wide_native_hypothesis_claim_extraction.stage_3_open_authority_review.v0"
+}

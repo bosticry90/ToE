@@ -1,0 +1,126 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T13:07:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+  "consumed_result": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0",
+  "consumed_result_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+  "consumed_result_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+  "accepted": true,
+  "review_result": "ACCEPT_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+  "independent_recomputation": {
+    "requirement_ids": [
+      "R1_DIMENSION",
+      "R2_METRIC_ONLY",
+      "R3_LOCALITY",
+      "R4_DIFF_COVARIANCE",
+      "R5_CK_FIREWALL",
+      "R6_LOCAL_VARIATION",
+      "R7_SOURCE_COMPATIBILITY",
+      "R8_NEWTON_POISSON",
+      "R9_MOMENTUM_CURRENT",
+      "R10_STABILITY_NO_FIT"
+    ],
+    "requirement_count": 10,
+    "unique_requirement_count": 10,
+    "authorized_input_count": 7,
+    "underlying_source_count": 7,
+    "statement_class_counts": {
+      "ACCEPTED_PROJECT_REQUIREMENT": 5,
+      "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION": 3,
+      "RETAINED_RECOVERY_OBLIGATION": 2,
+      "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION": 0,
+      "NEW_PROPOSED_POSTULATE": 0,
+      "UNRESOLVED_AUTHORITY_STATUS": 0
+    },
+    "immediately_testable_as_scope_or_formal_checks": 6,
+    "conditionally_testable_after_missing_downstream_inputs": 4,
+    "requirements_that_by_themselves_select_a_unique_action": 0,
+    "requirements_with_distinctively_native_architectural_content": 1,
+    "conflict_or_limitation_finding_count": 7,
+    "all_authorized_input_hashes_match": true,
+    "all_underlying_source_hashes_match": true,
+    "all_requirement_ids_match_the_preserved_packet": true,
+    "every_requirement_has_exactly_one_statement_class": true,
+    "statement_class_vocabulary_matches_the_prepared_program": true,
+    "statement_class_counts_sum_to_ten": true,
+    "every_requirement_records_scope_units_symmetry_testability_and_selection_power": true,
+    "source_authority_is_not_inferred_from_historical_wording_alone": true,
+    "frozen_scope_assumptions_are_not_reported_as_native_derivations": true,
+    "known_physics_recovery_obligations_are_not_reported_as_distinctive_native_principles": true,
+    "C_k_firewall_remains_external_to_dynamics": true,
+    "matter_source_compatibility_block_is_preserved": true,
+    "gravitomagnetic_field_equation_surface_block_is_preserved": true,
+    "candidate_specific_stability_threshold_gap_is_preserved": true,
+    "prior_automated_matrix_is_not_used_as_family_evidence": true,
+    "action_family_compatibility_is_not_adjudicated": true,
+    "no_action_or_principle_is_selected": true,
+    "no_evidence_is_promoted": true,
+    "no_gravitational_calculation_is_executed": true,
+    "stage_2_is_not_authorized_or_opened": true
+  },
+  "independent_findings": [
+    {
+      "finding_id": "REVIEW-FINDING-001",
+      "status": "CONFIRMED",
+      "statement": "The ten requirement rows are all present and source-bound, so evidence is sufficient for an inventory rather than an evidence-insufficient block."
+    },
+    {
+      "finding_id": "REVIEW-FINDING-002",
+      "status": "CONFIRMED",
+      "statement": "R1 through R3 are frozen evaluation-envelope assumptions. Their mandatory status is conditional on the v0 envelope and must not be restated as derived native laws."
+    },
+    {
+      "finding_id": "REVIEW-FINDING-003",
+      "status": "CONFIRMED",
+      "statement": "R4, R6, R8, R9, and much of R7 and R10 are accepted or retained evaluation baselines with substantial overlap with standard gravity and scientific methodology; they are not by themselves distinctive ToE content."
+    },
+    {
+      "finding_id": "REVIEW-FINDING-004",
+      "status": "CONFIRMED",
+      "statement": "R5 is the sole clearly project-native architectural constraint in this inventory, but it only forbids C_k dynamical embedding and does not positively choose an action."
+    },
+    {
+      "finding_id": "REVIEW-FINDING-005",
+      "status": "CONFIRMED",
+      "statement": "R7 cannot be fully tested until a matter action and source subclass exist; the retained stress-energy policy is not an accepted metric or tetrad variation result."
+    },
+    {
+      "finding_id": "REVIEW-FINDING-006",
+      "status": "CONFIRMED",
+      "statement": "R9 remains an obligation rather than a completed recovery because the rotating-source lane blocked on the absence of a continuum tensor field equation."
+    },
+    {
+      "finding_id": "REVIEW-FINDING-007",
+      "status": "CONFIRMED",
+      "statement": "R10 is not executable before a candidate, stability norm, and quantitative acceptance thresholds are frozen."
+    },
+    {
+      "finding_id": "REVIEW-FINDING-008",
+      "status": "CONFIRMED",
+      "statement": "The proper scientific outcome is COMPLETE_WITH_CONFLICTS: the source inventory is complete, while authority type, native distinctiveness, conditional testability, and selection power remain limited."
+    }
+  ],
+  "review_checks": {
+    "result_bytes_hash_bound": true,
+    "source_paths_exist": true,
+    "source_hashes_recomputed_from_current_committed_or_tracked_bytes": true,
+    "controlled_paraphrases_do_not_strengthen_source_claims": true,
+    "requirement_truth_not_adjudicated": true,
+    "candidate_action_families_not_ranked_or_compared": true,
+    "gravitational_principle_not_derived": true,
+    "standard_GR_not_selected_or_promoted": true,
+    "quadratic_gravity_not_promoted_from_reference_control": true,
+    "canonical_evidence_not_promoted": true,
+    "master_action_not_promoted": true,
+    "automatic_successor_not_authorized": true
+  },
+  "selected_next_target": "inventory_toe_candidate_gravitational_action_families_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED",
+  "nonclaim_boundary": [
+    "Acceptance certifies the source-bound inventory and its limitations; it does not certify any requirement as a law of nature.",
+    "No candidate action family has passed or failed any requirement in this stage.",
+    "No gravitational action, native principle, master action, field equation, seam, observable, or empirical claim is created.",
+    "Stage 2 requires a separate scientific-authority decision and a later immutable OPEN event."
+  ]
+}

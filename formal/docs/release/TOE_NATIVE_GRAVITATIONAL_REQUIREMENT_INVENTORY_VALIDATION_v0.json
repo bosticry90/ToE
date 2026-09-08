@@ -1,0 +1,81 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_VALIDATION_v0",
+  "captured_at_utc": "2026-07-31T13:12:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+  "attempt_sequence_number": 1,
+  "terminal_outcome": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+  "lifecycle_result": "PASSED",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+    "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeGravitationalRequirementInventoryResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "artifact_hashes": {
+    "result_sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d",
+    "review_sha256": "3e6f8c74fe74d3c8a7bd177c025b1f722d386b493aaa177b06db2866b592705c",
+    "close_event_hash": "11f77ea8ff2d5e08edb135fb21c2c1dd99cc5c402903f99f793064da001c241d",
+    "close_event_sha256": "514e6c11d3d2361f3c74a2825880af8b3ff2ee477cbab6564c458012fee08a30"
+  },
+  "scientific_validation": {
+    "ten_requirement_rows_present_and_unique": true,
+    "statement_class_counts_sum_to_ten": true,
+    "all_statement_classes_use_frozen_vocabulary": true,
+    "all_authorized_input_hashes_recomputed": true,
+    "all_underlying_source_hashes_recomputed": true,
+    "scope_units_symmetry_testability_and_selection_power_present_for_every_row": true,
+    "conflicts_and_missing_inputs_preserved": true,
+    "prior_automated_matrix_not_consumed_as_family_evidence": true,
+    "no_action_family_comparison_or_compatibility_judgment": true,
+    "no_gravitational_principle_or_action_selected": true,
+    "no_evidence_promoted": true,
+    "no_gravitational_calculation_executed": true,
+    "stage_2_not_authorized_or_opened": true
+  },
+  "focused_python": {
+    "status": "PASS",
+    "passed": 22,
+    "deselected": 1,
+    "elapsed_seconds": "6.66",
+    "deselected_assertion": "test_registry_records_preparation_before_later_installation",
+    "deselection_reason": "The assertion describes the earlier prepared-but-uninstalled checkpoint and is intentionally obsolete after program installation and Stage 1 execution."
+  },
+  "focused_lean": {
+    "status": "PASS",
+    "modules": [
+      "ToeFormal.Derivation.ToeNativeGravitationalRequirementInventoryResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "jobs": 6
+  },
+  "full_lean_aggregate": {
+    "status": "PASS",
+    "module_count": 1337,
+    "job_count": 9082
+  },
+  "deterministic_generation": {
+    "status": "PASS",
+    "working_tree_module_count": 1337,
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean"
+  },
+  "governance_validation": {
+    "registry_extension_reconstruction": "PASS_PRECOMMIT",
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "reason": "The immutable CLOSE artifact has no introduction commit until the exact atomic CLOSE commit is created."
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS"
+  },
+  "status": "STAGE_1_ATOMIC_CLOSE_READY_FOR_COMMIT"
+}

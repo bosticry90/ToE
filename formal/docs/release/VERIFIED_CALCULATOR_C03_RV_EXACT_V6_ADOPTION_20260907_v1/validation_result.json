@@ -1,0 +1,51 @@
+{
+  "schema_id": "C03RVV6AdoptionRecordValidationResultV1",
+  "validation_kind": "AUTHORITY_RECORD_AND_DOCUMENTATION_CUSTODY_NOT_NEW_PHYSICS_EXECUTION",
+  "completed_at_utc": "2026-09-08T01:20:48Z",
+  "disposition": "PASS",
+  "adoption_record": "adoption.json",
+  "record_hash_domain": "C03RVV6AuthorityAdoptionRecordV1",
+  "record_hash": "40b561267d14920fd9995aff8379f6206ffe810f64362a81a1f83b5768dc5fdf",
+  "canonical_record_encoding": "SHA256(domain ASCII + NUL + JSON ensure_ascii=true, sorted keys, separators comma/colon); excludes this validation result.",
+  "python_version": "3.10.11",
+  "executed_checks": [
+    {
+      "command": "python formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1/validate_packet.py",
+      "exit_code": 0,
+      "result": "PASS",
+      "scope_roots": 16,
+      "archived_evidence_files_rehashed": 25,
+      "local_links_checked": 18,
+      "note": "This preserved validator reports authority_adopted=false for its historical draft packet, correctly. Current adoption resides only in the separate adoption.json."
+    },
+    {
+      "command": "python -m unittest discover -s formal/docs/release/TOE_EXTERNAL_COMPARATORS_AND_V6_DECISION_20260907_v1 -p test_packet.py -v",
+      "exit_code": 0,
+      "tests_passed": 9,
+      "duration_seconds": 2.117,
+      "note": "Four custody/mutation checks and five scratch-algebra checks inherited from the decision/comparator packet; no new comparator implementation or verification."
+    },
+    {
+      "command": "python -m unittest discover -s formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_V6_ADOPTION_20260907_v1 -p test_adoption.py -v",
+      "exit_code": 0,
+      "tests_passed": 12,
+      "duration_seconds": 1.01,
+      "note": "Twelve unittest methods; the promotion test includes five subtests. Checks pins, unchanged historical bytes modulo declared text checkout newlines, exact scope, order, and non-promotion."
+    }
+  ],
+  "remote_draft_preservation": {
+    "commit": "f041a55782f8f1b33491dc03f62543e17c2714cc",
+    "branch": "refs/heads/codex/native-hypothesis-selection-v0",
+    "confirmed": true
+  },
+  "unrelated_tracked_diff_unchanged": true,
+  "new_physics_execution": false,
+  "new_linux_qualification_run": false,
+  "new_non_author_review": false,
+  "owner_authentication_or_signature_verification": false,
+  "historical_evidence_rewritten": false,
+  "adoption_source": "Explicit owner instruction, not this validator's PASS.",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

@@ -1,0 +1,10 @@
+{
+  "authority_rule": "Resolve the current operational maintenance authority through this pointer. Historical versioned authority files remain immutable and do not override the pointed current authority.",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "current_authority_path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v4.json",
+  "current_authority_schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v4",
+  "current_authority_sha256": "084ed008a88190e5b03caf585f8d419968b70ee27a0d0fe02e78d9b40edbddb4",
+  "current_maintenance_target": "execute_canonical_text_attribute_policy_repair_v0",
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0",
+  "scientific_target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0"
+}

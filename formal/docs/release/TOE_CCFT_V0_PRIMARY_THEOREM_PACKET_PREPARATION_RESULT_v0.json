@@ -1,0 +1,424 @@
+{
+  "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_RESULT_v0",
+  "schema_id": "toe.ccft_v0.primary_theorem_packet_preparation.result.v0",
+  "captured_at_utc": "2026-08-02T23:20:00Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION",
+  "scientific_target": "prepare_toe_ccft_v0_primary_theorem_or_counterexample_packet_v0",
+  "scope_hash": "b0db245201d0fdc6edc15a8ac6028c01725ef4a0e2e87c53f9835094df1fe506",
+  "attempt_sequence_number": 3,
+  "open_event_binding": {
+    "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_03_OPEN_v0.json",
+    "sha256": "3801773ba45ac6d9aeadff73cd9361f04c84663265e31155c344c4c8e0e91054",
+    "event_hash": "770b3dd74b80d0afb8613d79e7ba2e1ce286146e0d92c5c10c9ebf3e082e9caf"
+  },
+  "scientific_input_bindings": [
+    {
+      "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0.json",
+      "sha256": "4f3a7031960522f91d9a1988bc4c290a56505b5f71e84e815da3bd46f21d959a"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0.json",
+      "sha256": "c57b2a5a3649deaba3be237da014992663f62e544c898bed89cfecbd35498556"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+      "sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20"
+    },
+    {
+      "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0.json",
+      "sha256": "79acfadda56d2ef75ad3c061309c0bc5dbbf48c2366aa1f946ef3bd3208b4782"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN_AUTHORITY_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_STAGE_3_OPEN_AUTHORITY_v0.json",
+      "sha256": "95ce906a3e09c9b1e40fc825f0c6990ec4ae2afc3bff1c0b5f6b2d3ab4922fad"
+    }
+  ],
+  "research_director_theorem_decision_packet": {
+    "packet_id": "CCFT_V0_GAUGE_EQUIVALENCE_AND_BACKGROUND_RESOLVED_DISPERSION_PACKET_v0",
+    "title": "CCFT-v0 gauge-equivalence and background-resolved dispersion theorem packet",
+    "plain_language_unresolved_issue": "The frozen CCFT-v0 equation contains a constant background shift and inherits historical squared and additive frequency records. Before the model can be called mathematically distinctive, the project must determine whether the shift changes the dynamics or only the phase clock, and whether the frequency records describe the same perturbation problem.",
+    "why_it_matters": "If the phase map gives an exact bijection to the standard cubic defocusing NLSE, the isolated v0 equation is mathematically a known-model representative. If the squared and additive formulas arise from different backgrounds, gauges, or perturbation objects, the historical conflict must be narrowed rather than repaired by preference. These results directly control the later distinctiveness decision.",
+    "candidate_question_comparison": [
+      {
+        "option_id": "QUESTION_A_GAUGE_EQUIVALENCE_ONLY",
+        "question": "Does phi(t,x)=exp(-i kappa t) psi(t,x) biject frozen-model solutions with standard cubic defocusing NLSE solutions?",
+        "decision_value": "HIGH_FOR_IDENTIFIABILITY_BUT_INCOMPLETE_FOR_THE_HISTORICAL_DISPERSION_CONFLICT",
+        "disposition": "RETAINED_AS_LINKED_CLAIM_1_NOT_SELECTED_ALONE"
+      },
+      {
+        "option_id": "QUESTION_B_UNIT_BACKGROUND_ONLY",
+        "question": "What Fourier-mode dispersion follows from linearization about psi=1?",
+        "decision_value": "HIGH_FOR_THE_SQUARED_FORM_BUT_DOES_NOT_CLASSIFY_THE_ADDITIVE_RECORD",
+        "disposition": "RETAINED_AS_LINKED_CLAIM_2_NOT_SELECTED_ALONE"
+      },
+      {
+        "option_id": "QUESTION_C_ZERO_BACKGROUND_ONLY",
+        "question": "What Fourier-mode frequency follows from linearization about psi=0?",
+        "decision_value": "HIGH_FOR_BACKGROUND_SENSITIVITY_BUT_DOES_NOT_ESTABLISH_MODEL_EQUIVALENCE",
+        "disposition": "RETAINED_AS_LINKED_CLAIM_3_NOT_SELECTED_ALONE"
+      },
+      {
+        "option_id": "QUESTION_D_COMPOUND_PACKET",
+        "question": "Are the frozen equation and standard cubic NLSE gauge-equivalent, what dispersions follow about psi=1 and psi=0, and how should the bound historical formulas then be classified?",
+        "decision_value": "MAXIMUM_BECAUSE_ALL_FOUR_LINKED_RESULTS_ARE_REQUIRED_FOR_ONE_NONARBITRARY_CLASSIFICATION",
+        "disposition": "SELECTED"
+      }
+    ],
+    "recommended_question": "Freeze one compound four-claim packet: exact gauge equivalence, unit-background dispersion, zero-background dispersion, and historical-formula classification after the first three claims are adjudicated.",
+    "recommendation_reason": "This is the smallest single packet that can distinguish an exact known-model equivalence from a genuine formula conflict without changing the frozen model or selecting a preferred historical expression.",
+    "assumptions_requiring_director_approval": [
+      {
+        "assumption_id": "DIR-A1_PERIODIC_DOMAIN",
+        "technical_assumption": "T_L=R/(L Z), L>0, with periodic data.",
+        "plain_meaning": "The modeled line repeats at its ends.",
+        "reason": "This is the source-recovered frozen domain.",
+        "risk": "The packet does not establish corresponding results on the real line, bounded intervals with walls, or higher dimensions."
+      },
+      {
+        "assumption_id": "DIR-A2_WEAK_H1_SOLUTION_CLASS",
+        "technical_assumption": "Solutions lie in C(I;H1_per) intersect C1(I;Hminus1_per) and satisfy the equation in Hminus1_per.",
+        "plain_meaning": "The theorem targets the frozen H1 initial-data class without assuming classical pointwise derivatives.",
+        "reason": "It matches the model contract and is strong enough to state the phase map distributionally.",
+        "risk": "The attack may find that a narrower regularity class is needed for one execution lane."
+      },
+      {
+        "assumption_id": "DIR-A3_BACKGROUND_SELECTION",
+        "technical_assumption": "Linearize separately about the exact solutions psi=1 and psi=0.",
+        "plain_meaning": "The packet studies disturbances around a filled unit background and around an empty background as different problems.",
+        "reason": "This prevents background-dependent frequencies from being compared as if they were the same object.",
+        "risk": "Neither background has been assigned a physical interpretation."
+      },
+      {
+        "assumption_id": "DIR-A4_FOURIER_SIGN_CONVENTION",
+        "technical_assumption": "Use exp(i(q x-omega t)) with q=2 pi n/L; convention reversal is recorded as omega maps to -omega.",
+        "plain_meaning": "A positive frequency is defined by one explicit phase convention.",
+        "reason": "Unfrozen sign conventions can create artificial disagreements.",
+        "risk": "A historical source without a sign convention may remain unclassifiable."
+      },
+      {
+        "assumption_id": "DIR-A5_NO_PHYSICAL_PROMOTION",
+        "technical_assumption": "All statements concern the nondimensional surrogate only.",
+        "plain_meaning": "A theorem about this equation is not evidence for a physical coherence field.",
+        "reason": "The bearer, units, scale, preparation, and measurement map remain absent.",
+        "risk": "None scientifically; this is a required claim boundary."
+      }
+    ],
+    "possible_result_consequences": [
+      {
+        "possible_result": "EXACT_GAUGE_EQUIVALENCE_ESTABLISHED",
+        "plain_meaning": "The background subtraction changes only a uniform phase clock in the isolated v0 model.",
+        "project_consequence": "Carry a strong known-model-equivalence result to Stage 5; do not call the isolated term distinctively CCFT."
+      },
+      {
+        "possible_result": "GAUGE_EQUIVALENCE_REFUTED_BY_VALID_COUNTEREXAMPLE",
+        "plain_meaning": "At least one frozen solution-class or data-preservation condition prevents the proposed bijection.",
+        "project_consequence": "Retain a potentially substantive distinction and identify the exact failed condition."
+      },
+      {
+        "possible_result": "BACKGROUND_RESOLVED_DISPERSIONS_ESTABLISHED",
+        "plain_meaning": "The squared and additive-looking quantities can be tied to named backgrounds and conventions.",
+        "project_consequence": "Classify historical records only to the extent their source context matches those objects."
+      },
+      {
+        "possible_result": "HISTORICAL_CONTEXT_INSUFFICIENT",
+        "plain_meaning": "The model mathematics is decidable but the archival wording does not identify its background, gauge, or perturbation variable.",
+        "project_consequence": "Preserve the documentary conflict without inventing a source interpretation."
+      },
+      {
+        "possible_result": "MODEL_DEFINITION_INSUFFICIENT_FOR_THEOREM",
+        "plain_meaning": "The frozen regularity or solution notion does not support one or more propositions as written.",
+        "project_consequence": "Block the attack rather than mutate the model or packet."
+      }
+    ],
+    "pass_consequence": "One immutable theorem packet becomes eligible for a separately authorized Stage 4 attack.",
+    "blocked_consequence": "The single-model program must proceed to mandatory exit under the frozen lifecycle rule.",
+    "failure_consequence": "No theorem or physical claim follows; model and historical conflicts remain unchanged.",
+    "risk_of_irrelevance": "LOW_FOR_MATHEMATICAL_IDENTIFIABILITY_AND_HIGH_FOR_DIRECT_PHYSICAL_EVIDENCE",
+    "estimated_dependency_depth": 4,
+    "director_decision": "APPROVE_ONE_COMPOUND_PACKET_WITH_FOUR_LINKED_CLAIMS"
+  },
+  "frozen_primary_theorem_packet": {
+    "packet_id": "CCFT_V0_GAUGE_EQUIVALENCE_AND_BACKGROUND_RESOLVED_DISPERSION_PACKET_v0",
+    "packet_count": 1,
+    "compound_claim_count": 4,
+    "model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "model_mutation_authorized": false,
+    "parameter_domain": "L>0 and kappa in [0,1]",
+    "time_interval": "Any interval I containing t=0 on which the named solution exists",
+    "solution_class": "C(I;H1_per(T_L;C)) intersect C1(I;Hminus1_per(T_L;C)), with each PDE satisfied in Hminus1_per",
+    "frozen_equations": {
+      "ccft_v0": "i psi_t=-(1/2)psi_xx+kappa(|psi|^2-1)psi",
+      "known_model_comparator": "i phi_t=-(1/2)phi_xx+kappa|phi|^2 phi",
+      "phase_map": "G_kappa[psi](t,x)=exp(-i kappa t)psi(t,x)",
+      "inverse_phase_map": "G_kappa_inverse[phi](t,x)=exp(i kappa t)phi(t,x)"
+    },
+    "fourier_convention": {
+      "mode": "exp(i(q x-omega t))",
+      "periodic_wavenumber": "q=2 pi n/L for n in Z",
+      "opposite_frequency_convention_map": "exp(i(q x+omega t)) is represented by omega maps to -omega",
+      "complexification_rule": "The real two-component unit-background system may be complexified for modal algebra; physical real perturbations use conjugate mode pairing."
+    },
+    "linked_claims": [
+      {
+        "claim_id": "CLAIM_1_EXACT_GAUGE_EQUIVALENCE",
+        "definitions": [
+          "Sol_CCFT(I,psi0) is the frozen weak-solution set in the packet solution class with psi(0)=psi0.",
+          "Sol_NLS(I,psi0) is the comparator weak-solution set in the same class with phi(0)=psi0.",
+          "G_kappa and G_kappa_inverse are the frozen phase maps."
+        ],
+        "target_proposition": "For every permitted L,kappa,I,psi0, G_kappa is a bijection Sol_CCFT(I,psi0) -> Sol_NLS(I,psi0), its inverse is G_kappa_inverse, both maps preserve the periodic H1/Hminus1 solution class, and the initial datum is unchanged at t=0.",
+        "formal_negation": "There exist permitted L,kappa,I,psi0 and a solution in either named solution set for which the corresponding phase image is not in the other set, the initial datum is not preserved, or one of the two compositions is not the identity.",
+        "decision_enabled": "Whether the isolated background-shift term supplies dynamics not already present in the standard cubic defocusing NLSE.",
+        "epistemic_status": "FROZEN_NOT_PROVED_OR_REFUTED"
+      },
+      {
+        "claim_id": "CLAIM_2_UNIT_BACKGROUND_DISPERSION",
+        "definitions": [
+          "Set psi=1+epsilon(a+i b) with real periodic a,b and retain the coefficient linear in epsilon.",
+          "The frozen candidate linearized system is a_t=-(1/2)b_xx and b_t=(1/2)a_xx-2 kappa a.",
+          "Use the frozen Fourier mode and q=2 pi n/L."
+        ],
+        "target_proposition": "The Frechet linearization at psi=1 is the frozen two-component system, and a nonzero complexified Fourier amplitude exists only when omega^2=(q^2/2)(q^2/2+2 kappa)=q^4/4+kappa q^2; conversely the vanishing characteristic determinant supplies a nonzero modal amplitude.",
+        "formal_negation": "There exist permitted L,kappa,n and a nonzero modal amplitude satisfying the frozen linearized equations while the squared relation fails, or the characteristic determinant vanishes while no nonzero amplitude exists.",
+        "decision_enabled": "Whether the frozen model produces the historical Bogoliubov-type squared expression about the named unit background.",
+        "epistemic_status": "FROZEN_NOT_DERIVED_OR_REFUTED"
+      },
+      {
+        "claim_id": "CLAIM_3_ZERO_BACKGROUND_DISPERSION",
+        "definitions": [
+          "Set psi=epsilon eta and retain the coefficient linear in epsilon about psi=0.",
+          "The frozen candidate linearized equation is i eta_t=-(1/2)eta_xx-kappa eta.",
+          "Use eta=A exp(i(q x-omega t)) with nonzero A."
+        ],
+        "target_proposition": "The Frechet linearization at psi=0 is the frozen scalar linear equation, and every nonzero Fourier mode under the packet convention satisfies omega=q^2/2-kappa; under the opposite time-frequency convention the sign of omega reverses.",
+        "formal_negation": "There exist permitted L,kappa,n and nonzero A satisfying the frozen zero-background linearized mode equation while omega differs from q^2/2-kappa under the frozen convention, or the declared convention-reversal map fails.",
+        "decision_enabled": "Whether an additive frequency shift is background- and convention-dependent rather than the same object as unit-background Bogoliubov dispersion.",
+        "epistemic_status": "FROZEN_NOT_DERIVED_OR_REFUTED"
+      },
+      {
+        "claim_id": "CLAIM_4_HISTORICAL_FORMULA_CLASSIFICATION",
+        "definitions": [
+          "CP_FREQ_001 is the additive plane-wave record omega=(1/2)k^2+lam k^4+g rho0 from archive/docs/equation_inventory.md.",
+          "CP_FREQ_002 is the squared record omega^2=(k^2/2)^2+g rho0 k^2+lam k^4 from formal/proving docs/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md.",
+          "The v0 comparison map uses k maps to q, lam maps to 0, and the interaction coefficient is compared only after its sign, background, gauge, and perturbation role are identified."
+        ],
+        "target_proposition": "After Claims 1-3 are adjudicated, assign only classifications licensed by both their mathematics and the bound source metadata. At least one primary class from the frozen vocabulary must be assigned to each historical comparison, with multiple qualifiers allowed only when they refer to distinct explicitly named objects.",
+        "formal_negation": "No classification in the frozen vocabulary is supported by both the adjudicated Claims 1-3 and the bound historical metadata, or two mutually exclusive primary classifications are assigned to the same formula under the same background, gauge, perturbation variable, and sign convention.",
+        "decision_enabled": "Whether the inherited dispersion conflict can be narrowed without rewriting historical evidence.",
+        "epistemic_status": "FROZEN_NO_CLASSIFICATION_SELECTED"
+      }
+    ],
+    "historical_formula_bindings": [
+      {
+        "contract_record_id": "CP_FREQ_001",
+        "source_path": "archive/docs/equation_inventory.md",
+        "source_sha256": "acd646f0810020e1f82666768c13f99545c3ec228291231620e4c489c25a50e7",
+        "source_lines": "1092-1108",
+        "formula": "omega=(1/2)k^2+lam k^4+g rho0",
+        "source_context_status": "EXPLICIT_ADDITIVE_PLANE_WAVE_RECORD_WITHOUT_BACKGROUND_GAUGE_OR_PERTURBATION_CONTRACT",
+        "adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED"
+      },
+      {
+        "contract_record_id": "CP_FREQ_002",
+        "source_path": "formal/proving docs/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+        "source_sha256": "3ea712dab04bb790c63e64d826551a7637265530c09c5502a0c12df0881173de",
+        "source_lines": "31-45",
+        "formula": "omega^2=(k^2/2)^2+g rho0 k^2+lam k^4",
+        "source_context_status": "DIRECT_SQUARED_SPECIFICATION_AROUND_A_STATED_FIRST_ORDER_LAYER_WITHOUT_BOUND_EQUATION_OF_MOTION",
+        "adjudication_status": "CONFLICT_PRESERVED_NO_CONTRACT_RECOVERED"
+      }
+    ],
+    "historical_classification_vocabulary": [
+      "SAME_MODEL_DIFFERENT_BACKGROUND",
+      "SAME_MODEL_DIFFERENT_GAUGE",
+      "EQUIVALENT_AFTER_CONVENTION_MAPPING",
+      "VALID_SPECIAL_LIMITS",
+      "GENUINELY_INCOMPATIBLE",
+      "HISTORICAL_CONTEXT_INSUFFICIENT"
+    ],
+    "classification_decision_rule": [
+      "SAME_MODEL_DIFFERENT_BACKGROUND requires both formulas to follow from the frozen equation after explicitly different named backgrounds are bound.",
+      "SAME_MODEL_DIFFERENT_GAUGE requires an exact invertible phase map and a source-supported identification of the compared carrier or perturbation frequency.",
+      "EQUIVALENT_AFTER_CONVENTION_MAPPING requires a fully explicit invertible sign, normalization, symbol, and parameter map.",
+      "VALID_SPECIAL_LIMITS requires explicit parameter or asymptotic assumptions and no comparison outside that limit.",
+      "GENUINELY_INCOMPATIBLE requires the same background, gauge, perturbation variable, parameter map, and sign convention together with unequal resulting relations.",
+      "HISTORICAL_CONTEXT_INSUFFICIENT is mandatory when the source does not identify enough of background, gauge, perturbation variable, or sign convention to apply the other classes."
+    ]
+  },
+  "assumption_and_dependency_ledger": [
+    {
+      "ledger_id": "DEP-01_FROZEN_MODEL",
+      "role": "DEPENDENCY",
+      "statement": "The Stage 2 equation, domain, parameter range, and H1 initial-data class are immutable inputs.",
+      "status": "BOUND"
+    },
+    {
+      "ledger_id": "DEP-02_PHASE_REGULARITY",
+      "role": "MATHEMATICAL_ASSUMPTION",
+      "statement": "Multiplication by exp(plus or minus i kappa t) preserves the named periodic Sobolev solution class and permits the distributional time product rule.",
+      "status": "TO_BE_JUSTIFIED_IN_STAGE_4"
+    },
+    {
+      "ledger_id": "DEP-03_LINEARIZATION_NOTION",
+      "role": "MATHEMATICAL_ASSUMPTION",
+      "statement": "Frechet linearization is taken in the real Banach structure of the complex H1 state, with psi=1 and psi=0 treated separately.",
+      "status": "FROZEN"
+    },
+    {
+      "ledger_id": "DEP-04_FOURIER_SPECTRUM",
+      "role": "KNOWN_MATHEMATICS",
+      "statement": "Periodic Fourier modes have q=2 pi n/L and partial_xx multiplier -q^2.",
+      "status": "ALLOWED_LEMMA_NOT_REPROVED_BY_PACKET_PREPARATION"
+    },
+    {
+      "ledger_id": "DEP-05_SOURCE_CONTEXT",
+      "role": "DOCUMENTARY_DEPENDENCY",
+      "statement": "Historical classification is limited by the exact CP_FREQ_001 and CP_FREQ_002 metadata and cannot infer an unstated background, gauge, or perturbation variable.",
+      "status": "BOUND"
+    },
+    {
+      "ledger_id": "DEP-06_CLAIM_ORDER",
+      "role": "EXECUTION_DEPENDENCY",
+      "statement": "Claim 4 may be adjudicated only after Claims 1, 2, and 3 have separate recorded outcomes.",
+      "status": "FROZEN"
+    }
+  ],
+  "allowed_lemmas": [
+    "Complex exponential has unit modulus and exp(-i kappa t) exp(i kappa t)=1.",
+    "The time product rule for a smooth scalar multiplier acting on an Hminus1-valued distribution.",
+    "A scalar depending only on time commutes with periodic spatial derivatives.",
+    "Multiplication by a unit complex scalar preserves periodic H1 and Hminus1 norms and initial data at t=0.",
+    "The one-dimensional periodic H1 class supports the cubic nonlinearity as an Hminus1-valued term.",
+    "The real Frechet derivative of |psi|^2 psi and of (|psi|^2-1)psi at the named backgrounds.",
+    "The determinant criterion for a nonzero two-by-two Fourier amplitude.",
+    "Periodic Fourier modes satisfy q=2 pi n/L and partial_xx maps to -q^2."
+  ],
+  "known_examples_and_counterexample_targets": {
+    "known_examples": [
+      "kappa=0 is the shared linear Schrodinger control.",
+      "psi=1 and psi=0 are the two named frozen backgrounds to be checked before linearization.",
+      "n=0 and nonzero n modes must both be included; the zero mode may have a degenerate frequency."
+    ],
+    "counterexample_targets": [
+      "A permitted H1 weak solution whose phase image leaves the comparator solution class.",
+      "A unit-background Fourier amplitude violating the frozen characteristic relation.",
+      "A zero-background Fourier mode violating the frozen additive relation under the declared convention.",
+      "A historical classification that requires metadata absent from its source."
+    ],
+    "no_counterexample_claimed": true
+  },
+  "execution_contracts": {
+    "independent_attack_lanes": [
+      "PROVE",
+      "DISPROVE",
+      "CONSTRUCT",
+      "FIND_COUNTEREXAMPLE"
+    ],
+    "symbolic_contract": {
+      "tasks": [
+        "Substitute the phase map into both residuals and reduce their exact residual identity without assuming either residual vanishes.",
+        "Differentiate the frozen nonlinearity with respect to a real epsilon at psi=1 and psi=0.",
+        "Construct the unit-background two-by-two Fourier matrix and factor its characteristic determinant.",
+        "Apply the frequency-sign reversal and the phase-map frequency shift as separately labeled convention maps.",
+        "Compare historical expressions only after explicit parameter and object maps are supplied."
+      ],
+      "exact_arithmetic_required": true,
+      "result_generation_in_stage_3": false,
+      "status": "FROZEN_NOT_EXECUTED"
+    },
+    "numerical_regression_contract": {
+      "parameter_grid": {
+        "L": ["2*pi", "3*pi"],
+        "kappa": ["0", "1/4", "1"],
+        "fourier_indices": [-3, -2, -1, 0, 1, 2, 3]
+      },
+      "tasks": [
+        "Gauge-map the same smooth periodic initial data between the frozen reference implementation and an independently coded comparator integrator.",
+        "Use small-amplitude unit-background perturbations and regress measured modal frequencies against the Claim 2 candidate without treating agreement as proof.",
+        "Use small-amplitude zero-background perturbations and regress measured modal frequencies against the Claim 3 candidate.",
+        "Repeat at two spatial resolutions and three dyadic time steps before reporting any discrepancy."
+      ],
+      "predeclared_gates": {
+        "gauge_mapped_relative_l2_at_named_horizon": "<=5e-9 after independent refinement",
+        "modal_frequency_relative_error_nonzero_reference": "<=5e-4",
+        "modal_frequency_absolute_error_zero_reference": "<=5e-6",
+        "required_temporal_refinement_ratio": ">=3.0 for the two coarsest comparisons when truncation error dominates"
+      },
+      "finite_approximation_boundary": "Numerical agreement or disagreement is implementation evidence and does not prove or refute the continuum proposition without an error argument.",
+      "result_generation_in_stage_3": false,
+      "status": "FROZEN_NOT_EXECUTED"
+    },
+    "lean_signature_contract": {
+      "target_module": "ToeFormal.Derivation.ToeCCFTV0GaugeEquivalenceAndBackgroundResolvedDispersion",
+      "signatures": [
+        {
+          "signature_id": "LEAN_SIG_1_GAUGE_RESIDUAL_IDENTITY",
+          "signature": "theorem gaugeResidualIdentity (kappa t : Real) (psi psi_t psi_xx : Complex) : cubicNLSResidual kappa (phase kappa t * psi) (phaseTimeDerivative kappa t psi psi_t) (phase kappa t * psi_xx) = phase kappa t * ccftV0Residual kappa psi psi_t psi_xx",
+          "status": "SIGNATURE_ONLY_NO_PROOF"
+        },
+        {
+          "signature_id": "LEAN_SIG_2_UNIT_BACKGROUND_CHARACTERISTIC",
+          "signature": "theorem unitBackgroundCharacteristic (q kappa omega : Real) : unitBackgroundDet q kappa omega = omega^2 - (q^2/2) * (q^2/2 + 2*kappa)",
+          "status": "SIGNATURE_ONLY_NO_PROOF"
+        },
+        {
+          "signature_id": "LEAN_SIG_3_ZERO_BACKGROUND_FREQUENCY",
+          "signature": "theorem zeroBackgroundModeFrequency (q kappa omega : Real) (hmode : zeroBackgroundModeEquation q kappa omega) : omega = q^2/2-kappa",
+          "status": "SIGNATURE_ONLY_NO_PROOF"
+        },
+        {
+          "signature_id": "LEAN_SIG_4_CLASSIFICATION_FIDELITY",
+          "signature": "theorem historicalClassificationRequiresBoundContext (r : HistoricalFormulaRecord) : r.background = none or r.gauge = none or r.perturbationVariable = none -> classification r = HISTORICAL_CONTEXT_INSUFFICIENT",
+          "status": "SIGNATURE_ONLY_NO_PROOF"
+        }
+      ],
+      "full_weak_solution_bijection_formalization": "DEFERRED_UNTIL_THE_ALGEBRAIC_IDENTITY_AND_REQUIRED_FUNCTION_SPACE_DEFINITIONS_ARE_FIDELITY_REVIEWED",
+      "Lean_proof_authorized_in_stage_3": false,
+      "status": "FROZEN_NOT_IMPLEMENTED"
+    }
+  },
+  "forbidden_conclusions": [
+    "CCFT-v0 is physically true or fundamental.",
+    "The state psi is a physical coherence field.",
+    "The model has physical units, a mesoscopic scale, a preparation operation, or a measurement map.",
+    "Gauge equivalence of v0 validates or refutes every historical CCFT or LCRD formulation.",
+    "A packet, symbolic identity, finite numerical regression, or Lean algebra theorem establishes continuum well-posedness.",
+    "The continuum norm or energy is conserved; those targets are outside this Stage 3 packet.",
+    "A historical formula has a background or gauge not explicitly supported by its source.",
+    "Stage 4 is open or theorem execution has begun."
+  ],
+  "physical_claim_boundary": "The packet concerns one nondimensional periodic cubic surrogate and one known-model comparator. Even a complete proof would establish only a mathematical relation under the frozen assumptions. It would not establish a physical coherence bearer, native CCFT law, empirical prediction, matter or gravity seam, master action, or Theory of Everything.",
+  "packet_freeze_summary": {
+    "primary_theorem_packet_count": 1,
+    "formal_proposition_count": 4,
+    "formal_negation_count": 4,
+    "execution_contract_count": 3,
+    "Lean_signature_count": 4,
+    "historical_formula_binding_count": 2,
+    "historical_classification_selected": false,
+    "proof_execution_performed": false,
+    "disproof_execution_performed": false,
+    "construction_execution_performed": false,
+    "counterexample_execution_performed": false,
+    "symbolic_theorem_result_generated": false,
+    "numerical_theorem_result_generated": false,
+    "Lean_theorem_proof_generated": false,
+    "frozen_model_mutated": false,
+    "physical_promotion_performed": false
+  },
+  "stage_4_nonautomatic_handoff": {
+    "proposed_target": "execute_toe_ccft_v0_primary_theorem_attack_lanes_v0",
+    "authority_status": "NOT_AUTHORIZED",
+    "required_before_open": "A separate scientific authority decision and immutable Attempt 4 OPEN event.",
+    "packet_mutation_to_rescue_result_authorized": false
+  },
+  "terminal_outcome": "PRIMARY_THEOREM_PACKET_FROZEN",
+  "lifecycle_result": "PASSED",
+  "status": "STAGE_3_RESULT_READY_FOR_INDEPENDENT_REVIEW_AND_ATOMIC_CLOSE"
+}

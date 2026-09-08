@@ -1,0 +1,85 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T22:30:21Z",
+  "verdict": "ACCEPT_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_ROLE_SEPARATION_REPAIR_JUSTIFIED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260724_v0.json",
+    "sha256": "23a85fa5d93f999da9801917a173d89e252faaacc33c3d262cd6f24f822bee41",
+    "commit": "cdecd84851904c445c6a08e5c02e3961293c6e4f"
+  },
+  "review_checkout": {
+    "path": ".toe-recovery/disposable-workspaces/pillar-artifact-currency-identity-domain-adjudication-review-v0",
+    "commit": "cdecd84851904c445c6a08e5c02e3961293c6e4f",
+    "clean_before": true,
+    "clean_after": true
+  },
+  "independent_checks": {
+    "exact_16_outcome_cohort_reextracted": true,
+    "all_16_outcomes_individually_mapped": true,
+    "seventeen_identity_role_bindings_confirmed": true,
+    "four_true_identity_role_roots_confirmed": true,
+    "three_masked_additional_roots_confirmed": true,
+    "registry_historical_and_current_git_identities_recomputed": true,
+    "blocker_generator_historical_and_current_git_identities_recomputed": true,
+    "compendium_historical_pin_and_current_git_blob_identity_recomputed": true,
+    "maintenance_authority_historical_and_current_git_identities_recomputed": true,
+    "read_only_historical_generator_reproduction_confirmed": true,
+    "read_only_historical_compendium_reproduction_confirmed": true,
+    "inventory_delta_23_fully_reconciled": true,
+    "inventory_split_17_previously_accepted_plus_6_new_guards_confirmed": true,
+    "all_external_evidence_hashes_verified": true,
+    "tests_hashes_artifacts_and_scientific_content_unchanged": true,
+    "dirty_main_629_path_status_set_and_bytes_exact": true,
+    "repair_not_performed": true,
+    "successor_not_authorized": true
+  },
+  "independent_adjudication": {
+    "consumer_outcomes": 16,
+    "identity_role_bindings": 17,
+    "true_identity_role_roots": 4,
+    "masked_additional_roots": 3,
+    "binding_dispositions": {
+      "RETAIN_AS_FROZEN_GIT_BLOB_IDENTITY": 1,
+      "RETAIN_AS_HISTORICAL_GENERATOR_PIN": 15,
+      "REMOVE_STALE_CURRENCY_DEPENDENCY": 1
+    },
+    "provenance_blocks": 0,
+    "scientific_content_discrepancy": "NONE_ESTABLISHED",
+    "current_authority_effect": "NONE"
+  },
+  "inventory_reconciliation": {
+    "frozen_inventory": 13756,
+    "current_collection": 13779,
+    "current_only_total": 23,
+    "previously_accepted_guards": 17,
+    "new_equation_compendium_guards": 6,
+    "reconciled": true
+  },
+  "external_independent_review": {
+    "path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/PILLAR_ARTIFACT_CURRENCY_IDENTITY_DOMAIN_ADJUDICATION_INDEPENDENT_REVIEW_v0.json",
+    "sha256": "134ff12ad3a523642b0840b87c788fd3ba9afa46a9adc2481dc0f18afb76870a",
+    "review_script_path": ".toe-recovery/custody-v0/pillar-artifact-currency-identity-domain-adjudication-v0/independent_review_pillar_artifact_currency_adjudication_v0.py",
+    "review_script_sha256": "614347d278ea410f8f2effcfb5cdbf50bde6dd5c6e8a06d7f027f7f5f130a5fa"
+  },
+  "accepted_future_option": {
+    "selector": "AUTHORIZE_BOUNDED_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR",
+    "target": "implement_repository_pillar_historical_artifact_currency_role_separation_v0_once",
+    "status": "RECOMMENDED_NOT_AUTHORIZED"
+  },
+  "scope": {
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "artifacts_regenerated": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false
+  },
+  "measured_baseline_nonpassing": 390,
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "successor_authority": "NONE"
+}

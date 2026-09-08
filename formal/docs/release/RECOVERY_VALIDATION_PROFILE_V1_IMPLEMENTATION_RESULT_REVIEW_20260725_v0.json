@@ -1,0 +1,41 @@
+{
+  "schema_id": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T06:25:00Z",
+  "status": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_ACCEPTED",
+  "accepted": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_20260725_v0.json",
+    "sha256": "ab26e7eae91c1353c7ef5e71f62c9e57ff30202cfbe17f4b5b5ddac67540f16e",
+    "result_commit": "00fe44f28d3ee6ab7bbac1496461bf9c5f15c5d5",
+    "result_tree": "e9910cf753847b3fd477d223d3fc0c401c436d75"
+  },
+  "independent_detached_review": {
+    "checkout": "validation-profile-v1-review-v0",
+    "head": "00fe44f28d3ee6ab7bbac1496461bf9c5f15c5d5",
+    "tree": "e9910cf753847b3fd477d223d3fc0c401c436d75",
+    "tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "errors": 0,
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "current_acceptance_inventory": 13838,
+    "current_control_plane": 3625,
+    "historical_debt": 10213,
+    "current_known_nonpassing": 4,
+    "historical_known_nonpassing": 353,
+    "unknown_current_reachability": 0,
+    "intersection": 0,
+    "unassigned": 0,
+    "excluded": 0,
+    "lean_pytest_build_guards_included": 9,
+    "profile_machinery_current_critical": true,
+    "historical_isolation_still_unproven": true
+  },
+  "terminal_result": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_ACCEPTED_FOUR_CURRENT_REPAIRS_REMAIN",
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

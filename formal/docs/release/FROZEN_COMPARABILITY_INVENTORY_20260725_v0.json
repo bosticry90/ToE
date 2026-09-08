@@ -1,0 +1,17 @@
+{
+  "schema_id": "FROZEN_COMPARABILITY_INVENTORY_20260725_v0",
+  "purpose": "OUTCOME_COMPARABILITY_ONLY",
+  "inventory_kind": "NON_LEAN_PYTEST_NODE_IDS",
+  "count": 13756,
+  "sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf",
+  "custody_path": ".toe-recovery/custody-v0/post-historical-aggregate-decomposition-baseline-reassessment-v0/mapped_frozen_nonlean_node_ids_v0.txt",
+  "mapping_manifest": {
+    "path": ".toe-recovery/custody-v0/post-historical-aggregate-decomposition-baseline-reassessment-v0/MAPPED_FROZEN_INVENTORY_MANIFEST_v0.json",
+    "substitution_count": 2
+  },
+  "acceptance_boundary": {
+    "defines_current_acceptance_suite": false,
+    "may_exclude_new_current_critical_guards": false,
+    "may_be_changed_to_improve_outcomes": false
+  }
+}

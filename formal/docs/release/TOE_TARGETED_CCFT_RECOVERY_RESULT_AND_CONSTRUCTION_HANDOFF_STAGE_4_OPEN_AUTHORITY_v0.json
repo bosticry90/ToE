@@ -1,0 +1,88 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_STAGE_4_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_STAGE_4_OPEN",
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+      "role": "passed Stage 3 result recovering four exact contracts and preserving three CP-NLSE conflicts",
+      "sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0.json",
+      "role": "independent Stage 3 result review",
+      "sha256": "6d64911801183311e05e7fa5b1ec08f0baa352346d90b51d2d8fef68a18c77fa"
+    },
+    {
+      "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_VALIDATION_v0.json",
+      "role": "Stage 3 validation record",
+      "sha256": "6e998a50d697d866b77c43b64cf7396bbcff58f6bd650d57ecb381bf70a3f3ae"
+    },
+    {
+      "path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_03_CLOSE_v0.json",
+      "role": "immutable passed Stage 3 CLOSE event",
+      "sha256": "7d305274be2c392b6162116b2778a0e8b07c6cd13cfff0a35d2237d4d4dcad1d"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "f6e792eae759877e5e0e6a263834dbdfd96fa8b2a1918a8a038257ab767af254",
+    "canonical_target": "select_toe_post_targeted_ccft_recovery_construction_handoff_v0",
+    "semantic_stage_id": "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF",
+    "stage_number": 4
+  },
+  "captured_at_utc": "2026-08-02T02:12:00Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 4 scope",
+      "sha256": "f69d6072ce6e86954ebb47d79ecf08b0101b6b6bca288a9318f684377acc891f"
+    }
+  ],
+  "frozen_handoff_boundary": {
+    "branch_selected": false,
+    "ccft_v0_model_selected_or_constructed": false,
+    "construction_preparation_target": "prepare_bounded_ccft_v0_theory_construction_program",
+    "construction_preparation_authorized": false,
+    "historical_recovery_after_handoff_authorized": false,
+    "mandatory_exit_target": "close_toe_targeted_ccft_closure_evidence_recovery_v0_after_bounded_result_v0",
+    "mandatory_exit_precedes_any_construction_preparation": true,
+    "theorem_discovery_lane_authorized": false
+  },
+  "permitted_work": [
+    "select exactly one of the two frozen program outcomes from the passed Stage 3 evidence",
+    "summarize recovered partial conflicting and absent contracts without reopening source review",
+    "record how the four exact recovered contracts reduce future CCFT-v0 postulates",
+    "record that historical CCFT-v0 recovery is complete and no second archive search follows automatically",
+    "name the manifest-frozen nonautomatic construction-preparation handoff and its recommended Director Decision Packet and theorem-discovery scope",
+    "select the mandatory program exit as the only immediate successor",
+    "produce an independently reviewed atomic Stage 4 CLOSE"
+  ],
+  "prohibited_work": [
+    "perform any repository archive or overflow source search",
+    "select CP-NLSE LCRD-v3 or a combined branch as CCFT-v0",
+    "repair choose derive or postulate a governing equation dispersion parameter range or normalization",
+    "prepare install or open the future CCFT-v0 construction program",
+    "create or execute a theorem packet proof disproof counterexample symbolic calculation numerical calculation or Lean theorem",
+    "install C_FINITE_APPROXIMATION C_IDENTIFIABILITY or C_COMPLEXITY during recovery",
+    "construct validate physically interpret or empirically promote CCFT-v0",
+    "skip the mandatory exit or authorize a successor automatically"
+  ],
+  "required_outputs": [
+    "exactly_one_program_scientific_outcome",
+    "recovered_partial_conflicting_and_absent_contract_summary",
+    "new_postulate_reduction_summary",
+    "required_nonautomatic_construction_preparation_handoff"
+  ],
+  "scientific_input_summary": {
+    "exact_contracts_recovered": 4,
+    "cp_nlse_exact_contracts": 1,
+    "lcrd_v3_exact_contracts": 3,
+    "conflicts_preserved": 3,
+    "positive_recovery_threshold": 1,
+    "positive_recovery_threshold_satisfied": true
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_4_OPEN_ONLY",
+  "terminal_outcomes": [
+    "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+    "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND"
+  ]
+}

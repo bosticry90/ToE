@@ -1,0 +1,690 @@
+{
+  "schema_id": "PASS0270_SOURCE_ONLY_TOPOLOGY_EXTRACT",
+  "source_path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_gauge_complete_phase2_recensus_pass_0073_v0.json",
+  "source_sha256": "4650a71f48ce8dda2d7009424969dd765eb0c70ddcb0ee92fd46006f352e923c",
+  "source_json_pointer": "/recensus/canonical_topology_registry",
+  "filter": "Exact topology_id match, all selected row fields preserved; no output or verdict included",
+  "rows": [
+    {
+      "topology_id": "P2-TOP-0233adaf603b8fe23cb7c07f1b881edb11021f760cbccbafdcdc9abf9b73e2b4",
+      "source_insertion_id": "D6-P2P3-QQ-HDAG-X-RHO8::C4",
+      "source_derivative_count": 0,
+      "target_external_fields": [
+        "Hdag",
+        "X",
+        "qL",
+        "qL",
+        "rho8"
+      ],
+      "target_derivative_count": 0,
+      "renormalizable_vertex_ids": [
+        "VTX-GAUGE-qL-G3",
+        "VTX-GAUGE-qL-G3"
+      ],
+      "coupling_monomial": [
+        "g3",
+        "g3"
+      ],
+      "external_attachments": [
+        [
+          0,
+          "Hdag",
+          1
+        ],
+        [
+          0,
+          "X",
+          1
+        ],
+        [
+          0,
+          "rho8",
+          1
+        ],
+        [
+          1,
+          "qL",
+          1
+        ],
+        [
+          2,
+          "qL",
+          1
+        ]
+      ],
+      "internal_edges": [
+        [
+          0,
+          "qL",
+          1,
+          "barqL"
+        ],
+        [
+          0,
+          "qL",
+          2,
+          "barqL"
+        ],
+        [
+          1,
+          "G3",
+          2,
+          "G3"
+        ]
+      ],
+      "vertex_count_including_insertion": 3,
+      "internal_line_count": 3,
+      "loop_count": 1,
+      "one_particle_irreducible": true,
+      "internal_field_multiset": [
+        "G3",
+        "G3",
+        "barqL",
+        "barqL",
+        "qL",
+        "qL"
+      ],
+      "required_active_conditionals": [],
+      "renormalizable_vertex_provenance": [
+        "FROZEN_GAUGE_KINETIC_ACTION"
+      ],
+      "strata_realized": [
+        "SM+X+rho8",
+        "SM+X+rho8+Delta",
+        "SM+X+rho3+rho8",
+        "SM+X+rho3+rho8+Delta"
+      ],
+      "topology_exists_does_not_assert_nonzero_uv_pole": true,
+      "parent_source_insertion_id": "D6-P2P3-QQ-HDAG-X-RHO8::C4",
+      "source_variant_id": "D6-P2P3-QQ-HDAG-X-RHO8::C4",
+      "source_gauge_order": 0,
+      "source_rule_fingerprint_sha256": "NONDERIVATIVE_SOURCE_IDENTITY_VARIANT",
+      "source_coupling_monomial": [],
+      "complete_coupling_monomial": [
+        "g3",
+        "g3"
+      ]
+    },
+    {
+      "topology_id": "P2-TOP-05068c03cb238430c28cbe86660994595e8a7ad4f502e16abb30a3a160f64b74",
+      "source_insertion_id": "D5-DD-X-H-A",
+      "source_derivative_count": 0,
+      "target_external_fields": [
+        "H",
+        "X",
+        "dR",
+        "dR"
+      ],
+      "target_derivative_count": 0,
+      "renormalizable_vertex_ids": [
+        "VTX-GAUGE-dR-G3",
+        "VTX-GAUGE-dR-G3"
+      ],
+      "coupling_monomial": [
+        "g3",
+        "g3"
+      ],
+      "external_attachments": [
+        [
+          0,
+          "H",
+          1
+        ],
+        [
+          0,
+          "X",
+          1
+        ],
+        [
+          1,
+          "dR",
+          1
+        ],
+        [
+          2,
+          "dR",
+          1
+        ]
+      ],
+      "internal_edges": [
+        [
+          0,
+          "dR",
+          1,
+          "bardR"
+        ],
+        [
+          0,
+          "dR",
+          2,
+          "bardR"
+        ],
+        [
+          1,
+          "G3",
+          2,
+          "G3"
+        ]
+      ],
+      "vertex_count_including_insertion": 3,
+      "internal_line_count": 3,
+      "loop_count": 1,
+      "one_particle_irreducible": true,
+      "internal_field_multiset": [
+        "G3",
+        "G3",
+        "bardR",
+        "bardR",
+        "dR",
+        "dR"
+      ],
+      "required_active_conditionals": [],
+      "renormalizable_vertex_provenance": [
+        "FROZEN_GAUGE_KINETIC_ACTION"
+      ],
+      "strata_realized": [
+        "SM+X",
+        "SM+X+Delta",
+        "SM+X+rho3",
+        "SM+X+rho8",
+        "SM+X+rho3+Delta",
+        "SM+X+rho8+Delta",
+        "SM+X+rho3+rho8",
+        "SM+X+rho3+rho8+Delta"
+      ],
+      "topology_exists_does_not_assert_nonzero_uv_pole": true,
+      "parent_source_insertion_id": "D5-DD-X-H-A",
+      "source_variant_id": "D5-DD-X-H-A",
+      "source_gauge_order": 0,
+      "source_rule_fingerprint_sha256": "NONDERIVATIVE_SOURCE_IDENTITY_VARIANT",
+      "source_coupling_monomial": [],
+      "complete_coupling_monomial": [
+        "g3",
+        "g3"
+      ]
+    },
+    {
+      "topology_id": "P2-TOP-065bb05851240ed9d644229f0ca825d8602c50c0edc72a29d290d3b2e5c73a4b",
+      "source_insertion_id": "D6-P2P3-QQ-HDAG-X-RHO3::C3",
+      "source_derivative_count": 0,
+      "target_external_fields": [
+        "Hdag",
+        "X",
+        "qL",
+        "qL",
+        "rho3"
+      ],
+      "target_derivative_count": 0,
+      "renormalizable_vertex_ids": [
+        "VTX-GAUGE-qL-G3",
+        "VTX-GAUGE-qL-G3"
+      ],
+      "coupling_monomial": [
+        "g3",
+        "g3"
+      ],
+      "external_attachments": [
+        [
+          0,
+          "Hdag",
+          1
+        ],
+        [
+          0,
+          "X",
+          1
+        ],
+        [
+          0,
+          "rho3",
+          1
+        ],
+        [
+          1,
+          "qL",
+          1
+        ],
+        [
+          2,
+          "qL",
+          1
+        ]
+      ],
+      "internal_edges": [
+        [
+          0,
+          "qL",
+          1,
+          "barqL"
+        ],
+        [
+          0,
+          "qL",
+          2,
+          "barqL"
+        ],
+        [
+          1,
+          "G3",
+          2,
+          "G3"
+        ]
+      ],
+      "vertex_count_including_insertion": 3,
+      "internal_line_count": 3,
+      "loop_count": 1,
+      "one_particle_irreducible": true,
+      "internal_field_multiset": [
+        "G3",
+        "G3",
+        "barqL",
+        "barqL",
+        "qL",
+        "qL"
+      ],
+      "required_active_conditionals": [],
+      "renormalizable_vertex_provenance": [
+        "FROZEN_GAUGE_KINETIC_ACTION"
+      ],
+      "strata_realized": [
+        "SM+X+rho3",
+        "SM+X+rho3+Delta",
+        "SM+X+rho3+rho8",
+        "SM+X+rho3+rho8+Delta"
+      ],
+      "topology_exists_does_not_assert_nonzero_uv_pole": true,
+      "parent_source_insertion_id": "D6-P2P3-QQ-HDAG-X-RHO3::C3",
+      "source_variant_id": "D6-P2P3-QQ-HDAG-X-RHO3::C3",
+      "source_gauge_order": 0,
+      "source_rule_fingerprint_sha256": "NONDERIVATIVE_SOURCE_IDENTITY_VARIANT",
+      "source_coupling_monomial": [],
+      "complete_coupling_monomial": [
+        "g3",
+        "g3"
+      ]
+    },
+    {
+      "topology_id": "P2-TOP-07356143e3f5e515063f3ca7f508e8ea44d78b9e5a2457bb35f1a524b7c97f56",
+      "source_insertion_id": "D6-PSI4-DUQL",
+      "source_derivative_count": 0,
+      "target_external_fields": [
+        "dR",
+        "lL",
+        "qL",
+        "uR"
+      ],
+      "target_derivative_count": 0,
+      "renormalizable_vertex_ids": [
+        "VTX-GAUGE-qL-G1",
+        "VTX-GAUGE-lL-G1"
+      ],
+      "coupling_monomial": [
+        "g1",
+        "g1"
+      ],
+      "external_attachments": [
+        [
+          0,
+          "dR",
+          1
+        ],
+        [
+          0,
+          "uR",
+          1
+        ],
+        [
+          1,
+          "qL",
+          1
+        ],
+        [
+          2,
+          "lL",
+          1
+        ]
+      ],
+      "internal_edges": [
+        [
+          0,
+          "lL",
+          2,
+          "barlL"
+        ],
+        [
+          0,
+          "qL",
+          1,
+          "barqL"
+        ],
+        [
+          1,
+          "G1",
+          2,
+          "G1"
+        ]
+      ],
+      "vertex_count_including_insertion": 3,
+      "internal_line_count": 3,
+      "loop_count": 1,
+      "one_particle_irreducible": true,
+      "internal_field_multiset": [
+        "G1",
+        "G1",
+        "barlL",
+        "barqL",
+        "lL",
+        "qL"
+      ],
+      "required_active_conditionals": [],
+      "renormalizable_vertex_provenance": [
+        "FROZEN_GAUGE_KINETIC_ACTION"
+      ],
+      "strata_realized": [
+        "SM+X",
+        "SM+X+Delta",
+        "SM+X+rho3",
+        "SM+X+rho8",
+        "SM+X+rho3+Delta",
+        "SM+X+rho8+Delta",
+        "SM+X+rho3+rho8",
+        "SM+X+rho3+rho8+Delta"
+      ],
+      "topology_exists_does_not_assert_nonzero_uv_pole": true,
+      "parent_source_insertion_id": "D6-PSI4-DUQL",
+      "source_variant_id": "D6-PSI4-DUQL",
+      "source_gauge_order": 0,
+      "source_rule_fingerprint_sha256": "NONDERIVATIVE_SOURCE_IDENTITY_VARIANT",
+      "source_coupling_monomial": [],
+      "complete_coupling_monomial": [
+        "g1",
+        "g1"
+      ]
+    },
+    {
+      "topology_id": "P2-TOP-09ae1fabfa8fc0cfe5a8d54eb3760e94ce8906922c12c36d8d63daaa4c1e3b59",
+      "source_insertion_id": "D6-PSI4-DUUE",
+      "source_derivative_count": 0,
+      "target_external_fields": [
+        "dR",
+        "eR",
+        "uR",
+        "uR"
+      ],
+      "target_derivative_count": 0,
+      "renormalizable_vertex_ids": [
+        "VTX-GAUGE-dR-G1",
+        "VTX-GAUGE-eR-G1"
+      ],
+      "coupling_monomial": [
+        "g1",
+        "g1"
+      ],
+      "external_attachments": [
+        [
+          0,
+          "uR",
+          2
+        ],
+        [
+          1,
+          "dR",
+          1
+        ],
+        [
+          2,
+          "eR",
+          1
+        ]
+      ],
+      "internal_edges": [
+        [
+          0,
+          "dR",
+          1,
+          "bardR"
+        ],
+        [
+          0,
+          "eR",
+          2,
+          "bareR"
+        ],
+        [
+          1,
+          "G1",
+          2,
+          "G1"
+        ]
+      ],
+      "vertex_count_including_insertion": 3,
+      "internal_line_count": 3,
+      "loop_count": 1,
+      "one_particle_irreducible": true,
+      "internal_field_multiset": [
+        "G1",
+        "G1",
+        "bardR",
+        "bareR",
+        "dR",
+        "eR"
+      ],
+      "required_active_conditionals": [],
+      "renormalizable_vertex_provenance": [
+        "FROZEN_GAUGE_KINETIC_ACTION"
+      ],
+      "strata_realized": [
+        "SM+X",
+        "SM+X+Delta",
+        "SM+X+rho3",
+        "SM+X+rho8",
+        "SM+X+rho3+Delta",
+        "SM+X+rho8+Delta",
+        "SM+X+rho3+rho8",
+        "SM+X+rho3+rho8+Delta"
+      ],
+      "topology_exists_does_not_assert_nonzero_uv_pole": true,
+      "parent_source_insertion_id": "D6-PSI4-DUUE",
+      "source_variant_id": "D6-PSI4-DUUE",
+      "source_gauge_order": 0,
+      "source_rule_fingerprint_sha256": "NONDERIVATIVE_SOURCE_IDENTITY_VARIANT",
+      "source_coupling_monomial": [],
+      "complete_coupling_monomial": [
+        "g1",
+        "g1"
+      ]
+    },
+    {
+      "topology_id": "P2-TOP-0aa5ad2796db041e9a4ebb0f0a208b4499c5d41e46a0427decdd80165551807b",
+      "source_insertion_id": "D5-QQ-X-HDAG-A",
+      "source_derivative_count": 0,
+      "target_external_fields": [
+        "Hdag",
+        "X",
+        "qL",
+        "qL"
+      ],
+      "target_derivative_count": 0,
+      "renormalizable_vertex_ids": [
+        "VTX-GAUGE-qL-G2",
+        "VTX-GAUGE-qL-G2"
+      ],
+      "coupling_monomial": [
+        "g2",
+        "g2"
+      ],
+      "external_attachments": [
+        [
+          0,
+          "Hdag",
+          1
+        ],
+        [
+          0,
+          "X",
+          1
+        ],
+        [
+          1,
+          "qL",
+          1
+        ],
+        [
+          2,
+          "qL",
+          1
+        ]
+      ],
+      "internal_edges": [
+        [
+          0,
+          "qL",
+          1,
+          "barqL"
+        ],
+        [
+          0,
+          "qL",
+          2,
+          "barqL"
+        ],
+        [
+          1,
+          "G2",
+          2,
+          "G2"
+        ]
+      ],
+      "vertex_count_including_insertion": 3,
+      "internal_line_count": 3,
+      "loop_count": 1,
+      "one_particle_irreducible": true,
+      "internal_field_multiset": [
+        "G2",
+        "G2",
+        "barqL",
+        "barqL",
+        "qL",
+        "qL"
+      ],
+      "required_active_conditionals": [],
+      "renormalizable_vertex_provenance": [
+        "FROZEN_GAUGE_KINETIC_ACTION"
+      ],
+      "strata_realized": [
+        "SM+X",
+        "SM+X+Delta",
+        "SM+X+rho3",
+        "SM+X+rho8",
+        "SM+X+rho3+Delta",
+        "SM+X+rho8+Delta",
+        "SM+X+rho3+rho8",
+        "SM+X+rho3+rho8+Delta"
+      ],
+      "topology_exists_does_not_assert_nonzero_uv_pole": true,
+      "parent_source_insertion_id": "D5-QQ-X-HDAG-A",
+      "source_variant_id": "D5-QQ-X-HDAG-A",
+      "source_gauge_order": 0,
+      "source_rule_fingerprint_sha256": "NONDERIVATIVE_SOURCE_IDENTITY_VARIANT",
+      "source_coupling_monomial": [],
+      "complete_coupling_monomial": [
+        "g2",
+        "g2"
+      ]
+    },
+    {
+      "topology_id": "P2-TOP-10f06890a72afc4801b38dff69bb860f3e589bfb94dbcc719e0d58d3ab38353c",
+      "source_insertion_id": "D6-P2P3-UBAR-Q-X3::C1",
+      "source_derivative_count": 0,
+      "target_external_fields": [
+        "X",
+        "X",
+        "X",
+        "baruR",
+        "qL"
+      ],
+      "target_derivative_count": 0,
+      "renormalizable_vertex_ids": [
+        "VTX-GAUGE-qL-G1",
+        "VTX-GAUGE-uR-G1"
+      ],
+      "coupling_monomial": [
+        "g1",
+        "g1"
+      ],
+      "external_attachments": [
+        [
+          0,
+          "X",
+          3
+        ],
+        [
+          1,
+          "qL",
+          1
+        ],
+        [
+          2,
+          "baruR",
+          1
+        ]
+      ],
+      "internal_edges": [
+        [
+          0,
+          "baruR",
+          2,
+          "uR"
+        ],
+        [
+          0,
+          "qL",
+          1,
+          "barqL"
+        ],
+        [
+          1,
+          "G1",
+          2,
+          "G1"
+        ]
+      ],
+      "vertex_count_including_insertion": 3,
+      "internal_line_count": 3,
+      "loop_count": 1,
+      "one_particle_irreducible": true,
+      "internal_field_multiset": [
+        "G1",
+        "G1",
+        "barqL",
+        "baruR",
+        "qL",
+        "uR"
+      ],
+      "required_active_conditionals": [],
+      "renormalizable_vertex_provenance": [
+        "FROZEN_GAUGE_KINETIC_ACTION"
+      ],
+      "strata_realized": [
+        "SM+X",
+        "SM+X+Delta",
+        "SM+X+rho3",
+        "SM+X+rho8",
+        "SM+X+rho3+Delta",
+        "SM+X+rho8+Delta",
+        "SM+X+rho3+rho8",
+        "SM+X+rho3+rho8+Delta"
+      ],
+      "topology_exists_does_not_assert_nonzero_uv_pole": true,
+      "parent_source_insertion_id": "D6-P2P3-UBAR-Q-X3::C1",
+      "source_variant_id": "D6-P2P3-UBAR-Q-X3::C1",
+      "source_gauge_order": 0,
+      "source_rule_fingerprint_sha256": "NONDERIVATIVE_SOURCE_IDENTITY_VARIANT",
+      "source_coupling_monomial": [],
+      "complete_coupling_monomial": [
+        "g1",
+        "g1"
+      ]
+    }
+  ]
+}

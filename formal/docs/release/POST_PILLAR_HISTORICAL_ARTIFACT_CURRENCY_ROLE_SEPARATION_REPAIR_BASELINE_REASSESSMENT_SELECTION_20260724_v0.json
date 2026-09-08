@@ -1,0 +1,19 @@
+{
+  "schema_id": "POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260724_v0",
+  "captured_at_utc": "2026-07-24T23:25:24Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT",
+    "PRESERVE_ACCEPTED_ROLE_SEPARATION_REPAIR_AND_DEFER_RECOVERY"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_POST_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_BASELINE_REASSESSMENT",
+  "target": "prepare_repository_post_pillar_historical_artifact_currency_role_separation_repair_baseline_reassessment_packet_v0",
+  "selection_basis": "The accepted repair makes all 16 adjudicated outcomes pass, but the projected 374 nonpassing count is not a measured repository baseline. Exact frozen-inventory measurement is required before any further repair selector.",
+  "controlling_result": {
+    "commit": "4603c611260fcece6613f0f515641082928b9802",
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260724_v0.json",
+    "sha256": "7f9b0d91ebaadc319a6b8f07c190f841df828c54bc11457def070a854911ded2"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

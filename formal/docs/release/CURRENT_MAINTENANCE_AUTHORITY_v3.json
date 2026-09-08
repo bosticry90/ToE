@@ -1,0 +1,34 @@
+{
+  "authorized_scope": {
+    "attribute_policy_change": ".gitattributes only",
+    "effective_attribute_map_preservation_required": true,
+    "historical_index_object_preservation_required": true,
+    "maintenance_result_review_required": true,
+    "narrow_explicit_allowlist_required": true,
+    "prechange_custody_manifest_required": true,
+    "repository_wide_renormalization_authorized": false
+  },
+  "boundary": {
+    "automatic_maintenance_successor_authorized": false,
+    "historical_bytes_may_be_rewritten": false,
+    "new_physics_authorized": false,
+    "scientific_target_rotated": false
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "current_maintenance_target": "execute_canonical_text_attribute_policy_repair_v0",
+  "current_maintenance_target_evidence": "formal/docs/release/CANONICAL_TEXT_ATTRIBUTE_REPAIR_MAINTENANCE_AUTHORITY_PACKET_REVIEW_20260729_v0.json",
+  "current_maintenance_target_status": "AUTHORIZED_BY_MAINTENANCE_PACKET_REVIEW",
+  "previous_maintenance_authority": {
+    "path": "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v2.json",
+    "sha256": "05a74c18a5a13d6661e6de13fa14951837a8ca9ac40a9ca107f8a1de8d10e9aa",
+    "status": "SUPERSEDED_AS_CURRENT_RETAINED_IMMUTABLE_HISTORY"
+  },
+  "required_result_review_target": "review_canonical_text_attribute_policy_repair_result_v0",
+  "schema_id": "CURRENT_MAINTENANCE_AUTHORITY_v3",
+  "scientific_authority": {
+    "current_target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "target_rotated": false
+  },
+  "status": "ACTIVE_CANONICAL_TEXT_ATTRIBUTE_REPAIR_ONLY"
+}

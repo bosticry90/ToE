@@ -1,0 +1,17 @@
+{
+  "captured_at_utc": "2026-07-23T22:20:30Z",
+  "controlling_result": {
+    "commit": "aab55ab80ffdac7d74b2349aed774fd5faab1509",
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "111092bd73ecb218b561cc0cfe3ece415d08a380375c4965a0433a30cdbfa78b"
+  },
+  "options": [
+    "AUTHORIZE_BOUNDED_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT",
+    "PRESERVE_ACCEPTED_QFT_ROUTE_IDENTITY_REPAIR_AND_DEFER_RECOVERY"
+  ],
+  "schema_id": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_SELECTION_20260723_v0",
+  "scientific_posture": "B-BLOCKED",
+  "selected": "AUTHORIZE_BOUNDED_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT",
+  "selection_basis": "The accepted QFT route identity-domain repair recovered all 67 focused route-family outcomes, but the 459-outcome projection is not a measured repository baseline. Exact frozen-inventory measurement must precede another repair selector.",
+  "target": "prepare_repository_post_qft_route_identity_repair_baseline_reassessment_packet_v0"
+}

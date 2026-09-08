@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 2,
+  "event_hash": "36fe0ffd74adac2f62052ea700b8794fb4d9842559bbac10475a15326a952928",
+  "event_sequence_number": 3,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "d715d0b46085036549f5106d5c5e2f02f7ad5bc6",
+  "previous_event_hash": "d2194a5765ec714e23d7764637747769af0971fc0b9dfc4160de0c7f4522e76b",
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "registry_snapshot_hash": "84967eba5c9c7604fc6e9c0b0a8765cd6daab23a22019c47d4fcb85fb87e3dec",
+  "scope_hash": "03d471493a6d5ee6784a2b33e7b1101023f54ce721350faf69693af170232575",
+  "semantic_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+  "target": "test_toe_native_coherence_claim_operational_definition_v0"
+}

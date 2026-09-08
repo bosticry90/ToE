@@ -1,0 +1,18 @@
+{
+  "schema_id": "REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_PACKET_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T02:53:39Z",
+  "review_basis": "INDEPENDENT_SCOPE_INVENTORY_AND_OUTPUT_CONTAINMENT_RECOMPUTATION",
+  "checks": {
+    "accepted_decoupling_result_and_commit_bound": true,
+    "exact_frozen_13756_id_inventory_bound": true,
+    "current_collection_is_comparison_only": true,
+    "one_nonmutating_run_only": true,
+    "output_root_must_resolve_under_toe_recovery": true,
+    "canonical_main_is_write_prohibited": true,
+    "exhaustive_first_cause_accounting_required": true,
+    "repairs_and_scientific_actions_forbidden": true,
+    "v2_and_first_unit_execution_unauthorized": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

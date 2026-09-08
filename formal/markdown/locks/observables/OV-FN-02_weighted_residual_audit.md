@@ -26,14 +26,14 @@ Record (computed)
   "fingerprint": "074e8f0847d5d2c1ae2bb52fe56bb37b1fd760f4944f54d9e9c363fdd2be16bc",
   "inputs": {
     "FN-01_cross_fit_metric_residual_DR02_DR03": {
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+      "path": "formal/markdown/locks/functionals/FN-01_cross_fit_metric_residual_DR02_DR03.md",
       "present": true,
       "r_metric": 0.07422899055678828,
       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
     },
     "OV-FN-WT-02": {
       "locked_fingerprint": "80302fc58bcfe5d93741a823fe036a2bf7ef97f16e4b0ad4c02d38f0eb70855c",
-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-02_selected_weight_policy.md",
+      "path": "formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy.md",
       "present": true,
       "record_fingerprint": "80302fc58bcfe5d93741a823fe036a2bf7ef97f16e4b0ad4c02d38f0eb70855c",
       "schema": "OV-FN-WT-02_selected_weight_policy/v1"

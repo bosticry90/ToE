@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 4,
+  "closed_from_commit": "ec377099796225f3c442c933f507df84c6260962",
+  "event_hash": "89d8390337f5e9ddfa75e4ab532b4ce1bffe12058f761cb280579ea27ce3dca4",
+  "event_sequence_number": 8,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "584a9759c86d063c9db50ac0f9e2b0f9e58348cf61c70ae88417ad422941d799",
+  "previous_event_hash": "584a9759c86d063c9db50ac0f9e2b0f9e58348cf61c70ae88417ad422941d799",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "result_artifact_hash": "eee46245fd59f0ecc7b127030dca0dcbba61ab3dc4e45fa756bbfe9e1bb9c058",
+  "result_artifact_path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_v0.json",
+  "review_artifact_hash": "2dd8819c4733aaab749f64036e9e17af309db8ebdadb497a55b0090d7518f310",
+  "review_artifact_path": "formal/docs/release/TOE_SOURCE_BOUND_GRAVITATIONAL_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

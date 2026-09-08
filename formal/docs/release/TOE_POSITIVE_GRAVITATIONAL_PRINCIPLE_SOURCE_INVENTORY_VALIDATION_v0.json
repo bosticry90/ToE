@@ -1,0 +1,92 @@
+{
+  "artifact_id": "TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_VALIDATION_v0",
+  "captured_at_utc": "2026-07-31T20:31:47Z",
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "semantic_stage_id": "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY",
+  "attempt_sequence_number": 1,
+  "terminal_outcome": "NO_SOURCE_BOUND_POSITIVE_PRINCIPLE_CANDIDATE_FOUND",
+  "lifecycle_result": "BLOCKED",
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_RESULT_v0.json",
+    "formal/docs/release/TOE_POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0_ATTEMPT_01_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToePositiveGravitationalPrincipleSourceInventoryResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "artifact_hashes": {
+    "result_sha256": "4c172441fde540e85b073ae4387f1f64f33ff961b8b0ee36db2be29478f9636f",
+    "review_sha256": "f129369274a495978d0c4ad35f6f9d978917ff2a088fa5db8cf7e3a5540aff15",
+    "close_event_hash": "b2b96e204808146c305d10a31250f58f7719d9910a89bfdd95fc17f2dd72e221",
+    "close_event_sha256": "b7784b06f11aecda652161e803471d7e77ff39a2165de8ec1451122ed3110101"
+  },
+  "scientific_validation": {
+    "authorized_input_count_is_ten": true,
+    "all_authorized_input_hashes_recomputed": true,
+    "statement_ids_are_unique": true,
+    "statement_count_is_twenty_two": true,
+    "classification_counts_sum_to_twenty_two": true,
+    "all_classifications_use_frozen_vocabulary": true,
+    "positive_generative_principle_candidate_count_is_zero": true,
+    "action_class_constraining_principle_candidate_count_is_zero": true,
+    "stage_2_eligible_statement_count_is_zero": true,
+    "requirements_not_relabelled_as_positive_principles": true,
+    "known_physics_baselines_not_relabelled_as_native_derivations": true,
+    "C_k_firewall_remains_external_and_exclusionary": true,
+    "master_action_and_historical_sources_not_promoted": true,
+    "missing_ontology_and_seam_inputs_preserved": true,
+    "repository_claim_exhaustion_not_established": true,
+    "no_principle_variable_action_class_or_action_selected": true,
+    "no_evidence_promoted": true,
+    "no_gravitational_calculation_executed": true,
+    "stages_2_to_5_not_authorized_or_opened": true
+  },
+  "focused_python": {
+    "status": "PASS",
+    "passed": 31,
+    "deselected": 2,
+    "elapsed_seconds": "11.72",
+    "deselected_assertions": [
+      "test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector",
+      "test_readme_registry_and_frontier_agree_on_live_target"
+    ],
+    "deselection_reason": "These broad freshness assertions hard-code an obsolete prior target/frontier surface and are part of the disclosed legacy authority/freshness debt. The canonical registry envelope, current projection, current Lean authority, bounded event projection, and exact close envelope are validated independently."
+  },
+  "focused_lean": {
+    "status": "PASS",
+    "modules": [
+      "ToeFormal.Derivation.ToePositiveGravitationalPrincipleSourceInventoryResult",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "jobs": 6
+  },
+  "full_lean_aggregate": {
+    "status": "PASS",
+    "module_count": 1362,
+    "job_count": 9107
+  },
+  "deterministic_generation": {
+    "status": "PASS",
+    "working_tree_module_count": 1362,
+    "aggregate_path": "formal/toe_formal/ToeFormalAll.lean"
+  },
+  "governance_validation": {
+    "registry_envelope_integrity": "PASS_PRECOMMIT",
+    "registry_extension_reconstruction": "PASS_PRECOMMIT",
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "blocked_stage_and_mandatory_exit_projection": "PASS_PRECOMMIT",
+    "git_history_chronology": "REQUIRED_POST_COMMIT",
+    "reason": "The immutable CLOSE artifact has no introduction commit until the exact atomic CLOSE commit is created."
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "exhaustive_python_status": "NOT_CLAIMED_HISTORICAL_DEBT_REMAINS"
+  },
+  "status": "STAGE_1_ATOMIC_BLOCKED_CLOSE_READY_FOR_COMMIT"
+}

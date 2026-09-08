@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.historical_artifact_currency_identity import verify_binding
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -162,6 +163,16 @@ def sha256_path(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def resolved_expected_hash(relative: str, expected: str) -> str:
+    if relative == GENERATOR_REL:
+        return verify_binding(
+            "PAC-002",
+            expected_path=relative,
+            expected_sha256=expected,
+        )["sha256"]
+    return sha256_path(REPO_ROOT / relative)
+
+
 def load_json(path: Path) -> dict[str, Any]:
     value = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(value, dict):
@@ -210,7 +221,7 @@ def independent_decision_failures(
     }
 
     if not all(
-        sha256_path(REPO_ROOT / relative) == expected
+        resolved_expected_hash(relative, expected) == expected
         for relative, expected in EXPECTED_HASHES.items()
     ):
         failed.add(DECISION_IDS[0])

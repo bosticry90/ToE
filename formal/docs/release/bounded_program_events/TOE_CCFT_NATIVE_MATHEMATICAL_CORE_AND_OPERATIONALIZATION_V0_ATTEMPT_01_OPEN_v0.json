@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 1,
+  "event_hash": "272c3012dd05be6e385be91e1334f42186355154d746ec95e8dd89771a6c6104",
+  "event_sequence_number": 1,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "9992dad328cb982c4832c2dcbbd3a9bc8487e22c",
+  "previous_event_hash": null,
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "registry_snapshot_hash": "0c28fbbecbb0a514d70e020665fc7e54fab7eba8e5ff615a4ce5e2a46627bd9f",
+  "scope_hash": "e348568927073147b6353de85f14a13c2e332f217677d8e7c16a0cc7cac0d53e",
+  "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY",
+  "target": "inventory_toe_source_bound_ccft_mathematical_structures_v0"
+}

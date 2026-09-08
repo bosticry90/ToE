@@ -1,0 +1,69 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactRepairLineageV5",
+  "as_of": "2026-09-05",
+  "supersedes": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260905_v4.json",
+  "preserved_non_author_review": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_NON_AUTHOR_REVIEW_RESULT_20260905_v1.md",
+  "preserved_non_author_review_disposition": "SUPPORTED_WITH_REQUIRED_AMENDMENTS",
+  "open_material_defects": [
+    {
+      "defect_id": "D-01",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "summary": "Lean certificate identity and the frozen runtime object are not independently cryptographically bound."
+    },
+    {
+      "defect_id": "D-02",
+      "status": "REQUIRED_NOT_IMPLEMENTED",
+      "summary": "The trusted evaluator does not enforce the complete frozen ValueTypeV1 metadata contract."
+    },
+    {
+      "defect_id": "D-07_FROZEN_DEPENDENCY_HASH_PORTABILITY",
+      "status": "REQUIRED_NEW_VERSIONED_EXACT_EVIDENCE_LINEAGE",
+      "detected_by": "LINUX_EGRESS_DENIED_RUN_34012192493",
+      "summary": "The frozen dependency closure hashes raw Windows working-tree bytes for three Lean environment files whose committed Git blobs use different line endings. The frozen closure therefore cannot pass its exact raw-byte custody gate from the tested clean Linux checkout.",
+      "affected_files": [
+        "formal/toe_formal/lean-toolchain",
+        "formal/toe_formal/lakefile.toml",
+        "formal/toe_formal/lake-manifest.json"
+      ],
+      "required_repair": "Define and test canonical cross-platform dependency hashing, generate a new exact evidence packet from clean Git objects, and independently review the affected closure and receipts. Do not edit the frozen v1 packet."
+    }
+  ],
+  "custody_amendments": [
+    {
+      "defect_id": "D-04_SOURCE_CUSTODY",
+      "status": "REPAIRED_AND_EXERCISED_BY_V4",
+      "values_changed": false
+    },
+    {
+      "defect_id": "D-05_AUTHORITY_ATTACHMENT_CUSTODY",
+      "status": "IMPLEMENTED_IN_V5_BUT_FULL_MANIFEST_NOT_EMITTED_BECAUSE_D07_FAILED",
+      "values_changed": false
+    },
+    {
+      "defect_id": "D-06_DEPENDENCY_CLOSURE_GIT_CUSTODY",
+      "status": "PATH_MEMBERSHIP_REPAIRED__RAW_HASH_GATE_FAILED_ON_D07",
+      "all_73_paths_git_tracked": true,
+      "raw_hash_mismatches": 3,
+      "values_changed": false
+    }
+  ],
+  "preservation": {
+    "reviewed_bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "reviewed_packet_modified": false,
+    "review_result_modified": false,
+    "linux_v1_through_v5_results_preserved": true,
+    "linux_v5_result": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_LINUX_EGRESS_DENIED_EXECUTION_RESULT_20260905_v5.json",
+    "new_exact_lineage_required": true
+  },
+  "current_disposition": {
+    "clean_non_author_qualification": "NOT_EARNED",
+    "linux_egress_denied_qualification": "V1_THROUGH_V4_INCONCLUSIVE__V5_FAIL",
+    "calculator_profile_review_status": "SCIENTIFIC_REQUALIFICATION_NOT_EARNED",
+    "product_v1": "NOT_RELEASED",
+    "production_activation": false
+  },
+  "repair_lineage_hash": "6dd1fd23178b6100bb4cca8cf52a5789dc85ca3a7b55cf622192f392e4d4020c",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

@@ -1,0 +1,325 @@
+{
+  "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_v0",
+  "schema_id": "toe.ccft_v0.primary_theorem_attack_execution.result.v0",
+  "captured_at_utc": "2026-08-03T01:18:26Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "attempt_sequence_number": 4,
+  "semantic_stage_id": "CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION",
+  "scientific_target": "execute_toe_ccft_v0_primary_theorem_attack_lanes_v0",
+  "scope_hash": "7ff303d25def2c116cf548eaa5c0d3a08438c8c98a4a847323cac38bca0a9e15",
+  "input_bindings": [
+    {
+      "artifact_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0.json",
+      "sha256": "4f3a7031960522f91d9a1988bc4c290a56505b5f71e84e815da3bd46f21d959a"
+    },
+    {
+      "artifact_id": "CCFT_V0_GAUGE_EQUIVALENCE_AND_BACKGROUND_RESOLVED_DISPERSION_PACKET_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_PACKET_PREPARATION_RESULT_v0.json",
+      "sha256": "ddf751072abca4c75a3387355503f93023692eecccaf4c857bfd6cdc0b27c516"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_OPEN_AUTHORITY_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_OPEN_AUTHORITY_v0.json",
+      "sha256": "cf4988697954f356eb1ce7379dc7bfa042a69b3c9c8cc9f6666218529034596a"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_OPEN_AUTHORITY_REVIEW_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_STAGE_4_OPEN_AUTHORITY_REVIEW_v0.json",
+      "sha256": "e41304a66f35daee03cd6a41b497c69dc4d601d625321f957f84a324b5d53059"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_OPEN_VALIDATION_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_OPEN_VALIDATION_v0.json",
+      "sha256": "6f88154832dab47f604221910eccb63832d4e1e80ec2234585fc188ec09da8d9"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_OPEN_v0",
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+      "sha256": "93837b350e0d2846ccb126795913378e6879acf4b9736b47e4201d6d56367117"
+    }
+  ],
+  "frozen_scope_integrity": {
+    "model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "packet_id": "CCFT_V0_GAUGE_EQUIVALENCE_AND_BACKGROUND_RESOLVED_DISPERSION_PACKET_v0",
+    "governing_equation": "i psi_t=-(1/2)psi_xx+kappa(|psi|^2-1)psi",
+    "state_space": "H1_per(T_L;C)",
+    "solution_class": "C(I;H1_per(T_L;C)) intersect C1(I;Hminus1_per(T_L;C)), with each PDE satisfied in Hminus1_per",
+    "parameter_domain": "L>0 and kappa in [0,1]",
+    "fourier_convention": "exp(i(qx-omega t)), q=2 pi n/L",
+    "frozen_model_mutated": false,
+    "frozen_packet_mutated": false,
+    "new_postulates_added": 0,
+    "archive_recovery_reopened": false
+  },
+  "plain_language_result": "The three frozen mathematical claims survive exact attack. The phase map is an exact solution-space equivalence with the standard defocusing cubic NLS, the squared dispersion is the unit-background linearization, and the additive shift is the zero-background linearization under the frozen convention. The historical squared record matches v0 only as an explicit parameter-mapped special limit; the additive historical record lacks enough bound background, gauge, and perturbation context for a stronger classification.",
+  "claim_adjudications": [
+    {
+      "claim_id": "CLAIM_1_EXACT_GAUGE_EQUIVALENCE",
+      "decision": "PROVED",
+      "mathematical_status": "THEOREM_GRADE_RESULT_ESTABLISHED",
+      "statement_established": "For every permitted L, kappa, interval I, and initial datum psi0, phi=exp(-i kappa t)psi maps the frozen weak-solution set bijectively to the comparator cubic defocusing NLS weak-solution set on the same interval, with inverse psi=exp(i kappa t)phi and unchanged data at t=0.",
+      "direct_proof": [
+        "Let p(t)=exp(-i kappa t). Then p_t=-i kappa p, p_x=0, |p|=1, and phi=p psi.",
+        "The exact residual identity is R_NLS[p psi]=p R_CCFT[psi]. Direct expansion cancels the isolated background shift without assuming either residual is zero.",
+        "The inverse multiplier p^{-1}=exp(i kappa t) satisfies p^{-1}p=pp^{-1}=1, so the residual implication holds in both directions.",
+        "Because p is spatially constant and unit modulus, multiplication by p preserves periodicity and the H1_per and Hminus1_per spatial classes at every t.",
+        "The smooth time multiplier and the permitted Hminus1 product rule preserve the declared C and C1 time classes and do not change the existence interval.",
+        "At t=0, p(0)=1, so phi(0)=psi(0)=psi0. At kappa=0, p=1 and the bijection is the identity."
+      ],
+      "preserved_properties": {
+        "periodicity": true,
+        "H1_per_regular_class": true,
+        "Hminus1_time_derivative_class": true,
+        "pointwise_modulus": true,
+        "initial_data_at_t_zero": true,
+        "same_existence_interval": true,
+        "kappa_zero_endpoint": true
+      },
+      "disproof_and_counterexample_lane": {
+        "attempted_failure_surfaces": [
+          "residual term surviving substitution",
+          "noninvertible multiplier",
+          "periodicity failure",
+          "H1_per or Hminus1 class failure",
+          "initial-data mismatch",
+          "kappa=0 endpoint failure"
+        ],
+        "counterexample_within_frozen_contract": "NONE_FOUND",
+        "formal_negation_status": "REFUTED_BY_THE_BIJECTION_PROOF"
+      },
+      "claim_boundary": "This proves exact mathematical equivalence of the frozen v0 equation to a known cubic NLS equation. It does not prove physical coherence, empirical validity, or distinctively CCFT dynamics."
+    },
+    {
+      "claim_id": "CLAIM_2_UNIT_BACKGROUND_DISPERSION",
+      "decision": "PROVED",
+      "mathematical_status": "THEOREM_GRADE_RESULT_ESTABLISHED",
+      "statement_established": "The real Frechet linearization about psi=1 is a_t=-(1/2)b_xx and b_t=(1/2)a_xx-2 kappa a. Under the frozen Fourier convention a nonzero complexified modal amplitude exists exactly when omega^2=(q^2/2)(q^2/2+2 kappa)=q^4/4+kappa q^2.",
+      "direct_proof": [
+        "For psi=1+epsilon(a+i b), |psi|^2-1=2 epsilon a+O(epsilon^2), so the first-order nonlinearity is 2 kappa epsilon a.",
+        "Separating real and imaginary parts of i(a_t+i b_t)=-(1/2)(a_xx+i b_xx)+2 kappa a gives the frozen real system with the stated signs.",
+        "For exp(i(qx-omega t)), set A=q^2/2 and B=q^2/2+2 kappa. The modal matrix is [[-i omega,-A],[B,-i omega]].",
+        "Its determinant is -omega^2+AB. A nonzero kernel exists exactly when the determinant vanishes, which yields the frozen squared relation.",
+        "The algebraic identity AB=q^4/4+kappa q^2 is exact."
+      ],
+      "edge_cases": {
+        "q_zero_kappa_positive": "The determinant has a double zero frequency and a nonzero pure-phase eigenvector. A separate real-amplitude generalized direction produces secular phase growth; this does not refute the frozen modal proposition.",
+        "q_zero_kappa_zero": "The zero matrix admits nonzero zero-frequency amplitudes.",
+        "kappa_zero": "The relation reduces to omega^2=q^4/4, the two signed branches of the linear Schrodinger dispersion."
+      },
+      "constructed_nonzero_amplitude": "For q nonzero and omega^2=AB, (U,V)=(A,-i omega) is a nonzero kernel vector. For q=0 and omega=0, (U,V)=(0,1) is a nonzero kernel vector.",
+      "disproof_and_counterexample_lane": {
+        "attempted_failure_surfaces": [
+          "omitted first-order term",
+          "real-imaginary sign reversal",
+          "Fourier sign mismatch",
+          "determinant mismatch",
+          "q=0 loss of converse",
+          "kappa=0 control failure"
+        ],
+        "counterexample_within_frozen_contract": "NONE_FOUND",
+        "formal_negation_status": "REFUTED_BY_LINEARIZATION_AND_KERNEL_CONSTRUCTION"
+      }
+    },
+    {
+      "claim_id": "CLAIM_3_ZERO_BACKGROUND_DISPERSION",
+      "decision": "PROVED",
+      "mathematical_status": "THEOREM_GRADE_RESULT_ESTABLISHED",
+      "statement_established": "The Frechet linearization about psi=0 is i eta_t=-(1/2)eta_xx-kappa eta. Every nonzero Fourier amplitude under exp(i(qx-omega t)) satisfies omega=q^2/2-kappa, and the opposite time-frequency convention reverses the entire frequency sign.",
+      "direct_proof": [
+        "At psi=epsilon eta, the cubic term kappa|psi|^2 psi is O(epsilon^3), while the background-shift term is -kappa epsilon eta.",
+        "Substitution of A exp(i(qx-omega t)) with A nonzero gives omega A=(q^2/2-kappa)A, hence the frozen additive relation.",
+        "Replacing exp(i(qx-omega t)) by exp(i(qx+omega t)) maps omega to -omega, not merely the interaction term.",
+        "Under phi=exp(-i kappa t)psi, the comparator carrier frequency is omega_phi=omega_psi+kappa=q^2/2; the uniform -kappa shift is gauge dependent while |phi|=|psi|."
+      ],
+      "edge_cases": {
+        "q_zero": "omega=-kappa under the frozen convention and maps to zero comparator carrier frequency.",
+        "kappa_zero": "omega=q^2/2, the linear control.",
+        "amplitude_observable": "The phase map leaves amplitude and modulus observables unchanged."
+      },
+      "disproof_and_counterexample_lane": {
+        "attempted_failure_surfaces": [
+          "nonzero cubic Frechet term at zero",
+          "Fourier derivative sign error",
+          "amplitude cancellation failure",
+          "opposite-convention partial rather than total sign reversal",
+          "q=0 or kappa=0 endpoint failure"
+        ],
+        "counterexample_within_frozen_contract": "NONE_FOUND",
+        "formal_negation_status": "REFUTED_BY_DIRECT_MODE_SUBSTITUTION"
+      }
+    },
+    {
+      "claim_id": "CLAIM_4_HISTORICAL_FORMULA_CLASSIFICATION",
+      "decision": "ADJUDICATED_WITH_FAIL_CLOSED_CONTEXT_LIMITS",
+      "mathematical_status": "DOCUMENTARY_CLASSIFICATION_ESTABLISHED_AFTER_CLAIMS_1_TO_3",
+      "classifications": [
+        {
+          "contract_record_id": "CP_FREQ_001",
+          "formula": "omega=(1/2)k^2+lam k^4+g rho0",
+          "primary_classification": "HISTORICAL_CONTEXT_INSUFFICIENT",
+          "reason": "The bound record supplies an additive plane-wave formula but no background, gauge, perturbation-variable, coefficient-sign, or equation-of-motion contract. The frozen rules therefore prohibit SAME_MODEL_DIFFERENT_BACKGROUND, SAME_MODEL_DIFFERENT_GAUGE, EQUIVALENT_AFTER_CONVENTION_MAPPING, or GENUINELY_INCOMPATIBLE.",
+          "counterfactual_algebra_only": "If one adds the unauthorized natural map lam=0, g rho0=kappa and identifies the frozen zero-background convention, the historical expression differs from q^2/2-kappa by 2 kappa and agrees only at kappa=0. This counterfactual is not promoted to a historical classification because the necessary context is absent."
+        },
+        {
+          "contract_record_id": "CP_FREQ_002",
+          "formula": "omega^2=(k^2/2)^2+g rho0 k^2+lam k^4",
+          "primary_classification": "VALID_SPECIAL_LIMITS",
+          "explicit_map": "k maps to q, lam maps to 0, and g rho0 maps to kappa",
+          "mapped_identity": "q^4/4+kappa q^2",
+          "reason": "Under the packet's explicit v0 comparison map, the bound squared expression is exactly the proved unit-background polynomial. The classification applies only to that algebraic special limit, not to the full historical model or its derivation.",
+          "context_qualifier": {
+            "object": "FULL_HISTORICAL_MODEL_DERIVATION_BACKGROUND_AND_GAUGE_IDENTITY",
+            "classification": "HISTORICAL_CONTEXT_INSUFFICIENT",
+            "reason": "The bound source is a direct specification without a bound equation of motion or enough gauge and perturbation metadata to prove that the historical model itself is the frozen v0 model."
+          }
+        }
+      ],
+      "classes_not_assigned": [
+        "SAME_MODEL_DIFFERENT_BACKGROUND",
+        "SAME_MODEL_DIFFERENT_GAUGE",
+        "EQUIVALENT_AFTER_CONVENTION_MAPPING",
+        "GENUINELY_INCOMPATIBLE"
+      ],
+      "formal_negation_status": "REFUTED: each record receives a licensed fail-closed primary classification and no mutually exclusive classes are assigned to the same named comparison object."
+    }
+  ],
+  "independent_attack_lane_results": {
+    "PROVE": {
+      "status": "SUCCESS_FOR_CLAIMS_1_TO_3",
+      "method": "Exact residual algebra, inverse-map and function-class argument, real Frechet linearization, Fourier matrix determinant, and direct scalar mode substitution."
+    },
+    "DISPROVE": {
+      "status": "NO_FROZEN_CLAIM_REFUTED",
+      "method": "All frozen negations and endpoint, convention, regularity, determinant, and context failure surfaces were tested. The q=0 secular generalized direction narrows interpretation but is not a counterexample to the modal proposition."
+    },
+    "CONSTRUCT": {
+      "status": "NONZERO_MODAL_WITNESSES_CONSTRUCTED",
+      "method": "Explicit unit-background kernel amplitudes and arbitrary nonzero zero-background Fourier amplitudes were supplied under the derived relations."
+    },
+    "FIND_COUNTEREXAMPLE": {
+      "status": "NONE_FOUND_WITHIN_FROZEN_CONTRACT",
+      "method": "Search remained within the frozen equation, domain, parameter range, solution class, backgrounds, and Fourier convention. No model or packet mutation was used."
+    }
+  },
+  "symbolic_execution": {
+    "engine": "SymPy 1.14.0",
+    "exact_arithmetic": true,
+    "gauge_residual_difference": "0",
+    "unit_characteristic": "-(4*kappa*q^2+q^4-4*omega^2)/4",
+    "unit_dispersion_expanded": "kappa*q^2+q^4/4",
+    "unit_dispersion_identity_difference": "0",
+    "zero_background_frequency": "-kappa+q^2/2",
+    "opposite_convention_frequency": "kappa-q^2/2",
+    "historical_squared_special_limit_difference": "0",
+    "historical_additive_natural_map_difference": "2*kappa",
+    "status": "PASS_SUPPORTING_EXACT_PROOFS_NOT_A_STANDALONE_THEOREM"
+  },
+  "numerical_execution": {
+    "engine": "Python 3 with NumPy 2.2.6 complex128/float64",
+    "grid_contract": {
+      "L": [
+        "2*pi",
+        "3*pi"
+      ],
+      "kappa": [
+        0.0,
+        0.25,
+        1.0
+      ],
+      "fourier_indices": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "spatial_resolutions": [
+        128,
+        256
+      ],
+      "time_steps": [
+        0.00390625,
+        0.001953125,
+        0.0009765625
+      ],
+      "horizon": 0.25,
+      "small_amplitude": 0.0001
+    },
+    "gauge_mapped_max_relative_l2": 5.5858507391677104e-15,
+    "gauge_gate": 5e-09,
+    "unit_background_max_relative_frequency_error_nonzero_reference": 2.0387508779388783e-06,
+    "unit_background_max_absolute_frequency_error_zero_reference": 0.0,
+    "zero_background_max_relative_frequency_error_nonzero_reference": 9.000500232614335e-08,
+    "zero_background_max_absolute_frequency_error_zero_reference": 0.0,
+    "frequency_relative_gate": 0.0005,
+    "frequency_absolute_zero_gate": 5e-06,
+    "linearized_RK4_temporal_error_ratios": [
+      15.979072777932307,
+      15.994768881293018,
+      15.998665203576927
+    ],
+    "required_minimum_temporal_refinement_ratio": 3.0,
+    "all_predeclared_gates_pass": true,
+    "finite_approximation_boundary": "These regressions support implementation and derivation fidelity. They do not replace the exact proofs or establish continuum well-posedness."
+  },
+  "Lean_execution": {
+    "module": "ToeFormal.Derivation.ToeCCFTV0PrimaryTheoremAttackResult",
+    "status": "ALGEBRAIC_CORE_FORMALIZED",
+    "proved_theorems": [
+      "phase_normSq",
+      "inversePhase_mul_phase",
+      "phase_mul_inversePhase",
+      "gaugeResidualIdentity",
+      "phase_preserves_normSq",
+      "unitBackgroundCharacteristic",
+      "unitBackgroundDispersionPolynomial",
+      "zeroBackgroundModeFrequency",
+      "historicalClassificationRequiresBoundContext",
+      "bounded_result_preserves_scope"
+    ],
+    "sorry_or_axiom_placeholders": 0,
+    "fidelity_boundary": "Lean proves the exact pointwise residual cancellation, phase modulus and inverse algebra, dispersion polynomial identities, scalar zero-background consequence, and fail-closed context rule. The full weak-solution bijection and Frechet-linearization functional analysis remain human-proved using the packet's allowed lemmas and are not misreported as fully Lean-formalized."
+  },
+  "aggregate_scientific_conclusion": {
+    "frozen_equation_status": "EXACTLY_GAUGE_EQUIVALENT_TO_STANDARD_CUBIC_DEFOCUSING_NLS_ON_THE_DECLARED_SOLUTION_CLASS",
+    "unit_background_dispersion": "PROVED",
+    "zero_background_dispersion": "PROVED",
+    "historical_conflict": "NARROWED_BUT_NOT_FULLY_RESOLVED",
+    "historical_squared_record": "VALID_SPECIAL_LIMIT_UNDER_EXPLICIT_PARAMETER_MAP",
+    "historical_additive_record": "HISTORICAL_CONTEXT_INSUFFICIENT",
+    "mathematical_distinctiveness": "NOT_ESTABLISHED_BY_THE_FROZEN_EQUATION",
+    "well_posedness_norm_energy_stability_and_full_viability": "NOT_ADJUDICATED_IN_THIS_PACKET",
+    "physical_coherence_bearer": "NONE",
+    "empirical_status": "NONE"
+  },
+  "epistemic_status_layers": {
+    "symbolically_derived": true,
+    "numerically_regressed": true,
+    "human_proof_complete": true,
+    "Lean_algebraic_core_formalized": true,
+    "full_weak_solution_bijection_Lean_formalized": false,
+    "independently_reviewed": false,
+    "physically_interpreted": false,
+    "empirically_tested": false
+  },
+  "prohibited_claims_preserved": {
+    "physical_truth_claimed": false,
+    "physical_coherence_field_claimed": false,
+    "empirical_confirmation_claimed": false,
+    "model_or_packet_changed_to_rescue_result": false,
+    "historical_context_invented": false,
+    "LCRD_or_other_field_added": false,
+    "Stage_5_opened_or_executed": false
+  },
+  "nonautomatic_handoff": {
+    "proposed_target": "assess_toe_ccft_v0_internal_viability_and_distinctiveness_v0",
+    "authority_status": "SELECTED_BY_MANIFEST_BUT_NOT_AUTHORIZED",
+    "required_before_open": "Separate Stage 5 scientific authority decision and immutable Attempt 5 OPEN event."
+  },
+  "terminal_outcome": "THEOREM_GRADE_RESULT_ESTABLISHED",
+  "lifecycle_result": "PASSED",
+  "status": "STAGE_4_RESULT_READY_FOR_INDEPENDENT_REVIEW_AND_ATOMIC_CLOSE"
+}

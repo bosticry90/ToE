@@ -1,0 +1,117 @@
+{
+  "schema_id": "REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_PACKET_20260722_v0",
+  "captured_at_utc": "2026-07-22T22:06:47Z",
+  "target": "execute_bounded_missing_artifact_expectation_adjudication_v0",
+  "status": "AUTHORIZED_ONE_READ_ONLY_EXPECTATION_LEVEL_ADJUDICATION",
+  "accepted_lineage": {
+    "post_prompt_reassessment_commit": "06f0ab649ff31c6983a42daeedfb9ad1a696cadd",
+    "post_prompt_reassessment_result": "formal/docs/release/REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_20260722_v0.json",
+    "post_prompt_reassessment_result_sha256": "d24cb811c307826a4585bbaa474377778c3df9f752ac7cb0f21cb086a29f1dd4"
+  },
+  "bound_input_evidence": {
+    "external_root": ".toe-recovery/custody-v0/post-prompt-decoupling-baseline-reassessment-v0",
+    "outcome_entries": {
+      "path": "POST_PROMPT_DECOUPLING_OUTCOME_ENTRIES_v0.json",
+      "sha256": "7d0d0394a535ce9f9c0beb3333adfae5d162f168cf469a766f6eebe043857c29"
+    },
+    "first_cause_clusters": {
+      "path": "POST_PROMPT_DECOUPLING_FIRST_CAUSE_CLUSTERS_v0.json",
+      "sha256": "b906b542a060cfc04e7737813a2a0eaed6b4634d9a7ae798b0bb4d9ee8e49222"
+    },
+    "expected_family": "missing_artifacts",
+    "expected_outcomes": 222
+  },
+  "authorized_cycle": {
+    "adjudication_runs": 1,
+    "independent_result_reviews": 1,
+    "repair_actions": 0,
+    "report_generation_or_copy_actions": 0,
+    "test_modifications": 0,
+    "scientific_content_changes": 0,
+    "registry_rotations": 0,
+    "lean_actions": 0
+  },
+  "required_expectation_row_fields": [
+    "expectation_id",
+    "consumer_test_or_tool",
+    "first_observed_missing_path",
+    "all_latent_dependent_paths",
+    "report_family",
+    "generator_reference",
+    "generator_tracked_state",
+    "artifact_tracked_ignored_absent_state",
+    "git_history_presence",
+    "authority_classification",
+    "scientific_or_governance_significance",
+    "age_and_retention_status",
+    "current_decision_bearing_status",
+    "required_clean_checkout_behavior",
+    "recommended_disposition"
+  ],
+  "authority_classifications": [
+    "CURRENT_DECISION_BEARING_COMMITTED_ARTIFACT",
+    "DETERMINISTIC_FIXTURE_REQUIRED_FOR_TEST",
+    "AUTHORIZED_LIVE_REPORT_NOT_REPOSITORY_INPUT",
+    "HISTORICAL_REPORT_BEYOND_RETENTION",
+    "AUTHORIZED_ABSENCE",
+    "UNRATIFIED_POST_REGISTRY_ARTIFACT",
+    "STALE_EXPECTATION_TO_RETIRE",
+    "PROVENANCE_INCOMPLETE"
+  ],
+  "allowed_dispositions": [
+    "COMMIT_CANONICAL_ARTIFACT",
+    "GENERATE_TEMPORARY_FIXTURE",
+    "BIND_TO_ARCHIVED_CANONICAL_RECORD",
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE",
+    "REQUIRE_EXPLICIT_ABSENCE",
+    "RETIRE_STALE_EXPECTATION",
+    "PRESERVE_UNRATIFIED_AND_EXCLUDE_FROM_CURRENT_VALIDATION",
+    "BLOCK_FOR_PROVENANCE_REVIEW"
+  ],
+  "adjudication_rules": [
+    "Account individually for all 222 outcomes, including explicit reclassification of any member whose observed exception is not a missing-file condition.",
+    "Resolve the first observed missing path from frozen outcome evidence and enumerate every statically recoverable latent report dependency from the complete consumer source, not merely the first failing assertion.",
+    "Treat dirty-workspace report presence as nonauthoritative read-only custody evidence and never as proof of current authority.",
+    "Treat ignored, untracked, never-tracked report presence as incompatible with a clean-checkout blocking dependency unless a committed authority surface proves otherwise.",
+    "Use committed lifecycle policy and filename dates for retention status; do not infer age from mutable filesystem timestamps.",
+    "Classify provenance-incomplete cases as blocked rather than infer scientific or governance authority.",
+    "Keep the thirteen post-decoupling source-custody currency outcomes outside this family unless identical causation is independently established.",
+    "Identify bounded repair candidates but stop before any repair or successor authorization."
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/missing-artifact-expectation-adjudication-v0",
+    "preflight_rule": "ALL_GENERATED_DIAGNOSTIC_OUTPUTS_MUST_RESOLVE_UNDER_AUTHORIZED_RECOVERY_ROOT",
+    "canonical_dirty_main": "READ_ONLY",
+    "reports_directory": "WRITE_PROHIBITED",
+    "reject_before_write": true
+  },
+  "acceptance_requirements": {
+    "all_222_outcomes_individually_classified": true,
+    "latent_dependency_inventory_required": true,
+    "artifacts_created": 0,
+    "reports_copied_or_regenerated": 0,
+    "tests_modified": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "validation_checkout_clean": true,
+    "dirty_main_byte_unchanged": true,
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "creating, copying, regenerating, restoring, or promoting any report",
+    "repairing or modifying any test expectation",
+    "refreshing hashes or authority bindings",
+    "changing scientific content",
+    "V2 enrollment or regeneration",
+    "registry rotation",
+    "Lean activity",
+    "scalar-Yukawa or Maxwell-Dirac progression",
+    "scientific calculation",
+    "integration into dirty main",
+    "automatic successor cycle"
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,99 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_IMPLEMENTATION_PACKET_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:37:33Z",
+  "target": "implement_repository_historical_report_aggregate_contract_decomposition_v0_once",
+  "status": "AUTHORIZED_ONE_BOUNDED_AGGREGATE_TEST_IMPLEMENTATION",
+  "accepted_lineage": {
+    "accepted_commit": "a619ce52e62cb6806e9861df8367c6a8dd0f5c0f",
+    "accepted_result_review": "formal/docs/release/REPOSITORY_HISTORICAL_REPORT_AGGREGATE_CONTRACT_DECOMPOSITION_RESULT_REVIEW_20260722_v0.json",
+    "accepted_result_review_sha256": "536c47e804b8be6adde729d72c5bba4fb498d8f75472c3e1c3de3670561a354e"
+  },
+  "selected_test_file": {
+    "path": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py",
+    "git_blob_oid_before": "14ade32d677b2416c5eb09d5575b1ab513b0a72c",
+    "sha256_before": "8dbe535e50a125e0df84ee9d98cf7bff63fc0872f10e969866776649f58c7654",
+    "authorized_modification_count": 1
+  },
+  "selected_nodes": [
+    {
+      "node": "test_all_remediation_reports_exist",
+      "accepted_disposition": "RETIRE_RETENTION_EXPIRED_EXPECTATION",
+      "required_replacement": "EXPLICIT_REVIEWED_RETIREMENT_MARKER_BOUND_TO_ALL_NINETEEN_IDENTITIES"
+    },
+    {
+      "node": "test_all_report_controls_preserve_invariance",
+      "accepted_disposition": "SPLIT_FROM_AGGREGATE_CONTRACT",
+      "required_replacement": "EXPLICIT_NINETEEN_IDENTITY_TO_LOCAL_SEMANTIC_GATE_ROUTING_CONTRACT_WITHOUT_REPORT_READS"
+    }
+  ],
+  "identity_partition": {
+    "total": 19,
+    "retention_expired": 19,
+    "historical_noncurrent": 19,
+    "current_critical": 0,
+    "ignored_absent_never_tracked": 15,
+    "committed_historical_records": 4,
+    "fixture_pattern_already_proven": 1,
+    "generator_provenance_blocked": 14
+  },
+  "permitted_implementation": [
+    "Replace the all-reports-exist node with an explicit retirement contract documenting the accepted lifecycle classification and disposition.",
+    "Replace the monolithic report-reading invariance node with a routing contract covering exactly nineteen distinct identity-local semantic gate files.",
+    "Require each routed local gate source to exist and name its selected report identity, without executing or bypassing its semantic assertions.",
+    "Retain all other test functions in the selected file unchanged.",
+    "Retain every other identity-local test file byte-unchanged.",
+    "Run the four committed T15 through T18 identity-local gates and require them to pass.",
+    "Verify that all fifteen ignored report paths remain absent in clean validation checkouts.",
+    "Preserve the accepted baseline temporary-fixture gate without modification or scale."
+  ],
+  "authorized_cycle": {
+    "repair_implementation_cycles": 1,
+    "independent_result_reviews": 1,
+    "test_files_modified": 1,
+    "selected_test_nodes_replaced": 2,
+    "identity_local_test_files_modified": 0,
+    "generator_files_modified": 0,
+    "fixtures_created": 0,
+    "reports_created": 0,
+    "scientific_actions": 0,
+    "lean_actions": 0,
+    "automatic_successor_actions": 0
+  },
+  "acceptance_requirements": {
+    "aggregate_existence_expectation": "RETIRED_WITH_REVIEWED_RATIONALE",
+    "aggregate_invariance_coupling": "DECOMPOSED",
+    "identity_local_semantic_routes": 19,
+    "identity_local_semantic_controls": "PRESERVED",
+    "committed_t15_t18_local_gates": "PASS",
+    "ignored_reports_created": 0,
+    "dirty_main_report_reads": 0,
+    "tracked_checkout_after_validation": "CLEAN",
+    "unexpected_untracked_source": 0,
+    "scientific_and_authority_fields": "UNCHANGED",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "independent_review_required": true
+  },
+  "output_containment": {
+    "maintenance_root": ".toe-recovery/custody-v0/historical-report-aggregate-contract-decomposition-implementation-v0",
+    "dirty_main": "NO_REPORT_CONTENT_ACCESS; BYTE_CUSTODY_HASHING_ONLY",
+    "formal_output_reports": "WRITE_PROHIBITED",
+    "fixture_generation": "PROHIBITED"
+  },
+  "prohibited_actions": [
+    "converting any additional historical identity into a fixture",
+    "copying or reading dirty-main report contents",
+    "modifying a generator",
+    "creating or regenerating a report",
+    "altering or retiring an identity-local semantic obligation",
+    "changing scientific outputs or authority",
+    "registry rotation",
+    "V2 enrollment",
+    "repairing the broader historical-report cohort",
+    "Lean activity",
+    "scientific execution",
+    "automatic successor cycle"
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

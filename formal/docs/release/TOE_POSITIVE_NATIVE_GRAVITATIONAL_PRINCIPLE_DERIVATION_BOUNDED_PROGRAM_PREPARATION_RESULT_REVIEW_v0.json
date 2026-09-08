@@ -1,0 +1,52 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T19:15:00Z",
+  "checks": {
+    "all_authority_and_source_hashes_reproduce": true,
+    "deep_review_selection_is_deterministic_and_outcome_blind": true,
+    "five_stage_order_matches_the_selected_positive_principle_route": true,
+    "mandatory_exit_is_exact_and_nonexecuting": true,
+    "no_action_can_be_constructed_before_a_passed_constraint_power_test": true,
+    "no_action_or_principle_is_selected_by_the_proposal": true,
+    "no_evidence_can_self_attest_or_promote_itself": true,
+    "no_program_installation_or_stage_open_is_present": true,
+    "no_repair_or_subsidiary_scientific_target_is_permitted": true,
+    "principle_is_distinguished_from_evaluation_requirement_baseline_and_firewall": true,
+    "program_terminal_outcomes_are_closed": true,
+    "result_tokens_have_fixed_lifecycle_mappings": true,
+    "source_domains_cover_the_selected_architectural_inputs": true,
+    "stage_4_derives_at_most_a_permitted_action_class": true,
+    "stage_5_can_only_prepare_a_separate_handoff": true,
+    "workload_caps_are_finite": true
+  },
+  "failed_checks": [],
+  "independent_reproduction": {
+    "mandatory_exit_target": "close_toe_positive_native_gravitational_principle_derivation_v0_after_bounded_result_v0",
+    "maximum_candidate_principle_families": 16,
+    "maximum_source_artifacts_for_deep_review": 128,
+    "principle_source_domain_count": 7,
+    "program_terminal_outcome_count": 5,
+    "proposed_program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+    "repair_attempt_count": 0,
+    "stage_count": 5
+  },
+  "nonclaim_boundary": [
+    "The proposal does not install or open the positive-principle program.",
+    "The proposal does not select, derive, or validate a native gravitational principle.",
+    "The proposal does not construct, select, vary, or calculate a gravitational action.",
+    "Einstein-Hilbert gravity remains a provisional baseline and quadratic gravity remains a reference control.",
+    "The C_k firewall remains an exclusion rule rather than a physical action term.",
+    "Any Stage 5 handoff would require separate authority and cannot open automatically."
+  ],
+  "program_installed": false,
+  "proposal_only": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+    "sha256": "bb5bf184bdddd796551010a25dc20e78a1b9630db6607a7a63dc26287054a0a5"
+  },
+  "schema_id": "toe.positive_native_gravitational_principle_derivation.bounded_program_preparation_result_review.v0",
+  "scientific_result_claimed": false,
+  "scientific_stage_opened": false,
+  "verdict": "ACCEPT_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_PROGRAM_PROPOSAL_AWAIT_SEPARATE_INSTALLATION_AUTHORITY"
+}

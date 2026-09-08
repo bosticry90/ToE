@@ -1,0 +1,398 @@
+{
+  "authority": {
+    "consumed_selection_verdict": "SELECTED_CK_FIREWALL_AUTHORITY_RECONCILIATION_PREPARATION",
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_RESPONSE_SELECTION_20260717_v0.json",
+        "sha256": "916daaa79809a0f7d9ca993e78504b41c995a8c2a0204b94c22d863ff302dac7"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "78aea408a5cf0838a63cd13d73e2c07ed716f2d2863daefe11eccfd7c0582860"
+      },
+      {
+        "relative_path": "formal/docs/release/PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "b114e5b8764182a6b166eae9aac1a3b9dee3604cc0fe15f24321657b2e9bd48e"
+      },
+      {
+        "relative_path": "formal/docs/release/PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "6dfacff078b2ace3b4652aff027f38bd28b2a75916bdb45389dddb1272073c86"
+      },
+      {
+        "relative_path": "formal/docs/release/PHI_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260619_v0.json",
+        "sha256": "a5c8b0542f6e06193886e3c9d9e64d261a560d0e3fbbf545a9d3498fb51435ee"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260622_v0.json",
+        "sha256": "6fa377fb1da03ba4c9f4dc5928a63f3d8eb9f8c07470e00a478520b4e759fedf"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260622_v0.json",
+        "sha256": "2e8043663f6781564c2c6f31fade5161142ffa22a86bbcd06d85b7f640c0cd11"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260623_v0.json",
+        "sha256": "20f82fd70a0139ec709d57b6bc02119246229491a1207b15883339353fedfca3"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json",
+        "sha256": "122943f1fbf55720ee78b1d9df662f499cefe91c625f0b6ffe1a595b2a581c16"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_20260626_v0.json",
+        "sha256": "54eae29c2e3567a10b0c1b9163b40c1b5db0d5dcc32ec7ba4f1e5e0f95d099a1"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "836adb2246561d9873ebefa7281ed7d76a3f9973dcf87b0a7cd2b70fcbc819a7"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md",
+        "sha256": "664abff716240aa93443578864f83e39c7d62ee483bf3698d924992419a0e9f8"
+      },
+      {
+        "relative_path": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+        "sha256": "b491ab9f0b93f56cdcb705b568a24dd65ed5d52980c37741f09bbc1dab511a5d"
+      },
+      {
+        "relative_path": "formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md",
+        "sha256": "5d33980b6668e17bbabb86ca162680d517030a98541583956f382e2a82ce37b7"
+      },
+      {
+        "relative_path": "formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md",
+        "sha256": "f08adcd5dd4b91f05fcc1469152170d26074b903adf928f92438ea898453aa85"
+      },
+      {
+        "relative_path": "formal/docs/lanes/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_20260717_v0.md",
+        "sha256": "59d325ce8412c799508b13dfebfc5a93ad6a86f62102cdf1ce43b59734519523"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0.py",
+      "sha256": "d87eae3170390dea1642bd3c21799ed68803043d72505dcdaa0c1b89d6103458"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0.py",
+      "sha256": "10219a01f4e1dbb42956983d3c6c863bca893a711bac17225fe9118e6dd95193"
+    }
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Prepared authority-reconciliation contract only. One original action, eleven accepted firewall authorities, four existing authority-rule surfaces, an evidence hierarchy, and four outcomes are frozen for independent review. No precedence decision, action mutation, successor action, C_k dynamics, variation, GR recovery, promotion, empirical result, or automation is created.",
+  "downstream_gates": {
+    "Dirac_variation": "CLOSED_NOT_EVALUATED",
+    "Rep32_relationship": "CLOSED_NOT_EVALUATED",
+    "boundary_sufficiency": "CLOSED_NOT_EVALUATED",
+    "dimensions_and_constants": "CLOSED_NOT_EVALUATED",
+    "gravitomagnetic_recovery": "BLOCKED_FIELD_EQUATION_SURFACE_FAILURE",
+    "statistical_sector": "CLOSED_NOT_EVALUATED",
+    "stress_energy_generation": "CLOSED_NOT_EVALUATED",
+    "tensor_field_equation": "CLOSED_NOT_DERIVED",
+    "tetrad_and_spin_connection": "CLOSED_NOT_EVALUATED"
+  },
+  "existing_authority_rules": {
+    "general_later_timestamp_wins_rule_bound": false,
+    "new_precedence_rule_may_be_invented_by_review": false,
+    "rows": [
+      {
+        "applicability": "CANONICAL_PROMOTION_ONLY_NOT_NONCANONICAL_V0_AMENDMENT",
+        "relative_path": "formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md",
+        "rule_id": "TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0"
+      },
+      {
+        "applicability": "CANONICAL_MUTATION_AND_FAIL_CLOSED_CONTRADICTION_REVIEW",
+        "relative_path": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+        "rule_id": "PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0"
+      },
+      {
+        "applicability": "EXPLICIT_SUPERSEDING_PATH_RULE_SCOPED_TO_GOVERNANCE_AND_GATES",
+        "relative_path": "formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md",
+        "rule_id": "DEPRECATED_GATE_RETIREMENT_POLICY_v0"
+      },
+      {
+        "applicability": "RESEARCH_MODE_CANNOT_MUTATE_CANONICAL_AUTHORITY",
+        "relative_path": "formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md",
+        "rule_id": "RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0"
+      }
+    ],
+    "rule_count": 4
+  },
+  "explicit_token_scan": {
+    "classification": "PREPARATION_SCAN_NOT_PRECEDENCE_RULING",
+    "patterns": [
+      "toe_candidate_master_action_v0",
+      "supersed",
+      "amend",
+      "withdraw",
+      "replaces the",
+      "replaced by",
+      "prior multiplier",
+      "earlier action",
+      "historical action",
+      "no future candidate action",
+      "all action surfaces"
+    ],
+    "preparation_finding": "NO_EXPLICIT_SUPERSESSION_TOKEN_FOUND_IN_PREPARATION_SCAN",
+    "rows": [
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "PHI_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS"
+      },
+      {
+        "match_count": 0,
+        "matches": {},
+        "source_id": "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_RESULT_REVIEW"
+      }
+    ],
+    "source_count": 11,
+    "total_match_count": 0
+  },
+  "firewall_corpus": {
+    "controlling_source_count": 11,
+    "rows": [
+      {
+        "captured_at_utc": "2026-06-18T00:00:00Z",
+        "effect": "NO_CONCRETE_CK_SELECTED_CK_INACTIVE_UNDEFINED_NO_VARIATION",
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "scope": "CROSS_FAMILY_OPTION_INDEX",
+        "source_id": "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-18T00:00:00Z",
+        "effect": "ADMISSIBILITY_ONLY_NO_ACTION_VARIATION_OR_PROMOTION",
+        "relative_path": "formal/docs/release/PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "scope": "PHI_SOURCE_LANE",
+        "source_id": "PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-18T00:00:00Z",
+        "effect": "ADMISSIBILITY_ONLY_NO_ACTION_VARIATION_OR_PROMOTION",
+        "relative_path": "formal/docs/release/PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "scope": "PHI_BRIDGE_LANE",
+        "source_id": "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-19T00:00:00Z",
+        "effect": "ADMISSIBILITY_ONLY_NO_ACTION_VARIATION_OR_PROMOTION",
+        "relative_path": "formal/docs/release/PHI_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260619_v0.json",
+        "scope": "PHI_TRANSPORT_LANE",
+        "source_id": "PHI_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-22T00:00:00Z",
+        "effect": "ADMISSIBILITY_ONLY_ACTION_EMBEDDING_NOT_SELECTED",
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260622_v0.json",
+        "scope": "A_SOURCE_LANE",
+        "source_id": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-22T00:00:00Z",
+        "effect": "ADMISSIBILITY_ONLY_ACTION_EMBEDDING_NOT_SELECTED_PENALTY_UNLICENSED",
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260622_v0.json",
+        "scope": "A_BRIDGE_LANE",
+        "source_id": "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-23T00:00:00Z",
+        "effect": "ADMISSIBILITY_ONLY_ACTION_EMBEDDING_NOT_SELECTED_PENALTY_UNLICENSED",
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260623_v0.json",
+        "scope": "A_TRANSPORT_LANE",
+        "source_id": "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-25T00:00:00Z",
+        "effect": "ADMISSIBILITY_ONLY_MULTIPLIER_BLOCKED_PENALTY_UNLICENSED_NO_VARIATION",
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json",
+        "scope": "PSI_A_EXCHANGE_LANE",
+        "source_id": "TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-26T00:00:00Z",
+        "effect": "ALL_CK_FAMILIES_ADMISSIBILITY_ONLY_NO_EMBEDDING_OR_VARIATION",
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "scope": "AGGREGATE_CK_FAMILY_STATUS",
+        "source_id": "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW"
+      },
+      {
+        "captured_at_utc": "2026-06-26T00:00:00Z",
+        "effect": "FIREWALL_RETAINED_WORKING_FORM_NONPROMOTION_GAP_REVIEW_SELECTED",
+        "relative_path": "formal/docs/release/MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_20260626_v0.json",
+        "scope": "AGGREGATE_MASTER_ACTION_SELECTOR",
+        "source_id": "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS"
+      },
+      {
+        "captured_at_utc": "2026-06-26T00:00:00Z",
+        "effect": "ALL_CK_FAMILIES_ADMISSIBILITY_ONLY_NO_EMBEDDING_OR_VARIATION",
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "scope": "AGGREGATE_CK_GAP_REVIEW",
+        "source_id": "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_RESULT_REVIEW"
+      }
+    ],
+    "source_type": "ACCEPTED_RESULT_REVIEWS_AND_AGGREGATE_STATUS_SELECTION_SURFACES",
+    "unreviewed_preparation_packets_are_independent_controlling_authority": false
+  },
+  "hard_stop": {
+    "action_mutation_authorized_now": false,
+    "only_independent_review_next": true,
+    "precedence_ruling_authorized_now": false,
+    "stopping_rule": "Freeze one original action, eleven firewall authorities, four existing authority rules, one evidence hierarchy, four outcomes, and stop for independent reconciliation review."
+  },
+  "historical_and_successor_boundaries": {
+    "C_k_may_be_declared_inactive_inside_v0": false,
+    "historical_v0_byte_preserved": true,
+    "lambda_k_zero_is_resolution": false,
+    "possible_successor_initial_classification": "WORKING_FORM_NONCANONICAL_UNPROMOTED_UNVARIED",
+    "successor_created_by_packet": false,
+    "successor_inherits_v0_variation_or_recovery_claims": false,
+    "v0_may_be_silently_modified": false
+  },
+  "independent_review_acceptance_criteria": [
+    "original action source, class, displayed term, hash, and missing internal date reproduce",
+    "all eleven controlling firewall sources and hashes reproduce",
+    "local versus aggregate scope is checked for every firewall source",
+    "explicit token scan corpus and patterns reproduce",
+    "all four authority-rule surfaces and applicability limits reproduce",
+    "chronology remains provenance context only",
+    "exactly one outcome follows from existing authority rather than new policy",
+    "historical v0 remains unchanged",
+    "no successor action or downstream calculation is created"
+  ],
+  "insufficient_evidence_alone": [
+    "later date",
+    "filename order",
+    "local-lane admissibility decision",
+    "repeated nonpromotion language",
+    "scientific convenience",
+    "lambda_k=0 workaround",
+    "inferred preference for external admissibility"
+  ],
+  "original_action": {
+    "authority_class": "P_POLICY_WORKING_FORM_NONCANONICAL_UNPROMOTED",
+    "complete_C_k_and_lambda_dynamical_contract_supplied": false,
+    "displayed_term": "sum_k lambda_k C_k(g,psi,A,phi,rho)",
+    "internal_captured_date": "NOT_DECLARED",
+    "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+    "repository_history_is_precedence_authority": false,
+    "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867",
+    "source_id": "TOE_CANDIDATE_MASTER_ACTION_v0",
+    "term_presented_as": "SEAM_COMPATIBILITY_BRIDGE_ADMISSIBILITY_TRANSPORT_CONSISTENCY_MULTIPLIER_TERM"
+  },
+  "precedence_evidence_hierarchy": [
+    "explicit source-specific supersession, amendment, withdrawal, replacement, or deprecation",
+    "existing authority rule with declared scope demonstrably covering the candidate action",
+    "current-authority or promotion record explicitly registering and linking a successor",
+    "aggregate firewall scope explicitly governing all candidate action surfaces and the earlier multiplier formulation"
+  ],
+  "resolution_contract": {
+    "allowed_outcomes": [
+      "CK_FIREWALL_EXPLICITLY_SUPERSEDES_ACTION_TERM",
+      "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY",
+      "CK_DYNAMICAL_EMBEDDING_REQUIRES_NEW_THEORY_SELECTION",
+      "BLOCKED_AUTHORITY_PRECEDENCE_UNRESOLVED"
+    ],
+    "exactly_one_terminal_outcome_required": true,
+    "rows": [
+      {
+        "maximum_next_authority": "prepare_TOE_CANDIDATE_MASTER_ACTION_v1_without_Ck_dynamics",
+        "outcome": "CK_FIREWALL_EXPLICITLY_SUPERSEDES_ACTION_TERM",
+        "required_evidence": "explicit supersession/amendment path or already-established applicable authority rule"
+      },
+      {
+        "maximum_next_authority": "select_next_scientific_target_with_native_continuum_action_not_defined",
+        "outcome": "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY",
+        "required_evidence": "authority establishes blueprint or sector-inventory status rather than one executable functional"
+      },
+      {
+        "maximum_next_authority": "select_whether_to_open_new_ck_dynamical_theory_route",
+        "outcome": "CK_DYNAMICAL_EMBEDDING_REQUIRES_NEW_THEORY_SELECTION",
+        "required_evidence": "displayed term remains intended and no authority removes it"
+      },
+      {
+        "maximum_next_authority": "select_fresh_scientific_theory_decision_after_unresolved_precedence",
+        "outcome": "BLOCKED_AUTHORITY_PRECEDENCE_UNRESOLVED",
+        "required_evidence": "conflict persists with no explicit supersession or applicable precedence rule"
+      }
+    ]
+  },
+  "schema_id": "TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_20260717_v0",
+  "scientific_question": "Does explicit project authority establish that the later admissibility-only C_k firewall removed the displayed multiplier term from the intended dynamical theory, or does the displayed master action remain unresolved and therefore nonvariational?",
+  "scope": {
+    "C_k_dynamical_route_selected": false,
+    "C_k_embedded_or_varied": false,
+    "Einstein_equation_imported": false,
+    "GR_pillar_completed": false,
+    "action_deleted_or_amended": false,
+    "action_projected_or_deprecated": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "gravitomagnetic_route_reopened": false,
+    "lambda_k_set_to_zero": false,
+    "master_action_promoted": false,
+    "metric_or_tetrad_variation_executed": false,
+    "packet_preparation_only": true,
+    "precedence_ruling_executed": false,
+    "repository_migration_executed": false,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "successor_action_created": false,
+    "successor_action_prepared": false
+  },
+  "selected_next_target": "review_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_AUTHORITY_RECONCILIATION_REVIEW_ONLY",
+  "target": "prepare_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

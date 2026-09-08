@@ -1,0 +1,78 @@
+{
+  "activation_gate": {
+    "bounded_scope_and_stopping_rule_required": true,
+    "corrected_action_equations_pinned_separately": true,
+    "independent_result_review_required": true,
+    "operator_domain_and_variation_contract_required": true,
+    "priority_selector_required": true,
+    "quantitative_observable_route_required": true,
+    "thermodynamics_version_of_record_required_for_equation_level_use": true
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "classification": [
+    "RELATED_WORK",
+    "HIGH_RELEVANCE",
+    "NOT_ADOPTED",
+    "DORMANT_COMPARATOR"
+  ],
+  "comparator_questions": [
+    "What exactly are the physical and induced metric operators?",
+    "Is the logarithm and trace well-defined over the stated domain?",
+    "How are positivity and invertibility guaranteed?",
+    "What are the independent degrees of freedom?",
+    "Does variation introduce ghosts or unstable higher-derivative modes?",
+    "How precisely does the Einstein-Hilbert action emerge?",
+    "How are conventional matter actions recovered?",
+    "Is stress-energy conservation automatic?",
+    "What is the status and independent content of the G-field?",
+    "How does the effective dark-energy term evolve?",
+    "Are background and cosmological perturbations stable?",
+    "What observations distinguish the theory from GR plus Lambda?",
+    "Could GQRE replace, clarify, or rule out the present statistical term?",
+    "Does GfE provide a principled dynamical realization of any seam concept?",
+    "What parts, if any, can be formalized as a bounded ToE candidate route?"
+  ],
+  "formal_impact": {
+    "C_k_action_embedding_authorized": false,
+    "GfE_adopted": false,
+    "active_lane_created": false,
+    "empirical_support_created": false,
+    "master_action_promoted": false,
+    "pillar_or_seam_closed": false,
+    "scientific_status_changed": false,
+    "statistical_term_changed": false,
+    "theorem_discharged": false
+  },
+  "primary_sources": [
+    {
+      "correction_boundary": "APS_RECORD_REPORTS_CORRECTIONS_2025_07_14_AND_2026_03_19",
+      "doi": "10.1103/PhysRevD.111.066001",
+      "role": "FOUNDATIONAL_GFE_ACTION",
+      "source_status": "PRIMARY_PEER_REVIEWED_PAPER_AND_PREPRINT_PINNED",
+      "url": "https://doi.org/10.1103/PhysRevD.111.066001",
+      "arxiv_url": "https://arxiv.org/abs/2408.14391"
+    },
+    {
+      "doi": "10.1103/26kn-thgp",
+      "role": "GFE_THERMODYNAMICS_AND_FRW_COSMOLOGY",
+      "source_status": "PRIMARY_ACCEPTED_PAPER_AND_PREPRINT_PINNED_VERSION_OF_RECORD_PENDING",
+      "url": "https://doi.org/10.1103/26kn-thgp",
+      "arxiv_url": "https://arxiv.org/abs/2510.22545"
+    }
+  ],
+  "r13_boundary": {
+    "canonical_robustness": "NUMERICALLY_BLOCKED",
+    "lane_reopened": false,
+    "lane_status": "TERMINATED",
+    "root_mechanism": "UNRESOLVED_EVIDENCE_SEMANTICS_BLOCK"
+  },
+  "registry_entry_id": "GFE_RELATIVE_ENTROPY_GRAVITY_COMPARATOR",
+  "schema_id": "GFE_RELATIVE_ENTROPY_GRAVITY_COMPARATOR_20260717_v0",
+  "terminology": {
+    "accepted_abbreviation": "GQRE",
+    "expanded_name": "Geometric Quantum Relative Entropy",
+    "qgre_alias_adopted": false
+  },
+  "verdict": "REGISTERED_RELATED_WORK_HIGH_RELEVANCE_NOT_ADOPTED_DORMANT"
+}
+

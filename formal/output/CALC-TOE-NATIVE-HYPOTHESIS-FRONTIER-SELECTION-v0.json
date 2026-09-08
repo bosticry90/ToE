@@ -1,0 +1,312 @@
+{
+  "authority": {
+    "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_20260729_v0.json",
+    "review_path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json",
+    "review_sha256": "2aeb703ec6daf1e6557656e692c8ae97697eab43d44a32b76ea0d1b7939eaf12",
+    "sha256": "95624cb21044e916578080cd14d359a3a77b218f21faf557ce912c4112d538c0"
+  },
+  "calculation_id": "CALC-TOE-NATIVE-HYPOTHESIS-FRONTIER-SELECTION-v0",
+  "candidate_matrix": [
+    {
+      "candidate_path": "CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION",
+      "decision": "SELECT",
+      "evidence_status": "CANDIDATE_OBJECTS_EXIST_BUT_OPERATIONAL_ONTOLOGY_AND_CROSSWALK_ARE_UNRESOLVED",
+      "native_distance": "DIRECT_NATIVE_HYPOTHESIS_ADJUDICATION",
+      "native_hypothesis_id": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+      "readiness": "READY_FOR_BOUNDED_ONTOLOGY_ADJUDICATION_ONLY",
+      "reason": "The repository preserves coherence as a distinctive candidate concept, but the failed real-scalar route shows that its operational meaning and mathematical type remain the earliest unresolved native dependency.",
+      "selection_status": "SELECTED"
+    },
+    {
+      "candidate_path": "MASTER_ACTION_RECONCILIATION",
+      "decision": "DEFER",
+      "evidence_status": "SCHEMATIC_NONCANONICAL_NONEXECUTABLE_WITH_CK_ROLE_TENSION",
+      "native_distance": "DOWNSTREAM_OF_ONTOLOGY",
+      "readiness": "BLOCKED_BY_NATIVE_OBJECT_AND_PRINCIPLE_SELECTION",
+      "reason": "The candidate master action is explicitly noncanonical, and neither a native coherence representation nor a native gravitational principle has been selected.",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "candidate_path": "NATIVE_SEAM_ADJUDICATION",
+      "decision": "DEFER",
+      "evidence_status": "ZERO_ELIGIBLE_SEAMS_IN_BOUND_READINESS_SNAPSHOT",
+      "native_distance": "DOWNSTREAM_OF_ONTOLOGY_AND_ACTION",
+      "readiness": "BLOCKED_BY_UNDEFINED_NATIVE_ENDPOINTS",
+      "reason": "The bound 2026-07-09 readiness snapshot reports no seam eligible for exploratory entry, and a native seam cannot be closed before the native objects on both sides are defined.",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "candidate_path": "PILLAR_RECOVERY",
+      "decision": "SUPPORTING_WORK_ONLY",
+      "evidence_status": "KNOWN_PHYSICS_CONTROL_AND_PARTIAL_READINESS_AVAILABLE",
+      "native_distance": "DOWNSTREAM_OR_CONTROL_SUPPORT",
+      "readiness": "REFERENCE_BASELINES_AVAILABLE",
+      "reason": "Known-physics pillar controls remain useful, but without a native field content or action they cannot yet adjudicate what is distinctive about the ToE.",
+      "selection_status": "NOT_SELECTED"
+    }
+  ],
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_boundary": {
+    "ccft_validated": false,
+    "closed_programs_reopened": false,
+    "coherence_field_type_selected": false,
+    "coherence_representation_selected": false,
+    "empirical_claim_made": false,
+    "full_toe_claim_made": false,
+    "master_action_promoted": false,
+    "native_action_selected": false,
+    "native_field_content_selected": false,
+    "native_interaction_selected": false,
+    "new_attempt_opened": false,
+    "new_bounded_program_installed": false,
+    "pillar_or_seam_calculation_executed": false
+  },
+  "closed_programs_reopened": false,
+  "dependency_ordering": {
+    "parallel_support_only": [
+      "KNOWN_PHYSICS_PILLAR_BASELINE_CATALOG",
+      "UNIT_AND_CONVENTION_TOOLING",
+      "STANDARD_COMPARATOR_PRESERVATION"
+    ],
+    "primary_sequence": [
+      "CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION",
+      "MINIMAL_NATIVE_FIELD_OR_NONFIELD_CONTENT_AND_SYMMETRIES",
+      "MASTER_ACTION_RECONCILIATION",
+      "NATIVE_SEAM_ADJUDICATION",
+      "PILLAR_RECOVERY_AND_BENCHMARKING",
+      "OBSERVABLE_AND_DISTINCTIVENESS"
+    ]
+  },
+  "evidence": {
+    "bounded_governance_validator": {
+      "path": "formal/python/tools/bounded_program_governance.py",
+      "sha256": "50574fd8d2c167011838906695f6cc1dc3f123f8076f4b0e9475c689fd47d120"
+    },
+    "candidate_master_action": {
+      "path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+    },
+    "ccft_discriminator_map": {
+      "path": "formal/docs/paper/CCFT_EMPIRICAL_DISCRIMINATOR_CANDIDATE_MAP_v0.md",
+      "sha256": "dc2d78bc9c663d5e4d87e3d3922798ec940849581f46a0ffc25712e91e44d2ac"
+    },
+    "ccft_to_toe_object_crosswalk": {
+      "path": "formal/docs/paper/CCFT_TO_TOE_OBJECT_CROSSWALK_v0.md",
+      "sha256": "d833bbe2933de80effb2ee425e59d9c29078532c8f8ab65663327e5f0d9a96ce"
+    },
+    "ccft_variational_program": {
+      "path": "formal/docs/paper/CCFT_FULL_VARIATIONAL_ACTION_PROGRAM_v0.md",
+      "sha256": "1320659c003c12776ca0d650d39ff2c54043b4c6ba9438fbb7a6dda80216db52"
+    },
+    "coherence_admissibility_hypothesis": {
+      "path": "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+      "sha256": "1603011e475595cce40f6e36310198952aa48b2fe351cba129ff065caf05b5ec"
+    },
+    "master_action_ck_firewall_review": {
+      "path": "formal/docs/release/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_REVIEW_20260717_v0.json",
+      "sha256": "66ed74e9264c82eaa9715cc0369020f93b7956f9f3aa2f9b8b6abb5141fe2e64"
+    },
+    "master_action_dependency_gap_review": {
+      "path": "formal/docs/release/MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_20260503_v0.json",
+      "sha256": "e12ca1bfb8ba1bd4b605f58e96fe243978ddbaeccc1fb302dcb4148ba6bcb0c5"
+    },
+    "native_gravity_action_selection_review": {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.json",
+      "sha256": "1faacbd470ef5feed6aebb4dfad34e2e5a9214fa2e31a79d57c375a08f4d9051"
+    },
+    "native_surrogate_closeout": {
+      "path": "formal/output/CALC-TOE-NATIVE-SURROGATE-V0-BOUNDED-CLOSEOUT-v0.json",
+      "sha256": "ec270a6e7f23f06dd66162c5f4deee4e654e931bf158fde4db1444e4a578f3e9"
+    },
+    "native_surrogate_program_manifest": {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_NATIVE_SURROGATE_V0_MANIFEST_v1.json",
+      "sha256": "35eecf20a82ac68b4fcd59ddd41cc71df09fa0845b5d3eeced85ecef0d7ea3af"
+    },
+    "pillar_seam_readiness": {
+      "path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+      "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
+    },
+    "provisional_matter_sector": {
+      "path": "formal/toe_formal/ToeFormal/Derivation/QFTGRToeMatterSectorCandidateSelectionPacket.lean",
+      "sha256": "802d835001b86be3aa0c10fe60269302ffef92412785626763f99505c9f3b484"
+    },
+    "quadratic_program_manifest": {
+      "path": "formal/docs/release/bounded_program_manifests/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_MANIFEST_v1.json",
+      "sha256": "b4ea5f2ba014c47b4b66adb49ea70661c95a1a5915d1ebc428ee115588df4f54"
+    },
+    "real_scalar_representation_attempt": {
+      "path": "formal/output/CALC-TOE-NATIVE-COHERENCE-REPRESENTATION-v0.json",
+      "sha256": "722d51d76792769e2fea7191eb31b1e7e7f944534a4deedeae5892b5256646db"
+    },
+    "real_scalar_representation_review": {
+      "path": "formal/docs/release/TOE_NATIVE_COHERENCE_REPRESENTATION_V0_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "4d6271e5688352a96ce9b7ab1abadd669e167394d337f1b5db37d5dd3934ec38"
+    },
+    "selector_authority": {
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_20260729_v0.json",
+      "sha256": "95624cb21044e916578080cd14d359a3a77b218f21faf557ce912c4112d538c0"
+    },
+    "selector_authority_review": {
+      "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0.json",
+      "sha256": "2aeb703ec6daf1e6557656e692c8ae97697eab43d44a32b76ea0d1b7939eaf12"
+    }
+  },
+  "evidence_checks": {
+    "ck_action_conflict_is_only_schematically_bounded": true,
+    "coherence_is_candidate_not_validated": true,
+    "later_ccft_packets_remain_planning_only": true,
+    "master_action_is_noncanonical": true,
+    "matter_sector_is_provisional_not_native": true,
+    "native_gravity_action_is_not_selected": true,
+    "native_surrogate_v0_remains_closed": true,
+    "no_seam_is_ready_for_exploratory_entry": true,
+    "object_crosswalk_is_mapping_only": true,
+    "proposed_program_not_installed": true,
+    "prospective_lifecycle_support_is_not_yet_generic": true,
+    "quadratic_program_remains_closed_reference_control": true,
+    "real_scalar_route_blocked_without_continuum_crosswalk": true,
+    "selector_authority_is_current_or_consumed_once": true
+  },
+  "evidence_findings": {
+    "accepted_complex_field_crosswalk_exists": false,
+    "accepted_real_scalar_crosswalk_exists": false,
+    "ccft_status": "CANDIDATE_MESOSCOPIC_LINKAGE_LAYER_ONLY",
+    "coherence_operational_ontology_selected": false,
+    "executable_native_master_action_exists": false,
+    "exploratory_seam_entry_eligible_count_in_bound_readiness_snapshot": 0,
+    "level_5_seam_admissible_count_in_bound_readiness_snapshot": 0,
+    "native_gravitational_principle_selected": false,
+    "native_matter_sector_selected": false
+  },
+  "evidence_tensions": [
+    {
+      "finding": "The historical working-form action displays multiplier terms for C_k while accepted later policy keeps every C_k family admissibility-only and refuses action variation.",
+      "selection_effect": "MASTER_ACTION_RECONCILIATION_IS_DOWNSTREAM_AND_NOT_SELECTED",
+      "status": "RESOLVED_ONLY_TO_SCHEMATIC_NONEXECUTABLE_STATUS",
+      "tension_id": "MASTER_ACTION_CK_ACTION_FIREWALL_CONFLICT"
+    },
+    {
+      "finding": "Historical CCFT candidate prose assigns distinct amplitude and phase-gradient roles to a complex field, while the repository also uses scalar symbols for provisional matter and the failed real-scalar coherence proposal.",
+      "selection_effect": "ONTOLOGY_AND_SYMBOL_ROLE_ADJUDICATION_REQUIRED_BEFORE_FIELD_SELECTION",
+      "status": "UNRESOLVED",
+      "tension_id": "CCFT_FIELD_ROLE_COLLISION"
+    },
+    {
+      "finding": "Candidate CCFT objects do not yet have an accepted transport into an executable native master-action field inventory.",
+      "selection_effect": "MASTER_ACTION_RECONCILIATION_MUST_FOLLOW_OBJECT_SELECTION",
+      "status": "UNRESOLVED",
+      "tension_id": "CCFT_TO_MASTER_ACTION_FIELD_INVENTORY_GAP"
+    },
+    {
+      "finding": "Early roadmap population prose predates later planning artifacts and cannot serve as current completion evidence.",
+      "selection_effect": "DO_NOT_USE_EARLY_POPULATION_COUNT_AS_CURRENT_STATUS",
+      "status": "STALE_METADATA_ONLY",
+      "tension_id": "CCFT_ROADMAP_POPULATION_METADATA_STALE"
+    },
+    {
+      "finding": "The preserved complex-field description remains historical candidate material and is not native scientific authority.",
+      "selection_effect": "NO_REAL_OR_COMPLEX_FIELD_MAY_BE_SELECTED_BY_THIS_SELECTOR",
+      "status": "PROVENANCE_BOUNDARY",
+      "tension_id": "ARCHIVED_COMPLEX_FIELD_NOT_ACCEPTED_NATIVE_AUTHORITY"
+    }
+  ],
+  "execution_target": "select_next_native_toe_hypothesis_for_bounded_adjudication_v0",
+  "future_bounded_program_proposal": {
+    "authorized": false,
+    "authorized_stage_count_proposed": 5,
+    "installation_entry_requirements": {
+      "block_criterion_required": true,
+      "disfavor_criterion_required": true,
+      "exactly_one_coherence_claim_frozen": true,
+      "failure_to_freeze_one_claim_closes_preparation": true,
+      "scientific_authority_required_after_governance_enablement": true,
+      "support_criterion_required": true
+    },
+    "installed": false,
+    "mandatory_exit_target_proposed": "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+    "no_subsidiary_scientific_targets_proposed": true,
+    "open_event_created": false,
+    "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+    "proposal_only": true,
+    "proposal_status": "PROPOSAL_ONLY_NOT_INSTALLED_OR_OPEN",
+    "repair_attempt_count_proposed": 0,
+    "semantic_stages_proposed": [
+      {
+        "question": "Which single preserved ToE or CCFT coherence claim will be frozen for bounded native adjudication, and what is its evidence status?",
+        "semantic_stage_id": "PRESERVED_COHERENCE_CLAIM_PROVENANCE",
+        "stage_number": 1
+      },
+      {
+        "question": "What observable or operational distinctions are meant by coherence, zero coherence, change, transport, and scale?",
+        "semantic_stage_id": "COHERENCE_OPERATIONAL_SEMANTICS",
+        "stage_number": 2
+      },
+      {
+        "question": "Is coherence fundamental, emergent, relational, statistical, effective, or not an independent physical object?",
+        "semantic_stage_id": "COHERENCE_ONTOLOGICAL_ROLE",
+        "stage_number": 3
+      },
+      {
+        "question": "Which representation families can express the frozen semantics without assuming a field type, action, or interaction in advance?",
+        "semantic_stage_id": "REPRESENTATION_FAMILY_ADEQUACY",
+        "stage_number": 4
+      },
+      {
+        "question": "Select one bounded representation, select a limited surrogate, classify coherence as nonfield/emergent, or close without one.",
+        "semantic_stage_id": "REPRESENTATION_SELECTION_AND_EXIT",
+        "stage_number": 5
+      }
+    ],
+    "terminal_outcome_vocabulary_proposed": [
+      "NATIVE_COHERENCE_REPRESENTATION_SELECTED",
+      "LIMITED_COHERENCE_SURROGATE_SELECTED",
+      "COHERENCE_CLASSIFIED_AS_EMERGENT_OR_NONFIELD",
+      "EXPLICIT_NATIVE_COHERENCE_POSTULATE_REQUIRED",
+      "EXISTING_CCFT_DEFINITION_INSUFFICIENT",
+      "NO_ADMISSIBLE_COHERENCE_REPRESENTATION_FOUND",
+      "COHERENCE_HYPOTHESIS_REJECTED_IN_FROZEN_SCOPE"
+    ]
+  },
+  "native_hypothesis_tested": "NONE_GOVERNANCE_ONLY",
+  "nonclaims": [
+    "no real or complex coherence field selected",
+    "no closed program reopened",
+    "no new bounded program installed or opened",
+    "no native action or interaction selected",
+    "no C_k action embedding or variation",
+    "no pillar or seam calculation",
+    "no CCFT validation",
+    "no master-action promotion",
+    "no empirical validation",
+    "no unique ToE discriminator",
+    "no completed ToE claim"
+  ],
+  "program_installation_executed": false,
+  "prospective_governance_prerequisite": {
+    "attempt_opened": false,
+    "authority_lane": "SEPARATE_MAINTENANCE_AUTHORITY",
+    "maintenance_prerequisite": "PROSPECTIVE_BOUNDED_PROGRAM_LIFECYCLE_ENABLEMENT_REQUIRED",
+    "manifest_installed": false,
+    "program_record_created": false,
+    "prospective_program_installation_status": "BLOCKED_PENDING_LIFECYCLE_SAFE_GOVERNANCE_ENABLEMENT",
+    "reason": "The current bounded-program validator enforces the two closed historical v1 manifests. Installing a new prospective program first requires separately authorized generic lifecycle-safe manifest support with immutable predeclared stage envelopes and Git chronology. That maintenance enablement is necessary but is not scientific authorization to install or open the proposed coherence program.",
+    "required_before_program_installation": true,
+    "scientific_authority_preserved_during_maintenance": true,
+    "scientific_program_authorization_still_required_after_maintenance": true
+  },
+  "schema_id": "CALC_TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_v0",
+  "scientific_calculation_executed": false,
+  "selected_native_hypothesis": {
+    "action_selected": false,
+    "field_selected": false,
+    "hypothesis_id": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+    "representation_selected": false,
+    "selected_as_true": false,
+    "selected_path": "CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION",
+    "selection_outcome": "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION",
+    "statement": "At least one central preserved ToE coherence claim may admit a controlled operational meaning and a minimal mathematical representation, without assuming in advance that coherence is a scalar, field, fundamental object, or action term."
+  },
+  "selected_next_target": "prepare_toe_native_coherence_ontology_and_representation_bounded_program_v0",
+  "terminal_outcome": "SELECT_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION",
+  "verdict": "SELECTED_CCFT_COHERENCE_ONTOLOGY_AND_REPRESENTATION_PROGRAM_PREPARATION_ONLY_NO_PROGRAM_INSTALLATION_OR_FIELD_SELECTION"
+}

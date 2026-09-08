@@ -1,0 +1,29 @@
+{
+  "schema_id": "CURRENT_REACHABILITY_CORRECTIONS_20260725_v1",
+  "accepted_repair_review": "formal/docs/release/CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_RESULT_REVIEW_20260725_v0.json",
+  "corrections": [
+    {
+      "obligation_id": "NONPASSING-09138",
+      "test_id": "formal/python/tests/test_repository_canonical_text_integrity_gate.py::test_eol_policy_does_not_glob_hash_bound_historical_trees",
+      "criticality": [
+        "NONCURRENT"
+      ],
+      "temporal_role": "HISTORICAL",
+      "provenance": "VERIFIED",
+      "disposition": "QUARANTINED",
+      "reachability_evidence": [
+        "ACCEPTED_BROAD_LF_POLICY_SUPERSEDES_HISTORICAL_ABSENCE_ASSERTION",
+        "CURRENT_REACHABILITY_CORRECTION_EOL_POLICY_20260725_v0"
+      ]
+    }
+  ],
+  "recovered_nonpassing_obligations": [
+    "NONPASSING-00145",
+    "NONPASSING-00147",
+    "NONPASSING-02535"
+  ],
+  "unknown_current_reachability_after": 0,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

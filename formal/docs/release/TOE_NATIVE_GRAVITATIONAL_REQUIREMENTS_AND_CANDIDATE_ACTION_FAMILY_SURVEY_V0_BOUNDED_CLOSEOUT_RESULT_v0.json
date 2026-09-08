@@ -1,0 +1,93 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.bounded_closeout_result.v0",
+  "captured_at_utc": "2026-07-31T20:00:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "execution_target": "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0",
+  "terminal_outcome": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+  "survey_result": {
+    "scientific_work_status": "COMPLETE_FOR_THE_BOUNDED_SURVEY",
+    "stage_results": [
+      {
+        "attempt": 1,
+        "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+        "terminal_outcome": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+        "terminal_result": "PASSED"
+      },
+      {
+        "attempt": 2,
+        "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+        "terminal_outcome": "ACTION_FAMILY_INVENTORY_COMPLETE_WITH_UNRESOLVED_MEANINGS",
+        "terminal_result": "PASSED"
+      },
+      {
+        "attempt": 3,
+        "semantic_stage_id": "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION",
+        "terminal_outcome": "LINEAGES_RECONSTRUCTED_WITH_BOUNDED_UNRESOLVED_RELATIONSHIPS",
+        "terminal_result": "PASSED"
+      },
+      {
+        "attempt": 4,
+        "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+        "terminal_outcome": "SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE",
+        "terminal_result": "PASSED"
+      },
+      {
+        "attempt": 5,
+        "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+        "terminal_outcome": "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+        "terminal_result": "PASSED"
+      }
+    ],
+    "eligible_native_action_family_count": 0,
+    "family_eligibility_summary": {
+      "F_EH": "PROVISIONAL_BASELINE_ONLY",
+      "F_FR": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_QUADRATIC": "REFERENCE_CONTROL_ONLY",
+      "F_EXTRA_FIELD": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_NONLOCAL": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_CONNECTION_TORSION": "BLOCKED_BY_MISSING_DEFINITION",
+      "F_EQUIVALENCE_PROBE": "NOT_APPLICABLE_NOT_AN_ACTION"
+    },
+    "selected_route": "DERIVE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "native_gravitational_principle": "NONE",
+    "native_gravitational_action": "NONE"
+  },
+  "program_closeout": {
+    "attempted_stage_count": 5,
+    "authorized_stage_count": 5,
+    "blocked_stage_id": null,
+    "event_chain_event_count": 10,
+    "event_chain_tip_hash": "6bf13523c89c86a9be135a024b4fbf3b06729255cacb284a13d00e4622afebce",
+    "last_closed_attempt_number": 5,
+    "mandatory_exit_selected": true,
+    "mandatory_exit_completed": true,
+    "program_terminal_status": "CLOSED_AFTER_MANDATORY_EXIT",
+    "repair_attempt_count": 0,
+    "subsidiary_scientific_targets_created": 0,
+    "unattempted_stage_ids": []
+  },
+  "source_bindings": {
+    "stage_5_result_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+    "stage_5_result_sha256": "8f29a6d5912478a2143f751fcbb9aa817a097acc79d274bd825865dfa2e43821",
+    "stage_5_review_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_REVIEW_v0.json",
+    "stage_5_review_sha256": "ccb55f8dfcd5986158f1dc133e1e3ec0fa1adb783376881638f32653ea318b45",
+    "event_chain_tip_hash": "6bf13523c89c86a9be135a024b4fbf3b06729255cacb284a13d00e4622afebce",
+    "event_chain_changed_by_mandatory_exit": false
+  },
+  "successor_boundary": {
+    "proposed_future_preparation_target": "prepare_toe_positive_native_gravitational_principle_derivation_bounded_program_v0",
+    "positive_native_gravitational_principle_derived_or_selected": false,
+    "native_gravitational_action_selected_or_adopted": false,
+    "Einstein_Hilbert_promoted_to_native": false,
+    "quadratic_gravity_promoted_or_reopened": false,
+    "new_gravitational_calculation_executed": false,
+    "canonical_evidence_promoted": false,
+    "master_action_constructed_or_promoted": false,
+    "successor_program_authorized": false,
+    "successor_program_installed": false,
+    "successor_program_opened": false,
+    "automatic_successor_selected": false
+  },
+  "verdict": "NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_CLOSED_AFTER_MANDATORY_EXIT_ZERO_ELIGIBLE_NATIVE_ACTIONS_POSITIVE_PRINCIPLE_DERIVATION_ROUTE_PRESERVED_NO_PRINCIPLE_ACTION_CALCULATION_PROMOTION_OR_SUCCESSOR_AUTHORITY"
+}

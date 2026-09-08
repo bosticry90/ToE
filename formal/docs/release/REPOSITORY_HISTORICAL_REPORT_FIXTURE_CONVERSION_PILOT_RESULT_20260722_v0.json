@@ -1,0 +1,159 @@
+{
+  "schema_id": "REPOSITORY_HISTORICAL_REPORT_FIXTURE_CONVERSION_PILOT_RESULT_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:01:31Z",
+  "result": "ONE_GENERATOR_ONE_IDENTITY_HISTORICAL_REPORT_FIXTURE_PILOT_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/historical-report-fixture-pilot-v0",
+  "accepted_base_commit": "2736090e3240ac6ef2c9e2d74382c6c346653cec",
+  "authorization_commit": "20690e029035a64d95f9678d3940f4648983b6e8",
+  "implementation_commit": "8e6b078e20554193bf7fcc1994d7c20fb6e4520f",
+  "scope": {
+    "selected_dependency_identities": 1,
+    "modified_test_files": 1,
+    "modified_generator_files": 0,
+    "generated_or_committed_report_artifacts": 0,
+    "dirty_main_report_reads": 0,
+    "scientific_content_changes": 0,
+    "registry_rotations": 0,
+    "v2_enrollment": false,
+    "lean_activity": false,
+    "scale_action": false,
+    "automatic_successor": false
+  },
+  "selected_identity": {
+    "historical_path": "formal/output/reports/physics_math_throughput_baseline_20260407_v0.json",
+    "classification": "HISTORICAL_REPORT_BEYOND_RETENTION",
+    "current_authority_effect": "NONE",
+    "live_path_exists_in_clean_validations": false,
+    "live_path_read_or_written": false,
+    "committed_fixture_created": false
+  },
+  "generator_preservation": {
+    "path": "formal/python/tools/physics_math_throughput_baseline_snapshot.py",
+    "git_blob_oid_before": "851cf79df4182143f8bfe28b2dc90bcc087609b7",
+    "git_blob_oid_after": "851cf79df4182143f8bfe28b2dc90bcc087609b7",
+    "sha256": "97e0b216db96b17587c638a52527addd12ee28ef05a690958b5e9ac0942ddc55",
+    "frozen_timestamp": "2026-04-07T00:00:00Z",
+    "status": "FROZEN_UNCHANGED"
+  },
+  "input_identity": {
+    "tests_tree_before": "6b08d9fbd8a9791be18183bc95db9a4753c81218",
+    "tests_tree_after": "5c2ed42b6476086f5ed6ce61b95c520fe0d2f426",
+    "only_test_tree_change": "formal/python/tests/test_physics_math_throughput_baseline_snapshot_gate.py",
+    "governance_manifest_git_blob_oid": "43bb88d97b2370759d518bf355a3f3a96dd38900",
+    "governance_manifest_sha256": "6c947fa9f81133ab0e352b562a0c196933905bc40dcc9795e9bdedc52be97b58"
+  },
+  "selected_gate_change": {
+    "path": "formal/python/tests/test_physics_math_throughput_baseline_snapshot_gate.py",
+    "git_blob_oid_before": "e75abe3af070f10d97df3e67c3e6619d8164f7a6",
+    "git_blob_oid_after": "01472adc0ac58cd212656c7214544cad6bb01065",
+    "sha256_after": "e4bcb6e377b6b26dc1ff2f3ecc33f441abd5bcd6d1ef72fb67fc724795f93576",
+    "behavior": "The gate generates two same-name historical reports in pytest-owned temporary directories, fixes generated_at_utc, requires byte equality, validates the generated schema, and requires the ignored live path to remain absent."
+  },
+  "determinism": {
+    "first_and_second_generation_byte_identical": true,
+    "lf_and_actual_crlf_generation_identical": true,
+    "generated_fixture_sha256": "80961119f8b267fc23ae05d4832d8bd9f75dec286ae151983b70070c94f1bfb9",
+    "generated_fixture_bytes": 1525,
+    "generated_counts": {
+      "total_test_files": 2988,
+      "metadata_pattern_file_count": 1424,
+      "metadata_pattern_line_count": 10350,
+      "science_pattern_file_count": 110,
+      "science_pattern_line_count": 656,
+      "governance_manifest_expected_count": 346,
+      "governance_manifest_listed_count": 346
+    }
+  },
+  "focused_validation": {
+    "implementation_worktree": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "status_after": "CLEAN_AFTER_IMPLEMENTATION_COMMIT",
+      "live_report_path_exists": false
+    },
+    "lf_checkout": {
+      "path": ".toe-recovery/disposable-workspaces/historical-report-fixture-pilot-lf-v0",
+      "working_byte_crlf_pairs_in_selected_gate": 0,
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "status_after": "CLEAN",
+      "live_report_path_exists": false
+    },
+    "crlf_configured_canonical_checkout": {
+      "path": ".toe-recovery/disposable-workspaces/historical-report-fixture-pilot-crlf-v0",
+      "note": "Repository attributes correctly preserve canonical LF Python bytes despite CRLF Git configuration.",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "status_after": "CLEAN",
+      "live_report_path_exists": false
+    },
+    "actual_crlf_projection_clone": {
+      "path": ".toe-recovery/disposable-workspaces/historical-report-fixture-pilot-actual-crlf-v0",
+      "working_byte_crlf_pairs_in_selected_gate": 105,
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "status_after": "CLEAN",
+      "live_report_path_exists": false
+    }
+  },
+  "attributed_outcome_treatment": {
+    "dependency_local_outcomes_recovered": 2,
+    "aggregate_cross_identity_outcomes_recovered": 0,
+    "aggregate_cross_identity_outcomes_still_nonpassing": 2,
+    "aggregate_measurement_first_missing_path_unchanged": "formal/output/reports/physics_math_throughput_baseline_20260407_v0.json",
+    "interpretation": "The fixture pattern succeeds for dependency-local consumers. Scaling or refactoring the aggregate nineteen-identity contract requires a separate selector."
+  },
+  "external_qrf_comparator_intake": {
+    "path": ".toe-recovery/custody-v0/historical-report-fixture-pilot-v0/EXTERNAL_QUANTUM_REFERENCE_FRAME_AND_QUANTUM_GRAVITY_EVIDENCE_COMPARATOR_20260722_v0.json",
+    "sha256": "97828b953fd1ec34fda9f8f81c89b074bff06f9e2935fc5c8c855de23404a978",
+    "classification": "NONAUTHORITATIVE_NONCLAIM_DEFERRED_SCIENTIFIC_ASSESSMENT",
+    "direct_authority_effect": "NONE",
+    "direct_support_for_toe": "NONE",
+    "future_qft_gr_seam_relevance": "HIGH",
+    "future_empirical_discriminator_relevance": "VERY_HIGH",
+    "canonical_enrollment": false,
+    "calculation_lane_created": false
+  },
+  "preservation": {
+    "loop_control_registry_git_blob_before": "fd7b1ff5f1f3e35f46b2599243e97e0f2d501a94",
+    "loop_control_registry_git_blob_after": "fd7b1ff5f1f3e35f46b2599243e97e0f2d501a94",
+    "toe_formal_tree_before": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "toe_formal_tree_after": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "state_of_the_theory_git_blob_before": "8172968020a2a9953b62ec55d34c4eedc04b19bc",
+    "state_of_the_theory_git_blob_after": "8172968020a2a9953b62ec55d34c4eedc04b19bc",
+    "scientific_and_authority_fields_changed": false
+  },
+  "external_evidence": [
+    {
+      "path": "LF_FOCUSED_JUNIT_v0.xml",
+      "sha256": "2e0faaad8971817fcd58ef55788726a1ff9b3b45a4cd41fc096bbeef654a0c93"
+    },
+    {
+      "path": "CRLF_FOCUSED_JUNIT_v0.xml",
+      "sha256": "386a55c7e85c0af6bf3a80461cbc24d10898f4cf5db3cec3b805ae76aff3dd3f"
+    },
+    {
+      "path": "ACTUAL_CRLF_FOCUSED_JUNIT_v0.xml",
+      "sha256": "38cebc65dcdfc6633b7609bc13cb9c6773780e46f6334622fe1edbc4a326e99f"
+    },
+    {
+      "path": "AGGREGATE_CASCADE_MEASUREMENT_JUNIT_v0.xml",
+      "sha256": "ea8d41ad7d5fd414ec4bcc70039327a187f629694040d8f6a901928f097f492d"
+    }
+  ],
+  "decision": {
+    "pilot_pattern_successful_for_selected_dependency_local_gate": true,
+    "safe_to_scale_established": false,
+    "retirement_preference_adjudicated": false,
+    "next_repair_authorized": false,
+    "independent_review_required": true
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_PILOT_RESULT_ONLY"
+}

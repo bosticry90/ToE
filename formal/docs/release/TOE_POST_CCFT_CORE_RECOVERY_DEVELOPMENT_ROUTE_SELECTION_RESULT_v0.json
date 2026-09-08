@@ -1,0 +1,116 @@
+{
+  "result_id": "TOE_POST_CCFT_CORE_RECOVERY_DEVELOPMENT_ROUTE_SELECTION_RESULT_v0",
+  "completed_at_utc": "2026-08-01T02:18:00Z",
+  "execution_target": "select_post_ccft_core_recovery_development_route_v0",
+  "authority": {
+    "path": "formal/docs/release/TOE_POST_CCFT_CORE_RECOVERY_DEVELOPMENT_ROUTE_SELECTION_AUTHORITY_v0.json",
+    "sha256": "ff96066baed89698ca510543d579a627dc7638d24045ee2de294dc879b7656fd",
+    "authority_commit": "4a629d2f3d8b30a0a709635d2fb4a9f33c268327"
+  },
+  "terminal_outcome": "SELECT_ONE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY",
+  "selected_route": {
+    "route_id": "ONE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY",
+    "selected_preparation_target": "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0",
+    "preparation_authorized": false,
+    "program_proposal_prepared": false,
+    "program_installed": false,
+    "scientific_stage_opened": false,
+    "archive_traversal_started": false
+  },
+  "decision_matrix": [
+    {
+      "route": "SELECT_ONE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY",
+      "classification": "SELECTED_ONE_PASS_PREREQUISITE",
+      "rationale": [
+        "THE_MISSING_CLOSURE_CONTRACTS_ARE_NOW_EXACTLY_IDENTIFIED",
+        "12923_CUSTODY_RECORDS_REMAIN_OUTSIDE_THE_EARLIER_BOUNDED_DEEP_REVIEW",
+        "ONE_TARGETED_PASS_CAN_REDUCE_THE_NUMBER_OF_REQUIRED_NEW_POSTULATES",
+        "A_HARD_STOP_PREVENTS_RENEWED_UNBOUNDED_ARCHIVE_ARCHAEOLOGY"
+      ]
+    },
+    {
+      "route": "SELECT_BOUNDED_CCFT_V0_THEORY_CONSTRUCTION",
+      "classification": "REQUIRED_POST_RECOVERY_HANDOFF_NOT_SELECTED_FOR_IMMEDIATE_EXECUTION",
+      "rationale": [
+        "RECOVERY_ALONE_HAS_ALREADY_FAILED_TO_PRODUCE_A_CLOSED_MODEL",
+        "THEORY_CONSTRUCTION_IS_REQUIRED_AFTER_THE_ONE_TARGETED_PASS_REGARDLESS_OF_ITS_RESULT",
+        "DELAYING_CONSTRUCTION_BY_MORE_THAN_ONE_TARGETED_PASS_IS_PROHIBITED"
+      ]
+    },
+    {
+      "route": "DEFER_CCFT_DEVELOPMENT",
+      "classification": "NOT_SELECTED",
+      "rationale": [
+        "CCFT_REMAINS_THE_PROJECTS_MOST_DEVELOPED_NATIVE_MATHEMATICAL_LANE",
+        "THE_GAPS_ARE_CONCRETE_ENOUGH_FOR_BOUNDED_RECOVERY_AND_EXPLICIT_CONSTRUCTION"
+      ]
+    }
+  ],
+  "targeted_recovery_contract": {
+    "search_pass_limit": 1,
+    "general_census_prohibited": true,
+    "cp_nlse_missing_contracts": [
+      "FINAL_INTENDED_NONLINEAR_EQUATION",
+      "COEFFICIENT_DEFINITIONS_AND_ADMISSIBLE_RANGES",
+      "INITIAL_DATA_RULES",
+      "BOUNDARY_CONDITIONS",
+      "NONDIMENSIONALIZATION_OR_NORMALIZATION",
+      "CONSERVED_OR_MONITORED_QUANTITIES",
+      "FAILURE_AND_INSTABILITY_CRITERIA",
+      "NUMERICAL_IMPLEMENTATION_PROVENANCE",
+      "CORRECT_INTERACTION_MODIFIED_DISPERSION_RELATION",
+      "ADDITIVE_FREQUENCY_CONFLICT_RESOLUTION"
+    ],
+    "lcrd_v3_missing_contracts": [
+      "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+      "INITIAL_AND_BOUNDARY_DATA",
+      "PARAMETER_RANGES",
+      "NORMALIZATION_CONVENTIONS",
+      "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+      "REPRODUCIBLE_IMPLEMENTATION",
+      "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+      "LSDA_COARSE_GRAINING_MAP_OR_VARIATIONAL_EFFECTIVE_DERIVATION"
+    ],
+    "terminal_outcomes": [
+      "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+      "NO_ADDITIONAL_CCFT_CLOSURE_EVIDENCE_FOUND"
+    ],
+    "automatic_second_search_authorized": false
+  },
+  "binding_post_recovery_handoff": {
+    "required_after_either_terminal_outcome": true,
+    "target": "prepare_bounded_ccft_v0_theory_construction_program",
+    "preparation_authorized_now": false,
+    "program_proposal_prepared": false,
+    "program_installed": false,
+    "program_opened": false,
+    "separate_authority_required": true,
+    "recovery_result_may_change_new_postulate_count_but_not_trigger_another_search": true
+  },
+  "future_construction_constraints": {
+    "default_minimal_core_candidate": "NONLINEAR_CP_NLSE",
+    "default_candidate_is_not_adopted_or_frozen_by_this_decision": true,
+    "lcrd_v3_role": "FIRST_POSSIBLE_EXTENSION_AFTER_MINIMAL_CORE_VIABILITY",
+    "required_provenance_classes": [
+      "SOURCE_RECOVERED",
+      "KNOWN_PHYSICS_BASELINE",
+      "NEW_CCFT_POSTULATE",
+      "NUMERICAL_CONVENTION",
+      "MATHEMATICAL_CONTROL"
+    ]
+  },
+  "preserved_scientific_boundary": {
+    "repository_claim_exhaustion_established": false,
+    "closed_ccft_model_exists": false,
+    "physical_coherence_quantity_established": false,
+    "ccft_representation_selected": false,
+    "ccft_equation_repaired_or_selected": false,
+    "new_ccft_postulate_inserted": false,
+    "ccft_v0_constructed": false,
+    "ccft_action_or_seam_constructed": false,
+    "observable_defined": false,
+    "scientific_calculation_executed": false,
+    "evidence_promoted": false
+  },
+  "status": "PASS"
+}

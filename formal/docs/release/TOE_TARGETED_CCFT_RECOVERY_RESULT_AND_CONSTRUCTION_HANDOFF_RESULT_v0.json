@@ -1,0 +1,159 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0",
+  "attempt_sequence_number": 4,
+  "branch_readiness_snapshot": {
+    "CP_NLSE": {
+      "decisive_blocker": "GOVERNING_EQUATION_AND_NONLINEAR_DISPERSION_CONFLICT",
+      "recovered_contract": "ONE_DIMENSIONAL_PERIODIC_DOMAIN_AND_BOUNDARY",
+      "selected_for_ccft_v0": false,
+      "strength": "COMPUTATIONAL_AND_NUMERICAL_SCAFFOLDING"
+    },
+    "LCRD_V3": {
+      "decisive_blocker": "DATA_NORMALIZATION_PARAMETER_AND_IMPLEMENTATION_CONTRACTS_INCOMPLETE",
+      "recovered_contracts": [
+        "STATE_TUPLE",
+        "Q_ROTOR_CLOSURE",
+        "EVOLUTION_COUPLINGS"
+      ],
+      "selected_for_ccft_v0": false,
+      "strength": "DISTINCTIVE_FOUR_FIELD_ROTOR_CURVATURE_STRUCTURE"
+    },
+    "branch_selected": "NONE",
+    "combined_model_authorized": false
+  },
+  "captured_at_utc": "2026-08-02T02:10:30Z",
+  "exactly_one_program_scientific_outcome": "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+  "historical_recovery_boundary": {
+    "additional_archive_or_overflow_search_authorized": false,
+    "ccft_v0_historical_recovery_complete": true,
+    "repository_claim_exhaustion_established": false,
+    "second_targeted_pass_authorized": false,
+    "unreviewed_material_may_exist_but_does_not_reopen_recovery": true
+  },
+  "immediate_successor": {
+    "completed": false,
+    "kind": "MANDATORY_PROGRAM_EXIT",
+    "selected": true,
+    "target": "close_toe_targeted_ccft_closure_evidence_recovery_v0_after_bounded_result_v0"
+  },
+  "lifecycle_result": "PASSED",
+  "new_postulate_reduction_summary": {
+    "branch_or_model_selection_implied": false,
+    "contract_count": 4,
+    "contracts": [
+      {
+        "branch_selection_or_model_validation_implied": false,
+        "ccft_branch": "CP_NLSE",
+        "future_postulate_no_longer_required_if_branch_is_selected": "A CP-NLSE computational v0 may reuse the recovered one-dimensional periodic domain x in [0,L) and periodic boundary contract instead of newly postulating it.",
+        "missing_contract_id": "BOUNDARY_CONDITIONS",
+        "record_id": "CP_BOUNDARY_001"
+      },
+      {
+        "branch_selection_or_model_validation_implied": false,
+        "ccft_branch": "LCRD_V3",
+        "future_postulate_no_longer_required_if_branch_is_selected": "An LCRD-v3 candidate may reuse Q_rotor = c1 R_x + c2 K_xx and its insertion into the momentum equation as the recovered constitutive closure form.",
+        "missing_contract_id": "CONSTITUTIVE_OR_CLOSURE_RELATIONS",
+        "record_id": "LCRD_CLOSURE_001"
+      },
+      {
+        "branch_selection_or_model_validation_implied": false,
+        "ccft_branch": "LCRD_V3",
+        "future_postulate_no_longer_required_if_branch_is_selected": "An LCRD-v3 candidate may reuse the recovered directed evolution couplings R_t=-alpha_R R+b_R|u_x|+d_R K_x and K_t=-alpha_K K+b_K R_x.",
+        "missing_contract_id": "ROTOR_CURVATURE_COUPLING_DEFINITIONS",
+        "record_id": "LCRD_COUPLING_001"
+      },
+      {
+        "branch_selection_or_model_validation_implied": false,
+        "ccft_branch": "LCRD_V3",
+        "future_postulate_no_longer_required_if_branch_is_selected": "An LCRD-v3 candidate may reuse the four-field state tuple (rho,u,R,K) and its mathematical field roles without inventing a different state inventory.",
+        "missing_contract_id": "COMPLETE_STATE_VARIABLE_DEFINITIONS",
+        "record_id": "LCRD_STATE_001"
+      }
+    ],
+    "cp_nlse_contract_count": 1,
+    "lcrd_v3_contract_count": 3
+  },
+  "nonclaim_boundary": {
+    "ccft_v0_model_selected_or_constructed": false,
+    "construction_program_prepared_installed_or_opened": false,
+    "cp_nlse_or_lcrd_branch_selected": false,
+    "cross_cutting_checks_installed": false,
+    "evidence_promoted": false,
+    "governing_equation_selected_repaired_or_postulated": false,
+    "new_proof_counterexample_symbolic_or_numerical_result_created": false,
+    "physical_operationalization_or_empirical_claim_established": false,
+    "repository_claim_exhaustion_established": false,
+    "theorem_discovery_lane_authorized_or_executed": false
+  },
+  "open_event_binding": {
+    "event_hash": "8a0188230098b3c2af176abd035381711aa7cbb9b0f8c6d22b04786790472e52",
+    "path": "formal/docs/release/bounded_program_events/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0_ATTEMPT_04_OPEN_v0.json",
+    "sha256": "f33eb48278c4f0fdf3cb3d6d91a373291f5344912ab47bfceb6f02cf7e9f265e"
+  },
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "program_outcome_selection_basis": {
+    "alternative_outcome_selected": false,
+    "exact_contracts_recovered": 4,
+    "positive_threshold": 1,
+    "threshold_satisfied": true
+  },
+  "program_scientific_outcome": "TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERED",
+  "recovered_partial_conflicting_and_absent_contract_summary": {
+    "checklist_total": 18,
+    "conflict_preserved": 3,
+    "cp_nlse_governing_equation_resolved": false,
+    "cp_nlse_interaction_dispersion_resolved": false,
+    "exact_application_blocked_by_conflict": 1,
+    "exact_configuration_bound": 1,
+    "exact_incomplete_parameter_range": 1,
+    "lcrd_v3_model_closed": false,
+    "no_relevant_evidence": 1,
+    "only_nonexact_evidence": 7,
+    "recovered_exact": 4
+  },
+  "required_nonautomatic_construction_preparation_handoff": {
+    "branch_readiness_decision_required_before_equation_freeze": true,
+    "installation_authorized": false,
+    "mandatory_exit_must_complete_first": true,
+    "preparation_authorized": false,
+    "recommended_cross_cutting_checks_not_installed_here": [
+      "C_FINITE_APPROXIMATION",
+      "C_IDENTIFIABILITY",
+      "C_COMPLEXITY"
+    ],
+    "recommended_program_scope": "CCFT_V0_MINIMAL_MODEL_CONSTRUCTION_AND_THEOREM_DISCOVERY",
+    "recommended_theorem_packet_lanes": [
+      "PROVE",
+      "DISPROVE",
+      "CONSTRUCT",
+      "FIND_COUNTEREXAMPLE",
+      "SYMBOLIC_CHECK",
+      "NUMERICAL_CHECK",
+      "LEAN_FORMALIZE_WHERE_FEASIBLE"
+    ],
+    "required_provenance_labels": [
+      "SOURCE_RECOVERED",
+      "KNOWN_PHYSICS_BASELINE",
+      "NEW_CCFT_POSTULATE",
+      "NUMERICAL_CONVENTION",
+      "MATHEMATICAL_CONTROL"
+    ],
+    "research_director_decision_packet_required_first": true,
+    "scientific_stage_authorized": false,
+    "target": "prepare_bounded_ccft_v0_theory_construction_program"
+  },
+  "schema_id": "toe.targeted_ccft.recovery_result_and_construction_handoff.result.v0",
+  "scientific_target": "select_toe_post_targeted_ccft_recovery_construction_handoff_v0",
+  "scope_hash": "f6e792eae759877e5e0e6a263834dbdfd96fa8b2a1918a8a038257ab767af254",
+  "semantic_stage_id": "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF",
+  "stage_3_input_binding": {
+    "conflicts_preserved": 3,
+    "exact_contracts_recovered": 4,
+    "overflow_source_count_not_reviewed": 137,
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+    "selected_source_count": 96,
+    "sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20",
+    "single_content_discovery_pass_consumed": true
+  },
+  "status": "STAGE_4_HANDOFF_RESULT_READY_FOR_INDEPENDENT_REVIEW_AND_ATOMIC_CLOSE"
+}

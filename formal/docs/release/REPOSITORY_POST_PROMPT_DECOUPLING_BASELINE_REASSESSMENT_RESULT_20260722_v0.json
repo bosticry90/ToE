@@ -1,0 +1,184 @@
+{
+  "schema_id": "REPOSITORY_POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_RESULT_20260722_v0",
+  "result": "POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/post-prompt-decoupling-baseline-reassessment-v0",
+  "accepted_base_commit": "71027f124d1724c6c0b9f7d7842e5968f300b063",
+  "authorization_commit": "f692cbde771f5b411ec9deddac5cd6acf7c5457f",
+  "scope": {
+    "diagnostic_only": true,
+    "same_frozen_non_lean_test_inventory": true,
+    "repair_performed": false,
+    "test_or_source_modification": false,
+    "lean_activity": false,
+    "scientific_activity": false,
+    "automatic_successor_cycle": false,
+    "v2_enrollment_authorized": false,
+    "scientific_resumption_authorized": false
+  },
+  "custody": {
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_touched_by_reassessment": false,
+    "maintenance_output_root": ".toe-recovery/custody-v0/post-prompt-decoupling-baseline-reassessment-v0",
+    "all_reassessment_outputs_resolved_under_toe_recovery": true
+  },
+  "comparability": {
+    "prior_frozen_inventory_count": 13756,
+    "prior_frozen_inventory_sha256": "9fb439dcb59609622b7151355461b3fccb21600e53d48d5f963db89a5e8df139",
+    "current_collected_inventory_count": 13764,
+    "current_collected_inventory_sha256": "9722efcc6a8123129c50c26be03a323779b63b39f7897028d6e411cf2a14c59b",
+    "common_test_ids": 13756,
+    "added_test_ids": 8,
+    "removed_test_ids": 0,
+    "execution_inventory": "EXACT_PRIOR_FROZEN_13756_IDS_IN_PRIOR_ORDER",
+    "added_tests_executed_in_broad_reassessment": false,
+    "added_tests": "EIGHT_PROMPT_DECOUPLING_GUARDS_ALREADY_ACCEPTED_IN_FOCUSED_LF_AND_CRLF_VALIDATION"
+  },
+  "execution": {
+    "pytest_exit_code": 1,
+    "elapsed_seconds": 6169.3634256,
+    "tests": 13756,
+    "passed": 12628,
+    "skipped": 598,
+    "failed": 473,
+    "errors": 57,
+    "nonpassing": 530,
+    "tracked_status_after": "EMPTY",
+    "unexpected_untracked_source": "NONE",
+    "validation_behavior": "READ_ONLY"
+  },
+  "delta_from_broad_first_cause_clustering": {
+    "prior_failed": 595,
+    "prior_errors": 120,
+    "prior_nonpassing": 715,
+    "current_failed": 473,
+    "current_errors": 57,
+    "current_nonpassing": 530,
+    "net_nonpassing_reduction": 185,
+    "recovered_prior_nonpassing": 198,
+    "newly_nonpassing": 13,
+    "common_nonpassing": 517,
+    "status_transitions_within_common_nonpassing": 5,
+    "interpretation": "The net reduction is 185 because 198 prior nonpassing outcomes recovered while 13 previously passing outcomes exposed one post-decoupling source-custody artifact-currency root."
+  },
+  "prompt_family_confirmation": {
+    "prior_attributed_outcomes": 206,
+    "recovered_and_still_passing": 195,
+    "reclassified_and_confirmed": 11,
+    "still_caused_by_prompt_identity": 0,
+    "environment_or_path_identity_outcomes": 6,
+    "stale_first_unit_selector_v2_packet_hash_outcomes": 5,
+    "conclusion": "Prompt.txt is no longer a first cause in the broad frozen baseline."
+  },
+  "newly_exposed_root": {
+    "root_id": "POST_DECOUPLING_SOURCE_CUSTODY_DRIFT",
+    "classification": "STALE_ARTIFACT_EXPECTATION",
+    "family": "other_artifact_currency",
+    "affected_outcomes": 13,
+    "primary_outcomes": 1,
+    "cascade_outcomes": 12,
+    "cause": "The accepted Prompt decoupling changed two nonauthoritative Dirac-Maxwell pilot source files, while downstream freeze and review artifacts retain their pre-decoupling source-custody identities.",
+    "scientific_interpretation": "MAINTENANCE_ARTIFACT_CURRENCY_DEFECT_NOT_SCIENTIFIC_REFUTATION",
+    "repair_in_this_cycle": false
+  },
+  "remaining_first_cause_families": [
+    {
+      "family": "missing_artifacts",
+      "outcomes": 222
+    },
+    {
+      "family": "qft_route_hash",
+      "outcomes": 67
+    },
+    {
+      "family": "other_packet_contract",
+      "outcomes": 65
+    },
+    {
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 58,
+      "includes_standalone_first_unit_selector_stale_v2_packet_hash_root": 5
+    },
+    {
+      "family": "other_artifact_currency",
+      "outcomes": 50,
+      "includes_post_decoupling_source_custody_drift": 13
+    },
+    {
+      "family": "equation_compendium_hash",
+      "outcomes": 50
+    },
+    {
+      "family": "authority_expectations",
+      "outcomes": 8
+    },
+    {
+      "family": "environment_or_path_identity",
+      "outcomes": 6
+    },
+    {
+      "family": "other_committed_assertions",
+      "outcomes": 4
+    }
+  ],
+  "exhaustive_accounting": {
+    "family_outcome_sum": 530,
+    "unclassified_outcomes": 0,
+    "highest_leverage_remaining_family": "missing_artifacts",
+    "highest_leverage_remaining_family_outcomes": 222,
+    "selector_binding_treatment": "NARROW_STANDALONE_ROOT_WITHIN_PILLAR_LEDGER_STAGING_SELECTOR_FAMILY"
+  },
+  "preservation": {
+    "prompt_git_blob_oid_before": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "prompt_git_blob_oid_after": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "formal_output_tree_before": "77550eeadf24bd0930fd6c853c0031f7c9d66bbf",
+    "formal_output_tree_after": "77550eeadf24bd0930fd6c853c0031f7c9d66bbf",
+    "toe_formal_tree_before": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "toe_formal_tree_after": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "scientific_and_governance_content_changed": false,
+    "registry_target_changed": false
+  },
+  "external_evidence": [
+    {
+      "path": "POST_PROMPT_DECOUPLING_NONLEAN_COMPARABILITY_v0.json",
+      "sha256": "bc75f911e9b95d75f486ce14ee23de7fca07ce77bf6397ec1f5b1b634abea3db"
+    },
+    {
+      "path": "post_prompt_decoupling_frozen_nonlean_junit_v0.xml",
+      "sha256": "40c9db9f16eb22d705d5499139e9ea3f10493ec0b8b3e04f440622e8c03af897"
+    },
+    {
+      "path": "post_prompt_decoupling_frozen_nonlean_pytest_v0.log",
+      "sha256": "6506afa864a275e43d78333d106fd6aadf51f15ccf17f9d2a0970ab36d275697"
+    },
+    {
+      "path": "POST_PROMPT_DECOUPLING_OUTCOME_DELTA_v0.json",
+      "sha256": "1d8aa1da8353764087ac14387f71fa7570b1b20b9e0b174abc4c1f83e50b1950"
+    },
+    {
+      "path": "POST_PROMPT_DECOUPLING_OUTCOME_ENTRIES_v0.json",
+      "sha256": "7d0d0394a535ce9f9c0beb3333adfae5d162f168cf469a766f6eebe043857c29"
+    },
+    {
+      "path": "POST_PROMPT_DECOUPLING_FIRST_CAUSE_CLUSTERS_v0.json",
+      "sha256": "b906b542a060cfc04e7737813a2a0eaed6b4634d9a7ae798b0bb4d9ee8e49222"
+    },
+    {
+      "path": "POST_PROMPT_DECOUPLING_BASELINE_REASSESSMENT_EXECUTION_MANIFEST_v0.json",
+      "sha256": "9d72b54d7b71d4edfcd928825e4a29e3ce64fba5fc98a08512e88618ac456128"
+    },
+    {
+      "path": "build_post_prompt_decoupling_analysis_v0.py",
+      "sha256": "bce2cb2fb30c97bb0350f440f284f732771280d969000ced076659db7b830f09"
+    }
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "broad_python_baseline": "REPRODUCIBLY_RED_AND_EXHAUSTIVELY_RECLUSTERED",
+  "lean_status": "LEAN_DEPENDENCY_BOOTSTRAP_TIMEOUT_UNCHANGED",
+  "toe_formal_compilation": "NOT_STARTED_IN_LATEST_LEAN_ATTEMPT",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "next_cycle": "NOT_AUTOMATICALLY_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_REASSESSMENT_RESULT_ONLY"
+}

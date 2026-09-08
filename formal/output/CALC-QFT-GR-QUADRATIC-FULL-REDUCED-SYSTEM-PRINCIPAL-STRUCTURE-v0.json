@@ -1,0 +1,409 @@
+{
+  "adapted_auxiliary_symbol": {
+    "classification": "FULL_REDUCED_SYSTEM_STRONGLY_HYPERBOLIC_ONLY_IN_ADAPTED_GRADING",
+    "energy_estimate_inferred": false,
+    "metric_reconstruction_at_same_regularities": false,
+    "normalized_weighted_principal_pencil": "q I_64",
+    "regularity_interpretation": {
+      "R": "H^(s+2)",
+      "S_mn": "H^(s+1)",
+      "c_mna": "H^(s+1)",
+      "g_mn": "H^(s+2)",
+      "r_a": "H^(s+1)"
+    },
+    "uniform_condition_number": 1,
+    "uniform_diagonalizer": "T_A(khat)=I_64",
+    "weight_convention": "V_i=|D|^w_i U_i; an order-d row-i/column-j coupling has weighted order d+w_i-w_j",
+    "weighted_orders_of_cross_couplings": {
+      "E_S<-r": 1,
+      "E_c<-R": 0,
+      "E_c<-S": 1,
+      "E_g<-R": 0,
+      "E_g<-S": 1,
+      "E_r<-R": 0
+    },
+    "weights": {
+      "R": 2,
+      "S_mn": 1,
+      "c_mna": 1,
+      "g_mn": 2,
+      "r_a": 1
+    }
+  },
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-FULL-REDUCED-SYSTEM-PRINCIPAL-STRUCTURE-v0",
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "claim_boundary": {
+    "adapted_auxiliary_uniform_diagonalizer_established": true,
+    "adapted_weighted_symbol_computed": true,
+    "all_nonzero_spatial_directions_covered": true,
+    "continuous_dependence_established": false,
+    "energy_estimate_established": false,
+    "finite_derivative_loss_identified": true,
+    "local_existence_established": false,
+    "loss_nonaccumulation_established": false,
+    "metric_equivalence_weighted_symbol_computed": true,
+    "ordinary_equal_order_auxiliary_symbol_computed": true,
+    "ordinary_metric_strong_hyperbolicity_restored": false,
+    "ordinary_metric_uniform_diagonalizer_established": false,
+    "physical_spin2_defect_recovered": true,
+    "source_extension_executed": false,
+    "subsidiary_and_physical_blocks_kept_distinct": true,
+    "uniqueness_established": false
+  },
+  "consumed_authority": {
+    "accepted": true,
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_GAUGE_AND_AUXILIARY_CONSTRAINT_PROPAGATION_SYSTEM_RESULT_REVIEW_20260728_v0.json",
+    "sha256": "fa794f5756653bf18e46f88a75caaf37f58b500a7a0141990e4de5c8acd44d9c"
+  },
+  "consumed_reduced_system": {
+    "equation_order": [
+      "E_g^H",
+      "E_c",
+      "E_R",
+      "E_r",
+      "E_S"
+    ],
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-AUXILIARY-HARMONIC-REDUCED-SYSTEM-v0.json",
+    "sha256": "a0b1d73895ed9f9c92ea523117ecc17421b0b03b32736258f144cf23370f1390"
+  },
+  "differential_order_ledger": [
+    {
+      "cross_couplings": [
+        "+(1/2)g_mn R",
+        "+2 S_mn"
+      ],
+      "cross_orders": [
+        0,
+        0
+      ],
+      "diagonal": "q I_10 on g",
+      "row": "E_g^H"
+    },
+    {
+      "cross_couplings": [
+        "+(i/2)ell_a g_mn R",
+        "+2i ell_a S_mn"
+      ],
+      "cross_orders": [
+        1,
+        1
+      ],
+      "diagonal": "q I_40 on c",
+      "row": "E_c"
+    },
+    {
+      "cross_couplings": [],
+      "cross_orders": [],
+      "diagonal": "2 gamma q on R",
+      "row": "E_R"
+    },
+    {
+      "cross_couplings": [
+        "first derivatives of R"
+      ],
+      "cross_orders": [
+        1
+      ],
+      "diagonal": "2 gamma q I_4 on r",
+      "row": "E_r"
+    },
+    {
+      "cross_couplings": [
+        "-(2 alpha+beta)i H(ell)r"
+      ],
+      "cross_orders": [
+        1
+      ],
+      "diagonal": "beta q I_9 on S",
+      "row": "E_S"
+    }
+  ],
+  "execution_target": "compute_qft_gr_quadratic_full_reduced_system_principal_structure_v0",
+  "frozen_scope": {
+    "additional_internal_rank_control": "2 alpha + beta = 0",
+    "dimension": 4,
+    "frequency_normalization": "ell_a=(lambda,khat_i), q(lambda)=1-lambda^2",
+    "frozen_frame": "local orthonormal frame; lower-order connection and coefficient-derivative terms discarded only after their differential order is recorded",
+    "generic_principal_sector": [
+      "beta != 0",
+      "gamma := 3 alpha + beta != 0"
+    ],
+    "metric_signature": "(-,+,+,+)",
+    "source": "VACUUM",
+    "spatial_covector": "k_i != 0; khat_i=k_i/|k|"
+  },
+  "metric_equivalence_weighted_symbol": {
+    "definitions": {
+      "H": "H(ell)r=[ell_(m r_n)]^TF; rank 4 at q=0",
+      "J": "rank-9 inclusion of trace-free symmetric S into the ten symmetric metric components",
+      "a": "a=(2alpha+beta)/beta",
+      "u": "u_mn=(1/2)eta_mn; rank(u,2J)=10"
+    },
+    "exact_normalized_block_pencil": [
+      [
+        "q I_10",
+        "0",
+        "u",
+        "0",
+        "2J"
+      ],
+      [
+        "0",
+        "q I_40",
+        "i ell tensor u",
+        "0",
+        "2i ell tensor J"
+      ],
+      [
+        "0",
+        "0",
+        "q",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "q I_4",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-a i H(ell)",
+        "q I_9"
+      ]
+    ],
+    "finite_equivalence_derivative_loss": 1,
+    "generic_classification": "FULL_REDUCED_SYSTEM_TRIANGULAR_WITH_FINITE_DERIVATIVE_LOSS",
+    "ordinary_metric_classification": "ADAPTED_PRINCIPAL_STRUCTURE_NOT_UNIFORMLY_DIAGONALIZABLE",
+    "pointwise_complete_eigenbasis": false,
+    "reason_for_weights": [
+      "c=partial g",
+      "R and S are second derivatives of g on the constraint surface",
+      "r=partial R",
+      "g needs one derivative beyond the accepted adapted auxiliary baseline"
+    ],
+    "regularity_interpretation": {
+      "R": "H^(s+1)",
+      "S_mn": "H^(s+1)",
+      "c_mna": "H^(s+2)",
+      "g_mn": "H^(s+3)",
+      "r_a": "H^s"
+    },
+    "root_rank_data": {
+      "curvature_to_metric_block_rank": 10,
+      "directional_exact_samples": {
+        "x:lambda=-1": {
+          "root_kernel_dimension": 50,
+          "root_nilpotent_cube_is_zero": true,
+          "root_nilpotent_rank": 14,
+          "root_nilpotent_square_rank": 4,
+          "tracefree_hessian_rank": 4
+        },
+        "x:lambda=1": {
+          "root_kernel_dimension": 50,
+          "root_nilpotent_cube_is_zero": true,
+          "root_nilpotent_rank": 14,
+          "root_nilpotent_square_rank": 4,
+          "tracefree_hessian_rank": 4
+        },
+        "y:lambda=-1": {
+          "root_kernel_dimension": 50,
+          "root_nilpotent_cube_is_zero": true,
+          "root_nilpotent_rank": 14,
+          "root_nilpotent_square_rank": 4,
+          "tracefree_hessian_rank": 4
+        },
+        "y:lambda=1": {
+          "root_kernel_dimension": 50,
+          "root_nilpotent_cube_is_zero": true,
+          "root_nilpotent_rank": 14,
+          "root_nilpotent_square_rank": 4,
+          "tracefree_hessian_rank": 4
+        },
+        "z:lambda=-1": {
+          "root_kernel_dimension": 50,
+          "root_nilpotent_cube_is_zero": true,
+          "root_nilpotent_rank": 14,
+          "root_nilpotent_square_rank": 4,
+          "tracefree_hessian_rank": 4
+        },
+        "z:lambda=1": {
+          "root_kernel_dimension": 50,
+          "root_nilpotent_cube_is_zero": true,
+          "root_nilpotent_rank": 14,
+          "root_nilpotent_square_rank": 4,
+          "tracefree_hessian_rank": 4
+        }
+      },
+      "generic_root": {
+        "algebraic_multiplicity": 64,
+        "complete_eigenbasis": false,
+        "geometric_multiplicity": 50,
+        "jordan_blocks_size_1": 40,
+        "jordan_blocks_size_2": 6,
+        "jordan_blocks_size_3": 4,
+        "nilpotent_index": 3,
+        "nilpotent_rank": 14,
+        "nilpotent_square_rank": 4
+      },
+      "tracefree_inclusion_rank": 9,
+      "two_alpha_plus_beta_zero_control": {
+        "algebraic_multiplicity": 64,
+        "complete_eigenbasis": false,
+        "geometric_multiplicity": 54,
+        "jordan_blocks_size_1": 44,
+        "jordan_blocks_size_2": 10,
+        "root_nilpotent_rank": 10,
+        "root_nilpotent_square_rank": 0
+      }
+    },
+    "roots": [
+      -1,
+      1
+    ],
+    "uniform_diagonalizer_exists": false,
+    "weights": {
+      "R": 1,
+      "S_mn": 1,
+      "c_mna": 2,
+      "g_mn": 3,
+      "r_a": 0
+    }
+  },
+  "ordinary_equal_order_symbol": {
+    "algebraic_multiplicity_each_root": 64,
+    "classification": "AUXILIARY_EQUAL_ORDER_SYSTEM_STRONGLY_HYPERBOLIC",
+    "determinant": "(2gamma)^5 beta^9 (1-lambda^2)^64",
+    "geometric_multiplicity_each_root": 64,
+    "grading": {
+      "R": 0,
+      "S_mn": 0,
+      "c_mna": 0,
+      "g_mn": 0,
+      "r_a": 0
+    },
+    "metric_norm_equivalent": false,
+    "normalized_pencil": "q I_64",
+    "roots": [
+      -1,
+      1
+    ],
+    "uniform_condition_number": 1,
+    "uniform_diagonalizer": "T(khat)=I_64",
+    "unnormalized_pencil": "diag(q I_10,q I_40,2gamma q,2gamma q I_4,beta q I_9)",
+    "warning": "This symbol treats curvature and derivative fields as independent equal-regularity unknowns and is not the ordinary fourth-order metric Sobolev symbol."
+  },
+  "physical_spin2_embedding": {
+    "algebraic_multiplicity_each_root_per_polarization": 2,
+    "differential_inverse_is_uniformly_bounded": false,
+    "elimination": "S_A=-(q/2)h_A and beta q S_A=0 imply -(beta/2)q^2 h_A=0",
+    "geometric_multiplicity_each_root_per_polarization": 1,
+    "jordan_block_size_each_polarization": 2,
+    "normalization_note": "The eliminated equation differs only by the nonzero overall factor 1/2 from the frozen physical pencil.",
+    "physical_defect_repaired": false,
+    "polarization_count": 2,
+    "recovered_metric_pencil": "-beta q^2 I_2",
+    "two_polarization_multiplicities": {
+      "algebraic_each_root": 4,
+      "geometric_each_root": 2
+    },
+    "unnormalized_auxiliary_pencil_per_polarization": [
+      [
+        "q",
+        "2"
+      ],
+      [
+        "0",
+        "beta q"
+      ]
+    ],
+    "variables_per_polarization": [
+      "h_A",
+      "S_A"
+    ]
+  },
+  "prohibitions_respected": {
+    "constraint_block_used_to_hide_physical_defect": false,
+    "differential_transformation_treated_as_bounded_inverse": false,
+    "energy_estimate_inferred_from_symbol": false,
+    "ghost_analysis_executed": false,
+    "order_reduction_claimed_as_original_theory": false,
+    "phenomenology_executed": false,
+    "regularizer_or_fiducial_mode_added": false,
+    "source_extension_executed": false,
+    "wave_operators_alone_used_as_metric_hyperbolicity_proof": false,
+    "yukawa_work_executed": false
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_FULL_REDUCED_SYSTEM_PRINCIPAL_STRUCTURE_v0",
+  "sector_separation": {
+    "auxiliary_equal_order_block": "wave-complete but not metric-norm equivalent",
+    "gauge_and_definition_blocks": "wave-complete in the accepted subsidiary system",
+    "metric_equivalence_block": "triangular and defective with one derivative of loss",
+    "physical_metric_block": "defective: -beta(1-lambda^2)^2 I_2",
+    "subsidiary_constraint_block": "strongly hyperbolic: (1-lambda^2) I_69"
+  },
+  "selected_next_target": "review_qft_gr_quadratic_full_reduced_system_principal_structure_v0_result",
+  "terminal_outcomes": [
+    "FULL_REDUCED_SYSTEM_STRONGLY_HYPERBOLIC_ONLY_IN_ADAPTED_GRADING",
+    "FULL_REDUCED_SYSTEM_TRIANGULAR_WITH_FINITE_DERIVATIVE_LOSS"
+  ],
+  "uniformity": {
+    "metric_equivalence": "The root pencil is defective for every khat, so no pointwise complete eigenvector matrix, hence no uniformly bounded diagonalizer, exists.",
+    "ordinary_and_adapted_auxiliary": "After fixed coefficient normalization T=I_64 for every normalized nonzero spatial covector.",
+    "parameter_boundary": "Uniformity is for a fixed generic theory and is not uniform as beta or gamma approaches an excluded control.",
+    "rank_argument": "Spatial rotational covariance gives constant ranks for rank(u,2J)=10 and rank H=4; continuity on the compact unit sphere prevents directional rank degeneration."
+  },
+  "variable_and_equation_order": {
+    "component_dimensions": {
+      "R": 1,
+      "S_mn": 9,
+      "c_mna": 40,
+      "g_mn": 10,
+      "r_a": 4
+    },
+    "equations": [
+      "E_g^H",
+      "E_c",
+      "E_R",
+      "E_r",
+      "E_S"
+    ],
+    "symmetric_component_order": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "11",
+      "12",
+      "13",
+      "22",
+      "23",
+      "33"
+    ],
+    "total_components": 64,
+    "tracefree_completion": "S_33=S_00-S_11-S_22",
+    "tracefree_component_order": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "11",
+      "12",
+      "13",
+      "22",
+      "23"
+    ],
+    "variables": [
+      "g_mn",
+      "c_mna",
+      "R",
+      "r_a",
+      "S_mn"
+    ]
+  },
+  "verdict": "ADAPTED_AUXILIARY_SYMBOL_UNIFORMLY_WAVE_DIAGONAL_METRIC_EQUIVALENCE_SYMBOL_TRIANGULAR_AND_DEFECTIVE_WITH_FIXED_ONE_DERIVATIVE_LOSS_PHYSICAL_SPIN2_BLOCK_UNREPAIRED_NO_ENERGY_OR_WELL_POSEDNESS_CLAIM"
+}

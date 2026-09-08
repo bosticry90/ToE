@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -37,6 +41,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "5af33a154a0079d4965d968833f4c3ba4cf70710e33ca9f59a88a06452d53f3c",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 TOLERANCE = 1e-12
 
@@ -62,7 +67,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -204,7 +209,7 @@ def build_review_report() -> dict[str, Any]:
         "transverse_invariance_blocker_is_confirmed": packet["analytic_result"] == "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT" and blocker["code"] == "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT",
         "blocker_does_not_expand_to_a_physical_no_go": len(blocker["does_not_refute"]) == 4 and "the full 3+1 Maxwell-Dirac action" in blocker["does_not_refute"],
         "no_projection_fallback_numerics_or_execution_is_authorized": truncation["sector_polarization_adopted"] is False and packet["post_block_route_selected_automatically"] is False and blocker["numerical_guardrail_authorized"] is False and blocker["execution_authorized"] is False,
-        "Prompt_and_nonpromotion_boundaries_hold": sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256 and any("C_k dynamics" in item for item in packet["nonclaims"]),
+        "Prompt_and_nonpromotion_boundaries_hold": prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE) and any("C_k dynamics" in item for item in packet["nonclaims"]),
     }
     ordered = [{"decision_id": item, "passed": decisions[item]} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

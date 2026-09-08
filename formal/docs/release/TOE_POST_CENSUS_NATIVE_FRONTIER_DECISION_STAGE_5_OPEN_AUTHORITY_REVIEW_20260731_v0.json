@@ -1,0 +1,25 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_STAGE_5_OPEN_AUTHORITY_REVIEW_20260731_v0",
+  "captured_at_utc": "2026-07-31T07:00:00Z",
+  "checks": {
+    "all_23_stage_4_families_are_the_candidate_units": true,
+    "canonical_manifest_stage_5_binding_matches": true,
+    "candidate_classification_vocabulary_frozen": true,
+    "deterministic_weights_and_tie_breaks_frozen": true,
+    "mandatory_exit_behavior_bound": true,
+    "no_truth_adjudication_or_evidence_promotion": true,
+    "one_frontier_or_explicit_no_selection_rule_bound": true,
+    "repository_claim_exhaustion_not_claimed": true,
+    "stage_4_result_review_validation_and_close_hash_bound": true,
+    "stage_4_is_closed_passed_with_conflicts": true,
+    "successor_program_automatic_open_prohibited": true,
+    "workload_limits_frozen": true
+  },
+  "consumed_authority": "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_STAGE_5_OPEN_AUTHORITY_20260731_v0",
+  "decision": "AUTHORIZE_STAGE_5_OPEN",
+  "nonclaim_boundary": "This authority permits a bounded ranking and selection of one next native research frontier or an explicit no-selection result. It does not adjudicate truth, promote evidence, select a field or action, execute a seam, or authorize a successor program.",
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "review_status": "ACCEPTED_FOR_SEPARATE_ATOMIC_STAGE_5_OPEN",
+  "schema_id": "toe.post_census_native_frontier_decision.stage_5_open_authority_review.v0"
+}

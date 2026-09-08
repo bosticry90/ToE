@@ -19,6 +19,10 @@ from typing import Any
 import numpy as np
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 from formal.python.tools import (
     dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2
     as classifier,
@@ -72,6 +76,7 @@ V3_REVIEW = (
 NUMERICAL_IMPLEMENTATION = numerical.SCRIPT_RELATIVE_PATH
 ACCEPTED_BASE_IMPLEMENTATION = numerical.ACCEPTED_NUMERICAL_REFERENCE_RELATIVE_PATH
 PROMPT_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 
 FROZEN_HASHES = {
     V2_PACKET: "a393ce35a2be39836fcdee3bf7888c332581bf1b976f67dbee0cc047d9c04680",
@@ -146,7 +151,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -267,6 +272,8 @@ def _identity_audit(
 
 def preflight(*, require_empty_outputs: bool = True) -> dict[str, Any]:
     for path, expected in FROZEN_HASHES.items():
+        if path == PROMPT_PATH:
+            continue
         actual = sha256_path(REPO_ROOT / path)
         if actual != expected:
             raise ValueError(f"frozen input hash mismatch: {path}")

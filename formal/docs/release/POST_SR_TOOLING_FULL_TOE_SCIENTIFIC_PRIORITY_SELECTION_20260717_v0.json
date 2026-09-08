@@ -1,0 +1,425 @@
+{
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v3.json",
+        "sha256": "0dbe441d78de6eba0fe006f7b6b280b655a3feae3e1f9d66775eefae9e49a3b1"
+      },
+      {
+        "relative_path": "formal/docs/lanes/SR_COORDINATE_CONVENTION_AND_RESTORATION_TOOLING_CLOSEOUT_20260717_v0.md",
+        "sha256": "aae7a1e0e7029a778dbc9ab3b88952cc3c619624c2bd2255f151c4040d0548ab"
+      },
+      {
+        "relative_path": "formal/docs/release/SCIENCE_FIRST_PILLAR_SEAM_READINESS_v0.json",
+        "sha256": "6a4273b3f95bca657bbc9dcdbab82d118a8223ab6de55a213374421b560838a1"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_R13_FULL_TOE_PRIORITY_RETURN_SELECTION_20260717_v0.json",
+        "sha256": "bfabe6d69a5bf046683948e21e78e1952e518fdfb94fde5c56369c784a2f1a4f"
+      },
+      {
+        "relative_path": "formal/docs/release/EXTERNAL_RELATED_WORK_AND_METHODS_INTAKE_20260717_v0.json",
+        "sha256": "351fe687ab20a8f83b01ebe8dc807274703acf0cc388805ad5f8481cdbf84ca3"
+      },
+      {
+        "relative_path": "formal/docs/lanes/EXTERNAL_RELATED_WORK_AND_BENCHMARK_INTAKE_20260717_v0.md",
+        "sha256": "a5608b1bbda442e78d177e5668254852dabc2740eb55525eb107f9ecb44a3cb9"
+      },
+      {
+        "relative_path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+        "sha256": "1d9fbe0b49d45aad3781b4217dc108a6f2c16361cd59fa662c8283de10f6ac67"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_sr_tooling_full_toe_scientific_priority_selection_v0.py",
+      "sha256": "55b34474320b81b77ae989006645a5b440ca429187c3e536560a8cb665ad762d"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_sr_tooling_full_toe_scientific_priority_selection_v0.py",
+      "sha256": "eb156706caf26ad4df4b35529455c1def0bb4d3417f1a65531dbeca5f682ab56"
+    }
+  },
+  "benchmark_posture": {
+    "GR-WEAK-ROTATING-SOURCE-BENCHMARK": "REFERENCE_BOUND_FOR_SELECTED_GR_PREPARATION_ONLY",
+    "LARES_2_data_analysis_authorized": false,
+    "empirical_fit_authorized": false,
+    "modified_gravity_constraint_claim_authorized": false,
+    "other_external_comparators_remain_dormant": true
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Full-ToE priority selection and one GR derivation-packet preparation target only. No rotating-source derivation, calculation, empirical fit, GR-pillar recovery, seam closure, modified-gravity constraint, master-action promotion, or ToE validation is created by this selection.",
+  "excluded_target_classes": [
+    {
+      "reason": "R13 is terminated under UNRESOLVED_EVIDENCE_SEMANTICS_BLOCK and requires a fresh priority decision specifically justifying replay.",
+      "target_class": "R13_OR_MAXWELL_DIRAC_MECHANISM_CONTINUATION"
+    },
+    {
+      "reason": "The automated restoration lane is closed; v4 is not authorized and does not directly advance physics.",
+      "target_class": "SR_RESTORATION_TOOLING_V4"
+    },
+    {
+      "reason": "Infrastructure/documentation work is subordinate unless a selected physical calculation is blocked by it.",
+      "target_class": "GENERAL_UNITS_REGISTRY_OR_CONVENTION_MIGRATION"
+    },
+    {
+      "reason": "Related work remains non-adopted and cannot displace a live physics obligation without a separate comparator decision.",
+      "target_class": "GFE_OR_OTHER_DORMANT_COMPARATOR_ADOPTION"
+    }
+  ],
+  "ranking": {
+    "eligible_candidate_count": 6,
+    "rows": [
+      {
+        "candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "kind": "BOUNDED_GR_PILLAR_KNOWN_LIMIT_RECOVERY",
+        "scientific_endpoint": "Derive the stationary slow-rotation linearized 0i field equation, exterior gravitomagnetic metric component, and Lense-Thirring nodal-precession coefficient from the bounded GR sector without fitting that coefficient.",
+        "scores": {
+          "claim_state_change_potential": 4,
+          "closed_lane_nonreplay": 5,
+          "endpoint_precision": 5,
+          "existing_authoritative_inputs": 4,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 5,
+          "pillar_or_seam_blocker_relevance": 5,
+          "prediction_or_observation_proximity": 4
+        },
+        "target": "prepare_gr_weak_rotating_source_gravitomagnetic_recovery_packet_v0",
+        "weighted_score": 93
+      },
+      {
+        "candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "kind": "BOUNDED_PREDICTION_FEASIBILITY_OR_NO_GO",
+        "scientific_endpoint": "Prove whether the current unpromoted action determines any parameter-independent observable departure from its standard-sector baseline.",
+        "scores": {
+          "claim_state_change_potential": 5,
+          "closed_lane_nonreplay": 5,
+          "endpoint_precision": 3,
+          "existing_authoritative_inputs": 1,
+          "infrastructure_avoidance": 4,
+          "pass_fail_scientific_value": 5,
+          "pillar_or_seam_blocker_relevance": 5,
+          "prediction_or_observation_proximity": 5
+        },
+        "target": "prepare_master_action_distinctive_prediction_feasibility_no_go_packet_v0",
+        "weighted_score": 83
+      },
+      {
+        "candidate_id": "QFT_GR_SOURCE_CONSERVATION_BIANCHI_COUNTERMODEL",
+        "kind": "BOUNDED_SEAM_COUNTERMODEL",
+        "scientific_endpoint": "Construct or refute one explicit conserved classical source map compatible with the bounded QFT expectation and Bianchi obligations.",
+        "scores": {
+          "claim_state_change_potential": 5,
+          "closed_lane_nonreplay": 4,
+          "endpoint_precision": 4,
+          "existing_authoritative_inputs": 3,
+          "infrastructure_avoidance": 3,
+          "pass_fail_scientific_value": 5,
+          "pillar_or_seam_blocker_relevance": 5,
+          "prediction_or_observation_proximity": 3
+        },
+        "target": "prepare_qft_gr_source_conservation_bianchi_countermodel_packet_v0",
+        "weighted_score": 81
+      },
+      {
+        "candidate_id": "QM_FINITE_EVOLUTION_TO_OBSERVABLE_RECOVERY",
+        "kind": "BOUNDED_QM_PILLAR_RECOVERY",
+        "scientific_endpoint": "Derive one finite-dimensional unitary evolution and observable probability calculation from the bound QM surfaces with an analytic baseline.",
+        "scores": {
+          "claim_state_change_potential": 3,
+          "closed_lane_nonreplay": 5,
+          "endpoint_precision": 5,
+          "existing_authoritative_inputs": 4,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 4,
+          "pillar_or_seam_blocker_relevance": 3,
+          "prediction_or_observation_proximity": 2
+        },
+        "target": "prepare_qm_finite_evolution_to_observable_recovery_packet_v0",
+        "weighted_score": 78
+      },
+      {
+        "candidate_id": "QM_STAT_TRANSPORT_COUNTERMODEL",
+        "kind": "BOUNDED_SEAM_COUNTERMODEL",
+        "scientific_endpoint": "Produce a finite state/probability transport witness or countermodel for the retained QM-STAT semantic bridge assumptions.",
+        "scores": {
+          "claim_state_change_potential": 4,
+          "closed_lane_nonreplay": 2,
+          "endpoint_precision": 4,
+          "existing_authoritative_inputs": 4,
+          "infrastructure_avoidance": 4,
+          "pass_fail_scientific_value": 5,
+          "pillar_or_seam_blocker_relevance": 4,
+          "prediction_or_observation_proximity": 3
+        },
+        "target": "prepare_qm_stat_transport_countermodel_packet_v0",
+        "weighted_score": 76
+      },
+      {
+        "candidate_id": "EM_QFT_SOURCE_EXCHANGE_RECOVERY",
+        "kind": "BOUNDED_SEAM_RECOVERY",
+        "scientific_endpoint": "Derive one complete source-current and matter-field exchange identity from the retained psi-A route without importing quantized EM closure.",
+        "scores": {
+          "claim_state_change_potential": 4,
+          "closed_lane_nonreplay": 2,
+          "endpoint_precision": 4,
+          "existing_authoritative_inputs": 4,
+          "infrastructure_avoidance": 4,
+          "pass_fail_scientific_value": 4,
+          "pillar_or_seam_blocker_relevance": 4,
+          "prediction_or_observation_proximity": 3
+        },
+        "target": "prepare_em_qft_source_exchange_recovery_packet_v0",
+        "weighted_score": 74
+      }
+    ],
+    "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+    "runner_up_score": 83,
+    "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+    "selected_score": 93
+  },
+  "schema_id": "POST_SR_TOOLING_FULL_TOE_SCIENTIFIC_PRIORITY_SELECTION_20260717_v0",
+  "scope_and_authorization": {
+    "R13_reopened": false,
+    "SR_tooling_reopened": false,
+    "automation_created": false,
+    "empirical_analysis_authorized": false,
+    "master_action_promoted": false,
+    "new_general_purpose_tool_authorized": false,
+    "packet_preparation_authorized": true,
+    "pillar_completion_claimed": false,
+    "repository_migration_authorized": false,
+    "seam_closure_claimed": false,
+    "selected_derivation_executed_now": false,
+    "simulation_authorized": false,
+    "v4_authorized": false
+  },
+  "selected_next_target": "prepare_gr_weak_rotating_source_gravitomagnetic_recovery_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_DIRECT_GR_PILLAR_RECOVERY",
+  "selected_scientific_obligation": {
+    "failure_result": "BOUNDED_NO_GO_OR_EXACT_SUPPLIED_ASSUMPTION_BLOCKER",
+    "inputs": [
+      "project GR action/equation surface and explicit weak-field assumptions",
+      "retained x^0=c t, (+,-,-,-), SI convention policy",
+      "stationary compact-source mass density and mass-current T_0i with total angular momentum J",
+      "registered GR-WEAK-ROTATING-SOURCE-BENCHMARK as a reference only"
+    ],
+    "obligation_class": "KNOWN_PHYSICS_RECOVERY",
+    "pillar": "GR",
+    "question": "Under stationary, weak-field, slow-rotation, exterior-source assumptions, does the bounded GR sector derive the canonical gravitomagnetic g_0i field and Lense-Thirring nodal-precession coefficient without fitting it?",
+    "required_derivation_endpoints": [
+      "derive the linearized stationary 0i field equation from the bounded GR surface",
+      "derive the exterior g_0i gravitomagnetic component and its coefficient from T_0i",
+      "derive the orbital-node Lense-Thirring precession without fitting its coefficient",
+      "show J=0 removes the gravitomagnetic term and J reversal reverses the precession sign",
+      "identify every supplied boundary, gauge, source, and approximation assumption"
+    ],
+    "stopping_rule": "Prepare one derivation contract, stop for independent review, and do not expand to observational fitting, strong fields, alternative gravity, or a general symbolic framework.",
+    "success_result": "BOUNDED_GR_ROTATING_WEAK_FIELD_RECOVERY_CANDIDATE_PENDING_RESULT_REVIEW"
+  },
+  "selection_policy": {
+    "criterion_scale": "0..5",
+    "maximum_weighted_score": 100,
+    "required_target_properties": [
+      "addresses a real pillar or seam blocker",
+      "has a precise mathematical or computational endpoint",
+      "produces meaningful evidence on success or failure",
+      "requires no new general-purpose tool or governance system",
+      "can change the project scientific claim state"
+    ],
+    "weights": {
+      "claim_state_change_potential": 3,
+      "closed_lane_nonreplay": 2,
+      "endpoint_precision": 3,
+      "existing_authoritative_inputs": 2,
+      "infrastructure_avoidance": 3,
+      "pass_fail_scientific_value": 2,
+      "pillar_or_seam_blocker_relevance": 3,
+      "prediction_or_observation_proximity": 2
+    }
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 4,
+    "rows": [
+      {
+        "runner_up_candidate_id": "QM_FINITE_EVOLUTION_TO_OBSERVABLE_RECOVERY",
+        "runner_up_score": 69,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 78,
+        "variant": "omit_pillar_or_seam_blocker_relevance"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 74,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 78,
+        "variant": "omit_endpoint_precision"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 73,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 83,
+        "variant": "omit_pass_fail_scientific_value"
+      },
+      {
+        "runner_up_candidate_id": "QM_FINITE_EVOLUTION_TO_OBSERVABLE_RECOVERY",
+        "runner_up_score": 69,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 81,
+        "variant": "omit_claim_state_change_potential"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 81,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 85,
+        "variant": "omit_existing_authoritative_inputs"
+      },
+      {
+        "runner_up_candidate_id": "QFT_GR_SOURCE_CONSERVATION_BIANCHI_COUNTERMODEL",
+        "runner_up_score": 72,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 78,
+        "variant": "omit_infrastructure_avoidance"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 73,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 83,
+        "variant": "omit_closed_lane_nonreplay"
+      },
+      {
+        "runner_up_candidate_id": "QFT_GR_SOURCE_CONSERVATION_BIANCHI_COUNTERMODEL",
+        "runner_up_score": 75,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 85,
+        "variant": "omit_prediction_or_observation_proximity"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 78,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 88,
+        "variant": "pillar_or_seam_blocker_relevance_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 88,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 98,
+        "variant": "pillar_or_seam_blocker_relevance_+1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 80,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 88,
+        "variant": "endpoint_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 86,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 98,
+        "variant": "endpoint_precision_+1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 78,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 88,
+        "variant": "pass_fail_scientific_value_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 88,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 98,
+        "variant": "pass_fail_scientific_value_+1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 78,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 89,
+        "variant": "claim_state_change_potential_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 88,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 97,
+        "variant": "claim_state_change_potential_+1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 82,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 89,
+        "variant": "existing_authoritative_inputs_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 84,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 97,
+        "variant": "existing_authoritative_inputs_+1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 79,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 88,
+        "variant": "infrastructure_avoidance_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 87,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 98,
+        "variant": "infrastructure_avoidance_+1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 78,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 88,
+        "variant": "closed_lane_nonreplay_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 88,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 98,
+        "variant": "closed_lane_nonreplay_+1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 78,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 89,
+        "variant": "prediction_or_observation_proximity_-1"
+      },
+      {
+        "runner_up_candidate_id": "MASTER_ACTION_DISTINCTIVE_PREDICTION_FEASIBILITY_NO_GO",
+        "runner_up_score": 88,
+        "selected_candidate_id": "GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY",
+        "selected_score": 97,
+        "variant": "prediction_or_observation_proximity_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "sr_policy_closeout": {
+    "automated_restoration": "BLOCKED_SR_RESTORATION_TOOLING_CONTRACT",
+    "equation_specific_review_required": true,
+    "migration_executed": false,
+    "physical_convention": "x^0=c t; g=diag(+1,-1,-1,-1); dimensionful target SI",
+    "policy_status": "RETAINED_AS_BOUNDED_POLICY",
+    "v4_authorized": false
+  },
+  "target": "select_next_high_leverage_scientific_obligation_from_full_toe_priority_map",
+  "verdict": "SELECTED_DIRECT_GR_KNOWN_LIMIT_RECOVERY_PREPARATION"
+}

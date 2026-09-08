@@ -1,0 +1,42 @@
+{
+  "schema_id": "REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_PACKET_20260725_v0",
+  "mode": "READ_ONLY_REASSESSMENT_AND_IDENTITY_ADJUDICATION",
+  "required_inventories": [
+    "FROZEN_COMPARABILITY_INVENTORY",
+    "CURRENT_ACCEPTANCE_INVENTORY"
+  ],
+  "required_staging_roles": [
+    "HISTORICAL_SOURCE_PIN",
+    "CURRENT_GIT_BLOB_IDENTITY",
+    "CANONICAL_ARTIFACT_IDENTITY",
+    "UNRATIFIED_SOURCE",
+    "PROVENANCE_BLOCKED"
+  ],
+  "permitted": {
+    "collect_current_inventory": true,
+    "reexecute_thirteen_outcome_surface": true,
+    "map_all_staged_dependencies": true,
+    "use_in_memory_substitution_to_expose_masked_roots": true,
+    "write_diagnostic_ledger": true
+  },
+  "prohibited": {
+    "persist_substituted_hashes": true,
+    "modify_staging_consumer": true,
+    "modify_tests": true,
+    "modify_historical_artifacts": true,
+    "read_dirty_main_as_evidence": true,
+    "registry_rotation": true,
+    "v2_enrollment": true,
+    "scientific_content_change": true,
+    "lean_activity": true,
+    "automatic_successor": true
+  },
+  "acceptance": {
+    "all_thirteen_outcomes_reproduced": true,
+    "all_staging_dependencies_mapped": true,
+    "masked_roots_exhaustively_exposed": true,
+    "persisted_substitutions": 0,
+    "checkout_after": "CLEAN",
+    "dirty_main": "BYTE_UNCHANGED"
+  }
+}

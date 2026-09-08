@@ -1,0 +1,365 @@
+{
+  "adversarial_controls": {
+    "control_count": 12,
+    "failure_count": 0,
+    "pass_count": 12,
+    "rows": [
+      {
+        "control_id": "ADV_UNKNOWN_OR_MULTIPLE_CLASS",
+        "expected_rejection": "UNKNOWN_AUTHORITY_CLASS",
+        "observed_rejection": "UNKNOWN_AUTHORITY_CLASS",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_GHOST_AVOIDANCE_RELABEL_NATIVE",
+        "expected_rejection": "AUTHORITY_CLASS_MISMATCH",
+        "observed_rejection": "AUTHORITY_CLASS_MISMATCH",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_R9_BETA_ZERO",
+        "expected_rejection": "R9_STRENGTHENED",
+        "observed_rejection": "R9_STRENGTHENED",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_R10_BETA_ZERO",
+        "expected_rejection": "R10_STRENGTHENED",
+        "observed_rejection": "R10_STRENGTHENED",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_S3_RELABEL_NATIVE",
+        "expected_rejection": "AUTHORITY_CLASS_MISMATCH",
+        "observed_rejection": "AUTHORITY_CLASS_MISMATCH",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_EMPIRICAL_TO_EXACT_BETA_ZERO",
+        "expected_rejection": "EMPIRICAL_EXACT_IDENTITY",
+        "observed_rejection": "EMPIRICAL_EXACT_IDENTITY",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_EXACT_CURRENT_NO_BETA_ZERO",
+        "expected_rejection": "EXACT_CURRENT_LOGIC_MISMATCH",
+        "observed_rejection": "EXACT_CURRENT_LOGIC_MISMATCH",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_COINCIDENT_GHOST_CANCELLATION",
+        "expected_rejection": "COINCIDENT_MASS_MISCLASSIFIED",
+        "observed_rejection": "COINCIDENT_MASS_MISCLASSIFIED",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_PRESELECT_POSITION_A",
+        "expected_rejection": "POSITION_PRESELECTED",
+        "observed_rejection": "POSITION_PRESELECTED",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_ADOPT_HYPOTHETICAL_POSTULATE",
+        "expected_rejection": "CONDITION_PRESELECTED",
+        "observed_rejection": "CONDITION_PRESELECTED",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_OUTSIDE_FAMILY_TRANSPORT",
+        "expected_rejection": "SCOPE_LEAK",
+        "observed_rejection": "SCOPE_LEAK",
+        "passed": true
+      },
+      {
+        "control_id": "ADV_PREISSUE_PRINCIPAL_OUTCOME",
+        "expected_rejection": "PREMATURE_OUTCOME",
+        "observed_rejection": "PREMATURE_OUTCOME",
+        "passed": true
+      }
+    ]
+  },
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_PACKET_20260718_v0.md",
+        "sha256": "c986438982654c7d01cc37048e2b8286f40c43b1750be25a6338900b65bed82e"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_PACKET_20260718_v0.json",
+        "sha256": "a0d2986bb32a1e0d8363db7377569ef95553331dd5b50fb37e9a3827164b7c9e"
+      },
+      {
+        "relative_path": "formal/python/tools/post_quadratic_gravity_comparison_conditional_mode_selection_packet_v0.py",
+        "sha256": "02c06dc990ece2d26b86b3b1ab4095cc3df2a142898a7db7878274c106f63056"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_quadratic_gravity_comparison_conditional_mode_selection_packet_v0.py",
+        "sha256": "ab928cd4e3f096cf9adfa3407dff13f3bc181bc7c61a837a0c549821e4e77dfd"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostQuadraticGravityComparisonConditionalModeSelectionPacketV0.lean",
+        "sha256": "41ca2e2e58ac61570407e274077e446b172091c974e900bee0ed56b2aed1608b"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_quadratic_gravity_comparison_conditional_mode_selection_packet_review_v0.py",
+      "sha256": "b091a6601f2e7b7ea718fe2d5e9de322c0c14ce674e8e95d8584588b1b5130fb"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_PACKET_REVIEW_20260718_v0.md",
+      "sha256": "296344da12a0d51b14351b93dc8f0e0874ffc6565325d3eecdf2c3acf3b23483"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_quadratic_gravity_comparison_conditional_mode_selection_packet_review_v0.py",
+      "sha256": "ef6cc1f10f453e263ebca3f7fbfc7248445ce658e335434dca9c1ff88689b341"
+    }
+  },
+  "authorization_boundary": {
+    "additional_execution_authorized": false,
+    "alpha_or_beta_selection_authorized": false,
+    "authoritative_V2_population_authorized": false,
+    "condition_adoption_authorized": false,
+    "dataset_or_empirical_fitting_authorized": false,
+    "frame_dragging_authorized": false,
+    "gravitational_action_selection_authorized": false,
+    "independent_result_review_required_after_execution": true,
+    "master_action_mutation_authorized": false,
+    "matter_selection_authorized": false,
+    "metric_variation_authorized": false,
+    "native_principle_or_postulate_authorized": false,
+    "one_bounded_envelope_execution_authorized": true,
+    "orbital_transport_authorized": false,
+    "outside_family_mechanism_authorized": false
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Packet acceptance and one bounded envelope execution authorization only. No envelope result, selector adoption, native principle, postulate, coupling, action, external mechanism, dataset, empirical fit, matter sector, metric variation, orbital transport, frame-dragging result, V2 cell, or master-action change is created by this review.",
+  "coincident_mass_review": {
+    "P2_P0s_orthogonal": true,
+    "Sigma": "-beta/2",
+    "cancellation": false,
+    "condition": "2 alpha+beta=0 with beta!=0",
+    "ghost_repaired": false,
+    "m0_squared": "1/beta",
+    "m2_squared": "1/beta",
+    "pole_order": 1
+  },
+  "current_posture": {
+    "adversarial_controls": "12_OF_12_PASSED",
+    "authoritative_V2_matrix": "0_OF_70",
+    "condition_adopted": "NONE",
+    "conditional_packet": "ACCEPTED_16_OF_16_GATES",
+    "envelope_execution": "NOT_STARTED",
+    "envelope_execution_authority": "ONE_BOUNDED_EXECUTION",
+    "frame_dragging": "NOT_RESUMED",
+    "gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "execute_post_quadratic_gravity_comparison_conditional_mode_selection_envelope_v0",
+    "selector_adjudications": "0_OF_10"
+  },
+  "exact_empirical_review": {
+    "dataset_imported": false,
+    "exact_generic_current_equality": "beta=0 within frozen family",
+    "finite_precision_agreement": "bounds or suppresses correction; beta=0 not inferred",
+    "metric_to_observable_transport_executed": false
+  },
+  "independent_authority_audit": {
+    "R10": "PROJECT_BOUND_EVALUATION_ONLY_NO_ACCEPTANCE_THRESHOLD",
+    "R9": "PROJECT_BOUND_EVALUATION_ONLY_NO_PARAMETER_RESTRICTION",
+    "S3": "SUPPLIED_EXCLUDED_FROM_NATIVE_SELECTION",
+    "authority_class_count": 4,
+    "hypothetical_postulate": "NOT_PROPOSED_NOT_AUTHORIZED_NOT_ADOPTED",
+    "native_branch_selector_found_during_packet_review": false,
+    "selector_count": 10
+  },
+  "independent_conditional_algebra": {
+    "beta_zero_and_Sigma_zero_imply_alpha_zero": true,
+    "beta_zero_scalar_non_tachyonic_implies_alpha_negative": true,
+    "coincident_channel_statement": "accepted P2 and P0s orthogonality leaves a simple shared pole location with separate residues and no cancellation",
+    "coincident_masses_equal": true,
+    "coincident_samples": [
+      {
+        "Sigma": "1",
+        "alpha": "1",
+        "beta": "-2",
+        "equal": true,
+        "m0_squared": "-1/2",
+        "m2_squared": "-1/2"
+      },
+      {
+        "Sigma": "1/2",
+        "alpha": "1/2",
+        "beta": "-1",
+        "equal": true,
+        "m0_squared": "-1",
+        "m2_squared": "-1"
+      },
+      {
+        "Sigma": "-1/2",
+        "alpha": "-1/2",
+        "beta": "1",
+        "equal": true,
+        "m0_squared": "1",
+        "m2_squared": "1"
+      },
+      {
+        "Sigma": "-1",
+        "alpha": "-1",
+        "beta": "2",
+        "equal": true,
+        "m0_squared": "1/2",
+        "m2_squared": "1/2"
+      }
+    ],
+    "scalar_non_tachyonic_iff_Sigma_negative": true,
+    "scalar_sign_samples": [
+      {
+        "Sigma": "-2",
+        "Sigma_negative": true,
+        "m0_squared": "1/4",
+        "non_tachyonic": true
+      },
+      {
+        "Sigma": "-1",
+        "Sigma_negative": true,
+        "m0_squared": "1/2",
+        "non_tachyonic": true
+      },
+      {
+        "Sigma": "1",
+        "Sigma_negative": false,
+        "m0_squared": "-1/2",
+        "non_tachyonic": false
+      },
+      {
+        "Sigma": "2",
+        "Sigma_negative": false,
+        "m0_squared": "-1/4",
+        "non_tachyonic": false
+      }
+    ],
+    "spin2_non_tachyonic_iff_beta_positive": true,
+    "spin2_sign_samples": [
+      {
+        "beta": "-2",
+        "beta_positive": false,
+        "m2_squared": "-1/2",
+        "non_tachyonic": false
+      },
+      {
+        "beta": "-1",
+        "beta_positive": false,
+        "m2_squared": "-1",
+        "non_tachyonic": false
+      },
+      {
+        "beta": "1",
+        "beta_positive": true,
+        "m2_squared": "1",
+        "non_tachyonic": true
+      },
+      {
+        "beta": "2",
+        "beta_positive": true,
+        "m2_squared": "1/2",
+        "non_tachyonic": true
+      }
+    ]
+  },
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 16,
+    "pass_count": 16,
+    "rows": [
+      {
+        "gate_id": "G1_PACKET_CUSTODY_AND_EXACT_AUTHORITY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G2_PREPARED_STATE_AND_ZERO_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G3_AUTHORITY_ENUM_EXACT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G4_TEN_EXCLUSIVE_SELECTOR_CLASSES",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G5_R9_NOT_STRENGTHENED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G6_R10_NOT_STRENGTHENED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G7_S3_AND_MINIMAL_MODE_REMAIN_SUPPLIED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G8_MASS_SIGN_CONDITIONS_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G9_MODE_REMOVAL_AND_EINSTEIN_LIMIT_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G10_EXACT_AND_EMPIRICAL_CURRENT_DISJOINT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G11_SIX_EXACT_APPROXIMATE_MEANINGS_DISJOINT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G12_NINE_STRATA_AND_COINCIDENT_MASS_REPRODUCED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G13_THREE_POSITIONS_OPEN_AND_SCOPE_FIREWALLED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G14_PRINCIPAL_AND_SUBORDINATE_OUTCOMES_NOT_PREISSUED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G15_TWELVE_ADVERSARIAL_CONTROLS_FAIL_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "G16_ONE_EXECUTION_ONLY_AND_NO_ADOPTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "POST_QUADRATIC_GRAVITY_COMPARISON_CONDITIONAL_MODE_SELECTION_PACKET_REVIEW_20260718_v0",
+  "scope": {
+    "alpha_or_beta_selected": false,
+    "authoritative_V2_matrix_populated": false,
+    "condition_adopted": false,
+    "dataset_or_empirical_fit_imported": false,
+    "envelope_execution_executed": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": true,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "metric_variation_executed": false,
+    "native_principle_identified": false,
+    "new_postulate_proposed_or_authorized": false,
+    "one_bounded_envelope_execution_authorized": true,
+    "orbital_transport_executed": false,
+    "outside_family_mechanism_opened": false,
+    "packet_accepted": true,
+    "selector_adjudication_made": false
+  },
+  "selected_next_target": "execute_post_quadratic_gravity_comparison_conditional_mode_selection_envelope_v0",
+  "selected_next_target_kind": "ONE_BOUNDED_CONDITIONAL_ENVELOPE_EXECUTION_NO_CONDITION_ADOPTION",
+  "target": "review_post_quadratic_gravity_comparison_conditional_mode_selection_packet_v0_result",
+  "verdict": "ACCEPTED_AUTHORIZE_ONE_BOUNDED_CONDITIONAL_MODE_SELECTION_ENVELOPE_EXECUTION"
+}

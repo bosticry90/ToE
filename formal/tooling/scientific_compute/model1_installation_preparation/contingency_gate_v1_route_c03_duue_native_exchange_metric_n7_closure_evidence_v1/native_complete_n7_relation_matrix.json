@@ -1,0 +1,398 @@
+{
+  "artifact_sha256": "2127120a5d5258ffed1bc269dfd592c1e240637a9025918cdac2735af3123bcb",
+  "case_id": "ROUTE-C-03",
+  "coefficient_field": "Q(d)",
+  "complete_relation_rank_over_Qd": 24,
+  "constant_nonzero_pivot_minor": "-1024",
+  "defect_columns": [
+    {
+      "column": 0,
+      "defect_id": "DUUE-NATIVE-EF-ac362a1fa93459e95baae6a372984137fcdd419a9c6a418ad6ecb961cb317a81",
+      "input_tensor_id": "DUUE-V3-BMHV-304bc283bc136e5707f15528028d95427b8e1c32b573460457e409bedd9ac735"
+    },
+    {
+      "column": 1,
+      "defect_id": "DUUE-NATIVE-EF-e086deda0efa3dce39998c83f0139506d439db485e87261d5cca35d2c289d567",
+      "input_tensor_id": "DUUE-V3-BMHV-4af2da6b8a92aa756656b44bda4b13575d52e4447f160e87ae811cf5d98c99ed"
+    },
+    {
+      "column": 2,
+      "defect_id": "DUUE-NATIVE-EF-b5d5dd472417aa8ec68e5023b38e9ec8af07c9ff9374907a99d25826bbdbff5c",
+      "input_tensor_id": "DUUE-V3-BMHV-547607567b569ab066eb0ebe7da743f66dc0164e023ac2d142e070096ccb2dec"
+    },
+    {
+      "column": 3,
+      "defect_id": "DUUE-NATIVE-EF-38385d7aceb965876367472b835056703610c573db4c9a349d53d9b6f4d971bc",
+      "input_tensor_id": "DUUE-V3-BMHV-5fd98c54ab2ff2833771bd9460ff2e569dc31760a90b2948b3b8f57858c542d5"
+    },
+    {
+      "column": 4,
+      "defect_id": "DUUE-NATIVE-EF-6ee20094e32e387dcd51097b45a11f773b633e0228a9c7840f5b74e18b6fe2fa",
+      "input_tensor_id": "DUUE-V3-BMHV-daf3f89430551e54ae36db31bddeb5ecb29408afdf8236301057aa6341ad1f5f"
+    },
+    {
+      "column": 5,
+      "defect_id": "DUUE-NATIVE-EF-f08e4a72173071c2ef3c2f847a6437d29cc01daf4a550c9da89caaf9f85620c3",
+      "input_tensor_id": "DUUE-V3-BMHV-f64628ef9510dc6d08e6ee230a742b654475b201d1c58b9e997218225439813c"
+    },
+    {
+      "column": 6,
+      "defect_id": "DUUE-NATIVE-EF-8b8a0831d158306804086d87b3e1a309e50f80401f7980e15eb08d51f2426345",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-0d62a4c3a9e7789f38e5f9eeef320ee540864028ae81713461528f6bdb97d6b2"
+    },
+    {
+      "column": 7,
+      "defect_id": "DUUE-NATIVE-EF-79178b7ac09fd2bed0a564608e2a5e30d7e44faa305d271d157daf6f414dd1cf",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-1175bbbb0085c70777d6b76a4b31887c55cc24e971ac79165272b09bfaef5f5e"
+    },
+    {
+      "column": 8,
+      "defect_id": "DUUE-NATIVE-EF-87df5a70375b194c7ba50c3f919134a1f685c4bbdd9f61b750ba82d1ddde33f3",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-1f09d76e7fb1c90b1d76a591efea5adcee9563261f8cd88325c221e694e84e78"
+    },
+    {
+      "column": 9,
+      "defect_id": "DUUE-NATIVE-EF-537f23bf91393d1af85cf7f6e983d37b4ff81ae5945d2bcb1a61be06781fd6b9",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-30e221e18d21e610226af615a5a177e1ae33dc073f9f8b7aa3fe22054ab5e11d"
+    },
+    {
+      "column": 10,
+      "defect_id": "DUUE-NATIVE-EF-81b8a3a1e565e6c62e45f8b2b65185d05ef7b83ea714d5a6be03b4dc4d5211b6",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-3ed6300d6250182a2a86e3282620a3886859fe4929eb713f850d22f053926d22"
+    },
+    {
+      "column": 11,
+      "defect_id": "DUUE-NATIVE-EF-a3b275a36e931fc40fae2bb8ce22c34672baef1f0828c32aaf5ca44781d777f6",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-412692aa3f9101579ab07641f378bc807aa4d8fd2c4af2323eb7ec4aed470345"
+    },
+    {
+      "column": 12,
+      "defect_id": "DUUE-NATIVE-EF-bbbdefe13d1dac98d3607985c7a2e0bbc69f06192eb8267209f5ff3894f4d7fe",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-4ee8e68ccf09eb868886d9a648618d657cdb3c0be245cfccc1672497fa171284"
+    },
+    {
+      "column": 13,
+      "defect_id": "DUUE-NATIVE-EF-5a0d66f704cdde230c71611a21f5d615d2b4379ad944bf651c85ef49bc9e689e",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-53e2eeb594adceeec783a5b897d937411201bffad24a7c48f996513a8e77de0f"
+    },
+    {
+      "column": 14,
+      "defect_id": "DUUE-NATIVE-EF-ce0f0cab302310ce1d36a26576e43b124d1d220e18e9e1b728041203c51ba599",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-5524132590566ca5e622d42c8f48214423282601b1c2efc794f34a6da74994f0"
+    },
+    {
+      "column": 15,
+      "defect_id": "DUUE-NATIVE-EF-b97e2442d9245e11daa0459c705f09a5dbb51260674138fd3455ed6d08294d00",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-61b89474e34c97ed6f199a0a94651b3452c52177b67a49bb0440c9d937041a56"
+    },
+    {
+      "column": 16,
+      "defect_id": "DUUE-NATIVE-EF-074b558fb7ec8451301e45ea2d637008dd39575a80ba267a4506d62559f268a3",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-63d12a46480c005a7bb035691d4c4c6666071935dc95e63a33fba72de828fc46"
+    },
+    {
+      "column": 17,
+      "defect_id": "DUUE-NATIVE-EF-942a4d292c73248869cd48c26510db422d1207a8da20800c161428cd8cf9a752",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-719704fc8f08bf21dd648a6d8dc4ea34f82b1a00b73e5cc08c51ee7852a713d9"
+    },
+    {
+      "column": 18,
+      "defect_id": "DUUE-NATIVE-EF-31bca059c3a029deab48d138890397b1247a39009c6352ecd283baa871ac43fd",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7a59e5ba4969d338786a7608982e30420bc518909e74e1399d6676a14a3cde80"
+    },
+    {
+      "column": 19,
+      "defect_id": "DUUE-NATIVE-EF-c23bb97c98a0386fea6f0c022a8c91f7f483f2c388fa541f0a769265629183f7",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7e759ccf2ad6d501189234b1468c5832b6d5cf875457f5bb17e6ec70fe5ed701"
+    },
+    {
+      "column": 20,
+      "defect_id": "DUUE-NATIVE-EF-b37918d59b4a02797785ac84b904e8b03c7cc674f0079427d2ac8e656bd3d645",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-7f996c738f648a2b62cd815b474956ce33ccee37b0f90402dffc51658121bfa7"
+    },
+    {
+      "column": 21,
+      "defect_id": "DUUE-NATIVE-EF-38a2fb42646dcdad95f72dc054f9782d8eb714c8f7c2821de8de6542b18c907a",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-81f6fb6e643c61431854dde2d65efa64b2f893de4a408beea365d84e7a411035"
+    },
+    {
+      "column": 22,
+      "defect_id": "DUUE-NATIVE-EF-fcd1b083a220d4116aee554007000d96ca14cdd5129631d4d3ca1c36cc86e684",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-8c0f27c15549f131bc117e935f054629c11dd325166621b74becd40bb625e6d2"
+    },
+    {
+      "column": 23,
+      "defect_id": "DUUE-NATIVE-EF-fc9bc6fe966d9bd0427188ca1311d46d60e199ff588e959a405e7cac56467ce7",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-9103364d4dd2bc790e21582e87dfcfbebb2783dfb5e6c253b8ccda6f2fffdd97"
+    },
+    {
+      "column": 24,
+      "defect_id": "DUUE-NATIVE-EF-b198cfbb116a3adbf6c6f26e43bf9f5564b941c85b79c1e24129cce1058212f5",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-95986cecdac319a40f72008eede2adf7145cfe3b42c8bec9eee9f3cf03f7f283"
+    },
+    {
+      "column": 25,
+      "defect_id": "DUUE-NATIVE-EF-0b825134edc0e1299d2f8843b8ad8ce80ba1a7c2a7c0a8e741133d0fd674eeb5",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-a691a4064299ceff91754f89cf9c91bf8cbd028c8be50c833d11ea0ac2cba005"
+    },
+    {
+      "column": 26,
+      "defect_id": "DUUE-NATIVE-EF-9cf7e723f6a95dae5b3f3f23af4071c523f5ab158a9d130d6cee12879ef7f381",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-b7b8e4966f0fa9f0f6eee64aa2a47fe7618fb11e3f0381dcf1d85a469ccc7c94"
+    },
+    {
+      "column": 27,
+      "defect_id": "DUUE-NATIVE-EF-6425db920d1862c2fea1bee64d73b37ac5d82d1f812e632792073a91f009a18c",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-bccec3eef0118d1eb5fdd30c9f6b0923537bc3eaefae4f551514957672e4c0cd"
+    },
+    {
+      "column": 28,
+      "defect_id": "DUUE-NATIVE-EF-1ffd4d1c47b1474201e92b689fb335ef56964dacf805cfab4d6db432cc009860",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-bef92f25430cffedf3ab45e36bc20b0959e524fabf9c0cf146da41de6ae1f76a"
+    },
+    {
+      "column": 29,
+      "defect_id": "DUUE-NATIVE-EF-45bca81d76a72da4b72fc9ef3690cdd99257911916b3b99c4a3551819cd65b98",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-c6ff1ece9037e2e428ac3e578e9ce3d4a10e2ee0acf2913811a8f6a70882ac77"
+    },
+    {
+      "column": 30,
+      "defect_id": "DUUE-NATIVE-EF-35ed398c797a2d8cb917990644c371852ca529f3b8baecdc2d69192e3b2d578b",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-caa65974bb8c868976426003cfb778f65721bce12a53118a8c6367b1a03f87d3"
+    },
+    {
+      "column": 31,
+      "defect_id": "DUUE-NATIVE-EF-1b197d49d732e403cc93e19c335c877d011ee9a2c2df7f8a143a1ea80d1b85e3",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-cf0b2e284e4c0ddbb5c4a42aa49bab7d9330ae9d80937448767907b9a5b1e293"
+    },
+    {
+      "column": 32,
+      "defect_id": "DUUE-NATIVE-EF-27945efa0616c0df356bdea920c404f79fffe844457f0046995d10d1e31d5b9d",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-d5ae39ca9efe811abe2a71fe453813e4dbe3bdcc77fa2496c8d9ffd354f5ff0e"
+    },
+    {
+      "column": 33,
+      "defect_id": "DUUE-NATIVE-EF-55b964d4609a6969ed030a982edfddf8f93d355c8004cb7d1862318fb7161363",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-ddfe384adc37ecfb8123377ff198bc2dda1487c0dc63f73b05e6cb33bedddc6c"
+    },
+    {
+      "column": 34,
+      "defect_id": "DUUE-NATIVE-EF-94371619786874fd4109895386490b85a5de225c0f00c5f36a1f103343e85407",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-e51e6b569227a42158dd05a707018b75df285e30690f371300e20c059bb622b7"
+    },
+    {
+      "column": 35,
+      "defect_id": "DUUE-NATIVE-EF-1a1bb2dc787baebffc2b6d207346f53d0b0a925c2e7686b6b21210d0771e6d38",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-e8561fb5b6183d205453312f91156f4647279fa558e78e0942fad75ca170ccb4"
+    },
+    {
+      "column": 36,
+      "defect_id": "DUUE-NATIVE-EF-cffc6bb05ec7e6ac6811ad7ee7a0bfc7596e4f74465e9eb1ce0c93ce66dd94ab",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-ed38fd6a6a724151bbdf39655a4a1934e714378a132e38fc0db4784562e9060b"
+    },
+    {
+      "column": 37,
+      "defect_id": "DUUE-NATIVE-EF-61964dcf64b63367391075d19e1f8de589730716001e148dc150c517aa978832",
+      "input_tensor_id": "ROUTE-C03-DUUE-V2-OCC-fa048261a48bce8a51cf1853d6e7a7ff022c11ff117922a20c4d4941619bab02"
+    }
+  ],
+  "dimension_scope": "CLOSED_38_GENERATOR_NATIVE_BMHV_DEFECT_MODULE_UNDER_THE_SIX_QUALIFIED_ROUTE_C03_PROVIDERS",
+  "exact_native_defect_quotient_dimension": 14,
+  "exceptional_d_roots_from_certificate": [],
+  "exchange_rows_independent_of_prior_submodule": 13,
+  "generator_count": 38,
+  "historical_or_modern_duue_projection_consumed": false,
+  "identical_exchange_qualification_sha256": "e1a81a46e42a81b559c4373f1d88e2248674cd135f23dcc7bb71defaae30b430",
+  "independent_row_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    24,
+    25,
+    26,
+    27
+  ],
+  "pass_0239_partial_matrix_sha256": "d8349b3b9dd7ff7c3f8484c7d049584b8297ecbc32a7ddfdd14baa084578b1cd",
+  "pivot_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    28,
+    34
+  ],
+  "provider_row_counts": {
+    "ANGULAR_AVERAGE": 0,
+    "BMHV_CLIFFORD_AFTER_SHARED_X_ELIMINATION": 11,
+    "HAT_ANTISYMMETRY": 0,
+    "IDENTICAL_FIELD_EXCHANGE": 19,
+    "NATIVE_NONELIMINATING_FIERZ": 0,
+    "TARGET_AWARE_METRIC_CONTRACTION": 0
+  },
+  "regeneration_policy": "ALL_ROWS_RECONSTRUCTED_FROM_FROZEN_PROVIDER_OUTPUTS__NO_INCREMENTAL_RANK_CLAIM",
+  "relation_matrix_shape": [
+    30,
+    38
+  ],
+  "relation_row_ledger": [
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 0
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 1
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 2
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 3
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 4
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 5
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 6
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 7
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 8
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 9
+    },
+    {
+      "relation_family": "BMHV_CLIFFORD_WITH_EXACT_SHARED_X_ELIMINATION",
+      "source_row": 10
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-eede9a884c924db5db0684a3",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-cb90bb4e0ea3d61c43265a0f",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-0e3d01f79e883fbd61debfad",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-7cd559a7cdca848b66e1a371",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-c9a49ee923903cc1f2d93e76",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-342dfae76f118526d87d2110",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-03ee2baf8b495ec9a9f509a6",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-6b06bb48741c71b8b33147a8",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-cf983a70868d3a1396a8761d",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-227e47a1ef9912acf1fb2964",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-c29a1e13b42955a275d4e888",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-def1bc061a9777a728e99cdf",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-c66bcd626651bdcb019ff7e5",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-d5a79edcbb58d2c80fa70082",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-fb25978bb51c9acd34415a69",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-cba13c98b1073c5e89b481c0",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-7807238b4a3e016052d0b565",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-7dcb0c35cd1ac4bc04316557",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    },
+    {
+      "exchange_pair_id": "DUUE-NATIVE-EXCHANGE-ee6c4f454aa85f7da7de450e",
+      "relation_family": "IDENTICAL_FIELD_EXCHANGE"
+    }
+  ],
+  "repeated_fierz_qualification_sha256": "2665b0c2d2aab265385a7ffa87dbcfb29bb2c854b5b4ca5a4eea674c5f3f0a2a",
+  "schema_id": "STRICT_MODEL1_ROUTE_C03_DUUE_NATIVE_COMPLETE_N7_RELATION_MATRIX_v1",
+  "status": "COMPLETE_NATIVE_N7_RELATION_MATRIX_REBUILT__RANK_24__CLOSED_NATIVE_DEFECT_QUOTIENT_DIMENSION_14",
+  "target_metric_qualification_sha256": "48304652bf0b0ea2118652e25422974e3772819a2638b336e4fa7585bf7a749d"
+}

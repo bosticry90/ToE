@@ -389,7 +389,7 @@ theorem qft_gr_source_map_semantics_protocol_row_minimum_readiness_v0 :
 theorem qft_gr_source_map_semantics_protocol_row_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some currentLiveNextStrictTargetV0 := by
+      some masterActionFrontierNextStrictTargetV0 := by
   decide
 
 /-- This row does not authorize theorem work. -/

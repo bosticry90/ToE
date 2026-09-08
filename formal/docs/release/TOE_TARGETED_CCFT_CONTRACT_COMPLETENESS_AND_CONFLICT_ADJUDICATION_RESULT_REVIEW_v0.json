@@ -1,0 +1,40 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-08-02T01:42:29Z",
+  "checks": {
+    "all_18_contracts_have_one_terminal_adjudication": true,
+    "all_seven_exact_candidates_are_adjudicated_once": true,
+    "all_sources_are_portable_and_no_custody_block_exists": true,
+    "all_three_cp_conflicts_are_preserved_without_supersession": true,
+    "attempt_three_open_event_is_bound": true,
+    "future_postulate_reduction_ledger_matches_recovered_set": true,
+    "immutable_stage_two_result_is_bound": true,
+    "no_model_theorem_repair_postulate_promotion_or_physical_claim_occurred": true,
+    "no_new_search_overflow_or_external_evidence_was_used": true,
+    "program_stage_target_and_scope_match_manifest": true,
+    "recovered_contract_counts_close_by_branch": true,
+    "recovered_contracts_pass_all_six_criteria": true,
+    "stage_four_is_selected_but_unauthorized": true,
+    "terminal_outcome_is_positive_bounded_recovery": true
+  },
+  "decision": "ACCEPT_FOUR_EXACT_CONTRACTS_RECOVERED_SELECT_STAGE_4_UNOPENED",
+  "failed_checks": [],
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION_RESULT_v0.json",
+    "sha256": "d68336cec435d6e049f70244045595539fe776fe2ecd964fabbe30c853f25a20"
+  },
+  "schema_id": "toe.targeted_ccft.contract_adjudication.result_review.v0",
+  "scientific_interpretation": {
+    "ccft_v0_model_established": false,
+    "cp_nlse_equation_or_dispersion_resolved": false,
+    "cp_nlse_recovered": 1,
+    "exact_contracts_recovered": 4,
+    "lcrd_v3_recovered": 3,
+    "theorem_discovery_authorized": false
+  },
+  "semantic_stage_id": "TARGETED_CCFT_CONTRACT_COMPLETENESS_AND_CONFLICT_ADJUDICATION",
+  "stage_4_authorized": false,
+  "status": "PASS"
+}

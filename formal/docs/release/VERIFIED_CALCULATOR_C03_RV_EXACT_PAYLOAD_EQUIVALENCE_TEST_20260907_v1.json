@@ -1,0 +1,266 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactPayloadEquivalenceTestV1",
+  "test_id": "PET-V6-C03-RV-SCIENTIFIC-PAYLOAD-EQUIVALENCE",
+  "status": "DEFINED_NOT_EXECUTED",
+  "purpose": "Prove exhaustively that the amended D-07/D-01/D-02 evidence lineage changes qualification machinery but not the frozen C03/RV scientific payload.",
+  "governed_lineage": {
+    "repair_lineage": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_LINEAGE_20260907_v6.json",
+    "repair_lineage_hash": "0cb60a86a275701cac8de23383e113f21ddbdf28b5fe852515c439bf04803b17",
+    "sequence": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_AMENDED_REQUALIFICATION_SEQUENCE_20260907_v1.md",
+    "repair_acceptance_tests": "formal/docs/release/VERIFIED_CALCULATOR_C03_RV_EXACT_REPAIR_ACCEPTANCE_TESTS_20260907_v1.json",
+    "repair_acceptance_tests_hash": "009590b4923f73956139916b2d43b4b1171b5a32f8125705d4666b90cc5542e9"
+  },
+  "reference": {
+    "bundle_path": "formal/docs/release/verified_calculator/c03_rv_exact/93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f.json",
+    "bundle_id": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "raw_file_sha256": "7496caaa2f63915cf3adf5d81776ee3298decd204f745ae65e8a38b6c80b1bcf",
+    "computation_id": "2b8ab72bd24775bfc8914e85546484f244dddc9cb5bd43dc116db0aacf2f4e8a",
+    "candidate_hash": "fe0c6fa2133a7a9ed8bb94df3a91265e91d9db1a16206b487895a3c7e4353966",
+    "physics_profile_hash": "e131c6f94014082b8dd78bb680f1acdcf76e924b0cbe8fb62eafdda5af860617",
+    "verification_policy_hash": "ecda89e1e6b47db2f2ec8057656cd7d622944c0202eda58ab0cd907e48c2711b",
+    "runtime_certificate_hash": "5d08aa26f2f9396d76cefc2501339bb61fa3fb0df11f4b151c19e34257978e84",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204"
+  },
+  "amended_input": {
+    "rule": "The executor supplies one newly generated amended candidate bundle for the pre-freeze run and the newly frozen amended bundle for the authoritative post-freeze run. Neither path nor expected identity may be inserted into this contract after seeing a comparison result.",
+    "required_custody": [
+      "tested Git commit and clean-checkout proof",
+      "new bundle path, content-addressed bundle ID, and raw file hash",
+      "new profile, policy, request, computation, candidate, certificate, receipt, and closure identities",
+      "D-07, D-01, and D-02 acceptance-result hashes"
+    ]
+  },
+  "identity_rule": {
+    "expected_to_change": [
+      "physics profile hash if the profile contract is versioned for independently trusted signatures",
+      "verification policy hash",
+      "calculation request hash and computation ID",
+      "candidate, graph, certificate, receipt, dependency-closure, and bundle identities",
+      "Python, Julia, Lean, challenge, replay, test, environment, and custody evidence identities"
+    ],
+    "must_not_be_used_as_equivalence_evidence": "Equality or inequality of whole-object identities cannot establish scientific-payload equivalence.",
+    "required_instead": "Both bundles are independently parsed, projected into the frozen comparison surfaces below, canonically encoded, compared item by item, and recorded in a complete ledger."
+  },
+  "comparison_engine_constraints": [
+    "Use bounded strict parsing and domain-neutral canonical serialization only; do not call candidate producers, historical runners, comparison oracles, or physics-operation implementations to decide equality.",
+    "Resolve all rows from the two supplied evidence objects and their hash-bound local dependencies; do not trust either bundle's assertion that it is equivalent.",
+    "Sort maps and ID-keyed sets canonically. Preserve order for ordered parents, index spaces, coordinates, tensor axes, node traces, root declarations, and any physics sequence whose order is meaningful.",
+    "Use a frozen allowlist of evidence-only deltas. Unknown, missing, duplicated, or newly excluded fields fail closed.",
+    "Emit one disposition per required row. Sampling, aggregate-only hashes, and strongest-status summaries are insufficient."
+  ],
+  "comparison_surfaces": [
+    {
+      "surface_id": "PE-00-SCOPE-AND-MODEL-CONVENTIONS",
+      "required_rows": 1,
+      "projection": [
+        "record IDs C03 and RV01 through RV06",
+        "canonical symbol table and exact scalar language",
+        "algebraic coefficient field, primitive element, embedding, and ordered power basis",
+        "dimension lattice, quotient relations, natural-unit convention, and canonical units",
+        "semantic types, ordered index spaces, representation tags, and domains",
+        "per-record source and output declarations"
+      ],
+      "pass_condition": "Every scientific convention and declaration is canonically equal. A new enforcement/version field is allowed only when it does not change the projected value and is mapped to D-02."
+    },
+    {
+      "surface_id": "PE-01-SOURCES",
+      "required_rows": 31,
+      "key": "source node ID",
+      "projection": [
+        "node ID and SOURCE kind",
+        "typed locator kind and semantic locator coordinates: repository path plus JSON pointer, table key, tensor component, or named convention",
+        "resolved canonical source value",
+        "evidence-reference meanings and source/output authority boundary",
+        "mathematical kind, semantic type, dimension quotient class, unit convention, shape/rank, ordered index spaces, representation tags, and domain"
+      ],
+      "allowed_evidence_delta": "A raw hash field may change only when a D-07 custody row proves the old and new references resolve to the same tested Git blob or the same explicitly declared CANONICAL_TEXT_V1 content. Locator meaning and resolved value may not change.",
+      "pass_condition": "The ID set is exactly equal and all 31 projected rows match. No evidence-only hash is accepted as a value locator."
+    },
+    {
+      "surface_id": "PE-02-DERIVED-GRAPH",
+      "required_rows": 160,
+      "key": "derived node ID",
+      "projection": [
+        "node ID and DERIVED kind",
+        "one of the 19 operation IDs",
+        "ordered parent IDs and the corresponding graph edges",
+        "physics-bearing parameters",
+        "canonical exact claimed and independently recomputed values",
+        "complete value-type metadata"
+      ],
+      "pass_condition": "All 160 IDs and applications match exactly. New signature receipts or rejection metadata may be additional evidence, but no operation, parent, parameter, value, or type assignment may differ."
+    },
+    {
+      "surface_id": "PE-03-TRUSTED-OPERATION-VOCABULARY",
+      "required_rows": 19,
+      "key": "operation ID",
+      "required_ids": [
+        "ANGULAR_AVERAGE",
+        "DOMAIN_PREDICATE",
+        "EPISTEMIC_CLASSIFICATION",
+        "EXACT_CLIFFORD_ACTION",
+        "EXACT_MATRIX_PROJECTION",
+        "GAUGE_GENERATOR_ACTION",
+        "INVERTIBLE_NORMALIZATION",
+        "LINEAR_COMBINATION",
+        "NORMALIZATION_MONOMIAL",
+        "NORMALIZATION_RECIPROCAL",
+        "NORMALIZATION_REFERENCE_SCALAR",
+        "PERMUTATION_PARITY",
+        "PRODUCT",
+        "RELATION_REDUCTION",
+        "TENSOR_DIFFERENCE",
+        "TENSOR_EXCHANGE_EIGENVALUE",
+        "TENSOR_SUM",
+        "WARD_REDUCTION",
+        "OUTPUT_BIND"
+      ],
+      "projection": [
+        "operation ID, arity, parameter meanings, and exact mathematical transformation",
+        "input/output semantic, index, representation, unit, dimension, and domain contract",
+        "complete multiset of the operation's applications among the 160 derived nodes and their canonical results"
+      ],
+      "allowed_evidence_delta": "D-02 may strengthen enforcement code, explicit signatures, and failure codes. It may not alter the physics transformation or any accepted baseline application.",
+      "pass_condition": "Exactly 19 rows match scientifically and every enforcement-code delta is identified in the repair delta manifest."
+    },
+    {
+      "surface_id": "PE-04-AUTHORITATIVE-ROOTS",
+      "required_rows": 16,
+      "key": "root ID",
+      "required_ids": [
+        "C03.OUTPUT.PHYSICAL_COEFFICIENT",
+        "C03.OUTPUT.EVANESCENT_COORDINATES",
+        "C03.OUTPUT.EVANESCENT_STATE",
+        "RV01.OUTPUT.PHYSICAL_COEFFICIENT",
+        "RV01.OUTPUT.EVANESCENT_STATE",
+        "RV02.OUTPUT.PHYSICAL_COEFFICIENT",
+        "RV02.OUTPUT.EVANESCENT_STATE",
+        "RV03.OUTPUT.PHYSICAL_COEFFICIENT",
+        "RV03.OUTPUT.EVANESCENT_STATE",
+        "RV03.OUTPUT.SOURCE_CHANNEL",
+        "RV04.OUTPUT.PHYSICAL_COEFFICIENT",
+        "RV04.OUTPUT.EVANESCENT_STATE",
+        "RV05.OUTPUT.PHYSICAL_COEFFICIENT",
+        "RV05.OUTPUT.EVANESCENT_STATE",
+        "RV06.OUTPUT.PHYSICAL_COEFFICIENT",
+        "RV06.OUTPUT.EVANESCENT_STATE"
+      ],
+      "projection": [
+        "root ID, output declaration, claim ID, and OUTPUT_BIND parent",
+        "canonical exact value and complete value-type metadata",
+        "uncertainty semantics, which must remain absent for this exact profile"
+      ],
+      "pass_condition": "The root set and order match, all 16 canonical values match, every root remains bound to the same recomputed parent, and no numerical or unevaluated value substitutes for an exact/evaluated state."
+    },
+    {
+      "surface_id": "PE-05-CHALLENGE-SPECIFICATIONS",
+      "required_rows": 10,
+      "key": "challenge ID",
+      "projection": [
+        "semantic target, mutation rule, attacked invariant, required consequence, applicability selector, descendant-confinement rule, mandatory status, origin, and seed policy",
+        "policy-freeze classification and affected scientific surface"
+      ],
+      "pass_condition": "All ten mandatory scientific tests remain semantically identical. D-01/D-02 regression tests remain separate repair tests and do not silently rewrite the frozen challenge corpus."
+    },
+    {
+      "surface_id": "PE-06-CHALLENGE-INSTANCES-AND-RESULTS",
+      "required_rows": 373,
+      "key": "challenge ID plus injection node plus concrete seed",
+      "projection": [
+        "instantiated mutation and injection node",
+        "frozen permitted-descendant set computed from the baseline graph",
+        "affected roots and applicability",
+        "observed consequence, rejection disposition, and stable scientific failure class"
+      ],
+      "allowed_evidence_delta": "Packet, graph, policy, and receipt hashes may change with the new lineage. The normalized mutation, applicability, confinement, affected roots, and outcome may not.",
+      "pass_condition": "Exactly 373 keys match and every normalized result matches: 160 derived corruptions, 31 locator attacks, 160 unknown-operation attacks, 16 output-binding attacks, and one each for parent bypass, stale edge, RV03 phase, N7 boundary, N8 boundary, and evaluated-zero semantics."
+    },
+    {
+      "surface_id": "PE-07-CLAIM-LEDGER",
+      "required_rows": 16,
+      "key": "claim ID",
+      "projection": [
+        "claim ID, claim text, limitations, and does_not_claim entries",
+        "mapping from claim to authoritative root"
+      ],
+      "allowed_evidence_delta": "Supporting receipt identities may change to bind the amended computation, but each new receipt must support the same bounded claim and no stronger one.",
+      "pass_condition": "All 16 bounded claims, limitations, and non-claims are canonically equal; no wording or mapping expands scientific scope."
+    },
+    {
+      "surface_id": "PE-08-SCIENTIFIC-AUTHORITY",
+      "required_rows": 16,
+      "key": "claim ID",
+      "projection": [
+        "authority state, exact historical label, scope, limitations, effective time, claim ceiling, and supporting authority-record identities",
+        "calculator_profile_review_status"
+      ],
+      "pass_condition": "All 16 authority bindings are equal and calculator_profile_review_status remains SCIENTIFIC_REQUALIFICATION_NOT_EARNED. Authority is attached after computation and is not an input to equivalence."
+    },
+    {
+      "surface_id": "PE-09-NON-PROMOTION-AND-EXACT-SCOPE",
+      "required_rows": 1,
+      "projection": [
+        "scientific_promotion",
+        "product_v1_release",
+        "production_activation",
+        "stochastic experiment declarations",
+        "profile exact/numerical scope"
+      ],
+      "pass_condition": "All three promotion flags are false, stochastic experiments remain empty, and no numerical result or additional physics domain enters the exact C03/RV payload."
+    }
+  ],
+  "allowed_delta_classes": [
+    {
+      "delta_id": "AD-D07-CUSTODY-IDENTITY",
+      "allowed": "Explicit Git-blob, canonical-text, filesystem-observation, closure, platform, and custody fields required by D-07.",
+      "forbidden": "Any change to source locator meaning, resolved value, scientific content, or closure inclusion hidden as normalization."
+    },
+    {
+      "delta_id": "AD-D01-CERTIFICATE-BINDING",
+      "allowed": "Versioned certificate/envelope/context fields, Lean-computed identity, receipt-to-certificate edge, bundle membership, checker identity, and negative-control evidence required by D-01.",
+      "forbidden": "Any change to the executed graph, trace semantics, root values, or claim scope hidden as certificate rebinding."
+    },
+    {
+      "delta_id": "AD-D02-TYPE-ENFORCEMENT",
+      "allowed": "Trusted expected-signature registries, inference receipts, validation paths, failure codes, mutation census, and tests required by D-02.",
+      "forbidden": "Any change to a baseline node's mathematical kind, semantic type, dimension class, unit, shape, ordered index spaces, representation tags, domain, operation, or exact value."
+    },
+    {
+      "delta_id": "AD-IDENTITY-CASCADE",
+      "allowed": "New hashes caused transitively and exclusively by the three repairs, new evidence formats, their tests, and the tested Git commit.",
+      "forbidden": "An unexplained hash change, a manually waived mismatch, or identity equality presented as proof of semantic equality."
+    }
+  ],
+  "required_output": {
+    "schema_id": "VerifiedCalculatorC03RVExactPayloadEquivalenceResultV1",
+    "statuses": [
+      "PASS",
+      "FAIL",
+      "INCONCLUSIVE"
+    ],
+    "per_row_dispositions": [
+      "MATCH",
+      "ALLOWED_EVIDENCE_DELTA",
+      "MISMATCH",
+      "MISSING",
+      "DUPLICATE",
+      "UNCLASSIFIED_DELTA"
+    ],
+    "must_record": [
+      "reference and amended custody identities",
+      "comparison implementation and dependency identities",
+      "one ledger row for every required item on every comparison surface",
+      "old and new canonical projections and their hashes",
+      "the exact allowed-delta class for every non-identical evidence row",
+      "category counts, mismatches, missing/duplicate IDs, unclassified deltas, and final disposition",
+      "a machine-readable changed-file and transitive-impact manifest"
+    ]
+  },
+  "acceptance_rule": "PASS requires every required row to be present exactly once; every scientific projection to MATCH; every non-identical evidence row to be justified by exactly one allowed delta class; zero MISMATCH, MISSING, DUPLICATE, or UNCLASSIFIED_DELTA rows; all three repair gates to PASS; and all non-promotion flags to remain false. Counts or hashes cannot average away a row failure.",
+  "execution_rule": "Run once against the pre-freeze amended candidate evidence and again against the newly frozen amended bundle. The second result is authoritative for amendment review. Any failure preserves the attempt, stops amendment-only qualification, and leaves the v1 bundle unchanged.",
+  "failure_disposition": "SCIENTIFIC_PAYLOAD_EQUIVALENCE_NOT_ESTABLISHED__AMENDMENT_ONLY_REVIEW_PROHIBITED",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false,
+  "definition_hash": "feab4e8cb67a7b51242af1cc87f68bfdb22cbf79c3c2017536f573243ba39d17"
+}

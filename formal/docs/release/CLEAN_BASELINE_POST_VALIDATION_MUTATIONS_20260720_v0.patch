@@ -1,0 +1,750 @@
+diff --git a/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md b/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md
+index 3dd18282..311fdd5c 100644
+--- a/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md
++++ b/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md
+@@ -60,7 +60,7 @@ Record (computed)
+   ],
+   "provenance": {
+     "bands": {
+-      "ovxd03_fingerprint": "e50a44d369d0ff9c4f56fc6756456df5ceaf9818a2632a6da56167ac551c674d",
++      "ovxd03_fingerprint": "af4c5d3014e99d0349274c2ef17094c09973825d78b9f5c27fbdb3c9c63d69c2",
+       "ovxd03_schema": "OV-XD-03/v2",
+       "source": "OV-XD-03"
+     },
+@@ -83,4 +83,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac`
++Record fingerprint: `f90988f141f5b7de6abf018b779e027fd3373963cf9ac6028c8cdcb458b5c750`
+diff --git a/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record_OVERRIDE.md b/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record_OVERRIDE.md
+index 3dd18282..311fdd5c 100644
+--- a/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-BR-02_regime_bridge_record_OVERRIDE.md
+@@ -60,7 +60,7 @@ Record (computed)
+   ],
+   "provenance": {
+     "bands": {
+-      "ovxd03_fingerprint": "e50a44d369d0ff9c4f56fc6756456df5ceaf9818a2632a6da56167ac551c674d",
++      "ovxd03_fingerprint": "af4c5d3014e99d0349274c2ef17094c09973825d78b9f5c27fbdb3c9c63d69c2",
+       "ovxd03_schema": "OV-XD-03/v2",
+       "source": "OV-XD-03"
+     },
+@@ -83,4 +83,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac`
++Record fingerprint: `f90988f141f5b7de6abf018b779e027fd3373963cf9ac6028c8cdcb458b5c750`
+diff --git a/formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md b/formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md
+index ff0947f2..0a6e0762 100644
+--- a/formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md
+@@ -12,7 +12,7 @@ Record (computed)
+   "condition_key": "condition_A",
+   "condition_semantic": "filled circles",
+   "date": "2026-01-25",
+-  "fingerprint": "e6c54b4ec1a93be70542faa6d1650365fb91f810c39ea56e73ed95f0e7f377c1",
++  "fingerprint": "3b8c7672457e3b99dcf5d64958063b2dcdc84505c09ee6224a447f5551d6cf54",
+   "input_dataset": {
+     "condition_key": "condition_A",
+     "condition_semantic": "filled circles",
+@@ -113,7 +113,7 @@ Record (computed)
+     },
+     "blocked": false,
+     "debug": {
+-      "manifest_input_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
++      "manifest_input_path": "C:\\toe-b0\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
+       "manifest_resolved_path": "formal/markdown locks/gates/admissibility_manifest_ENABLED_OVERRIDE.json",
+       "manifest_sha256": "2f9c1aa1dbcc30451ac0740cb09d85c1d12b6490efb02d449e453cc0de94c13f",
+       "manifest_version": 5
+@@ -134,4 +134,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `e6c54b4ec1a93be70542faa6d1650365fb91f810c39ea56e73ed95f0e7f377c1`
++Record fingerprint: `3b8c7672457e3b99dcf5d64958063b2dcdc84505c09ee6224a447f5551d6cf54`
+diff --git a/formal/markdown/locks/observables/OV-BR-04b_bragg_lowk_slope_conditionB_OVERRIDE.md b/formal/markdown/locks/observables/OV-BR-04b_bragg_lowk_slope_conditionB_OVERRIDE.md
+index 8e885038..5993a1ba 100644
+--- a/formal/markdown/locks/observables/OV-BR-04b_bragg_lowk_slope_conditionB_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-BR-04b_bragg_lowk_slope_conditionB_OVERRIDE.md
+@@ -12,7 +12,7 @@ Record (computed)
+   "condition_key": "condition_B",
+   "condition_semantic": "open circles",
+   "date": "2026-01-25",
+-  "fingerprint": "f4b947cd26cd67c371d6e31c1dda1e0f4f19d8b542b35b39391742baf7b171b6",
++  "fingerprint": "85e0064912341f4322fdd5982688dd77ef11073b24ab216874766aa5f5f8c54e",
+   "input_dataset": {
+     "condition_key": "condition_B",
+     "condition_semantic": "open circles",
+@@ -117,7 +117,7 @@ Record (computed)
+     },
+     "blocked": false,
+     "debug": {
+-      "manifest_input_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
++      "manifest_input_path": "C:\\toe-b0\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
+       "manifest_resolved_path": "formal/markdown locks/gates/admissibility_manifest_ENABLED_OVERRIDE.json",
+       "manifest_sha256": "2f9c1aa1dbcc30451ac0740cb09d85c1d12b6490efb02d449e453cc0de94c13f",
+       "manifest_version": 5
+@@ -138,4 +138,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `f4b947cd26cd67c371d6e31c1dda1e0f4f19d8b542b35b39391742baf7b171b6`
++Record fingerprint: `85e0064912341f4322fdd5982688dd77ef11073b24ab216874766aa5f5f8c54e`
+diff --git a/formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md b/formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md
+index e2e6e321..88fc22e2 100644
+--- a/formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md
+@@ -10,7 +10,7 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1",
++  "fingerprint": "2525ab8cbc5238b2a3a8463acf7ce245e84fa6f40573b4f1dc530bd5f20c55c6",
+   "inputs": {
+     "condition_A": {
+       "diagnostic": {
+@@ -95,7 +95,7 @@ Record (computed)
+     },
+     "blocked": false,
+     "debug": {
+-      "manifest_input_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
++      "manifest_input_path": "C:\\toe-b0\\formal\\markdown locks\\gates\\admissibility_manifest_ENABLED_OVERRIDE.json",
+       "manifest_resolved_path": "formal/markdown locks/gates/admissibility_manifest_ENABLED_OVERRIDE.json",
+       "manifest_sha256": "2f9c1aa1dbcc30451ac0740cb09d85c1d12b6490efb02d449e453cc0de94c13f",
+       "manifest_version": 5
+@@ -110,4 +110,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1`
++Record fingerprint: `2525ab8cbc5238b2a3a8463acf7ce245e84fa6f40573b4f1dc530bd5f20c55c6`
+diff --git a/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md b/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md
+index 8e21ec07..fdc283a8 100644
+--- a/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md
++++ b/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md
+@@ -10,19 +10,19 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "66db034f3259b2e612dc8d2b0ec4b4bf8ec53da01326b677d60f1c1fad294c45",
++  "fingerprint": "181fcf08e07628780482e8e7d6dfbe3e3c4012926fa02419102e6ced278212fb",
+   "inputs": {
+     "candidate_source": {
+       "extraction_rule": "collect FunctionDef names matching prefix+suffix; sorted lexicographically",
+       "function_prefix": "fn01_make_",
+       "function_suffix": "_artifact",
+       "kind": "python_ast",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\constraints\\fn01_artifact.py"
++      "path": "C:\\toe-b0\\formal\\python\\toe\\constraints\\fn01_artifact.py"
+     },
+     "declarations": {
+-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
++      "expected_path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
+       "extra_candidate_ids": [],
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
++      "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
+       "present": true,
+       "raw_sha256": "2406e3f837778030f5a466530c08b6857cc4a3ac4d1fc2b5007bce821fef304d",
+       "schema": "BRFN01_prediction_declarations/v1",
+@@ -90,4 +90,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `66db034f3259b2e612dc8d2b0ec4b4bf8ec53da01326b677d60f1c1fad294c45`
++Record fingerprint: `181fcf08e07628780482e8e7d6dfbe3e3c4012926fa02419102e6ced278212fb`
+diff --git a/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md b/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md
+index c8e8ea6f..e0a12483 100644
+--- a/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md
+@@ -10,19 +10,19 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195",
++  "fingerprint": "88776a75d205e17899e96a9c9d23f0c8520a79df9b56d368202d147258cab93b",
+   "inputs": {
+     "candidate_source": {
+       "extraction_rule": "collect FunctionDef names matching prefix+suffix; sorted lexicographically",
+       "function_prefix": "fn01_make_",
+       "function_suffix": "_artifact",
+       "kind": "python_ast",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\constraints\\fn01_artifact.py"
++      "path": "C:\\toe-b0\\formal\\python\\toe\\constraints\\fn01_artifact.py"
+     },
+     "declarations": {
+-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
++      "expected_path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
+       "extra_candidate_ids": [],
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
++      "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\brfn01_prediction_declarations.json",
+       "present": true,
+       "raw_sha256": "2406e3f837778030f5a466530c08b6857cc4a3ac4d1fc2b5007bce821fef304d",
+       "schema": "BRFN01_prediction_declarations/v1",
+@@ -84,4 +84,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195`
++Record fingerprint: `88776a75d205e17899e96a9c9d23f0c8520a79df9b56d368202d147258cab93b`
+diff --git a/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table.md b/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table.md
+index 869bdc87..c5b996f4 100644
+--- a/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table.md
++++ b/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table.md
+@@ -12,15 +12,15 @@ Record (computed)
+ {
+   "candidate_source": {
+     "kind": "declared_surface",
+-    "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md",
++    "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md",
+     "row_key": "candidate_id",
+     "source_lock": "OV-BR-FN-00"
+   },
+   "date": "2026-01-25",
+-  "fingerprint": "d64414e6ea55954b8c6ebfc2e696da876727e802231ed3098090a2d60a687f9c",
++  "fingerprint": "156cfe8f65f30e8aa12f76bc8939243d3b3151f540ae6f9678bc6a43f8602183",
+   "inputs": {
+     "FN-01_cross_fit_metric_residual_DR02_DR03": {
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+       "present": true,
+       "present_fields": [
+         "R_metric",
+@@ -33,10 +33,10 @@ Record (computed)
+       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
+     },
+     "OV-BR-FN-00": {
+-      "locked_fingerprint": "66db034f3259b2e612dc8d2b0ec4b4bf8ec53da01326b677d60f1c1fad294c45",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md",
++      "locked_fingerprint": "181fcf08e07628780482e8e7d6dfbe3e3c4012926fa02419102e6ced278212fb",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md",
+       "present": true,
+-      "record_fingerprint": "66db034f3259b2e612dc8d2b0ec4b4bf8ec53da01326b677d60f1c1fad294c45",
++      "record_fingerprint": "181fcf08e07628780482e8e7d6dfbe3e3c4012926fa02419102e6ced278212fb",
+       "schema": "OV-BR-FN-00_fn01_metric_residual_prediction_declarations/v1"
+     }
+   },
+@@ -93,4 +93,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `d64414e6ea55954b8c6ebfc2e696da876727e802231ed3098090a2d60a687f9c`
++Record fingerprint: `156cfe8f65f30e8aa12f76bc8939243d3b3151f540ae6f9678bc6a43f8602183`
+diff --git a/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table_OVERRIDE.md b/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table_OVERRIDE.md
+index 156f7408..e130fbb0 100644
+--- a/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table_OVERRIDE.md
+@@ -12,15 +12,15 @@ Record (computed)
+ {
+   "candidate_source": {
+     "kind": "declared_surface",
+-    "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
++    "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
+     "row_key": "candidate_id",
+     "source_lock": "OV-BR-FN-00"
+   },
+   "date": "2026-01-25",
+-  "fingerprint": "b3b7e410ee594c5eb9d4f0061b0b3daa0f653b47d6f207d4bcc3f18dc8ce4597",
++  "fingerprint": "48ee15cd6f5cd379dd025d87729e0dec23921e6c77ccfaef1713453f29f0e736",
+   "inputs": {
+     "FN-01_cross_fit_metric_residual_DR02_DR03": {
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+       "present": true,
+       "present_fields": [
+         "R_metric",
+@@ -33,10 +33,10 @@ Record (computed)
+       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
+     },
+     "OV-BR-FN-00": {
+-      "locked_fingerprint": "bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
++      "locked_fingerprint": "88776a75d205e17899e96a9c9d23f0c8520a79df9b56d368202d147258cab93b",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md",
+       "present": true,
+-      "record_fingerprint": "bdd185ecd71754aeb07c975a2b1d34e3388b9be8b5333a4f688aac257a7ab195",
++      "record_fingerprint": "88776a75d205e17899e96a9c9d23f0c8520a79df9b56d368202d147258cab93b",
+       "schema": "OV-BR-FN-00_fn01_metric_residual_prediction_declarations/v1"
+     }
+   },
+@@ -86,4 +86,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `b3b7e410ee594c5eb9d4f0061b0b3daa0f653b47d6f207d4bcc3f18dc8ce4597`
++Record fingerprint: `48ee15cd6f5cd379dd025d87729e0dec23921e6c77ccfaef1713453f29f0e736`
+diff --git a/formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit_OVERRIDE.md b/formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit_OVERRIDE.md
+index 8c6f600e..2f85ba71 100644
+--- a/formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit_OVERRIDE.md
+@@ -63,7 +63,7 @@ Record (computed)
+     ],
+     "status": "established"
+   },
+-  "fingerprint": "34e6c6c6c0a7598a316273eba3295999632e36bc36442a6993de89859884d2db",
++  "fingerprint": "ba02316e921a3eff9d956f63aae9f459c85af43b1649b7135e0d6879145b9f4f",
+   "notes": "This audit does not assert physical comparability. It reports locked derived outputs and explicitly pins a unit conversion chain + numeric criterion. Cross-lane comparison is only computed when an explicit Bragg\u2194Sound pairing exists.",
+   "observable_id": "OV-BR-SND-03",
+   "rows": [
+@@ -153,7 +153,7 @@ Record (computed)
+           }
+         },
+         "regime": {
+-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
++          "fingerprint": "f90988f141f5b7de6abf018b779e027fd3373963cf9ac6028c8cdcb458b5c750",
+           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
+           "schema": "OV-BR-02/v1"
+         },
+@@ -259,7 +259,7 @@ Record (computed)
+           }
+         },
+         "regime": {
+-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
++          "fingerprint": "f90988f141f5b7de6abf018b779e027fd3373963cf9ac6028c8cdcb458b5c750",
+           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
+           "schema": "OV-BR-02/v1"
+         },
+@@ -365,7 +365,7 @@ Record (computed)
+           }
+         },
+         "regime": {
+-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
++          "fingerprint": "f90988f141f5b7de6abf018b779e027fd3373963cf9ac6028c8cdcb458b5c750",
+           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
+           "schema": "OV-BR-02/v1"
+         },
+@@ -470,7 +470,7 @@ Record (computed)
+           }
+         },
+         "regime": {
+-          "fingerprint": "3bb051329ae22c1f9649cca702f26c4cbe4adf8adcbc84cf0d9e79f880e5e8ac",
++          "fingerprint": "f90988f141f5b7de6abf018b779e027fd3373963cf9ac6028c8cdcb458b5c750",
+           "lock_path": "formal/markdown/locks/observables/OV-BR-02_regime_bridge_record.md",
+           "schema": "OV-BR-02/v1"
+         },
+@@ -542,4 +542,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `34e6c6c6c0a7598a316273eba3295999632e36bc36442a6993de89859884d2db`
++Record fingerprint: `ba02316e921a3eff9d956f63aae9f459c85af43b1649b7135e0d6879145b9f4f`
+diff --git a/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations.md b/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations.md
+index d84fcf6e..15781f94 100644
+--- a/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations.md
++++ b/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations.md
+@@ -10,12 +10,12 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
++  "fingerprint": "0f34ca542561326ae9cd33adfdebe9740ab9b7b78f0e3716d6e8cfe85b68693d",
+   "inputs": {
+     "declarations": {
+-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
++      "expected_path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
+       "extra_candidate_ids": [],
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
++      "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
+       "present": true,
+       "raw_sha256": "eb39789ec5ecb386b898c96531037363915490857f0726946d5234e4d4a502f2",
+       "schema": "BR01_prediction_declarations/v1",
+@@ -121,4 +121,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884`
++Record fingerprint: `0f34ca542561326ae9cd33adfdebe9740ab9b7b78f0e3716d6e8cfe85b68693d`
+diff --git a/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md b/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md
+index 44990b8e..79c07134 100644
+--- a/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md
+@@ -10,12 +10,12 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764",
++  "fingerprint": "ca32afc80212ded7bd28c6d6233ad695fb9bc5a271e856b5985ba954e1782b40",
+   "inputs": {
+     "declarations": {
+-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
++      "expected_path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
+       "extra_candidate_ids": [],
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
++      "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\br01_prediction_declarations.json",
+       "present": true,
+       "raw_sha256": "eb39789ec5ecb386b898c96531037363915490857f0726946d5234e4d4a502f2",
+       "schema": "BR01_prediction_declarations/v1",
+@@ -115,4 +115,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764`
++Record fingerprint: `ca32afc80212ded7bd28c6d6233ad695fb9bc5a271e856b5985ba954e1782b40`
+diff --git a/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table.md b/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table.md
+index 615cc45a..b9c94c5a 100644
+--- a/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table.md
++++ b/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table.md
+@@ -14,23 +14,23 @@ Record (computed)
+     "extraction_rule": "collect FunctionDef names with prefix; sorted lexicographically",
+     "function_prefix": "BR01_",
+     "kind": "python_ast",
+-    "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_candidates.py"
++    "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\br01_candidates.py"
+   },
+   "date": "2026-01-25",
+-  "fingerprint": "5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2",
++  "fingerprint": "0438835c97968e8c3a7dc7a61d44a58bec8ee62dddf9c6518d8d194cb206899f",
+   "inputs": {
+     "OV-BR-05": {
+       "locked_fingerprint": "428edbd0b97f696165ac0540d6888185e87410d575d9a1b6791b0def345286f8",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-05_bragg_lowk_slope_summary.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-05_bragg_lowk_slope_summary.md",
+       "present": true,
+       "record_fingerprint": "428edbd0b97f696165ac0540d6888185e87410d575d9a1b6791b0def345286f8",
+       "schema": "OV-BR-05_bragg_lowk_slope_summary/v1"
+     },
+     "OV-DR-BR-00": {
+-      "locked_fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-DR-BR-00_br01_prediction_declarations.md",
++      "locked_fingerprint": "0f34ca542561326ae9cd33adfdebe9740ab9b7b78f0e3716d6e8cfe85b68693d",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-DR-BR-00_br01_prediction_declarations.md",
+       "present": true,
+-      "record_fingerprint": "13bd4e5bd71a4ef057a307ab62ad1c30ba018af3b8a95c171bd25e8e321a9884",
++      "record_fingerprint": "0f34ca542561326ae9cd33adfdebe9740ab9b7b78f0e3716d6e8cfe85b68693d",
+       "schema": "OV-DR-BR-00_br01_prediction_declarations/v1"
+     }
+   },
+@@ -117,4 +117,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2`
++Record fingerprint: `0438835c97968e8c3a7dc7a61d44a58bec8ee62dddf9c6518d8d194cb206899f`
+diff --git a/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table_OVERRIDE.md b/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table_OVERRIDE.md
+index 7d7cd101..410a7a10 100644
+--- a/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table_OVERRIDE.md
+@@ -14,23 +14,23 @@ Record (computed)
+     "extraction_rule": "collect FunctionDef names with prefix; sorted lexicographically",
+     "function_prefix": "BR01_",
+     "kind": "python_ast",
+-    "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\br01_candidates.py"
++    "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\br01_candidates.py"
+   },
+   "date": "2026-01-25",
+-  "fingerprint": "c302f9469e151d2c93d4837684c08fee4a64d648f9da648c37c509569dbb5d24",
++  "fingerprint": "1a5884f8a2982b3f74bd76bd6246a0085b4c168e9a5702bdb792bd8b7cc8e250",
+   "inputs": {
+     "OV-BR-05": {
+-      "locked_fingerprint": "093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md",
++      "locked_fingerprint": "2525ab8cbc5238b2a3a8463acf7ce245e84fa6f40573b4f1dc530bd5f20c55c6",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md",
+       "present": true,
+-      "record_fingerprint": "093c40dcfc088f16b0b40b082c53aa6d9e7410f74294e256b1592861550675e1",
++      "record_fingerprint": "2525ab8cbc5238b2a3a8463acf7ce245e84fa6f40573b4f1dc530bd5f20c55c6",
+       "schema": "OV-BR-05_bragg_lowk_slope_summary/v1"
+     },
+     "OV-DR-BR-00": {
+-      "locked_fingerprint": "9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md",
++      "locked_fingerprint": "ca32afc80212ded7bd28c6d6233ad695fb9bc5a271e856b5985ba954e1782b40",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md",
+       "present": true,
+-      "record_fingerprint": "9d9394f968554686f8c067fe4f696c8cbd15dcbb5228bf00f0874af63812d764",
++      "record_fingerprint": "ca32afc80212ded7bd28c6d6233ad695fb9bc5a271e856b5985ba954e1782b40",
+       "schema": "OV-DR-BR-00_br01_prediction_declarations/v1"
+     }
+   },
+@@ -111,4 +111,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `c302f9469e151d2c93d4837684c08fee4a64d648f9da648c37c509569dbb5d24`
++Record fingerprint: `1a5884f8a2982b3f74bd76bd6246a0085b4c168e9a5702bdb792bd8b7cc8e250`
+diff --git a/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit.md b/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit.md
+index b53cfae6..5f721065 100644
+--- a/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit.md
++++ b/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit.md
+@@ -26,14 +26,14 @@ Record (computed)
+   "fingerprint": "074e8f0847d5d2c1ae2bb52fe56bb37b1fd760f4944f54d9e9c363fdd2be16bc",
+   "inputs": {
+     "FN-01_cross_fit_metric_residual_DR02_DR03": {
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+       "present": true,
+       "r_metric": 0.07422899055678828,
+       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
+     },
+     "OV-FN-WT-02": {
+       "locked_fingerprint": "80302fc58bcfe5d93741a823fe036a2bf7ef97f16e4b0ad4c02d38f0eb70855c",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-02_selected_weight_policy.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-FN-WT-02_selected_weight_policy.md",
+       "present": true,
+       "record_fingerprint": "80302fc58bcfe5d93741a823fe036a2bf7ef97f16e4b0ad4c02d38f0eb70855c",
+       "schema": "OV-FN-WT-02_selected_weight_policy/v1"
+diff --git a/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit_OVERRIDE.md b/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit_OVERRIDE.md
+index 2b38f686..6049ecd2 100644
+--- a/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit_OVERRIDE.md
+@@ -25,14 +25,14 @@ Record (computed)
+   "fingerprint": "708916328c682c66e7b5e7fd23a0555df57c910abb99b67e8d25c99643361a9a",
+   "inputs": {
+     "FN-01_cross_fit_metric_residual_DR02_DR03": {
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+       "present": true,
+       "r_metric": 0.07422899055678828,
+       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
+     },
+     "OV-FN-WT-02": {
+       "locked_fingerprint": "8cc81ee1864625af421a5f632f4311d49c38e81ac0432edc7032bb32a7d67a16",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-02_selected_weight_policy_OVERRIDE.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-FN-WT-02_selected_weight_policy_OVERRIDE.md",
+       "present": true,
+       "record_fingerprint": "8cc81ee1864625af421a5f632f4311d49c38e81ac0432edc7032bb32a7d67a16",
+       "schema": "OV-FN-WT-02_selected_weight_policy/v1"
+diff --git a/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations.md b/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations.md
+index 1370908a..35dbe3c8 100644
+--- a/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations.md
++++ b/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations.md
+@@ -14,11 +14,11 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "d3dd4f6ec5b6d4e6e4016c124db48c4f29afd1e2b1252952fb6a427c14c1bb87",
++  "fingerprint": "c089fee2cd491cd3904d7055f05a1b89c7cdfacb5bb0f25492788c976fe2a450",
+   "inputs": {
+     "declarations": {
+-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
++      "expected_path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
++      "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
+       "present": true,
+       "raw_sha256": "6991ce7aacdb0221b5e8846003a42817640523db7d96f0a23b43df6bdeeee32e",
+       "schema": "FNWT01_weight_policy_declarations/v1",
+@@ -77,4 +77,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `d3dd4f6ec5b6d4e6e4016c124db48c4f29afd1e2b1252952fb6a427c14c1bb87`
++Record fingerprint: `c089fee2cd491cd3904d7055f05a1b89c7cdfacb5bb0f25492788c976fe2a450`
+diff --git a/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations_OVERRIDE.md b/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations_OVERRIDE.md
+index 568da512..9956bf47 100644
+--- a/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations_OVERRIDE.md
+@@ -14,11 +14,11 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "7560b9697f58c2c6c384d19ad1a07e69b4424f81fa8d786eb3fb14a71c75a567",
++  "fingerprint": "0843bb3387e2ca09d5d12a9dcb8cd6629b02fd4d56c20f121695e3ee4a7f1bc0",
+   "inputs": {
+     "declarations": {
+-      "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
++      "expected_path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
++      "path": "C:\\toe-b0\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
+       "present": true,
+       "raw_sha256": "6991ce7aacdb0221b5e8846003a42817640523db7d96f0a23b43df6bdeeee32e",
+       "schema": "FNWT01_weight_policy_declarations/v1",
+@@ -71,4 +71,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `7560b9697f58c2c6c384d19ad1a07e69b4424f81fa8d786eb3fb14a71c75a567`
++Record fingerprint: `0843bb3387e2ca09d5d12a9dcb8cd6629b02fd4d56c20f121695e3ee4a7f1bc0`
+diff --git a/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table.md b/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table.md
+index facfe93a..abb303f0 100644
+--- a/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table.md
++++ b/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table.md
+@@ -14,29 +14,29 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "cb2b6e7a99db7eb1cffaf5340466a2e63816eb52287fa93ae276851a657e3f6b",
++  "fingerprint": "e96bfb695d1cd808f90ceae02c936b8ac0b71b1b2ea2e2e0be3c0a6f3a1a2927",
+   "inputs": {
+     "FN-01_cross_fit_metric_residual_DR02_DR03": {
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+       "present": true,
+       "r_metric": 0.07422899055678828,
+       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
+     },
+     "OV-BR-FN-01": {
+-      "locked_fingerprint": "d64414e6ea55954b8c6ebfc2e696da876727e802231ed3098090a2d60a687f9c",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-01_fn01_metric_residual_pruning_table.md",
++      "locked_fingerprint": "156cfe8f65f30e8aa12f76bc8939243d3b3151f540ae6f9678bc6a43f8602183",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-FN-01_fn01_metric_residual_pruning_table.md",
+       "present": true,
+-      "record_fingerprint": "d64414e6ea55954b8c6ebfc2e696da876727e802231ed3098090a2d60a687f9c",
++      "record_fingerprint": "156cfe8f65f30e8aa12f76bc8939243d3b3151f540ae6f9678bc6a43f8602183",
+       "schema": "OV-BR-FN-01_fn01_metric_residual_pruning_table/v1",
+       "surviving_fn_candidate_ids": [
+         "fn01_make_P_cubic_artifact"
+       ]
+     },
+     "OV-DR-BR-01": {
+-      "locked_fingerprint": "5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-DR-BR-01_candidate_pruning_table.md",
++      "locked_fingerprint": "0438835c97968e8c3a7dc7a61d44a58bec8ee62dddf9c6518d8d194cb206899f",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-DR-BR-01_candidate_pruning_table.md",
+       "present": true,
+-      "record_fingerprint": "5e6ebcedd03c1a6246d3a7fc4ba9018e78298bc607c7ff8cf219856c227de0a2",
++      "record_fingerprint": "0438835c97968e8c3a7dc7a61d44a58bec8ee62dddf9c6518d8d194cb206899f",
+       "schema": "OV-DR-BR-01_candidate_pruning_table/v1",
+       "surviving_br_candidate_ids": [
+         "BR01_metric_from_DR01_fit_constant_density",
+@@ -44,10 +44,10 @@ Record (computed)
+       ]
+     },
+     "OV-FN-WT-00": {
+-      "locked_fingerprint": "d3dd4f6ec5b6d4e6e4016c124db48c4f29afd1e2b1252952fb6a427c14c1bb87",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-00_fn01_weight_policy_declarations.md",
++      "locked_fingerprint": "c089fee2cd491cd3904d7055f05a1b89c7cdfacb5bb0f25492788c976fe2a450",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-FN-WT-00_fn01_weight_policy_declarations.md",
+       "present": true,
+-      "record_fingerprint": "d3dd4f6ec5b6d4e6e4016c124db48c4f29afd1e2b1252952fb6a427c14c1bb87",
++      "record_fingerprint": "c089fee2cd491cd3904d7055f05a1b89c7cdfacb5bb0f25492788c976fe2a450",
+       "schema": "OV-FN-WT-00_fn01_weight_policy_declarations/v1"
+     }
+   },
+@@ -116,4 +116,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `cb2b6e7a99db7eb1cffaf5340466a2e63816eb52287fa93ae276851a657e3f6b`
++Record fingerprint: `e96bfb695d1cd808f90ceae02c936b8ac0b71b1b2ea2e2e0be3c0a6f3a1a2927`
+diff --git a/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md b/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md
+index ac802851..5f6e4236 100644
+--- a/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md
+@@ -14,29 +14,29 @@ Record (computed)
+ ```json
+ {
+   "date": "2026-01-25",
+-  "fingerprint": "edcf08aa416b68811b86f7399ca57f663eb6d07c3d88207a951b24c048f90d0d",
++  "fingerprint": "58769283fa8f90c83a57bba2b7977988adccf3ba2b11c92681c5e63c86fab229",
+   "inputs": {
+     "FN-01_cross_fit_metric_residual_DR02_DR03": {
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
+       "present": true,
+       "r_metric": 0.07422899055678828,
+       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
+     },
+     "OV-BR-FN-01": {
+-      "locked_fingerprint": "b3b7e410ee594c5eb9d4f0061b0b3daa0f653b47d6f207d4bcc3f18dc8ce4597",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-BR-FN-01_fn01_metric_residual_pruning_table_OVERRIDE.md",
++      "locked_fingerprint": "48ee15cd6f5cd379dd025d87729e0dec23921e6c77ccfaef1713453f29f0e736",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-BR-FN-01_fn01_metric_residual_pruning_table_OVERRIDE.md",
+       "present": true,
+-      "record_fingerprint": "b3b7e410ee594c5eb9d4f0061b0b3daa0f653b47d6f207d4bcc3f18dc8ce4597",
++      "record_fingerprint": "48ee15cd6f5cd379dd025d87729e0dec23921e6c77ccfaef1713453f29f0e736",
+       "schema": "OV-BR-FN-01_fn01_metric_residual_pruning_table/v1",
+       "surviving_fn_candidate_ids": [
+         "fn01_make_P_cubic_artifact"
+       ]
+     },
+     "OV-DR-BR-01": {
+-      "locked_fingerprint": "c302f9469e151d2c93d4837684c08fee4a64d648f9da648c37c509569dbb5d24",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-DR-BR-01_candidate_pruning_table_OVERRIDE.md",
++      "locked_fingerprint": "1a5884f8a2982b3f74bd76bd6246a0085b4c168e9a5702bdb792bd8b7cc8e250",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-DR-BR-01_candidate_pruning_table_OVERRIDE.md",
+       "present": true,
+-      "record_fingerprint": "c302f9469e151d2c93d4837684c08fee4a64d648f9da648c37c509569dbb5d24",
++      "record_fingerprint": "1a5884f8a2982b3f74bd76bd6246a0085b4c168e9a5702bdb792bd8b7cc8e250",
+       "schema": "OV-DR-BR-01_candidate_pruning_table/v1",
+       "surviving_br_candidate_ids": [
+         "BR01_metric_from_DR01_fit_constant_density",
+@@ -44,10 +44,10 @@ Record (computed)
+       ]
+     },
+     "OV-FN-WT-00": {
+-      "locked_fingerprint": "7560b9697f58c2c6c384d19ad1a07e69b4424f81fa8d786eb3fb14a71c75a567",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-00_fn01_weight_policy_declarations_OVERRIDE.md",
++      "locked_fingerprint": "0843bb3387e2ca09d5d12a9dcb8cd6629b02fd4d56c20f121695e3ee4a7f1bc0",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-FN-WT-00_fn01_weight_policy_declarations_OVERRIDE.md",
+       "present": true,
+-      "record_fingerprint": "7560b9697f58c2c6c384d19ad1a07e69b4424f81fa8d786eb3fb14a71c75a567",
++      "record_fingerprint": "0843bb3387e2ca09d5d12a9dcb8cd6629b02fd4d56c20f121695e3ee4a7f1bc0",
+       "schema": "OV-FN-WT-00_fn01_weight_policy_declarations/v1"
+     }
+   },
+@@ -107,4 +107,4 @@ Record (computed)
+ }
+ ```
+ 
+-Record fingerprint: `edcf08aa416b68811b86f7399ca57f663eb6d07c3d88207a951b24c048f90d0d`
++Record fingerprint: `58769283fa8f90c83a57bba2b7977988adccf3ba2b11c92681c5e63c86fab229`
+diff --git a/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy.md b/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy.md
+index 1173b427..c0a65da8 100644
+--- a/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy.md
++++ b/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy.md
+@@ -12,10 +12,10 @@ Record (computed)
+   "fingerprint": "80302fc58bcfe5d93741a823fe036a2bf7ef97f16e4b0ad4c02d38f0eb70855c",
+   "inputs": {
+     "OV-FN-WT-01": {
+-      "locked_fingerprint": "cb2b6e7a99db7eb1cffaf5340466a2e63816eb52287fa93ae276851a657e3f6b",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-01_fn01_weight_policy_pruning_table.md",
++      "locked_fingerprint": "e96bfb695d1cd808f90ceae02c936b8ac0b71b1b2ea2e2e0be3c0a6f3a1a2927",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-FN-WT-01_fn01_weight_policy_pruning_table.md",
+       "present": true,
+-      "record_fingerprint": "cb2b6e7a99db7eb1cffaf5340466a2e63816eb52287fa93ae276851a657e3f6b",
++      "record_fingerprint": "e96bfb695d1cd808f90ceae02c936b8ac0b71b1b2ea2e2e0be3c0a6f3a1a2927",
+       "schema": "OV-FN-WT-01_fn01_weight_policy_pruning_table/v1"
+     }
+   },
+diff --git a/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy_OVERRIDE.md b/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy_OVERRIDE.md
+index b5696dc7..42c6ae89 100644
+--- a/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy_OVERRIDE.md
+@@ -12,10 +12,10 @@ Record (computed)
+   "fingerprint": "8cc81ee1864625af421a5f632f4311d49c38e81ac0432edc7032bb32a7d67a16",
+   "inputs": {
+     "OV-FN-WT-01": {
+-      "locked_fingerprint": "edcf08aa416b68811b86f7399ca57f663eb6d07c3d88207a951b24c048f90d0d",
+-      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md",
++      "locked_fingerprint": "58769283fa8f90c83a57bba2b7977988adccf3ba2b11c92681c5e63c86fab229",
++      "path": "C:\\toe-b0\\formal\\markdown\\locks\\observables\\OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md",
+       "present": true,
+-      "record_fingerprint": "edcf08aa416b68811b86f7399ca57f663eb6d07c3d88207a951b24c048f90d0d",
++      "record_fingerprint": "58769283fa8f90c83a57bba2b7977988adccf3ba2b11c92681c5e63c86fab229",
+       "schema": "OV-FN-WT-01_fn01_weight_policy_pruning_table/v1"
+     }
+   },
+diff --git a/formal/markdown/locks/observables/OV-SEL-BR-01_bragg_lowk_slope_audit_OVERRIDE.md b/formal/markdown/locks/observables/OV-SEL-BR-01_bragg_lowk_slope_audit_OVERRIDE.md
+index 0ed1c87d..78f50db3 100644
+--- a/formal/markdown/locks/observables/OV-SEL-BR-01_bragg_lowk_slope_audit_OVERRIDE.md
++++ b/formal/markdown/locks/observables/OV-SEL-BR-01_bragg_lowk_slope_audit_OVERRIDE.md
+@@ -45,12 +45,12 @@ Record (computed)
+       "path": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page6_z4.png"
+     },
+     "OV-BR-04A": {
+-      "lock_fingerprint": "60bba0e906e37f7bf21983fcea4cba1060a00757d6f02f7d77efbb6fadb11658",
++      "lock_fingerprint": "9516507f005376bd65e58ddeb5cd4a8720ea4593e289a75b9284235304f95e14",
+       "lock_path": "formal/markdown/locks/observables/OV-BR-04A_bragg_lowk_slope_conditionA.md",
+       "ok": false
+     },
+     "OV-BR-04B": {
+-      "lock_fingerprint": "7da5093bbb5ea78224b61bebe53a8c529db7cecc3e2bb97594dee51384efb7a6",
++      "lock_fingerprint": "a7c733facb98c24545b1e0b4d32ea946af5b972844df6663502a486391340b0a",
+       "lock_path": "formal/markdown/locks/observables/OV-BR-04B_bragg_lowk_slope_conditionB.md",
+       "ok": false
+     },
+@@ -83,11 +83,11 @@ Record (computed)
+       "ok": true
+     }
+   },
+-  "fingerprint": "1f32276ff2eaebfd0723a457a71d94a1f9915b1f9a01d2d4dd7e30db83e73542",
++  "fingerprint": "819ab6e54f5a2512a5c4125d827e89ae14f7c92110ee2f993ee8ef3397737cbe",
+   "narrative": "Bragg low-k slope audit (bookkeeping-only; no physics claim):\n0) External anchor: formal/external_evidence/bec_bragg_shammass_2012/source.pdf (sha256=ef5416e243b0863dada51b68483b72edf83e3b3870bf417b9215b236ea61207c).\n1) OV-BR-03N digitization is render-based (axis text is rasterized), so provenance is pinned to a deterministic PNG render.\n2) OV-BR-04A/04B derive low-k slopes using lowk_window_v1 (k<=1.0, 0.1<=omega<=1.3) and pinned OLS slope rules.\n3) Governance posture: lock==computed for OV-BR-03N and OV-BR-04A/04B; frozen artifacts must exist; selection parameters are pinned.\n\nSelf-checks all_ok=False.",
+   "schema": "OV-SEL-BR-01_bragg_lowk_slope_audit/v1",
+   "status_date": "2026-01-25"
+ }
+ ```
+ 
+-Record fingerprint: `1f32276ff2eaebfd0723a457a71d94a1f9915b1f9a01d2d4dd7e30db83e73542`
++Record fingerprint: `819ab6e54f5a2512a5c4125d827e89ae14f7c92110ee2f993ee8ef3397737cbe`

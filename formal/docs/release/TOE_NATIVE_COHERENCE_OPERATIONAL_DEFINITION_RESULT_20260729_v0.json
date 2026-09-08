@@ -1,0 +1,244 @@
+{
+  "artifact_id": "TOE_NATIVE_COHERENCE_OPERATIONAL_DEFINITION_RESULT_20260729_v0",
+  "attempt_sequence_number": 2,
+  "authorized_input": {
+    "claim_id": "COH-CLAIM-001",
+    "claim_selected_as_true": false,
+    "inventory_path": "formal/docs/release/TOE_NATIVE_CONTROLLED_COHERENCE_CLAIM_INVENTORY_RESULT_20260729_v0.json",
+    "inventory_sha256": "91b2fb9a275232b96604db77e0d862c9edbdde1a5daf703bed798d8d717f894b",
+    "selected_claim": "CCFT is a candidate mesoscopic coherence bridge layer for the ToE program.",
+    "source_artifact": "formal/docs/paper/TOE_COHERENCE_ADMISSIBILITY_BRIDGE_HYPOTHESIS_v0.md",
+    "source_artifact_sha256": "1603011e475595cce40f6e36310198952aa48b2fe351cba129ff065caf05b5ec",
+    "source_authority_status": "PLANNING_ONLY_HYPOTHESIS_INDEX_WITH_EXPLICIT_NONCLAIM_BOUNDARY"
+  },
+  "bridge_function_ledger": {
+    "causal_or_update_rule": {
+      "source_status": "NOT_DEFINED",
+      "test_result": "FAIL"
+    },
+    "conservation_or_exchange_rule": {
+      "source_status": "NOT_DEFINED",
+      "test_result": "FAIL"
+    },
+    "input_from_microscopic_pillar": {
+      "source_status": "NOT_TYPED_OR_NAMED",
+      "test_result": "FAIL"
+    },
+    "intermediate_state_or_map": {
+      "source_status": "ONLY_THE_LABEL_MESOSCOPIC_BRIDGE_LAYER",
+      "test_result": "FAIL"
+    },
+    "output_to_macroscopic_or_other_pillar": {
+      "source_status": "NOT_TYPED_OR_NAMED",
+      "test_result": "FAIL"
+    },
+    "overall_status": "NO_OPERATIONAL_BRIDGE_MAP"
+  },
+  "candidate_measurement_operation": {
+    "accepted_measurement_operation": null,
+    "minimum_future_contract": [
+      "Name a physical bearer and reproducible preparation family.",
+      "Specify a controlled intervention that changes the proposed coherence while holding declared comparators fixed.",
+      "Specify a readout variable with units and uncertainty.",
+      "Give a standard-physics baseline for the same preparation and readout.",
+      "State a nonzero residual or discriminating relation and a failure threshold."
+    ],
+    "source_justified_candidate": false,
+    "status": "NONE_SOURCE_JUSTIFIED"
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_status_after_test": "COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL",
+  "execution_target": "test_toe_native_coherence_claim_operational_definition_v0",
+  "failure_boundary": {
+    "criterion": "The claim remains nonoperational when its preserved source does not jointly identify a bearer, measurable change or zero, bounded scale, reproducible operations, typed bridge inputs and outputs, distinction from standard quantities, and a measurement-sensitive readout.",
+    "observed": true,
+    "result": "FAILURE_BOUNDARY_TRIGGERED"
+  },
+  "native_hypothesis_tested": "HYP_TOE_COHERENCE_OPERATIONAL_REPRESENTABILITY_v0",
+  "nonclaims": [
+    "The result does not show that every possible definition of coherence is impossible.",
+    "The result does not refute CCFT as an entire historical research idea.",
+    "The result does not validate CCFT or establish a mesoscopic bridge in nature.",
+    "No real scalar, complex scalar, phase, current, tensor, rotor, network, functional, relation, or nonfield representation is selected.",
+    "No action, equation of motion, matter coupling, gravity coupling, or dynamical seam is selected.",
+    "No measurement prediction, observable validation, empirical residual, or empirical claim is made.",
+    "No closed quadratic-gravity or real-scalar-surrogate program is reopened."
+  ],
+  "operational_definition_contract": {
+    "accepted_operational_definition": null,
+    "criterion_results": [
+      {
+        "criterion": "PHYSICAL_BEARER",
+        "evidence": "The Stage 1 record says UNSPECIFIED_CCFT_MESOSCOPIC_SYSTEM_OR_CONFIGURATION.",
+        "status": "FAIL_UNSPECIFIED"
+      },
+      {
+        "criterion": "PHYSICAL_CHANGE",
+        "evidence": "No ordered quantity, predicate, state relation, or response is assigned to increasing or decreasing coherence.",
+        "status": "FAIL_UNDEFINED"
+      },
+      {
+        "criterion": "ZERO_SEMANTICS",
+        "evidence": "No state, threshold, equivalence class, or operational condition defines zero coherence.",
+        "status": "FAIL_UNDEFINED"
+      },
+      {
+        "criterion": "MESOSCOPIC_SCALE",
+        "evidence": "Mesoscopic is a qualitative label with no length, time, energy, component-count, coarse-graining, or scale-separation criterion.",
+        "status": "FAIL_UNBOUNDED"
+      },
+      {
+        "criterion": "PREPARATION_AND_INTERVENTION",
+        "evidence": "No preparation, disturbance, transport, maintenance, or destruction protocol is stated.",
+        "status": "FAIL_UNDEFINED"
+      },
+      {
+        "criterion": "BRIDGE_INPUT_OUTPUT",
+        "evidence": "No typed input, output, state map, exchange rule, or causal rule is stated.",
+        "status": "FAIL_UNDEFINED"
+      },
+      {
+        "criterion": "UNITS_OR_DIMENSION",
+        "evidence": "Units are unspecified and dimensionlessness is not justified.",
+        "status": "FAIL_UNDEFINED"
+      },
+      {
+        "criterion": "STANDARD_PHYSICS_DISTINCTION",
+        "evidence": "No controlled residual distinguishes the claim from any listed standard comparator.",
+        "status": "FAIL_UNDEFINED"
+      },
+      {
+        "criterion": "MEASUREMENT_ACCESS",
+        "evidence": "The accepted source supplies no measurement-sensitive variable or operation.",
+        "status": "FAIL_UNDEFINED"
+      },
+      {
+        "criterion": "FAILURE_CONDITION",
+        "evidence": "The bounded test states an explicit joint failure criterion and the preserved claim triggers it.",
+        "status": "PASS_DEFINED_AND_TRIGGERED"
+      }
+    ],
+    "failed_definition_criterion_count": 9,
+    "passed_failure_boundary_count": 1,
+    "status": "NO_ACCEPTED_OPERATIONAL_DEFINITION"
+  },
+  "physical_possessor_and_change_ledger": {
+    "bearer": {
+      "candidate_source_phrase": "CCFT mesoscopic system or configuration",
+      "physical_system_named": false,
+      "status": "UNSPECIFIED"
+    },
+    "change": {
+      "decrease_defined": false,
+      "increase_defined": false,
+      "physical_response_defined": false,
+      "state_ordering_defined": false,
+      "status": "UNSPECIFIED"
+    },
+    "local_or_relational": {
+      "status": "UNRESOLVED"
+    }
+  },
+  "preparation_transport_destruction_operations": [
+    {
+      "operation": "PREPARE",
+      "source_protocol": null,
+      "status": "NOT_DEFINED"
+    },
+    {
+      "operation": "DISTURB",
+      "source_protocol": null,
+      "status": "NOT_DEFINED"
+    },
+    {
+      "operation": "TRANSPORT",
+      "source_protocol": null,
+      "status": "NOT_DEFINED"
+    },
+    {
+      "operation": "MAINTAIN",
+      "source_protocol": null,
+      "status": "NOT_DEFINED"
+    },
+    {
+      "operation": "DESTROY",
+      "source_protocol": null,
+      "status": "NOT_DEFINED"
+    }
+  ],
+  "program_id": "TOE_NATIVE_COHERENCE_ONTOLOGY_AND_REPRESENTATION_V0",
+  "program_transition": {
+    "mandatory_exit_target": "close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0",
+    "representation_comparison_authorized": false,
+    "stage_3_may_open": false,
+    "transition": "BLOCK_AND_SELECT_MANDATORY_EXIT"
+  },
+  "schema_id": "toe.native_coherence.operational_definition.result.v0",
+  "semantic_stage_id": "COHERENCE_OPERATIONAL_DEFINITION_TEST",
+  "standard_quantity_distinction_matrix": [
+    {
+      "comparator": "PHASE_COHERENCE",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    },
+    {
+      "comparator": "CORRELATION",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    },
+    {
+      "comparator": "SYNCHRONIZATION",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    },
+    {
+      "comparator": "ORDER_PARAMETER_OR_COLLECTIVE_ORDER",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    },
+    {
+      "comparator": "LOW_ENTROPY",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    },
+    {
+      "comparator": "COARSE_GRAINED_EFFECTIVE_BEHAVIOR",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    },
+    {
+      "comparator": "ENTANGLEMENT",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    },
+    {
+      "comparator": "ORDINARY_FIELD_AMPLITUDE",
+      "distinguishing_evidence": null,
+      "status": "NOT_DISTINGUISHED"
+    }
+  ],
+  "terminal_outcome": "EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED",
+  "units_or_dimension_classification": {
+    "dimensionless_status": "NOT_JUSTIFIED",
+    "physical_dimension": null,
+    "unit": null,
+    "verdict": "UNSPECIFIED"
+  },
+  "verdict": "STAGE_2_OPERATIONAL_TEST_COMPLETE_FAILED_CLOSED",
+  "zero_and_scale_semantics": {
+    "mesoscopic_boundary": {
+      "coarse_graining_rule": null,
+      "component_count_or_collective_threshold": null,
+      "energy_scale": null,
+      "length_scale": null,
+      "micro_to_meso_transition": null,
+      "meso_to_macro_transition": null,
+      "status": "QUALITATIVE_LABEL_ONLY",
+      "time_scale": null
+    },
+    "zero_coherence": {
+      "operational_condition": null,
+      "status": "UNDEFINED"
+    }
+  }
+}

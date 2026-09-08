@@ -1,0 +1,938 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_D6_GLOBAL_QUOTIENT_AND_INDEPENDENT_SPAN_PASS_v0",
+  "pass_id": "T_FIRST_R2_ACTIVE_BNV_D6_GLOBAL_QUOTIENT_AND_INDEPENDENT_SPAN_PASS_0020",
+  "date": "2026-08-23",
+  "status": "GATE_B_EXACT_GLOBAL_IBP_EOM_FIERZ_FLAVOR_AND_HC_QUOTIENT_AND_GATE_C_INDEPENDENT_COMPONENT_LORENTZ_FLAVOR_SPAN_EQUALITY_HAVE_BOTH_CLOSED_WITH_EXACT_ZERO_RESIDUALS;_THE_POSITIVE_ORIENTATION_D6_PHYSICAL_BASIS_CANDIDATE_HAS_38_FAMILIES_OR_472_FLAVOR_EXPANDED_DIRECTIONS_IN_THE_MAXIMAL_STRATUM_UNDER_THE_FROZEN_COMPLEX_COEFFICIENT_AND_LEADING_RENORMALIZABLE_EOM_SCOPE;_THIS_IS_A_VALIDATED_PHYSICAL_BASIS_CANDIDATE_NOT_A_RENORMALIZATION_BASIS_OR_ADM_AND_ONE_LOOP_CLOSURE_REMAINS_SEPARATELY_UNAUTHORIZED",
+  "authority": {
+    "gate_A_raw_orientation_completeness": "CLOSED_BY_PASS0019_AND_INHERITED",
+    "gate_B_complete_global_physical_quotient": "AUTHORIZED_EXECUTED_AND_CLOSED",
+    "gate_C_independent_exact_quotient_span": "AUTHORIZED_EXECUTED_AND_CLOSED",
+    "d6_basis_candidate_complete": true,
+    "d6_basis_validated_as_one_loop_closed": false,
+    "one_loop_closure_analysis": "UNAUTHORIZED_PENDING_SEPARATE_BOUNDED_AUTHORIZATION",
+    "adm_calculation": "UNAUTHORIZED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "novelty": "UNKNOWN"
+  },
+  "frozen_inputs": [
+    {
+      "role": "PASS0010_NORMALIZED_CHANNEL_LEDGER",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_normalized_tensor_flavor_and_pre_eom_reduction_pass_0010_v0.json",
+      "bytes": 18829,
+      "sha256": "3d447864640648bbed12a08b02b94d28cfe718cd5ac49c79bbd184292cefc7c6"
+    },
+    {
+      "role": "PASS0017_COMPONENT_AND_EOM_REGISTRY_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_component_cg_phase_and_eom_target_closure_pass_0017_v0.json",
+      "bytes": 1177464,
+      "sha256": "e86d536ce2f028c418fa8711f7cf72941afb18c15333dcf052377943cbd448f8"
+    },
+    {
+      "role": "PASS0018_ORIENTATION_WITNESSES_COMPARISON_ONLY",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_clean_room_field_orientation_and_component_reconstruction_audit_pass_0018_v0.json",
+      "bytes": 120209,
+      "sha256": "3e4e37560e1b98abe7df4d220f5bfee9b7ea2a48e1a61e47016118d235287bed"
+    },
+    {
+      "role": "PASS0019_ORIENTATION_COMPLETENESS_GATE_A",
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_orientation_hc_and_global_quotient_gate_pass_0019_v0.json",
+      "bytes": 31057,
+      "sha256": "5edf73c94d6b949fa6abb5ad04914451575e7e3bfabf4a386d29b07dca6a2769"
+    }
+  ],
+  "independence_boundary": {
+    "construction_A": "PASS0010_CHANNEL_LEDGER_PLUS_PASS0017_NORMALIZED_COMPONENT_AND_EOM_REGISTRY",
+    "construction_B": "THIS_MODULE_REGENERATES_PRIMITIVE_SU3_SU2_TENSORS,_BOSON_PROJECTIONS,_GRASSMANN_LORENTZ_FLAVOR_EMBEDDINGS,_AND_ALL_GAUGE_SPANS_WITHOUT_IMPORTING_THE_PASS0017_CG_CODE",
+    "historical_tensor_load_order": "AFTER_CONSTRUCTION_B_GENERATION_AND_QUOTIENT_RANK_CALCULATION",
+    "comparison": "EXACT_BIDIRECTIONAL_SPAN_INCLUSION,_FULL_RANK_BASIS_CHANGE,_AND_ZERO_RESIDUAL"
+  },
+  "gate_B_global_quotient": {
+    "complex_coefficient_convention": "ONE_DELTA_B_PLUS_ONE_REPRESENTATIVE_PER_EXACT_HC_ORBIT_PLUS_ITS_COEFFICIENT_CONJUGATE",
+    "raw_positive_orientation_flavor_expanded_dimension": 708,
+    "exact_combined_relation_rank": 236,
+    "physical_positive_orientation_flavor_expanded_quotient_dimension": 472,
+    "family_level_raw_coordinate_count": 52,
+    "family_level_exact_relation_rank": 14,
+    "physical_positive_orientation_family_count": 38,
+    "family_count_breakdown": {
+      "four_fermion": 4,
+      "psi2phi3_after_orientation_completion": 26,
+      "phi6": 3,
+      "surviving_derivative": 5
+    },
+    "flavor_expanded_breakdown": {
+      "four_fermion": 273,
+      "psi2phi3": 159,
+      "phi6": 3,
+      "surviving_derivative": 37
+    },
+    "relation_matrix_certificate": {
+      "column_blocks": {
+        "psi4_raw_flavor_tuples": 324,
+        "psi2phi3_raw_gauge_channels_times_flavor_tuples": 234,
+        "phi6": 3,
+        "psi2phi2D_raw_placements": 144,
+        "X3HdagD2_raw_decorations": 3
+      },
+      "relation_rank_blocks": {
+        "psi4_Grassmann_Fierz_and_exchange_kernel": 51,
+        "psi2_identical_fermion_flavor_projection": 75,
+        "psi2phi2D_IBP": 36,
+        "psi2phi2D_EOM_after_IBP": 72,
+        "X3HdagD2_IBP_plus_EOM": 2
+      },
+      "independently_computed_exact_subranks": {
+        "QQQL_component_kernel_rank": 24,
+        "QQUE_component_kernel_rank": 27,
+        "psi2_identical_fermion_flavor_relation_rank": 75,
+        "psi2phi2D_IBP_relation_rank": 36
+      },
+      "full_relation_rank": 236,
+      "rank_proof": "THE_FIERZ_FLAVOR_BLOCKS_ARE_EXACT_COMPONENT_KERNELS;_THE_IBP_AND_EOM_BLOCKS_HAVE_DISJOINT_UNIT_PIVOTS_IN_THE_DERIVATIVE_COLUMNS,_SO_TARGET_RECOUPLINGS_CANNOT_REDUCE_THEIR_RANK",
+      "exact_relation_generator_schemas": {
+        "QQQL": "O[p,r,s,t]+O[r,p,s,t]-O[s,p,r,t]-O[s,r,p,t]=0_FOR_ALL_3^4_FLAVOR_TUPLES",
+        "QQUE": "O[p,r,s,t]-O[r,p,s,t]=0_FOR_ALL_3^4_FLAVOR_TUPLES",
+        "psi2_symmetric": "O[p,r]-O[r,p]=0",
+        "psi2_antisymmetric": "O[p,p]=0_AND_O[p,r]+O[r,p]=0",
+        "psi2phi2D_IBP": "D_f1+D_f2+D_phi1+D_phi2=0_FOR_EACH_GAUGE_CHANNEL_AND_FLAVOR_TUPLE",
+        "psi2phi2D_EOM": "EIGHT_EXACT_NORMALIZED_RECOUPLING_ROWS_PER_FLAVOR_TUPLE_WITH_UNIQUE_DERIVATIVE_PIVOTS",
+        "X3HdagD2": "A+B+C=0_AND_A_MINUS_ITS_EXACT_NORMALIZED_X_EOM_IMAGE=0"
+      },
+      "normalized_fermion_EOM_recoupling_map_fingerprint_sha256": "d12c43abcf60b734285a623dbb588e25336af161af8ea680de611df893b295d6",
+      "normalized_scalar_X_EOM_recoupling_map_fingerprint_sha256": "b553aab216aae3fd037ba8c4331d7e191d2b3580edc83fcfdf3c623c57d04733",
+      "canonical_relation_system_fingerprint_sha256": "2293aabcc65eaf094183a58110c99a7494bc278a6e5fda70ec2776fdcedb842f"
+    }
+  },
+  "gate_C_independent_component_gauge_span_comparisons": [
+    {
+      "id": "D6-P2P3-QQ-H-X-DELTADAG",
+      "fields": [
+        "qL",
+        "qL",
+        "H",
+        "X",
+        "Deltadag"
+      ],
+      "construction_A_rank": 3,
+      "construction_B_rank": 3,
+      "A_in_B_residual_norms_squared": [
+        "0",
+        "0",
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0",
+        "0",
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-QQ-HDAG-X-RHO3",
+      "fields": [
+        "qL",
+        "qL",
+        "Hdag",
+        "X",
+        "rho3"
+      ],
+      "construction_A_rank": 3,
+      "construction_B_rank": 3,
+      "A_in_B_residual_norms_squared": [
+        "0",
+        "0",
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0",
+        "0",
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-QQ-HDAG-X-RHO8",
+      "fields": [
+        "qL",
+        "qL",
+        "Hdag",
+        "X",
+        "rho8"
+      ],
+      "construction_A_rank": 4,
+      "construction_B_rank": 4,
+      "A_in_B_residual_norms_squared": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "-1/2",
+          "0",
+          "sqrt(3)/2",
+          "0"
+        ],
+        [
+          "sqrt(3)/2",
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "-1/2",
+          "0",
+          "sqrt(3)/2"
+        ],
+        [
+          "0",
+          "sqrt(3)/2",
+          "0",
+          "1/2"
+        ]
+      ],
+      "basis_change_determinant": "-1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-QL-X2-RHO3",
+      "fields": [
+        "qL",
+        "lL",
+        "X",
+        "X",
+        "rho3"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-QL-X2-RHO8",
+      "fields": [
+        "qL",
+        "lL",
+        "X",
+        "X",
+        "rho8"
+      ],
+      "construction_A_rank": 2,
+      "construction_B_rank": 2,
+      "A_in_B_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-UU-HDAG-X-DELTADAG",
+      "fields": [
+        "uR",
+        "uR",
+        "Hdag",
+        "X",
+        "Deltadag"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-UD-H-X-DELTADAG",
+      "fields": [
+        "uR",
+        "dR",
+        "H",
+        "X",
+        "Deltadag"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-UD-HDAG-X-RHO3",
+      "fields": [
+        "uR",
+        "dR",
+        "Hdag",
+        "X",
+        "rho3"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-UD-HDAG-X-RHO8",
+      "fields": [
+        "uR",
+        "dR",
+        "Hdag",
+        "X",
+        "rho8"
+      ],
+      "construction_A_rank": 2,
+      "construction_B_rank": 2,
+      "A_in_B_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-UE-X2-RHO8",
+      "fields": [
+        "uR",
+        "eR",
+        "X",
+        "X",
+        "rho8"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-DD-H-X-RHO3",
+      "fields": [
+        "dR",
+        "dR",
+        "H",
+        "X",
+        "rho3"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-DD-H-X-RHO8",
+      "fields": [
+        "dR",
+        "dR",
+        "H",
+        "X",
+        "rho8"
+      ],
+      "construction_A_rank": 2,
+      "construction_B_rank": 2,
+      "A_in_B_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "-1/2",
+          "sqrt(3)/2"
+        ],
+        [
+          "sqrt(3)/2",
+          "1/2"
+        ]
+      ],
+      "basis_change_determinant": "-1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-DD-HDAG-X-DELTA",
+      "fields": [
+        "dR",
+        "dR",
+        "Hdag",
+        "X",
+        "Delta"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-PHI6-H-X3-RHO8-DELTADAG",
+      "fields": [
+        "H",
+        "X",
+        "X",
+        "X",
+        "rho8",
+        "Deltadag"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-PHI6-HDAG-X3-RHO3-RHO8",
+      "fields": [
+        "Hdag",
+        "X",
+        "X",
+        "X",
+        "rho3",
+        "rho8"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-PHI6-HDAG-X3-RHO8-2",
+      "fields": [
+        "Hdag",
+        "X",
+        "X",
+        "X",
+        "rho8",
+        "rho8"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-DER-P2P2D-QU-X-DELTADAG",
+      "fields": [
+        "qL",
+        "uR",
+        "X",
+        "Deltadag"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-DER-P2P2D-QD-X-RHO3",
+      "fields": [
+        "qL",
+        "dR",
+        "X",
+        "rho3"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-DER-P2P2D-QD-X-RHO8",
+      "fields": [
+        "qL",
+        "dR",
+        "X",
+        "rho8"
+      ],
+      "construction_A_rank": 2,
+      "construction_B_rank": 2,
+      "A_in_B_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0",
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-DER-PHI4D2-D2X-X2-HDAG",
+      "fields": [
+        "X",
+        "X",
+        "X",
+        "Hdag"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-DER-PHI4D2-DX-DX-X-HDAG",
+      "fields": [
+        "X",
+        "X",
+        "X",
+        "Hdag"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-DER-PHI4D2-DX-X2-DHDAG",
+      "fields": [
+        "X",
+        "X",
+        "X",
+        "Hdag"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-LBAR-D-X2-HDAG",
+      "fields": [
+        "barlL",
+        "dR",
+        "Hdag",
+        "X",
+        "X"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-QBAR-D-X3",
+      "fields": [
+        "barqL",
+        "dR",
+        "X",
+        "X",
+        "X"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    },
+    {
+      "id": "D6-P2P3-UBAR-Q-X3",
+      "fields": [
+        "baruR",
+        "qL",
+        "X",
+        "X",
+        "X"
+      ],
+      "construction_A_rank": 1,
+      "construction_B_rank": 1,
+      "A_in_B_residual_norms_squared": [
+        "0"
+      ],
+      "B_in_A_residual_norms_squared": [
+        "0"
+      ],
+      "basis_change_matrix_A_dagger_B": [
+        [
+          "1"
+        ]
+      ],
+      "basis_change_determinant": "1",
+      "exact_span_equality": true,
+      "basis_change_full_rank": true
+    }
+  ],
+  "gate_C_independent_psi4_component_lorentz_flavor_comparisons": {
+    "QQQL": {
+      "raw_flavor_tuple_count": 81,
+      "construction_A_rank": 57,
+      "construction_B_all_gauge_lorentz_pairings_rank": 57,
+      "expected_rank": 57,
+      "exact_span_equality": true,
+      "zero_residual_both_directions": true
+    },
+    "QQUE": {
+      "raw_flavor_tuple_count": 81,
+      "construction_A_rank": 54,
+      "construction_B_all_gauge_lorentz_pairings_rank": 54,
+      "expected_rank": 54,
+      "exact_span_equality": true,
+      "zero_residual_both_directions": true
+    },
+    "DUQL": {
+      "raw_flavor_tuple_count": 81,
+      "construction_A_rank": 81,
+      "construction_B_all_gauge_lorentz_pairings_rank": 81,
+      "expected_rank": 81,
+      "exact_span_equality": true,
+      "zero_residual_both_directions": true
+    },
+    "DUUE": {
+      "raw_flavor_tuple_count": 81,
+      "construction_A_rank": 81,
+      "construction_B_all_gauge_lorentz_pairings_rank": 81,
+      "expected_rank": 81,
+      "exact_span_equality": true,
+      "zero_residual_both_directions": true
+    }
+  },
+  "gate_C_summary": {
+    "component_gauge_groups_compared": 25,
+    "component_gauge_groups_exact_span_equal": 25,
+    "psi4_families_compared": 4,
+    "psi4_families_exact_component_lorentz_flavor_span_equal": 4,
+    "all_basis_change_maps_full_rank": true,
+    "all_residuals_exact_zero": true,
+    "quotient_span_equality": true
+  },
+  "stratum_physical_family_counts": [
+    {
+      "stratum": "SM+X",
+      "physical_family_count": 8
+    },
+    {
+      "stratum": "SM+X+Delta",
+      "physical_family_count": 15
+    },
+    {
+      "stratum": "SM+X+rho3",
+      "physical_family_count": 15
+    },
+    {
+      "stratum": "SM+X+rho8",
+      "physical_family_count": 22
+    },
+    {
+      "stratum": "SM+X+rho3+Delta",
+      "physical_family_count": 22
+    },
+    {
+      "stratum": "SM+X+rho8+Delta",
+      "physical_family_count": 30
+    },
+    {
+      "stratum": "SM+X+rho3+rho8",
+      "physical_family_count": 30
+    },
+    {
+      "stratum": "SM+X+rho3+rho8+Delta",
+      "physical_family_count": 38
+    }
+  ],
+  "promotion": {
+    "D6_enumeration_complete": true,
+    "D6_quotient_complete_within_frozen_scope": true,
+    "D6_independent_span_validated": true,
+    "D6_basis_candidate_complete": true,
+    "D6_basis_one_loop_closed": false,
+    "physical_family_count_maximal_stratum": 38,
+    "physical_flavor_expanded_dimension_maximal_stratum": 472
+  },
+  "hard_nonclaims": [
+    "THE_38_FAMILY_COUNT_IS_NOT_A_WILSON_COEFFICIENT_COUNT_WITHOUT_FLAVOR_CONVENTIONS",
+    "THE_472_DIMENSION_IS_NOT_AN_ADM_DIMENSION_OR_A_RENORMALIZATION_BASIS_DIMENSION",
+    "NO_ONE_LOOP_COUNTERTERM_CLOSURE_ANALYSIS_WAS_EXECUTED",
+    "NO_Evanescent_OR_REDUNDANT_RENORMALIZATION_BASIS_WAS_FROZEN",
+    "NO_ADM_ENTRY_MATCHING_COEFFICIENT_RGE_OR_MODEL1_PARAMETER_POINT_WAS_CALCULATED",
+    "HIGHER_DIMENSIONAL_THRESHOLD_MATCHING_AND_FULL_ACTION_GAUGE_GOLDSTONE_MATCHING_REMAIN_OPEN"
+  ],
+  "next_native_action": "SEEK_SEPARATE_BOUNDED_AUTHORIZATION_FOR_ONE_LOOP_TOPOLOGY_AND_COUNTERTERM_SPACE_CLOSURE_ANALYSIS_OVER_THE_VALIDATED_D5_D6_PHYSICAL_CANDIDATE_PLUS_EXPLICIT_REDUNDANT_AND_EVANESCENT_SECTORS;_DO_NOT_CALCULATE_ADM_COEFFICIENTS_YET"
+}

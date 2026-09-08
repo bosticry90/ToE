@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 3,
+  "closed_from_commit": "7e3eac60f091be870525e5c397b0e7811fcfd038",
+  "event_hash": "63c33a5b0115209f07e5cc9de1d65d4e48e52cccec36c089144f181a9209e82c",
+  "event_sequence_number": 6,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "415cfdab5d5172fc823e6add64c388370cebf1e326b41b506d6ea53f9c6cb4b5",
+  "previous_event_hash": "415cfdab5d5172fc823e6add64c388370cebf1e326b41b506d6ea53f9c6cb4b5",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "result_artifact_hash": "4f5698be7d4df52a3078786d4b732ca95a47637ea78c13f2dd5c26e621cf17f5",
+  "result_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+  "review_artifact_hash": "a65d14d5bfcb517b8dfb0be24197b4b12879e99cfcdbe605e587af295f0c50a2",
+  "review_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json",
+  "terminal_result": "PASSED"
+}

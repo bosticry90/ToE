@@ -1,0 +1,128 @@
+{
+  "artifact_id": "TOE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_STAGE_3_OPEN_AUTHORITY_v0",
+  "authority_decision": "AUTHORIZE_CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION_STAGE_3_OPEN",
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_v0.json",
+      "role": "accepted 33-entry and nine-component mathematical-lineage result",
+      "sha256": "8cc3ed47abe59d11ec7ba39aa47c7a848800635e1f4ccc9e15e278c558d33bf1"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_RESULT_REVIEW_v0.json",
+      "role": "independent Stage 2 review and nonselection boundary",
+      "sha256": "0f63448045a41608b84bc8f08cd2b87a3e884e2181872106f73ed1784773d618"
+    },
+    {
+      "path": "formal/docs/release/TOE_CCFT_MATHEMATICAL_LINEAGE_AND_CONFLICT_RECONCILIATION_VALIDATION_v0.json",
+      "role": "Stage 2 scoped validation and disclosed historical Python debt",
+      "sha256": "168e4a829166826263623bf7d55bbbdcafeac234cbdde9c1f2a0a630cccf9b60"
+    },
+    {
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_ATTEMPT_02_CLOSE_v0.json",
+      "role": "immutable passed Stage 2 CLOSE event",
+      "sha256": "ed912f5076683ae8cf8caf878a91643261b60b1a57bc312d3c5b1b4e72db8696"
+    }
+  ],
+  "authorized_lineage_boundary": {
+    "conflict_count": 4,
+    "full_cp_nlse_ce_nwe_equivalence_established": false,
+    "lineage_component_count": 9,
+    "mathematical_entry_count": 33,
+    "preferred_formulation_selected": false,
+    "repository_claim_exhaustion_established": false,
+    "retained_lineage_component_ids": [
+      "CCFT-LINEAGE-CP-NLSE-2D",
+      "CCFT-LINEAGE-UCFF-DISPERSION",
+      "CCFT-LINEAGE-LCRD-V3",
+      "CCFT-LINEAGE-DIAGNOSTICS",
+      "CCFT-LINEAGE-HISTORICAL-CONFLICT-REVIEW",
+      "CCFT-LINEAGE-MONOGRAPH-UNIFICATION-ASSERTION",
+      "CCFT-LINEAGE-CURRENT-CROSSWALK-ADMISSIBILITY",
+      "CCFT-LINEAGE-CURRENT-EMPIRICAL-SCAFFOLD",
+      "CCFT-LINEAGE-CURRENT-VARIATIONAL-TARGET"
+    ],
+    "unresolved_relationship_count": 5
+  },
+  "authorized_stage": {
+    "canonical_scope_hash": "fe74ad24a6b899c00fccc0e5c10219f6a59c9f079349a893beaffc682c4d1b99",
+    "canonical_target": "operationalize_toe_retained_ccft_mathematical_objects_v0",
+    "semantic_stage_id": "CCFT_MATHEMATICAL_OBJECT_OPERATIONALIZATION",
+    "stage_number": 3
+  },
+  "captured_at_utc": "2026-07-31T23:34:48Z",
+  "evidence_bindings": [
+    {
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+      "role": "immutable program and Stage 3 operationalization scope",
+      "sha256": "12824e836f1f687317649b02d204dde17f01a074cb7818f46353e4fbd97469be"
+    }
+  ],
+  "operational_status_vocabulary": [
+    "OPERATIONALLY_DEFINED",
+    "OPERATIONALLY_DEFINED_ONLY_AS_BOUNDED_SURROGATE",
+    "REDUCES_TO_KNOWN_PHYSICS_OBJECT",
+    "KNOWN_PHYSICS_OR_GENERIC_WAVE_BASELINE",
+    "BLOCKED_BY_MISSING_BEARER",
+    "BLOCKED_BY_MISSING_UNITS",
+    "BLOCKED_BY_MISSING_SCALE",
+    "BLOCKED_BY_MISSING_OPERATIONS",
+    "BLOCKED_BY_MISSING_MEASUREMENT_MAP",
+    "BLOCKED_BY_MISSING_COMPARATOR_DISTINCTION",
+    "CONFLICTING_OPERATIONAL_INTERPRETATIONS",
+    "NOT_APPLICABLE_MATHEMATICAL_OR_PLANNING_SURFACE_ONLY"
+  ],
+  "permitted_work": [
+    "reverify every consumed lineage entry source path hash location authority custody and conflict status",
+    "evaluate every retained mathematical object separately within its lineage rather than transporting one interpretation across branches",
+    "record the source-bound physical bearer value zero value units dimensions locality relational statistical emergent or effective status scale domain preparation disturbance transport maintenance destruction and measurement or inference channel",
+    "compare each object with ordinary wave amplitude phase coherence correlation synchronization low entropy order parameters hydrodynamic density velocity generic diagnostics and known-physics baselines",
+    "classify the shared zero-coupling dispersion as a known-physics or generic-wave baseline if the evidence supports only that role",
+    "distinguish source-supported physical meanings from bounded surrogate interpretations and explicitly labeled missing-postulate requirements",
+    "preserve separate operational records for CP-NLSE CE-NWE UCFF chi LCRD rotor diagnostic admissibility residual and variational-planning branches",
+    "state what observation or result would show that an interpretation is inadequate without deriving a new observable or empirical prediction",
+    "produce one independently reviewed atomic Stage 3 CLOSE result"
+  ],
+  "prohibited_work": [
+    "select CP-NLSE CE-NWE UCFF chi or LCRD as the canonical or preferred CCFT formulation",
+    "repair the conflicting nonzero-interaction dispersion or invent a missing chi equation coupling functional coefficient unit scale or bearer",
+    "choose between the two chi dynamics or merge wave rotor and multifield branches",
+    "assume psi phi chi rho R K or any other symbol has one shared physical meaning across lineages",
+    "derive or construct a CCFT action evolution law minimal core matter seam gravity seam observable discriminator or phenomenology calculation",
+    "claim LCRD or any parameter descends from LSDA without the missing source-bound coarse-graining map",
+    "claim the generic zero-coupling wave baseline is uniquely CCFT",
+    "adopt validate or empirically confirm CCFT or declare coherence fundamental or physically real",
+    "promote historical or local-only evidence into canonical evidence",
+    "claim repository-wide operational or scientific exhaustion",
+    "open Stage 4 automatically"
+  ],
+  "required_operational_record_fields": [
+    "operational_record_id",
+    "mathematical_lineage_component_id",
+    "mathematical_entry_ids",
+    "exact_source_paths_hashes_and_locations",
+    "source_bound_mathematical_definition",
+    "lineage_conflict_status",
+    "candidate_physical_bearer",
+    "value_and_zero_value_meaning",
+    "units_and_dimensional_status",
+    "local_relational_statistical_emergent_or_effective_status",
+    "scale_and_domain",
+    "preparation_disturbance_transport_maintenance_and_destruction_operations",
+    "measurement_or_inference_channel",
+    "known_physics_comparator",
+    "generic_relabeling_audit",
+    "source_supported_bounded_surrogate_or_new_postulate_status",
+    "missing_assumptions",
+    "adequacy_failure_condition",
+    "operational_status",
+    "stage_4_eligibility"
+  ],
+  "schema_id": "toe.ccft.mathematical_object_operationalization.stage_3_open_authority.v0",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_3_OPEN_ONLY",
+  "terminal_outcomes": [
+    "CCFT_RETAINED_OBJECTS_OPERATIONALIZED",
+    "CCFT_OBJECTS_OPERATIONALIZED_ONLY_AS_BOUNDED_SURROGATES",
+    "CCFT_MATHEMATICS_RECOVERED_BUT_NOT_OPERATIONALIZABLE",
+    "CCFT_OPERATIONALIZATION_CONFLICTS_WITH_RETAINED_MATHEMATICS"
+  ]
+}

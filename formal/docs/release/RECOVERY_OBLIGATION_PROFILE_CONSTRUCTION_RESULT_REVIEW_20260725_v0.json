@@ -1,0 +1,39 @@
+{
+  "schema_id": "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T04:16:22Z",
+  "status": "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_ACCEPTED_CURRENT_PROFILE_COVERAGE_BLOCKED",
+  "accepted": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_20260725_v0.json",
+    "sha256": "eb17a010b2cd9e88d972fcc17681c6a6f7959725f1451e1f3c9d30569aafc470",
+    "commit": "d49919e3de5bbcca5579ec702b2850139da64849",
+    "tree": "06e94aaf52ed6dda879bda9451b17a2b4ba5ecd1"
+  },
+  "independent_detached_review": {
+    "checkout": "recovery-obligation-profiles-review-v0",
+    "head": "d49919e3de5bbcca5579ec702b2850139da64849",
+    "tree": "06e94aaf52ed6dda879bda9451b17a2b4ba5ecd1",
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "errors": 0,
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "complete_current_inventory": 13826,
+    "exact_profile_partition": true,
+    "current_control_plane_nodeids": 3748,
+    "historical_debt_nodeids": 10078,
+    "current_known_nonpassing": 139,
+    "historical_known_nonpassing": 231,
+    "unknown_current_reachability": 102,
+    "profile_machinery_current_critical": true,
+    "outcome_based_demotion_possible": false,
+    "unknown_reachability_quarantined": false
+  },
+  "accepted_terminal_outcome": "RECOVERY_BLOCKED_CURRENT_PROFILE_COVERAGE",
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

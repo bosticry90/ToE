@@ -1,0 +1,36 @@
+{
+  "artifact_id": "BOUNDED_PROGRAM_GOVERNANCE_ENFORCEMENT_COMPLETION_MAINTENANCE_PACKET_20260729_v0",
+  "authority_lane": "corrective_governance_maintenance_only",
+  "authorized_scope": {
+    "adversarial_mutation_tests": true,
+    "artifact_introduction_chronology_verification": true,
+    "event_parent_and_registry_snapshot_verification": true,
+    "full_commit_id_policy": true,
+    "immutable_program_manifest_validation": true,
+    "legacy_short_commit_id_attestation": true,
+    "mandatory_exit_enforcement": true,
+    "narrow_attribute_allowlist_for_new_corrective_surfaces": true,
+    "registry_projection_reconstruction": true,
+    "stage_cap_and_no_subsidiary_enforcement": true
+  },
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "maintenance_target": "prepare_bounded_program_governance_enforcement_completion_maintenance_packet_v0",
+  "preserved_terminal_outcomes": {
+    "native_surrogate_v0": "NO_UNIQUE_TOE_DISCRIMINATOR_V0",
+    "quadratic_control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "quadratic_toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "prohibitions": [
+    "No scientific target rotation.",
+    "No reopening of QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0.",
+    "No reopening of TOE_NATIVE_SURROGATE_V0.",
+    "No scientific-stage output or missing scientific proof.",
+    "No original OPEN, CLOSE, calculation, or review artifact rewrite.",
+    "No new scientific successor.",
+    "No modification of the untracked reddit/ directory."
+  ],
+  "required_result_review_target": "review_bounded_program_governance_enforcement_completion_maintenance_result_v0",
+  "schema_id": "toe.bounded_program_governance.enforcement_completion.maintenance_packet.v0",
+  "scientific_target_preserved": "close_toe_native_surrogate_v0_after_bounded_result_v0",
+  "status": "AUTHORIZED_MAINTENANCE_ONLY"
+}

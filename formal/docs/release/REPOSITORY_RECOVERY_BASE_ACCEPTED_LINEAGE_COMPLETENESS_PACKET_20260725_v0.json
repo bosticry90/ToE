@@ -1,0 +1,37 @@
+{
+  "schema_id": "REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_PACKET_20260725_v0",
+  "authorization": {
+    "source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+    "selector": "formal/docs/release/CURRENT_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_SELECTION_20260725_v0.json",
+    "selected": "AUTHORIZE_BOUNDED_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_GATE"
+  },
+  "scope": {
+    "recovery_start_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "proposed_base_commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+    "verify_commit_and_tree_identity": true,
+    "verify_result_and_review_binding": true,
+    "verify_causal_order": true,
+    "verify_external_and_sibling_accepted_commits_absent": true,
+    "classify_guard_roles": true,
+    "execute_current_protected_invariant_guards": true
+  },
+  "guard_classes": [
+    "PROTECTED_INVARIANT_GUARD",
+    "HISTORICAL_SNAPSHOT_GUARD",
+    "SUPERSEDED_GUARD_WITH_ACCEPTED_REPLACEMENT"
+  ],
+  "prohibited": {
+    "source_repairs": true,
+    "authority_json_changes": true,
+    "scientific_content_changes": true,
+    "registry_rotation": true,
+    "v2_enrollment": true,
+    "lean_activity": true,
+    "dirty_main_mutation": true,
+    "automatic_successor_authority": true
+  },
+  "terminal_outcomes": [
+    "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETE",
+    "RECOVERY_BLOCKED_INCOMPLETE_ACCEPTED_LINEAGE"
+  ]
+}

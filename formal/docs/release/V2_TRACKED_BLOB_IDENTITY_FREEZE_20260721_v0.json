@@ -1,0 +1,15 @@
+{
+  "captured_at_utc": "2026-07-21T21:37:34Z",
+  "checkout_bytes_authoritative": false,
+  "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+  "identity_domains": [
+    "GIT_BLOB_SHA256",
+    "CANONICAL_ARTIFACT_SHA256"
+  ],
+  "line_ending_dependence": "NONE",
+  "read_contract": "git cat-file blob 7c624b5b479e2e2a450fd38777d88b1d08a02c25:<path>",
+  "schema_id": "V2_TRACKED_BLOB_IDENTITY_FREEZE_20260721_v0",
+  "scientific_authority_changed": false,
+  "source": "BOUNDED_HASH_REFRESH_AND_TRACKED_IDENTITY_REPAIR_IMPLEMENTATION_COMMIT",
+  "v2_enrollment_authorized": false
+}

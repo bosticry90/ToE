@@ -1,0 +1,510 @@
+{
+  "authorized_stage_count": 5,
+  "installation_envelope": {
+    "commit_exact_path_set": [
+      ".gitattributes",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PROGRAM_GOVERNANCE_INSTALLATION_20260730_v0.json",
+      "formal/docs/release/bounded_program_manifests/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_MANIFEST_v1.json",
+      "formal/python/tests/test_toe_repository_wide_native_hypothesis_evidence_census_program_governance_installation.py",
+      "formal/python/tools/bounded_program_governance.py",
+      "formal/toe_formal/ToeFormal/Release/ToeRepositoryWideNativeHypothesisEvidenceCensusProgramGovernanceInstallationV0.lean",
+      "formal/toe_formal/ToeFormalAll.lean"
+    ],
+    "installed_from_commit": "26eb3dd5bdaa4ec240971a6da35cd14c0bb84142"
+  },
+  "mandatory_exit": {
+    "target": "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0",
+    "terminal_outcomes": [
+      "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+      "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+      "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+      "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+    ]
+  },
+  "manifest_hash": "47a39af9e9a3864bc8c38a084e66a39778a109243215082ed72b42f592b3fb15",
+  "manifest_mode": "PROSPECTIVE_STATIC",
+  "native_hypothesis_tested": "NONE_DIRECTLY_CONTROL_MODEL",
+  "native_relevance": {
+    "kind": "ONE_PREREQUISITE_FROM_NATIVE_CALCULATION",
+    "statement": "Recovers and reconciles the repository's native-hypothesis evidence before another physical representation, action, seam, or calculation is selected."
+  },
+  "no_subsidiary_scientific_targets": true,
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "program_terminal_outcomes": [
+    "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+    "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+    "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+    "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+  ],
+  "repair_attempt_count": 0,
+  "schema_id": "toe.bounded_program.immutable_manifest.v1",
+  "stages": [
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "current_tracked_repository",
+          "archive_tree_read_only",
+          "archive/ToE_Project_read_only_pending_canonical_reindex",
+          "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+          "current_canonical_authority_surfaces",
+          "preinstallation_controls_v0",
+          "formal_outputs_and_release_records",
+          "calculation_and_validation_sources",
+          "Lean_modules",
+          "quarantine_dossiers",
+          "monographs_theory_specifications_and_historical_notes"
+        ],
+        "dependency_artifact_ids": [
+          "coherence_scope_qualification",
+          "coherence_scope_qualification_review",
+          "archive_intake_index",
+          "archive_candidate_ranking",
+          "archive_intake_tool",
+          "archive_retention_policy",
+          "preinstallation_controls"
+        ],
+        "normalized_scientific_question": "Which repository and archive files may contain substantive native-ToE hypotheses, derivations, bridge claims, or predictions, and what are their custody and authority states?",
+        "prohibited_claims": [
+          "automatic archive adoption",
+          "authority promotion without independent review",
+          "claim truth from repetition or symbolic similarity",
+          "field or representation selection",
+          "master-action construction",
+          "seam execution",
+          "empirical validation",
+          "completed ToE"
+        ],
+        "required_outputs": [
+          "path_hash_date_provenance_authority_catalog",
+          "domain_relevance_scores",
+          "machine_generated_and_binary_exclusion_ledger",
+          "deep_review_candidate_set_selected_by_explicit_gates",
+          "archive_specific_evidence_assessment"
+        ],
+        "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+        "terminal_outcome_vocabulary": [
+          "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE",
+          "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS",
+          "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS",
+          "SOURCE_ROOT_SNAPSHOT_STABLE",
+          "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+          "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE",
+          "SOURCE_ROOT_UNAVAILABLE",
+          "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED",
+          "CUSTODY_OR_PROVENANCE_BLOCKED",
+          "DETERMINISTIC_INDEX_GENERATION_FAILED"
+        ]
+      },
+      "canonical_scope_hash": "be877b7daf4bb24fa5fa9c49c75891394d8bb16ddf6e2658d7e7360fba94da64",
+      "canonical_target": "inventory_toe_repository_wide_native_hypothesis_sources_v0",
+      "conditional": false,
+      "mandatory_terminal_outcomes": [
+        "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE",
+        "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS",
+        "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS",
+        "SOURCE_ROOT_SNAPSHOT_STABLE",
+        "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+        "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE",
+        "SOURCE_ROOT_UNAVAILABLE",
+        "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED",
+        "CUSTODY_OR_PROVENANCE_BLOCKED",
+        "DETERMINISTIC_INDEX_GENERATION_FAILED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_CLOSE_v0.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/aggregate_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_01_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_02_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_03_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_04_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_05_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_06_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_07_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/batch_08_manifest.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/index_schema_and_tool_versions.json",
+          "formal/output/native_hypothesis_census_v1/REPOSITORY_WIDE_SOURCE_CENSUS/source_root_snapshot_records.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisSourceCensusResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_OPEN_v0.json",
+          "formal/python/tools/toe_repository_wide_native_hypothesis_source_census_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisSourceCensusAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_01_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+      "stage_number": 1
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "current_tracked_repository",
+          "archive_tree_read_only",
+          "archive/ToE_Project_read_only_pending_canonical_reindex",
+          "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+          "current_canonical_authority_surfaces",
+          "preinstallation_controls_v0",
+          "formal_outputs_and_release_records",
+          "calculation_and_validation_sources",
+          "Lean_modules",
+          "quarantine_dossiers",
+          "monographs_theory_specifications_and_historical_notes"
+        ],
+        "dependency_artifact_ids": [
+          "coherence_scope_qualification",
+          "coherence_scope_qualification_review",
+          "archive_intake_index",
+          "archive_candidate_ranking",
+          "archive_intake_tool",
+          "archive_retention_policy",
+          "preinstallation_controls"
+        ],
+        "normalized_scientific_question": "Which candidate sources are duplicates, revisions, generated copies, summaries, superseded descendants, parallel lineages, or contradictory descendants?",
+        "prohibited_claims": [
+          "automatic archive adoption",
+          "authority promotion without independent review",
+          "claim truth from repetition or symbolic similarity",
+          "field or representation selection",
+          "master-action construction",
+          "seam execution",
+          "empirical validation",
+          "completed ToE"
+        ],
+        "required_outputs": [
+          "exact_and_near_duplicate_groups",
+          "revision_and_derivation_lineages",
+          "source_to_summary_provenance_edges",
+          "supersession_and_contradiction_ledger",
+          "independent_source_count"
+        ],
+        "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION",
+        "terminal_outcome_vocabulary": [
+          "SOURCE_LINEAGES_RECONSTRUCTED",
+          "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES",
+          "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "3c3a7827a848f0cac2ea014a29b032bf50678e8a8773eeedbf77a2d111227e05",
+      "canonical_target": "reconstruct_toe_native_hypothesis_source_lineages_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "SOURCE_LINEAGES_RECONSTRUCTED",
+        "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES",
+        "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+          "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_02_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisSourceLineageReconstructionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_02_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_02_OPEN_v0.json",
+          "formal/python/tools/toe_native_hypothesis_source_lineage_reconstruction_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeNativeHypothesisSourceLineageReconstructionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_02_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_SOURCE_LINEAGE_RECONSTRUCTION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION",
+      "stage_number": 2
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "current_tracked_repository",
+          "archive_tree_read_only",
+          "archive/ToE_Project_read_only_pending_canonical_reindex",
+          "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+          "current_canonical_authority_surfaces",
+          "preinstallation_controls_v0",
+          "formal_outputs_and_release_records",
+          "calculation_and_validation_sources",
+          "Lean_modules",
+          "quarantine_dossiers",
+          "monographs_theory_specifications_and_historical_notes"
+        ],
+        "dependency_artifact_ids": [
+          "coherence_scope_qualification",
+          "coherence_scope_qualification_review",
+          "archive_intake_index",
+          "archive_candidate_ranking",
+          "archive_intake_tool",
+          "archive_retention_policy",
+          "preinstallation_controls"
+        ],
+        "normalized_scientific_question": "What source-bound native ontology, pillar, seam, action, bridge, gravity, matter, emergence, thermodynamic, prediction, and falsification claims are contained in the gated sources?",
+        "prohibited_claims": [
+          "automatic archive adoption",
+          "authority promotion without independent review",
+          "claim truth from repetition or symbolic similarity",
+          "field or representation selection",
+          "master-action construction",
+          "seam execution",
+          "empirical validation",
+          "completed ToE"
+        ],
+        "required_outputs": [
+          "source_bound_claim_records",
+          "claim_domain_and_authority_classification",
+          "pillar_and_seam_ledgers",
+          "master_action_term_and_origin_ledger",
+          "Ck_meaning_disambiguation_ledger",
+          "prediction_and_falsification_ledger"
+        ],
+        "semantic_stage_id": "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION",
+        "terminal_outcome_vocabulary": [
+          "NATIVE_CLAIM_EXTRACTION_COMPLETE",
+          "NATIVE_CLAIM_EXTRACTION_COMPLETE_WITH_CONFLICTS",
+          "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+          "NATIVE_CLAIM_EXTRACTION_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "fc4386bc4490b5a913ad1b6353084592b8675cfdc852eb58535901fa8170c4fd",
+      "canonical_target": "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "NATIVE_CLAIM_EXTRACTION_COMPLETE",
+        "NATIVE_CLAIM_EXTRACTION_COMPLETE_WITH_CONFLICTS",
+        "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+        "NATIVE_CLAIM_EXTRACTION_BLOCKED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_03_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisClaimExtractionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_03_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_03_OPEN_v0.json",
+          "formal/python/tools/toe_repository_wide_native_hypothesis_claim_extraction_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisClaimExtractionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_03_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION",
+      "stage_number": 3
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "current_tracked_repository",
+          "archive_tree_read_only",
+          "archive/ToE_Project_read_only_pending_canonical_reindex",
+          "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+          "current_canonical_authority_surfaces",
+          "preinstallation_controls_v0",
+          "formal_outputs_and_release_records",
+          "calculation_and_validation_sources",
+          "Lean_modules",
+          "quarantine_dossiers",
+          "monographs_theory_specifications_and_historical_notes"
+        ],
+        "dependency_artifact_ids": [
+          "coherence_scope_qualification",
+          "coherence_scope_qualification_review",
+          "archive_intake_index",
+          "archive_candidate_ranking",
+          "archive_intake_tool",
+          "archive_retention_policy",
+          "preinstallation_controls"
+        ],
+        "normalized_scientific_question": "Which claims support, conflict with, supersede, or depend on one another, which have mathematical or only philosophical support, and which extracted claims merit proposed canonical promotion under independent review?",
+        "prohibited_claims": [
+          "automatic archive adoption",
+          "authority promotion without independent review",
+          "claim truth from repetition or symbolic similarity",
+          "field or representation selection",
+          "master-action construction",
+          "seam execution",
+          "empirical validation",
+          "completed ToE"
+        ],
+        "required_outputs": [
+          "native_hypothesis_graph",
+          "support_conflict_dependency_and_supersession_edges",
+          "mathematical_backing_and_missing_definition_ledger",
+          "candidate_canonical_promotion_dossiers",
+          "independent_review_for_each_proposed_promotion"
+        ],
+        "semantic_stage_id": "CURRENT_HYPOTHESIS_RECONCILIATION",
+        "terminal_outcome_vocabulary": [
+          "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE",
+          "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS",
+          "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED"
+        ]
+      },
+      "canonical_scope_hash": "fd9d77680cd0ff775aac0cc4f48d061abced26c3515245fe608522c7f36a8b19",
+      "canonical_target": "reconcile_toe_current_native_hypothesis_evidence_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE",
+        "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS",
+        "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+          "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_04_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCurrentNativeHypothesisEvidenceReconciliationResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_04_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_04_OPEN_v0.json",
+          "formal/python/tools/toe_current_native_hypothesis_evidence_reconciliation_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToeCurrentNativeHypothesisEvidenceReconciliationAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_04_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "CURRENT_HYPOTHESIS_RECONCILIATION",
+      "stage_number": 4
+    },
+    {
+      "canonical_scope": {
+        "authorized_inputs": [
+          "current_tracked_repository",
+          "archive_tree_read_only",
+          "archive/ToE_Project_read_only_pending_canonical_reindex",
+          "archive/ToE_Project_Starter_2025-09-24_read_only_pending_canonical_reindex",
+          "current_canonical_authority_surfaces",
+          "preinstallation_controls_v0",
+          "formal_outputs_and_release_records",
+          "calculation_and_validation_sources",
+          "Lean_modules",
+          "quarantine_dossiers",
+          "monographs_theory_specifications_and_historical_notes"
+        ],
+        "dependency_artifact_ids": [
+          "coherence_scope_qualification",
+          "coherence_scope_qualification_review",
+          "archive_intake_index",
+          "archive_candidate_ranking",
+          "archive_intake_tool",
+          "archive_retention_policy",
+          "preinstallation_controls"
+        ],
+        "normalized_scientific_question": "Which currently supportable native hypothesis is strongest for a separate bounded adjudication, or why is no hypothesis ready?",
+        "prohibited_claims": [
+          "automatic archive adoption",
+          "authority promotion without independent review",
+          "claim truth from repetition or symbolic similarity",
+          "field or representation selection",
+          "master-action construction",
+          "seam execution",
+          "empirical validation",
+          "completed ToE"
+        ],
+        "required_outputs": [
+          "frontier_classification_for_each_candidate",
+          "ranked_native_frontier_map",
+          "selected_next_hypothesis_or_explicit_no_selection",
+          "decision_rationale_and_missing_prerequisite_count",
+          "separate_next_program_preparation_target_if_selected"
+        ],
+        "semantic_stage_id": "NATIVE_FRONTIER_DECISION",
+        "terminal_outcome_vocabulary": [
+          "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+          "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+          "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+          "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+        ]
+      },
+      "canonical_scope_hash": "639b469cbaf5000a2382d9eb01f248facf65e21d2776c8600c5922a7b5d2f507",
+      "canonical_target": "select_toe_native_frontier_after_repository_wide_evidence_census_v0",
+      "conditional": true,
+      "mandatory_terminal_outcomes": [
+        "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY",
+        "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED",
+        "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE",
+        "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND"
+      ],
+      "prospective_envelope": {
+        "close_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_REVIEW_v0.json",
+          "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0.json",
+          "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_05_CLOSE_v0.json",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToePostCensusNativeFrontierDecisionResult.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_05_CLOSE_v0.json",
+        "open_commit_exact_path_set": [
+          "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+          "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_OPEN_VALIDATION_v0.json",
+          "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_05_OPEN_v0.json",
+          "formal/python/tools/toe_post_census_native_frontier_decision_stage_authorization.py",
+          "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+          "formal/toe_formal/ToeFormal/Derivation/ToePostCensusNativeFrontierDecisionAttemptOpen.lean",
+          "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+          "formal/toe_formal/ToeFormalAll.lean"
+        ],
+        "open_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_05_OPEN_v0.json",
+        "result_artifact_path": "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0.json",
+        "review_artifact_path": "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_REVIEW_v0.json"
+      },
+      "semantic_stage_id": "NATIVE_FRONTIER_DECISION",
+      "stage_number": 5
+    }
+  ],
+  "status": "IMMUTABLE_AUTHORITATIVE_PROGRAM_MANIFEST"
+}

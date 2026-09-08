@@ -1,0 +1,447 @@
+{
+  "artifact_id": "TOE_CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_RESULT_v0",
+  "captured_at_utc": "2026-07-31T14:18:00Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+  "attempt_sequence_number": 2,
+  "scientific_target": "inventory_toe_candidate_gravitational_action_families_v0",
+  "scope_hash": "8dc24a87cd882d67123278bc2da416a4efffe29866f96bbecc4dd7af7a7942ea",
+  "open_event": {
+    "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_02_OPEN_v0.json",
+    "sha256": "d33c9f901f49520fcd82e12c6f275961e3e37aa4f32f052a5566fb36d1462604"
+  },
+  "terminal_outcome": "ACTION_FAMILY_INVENTORY_COMPLETE_WITH_UNRESOLVED_MEANINGS",
+  "lifecycle_result": "PASSED",
+  "scientific_conclusion": "All seven prepared comparison-family rows are inventoried without ranking or selection. The evidence identifies one known-physics baseline, two reference or equivalence controls, and four broad families whose exact action content remains insufficiently defined. Only the quadratic reference-control row has a fully frozen action-level representative in the inspected current evidence. No row is established as a native ToE gravitational action.",
+  "authorized_input_bindings": [
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+      "role": "prepared seven-family comparison envelope",
+      "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+    },
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.json",
+      "role": "family-envelope and source-binding review",
+      "sha256": "c7cbf6997b5414a83524a82c105e33e44426dd07f5b2a703d3f68e123795fa9c"
+    },
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.json",
+      "role": "closed automated-matrix and independent-evidence boundary",
+      "sha256": "1faacbd470ef5feed6aebb4dfad34e2e5a9214fa2e31a79d57c375a08f4d9051"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0.json",
+      "role": "closed Stage 1 gravitational-requirement inventory",
+      "sha256": "163012c337fe6b78472d0cab079ab4ba2c81822efb86089eee40aa01c39cb20d"
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_REVIEW_v0.json",
+      "role": "accepted independent Stage 1 review",
+      "sha256": "3e6f8c74fe74d3c8a7bd177c025b1f722d386b493aaa177b06db2866b592705c"
+    }
+  ],
+  "supporting_source_bindings": [
+    {
+      "path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+      "role": "frozen local metric-only comparison scope and nonselection boundary",
+      "sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4"
+    },
+    {
+      "path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_REVIEW_20260717_v0.json",
+      "role": "accepted bounded review of the local metric-only contract",
+      "sha256": "6b902c6c620e15aa68898ae271e2de787186c9ef051e5c16c69edd0ea703ccfd"
+    },
+    {
+      "path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+      "role": "C_k admissibility-only and noncanonical master-action boundary",
+      "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+      "role": "current tracked Einstein-equation comparator and provisional classical-source review",
+      "sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_20260728_v0.json",
+      "role": "exact frozen quadratic reference-control action",
+      "sha256": "9eb7d675c45dd3709c0f19d8263155c1d07ee5eafa5909087e0b4f98d88c33dc"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json",
+      "role": "closed quadratic ToE-role and bounded-result review",
+      "sha256": "33eaf34cffbe365b35a17a39e1ac946fc4dcc201d7f92baf546c3a91af024b46"
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_CERTIFICATION_STATUS_INDEX_20260729_v0.json",
+      "role": "superseding quadratic Stage 1 and Stage 2 certificate-strength index",
+      "sha256": "765d9b4a2ec94edf550f5d7e2bec951aca600029dd8b269d435baf8bc9e207e1"
+    },
+    {
+      "path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_PACKET_20260718_v0.json",
+      "role": "historical nonauthoritative family-catalog orientation",
+      "sha256": "8cfbb0ce0129638fd688d255911ef8e076c6a1d48bb6736e49705dd266a92ac2"
+    },
+    {
+      "path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.json",
+      "role": "limited source spot checks without family-wide generalization authority",
+      "sha256": "905d162d104fa3763199a88758476c9c9231a07a35b62c8711cb922b633c0d4b"
+    }
+  ],
+  "classification_vocabulary": [
+    "NATIVE_CANDIDATE",
+    "PROVISIONAL_NATIVE_CANDIDATE",
+    "DERIVED_EFFECTIVE_CANDIDATE",
+    "KNOWN_PHYSICS_BASELINE",
+    "REFERENCE_CONTROL",
+    "HISTORICAL_ONLY",
+    "SUPERSEDED",
+    "INSUFFICIENTLY_DEFINED"
+  ],
+  "action_definition_vocabulary": [
+    "EXACT_FROZEN_ACTION",
+    "STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION",
+    "ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY",
+    "PARTIAL_ACTION_WITH_MISSING_SECTORS",
+    "MATHEMATICAL_CONTROL_ACTION",
+    "ACTION_IMPORTED_FROM_EXTERNAL_PHYSICS",
+    "CONTROL_CLASS_WITHOUT_STANDALONE_ACTION"
+  ],
+  "family_ledger": [
+    {
+      "family_id": "F_EH",
+      "structural_class": "local metric action linear in curvature with optional cosmological term",
+      "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+      "comparison_only": true,
+      "current_classification": "KNOWN_PHYSICS_BASELINE",
+      "classification_basis": "The prepared packet isolates Einstein-Hilbert gravity as a comparison oracle and forbids using it as the premise of a uniqueness or native-selection claim.",
+      "action_definition_status": "STANDARD_FORM_STRUCTURALLY_IDENTIFIED_NOT_FROZEN_AS_NATIVE_ACTION",
+      "source_artifact_bindings": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+          "sha256": "41e2c432bfd9111c1817c482d0c79de28f45c9bd7302f4fde8f24a5169070544"
+        }
+      ],
+      "historical_lineage": "Standard general-relativistic comparator; the preserved Einstein-scalar route is a provisional classical source witness, not a ToE-native derivation.",
+      "field_content": "one spacetime metric in the frozen metric-only envelope; matter content is not selected",
+      "action_form": "structural linear-curvature representative with optional cosmological term; no native normalization or native coefficient derivation is selected",
+      "maximum_derivative_order": "second-order metric field equations for the standard linear-curvature representative",
+      "free_coefficients": ["curvature normalization", "optional cosmological coefficient"],
+      "coefficient_provenance": "standard-physics comparator normalization; no native ToE provenance established",
+      "symmetries": ["diffeomorphism covariance", "local metric-only envelope"],
+      "degrees_of_freedom_claimed": "no independent project derivation frozen in this Stage 2 evidence; standard GR mode content remains comparator knowledge",
+      "known_physics_limit": "is itself the standard gravitational comparison baseline",
+      "existing_calculations_and_reviews": [
+        "formal weak-field Poisson recovery surface exists",
+        "provisional classical Einstein-scalar source route reviewed",
+        "small-data stability appears only as a limited external-source spot check in the nonauthoritative exploratory survey"
+      ],
+      "negative_or_blocking_results": [
+        "native matter or source content is not selected",
+        "gravitomagnetic recovery remains blocked upstream at its field-equation surface",
+        "no native principle derives or uniquely selects this action"
+      ],
+      "missing_definitions": ["native coefficient provenance", "native matter and source sector", "native selection principle"],
+      "missing_downstream_inputs": ["concrete seam", "scale and empirical-domain contract"],
+      "master_action_relationship": "standard comparator only; no canonical master-action promotion",
+      "C_k_firewall_relationship": "C_k remains an external admissibility audit and is not an Einstein-Hilbert action term",
+      "current_scientific_eligibility": "BASELINE_ONLY_FOR_LATER_REQUIREMENT_COMPARISON",
+      "viability_or_superiority_judgment_made": false
+    },
+    {
+      "family_id": "F_FR",
+      "structural_class": "local metric f(R) excluding the purely linear representative",
+      "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+      "comparison_only": true,
+      "current_classification": "INSUFFICIENTLY_DEFINED",
+      "classification_basis": "The family row freezes only the structural label f(R). No function, parameter domain, background, screening regime, or project-native origin is selected.",
+      "action_definition_status": "ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY",
+      "source_artifact_bindings": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        },
+        {
+          "path": "formal/docs/release/EXPLORATORY_NATIVE_GRAVITATIONAL_REQUIREMENTS_FAMILY_SURVEY_RESULT_REVIEW_20260718_v0.json",
+          "sha256": "905d162d104fa3763199a88758476c9c9231a07a35b62c8711cb922b633c0d4b"
+        }
+      ],
+      "historical_lineage": "Imported comparison family with limited analytic-representative spot checks; no preserved source-bound native f(R) action lineage is established here.",
+      "field_content": "one metric in the metric formulation; equivalent extra-scalar descriptions are representative-dependent and not selected",
+      "action_form": "local metric integral of an unspecified nonlinear function f(R)",
+      "maximum_derivative_order": "not fixed family-wide; generic nonlinear metric representatives give fourth-order metric equations, while special or equivalent formulations require separate treatment",
+      "free_coefficients": ["unspecified function f", "unspecified expansion coefficients and scales"],
+      "coefficient_provenance": "not supplied by a preserved ToE principle",
+      "symmetries": ["diffeomorphism covariance", "local metric-only envelope"],
+      "degrees_of_freedom_claimed": "an extra Ricci-scalar mode is supported only for stated analytic representatives, not as an unrestricted family theorem",
+      "known_physics_limit": "linear-curvature or suitable weak-curvature limit may approach the EH comparator, but no exact limit contract is frozen",
+      "existing_calculations_and_reviews": [
+        "limited external-source spot checks for analytic weak-field representatives",
+        "limited external-source spot check that metric-f(R) matter stability is model dependent"
+      ],
+      "negative_or_blocking_results": ["no family-wide empirical or stability verdict", "no exact f(R) model is frozen"],
+      "missing_definitions": ["the function f", "background and domain", "coefficient and scale provenance", "screening or boundary assumptions"],
+      "missing_downstream_inputs": ["native source sector", "observable and empirical-domain contract"],
+      "master_action_relationship": "no current canonical master-action term or derivation",
+      "C_k_firewall_relationship": "C_k remains external and cannot supply the missing f(R) dynamics",
+      "current_scientific_eligibility": "NOT_YET_A_TESTABLE_ACTION_REPRESENTATIVE",
+      "viability_or_superiority_judgment_made": false
+    },
+    {
+      "family_id": "F_QUADRATIC",
+      "structural_class": "local metric independent quadratic Ricci or Riemann invariants",
+      "envelope_status": "PRIMARY_METRIC_LOCAL_ENVELOPE",
+      "comparison_only": true,
+      "current_classification": "REFERENCE_CONTROL",
+      "classification_basis": "The quadratic bounded closeout explicitly fixes its ToE role as REFERENCE_CONTROL_ONLY and its control result as UNRESOLVED_AFTER_BOUNDED_ATTEMPT.",
+      "action_definition_status": "MATHEMATICAL_CONTROL_ACTION",
+      "source_artifact_bindings": [
+        {
+          "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_20260728_v0.json",
+          "sha256": "9eb7d675c45dd3709c0f19d8263155c1d07ee5eafa5909087e0b4f98d88c33dc"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_REVIEW_20260729_v0.json",
+          "sha256": "33eaf34cffbe365b35a17a39e1ac946fc4dcc201d7f92baf546c3a91af024b46"
+        },
+        {
+          "path": "formal/docs/release/QFT_GR_QUADRATIC_CERTIFICATION_STATUS_INDEX_20260729_v0.json",
+          "sha256": "765d9b4a2ec94edf550f5d7e2bec951aca600029dd8b269d435baf8bc9e207e1"
+        }
+      ],
+      "historical_lineage": "Exploratory local quadratic comparison route followed by a five-attempt bounded control closeout; retained for reference, not promoted as native gravity.",
+      "field_content": "one spacetime metric in four dimensions; source sector deferred in the frozen control",
+      "action_form": "sqrt(-g) [c_R R + c_Lambda + alpha R^2 + beta R_mn R^mn] plus a deferred source sector",
+      "maximum_derivative_order": "fourth-order metric equations",
+      "free_coefficients": ["c_R", "c_Lambda", "alpha", "beta"],
+      "coefficient_provenance": "comparison-control parameters; beta != 0 and 3 alpha + beta != 0 on the frozen generic stratum, without native ToE derivation",
+      "symmetries": ["diffeomorphism covariance", "local metric-only four-dimensional envelope"],
+      "degrees_of_freedom_claimed": "generic flat-space descriptions include the massless metric sector plus massive scalar and massive spin-2 sectors; exact physical certification remains bounded by the closed control result",
+      "known_physics_limit": "EH-like lower-curvature sector is present, but no native recovery or coefficient-selection result is established",
+      "existing_calculations_and_reviews": [
+        "strict-harmonic gauge and atlas contract structurally preserved",
+        "generic component system structurally generated",
+        "Minkowski control and principal-block work preserved",
+        "bounded generic companion-operator attempt closed blocked"
+      ],
+      "negative_or_blocking_results": [
+        "physical higher-derivative spin-2 principal block has a gauge-independent defect in the investigated formulation",
+        "generic exact companion-operator construction blocked within the bounded attempt",
+        "rewrite confluence was not executably established",
+        "generic algebraic certification remains incomplete",
+        "control result is UNRESOLVED_AFTER_BOUNDED_ATTEMPT"
+      ],
+      "missing_definitions": ["native coefficient provenance", "native source and seam contract"],
+      "missing_downstream_inputs": ["completed generic propagator classification", "native empirical-domain contract"],
+      "master_action_relationship": "not a selected master action; retained solely as a mathematical reference control",
+      "C_k_firewall_relationship": "C_k remains external and is not embedded as a multiplier or dynamical term",
+      "current_scientific_eligibility": "REFERENCE_CONTROL_ONLY",
+      "viability_or_superiority_judgment_made": false
+    },
+    {
+      "family_id": "F_EXTRA_FIELD",
+      "structural_class": "metric plus additional fundamental scalar vector or tensor",
+      "envelope_status": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+      "comparison_only": true,
+      "current_classification": "INSUFFICIENTLY_DEFINED",
+      "classification_basis": "The row is an outside-envelope umbrella. It does not identify which added field, kinetic structure, gauge symmetry, constraint, or coupling is intended.",
+      "action_definition_status": "ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY",
+      "source_artifact_bindings": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        }
+      ],
+      "historical_lineage": "Broad comparison umbrella outside the frozen metric-only survey scope; no single native action lineage is identified.",
+      "field_content": "metric plus an unspecified scalar, vector, tensor, or combination",
+      "action_form": "not preserved",
+      "maximum_derivative_order": "not determined",
+      "free_coefficients": ["not determined"],
+      "coefficient_provenance": "not determined",
+      "symmetries": ["not determined beyond the comparison label"],
+      "degrees_of_freedom_claimed": "not determined",
+      "known_physics_limit": "not frozen",
+      "existing_calculations_and_reviews": ["the provisional Einstein-scalar source route concerns imported matter and does not define this entire gravity-family umbrella"],
+      "negative_or_blocking_results": ["outside the frozen metric-only evaluation envelope", "no exact representative is preserved"],
+      "missing_definitions": ["added field type", "kinetic and constraint structure", "couplings", "gauge symmetry", "action and coefficient domain"],
+      "missing_downstream_inputs": ["native ontology", "source and seam contract", "observable domain"],
+      "master_action_relationship": "no canonical master-action field or term selected",
+      "C_k_firewall_relationship": "C_k cannot be reinterpreted as the unspecified extra field",
+      "current_scientific_eligibility": "OUTSIDE_V0_SCOPE_AND_NOT_A_DEFINED_ACTION",
+      "viability_or_superiority_judgment_made": false
+    },
+    {
+      "family_id": "F_NONLOCAL",
+      "structural_class": "explicitly nonlocal metric action",
+      "envelope_status": "OUTSIDE_FROZEN_LOCAL_SCOPE",
+      "comparison_only": true,
+      "current_classification": "INSUFFICIENTLY_DEFINED",
+      "classification_basis": "The row names a nonlocal comparison class but supplies no kernel, form factor, causal prescription, boundary data, or exact action.",
+      "action_definition_status": "ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY",
+      "source_artifact_bindings": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        }
+      ],
+      "historical_lineage": "Broad comparison umbrella outside the frozen local survey scope; no source-bound native nonlocal action lineage is established.",
+      "field_content": "metric with unspecified nonlocal operators or kernels",
+      "action_form": "not preserved",
+      "maximum_derivative_order": "not representable by one frozen finite local derivative order",
+      "free_coefficients": ["unspecified kernels, form factors, or scales"],
+      "coefficient_provenance": "not determined",
+      "symmetries": ["not determined beyond the metric-action label"],
+      "degrees_of_freedom_claimed": "not determined",
+      "known_physics_limit": "not frozen",
+      "existing_calculations_and_reviews": [],
+      "negative_or_blocking_results": ["outside the frozen locality envelope", "no exact representative is preserved"],
+      "missing_definitions": ["nonlocal operator", "kernel", "causal prescription", "boundary and initial-data treatment", "coefficient scales"],
+      "missing_downstream_inputs": ["native motivation", "source and seam contract", "observable domain"],
+      "master_action_relationship": "no canonical nonlocal master-action term selected",
+      "C_k_firewall_relationship": "C_k remains an external audit and supplies no nonlocal kernel",
+      "current_scientific_eligibility": "OUTSIDE_V0_SCOPE_AND_NOT_A_DEFINED_ACTION",
+      "viability_or_superiority_judgment_made": false
+    },
+    {
+      "family_id": "F_CONNECTION_TORSION",
+      "structural_class": "independent connection Palatini or torsion family",
+      "envelope_status": "OUTSIDE_FROZEN_METRIC_ONLY_SCOPE",
+      "comparison_only": true,
+      "current_classification": "INSUFFICIENTLY_DEFINED",
+      "classification_basis": "The row combines inequivalent independent-connection, Palatini, and torsion possibilities without selecting variables, constraints, matter couplings, or an action.",
+      "action_definition_status": "ACTION_FAMILY_DESCRIBED_ONLY_VERBALLY",
+      "source_artifact_bindings": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        }
+      ],
+      "historical_lineage": "Broad comparison umbrella outside the frozen metric-only scope; the packet does not establish a common scientific lineage among its subfamilies.",
+      "field_content": "metric or tetrad plus an unspecified independent connection and possibly torsion",
+      "action_form": "not preserved",
+      "maximum_derivative_order": "not determined",
+      "free_coefficients": ["not determined"],
+      "coefficient_provenance": "not determined",
+      "symmetries": ["not determined; local Lorentz and connection gauge structure are not frozen"],
+      "degrees_of_freedom_claimed": "not determined",
+      "known_physics_limit": "not frozen",
+      "existing_calculations_and_reviews": [],
+      "negative_or_blocking_results": ["outside the frozen metric-only envelope", "no exact representative is preserved"],
+      "missing_definitions": ["fundamental variables", "connection and torsion constraints", "matter coupling", "gauge symmetry", "action and coefficient domain"],
+      "missing_downstream_inputs": ["native ontology", "source and seam contract", "observable domain"],
+      "master_action_relationship": "no canonical independent-connection or torsion master-action sector selected",
+      "C_k_firewall_relationship": "C_k cannot be promoted into a connection or torsion equation",
+      "current_scientific_eligibility": "OUTSIDE_V0_SCOPE_AND_NOT_A_DEFINED_ACTION",
+      "viability_or_superiority_judgment_made": false
+    },
+    {
+      "family_id": "F_EQUIVALENCE_PROBE",
+      "structural_class": "boundary algebraic or four-dimensional topological variants",
+      "envelope_status": "EQUIVALENCE_CONTROL_NOT_SEPARATE_CANDIDATE",
+      "comparison_only": true,
+      "current_classification": "REFERENCE_CONTROL",
+      "classification_basis": "The prepared packet explicitly marks this row as an equivalence control rather than a separate action candidate.",
+      "action_definition_status": "CONTROL_CLASS_WITHOUT_STANDALONE_ACTION",
+      "source_artifact_bindings": [
+        {
+          "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+          "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+        }
+      ],
+      "historical_lineage": "Bookkeeping control for determining when two local-bulk representatives may be treated as equivalent; not a gravitational-law lineage.",
+      "field_content": "inherits the field content of the representative being probed",
+      "action_form": "no standalone action; covers algebraic identities, allowed total divergences, four-dimensional topological densities, tightly bounded local field redefinitions, and consistent normalization changes",
+      "maximum_derivative_order": "inherits the representative and cannot equate different derivative orders",
+      "free_coefficients": ["none intrinsic to the control"],
+      "coefficient_provenance": "not applicable",
+      "symmetries": ["must preserve domain, degrees of freedom, sources, observables, and the frozen local-bulk boundary scope"],
+      "degrees_of_freedom_claimed": "none independently; an allowed equivalence may not change degrees of freedom",
+      "known_physics_limit": "not applicable as a standalone theory",
+      "existing_calculations_and_reviews": ["four-dimensional Gauss-Bonnet basis reduction appears only as a limited source spot check"],
+      "negative_or_blocking_results": ["global, boundary, and quantum equivalence are not claimed", "every proposed equivalence requires its own proof"],
+      "missing_definitions": ["the pair of representatives and exact transformation for each future probe"],
+      "missing_downstream_inputs": ["candidate-specific equivalence proof"],
+      "master_action_relationship": "cannot promote or select a master action; only audits representative equivalence",
+      "C_k_firewall_relationship": "C_k remains external and cannot be hidden through an equivalence transformation",
+      "current_scientific_eligibility": "EQUIVALENCE_CONTROL_ONLY_NOT_AN_ACTION_CANDIDATE",
+      "viability_or_superiority_judgment_made": false
+    }
+  ],
+  "classification_counts": {
+    "NATIVE_CANDIDATE": 0,
+    "PROVISIONAL_NATIVE_CANDIDATE": 0,
+    "DERIVED_EFFECTIVE_CANDIDATE": 0,
+    "KNOWN_PHYSICS_BASELINE": 1,
+    "REFERENCE_CONTROL": 2,
+    "HISTORICAL_ONLY": 0,
+    "SUPERSEDED": 0,
+    "INSUFFICIENTLY_DEFINED": 4
+  },
+  "definition_status_counts": {
+    "fully_frozen_action_level_representatives": 1,
+    "standard_forms_structurally_identified_but_not_frozen_as_native_actions": 1,
+    "verbal_action_family_umbrellas": 4,
+    "equivalence_controls_without_standalone_actions": 1
+  },
+  "unresolved_meaning_ledger": [
+    {
+      "finding_id": "UM-01",
+      "family_ids": ["F_FR"],
+      "finding": "No specific function f, parameter domain, background, or native coefficient provenance is frozen."
+    },
+    {
+      "finding_id": "UM-02",
+      "family_ids": ["F_EXTRA_FIELD"],
+      "finding": "The additional field type, gauge structure, kinetic law, coupling, and action are unspecified."
+    },
+    {
+      "finding_id": "UM-03",
+      "family_ids": ["F_NONLOCAL"],
+      "finding": "The kernel, form factor, causal prescription, scale, and exact action are unspecified."
+    },
+    {
+      "finding_id": "UM-04",
+      "family_ids": ["F_CONNECTION_TORSION"],
+      "finding": "Independent-connection, Palatini, and torsion subfamilies are not separated or defined by an exact action."
+    },
+    {
+      "finding_id": "UM-05",
+      "family_ids": ["F_EH", "F_FR", "F_QUADRATIC", "F_EXTRA_FIELD", "F_NONLOCAL", "F_CONNECTION_TORSION"],
+      "finding": "No candidate possesses a source-bound native ToE coefficient-origin or positive action-selection principle."
+    },
+    {
+      "finding_id": "UM-06",
+      "family_ids": ["F_EH"],
+      "finding": "The frozen preparation packet records an earlier SHA-256 binding for the Einstein-scalar review path than the current tracked bytes. Current bytes are bound here; historical-byte lineage resolution is deferred to Stage 3."
+    }
+  ],
+  "inventory_boundary": {
+    "family_rows_inventoried": 7,
+    "family_rows_expected": 7,
+    "family_envelope_expanded": false,
+    "families_ranked_or_scored": false,
+    "requirement_compatibility_judgments_made": false,
+    "gravitational_action_selected": false,
+    "native_gravitational_principle_selected": false,
+    "canonical_evidence_promoted": false,
+    "master_action_constructed_or_promoted": false,
+    "new_gravitational_calculation_executed": false,
+    "outside_scope_family_refuted": false,
+    "stage_3_authorized": false,
+    "stage_3_opened": false
+  },
+  "selected_next_target": "reconstruct_toe_gravitational_requirement_and_action_family_lineages_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED",
+  "nonclaim_boundary": [
+    "The inventory does not establish the truth, viability, superiority, or native status of any family.",
+    "Outside-envelope status is a v0 scope classification, not a universal scientific refutation.",
+    "The F_EH row is a known-physics baseline and is not promoted as native ToE gravity.",
+    "The F_QUADRATIC row remains REFERENCE_CONTROL_ONLY with UNRESOLVED_AFTER_BOUNDED_ATTEMPT.",
+    "The four insufficiently defined umbrellas may contain viable theories, but this evidence does not identify an exact representative.",
+    "F_EQUIVALENCE_PROBE is not a standalone gravitational action.",
+    "No canonical evidence, master action, gravitational action, or successor-stage authority is created."
+  ]
+}

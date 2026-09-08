@@ -1,0 +1,131 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_STAGE_1_OPEN_AUTHORITY_20260730_v0",
+  "authorized_batches": [
+    {
+      "batch_id": "batch_01",
+      "scope": "all Git-tracked repository paths not assigned to batches 02, 03, 04, 05, or 08",
+      "source_root_id": "CURRENT_TRACKED_REPOSITORY_REMAINDER"
+    },
+    {
+      "batch_id": "batch_02",
+      "scope": "formal/docs/release and formal/output excluding exact batch-01 current-authority paths",
+      "source_root_id": "FORMAL_OUTPUTS_AND_RELEASE_RECORDS"
+    },
+    {
+      "batch_id": "batch_03",
+      "scope": "formal/python and formal/toe_formal excluding batch-01 current-authority paths and deterministic build/cache outputs",
+      "source_root_id": "PYTHON_AND_LEAN_SCIENTIFIC_SOURCES"
+    },
+    {
+      "batch_id": "batch_04",
+      "scope": "formal/quarantine",
+      "source_root_id": "QUARANTINE_DOSSIERS"
+    },
+    {
+      "batch_id": "batch_05",
+      "scope": "archive excluding archive/ToE_Project, archive/ToE_Project_Starter_2025-09-24, archive/custody_bundles, and deterministic vendor/cache/temp classes",
+      "source_root_id": "EXISTING_ARCHIVE_MONOGRAPHS_AND_NOTES"
+    },
+    {
+      "batch_id": "batch_06",
+      "scope": "archive/ToE_Project",
+      "source_root_id": "LOCAL_ARCHIVE_TOE_PROJECT"
+    },
+    {
+      "batch_id": "batch_07",
+      "scope": "archive/ToE_Project_Starter_2025-09-24",
+      "source_root_id": "LOCAL_ARCHIVE_TOE_PROJECT_STARTER_2025_09_24"
+    },
+    {
+      "batch_id": "batch_08",
+      "scope": "formal/external_evidence and formal/custody",
+      "source_root_id": "EXTERNAL_EVIDENCE_AND_CUSTODY_REFERENCES"
+    }
+  ],
+  "authorized_stage": {
+    "canonical_scope_hash": "be877b7daf4bb24fa5fa9c49c75891394d8bb16ddf6e2658d7e7360fba94da64",
+    "canonical_target": "inventory_toe_repository_wide_native_hypothesis_sources_v0",
+    "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+    "stage_number": 1
+  },
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "custody_and_portability": {
+    "archive_files_are_read_only": true,
+    "git_tracked_identity": "COMMITTED_GIT_BLOB_BYTES",
+    "local_archive_identity": "FRESH_VERIFIED_SHA256_WITHIN_INITIAL_AND_FINAL_ROOT_SNAPSHOTS",
+    "local_only_disclosure": "Source bytes available and hash-bound in the executing workspace may be absent from another checkout; no local-only claim may become canonical without portable custody or an independently auditable dossier.",
+    "metadata_is_cache_hint_only": true,
+    "reddit_excluded": true
+  },
+  "dependency_impact_artifact": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CENSUS_STAGE_1_DEPENDENCY_IMPACT_CHECK_20260730_v0",
+  "file_and_byte_limits": {
+    "maximum_aggregate_discovered_bytes": 68719476736,
+    "maximum_discovered_files": 250000,
+    "maximum_single_file_stream_hashed_bytes": 4294967296,
+    "stage_1_claim_extraction_limit": 0,
+    "stage_1_deep_review_limit": 0,
+    "text_extraction_limits": "FROZEN_PARSER_SPECIFIC_LIMITS_FROM_TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_SCHEMA_V1"
+  },
+  "index_infrastructure": {
+    "index_schema_path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_SCHEMA_V1.json",
+    "index_schema_sha256": "d0aa73c9e2287356115bed179b53503072dd2dd4507dde248097b70f93b21664",
+    "scanner_path": "formal/python/tools/native_hypothesis_census_index_v1.py",
+    "scanner_sha256": "84503bafb33fd7450e2c42302d21be3303481f5eaab62c47c0b17f8d5530b133",
+    "version": "TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_V1"
+  },
+  "parser_and_hostile_content_contract": {
+    "active_content_execution": "DENY",
+    "external_network": "DENY",
+    "filename_normalization_collisions": "PRESERVE_AND_BLOCK_AMBIGUOUS_INTAKE",
+    "office_and_pdf": "CONTENT_NOT_EXTRACTED_METADATA_ONLY",
+    "recursive_archive_expansion": "DENY",
+    "special_files": "METADATA_ONLY_NO_READ",
+    "symlink_junction_reparse_points": "DO_NOT_FOLLOW_AND_BLOCK_ROOT_ESCAPE",
+    "unsupported_formats": "UNSUPPORTED_FORMAT_PRESERVED"
+  },
+  "prohibited_outputs": [
+    "claim extraction or interpretation",
+    "evidence promotion or adoption",
+    "scientific lineage or supersession conclusions",
+    "native hypothesis or frontier selection",
+    "field, representation, master action, seam, observable, or empirical claim",
+    "Stage 2 output",
+    "automatic archive adoption",
+    "repository claim exhaustion claim"
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "required_stage_outputs": [
+    "eight deterministic source and custody batch manifests",
+    "aggregate manifest proving union coverage without overlap or omission",
+    "initial and final source-root snapshot records",
+    "mandatory final content verification",
+    "machine-generated, binary, unsupported, and excluded-file ledger",
+    "metadata-only archive-specific evidence-presence assessment without claim interpretation",
+    "independent result review and validation record",
+    "one immutable CLOSE event"
+  ],
+  "root_snapshot_contract": {
+    "final_rehash_required": true,
+    "material_mutation_blocks_stage": true,
+    "passes": [
+      "INITIAL_SOURCE_ROOT_SCAN",
+      "FINAL_SOURCE_ROOT_SCAN",
+      "MUTATION_COMPARISON"
+    ]
+  },
+  "schema_id": "toe.repository_wide_native_hypothesis_source_census.stage_1_open_authority.v0",
+  "scientific_execution_authorized": "ATOMIC_STAGE_1_OPEN_THEN_SOURCE_AND_CUSTODY_INVENTORY_ONLY",
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_1_OPEN_ONLY",
+  "terminal_outcomes": [
+    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS",
+    "SOURCE_ROOT_SNAPSHOT_STABLE",
+    "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE",
+    "SOURCE_ROOT_UNAVAILABLE",
+    "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED",
+    "CUSTODY_OR_PROVENANCE_BLOCKED",
+    "DETERMINISTIC_INDEX_GENERATION_FAILED"
+  ]
+}

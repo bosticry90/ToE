@@ -1,0 +1,512 @@
+{
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_PREINSTALLATION_CONTROLS_20260730_v0",
+  "authority_boundary": {
+    "archive_scientifically_traversed": false,
+    "claims_extracted": false,
+    "evidence_promoted": false,
+    "index_or_cache_generated": false,
+    "native_hypothesis_selected": false,
+    "next_valid_decision_after_acceptance": "AUTHORIZE_CENSUS_PROGRAM_INSTALLATION",
+    "program_installed": false,
+    "source_classification_performed": false,
+    "stage_1_opened": false
+  },
+  "batch_and_atomic_close_contract": {
+    "aggregate_manifest_binds_each_batch_hash": true,
+    "batch_omission_permitted": false,
+    "batch_overlap_permitted": false,
+    "batch_union_equals_declared_inventory": true,
+    "final_close_commit_contains": [
+      "final_batch_manifests",
+      "aggregate_manifest",
+      "index_schema_and_tool_versions",
+      "source_root_snapshot_records",
+      "stage_result",
+      "independent_review",
+      "validation_record",
+      "immutable_CLOSE_event",
+      "registry_and_authority_transition"
+    ],
+    "intermediate_substantive_batch_commits_permitted": false,
+    "no_batch_is_a_subsidiary_scientific_target": true,
+    "working_cache_status": "LOCAL_REGENERABLE_NONAUTHORITATIVE"
+  },
+  "byte_identity_and_cache_contract": {
+    "cache_never_replaces_final_hash_verification": true,
+    "cache_path": ".toe_cache/native_hypothesis_census_v1.sqlite3",
+    "cache_schema_version": 1,
+    "cache_status": "LOCAL_REGENERABLE_NONAUTHORITATIVE",
+    "cache_transactions_are_atomic": true,
+    "effective_attributes_recorded_separately": true,
+    "historical_index_must_not_be_overwritten": "formal/output/archive_intake_index.json",
+    "local_final_manifest_requires_verified_sha256": true,
+    "local_metadata_is_change_detection_hint_only": true,
+    "new_versioned_index_required": true,
+    "tracked_blob_read_method": "git cat-file blob",
+    "tracked_primary_identity": "COMMITTED_GIT_BLOB_BYTES",
+    "tracked_sha256_cache_key": [
+      "git_object_format",
+      "git_object_id",
+      "hashing_schema_version"
+    ],
+    "worktree_sha256_recorded_separately_when_relevant": true
+  },
+  "canonical_identifier_contract": {
+    "identifiers_may_change_only_by_reviewed_proposal_amendment": true,
+    "mandatory_exit_target": "close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0",
+    "semantic_stages": [
+      {
+        "canonical_target": "inventory_toe_repository_wide_native_hypothesis_sources_v0",
+        "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+        "stage_number": 1
+      },
+      {
+        "canonical_target": "reconstruct_toe_native_hypothesis_source_lineages_v0",
+        "semantic_stage_id": "DEDUPLICATION_AND_LINEAGE_RECONSTRUCTION",
+        "stage_number": 2
+      },
+      {
+        "canonical_target": "extract_and_classify_toe_repository_wide_native_hypothesis_claims_v0",
+        "semantic_stage_id": "NATIVE_CLAIM_EXTRACTION_AND_CLASSIFICATION",
+        "stage_number": 3
+      },
+      {
+        "canonical_target": "reconcile_toe_current_native_hypothesis_evidence_v0",
+        "semantic_stage_id": "CURRENT_HYPOTHESIS_RECONCILIATION",
+        "stage_number": 4
+      },
+      {
+        "canonical_target": "select_toe_native_frontier_after_repository_wide_evidence_census_v0",
+        "semantic_stage_id": "NATIVE_FRONTIER_DECISION",
+        "stage_number": 5
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-30T00:00:00Z",
+  "completion_status_contract": {
+    "bounded_deep_review_status": [
+      "BOUNDED_DEEP_REVIEW_COMPLETE",
+      "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+      "BOUNDED_DEEP_REVIEW_BLOCKED"
+    ],
+    "claim_exhaustion_status": [
+      "REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED"
+    ],
+    "custody_inventory_status": [
+      "CUSTODY_INVENTORY_COMPLETE",
+      "CUSTODY_INVENTORY_COMPLETE_WITH_LOCAL_LIMITATIONS",
+      "CUSTODY_INVENTORY_BLOCKED"
+    ],
+    "declared_root_discovery_status": [
+      "DECLARED_ROOT_METADATA_DISCOVERY_COMPLETE",
+      "DECLARED_ROOT_METADATA_DISCOVERY_INCOMPLETE"
+    ]
+  },
+  "deep_review_selection_contract": {
+    "conflict_allocation": "INCLUDE_BOTH_CONFLICT_ENDPOINTS_BEFORE_LOWER_PRIORITY_SOURCES",
+    "domain_order": [
+      "ONTOLOGY",
+      "PILLARS",
+      "SEAMS",
+      "CCFT",
+      "MASTER_ACTION",
+      "BRIDGE_CONDITIONS",
+      "GRAVITY",
+      "MATTER",
+      "QUANTUM_STRUCTURE",
+      "EMERGENCE",
+      "THERMODYNAMICS",
+      "SCALE_HIERARCHY",
+      "OBSERVABLES",
+      "PREDICTIONS",
+      "FALSIFICATION"
+    ],
+    "manual_preference_permitted": false,
+    "maximum_files_per_domain": 64,
+    "maximum_files_per_lineage": 8,
+    "minimum_slots_per_nonempty_domain_before_global_fill": 16,
+    "overflow_population_and_unreviewed_counts_recorded": true,
+    "overflow_sampling": "ROUND_ROBIN_OVER_DOMAIN_BY_SOURCE_CLASS_STRATA_SORTED_BY_FROZEN_DOMAIN_AND_SOURCE_CLASS_ORDER",
+    "primary_domain_assignment": "FIRST_MATCH_IN_FROZEN_DOMAIN_ORDER_AFTER_SOURCE_BOUND_TAGGING",
+    "priority_order": [
+      "CURRENT_CANONICAL_PRIMARY_SOURCES",
+      "ARCHIVED_PRIMARY_LINEAGE_HEADS",
+      "EARLIEST_PRIMARY_SOURCE_PER_LINEAGE",
+      "UNIQUE_DEFINITIONS_EQUATIONS_OR_PREDICTIONS",
+      "SOURCES_REPRESENTING_KNOWN_CONFLICTS",
+      "DERIVED_SUMMARY_WHEN_PRIMARY_UNAVAILABLE",
+      "DETERMINISTIC_STRATIFIED_OVERFLOW_SAMPLE"
+    ],
+    "tie_breaking_order": [
+      "source_root_id",
+      "normalized_relative_path_utf8_bytes",
+      "sha256"
+    ]
+  },
+  "duplicate_contract": {
+    "every_duplicate_path_remains_in_custody_inventory": true,
+    "near_duplicate_similarity_is_nonauthoritative": true,
+    "scientific_lineage_and_supersession_are_stage_2_only": true,
+    "stage_1_classes": [
+      "EXACT_CONTENT_DUPLICATE",
+      "SUSPECTED_NEAR_DUPLICATE",
+      "DERIVED_SUMMARY_CANDIDATE",
+      "PENDING_LINEAGE_REVIEW"
+    ],
+    "stage_1_exact_hash_grouping_is_candidate_only": true
+  },
+  "index_schema": {
+    "file_record_fields": [
+      "source_root_id",
+      "custody_relative_path",
+      "git_or_filesystem_status",
+      "git_object_id",
+      "committed_blob_sha256",
+      "worktree_sha256",
+      "local_verified_sha256",
+      "file_size",
+      "date_metadata_with_kind_and_confidence",
+      "file_type",
+      "content_fingerprint",
+      "duplicate_group_candidate",
+      "source_classification",
+      "content_extraction_status",
+      "domain_tags",
+      "source_lineage",
+      "provenance_status",
+      "licensing_or_redistribution_concern",
+      "custody_class",
+      "eligibility_for_deeper_review",
+      "exclusion_reason",
+      "source_snapshot_id",
+      "indexer_schema_version",
+      "parser_contract_version"
+    ],
+    "generated_index_path_pattern": "formal/output/native_hypothesis_census_v1/{stage_id}/{batch_id}.json",
+    "index_id": "TOE_NATIVE_HYPOTHESIS_CENSUS_INDEX_V1",
+    "schema_version": 1,
+    "source_snapshot_fields": [
+      "source_root_id",
+      "initial_snapshot_tuple_hash",
+      "final_snapshot_tuple_hash",
+      "stability_status"
+    ]
+  },
+  "parser_contract": {
+    "archived_active_content_is_untrusted": true,
+    "compressed_or_decompression_bombs": "REJECT_AND_PRESERVE_METADATA",
+    "contract_version": "v1",
+    "execution_enforcement_required_before_stage_1_open": true,
+    "external_url_fetch": "DENY",
+    "filename_normalization_collision_policy": "PRESERVE_RAW_NAMES_RECORD_COLLISION_AND_BLOCK_AMBIGUOUS_INTAKE",
+    "handlers": [
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "md",
+          "txt",
+          "py",
+          "lean",
+          "tex",
+          "rst",
+          "ps1",
+          "sh",
+          "cfg",
+          "ini"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 4194304,
+        "max_file_bytes": 16777216,
+        "maximum_nesting_or_recursion_depth": 32,
+        "maximum_page_or_worksheet_count": null,
+        "maximum_record_or_cell_count": null,
+        "memory_limit_bytes": 536870912,
+        "network_policy": "DENY",
+        "parser_id": "PASSIVE_TEXT_SOURCE_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 30
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "json",
+          "yaml",
+          "yml",
+          "toml"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 4194304,
+        "max_file_bytes": 16777216,
+        "maximum_nesting_or_recursion_depth": 64,
+        "maximum_page_or_worksheet_count": null,
+        "maximum_record_or_cell_count": null,
+        "memory_limit_bytes": 536870912,
+        "network_policy": "DENY",
+        "parser_id": "PASSIVE_STRUCTURED_TEXT_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 30
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "csv",
+          "tsv"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 8388608,
+        "max_file_bytes": 268435456,
+        "maximum_nesting_or_recursion_depth": null,
+        "maximum_page_or_worksheet_count": null,
+        "maximum_record_or_cell_count": 2000000,
+        "memory_limit_bytes": 1073741824,
+        "network_policy": "DENY",
+        "parser_id": "PASSIVE_TABULAR_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 60
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "pdf"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 8388608,
+        "max_file_bytes": 134217728,
+        "maximum_nesting_or_recursion_depth": null,
+        "maximum_page_or_worksheet_count": 1000,
+        "maximum_record_or_cell_count": null,
+        "memory_limit_bytes": 1073741824,
+        "network_policy": "DENY",
+        "parser_id": "PASSIVE_PDF_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 120
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "docx",
+          "xlsx",
+          "pptx",
+          "odt",
+          "ods",
+          "odp"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 8388608,
+        "max_file_bytes": 134217728,
+        "maximum_nesting_or_recursion_depth": null,
+        "maximum_page_or_worksheet_count": 1000,
+        "maximum_record_or_cell_count": null,
+        "memory_limit_bytes": 1073741824,
+        "network_policy": "DENY",
+        "parser_id": "PASSIVE_OFFICE_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 120
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "ipynb"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 8388608,
+        "max_file_bytes": 67108864,
+        "maximum_nesting_or_recursion_depth": 64,
+        "maximum_page_or_worksheet_count": null,
+        "maximum_record_or_cell_count": 10000,
+        "memory_limit_bytes": 1073741824,
+        "network_policy": "DENY",
+        "parser_id": "PASSIVE_NOTEBOOK_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 60
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "png",
+          "jpg",
+          "jpeg",
+          "gif",
+          "svg",
+          "wav",
+          "mp3",
+          "mp4"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 0,
+        "max_file_bytes": 1073741824,
+        "maximum_nesting_or_recursion_depth": null,
+        "maximum_page_or_worksheet_count": null,
+        "maximum_record_or_cell_count": null,
+        "memory_limit_bytes": 536870912,
+        "network_policy": "DENY",
+        "parser_id": "METADATA_ONLY_MEDIA_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 30
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "npy",
+          "npz",
+          "bin",
+          "exe",
+          "dll",
+          "whl"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 0,
+        "max_file_bytes": 1073741824,
+        "maximum_nesting_or_recursion_depth": null,
+        "maximum_page_or_worksheet_count": null,
+        "maximum_record_or_cell_count": null,
+        "memory_limit_bytes": 536870912,
+        "network_policy": "DENY",
+        "parser_id": "METADATA_ONLY_BINARY_DATA_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 30
+      },
+      {
+        "embedded_object_policy": "NEVER_ACTIVATE_OR_EXTRACT_RECURSIVELY",
+        "failure_classification": "PARSER_FAILURE_PRESERVED",
+        "formats": [
+          "zip",
+          "tar",
+          "gz",
+          "7z",
+          "rar"
+        ],
+        "macro_policy": "DISABLED",
+        "max_extracted_text_bytes": 0,
+        "max_file_bytes": 1073741824,
+        "maximum_nesting_or_recursion_depth": 0,
+        "maximum_page_or_worksheet_count": null,
+        "maximum_record_or_cell_count": null,
+        "memory_limit_bytes": 536870912,
+        "network_policy": "DENY",
+        "parser_id": "CONTAINER_METADATA_ONLY_V1",
+        "parser_version": "v1",
+        "timeout_seconds": 30
+      }
+    ],
+    "network_access": "DENY",
+    "never_execute_import_compile_or_activate_archived_content": true,
+    "parser_failures_separate_from_irrelevant_counts": true,
+    "path_traversal_policy": "REJECT",
+    "recursive_archive_expansion": "DENY",
+    "special_file_policy": "DEVICE_PIPE_SOCKET_OR_OTHER_SPECIAL_OBJECT_METADATA_ONLY",
+    "symlink_junction_reparse_policy": "DO_NOT_FOLLOW_RECORD_METADATA_AND_BLOCK_ANY_ROOT_ESCAPE",
+    "unsupported_file_status": "UNSUPPORTED_FORMAT_PRESERVED",
+    "unsupported_is_not_irrelevant": true
+  },
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "promotion_contract": {
+    "census_may_emit": "PROMOTION_CANDIDATE_DOSSIER",
+    "census_may_promote_claims": false,
+    "promotion_requires_separate_post_census_authority": true
+  },
+  "repository_exclusion_contract": {
+    "broad_archive_ignore_prohibited": true,
+    "curated_dossier_root": "formal/docs/release/native_hypothesis_evidence_dossiers/",
+    "curated_dossiers_must_not_be_ignored": true,
+    "ignore_rule_removal_requires_maintenance_authority": true,
+    "tracked_gitignore_rules": [
+      "/archive/ToE_Project/",
+      "/archive/ToE_Project_Starter_2025-09-24/",
+      "/archive/custody_bundles/",
+      "/.toe_cache/native_hypothesis_census_v1.sqlite3"
+    ]
+  },
+  "schema_id": "toe.repository_wide_native_hypothesis_evidence_census.preinstallation_controls.v0",
+  "source_root_snapshot_contract": {
+    "absolute_paths_in_snapshot_hash": false,
+    "excluded_cache_mutation_exception": "ALLOWED_ONLY_WHEN_OUTSIDE_AUTHORITATIVE_INVENTORY_AND_QUANTIFIED_IN_EXCLUSION_LEDGER",
+    "material_mutation_blocks_stage": true,
+    "mutated_outcome": "SOURCE_ROOT_MUTATED_DURING_CENSUS",
+    "passes": [
+      "INITIAL_SOURCE_ROOT_SCAN",
+      "FINAL_SOURCE_ROOT_SCAN",
+      "MUTATION_COMPARISON"
+    ],
+    "recorded_fields": [
+      "source_root_id",
+      "normalized_root_relative_path_inventory",
+      "initial_file_count",
+      "initial_aggregate_byte_count",
+      "final_file_count",
+      "final_aggregate_byte_count",
+      "initial_snapshot_tuple_hash",
+      "final_snapshot_tuple_hash",
+      "files_added_during_execution",
+      "files_removed_during_execution",
+      "files_changed_during_execution"
+    ],
+    "snapshot_hash": "SHA-256",
+    "snapshot_serialization": "RFC8785_AFTER_DECLARED_SET_NORMALIZATION",
+    "stable_outcome": "SOURCE_ROOT_SNAPSHOT_STABLE",
+    "timestamps_in_snapshot_hash": false,
+    "tuple_fields": [
+      "normalized_relative_path",
+      "file_type",
+      "size",
+      "sha256",
+      "custody_classification"
+    ],
+    "tuple_sort": "UTF8_BYTES_OF_NORMALIZED_RELATIVE_PATH"
+  },
+  "status": "PREINSTALLATION_CONTROLS_FROZEN_NOT_EXECUTED",
+  "terminal_state_map": {
+    "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW": "PASS",
+    "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED": "BLOCKED",
+    "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE": "PASS",
+    "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS": "PASS",
+    "CUSTODY_OR_PROVENANCE_BLOCKED": "BLOCKED",
+    "DETERMINISTIC_INDEX_GENERATION_FAILED": "FAILED",
+    "EVIDENCE_FOUND_BUT_RECONCILIATION_BLOCKED": "BLOCKED",
+    "NATIVE_CLAIM_EXTRACTION_BLOCKED": "BLOCKED",
+    "NATIVE_CLAIM_EXTRACTION_COMPLETE": "PASS",
+    "NATIVE_CLAIM_EXTRACTION_COMPLETE_WITH_CONFLICTS": "PASS",
+    "NATIVE_HYPOTHESIS_GRAPH_AND_FRONTIER_READY": "PASS",
+    "NO_TEST_READY_NATIVE_HYPOTHESIS_FOUND": "PASS",
+    "REPOSITORY_WIDE_EVIDENCE_CENSUS_INCOMPLETE": "BLOCKED",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE": "PASS",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS": "PASS",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS": "PASS",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_INCOMPLETE": "BLOCKED",
+    "SOURCE_DISCOVERY_OR_PROVENANCE_BLOCKED": "BLOCKED",
+    "SOURCE_LINEAGES_RECONSTRUCTED": "PASS",
+    "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES": "PASS",
+    "SOURCE_LINEAGE_RECONSTRUCTION_BLOCKED": "BLOCKED",
+    "SOURCE_ROOT_MUTATED_DURING_CENSUS": "BLOCKED",
+    "SOURCE_ROOT_SNAPSHOT_STABLE": "PASS",
+    "SOURCE_ROOT_UNAVAILABLE": "BLOCKED"
+  },
+  "terminal_state_qualifiers": {
+    "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW": "PASS_REQUIRES_DETERMINISTIC_SELECTION_OVERFLOW_COUNTS_AND_REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED",
+    "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_GAPS": "PASS_ONLY_WHEN_EVERY_DECLARED_ROOT_IS_INVENTORIED_AND_ALL_GAPS_ARE_QUANTIFIED_NONMATERIAL_LOCAL_PORTABILITY_OR_DETERMINISTIC_EXCLUSION_LIMITATIONS",
+    "SOURCE_LINEAGES_RECONSTRUCTED_WITH_AMBIGUITIES": "PASS_ONLY_WHEN_AMBIGUITIES_ARE_WITHIN_FROZEN_BUDGET_AND_PRESERVED_WITHOUT_SUPERSESSION_OR_AUTHORITY_INFERENCE"
+  },
+  "workload_budgets": {
+    "budget_scope": "ELIGIBLE_CORPUS_AFTER_DETERMINISTIC_VENDOR_CACHE_TEMP_AND_UNSUPPORTED_ACTIVE_CONTENT_SEGREGATION",
+    "maximum_claims_per_file": 32,
+    "maximum_eligible_deep_review_bytes": 1073741824,
+    "maximum_eligible_deep_review_files": 640,
+    "maximum_extracted_claims": 4096,
+    "maximum_files_per_hypothesis_domain": 64,
+    "maximum_files_per_source_lineage": 8,
+    "maximum_parser_failures": 128,
+    "maximum_total_extracted_text_bytes": 268435456,
+    "maximum_unresolved_lineage_relationships": 512,
+    "maximum_unsupported_format_files": 1024,
+    "overflow_is_not_repository_claim_exhaustion": true,
+    "overflow_terminal_outcome": "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_id": "REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_PACKET_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T23:54:37Z",
+  "review_basis": "INDEPENDENT_LINEAGE_INVENTORY_SUBSTITUTION_COMPARABILITY_CONTAINMENT_AND_NONMUTATION_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_POST_HISTORICAL_AGGREGATE_DECOMPOSITION_BASELINE_REASSESSMENT_PACKET_20260722_v0.json",
+    "sha256": "5c1264a245886f10f0df83ee3d1130f75a6d260f447cee0aefe5000628391671"
+  },
+  "checks": {
+    "accepted_aggregate_implementation_result_and_commit_bound": true,
+    "prior_frozen_inventory_hash_and_13756_count_bound": true,
+    "exactly_two_reviewed_node_id_substitutions_declared": true,
+    "other_13754_node_ids_and_order_required_identical": true,
+    "replacement_ids_canonicalized_for_prior_status_comparison": true,
+    "unrelated_new_collection_ids_excluded_from_execution_baseline": true,
+    "prior_530_outcome_entries_and_family_summary_bound": true,
+    "original_222_missing_and_185_fixture_candidate_questions_required": true,
+    "thirteen_currency_outcomes_required_separate": true,
+    "tracked_source_cleanliness_guard_required": true,
+    "all_outputs_externalized": true,
+    "test_source_report_fixture_lean_scientific_registry_and_v2_mutations_forbidden": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

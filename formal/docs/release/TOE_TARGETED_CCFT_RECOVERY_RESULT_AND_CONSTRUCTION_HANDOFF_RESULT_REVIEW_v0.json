@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-08-02T02:10:31Z",
+  "checks": {
+    "attempt_four_open_event_is_bound": true,
+    "construction_handoff_is_named_but_not_authorized": true,
+    "contract_summary_closes_all_18_checklist_items": true,
+    "exactly_one_positive_program_outcome_is_selected": true,
+    "four_exact_contracts_materially_exceed_threshold": true,
+    "historical_recovery_is_complete_without_exhaustion_claim": true,
+    "immutable_stage_three_result_is_bound": true,
+    "mandatory_exit_is_the_only_immediate_successor": true,
+    "no_branch_or_combined_model_is_selected": true,
+    "no_model_theorem_postulate_promotion_or_physical_claim_occurred": true,
+    "postulate_reduction_matches_the_four_stage_three_contracts": true,
+    "program_stage_target_and_scope_match_manifest": true,
+    "terminal_lifecycle_result_passes": true
+  },
+  "decision": "ACCEPT_POSITIVE_TARGETED_RECOVERY_END_HISTORICAL_RECOVERY_SELECT_MANDATORY_EXIT",
+  "failed_checks": [],
+  "program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF_RESULT_v0.json",
+    "sha256": "79acfadda56d2ef75ad3c061309c0bc5dbbf48c2366aa1f946ef3bd3208b4782"
+  },
+  "schema_id": "toe.targeted_ccft.recovery_handoff.result_review.v0",
+  "scientific_interpretation": {
+    "ccft_v0_model_established": false,
+    "construction_preparation_authorized": false,
+    "cp_nlse_or_lcrd_v3_selected": false,
+    "exact_contracts_recovered": 4,
+    "historical_recovery_complete": true,
+    "repository_claim_exhaustion_established": false,
+    "theorem_discovery_authorized": false
+  },
+  "semantic_stage_id": "TARGETED_CCFT_RECOVERY_RESULT_AND_CONSTRUCTION_HANDOFF",
+  "status": "PASS"
+}

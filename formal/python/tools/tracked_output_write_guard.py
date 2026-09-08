@@ -29,22 +29,13 @@ def _is_tracked_by_git(path: Path, repo_root: Path) -> bool:
     return completed.returncode == 0
 
 
-def _is_formal_output(path: Path, repo_root: Path) -> bool:
-    try:
-        rel = _repo_relative(path, repo_root)
-    except ValueError:
-        return False
-    parts = rel.parts
-    return len(parts) >= 2 and parts[0] == "formal" and parts[1] == "output"
-
-
 def tracked_output_writes_allowed() -> bool:
     return os.environ.get(TRACKED_OUTPUT_WRITE_ENV_VAR) == TRACKED_OUTPUT_WRITE_ENV_VALUE
 
 
 def assert_tracked_output_write_allowed(path: Path, *, repo_root: Path) -> None:
-    """Fail closed before rewriting tracked canonical output artifacts."""
-    if not (_is_formal_output(path, repo_root) and _is_tracked_by_git(path, repo_root)):
+    """Fail closed before rewriting any tracked repository source artifact."""
+    if not _is_tracked_by_git(path, repo_root):
         return
 
     if tracked_output_writes_allowed():
@@ -52,7 +43,7 @@ def assert_tracked_output_write_allowed(path: Path, *, repo_root: Path) -> None:
 
     rel = _repo_relative(path, repo_root).as_posix()
     raise RuntimeError(
-        "Refusing to write tracked canonical output without explicit "
+        "Refusing to write tracked canonical output or repository source without explicit "
         f"{TRACKED_OUTPUT_WRITE_ENV_VAR}={TRACKED_OUTPUT_WRITE_ENV_VALUE}: {rel}"
     )
 

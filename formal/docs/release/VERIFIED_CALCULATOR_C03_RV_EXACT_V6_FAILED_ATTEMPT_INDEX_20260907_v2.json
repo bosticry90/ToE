@@ -1,0 +1,16 @@
+{
+  "schema_id": "VerifiedCalculatorC03RVExactV6FailedAttemptIndexV2",
+  "attempts": [
+    {"tested_commit": "7ac9fa118b15b5e48dc362d86eedcb9e943a3c86", "stage": "DEPENDENCY_CLOSURE_VALIDATION", "disposition": "FAIL", "failure": "DEPENDENCY_CLOSURE_NARROWED: comparator imported toe as an unresolved external package", "bundle_frozen": false},
+    {"tested_commit": "b7834fbf34734b687e4ea48504251f5056f85f96", "stage": "D02_ACCEPTANCE_EVIDENCE_GENERATION", "disposition": "FAIL", "failure": "CandidatePacketV1.from_dict invoked with an obsolete extra argument", "bundle_frozen": true, "bundle_id": "80435143b3e81bddf65d214659ba83eea97eb10724d3d9c7d954e56c991fa2bd"},
+    {"tested_commit": "735db677f318218aaa2853460c9ed73b31681795", "stage": "CLEAN_CALCULATOR_TEST_CLOSURE", "disposition": "FAIL", "failure": "Missing tracked Pass-0280 provenance_dag_contract.json", "bundle_frozen": true, "bundle_id": "62f588661906a576eaf574bc670957b3b1cfaa9eea67879c64cd8f6128445e2e", "attempt_evidence": "formal/docs/release/verified_calculator/c03_rv_exact_v6_attempts/VPC_C03_RV_EXACT_V6_735DB677_WINDOWS_FINAL"},
+    {"tested_commit": "9bb553aec0e2af3ac1d0fd2d46d5b58b02632517", "stage": "CLEAN_CALCULATOR_TEST_CLOSURE", "disposition": "FAIL", "failure": "Missing tracked effective_normalization_dag_contract_v1.json and frozen-v1 validator lacked explicit census compatibility", "bundle_frozen": true, "bundle_id": "f7acc25f08057975c0bdcb765f9f7dd6885a05d3e87a005e53cd4eacc0c6072e", "attempt_evidence": "formal/docs/release/verified_calculator/c03_rv_exact_v6_attempts/VPC_C03_RV_EXACT_V6_9BB553AE_WINDOWS_FINAL2"},
+    {"tested_commit": "c796ab39282bb68c4ea2e31b1d07896dacd3c92d", "stage": "CLEAN_CHECKOUT_AUDIT", "disposition": "SUPERSEDED_NOT_CANONICAL", "failure": "The otherwise passing FINAL3 checkout contained untracked evidence from prior attempts, so it did not literally satisfy the frozen clean-checkout instruction", "bundle_frozen": true, "bundle_id": "932b18cad3e9de986dfa543017a7d62062cde13e441d61a008e7d028d9a4a1b4", "attempt_evidence": "formal/docs/release/verified_calculator/c03_rv_exact_v6_attempts/VPC_C03_RV_EXACT_V6_C796AB39_WINDOWS_FINAL3"},
+    {"tested_commit": "c796ab39282bb68c4ea2e31b1d07896dacd3c92d", "stage": "FRESH_LF_CHECKOUT_TEST_CLOSURE", "disposition": "FAIL", "failure": "Hash-bound historical C03 source files were line-ending transformed on Windows and no longer matched their committed Git-blob identities", "bundle_frozen": false, "attempt_evidence": "formal/docs/release/verified_calculator/c03_rv_exact_v6_attempts/VPC_C03_RV_EXACT_V6_C796AB39_WINDOWS_CLEAN_FINAL4"}
+  ],
+  "superseding_local_windows_attempt": "VPC_C03_RV_EXACT_V6_3307E355_WINDOWS_CLEAN_FINAL5",
+  "historical_attempts_preserved_not_relabelled": true,
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

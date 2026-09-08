@@ -1,0 +1,43 @@
+{
+  "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_BOUNDED_PROGRAM_PREPARATION_VALIDATION_v0",
+  "captured_at_utc": "2026-08-02T02:58:13Z",
+  "deterministic_generation": {
+    "module_count": 1411,
+    "scope": "committed",
+    "status": "PASS"
+  },
+  "director_packet_sha256": "28b0827797274df7307b59da8641778ff9e5da2ef72bc358d34a4b4a9fff731d",
+  "focused_python": {
+    "governance_passed": 38,
+    "preparation_scoped_passed": 11,
+    "status": "PASS"
+  },
+  "full_lean": {
+    "job_count": 8877,
+    "module_count": 1411,
+    "status": "PASS"
+  },
+  "governance": {
+    "registry_projection": "PASS",
+    "status": "PASS"
+  },
+  "repository": {
+    "exhaustive_python": "NOT_CLAIMED",
+    "reddit": "UNTRACKED_AND_UNTOUCHED",
+    "tracked_checkout_after_commit": "REQUIRED_POST_COMMIT"
+  },
+  "result_sha256": "f495413aa44b6ef2d4f569e8d182a4909ed7b8f909ccd8425ee6b780b9e4654b",
+  "review_sha256": "0a5604bd466bbbed4be38aa9701a5866551a6e291cc36634f233c31ed1b8ac5d",
+  "schema_id": "toe.ccft_v0.theory_construction.bounded_program_preparation_validation.v0",
+  "scientific_boundary": {
+    "archive_recovery_reopened": false,
+    "branch_selected": false,
+    "ccft_v0_constructed": false,
+    "new_postulates_created": 0,
+    "physical_interpretation_established": false,
+    "program_installed": false,
+    "scientific_attempts": 0,
+    "theorem_or_counterexample_attempted": false
+  },
+  "status": "PROPOSAL_PREPARATION_VALIDATED_READY_FOR_COMMIT"
+}

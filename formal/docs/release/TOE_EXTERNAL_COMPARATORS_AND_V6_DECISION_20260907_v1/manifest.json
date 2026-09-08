@@ -1,0 +1,79 @@
+{
+  "schema_id": "ToEComparatorAndDecisionDocumentationIndexV1",
+  "status": "DOCUMENTATION_ONLY",
+  "as_of": "2026-09-07",
+  "authority_effect": "NONE",
+  "decision_adopted": false,
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false,
+  "ccft_promotion": false,
+  "toe_promotion": false,
+  "closed_registry_modified": false,
+  "vpc_engine_modified": false,
+  "comparators": [
+    {
+      "id": "QEXP_GRAVITATIONAL_LAPSE_COMPARATOR",
+      "file": "qexp_lapse.md",
+      "implementation": "SPEC_ONLY_NOT_IMPLEMENTED",
+      "verification_class": "NONE",
+      "native_authority_effect": "NONE"
+    },
+    {
+      "id": "NONLINEAR_PLASMA_DARK_PHOTON_CONSTRAINT_COMPARATOR",
+      "file": "dark_photon.md",
+      "implementation": "SPEC_ONLY_NOT_IMPLEMENTED",
+      "verification_class": "NONE",
+      "native_authority_effect": "NONE"
+    },
+    {
+      "id": "QUANTUM_FREE_FALL_EQUIVALENCE_COMPARATOR",
+      "existing_recovery_id": "QG_QEP_FREE_FALL_PHASE_GOLDEN_CONTROL_v1",
+      "file": "quantum_free_fall.md",
+      "implementation": "SPEC_ONLY_NOT_IMPLEMENTED",
+      "verification_class": "NONE",
+      "native_authority_effect": "NONE"
+    },
+    {
+      "id": "ELECTRICALLY_SWITCHABLE_CHIRAL_PHONON_COMPARATOR",
+      "file": "chiral_phonons.md",
+      "implementation": "SPEC_ONLY_NOT_IMPLEMENTED",
+      "verification_class": "NONE",
+      "native_authority_effect": "NONE"
+    }
+  ],
+  "astra": {
+    "model": "gpt-6-astra",
+    "operating_brief": "astra_operating_model.md",
+    "reentry_task": "ccft_reentry_task.md",
+    "task_launched": false,
+    "api_client_implemented": false,
+    "official_sources_fetched": [
+      "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "https://developers.openai.com/api/docs/guides/latest-model",
+      "https://developers.openai.com/api/docs/changelog"
+    ],
+    "excluded_unverified_marketing_claims": [
+      "98_PERCENT_FRONTIERMATH_TIER_4",
+      "CRITICAL_CYBERSECURITY_CLASSIFICATION"
+    ]
+  },
+  "decision": {
+    "file": "v6_decision_draft.md",
+    "scope": "v6_scope.json",
+    "status": "DRAFT_NOT_ADOPTED",
+    "recommended_status_if_separately_adopted": "C03_RV_EXACT_COMPUTATION_REQUALIFIED",
+    "adjudicator": null,
+    "adopted_at": null
+  },
+  "archive": {
+    "file": "evidence/linux-34167712902-1.zip",
+    "hash_domain": "BINARY_FILE_BYTES_SHA256",
+    "sha256": "5e3244fd2a0745b0f62e7a1d03f0f30630a92e045f2f62ba8974396fdf449f39",
+    "size_bytes": 700548,
+    "original_github_run": 34167712902,
+    "original_github_artifact": 10035287072,
+    "original_remote_expires_at": "2026-12-06T22:44:52Z",
+    "copy_is_new_execution": false
+  }
+}

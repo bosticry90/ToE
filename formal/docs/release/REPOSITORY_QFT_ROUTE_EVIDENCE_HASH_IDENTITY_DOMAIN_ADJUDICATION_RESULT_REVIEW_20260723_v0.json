@@ -1,0 +1,99 @@
+{
+  "schema_id": "REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260723_v0",
+  "verdict": "ACCEPT_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_PROVENANCE_BLOCKED_NO_REPAIR_NO_SUCCESSOR_AUTHORITY",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_20260723_v0.json",
+    "sha256": "1b76ceae7eb8e8af1f0f80963fc5c020ecd0bda421654db2bb1519a91b61ea2e"
+  },
+  "review_checkout": {
+    "commit": "96b6e27eb998ae58c35f2b2558932b64693b1a1b",
+    "detached": true,
+    "clean": true
+  },
+  "accepted_consumer_mapping": {
+    "outcomes": 67,
+    "unique_nodeids": 67,
+    "v0_test_file_consumers": 28,
+    "v1_test_file_consumers": 39,
+    "shared_v0_loader": true,
+    "v1_transitively_uses_v0_loader": true
+  },
+  "accepted_root_correction": {
+    "prior_root_id": "QFT_ROUTE_EVIDENCE_HASH_DRIFT",
+    "qft_pin_current": true,
+    "single_qft_artifact_root": false,
+    "corrected_root": "ONE_SHARED_ROUTE_EVIDENCE_LOADER_WITH_FOUR_SEQUENTIALLY_MASKED_IDENTITY_SUBROOTS",
+    "causal_subroots": 4
+  },
+  "accepted_stale_sequence": [
+    "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+    "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+    "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json"
+  ],
+  "accepted_identity_domain_finding": {
+    "route_identities": 9,
+    "crlf_checkout_pins_at_capture": 7,
+    "git_blob_or_lf_pin_at_capture": 1,
+    "unreconstructable_pin_at_capture": 1,
+    "identity_table_was_coherent": false,
+    "em_pin_matches_reachable_git_blob_lf_or_crlf": false
+  },
+  "accepted_identity_dispositions": {
+    "REMOVE_DEPENDENCY": 0,
+    "DEMOTE_TO_NONBLOCKING_PROVENANCE": 0,
+    "RETAIN_AS_GIT_BLOB_IDENTITY": 7,
+    "RETAIN_AS_CANONICAL_ARTIFACT_IDENTITY": 1,
+    "RETAIN_AS_EXPLICIT_GENERATED_EVIDENCE_IDENTITY": 0,
+    "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW": 1
+  },
+  "accepted_consumer_disposition": {
+    "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW": 67,
+    "reason": "The shared bundle contains an EM pin absent from every reachable Git version, so rebinding any consumer before resolving EM provenance could manufacture authority."
+  },
+  "latent_dependency_review": {
+    "four_in_memory_substitutions_exhaust_v0_loader_mismatches": true,
+    "v1_has_additional_latent_mismatch": false,
+    "in_memory_diagnostic_restored_all_values": true,
+    "files_modified": 0
+  },
+  "scope_review": {
+    "changed_paths_from_accepted_base_through_result": 5,
+    "governance_records_only": true,
+    "hashes_modified": 0,
+    "tests_modified": 0,
+    "tools_modified": 0,
+    "artifacts_regenerated": 0,
+    "scientific_content_changed": 0,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "repair_performed": false
+  },
+  "custody_review": {
+    "validation_checkout_clean": true,
+    "review_checkout_clean": true,
+    "unexpected_untracked_source": 0,
+    "dirty_main_entries": 629,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_regular_files_rehashed": 626,
+    "dirty_main_missing_paths_confirmed": 3,
+    "dirty_main_exact": true
+  },
+  "external_review_evidence": {
+    "path": "QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_INDEPENDENT_REVIEW_v0.json",
+    "sha256": "1f21806acaa4d8497b9849021cc83b30312d2a7c07320706b125bdbf4daaee77",
+    "review_script": "independent_review_qft_route_identity_adjudication_v0.py",
+    "review_script_sha256": "46be66e76e1a384a2de6baad3b069d66c559a2a5660e54484e6fb437732adb4d"
+  },
+  "overall_disposition": "BLOCK_FOR_AUTHORITY_OR_PROVENANCE_REVIEW",
+  "repair_authorized": false,
+  "possible_fresh_selector_not_authorized_here": "AUTHORIZE_BOUNDED_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW",
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "successor_authority": "NONE",
+  "captured_at_utc": "2026-07-23T03:04:39Z"
+}

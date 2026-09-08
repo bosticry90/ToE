@@ -1,0 +1,317 @@
+{
+  "schema_id": "RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v1",
+  "recovery_start_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+  "base_contract": {
+    "path": "formal/docs/release/RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v0.json",
+    "sha256": "747127512f8a28f868ef8548203de0fbc212e6d0d921c22127874b05167380bf",
+    "accepted_repair_count": 8
+  },
+  "proposed_base": {
+    "commit": "f74ce9ce93f96fb3077acfddd2839f7a41bf12a9",
+    "tree": "a1d00b390bb73a61a802ab1bf71765ef7603ef21"
+  },
+  "guard_classes": [
+    "PROTECTED_INVARIANT_GUARD",
+    "HISTORICAL_SNAPSHOT_GUARD",
+    "SUPERSEDED_GUARD_WITH_ACCEPTED_REPLACEMENT"
+  ],
+  "accepted_repairs": [
+    {
+      "cycle_id": "RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS",
+      "authorization_commit": "49279f066ec58273d1e0b4bdcaaa1eda050bdaaa",
+      "implementation_commits": [
+        {
+          "commit": "91f7d3c3c0b1ed0814a95962c2397fd1e9196e85",
+          "tree": "a04c1c6dda56b25d3b4308841cf71ea3edf642eb"
+        }
+      ],
+      "accepted_commit": "49e9216ec4727ccd0f421bf59392175e3a036d7c",
+      "result_path": "formal/docs/release/REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_20260725_v0.json",
+      "result_sha256": "676309abd80042cd61d5354ff2d048e06abc294e043d8454fbc5eb30c9222b3c",
+      "review_path": "formal/docs/release/REPOSITORY_RECOVERY_BASE_ACCEPTED_LINEAGE_COMPLETENESS_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "57f81a01cd7c7b39a700c04f92d9c2b02393b60d94ee44d39bc241c6468eb38f",
+      "result_binding_mode": "ORIGINAL_RESULT_EXPLICIT",
+      "protected_invariant": "The accepted recovery base contains every earlier accepted implementation and preserves its protected invariants.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_recovery_accepted_lineage_completeness.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [
+        "RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v0"
+      ],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR",
+      "authorization_commit": "2250bea6bddd6ce9ba41579dfe5ae2a62a86ab44",
+      "implementation_commits": [
+        {
+          "commit": "2250bea6bddd6ce9ba41579dfe5ae2a62a86ab44",
+          "tree": "6985aa306c8162cecd2678df83711ea953c639cd"
+        },
+        {
+          "commit": "76eb5aa107d9e16efa08128461d9e6a290771575",
+          "tree": "59dc304e9ed612a3075ad6b0e2a8fa60a90f8766"
+        }
+      ],
+      "accepted_commit": "cbed4a31e66509797e6712d53f3d3993eb9a7cff",
+      "result_path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_RESULT_20260725_v0.json",
+      "result_sha256": "074f406d423e6f2aab04cc46ca9c9e24314f0272f257f20951ac076f5396e640",
+      "review_path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "2a059d977278b8541f1499651eb55f736215c8dab5aa376826f10e8b09a37e68",
+      "result_binding_mode": "SUPPLEMENTAL_MANIFEST_BINDS_IMPLEMENTATION",
+      "protected_invariant": "Current maintenance authority is interpreted only by a strict duplicate-key-rejecting parser and the one-use bootstrap authority remains consumed.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_maintenance_authority_duplicate_selector_repair.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_maintenance_authority_duplicate_selector_repair_result.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [
+        "ambiguous two-selector authority bytes"
+      ],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR",
+      "authorization_commit": "2acefcb18f2ea2e400bb92e83f8fa58797593ff4",
+      "implementation_commits": [
+        {
+          "commit": "2acefcb18f2ea2e400bb92e83f8fa58797593ff4",
+          "tree": "5ce57d7efe85287435c9073104d89aa8ff632682"
+        },
+        {
+          "commit": "2dc20a6a964c6210f77266fed4c5a27ecabded3a",
+          "tree": "aef1882e0a509e8bdfcea0196947da10b3800f0b"
+        }
+      ],
+      "accepted_commit": "c88c40c14f0ea4908f487784f6c0bbee8a9e4d62",
+      "result_path": "formal/docs/release/REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_RESULT_20260725_v0.json",
+      "result_sha256": "65f1b2ac48a6e162f79cc26daee34289de2254b497beb66473fa776b1ce66ec4",
+      "review_path": "formal/docs/release/REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "4f0f9a760d9efa03f8d39966c2d3703e51042c62ddd0865d977ae65fd7bc1eb2",
+      "result_binding_mode": "ORIGINAL_RESULT_EXPLICIT",
+      "protected_invariant": "Pillar V1 historical review pins remain immutable and are validated separately from commit-relative current Git-blob identities.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_pillar_v1_source_identity.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_pillar_v1_source_identity_repair_result.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [
+        "historical-review-source-equals-current-source"
+      ],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION",
+      "authorization_commit": "068d0a81348cfd0ad89c28f6d92ce2b26b4a0155",
+      "implementation_commits": [
+        {
+          "commit": "068d0a81348cfd0ad89c28f6d92ce2b26b4a0155",
+          "tree": "654403f2eb94edf1ef76bd8b3e3e6590181b2fd5"
+        }
+      ],
+      "accepted_commit": "a15320d1ea0f029b47598afcca136790c2361971",
+      "result_path": "formal/docs/release/REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_20260725_v0.json",
+      "result_sha256": "df14b7d5a498fbf4e015ffadf7fbce22aadf192bcae65b6d45b91217d7f693f2",
+      "review_path": "formal/docs/release/REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "80d120fc7c0e2a04b545198e28b14d10a07d45f2ba21b2a77454af3345ba8e78",
+      "result_binding_mode": "SUPPLEMENTAL_MANIFEST_BINDS_IMPLEMENTATION",
+      "protected_invariant": "Every Pillar V1 staging identity is typed in one dependency-complete table before repair.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_pillar_v1_staging_identity_adjudication.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_post_pillar_v1_staging_identity_adjudication_result.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION",
+      "authorization_commit": "bdf9a46692faa0423259eab004948dd225f3f017",
+      "implementation_commits": [
+        {
+          "commit": "bdf9a46692faa0423259eab004948dd225f3f017",
+          "tree": "c8e3cb4323e6201ea1be39de12e0dcb48d7aec47"
+        },
+        {
+          "commit": "d49919e3de5bbcca5579ec702b2850139da64849",
+          "tree": "06e94aaf52ed6dda879bda9451b17a2b4ba5ecd1"
+        }
+      ],
+      "accepted_commit": "093b03bfb83b950fe774f7cf664fb7967a02bd0c",
+      "result_path": "formal/docs/release/RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_20260725_v0.json",
+      "result_sha256": "eb17a010b2cd9e88d972fcc17681c6a6f7959725f1451e1f3c9d30569aafc470",
+      "review_path": "formal/docs/release/RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "14905dd58eaa3a087beb12ef3d0f0f62d43d29e213cb01876104794d27f983d8",
+      "result_binding_mode": "SUPPLEMENTAL_MANIFEST_BINDS_IMPLEMENTATION",
+      "protected_invariant": "Every collected test is assigned to exactly one pre-execution profile and unknown current reachability fails closed.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_recovery_validation_profiles.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [
+        "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_20260725_v0"
+      ],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR",
+      "authorization_commit": "09c7080c759f0314b79413c614f251a5ebf15842",
+      "implementation_commits": [
+        {
+          "commit": "09c7080c759f0314b79413c614f251a5ebf15842",
+          "tree": "57bdbb1c1c9dd3ddd6b0028ccd7350b6daf0de28"
+        }
+      ],
+      "accepted_commit": "43ce70246dea33ae691b7f1506e1d10af963e3e3",
+      "result_path": "formal/docs/release/REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_20260725_v0.json",
+      "result_sha256": "0c258dafef9ec86681a0d27479a7b989bb9636f934acd37daa6de63ad2483f32",
+      "review_path": "formal/docs/release/REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "4397feaaa95c9e20649251f96b76db0e09ce44d56669a6a20ffb6c02a73e70b5",
+      "result_binding_mode": "ORIGINAL_RESULT_EXPLICIT",
+      "protected_invariant": "Historical staging pins and current canonical identities remain role-separated while the original authority-class mismatch stays fail-closed.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_pillar_v1_staging_identity_adjudication.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1_result_review.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "CURRENT_REACHABILITY_ADJUDICATION",
+      "authorization_commit": "12ef90d238ef11be04774c2b22619ac33b1e1aef",
+      "implementation_commits": [
+        {
+          "commit": "12ef90d238ef11be04774c2b22619ac33b1e1aef",
+          "tree": "02c3dacff6a4eed2a0953a8df2c5eaa8acced09a"
+        }
+      ],
+      "accepted_commit": "399321320f35df521e0dad73b0d2f64664cd0a52",
+      "result_path": "formal/docs/release/REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_20260725_v0.json",
+      "result_sha256": "4159a696cc564787a4c6fc84eab19b5a6a199b163a74ee089d9ef2062c97a00a",
+      "review_path": "formal/docs/release/REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "7c28d438f53635f51bdd6185a8118a6519cd8fe4fb0bd21f34a5d8db5a89cf5b",
+      "result_binding_mode": "ORIGINAL_RESULT_EXPLICIT",
+      "protected_invariant": "Every nonpassing obligation has reviewed current reachability and unknown current reachability is zero.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_recovery_current_reachability_adjudication.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION",
+      "authorization_commit": "03f6ecfaf09b20dca00ef09485e63fa21b9bd845",
+      "implementation_commits": [
+        {
+          "commit": "03f6ecfaf09b20dca00ef09485e63fa21b9bd845",
+          "tree": "ff0c615707b3fd7f30fefab3e037fb8f9965f5a2"
+        },
+        {
+          "commit": "d7e526d625e1a18edb482fdb134d1e7c1bdf2eeb",
+          "tree": "6d81e17c69e2f52eb476c465ca8b6e3d532b3bb5"
+        },
+        {
+          "commit": "a209450dc8d4b3573ffdc4a1ead4562d2ad88a6b",
+          "tree": "7faa76a9e67328f29c7762de2f017fef04d44d90"
+        },
+        {
+          "commit": "2196923c56066ef6875bcb680e230eddcca2dda5",
+          "tree": "192ac269dccc0d727eb1d1debe78775bdef1b357"
+        }
+      ],
+      "accepted_commit": "380db2de3aca8c19fdf1ab9c43d0e6629d232009",
+      "result_path": "formal/docs/release/RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_20260725_v0.json",
+      "result_sha256": "ab26e7eae91c1353c7ef5e71f62c9e57ff30202cfbe17f4b5b5ddac67540f16e",
+      "review_path": "formal/docs/release/RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "2574d2fc647174eab4181bd1ae07941a7dc91d31beab5cf97b4ba027efe4820f",
+      "result_binding_mode": "SUPPLEMENTAL_MANIFEST_BINDS_IMPLEMENTATION",
+      "protected_invariant": "The current acceptance inventory and execution profiles are frozen before execution, exact-partitioned, and immutable during a run.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_recovery_validation_profiles.py",
+          "selectors": []
+        }
+      ],
+      "historical_snapshot_guards": [
+        "RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION_RESULT_20260725_v0"
+      ],
+      "superseded_guards": []
+    },
+    {
+      "cycle_id": "CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR",
+      "authorization_commit": "76dd14cf2a85277d528cdcdc756e1875081655d4",
+      "implementation_commits": [
+        {
+          "commit": "76dd14cf2a85277d528cdcdc756e1875081655d4",
+          "tree": "e6410c3946f2689e1cfe18f00fab56924cb030f0"
+        }
+      ],
+      "accepted_commit": "f74ce9ce93f96fb3077acfddd2839f7a41bf12a9",
+      "result_path": "formal/docs/release/CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_RESULT_20260725_v0.json",
+      "result_sha256": "e8df3350b3e03ffff2d6f9162baa2f362e9d092962e7fcce8be5342f166772b8",
+      "review_path": "formal/docs/release/CURRENT_CONTROL_PLANE_FOUR_ROOT_REPAIR_RESULT_REVIEW_20260725_v0.json",
+      "review_sha256": "3aadf8710953dbd9ccf313f76556127ec58fbc8f7503be8bf896b98549614488",
+      "result_binding_mode": "ORIGINAL_RESULT_EXPLICIT",
+      "protected_invariant": "Current admissibility and cross-reference controls use stable identities while the superseded broad-EOL snapshot remains visible as historical debt.",
+      "current_enforcing_guards": [
+        {
+          "path": "formal/python/tests/test_admissibility_manifest.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_formal_docs_paper_cross_reference_integrity_gate.py",
+          "selectors": []
+        },
+        {
+          "path": "formal/python/tests/test_repository_canonical_text_integrity_gate.py",
+          "selectors": [
+            "test_canonical_maintenance_zones_are_pinned_to_lf"
+          ]
+        }
+      ],
+      "historical_snapshot_guards": [
+        "test_eol_policy_does_not_glob_hash_bound_historical_trees"
+      ],
+      "superseded_guards": [
+        {
+          "guard": "test_eol_policy_does_not_glob_hash_bound_historical_trees",
+          "replacement": "test_canonical_maintenance_zones_are_pinned_to_lf",
+          "accepted_supersession_evidence": "formal/docs/release/CURRENT_REACHABILITY_CORRECTION_EOL_POLICY_20260725_v0.json"
+        }
+      ]
+    }
+  ],
+  "supplemental_binding_rule": "Where an original result could not name its own later artifact-freeze commit, this independently reviewed versioned manifest binds that implementation commit, exact tree, original result hash, and original review hash without rewriting historical records.",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

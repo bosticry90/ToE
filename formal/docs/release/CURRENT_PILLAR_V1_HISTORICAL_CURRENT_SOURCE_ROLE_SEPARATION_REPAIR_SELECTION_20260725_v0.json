@@ -1,0 +1,17 @@
+{
+  "schema_id": "CURRENT_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_maintenance_authority_repair_review": {
+    "commit": "cbed4a31e66509797e6712d53f3d3993eb9a7cff",
+    "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_SELECTOR_KEY_REPAIR_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR",
+  "target": "implement_repository_pillar_v1_historical_current_source_role_separation_repair_v0_once",
+  "execution_count_authorized": 1,
+  "maintenance_authority_repair_authorized": false,
+  "staging_identity_adjudication_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

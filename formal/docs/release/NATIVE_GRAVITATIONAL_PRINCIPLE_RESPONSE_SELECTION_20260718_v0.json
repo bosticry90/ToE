@@ -1,0 +1,406 @@
+{
+  "authority": {
+    "contract_design": "PASS_COMPLETE_BOUNDED_REVIEW_CONTRACT",
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/lanes/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_REVIEW_20260717_v0.md",
+        "sha256": "554e18d20bb3d6f2076cb4d6ea6c86480ee46d11f39f87c01673f37dfc8ec70c"
+      },
+      {
+        "relative_path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "6b902c6c620e15aa68898ae271e2de787186c9ef051e5c16c69edd0ea703ccfd"
+      },
+      {
+        "relative_path": "formal/python/tools/minimal_native_continuum_gravitational_sector_contract_packet_review_v0.py",
+        "sha256": "ef92c485d3543d349af76ea3469027d71c2056e66e02c9cc259101c63955975e"
+      },
+      {
+        "relative_path": "formal/python/tests/test_minimal_native_continuum_gravitational_sector_contract_packet_review_v0.py",
+        "sha256": "5f0a07fc4aa5438a811228e058062952bbdec09b362b5a5320e06307d3c77a80"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/MinimalNativeContinuumGravitationalSectorContractPacketReviewV0.lean",
+        "sha256": "7e4de22622b0d6c74645777f4899ee5f9ee6c0b04b4ca0fc9018a20a49cd0fec"
+      },
+      {
+        "relative_path": "formal/docs/lanes/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.md",
+        "sha256": "5fc170073b11907bb14c05984d577c9b68e0a8d6ebfcf8c7fedf081a4ef292d8"
+      },
+      {
+        "relative_path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+        "sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4"
+      },
+      {
+        "relative_path": "formal/docs/release/NATIVE_CONTINUUM_ACTION_ABSENCE_SCIENTIFIC_TARGET_SELECTION_20260717_v0.json",
+        "sha256": "86717db3c1a23c8d9562a398db847668d9422fef0261e682038d25e531d9abab"
+      },
+      {
+        "relative_path": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "de305a72dc522fe807c037bbe7980d96e3308d0547645ccb9939d1889720d987"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+        "sha256": "b2519245872eaed3d874c25836ce355cca9e3bc0f11914e806a74c691f8d14da"
+      },
+      {
+        "relative_path": "formal/docs/release/QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "0d9eb65ddb9fcf2e6dea8bd4feab58b51fb8db4dd002181bd4004df6d5395509"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/native_gravitational_principle_response_selection_v0.py",
+      "sha256": "7b9788a1e23fe30a5bfc67ac2c0f84175178310ca7893def9533477413d029c1"
+    },
+    "terminal_contract_review": "BLOCKED_NO_NATIVE_GRAVITATIONAL_PRINCIPLE",
+    "terminal_diagnostic": "NO_BOUND_NATIVE_GRAVITATIONAL_PRINCIPLE_OR_POSTULATE",
+    "test": {
+      "relative_path": "formal/python/tests/test_native_gravitational_principle_response_selection_v0.py",
+      "sha256": "0a2ce3bb4c19b3fcf0fdacae3d87fac1db72649b29e4e3c3115ce1c130b8637f"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Fresh response selection only. It authorizes preparation of one bounded native-gravitational-principle requirements, action-selection, and no-go packet. It creates no principle, postulate, action, matter sector, variation, tensor equation, standard-GR result, frame-dragging result, promotion, empirical result, general tooling, or automation.",
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "kind": "REQUIREMENTS_ACTION_SELECTION_AND_NO_GO_PACKET_PREPARATION",
+        "scientific_endpoint": "Determine which accepted project commitments constrain gravitational action families, whether they select only a standard-GR baseline, whether inequivalent families remain, and where a new distinctive postulate is logically unavoidable.",
+        "scores": {
+          "action_selection_discriminating_power": 5,
+          "bounded_endpoint_precision": 5,
+          "direct_missing_principle_attack": 5,
+          "distinctiveness_leverage": 4,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 5,
+          "preserves_provenance_and_claim_boundaries": 5,
+          "prevents_arbitrary_theory_choice": 5
+        },
+        "target": "prepare_native_gravitational_principle_requirements_and_action_selection_packet_v0",
+        "weighted_score": 98
+      },
+      {
+        "candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "kind": "NEW_SCIENTIFIC_POSTULATE_AND_THEORY_SELECTION",
+        "scientific_endpoint": "Authorize and label one POSTULATED_NATIVE_CANDIDATE action family with an explicit rationale and discriminator, without representing it as derived.",
+        "scores": {
+          "action_selection_discriminating_power": 5,
+          "bounded_endpoint_precision": 4,
+          "direct_missing_principle_attack": 5,
+          "distinctiveness_leverage": 5,
+          "infrastructure_avoidance": 4,
+          "pass_fail_scientific_value": 4,
+          "preserves_provenance_and_claim_boundaries": 5,
+          "prevents_arbitrary_theory_choice": 2
+        },
+        "target": "select_explicit_native_gravitational_postulate_and_action_family",
+        "weighted_score": 86
+      },
+      {
+        "candidate_id": "ACTIVATE_SUPPLIED_STANDARD_GR_COMPARATOR",
+        "kind": "SUPPLIED_STANDARD_GR_COMPARATOR_ONLY",
+        "scientific_endpoint": "Supply Einstein-Hilbert gravity explicitly and test downstream variation and weak rotating-source calculations with no native-gravity claim.",
+        "scores": {
+          "action_selection_discriminating_power": 1,
+          "bounded_endpoint_precision": 5,
+          "direct_missing_principle_attack": 2,
+          "distinctiveness_leverage": 1,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 4,
+          "preserves_provenance_and_claim_boundaries": 5,
+          "prevents_arbitrary_theory_choice": 5
+        },
+        "target": "prepare_supplied_standard_gr_variational_comparator_packet_v0",
+        "weighted_score": 68
+      },
+      {
+        "candidate_id": "PIVOT_TO_OTHER_HIGH_LEVERAGE_PHYSICS_OBLIGATION",
+        "kind": "PRESERVE_GR_BLOCK_AND_PIVOT",
+        "scientific_endpoint": "Retain the gravitational-principle block and move to a separately ranked pillar, seam, no-go, or prediction obligation.",
+        "scores": {
+          "action_selection_discriminating_power": 1,
+          "bounded_endpoint_precision": 4,
+          "direct_missing_principle_attack": 1,
+          "distinctiveness_leverage": 1,
+          "infrastructure_avoidance": 5,
+          "pass_fail_scientific_value": 4,
+          "preserves_provenance_and_claim_boundaries": 5,
+          "prevents_arbitrary_theory_choice": 5
+        },
+        "target": "select_next_non_gr_high_leverage_scientific_obligation",
+        "weighted_score": 62
+      }
+    ],
+    "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+    "runner_up_score": 86,
+    "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+    "selected_score": 98
+  },
+  "retained_boundaries": {
+    "C_k": "EXTERNAL_ADMISSIBILITY_AUDIT_ONLY",
+    "explicit_native_postulate": "NOT_AUTHORIZED",
+    "gravitomagnetic_recovery": "BLOCKED_UPSTREAM",
+    "historical_master_action": "SCHEMATIC_ONLY",
+    "matter_action": "NOT_DEFINED",
+    "metric_variation": "NOT_EXECUTED",
+    "minimal_gravitational_contract": "ACCEPTED",
+    "native_gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_FOUND",
+    "recovery_ladder": "NOT_ENTERED",
+    "standard_Einstein_Hilbert_sector": "SUPPLIED_COMPARATOR_ONLY"
+  },
+  "schema_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0",
+  "scope": {
+    "C_k_embedded_or_varied": false,
+    "GR_pillar_completed": false,
+    "action_family_selected": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "general_tooling_created": false,
+    "gravitomagnetic_route_reopened": false,
+    "master_action_promoted": false,
+    "matter_fields_or_lagrangian_imported": false,
+    "metric_or_tetrad_variation_executed": false,
+    "native_gravitational_action_proposed_or_selected": false,
+    "native_gravitational_postulate_authorized": false,
+    "native_gravitational_principle_created_or_selected": false,
+    "packet_preparation_authorized": true,
+    "packet_prepared_now": false,
+    "requirements_or_no_go_result_derived": false,
+    "response_selection_executed": true,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_collapse_claimed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_derived": false,
+    "tensor_field_equation_derived": false
+  },
+  "selected_next_target": "prepare_native_gravitational_principle_requirements_and_action_selection_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_REQUIREMENTS_ACTION_SELECTION_AND_NO_GO_ENVELOPE",
+  "selected_scientific_obligation": {
+    "allowed_terminal_results": [
+      "NATIVE_PRINCIPLE_SET_SELECTS_ACTION_FAMILY",
+      "CURRENT_REQUIREMENTS_COLLAPSE_TO_STANDARD_GR",
+      "ACTION_FAMILY_UNDERDETERMINED",
+      "DISTINCTIVE_GRAVITATIONAL_POSTULATE_REQUIRED",
+      "REQUIREMENT_SET_INCONSISTENT",
+      "NO_GO_UNDER_MINIMAL_METRIC_LOCAL_ASSUMPTIONS"
+    ],
+    "obligation_class": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_ACTION_SELECTION_AND_NO_GO",
+    "packet_must_freeze": [
+      "byte-bound accepted project commitments and their authority classes",
+      "accepted commitments separated from convenient or standard-GR assumptions",
+      "minimal metric, dimension, locality, covariance, and derivative-order hypotheses",
+      "external C_k firewall and prohibited action embedding",
+      "Newton-Poisson, source-conservation, momentum-current, stability, and no-fitting obligations",
+      "requirement-by-requirement action-selection power matrix",
+      "standard-GR collapse test under the frozen minimal assumptions",
+      "inequivalent-action-family survival and elimination criteria",
+      "distinctiveness test for coefficients, cross-pillar links, or observables",
+      "exact no-go envelope and the first point where a new postulate is required"
+    ],
+    "pillar": "GR",
+    "question": "Do the project's accepted commitments select or materially narrow a gravitational action family, collapse only to a supplied standard-GR baseline, remain underdetermined, or prove that a new distinctive gravitational postulate is unavoidable?",
+    "stopping_rule": "Prepare one requirements, action-selection, and no-go packet and stop for independent review. Do not propose or select an action, authorize a new postulate, activate the standard-GR comparator, perform variation, import matter fields, resume frame-dragging, or build new infrastructure."
+  },
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_scale": "0..5",
+    "maximum_weighted_score": 100,
+    "weights": {
+      "action_selection_discriminating_power": 3,
+      "bounded_endpoint_precision": 3,
+      "direct_missing_principle_attack": 3,
+      "distinctiveness_leverage": 2,
+      "infrastructure_avoidance": 2,
+      "pass_fail_scientific_value": 3,
+      "preserves_provenance_and_claim_boundaries": 2,
+      "prevents_arbitrary_theory_choice": 2
+    }
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 6,
+    "rows": [
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 71,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 83,
+        "variant": "omit_direct_missing_principle_attack"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 71,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 83,
+        "variant": "omit_action_selection_discriminating_power"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 74,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 83,
+        "variant": "omit_pass_fail_scientific_value"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 74,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 83,
+        "variant": "omit_bounded_endpoint_precision"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 82,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 88,
+        "variant": "omit_prevents_arbitrary_theory_choice"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 76,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 88,
+        "variant": "omit_preserves_provenance_and_claim_boundaries"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 76,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 90,
+        "variant": "omit_distinctiveness_leverage"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 78,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 88,
+        "variant": "omit_infrastructure_avoidance"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 81,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 93,
+        "variant": "direct_missing_principle_attack_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 91,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 103,
+        "variant": "direct_missing_principle_attack_+1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 81,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 93,
+        "variant": "action_selection_discriminating_power_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 91,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 103,
+        "variant": "action_selection_discriminating_power_+1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 82,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 93,
+        "variant": "pass_fail_scientific_value_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 90,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 103,
+        "variant": "pass_fail_scientific_value_+1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 82,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 93,
+        "variant": "bounded_endpoint_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 90,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 103,
+        "variant": "bounded_endpoint_precision_+1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 84,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 93,
+        "variant": "prevents_arbitrary_theory_choice_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 88,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 103,
+        "variant": "prevents_arbitrary_theory_choice_+1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 81,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 93,
+        "variant": "preserves_provenance_and_claim_boundaries_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 91,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 103,
+        "variant": "preserves_provenance_and_claim_boundaries_+1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 81,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 94,
+        "variant": "distinctiveness_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 91,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 102,
+        "variant": "distinctiveness_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 82,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 93,
+        "variant": "infrastructure_avoidance_-1"
+      },
+      {
+        "runner_up_candidate_id": "EXPLICITLY_POSTULATE_NATIVE_GRAVITATIONAL_CANDIDATE",
+        "runner_up_score": 90,
+        "selected_candidate_id": "DEFINE_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_ENVELOPE",
+        "selected_score": 103,
+        "variant": "infrastructure_avoidance_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_response_to_no_native_gravitational_principle_from_full_toe_priority_map",
+  "verdict": "SELECTED_NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_NO_GO_PREPARATION"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T02:07:20Z",
+  "review_basis": "INDEPENDENT_DETACHED_IDENTITY_CONTRACT_EXACT_COHORT_CROSS_EOL_HISTORICAL_PRESERVATION_CUSTODY_AND_SCOPE_REVIEW",
+  "reviewed_result_commit": "5c93dbbd4d9c03a0808478965f0553fdec75122d",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_RESULT_20260724_v0.json",
+    "sha256": "54dde09f3b62417f8b7e1103888490cae63c7809918ac8e7ab9fc0c450805c78",
+    "outcome": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_COMPLETE_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "checks": {
+    "accepted_adjudication_lineage_and_authorization_bound": true,
+    "one_typed_frozen_git_blob_identity_declared": true,
+    "historical_mixed_eol_pin_preserved_separately": true,
+    "all_23_adjudicated_historical_occurrences_across_15_files_preserved": true,
+    "equation_compendium_blob_remains_ccd41b23": true,
+    "raw_checkout_bytes_removed_from_current_identity_role": true,
+    "shared_resolver_fails_closed_on_historical_or_current_identity_drift": true,
+    "current_implementation_exact_50_pass": true,
+    "fresh_lf_exact_50_pass_and_clean": true,
+    "fresh_actual_crlf_exact_50_pass_and_clean": true,
+    "detached_review_exact_50_pass_and_clean": true,
+    "contract_tests_pass_6_of_6_in_all_four_validated_environments": true,
+    "historical_execution_artifacts_regenerated": false,
+    "four_historical_qft_packet_review_assertions_repaired": false,
+    "adjacent_failure_families_repaired": false,
+    "baseline_reassessment_run": false,
+    "official_baseline_remains_462": true,
+    "dirty_main_byte_and_status_custody_preserved": true,
+    "scientific_content_changed": false,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "automatic_successor_authorized": false
+  },
+  "independent_evidence": {
+    "path": "EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_INDEPENDENT_REVIEW_MANIFEST_v0.json",
+    "root": ".toe-recovery/custody-v0/equation-compendium-git-blob-identity-contract-repair-v0",
+    "sha256": "744483112b380033ea40308096e2dcc16963ef40d97a70f9a8ff484667ae1cd6"
+  },
+  "accepted_effect": {
+    "equation_compendium_identity_contract": "CURRENT_EXECUTABLE_BINDINGS_USE_FROZEN_GIT_BLOB_SHA256",
+    "historical_generator_identity": "PRESERVED",
+    "affected_outcomes": "50_OF_50_PASS_IN_FOCUSED_VALIDATION",
+    "official_baseline": "UNCHANGED_PENDING_SEPARATELY_AUTHORIZED_REASSESSMENT",
+    "scientific_or_authority_effect": "NONE"
+  },
+  "verdict": "ACCEPT_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_STILL_BLOCKED_NO_BASELINE_REASSESSMENT_NO_SUCCESSOR_AUTHORITY",
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "qft_gr_seam": "OPEN",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

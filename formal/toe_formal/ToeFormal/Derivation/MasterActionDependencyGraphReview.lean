@@ -191,7 +191,7 @@ row readiness review.
 theorem master_action_dependency_graph_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some currentLiveNextStrictTargetV0 := by
+      some masterActionFrontierNextStrictTargetV0 := by
   decide
 
 /-- The review preserves the dependency class ids from the dependency frontier. -/

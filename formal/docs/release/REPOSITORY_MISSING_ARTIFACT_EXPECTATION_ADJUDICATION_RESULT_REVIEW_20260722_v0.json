@@ -1,0 +1,95 @@
+{
+  "schema_id": "REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T22:20:47Z",
+  "verdict": "ACCEPT_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_STILL_BLOCKED",
+  "reviewed_branch": "codex/missing-artifact-expectation-adjudication-v0",
+  "reviewed_commit": "fc0ce0b30bd38258fb570220927dfa5793390c5e",
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_RESULT_20260722_v0.json",
+    "sha256": "c2de1f02bf33a02a15b67d4a897958a131e5e9c88902d4dcbfc01a4547e384d8",
+    "outcome": "MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "independence": {
+    "review_worktree": ".toe-recovery/disposable-workspaces/missing-artifact-expectation-adjudication-review-v0",
+    "detached_clean_checkout": true,
+    "builder_imported": false,
+    "recomputation_method": "Independent frozen-outcome parsing, complete consumer-source literal scan, dirty-versus-clean path inspection, all-ref Git-history scan, generator-reference scan, filename-date retention calculation, closed-taxonomy validation, and dirty-main/report-tree byte fingerprint verification.",
+    "recomputation_evidence": {
+      "path": ".toe-recovery/custody-v0/missing-artifact-expectation-adjudication-v0/MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_INDEPENDENT_RECOMPUTATION_20260722_v0.json",
+      "sha256": "21979ba1b5d32981850545ef40f7ea248d51fc14033d61d9ebce79ba5c7e236f"
+    },
+    "review_script": {
+      "path": ".toe-recovery/custody-v0/missing-artifact-expectation-adjudication-v0/independent_review_missing_artifact_expectation_adjudication_v0.py",
+      "sha256": "75cad652dcd331432690e2d061309da79f7f1017186e078be849ac16acd01508"
+    }
+  },
+  "recomputed_outcome_accounting": {
+    "family_outcomes": 222,
+    "actual_missing_file_conditions": 221,
+    "nonmissing_reclassifications": 1,
+    "consumer_test_files": 147,
+    "unique_first_missing_paths": 122,
+    "all_expectation_rows_complete": true,
+    "unclassified_outcomes": 0
+  },
+  "recomputed_custody": {
+    "first_missing_present_in_dirty_main": 122,
+    "first_missing_absent_in_clean_checkout": 122,
+    "first_missing_ignored_by_git": 122,
+    "first_missing_ever_tracked": 0,
+    "first_missing_with_generator_reference": 104,
+    "first_missing_without_generator_reference": 18,
+    "first_missing_at_or_beyond_retention": 115,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_status_and_ignored_report_tree_byte_stable": true
+  },
+  "recomputed_latent_inventory": {
+    "unique_high_confidence_dependency_identities": 183,
+    "unique_static_report_paths_including_first_failures": 206,
+    "fixture_only_literals_separately_recorded": 23,
+    "current_decision_bearing_artifacts_established": 0
+  },
+  "recomputed_expectation_roles": {
+    "HISTORICAL_REPORT_BEYOND_RETENTION": 185,
+    "PROVENANCE_INCOMPLETE": 36,
+    "STALE_EXPECTATION_TO_RETIRE": 1
+  },
+  "recomputed_dispositions": {
+    "GENERATE_TEMPORARY_FIXTURE": 185,
+    "BLOCK_FOR_PROVENANCE_REVIEW": 36,
+    "RETIRE_STALE_EXPECTATION": 1
+  },
+  "architectural_finding": {
+    "confirmed": true,
+    "finding": "Clean validation is blocked by ignored, untracked, never-tracked live report expectations. Dirty-workspace presence cannot serve as canonical evidence.",
+    "scientific_effect": "NONE",
+    "governance_effect": "CURRENT_VALIDATION_INPUT_CONTRACT_REQUIRES_REPAIR_OR_RETIREMENT"
+  },
+  "decision": {
+    "adjudication_result_accepted": true,
+    "repository_recovery_complete": false,
+    "smallest_high_leverage_candidate": "TRACKED_GENERATOR_TEMPORARY_FIXTURE_CONVERSION",
+    "candidate_outcomes": 185,
+    "candidate_authorized": false,
+    "provenance_review_cohort_outcomes": 36,
+    "historical_hash_reclassification_outcomes": 1,
+    "post_decoupling_currency_outcomes_absorbed": false,
+    "repair_authorized": false,
+    "automatic_successor_authorized": false,
+    "v2_enrollment_authorized": false,
+    "registry_rotation_authorized": false,
+    "lean_activity_authorized": false,
+    "scientific_execution_authorized": false
+  },
+  "program_estimate": {
+    "estimated_operational_completion": "ROUGHLY_55_TO_70_PERCENT",
+    "confidence": "MEDIUM"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0_OF_12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "terminal_maintenance_state": "PRESERVE_ACCEPTED_ADJUDICATION_RESULT_AND_STOP_FOR_FRESH_SELECTOR"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_id": "PROMPT_DECOUPLING_CURRENT_INVARIANT_SUPERSESSION_20260725_v0",
+  "accepted_prompt_repair_review": "formal/docs/release/REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_REVIEW_20260722_v0.json",
+  "guard": "formal/python/tests/test_prompt_dependency_role_adjudication_and_decoupling.py::test_prompt_blob_and_scientific_governance_artifacts_are_unchanged",
+  "superseded_snapshot_obligation": "ALL_FORMAL_OUTPUT_BYTES_EQUAL_PROMPT_REPAIR_BASE_FOREVER",
+  "reason": "Accepted recovery validation-profile artifacts were later added under formal/output/validation_profiles without changing Prompt.txt, formal/toe_formal, formal/registry, or registry.",
+  "current_protected_invariant": {
+    "prompt_blob_equal_to_accepted_prompt_repair_base": true,
+    "formal_toe_formal_unchanged": true,
+    "formal_registry_unchanged": true,
+    "registry_unchanged": true,
+    "post_prompt_repair_formal_output_changes_allowed_prefix": "formal/output/validation_profiles/"
+  },
+  "historical_snapshot_preserved_in_git": true,
+  "scientific_content_changed": false,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

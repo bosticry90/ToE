@@ -1,0 +1,25 @@
+{
+  "schema_id": "REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T01:46:15Z",
+  "review_basis": "INDEPENDENT_LINEAGE_IDENTITY_DOMAIN_HISTORICAL_PRESERVATION_SCOPE_CONTAINMENT_AND_ACCEPTANCE_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_EQUATION_COMPENDIUM_GIT_BLOB_IDENTITY_CONTRACT_REPAIR_PACKET_20260724_v0.json",
+    "sha256": "bae523decc1ea5e37ddee6ee4ac9133583f7007fdc9fa69a0fcd079fed7ecfab"
+  },
+  "checks": {
+    "accepted_adjudication_and_exact_commit_bound": true,
+    "exact_50_outcome_family_bound": true,
+    "one_frozen_git_blob_identity_declared": true,
+    "historical_mixed_eol_pin_preservation_required": true,
+    "raw_checkout_bytes_explicitly_non_authoritative": true,
+    "one_shared_fail_closed_resolver_required": true,
+    "preserved_historical_guardrail_cross_version_validation_routed_through_same_resolver": true,
+    "equation_compendium_source_modification_forbidden": true,
+    "historical_packet_review_and_generator_record_modification_forbidden": true,
+    "lf_crlf_and_detached_review_validation_required": true,
+    "adjacent_failure_family_lean_registry_v2_and_scientific_actions_forbidden": true,
+    "baseline_reassessment_forbidden": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

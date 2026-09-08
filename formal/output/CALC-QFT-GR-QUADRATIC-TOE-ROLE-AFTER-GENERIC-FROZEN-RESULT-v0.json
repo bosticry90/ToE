@@ -1,0 +1,68 @@
+{
+  "bounded_program_closeout": {
+    "attempted_stage_count": 3,
+    "attempted_stage_ids": [
+      "STRICT_HARMONIC_GAUGE_JET_CONTRACT",
+      "COMPONENT_EXPANDED_LINEARIZATION",
+      "EXACT_FROZEN_COMPANION_OPERATOR"
+    ],
+    "authorized_stage_count": 5,
+    "blocked_stage_id": "EXACT_FROZEN_COMPANION_OPERATOR",
+    "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+    "repair_attempt_count": 0,
+    "subsidiary_scientific_targets_created": 0,
+    "unattempted_stage_ids": [
+      "CONSTRAINT_TANGENT_AND_PHYSICAL_QUOTIENT",
+      "SUBPRINCIPAL_PROPAGATOR_GROWTH"
+    ]
+  },
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-TOE-ROLE-AFTER-GENERIC-FROZEN-RESULT-v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_boundary": {
+    "further_quadratic_work_authorized": false,
+    "generic_finite_loss_established": false,
+    "generic_finite_loss_refuted": false,
+    "generic_frozen_status_unresolved": true,
+    "native_surrogate_program_authorized_here": false,
+    "quadratic_gravity_derived_effective_limit": false,
+    "quadratic_gravity_native_toe_sector": false,
+    "quadratic_gravity_rejected_toe_candidate": false
+  },
+  "consumed_bounded_result": {
+    "path": "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v1.json",
+    "sha256": "dc44607059d79fcfd54220a23c07f4bf1d9692119ec05e936dc9dcedc753c1ce",
+    "terminal_outcome": "GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED",
+    "terminal_result": "BLOCKED"
+  },
+  "consumed_review": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_EXACT_GENERIC_FROZEN_COMPANION_OPERATOR_V1_RESULT_REVIEW_20260729_v0.json",
+    "sha256": "fec0ef3d50d89a48231a798d4616ece36aafbb6bdcf8f4909497d1e95ef6abfa"
+  },
+  "execution_target": "select_qft_gr_quadratic_toe_role_after_generic_frozen_result_v0",
+  "historical_role_evidence": {
+    "checks": {
+      "comparison_action_was_not_selected": true,
+      "comparison_family_adoption_was_false": true,
+      "entered_as_shared_comparison_packet": true,
+      "native_gravitational_principle_was_not_identified": true,
+      "review_kind_excluded_theory_adoption": true
+    },
+    "comparison_review_path": "formal/toe_formal/ToeFormal/Derivation/SharedLinearizedQuadraticGravitySourceAndSpectrumComparisonResultReviewV0.lean",
+    "comparison_review_sha256": "b211f8681abf18b698068aefc4ce501114df04978989061782ea37624a3639aa",
+    "origin_path": "formal/toe_formal/ToeFormal/Derivation/ExploratoryNativeGravitationalRequirementsFamilySurveyResultReviewV0.lean",
+    "origin_sha256": "85631030f6401903e963c2de2f3038d40c6223538e2026edf23db1ffa190d6a4"
+  },
+  "role_decision": {
+    "coefficient_origin_from_native_toe_principle_found": false,
+    "control_result": "UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+    "effective_limit_derivation_found": false,
+    "native_action_evidence_found": false,
+    "reason": "The lineage explicitly introduced quadratic gravity as a shared comparison family, prohibited theory adoption, selected no comparison action or coefficients, and identified no native gravitational principle. The bounded closeout then blocked before an exact generic companion or finite-loss result.",
+    "rejection_as_native_candidate_claimed": false,
+    "toe_role": "REFERENCE_CONTROL_ONLY"
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_TOE_ROLE_AFTER_GENERIC_FROZEN_RESULT_v0",
+  "selected_next_target": "authorize_toe_native_surrogate_v0_bounded_program",
+  "terminal_outcome": "REFERENCE_CONTROL_ONLY_WITH_UNRESOLVED_AFTER_BOUNDED_ATTEMPT",
+  "verdict": "QUADRATIC_GRAVITY_CLASSIFIED_REFERENCE_CONTROL_ONLY_GENERIC_FROZEN_RESULT_UNRESOLVED_AFTER_BOUNDED_ATTEMPT_NO_FURTHER_QUADRATIC_STAGE_OR_REPAIR"
+}

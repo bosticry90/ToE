@@ -1,0 +1,99 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-31T22:33:00Z",
+  "consumed_result": "TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0",
+  "consumed_result_path": "formal/docs/release/TOE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_RESULT_v0.json",
+  "consumed_result_sha256": "9dbcc3402df99065d484cc83518c2d55916f3eacfbc98098bf64663028bcf0b4",
+  "independent_findings": [
+    {
+      "finding_id": "REVIEW-FINDING-001",
+      "statement": "All 97 deterministically eligible source artifacts were selected and their committed or local-custody byte identities reverified.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "REVIEW-FINDING-002",
+      "statement": "The selected sources preserve explicit CP-NLSE, UCFF-dispersion, and LCRD equations, domains, parameters, data, and numerical contracts.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "REVIEW-FINDING-003",
+      "statement": "The historical review source explicitly reports unreconciled CP-NLSE/CE-NWE dispersion, chi-subsystem, and rotor-dynamics formulation conflicts; the result does not resolve them.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "REVIEW-FINDING-004",
+      "statement": "The selected current canonical CCFT packets primarily preserve crosswalks, admissibility obligations, residual scaffolds, and variational targets; they do not contain a completed CCFT action.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "REVIEW-FINDING-005",
+      "statement": "FFT diagnostics, the linear Schrodinger limit, and the Bogoliubov limit remain identified as imports or controls rather than distinctive CCFT dynamics.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "REVIEW-FINDING-006",
+      "statement": "The result inventories mathematics only. It does not determine physical bearers, units where absent, operational meaning, preferred formulation, model closure, viability, or truth.",
+      "status": "CONFIRMED"
+    },
+    {
+      "finding_id": "REVIEW-FINDING-007",
+      "statement": "The correct terminal result is complete with unreviewed overflow: the Stage 1 candidate population is exhausted, while repository-wide claim exhaustion remains unestablished.",
+      "status": "CONFIRMED"
+    }
+  ],
+  "independent_recomputation": {
+    "all_caps_respected": true,
+    "all_entry_source_hashes_match_ledger": true,
+    "all_manifest_classifications_used": true,
+    "all_selected_source_hashes_match": true,
+    "all_selected_sources_exist": true,
+    "base_ccft_claim_source_count": 95,
+    "candidate_population_overflow_count": 0,
+    "classification_counts": {
+      "CONFLICTING_CCFT_FORMULATION": 4,
+      "CONTROL_OR_KNOWN_PHYSICS_IMPORT": 7,
+      "EXPLICIT_CCFT_MATHEMATICS": 12,
+      "HEURISTIC_OR_ANALOGY": 1,
+      "PARTIAL_MATHEMATICAL_STRUCTURE": 4,
+      "UNDEFINED_SYMBOL_OR_TERM": 5
+    },
+    "classification_counts_sum_to_entry_count": true,
+    "every_entry_has_source_location_and_excerpt": true,
+    "lineage_expanded_candidate_source_count": 97,
+    "mathematical_entry_count": 33,
+    "repository_claim_exhaustion_established": false,
+    "selected_source_count": 97,
+    "unique_entry_id_count": 33,
+    "unique_selected_record_id_count": 97
+  },
+  "nonclaim_boundary": [
+    "No inventoried object is adopted as physical coherence or as a preferred CCFT representation.",
+    "No conflicting formulation is reconciled and no incomplete equation is repaired.",
+    "No CCFT action, matter or gravity seam, observable, empirical claim, or canonical evidence promotion is created.",
+    "The 97 selected sources exhaust the deterministic Stage 1 candidate population, not the repository's 12,923 unreviewed custody records.",
+    "Stage 2 requires a separate scientific-authority decision and immutable OPEN event."
+  ],
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "review_checks": {
+    "ccft_action_not_constructed": true,
+    "conflicting_formulations_not_merged": true,
+    "duplicate_or_derivative_repetition_not_counted_as_independent_support": true,
+    "evidence_not_promoted": true,
+    "incomplete_equations_not_repaired": true,
+    "matter_or_gravity_seam_not_selected": true,
+    "observable_not_defined": true,
+    "physical_interpretation_not_adjudicated": true,
+    "representation_or_field_not_selected": true,
+    "result_bytes_hash_bound": true,
+    "source_authority_not_inferred_from_presence": true,
+    "source_hashes_recomputed": true,
+    "source_paths_exist": true,
+    "stage_2_not_authorized_or_opened": true
+  },
+  "review_result": "ACCEPT_CCFT_MATHEMATICAL_INVENTORY_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+  "schema_id": "toe.ccft.source_bound_mathematical_inventory.result_review.v0",
+  "selected_next_target": "reconstruct_toe_ccft_mathematical_lineages_and_conflicts_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED_OR_OPENED",
+  "semantic_stage_id": "CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY"
+}

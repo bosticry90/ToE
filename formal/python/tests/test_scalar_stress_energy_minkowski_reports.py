@@ -101,18 +101,13 @@ def test_guardrail_and_execution_are_preserved_after_result_review() -> None:
     assert execution["selected_next_target"] == (
         "review_calc_scalar_stress_energy_divergence_identity_minkowski_v0_result"
     )
-    assert state["live_next_target"] == (
-        "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2"
-    )
-    assert state["previous_live_next_target"] == (
-        "review_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v1_result"
-    )
+    projection = registry["current_projection_v0"]
+    assert state["live_next_target"] == projection["current_target"]
+    assert state["previous_live_next_target"] == projection["previous_target"]
     assert active["workstream_id"] == state["live_next_target"]
     assert active["authorized_next_strict_target"] == state["live_next_target"]
     assert active["claim_ceiling_level"] == 3
-    assert active["claim_status"] == (
-        "versioned_authority_class_attribution_correction_v2_required"
-    )
+    assert active["report"] == projection["current_target_report"]
 
 
 def test_execution_report_records_passed_scoped_result_pending_review() -> None:

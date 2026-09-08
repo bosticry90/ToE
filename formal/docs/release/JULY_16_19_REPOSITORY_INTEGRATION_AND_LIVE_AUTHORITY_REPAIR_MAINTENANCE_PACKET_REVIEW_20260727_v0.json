@@ -1,0 +1,139 @@
+{
+  "authorization": {
+    "authority_value_comparison_repair_authorized": true,
+    "blind_merge_authorized": false,
+    "bounded_integration_execution_authorized": true,
+    "clean_checkout_validation_authorized": true,
+    "controlled_semantic_replay_authorized": true,
+    "cumulative_test_isolation_repair_authorized": true,
+    "gravitational_custody_gate_repair_authorized": true,
+    "integration_result_review_required": true,
+    "packet_level_classification_and_preservation_authorized": true,
+    "readme_front_door_repair_authorized": true,
+    "restructured_architecture_must_prevail": true,
+    "scientific_mirror_repair_authorized": true,
+    "source_commit_disposition_inventory_required": true,
+    "versioned_maintenance_authority_successor_authorized": true
+  },
+  "captured_at_utc": "2026-07-27T00:00:00Z",
+  "claim_ceiling": "This review accepts only the bounded maintenance preparation and authorizes repository integration execution. It does not rotate scientific authority, adopt the July 16\u201319 scientific chain, authorize a new derivation or Yukawa rerun, permit pipe repair followed by rerun, validate preserved observations, change production, select a terminal response, close a pillar or seam, or promote the master action.",
+  "preparation_custody": {
+    "generator_path": "formal/python/tools/july_16_19_repository_integration_and_live_authority_repair_maintenance_packet_v0.py",
+    "generator_sha256": "f5cf2214864ebab19bb181ba3d346082a703a03d5b8e022169765f57d2be152d",
+    "packet_path": "formal/docs/release/JULY_16_19_REPOSITORY_INTEGRATION_AND_LIVE_AUTHORITY_REPAIR_MAINTENANCE_PACKET_20260727_v0.json",
+    "packet_sha256": "6fb61e29300497346654a22ee24d1b855a9f568b00c3e5cc2f5a895b54f507c7",
+    "preparation_commit": "fd77dd9259fb3f81fc1fa7b5f7e11fad544ab0d2",
+    "preparation_parent": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3"
+  },
+  "result_boundary": {
+    "integration_execution_must_preserve_scientific_target": true,
+    "integration_result_review_required_before_maintenance_closeout": true,
+    "ordered_adoption_is_not_presumed": true,
+    "scientific_adoption_or_replay_decision_is_post_maintenance": true,
+    "terminal_selector_may_be_unreachable_after_reconciliation": true
+  },
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 20,
+    "pass_count": 20,
+    "rows": [
+      {
+        "gate_id": "EXACT_PREPARATION_COMMIT_AND_PARENT_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PACKET_AND_GENERATOR_HASHES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_CANONICAL_SCIENTIFIC_TARGET_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SCIENTIFIC_TARGET_NOT_ROTATED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SCIENTIFIC_CHAIN_NOT_ADOPTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_NEW_PHYSICS_AUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_YUKAWA_RERUN_AUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PIPE_REPAIR_AND_RERUN_AUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRESERVED_OBSERVATIONS_REMAIN_NONVALIDATING",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXTERNAL_CUSTODY_MANIFEST_HASH_BOUND",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXTERNAL_CUSTODY_ARCHIVE_HASH_BOUND",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_ARCHIVED_EXTANT_COUNT_BOUND",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "INTEGRATION_EXECUTION_WAS_NOT_SELF_AUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "INDEPENDENT_REVIEW_WAS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RESTRUCTURED_BASELINE_IS_THE_REPLAY_PARENT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BLIND_MERGE_IS_PROHIBITED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "MAINTENANCE_CANNOT_ROTATE_SCIENCE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "POST_MAINTENANCE_SCIENTIFIC_RECONCILIATION_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TERMINAL_SELECTOR_NOT_PRECOMMITTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PROHIBITED_SCOPE_IS_CLOSED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "JULY_16_19_REPOSITORY_INTEGRATION_AND_LIVE_AUTHORITY_REPAIR_MAINTENANCE_PACKET_REVIEW_20260727_v0",
+  "schema_id": "toe.maintenance.july_16_19_repository_integration_and_live_authority_repair.packet.review.v0",
+  "scientific_firewall": {
+    "canonical_scientific_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "new_derivation_authorized": false,
+    "pipe_repair_and_rerun_authorized": false,
+    "preserved_observations_validation_use_authorized": false,
+    "production_change_authorized": false,
+    "scientific_chain_adoption_authorized": false,
+    "scientific_target_rotation_authorized": false,
+    "terminal_yukawa_selection_authorized": false,
+    "yukawa_execution_or_rerun_authorized": false
+  },
+  "selected_next_target": "execute_july_16_19_repository_integration_and_live_authority_repair_v0",
+  "selected_next_target_kind": "repository_integration_and_live_authority_repair_execution",
+  "target": "review_july_16_19_repository_integration_and_live_authority_repair_maintenance_packet_v0_result",
+  "verdict": "ACCEPTED_MAINTENANCE_PACKET_AUTHORIZES_BOUNDED_INTEGRATION_EXECUTION_ONLY"
+}

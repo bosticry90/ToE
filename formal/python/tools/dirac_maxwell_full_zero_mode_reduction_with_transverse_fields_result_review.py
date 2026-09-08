@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -35,6 +39,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "044ca568da1a4830b26c61c732eb8a013da712cb5c34758bf1bbb4df29ab6086",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 TOL = 1e-12
 
@@ -60,7 +65,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -196,7 +201,7 @@ def build_review_report() -> dict[str, Any]:
         "positive_negative_and_permanent_regression_controls_are_complete": len(controls["positive"]) == 8 and len(controls["negative"]) == 11 and "B-BLOCKED_TRANSVERSE_SECTOR_NOT_INVARIANT" in controls["permanent_regression_control"],
         "later_discrete_architecture_preserves_link_site_distinction": "Wilson links" in later["A1"] and later["phi2_phi3"].startswith("site-centered real descendant fields"),
         "maximum_claim_and_nonclaims_are_bounded": "zero-mode reduction" in packet["claim_ceiling"] and "no pure 1+1 Maxwell-Dirac truncation" in packet["nonclaims"] and "no transverse-mode decoupling" in packet["nonclaims"],
-        "only_numerical_guardrail_preparation_is_next_authorized": packet["post_acceptance_target"] == ACCEPTED_TARGET and boundary["numerical_guardrail_authorized"] is False and boundary["execution_authorized"] is False and sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256,
+        "only_numerical_guardrail_preparation_is_next_authorized": packet["post_acceptance_target"] == ACCEPTED_TARGET and boundary["numerical_guardrail_authorized"] is False and boundary["execution_authorized"] is False and prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE),
     }
     ordered = [{"decision_id": item, "passed": decisions[item]} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

@@ -1,0 +1,16 @@
+{
+  "captured_at_utc": "2026-07-21T22:37:45Z",
+  "checks": {
+    "automatic_repair_is_forbidden": true,
+    "hash_identity_repair_result_and_commit_are_bound": true,
+    "lean_and_python_lanes_are_separated": true,
+    "one_fresh_nonmutating_cycle_only": true,
+    "remaining_failure_classification_is_required": true,
+    "scientific_execution_and_authority_changes_are_forbidden": true,
+    "source_snapshot_guards_cover_every_validation_phase": true,
+    "v2_checks_do_not_authorize_enrollment": true
+  },
+  "review_basis": "SEPARATE_SCOPE_AND_BOUNDARY_RECOMPUTATION",
+  "schema_id": "POST_IDENTITY_BASELINE_REASSESSMENT_PACKET_REVIEW_20260721_v0",
+  "verdict": "ACCEPT"
+}

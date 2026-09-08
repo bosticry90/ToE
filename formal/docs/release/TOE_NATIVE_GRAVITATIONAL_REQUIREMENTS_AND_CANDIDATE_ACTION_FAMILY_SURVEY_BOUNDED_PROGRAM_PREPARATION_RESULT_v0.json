@@ -1,0 +1,257 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+  "authority_binding": {
+    "authority_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PREPARATION_AUTHORITY_v0.json",
+    "authority_sha256": "979d4c7410375159da80e0dd6ce31c10cf9b05aa7c2661af1c702ced64d3e213",
+    "review_path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PREPARATION_AUTHORITY_REVIEW_v0.json",
+    "review_sha256": "848a89fcd9765f2a561b8cd1bbd85836693abdd3090758e244baa268cf830ee2"
+  },
+  "candidate_action_family_inventory": [
+    "F_EH",
+    "F_FR",
+    "F_QUADRATIC",
+    "F_EXTRA_FIELD",
+    "F_NONLOCAL",
+    "F_CONNECTION_TORSION",
+    "F_EQUIVALENCE_PROBE"
+  ],
+  "captured_at_utc": "2026-07-31T11:00:00Z",
+  "closed_lane_boundary": {
+    "automated_action_selection_tooling_lane": "CLOSED",
+    "closed_v2_matrix_population_permitted": false,
+    "project_evidence_self_attestation_permitted": false,
+    "real_family_judgments_in_v2": 0,
+    "real_matrix_cells_in_v2": 0,
+    "v3_automated_tooling_authorized": false
+  },
+  "deep_review_selection_contract": {
+    "priority_order": [
+      "Stage_5_supporting_and_blocking_sources",
+      "current_or_latest_lineage_heads_for_GRAVITY_SECTOR",
+      "earliest_primary_source_for_each_requirement_or_family_lineage",
+      "sources_containing_unique_definitions_equations_limits_or_negative_results",
+      "sources representing preserved conflicts or supersession",
+      "derived summaries only when a primary source is unavailable",
+      "stable_path_then_content_hash_order_for_remaining_ties"
+    ],
+    "source_selection_may_not_use_desired_compatibility_outcome": true,
+    "unreviewed_overflow_must_be_reported": true
+  },
+  "mandatory_exit_target_proposed": "close_toe_native_gravitational_requirements_and_candidate_action_family_survey_v0_after_bounded_result_v0",
+  "native_hypothesis": {
+    "hypothesis_id": "HYP_TOE_NATIVE_GRAVITATIONAL_PRINCIPLE_ACTION_SELECTION_v0",
+    "question": "Can independently source-bound native gravitational requirements and candidate-family definitions make one or more preserved local metric-action families eligible for a later bounded action-selection adjudication?",
+    "readiness_before_program": "AFTER_ONE_PREREQUISITE"
+  },
+  "nonclaim_boundary": {
+    "candidate_action_selected": false,
+    "canonical_evidence_promoted": false,
+    "gravitational_action_adopted": false,
+    "gravitational_calculation_authorized": false,
+    "master_action_promoted": false,
+    "native_gravitational_principle_derived": false,
+    "program_installed": false,
+    "scientific_stage_opened": false,
+    "standard_gr_selected": false,
+    "successor_action_selection_program_authorized": false
+  },
+  "program_controls": {
+    "authorized_stage_count_proposed": 5,
+    "automatic_successor": false,
+    "maximum_action_families": 7,
+    "maximum_compatibility_cells": 70,
+    "maximum_evidence_references_per_cell": 8,
+    "maximum_extracted_evidence_statements": 512,
+    "maximum_lineage_components": 32,
+    "maximum_native_requirement_rows": 10,
+    "maximum_source_artifacts_for_deep_review": 96,
+    "maximum_total_bounded_source_excerpt_words": 24000,
+    "maximum_unresolved_lineage_relationships": 32,
+    "no_subsidiary_scientific_targets": true,
+    "repair_attempt_count": 0
+  },
+  "program_terminal_outcomes": [
+    "ONE_OR_MORE_ACTION_FAMILIES_READY_FOR_SELECTION",
+    "ALL_CANDIDATES_REQUIRE_ONE_DEFINITION",
+    "ALL_CANDIDATES_REQUIRE_ONE_DERIVATION",
+    "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+    "GRAVITATIONAL_REQUIREMENTS_CONFLICT",
+    "SOURCE_EVIDENCE_INSUFFICIENT"
+  ],
+  "proposed_program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "provisional_compatibility_vocabulary": [
+    "CLEARLY_COMPATIBLE",
+    "CLEARLY_INCOMPATIBLE",
+    "LIKELY_COMPATIBLE",
+    "LIKELY_INCOMPATIBLE",
+    "UNRESOLVED",
+    "OUTSIDE_SCOPE"
+  ],
+  "requirement_inventory": [
+    "R1_DIMENSION",
+    "R2_METRIC_ONLY",
+    "R3_LOCALITY",
+    "R4_DIFF_COVARIANCE",
+    "R5_CK_FIREWALL",
+    "R6_LOCAL_VARIATION",
+    "R7_SOURCE_COMPATIBILITY",
+    "R8_NEWTON_POISSON",
+    "R9_MOMENTUM_CURRENT",
+    "R10_STABILITY_NO_FIT"
+  ],
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.bounded_program_preparation_result.v0",
+  "source_bindings": [
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.md",
+      "role": "frozen ten-requirement and seven-family baseline",
+      "sha256": "b74f94c30298d81671157213845bf761631fb9cc39a8d102b93c236e8199056f"
+    },
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.md",
+      "role": "preserved contract defects and statement-class boundary",
+      "sha256": "7c17a967d719f0dabf887cf5fb98b7ccaf1d3dbc34f19d8b5f6368d66f2ac7ea"
+    },
+    {
+      "path": "formal/docs/lanes/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.md",
+      "role": "closed automated lane and evidence self-attestation blocker",
+      "sha256": "f72b793eadd4db520e30d3af5d0f22a5735d3451639ea092740a97eae3cb5b31"
+    },
+    {
+      "path": "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0.json",
+      "role": "selected frontier and prerequisite",
+      "sha256": "58602db2ff2ffaa6820c68ab80f55985c50f106be3b9c5a934dba696c615f4d5"
+    },
+    {
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "role": "terminal census boundary",
+      "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34"
+    }
+  ],
+  "stages": [
+    {
+      "canonical_target_proposed": "inventory_toe_native_gravitational_requirements_v0",
+      "prohibited_claims": [
+        "requirement truth or native status from historical wording alone",
+        "action-family compatibility judgment",
+        "new gravitational postulate",
+        "action selection"
+      ],
+      "required_outputs": [
+        "ten_row_source_and_authority_ledger",
+        "statement_class_for_every_requirement",
+        "requirement_scope_units_symmetry_and_selection_power_ledger",
+        "conflict_supersession_and_missing_definition_ledger"
+      ],
+      "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+      "stage_number": 1,
+      "terminal_outcomes": [
+        "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE",
+        "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+        "NATIVE_GRAVITATIONAL_REQUIREMENT_EVIDENCE_INSUFFICIENT"
+      ]
+    },
+    {
+      "canonical_target_proposed": "inventory_toe_candidate_gravitational_action_families_v0",
+      "prohibited_claims": [
+        "family viability or superiority judgment",
+        "outside-scope family scientific refutation",
+        "family-envelope expansion",
+        "action selection"
+      ],
+      "required_outputs": [
+        "seven_family_source_and_lineage_ledger",
+        "field_content_action_terms_derivative_order_and_symmetry_ledger",
+        "coefficient_origin_limits_calculations_and_negative_result_ledger",
+        "native_control_historical_superseded_and_scope_classification"
+      ],
+      "semantic_stage_id": "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY",
+      "stage_number": 2,
+      "terminal_outcomes": [
+        "CANDIDATE_GRAVITATIONAL_ACTION_FAMILY_INVENTORY_COMPLETE",
+        "ACTION_FAMILY_INVENTORY_COMPLETE_WITH_UNRESOLVED_MEANINGS",
+        "ACTION_FAMILY_SOURCE_EVIDENCE_INSUFFICIENT"
+      ]
+    },
+    {
+      "canonical_target_proposed": "reconstruct_toe_gravitational_requirement_and_action_family_lineages_v0",
+      "prohibited_claims": [
+        "scientific truth from documentary descent",
+        "silent supersession",
+        "semantic equivalence from symbol similarity",
+        "compatibility judgment"
+      ],
+      "required_outputs": [
+        "requirement_lineage_graph",
+        "action_family_lineage_graph",
+        "source_to_review_and_source_to_result_edges",
+        "supersession_conflict_and_unresolved_relationship_ledger"
+      ],
+      "semantic_stage_id": "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGE_RECONSTRUCTION",
+      "stage_number": 3,
+      "terminal_outcomes": [
+        "GRAVITATIONAL_REQUIREMENT_AND_FAMILY_LINEAGES_RECONSTRUCTED",
+        "LINEAGES_RECONSTRUCTED_WITH_BOUNDED_UNRESOLVED_RELATIONSHIPS",
+        "LINEAGE_RECONSTRUCTION_BLOCKED_BY_PROVENANCE"
+      ]
+    },
+    {
+      "canonical_target_proposed": "survey_toe_source_bound_gravitational_requirement_family_compatibility_v0",
+      "prohibited_claims": [
+        "population of the closed V2 automated matrix",
+        "self-attested scientific evidence",
+        "survivor-set or native-principle verdict",
+        "action selection or adoption"
+      ],
+      "required_outputs": [
+        "bounded_ten_by_seven_provisional_compatibility_survey",
+        "source_excerpt_and_domain_binding_for_every_non_unresolved_cell",
+        "independent_cell_review",
+        "uncertainty_conflict_and_missing_derivation_ledger",
+        "standard_GR_oracle_isolation_audit"
+      ],
+      "semantic_stage_id": "SOURCE_BOUND_REQUIREMENT_FAMILY_COMPATIBILITY_SURVEY",
+      "stage_number": 4,
+      "terminal_outcomes": [
+        "SOURCE_BOUND_COMPATIBILITY_SURVEY_COMPLETE",
+        "COMPATIBILITY_SURVEY_COMPLETE_WITH_UNRESOLVED_CELLS",
+        "COMPATIBILITY_SURVEY_BLOCKED_BY_SOURCE_EVIDENCE"
+      ]
+    },
+    {
+      "canonical_target_proposed": "select_toe_gravitational_action_family_eligibility_handoff_v0",
+      "prohibited_claims": [
+        "gravitational action adoption",
+        "native gravitational principle derivation",
+        "automatic action-selection program",
+        "standard_GR promotion",
+        "empirical validation"
+      ],
+      "required_outputs": [
+        "eligibility_classification_for_all_seven_families",
+        "remaining_definition_derivation_conflict_and_evidence_ledger",
+        "exactly_one_program_terminal_outcome",
+        "separately_authorizable_action_selection_handoff_or_explicit_no_handoff"
+      ],
+      "semantic_stage_id": "CANDIDATE_ACTION_FAMILY_ELIGIBILITY_HANDOFF",
+      "stage_number": 5,
+      "terminal_outcomes": [
+        "ONE_OR_MORE_ACTION_FAMILIES_READY_FOR_SELECTION",
+        "ALL_CANDIDATES_REQUIRE_ONE_DEFINITION",
+        "ALL_CANDIDATES_REQUIRE_ONE_DERIVATION",
+        "NO_PRESERVED_CANDIDATE_SATISFIES_NATIVE_REQUIREMENTS",
+        "GRAVITATIONAL_REQUIREMENTS_CONFLICT",
+        "SOURCE_EVIDENCE_INSUFFICIENT"
+      ]
+    }
+  ],
+  "statement_class_vocabulary": [
+    "ACCEPTED_PROJECT_REQUIREMENT",
+    "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+    "RETAINED_RECOVERY_OBLIGATION",
+    "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION",
+    "NEW_PROPOSED_POSTULATE",
+    "UNRESOLVED_AUTHORITY_STATUS"
+  ],
+  "status": "PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY",
+  "terminal_outcome": "GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PROPOSAL_PREPARED"
+}

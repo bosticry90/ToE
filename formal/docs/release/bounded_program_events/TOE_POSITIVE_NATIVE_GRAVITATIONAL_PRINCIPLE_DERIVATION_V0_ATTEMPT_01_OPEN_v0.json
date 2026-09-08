@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 1,
+  "event_hash": "3a0cbecced692a38c34fd9d4393db471a0242e2dbfe830863ca2cba5069db2e7",
+  "event_sequence_number": 1,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "d8ad84c73caa1acfba64e07e99cf1e375b2858dc",
+  "previous_event_hash": null,
+  "program_id": "TOE_POSITIVE_NATIVE_GRAVITATIONAL_PRINCIPLE_DERIVATION_V0",
+  "registry_snapshot_hash": "e7143c8dad93e8e0ede11cd86ac9b87d59608f1526a27937c82a097d6c80afc8",
+  "scope_hash": "adec5050977697a470c1ef6afb4d136bc415f1a592008c9b7c2546a74f80ab90",
+  "semantic_stage_id": "POSITIVE_GRAVITATIONAL_PRINCIPLE_SOURCE_INVENTORY",
+  "target": "inventory_toe_positive_native_gravitational_principle_sources_v0"
+}

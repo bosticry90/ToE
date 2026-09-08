@@ -84,4 +84,4 @@ def test_nonpromotion_and_prompt_boundaries_hold() -> None:
     assert authority["seam_closure_authorized"] is False
     assert authority["C_k_dynamics_authorized"] is False
     assert authority["master_action_validation_authorized"] is False
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

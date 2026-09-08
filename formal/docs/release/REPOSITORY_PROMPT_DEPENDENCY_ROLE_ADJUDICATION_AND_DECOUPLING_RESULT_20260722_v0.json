@@ -1,0 +1,264 @@
+{
+  "schema_id": "REPOSITORY_PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_RESULT_20260722_v0",
+  "result": "PROMPT_DEPENDENCY_ROLE_ADJUDICATION_AND_DECOUPLING_IMPLEMENTATION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "branch": "codex/prompt-dependency-role-decoupling-v0",
+  "base_commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+  "authorization_commit": "686ff35cfacd45a40d94459871b9debf63510ef3",
+  "implementation_commit": "422a0e6f799239a5545dda15697cec2efa14325d",
+  "scope": {
+    "scientific_activity": 0,
+    "lean_activity": 0,
+    "broad_failure_repair_activity": 0,
+    "automatic_successor_cycle": false,
+    "prompt_substantive_content_changed": false,
+    "scientific_or_governance_artifacts_changed": false,
+    "registry_target_changed": false,
+    "v2_enrollment_authorized": false,
+    "scientific_resumption_authorized": false
+  },
+  "custody_reverification": {
+    "tracked_modifications": 7,
+    "untracked_files": 622,
+    "total_dirty_paths": 629,
+    "manifest_added_paths": 0,
+    "manifest_removed_paths": 0,
+    "manifest_status_mismatches": 0,
+    "dirty_main_touched_by_implementation": false
+  },
+  "adjudication": {
+    "consumer_count": 43,
+    "dispositions": {
+      "REMOVE_DEPENDENCY": 0,
+      "DEMOTE_TO_NONBLOCKING_PROVENANCE": 41,
+      "RETAIN_AS_REPRODUCIBILITY_BLOB_IDENTITY": 2,
+      "RETAIN_AS_EXPLICIT_CANONICAL_EXPORT_IDENTITY": 0
+    },
+    "blind_global_hash_replacement": false,
+    "legacy_hash_occurrence_consumer_count": 43
+  },
+  "implementation": {
+    "shared_helper": "formal/python/tools/prompt_dependency_identity.py",
+    "adjudication_record": "formal/docs/release/PROMPT_DEPENDENCY_ROLE_ADJUDICATION_20260722_v0.json",
+    "demoted_consumer_count": 41,
+    "replaced_raw_byte_test_obligation_count": 39,
+    "frozen_semantic_source_commit": "8f2d2052ab3862db04ea70d85037dbf2d131c8ca",
+    "rationale": "Maintenance-only Prompt decoupling is separated from the frozen semantic generator identities recorded by unchanged historical artifacts.",
+    "raw_prompt_checkout_comparisons_remaining_in_demoted_consumers": 0,
+    "v2_pair_existing_frozen_blob_identity_preserved": true
+  },
+  "original_206_outcome_reassessment": {
+    "inventory_count": 206,
+    "passed_after_decoupling": 195,
+    "explicitly_reclassified": 11,
+    "errors": 0,
+    "unclassified": 0,
+    "prompt_identity_failures_remaining": 0,
+    "reclassified_outcomes": [
+      {
+        "nodeid": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1.py::test_generated_artifacts_are_current",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "ENVIRONMENT_IDENTITY_DEFECT",
+        "post_decoupling_root_id": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+        "causal_role": "PRIMARY",
+        "first_exception": "Committed artifact reconstruction differs in environment-bound identities after Prompt decoupling.",
+        "evidence": "V1 rebuild binds checkout bytes for requirements.active.lock, lean-toolchain, lake-manifest.json, and .gitattributes; current identities differ from committed expectations.",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py::test_review_report_is_current",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "ENVIRONMENT_IDENTITY_DEFECT",
+        "post_decoupling_root_id": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+        "causal_role": "SECONDARY_CASCADE",
+        "first_exception": "Committed artifact reconstruction differs in environment-bound identities after Prompt decoupling.",
+        "evidence": "V1 rebuild binds checkout bytes for requirements.active.lock, lean-toolchain, lake-manifest.json, and .gitattributes; current identities differ from committed expectations.",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v1_result_review.py::test_current_filename_set_is_safe_but_identity_contract_is_incomplete",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "ENVIRONMENT_IDENTITY_DEFECT",
+        "post_decoupling_root_id": "ABSOLUTE_CHECKOUT_PATH_LENGTH_IDENTITY",
+        "causal_role": "PRIMARY",
+        "first_exception": "AssertionError: generated absolute path length is 263, contract requires less than 260.",
+        "evidence": "Absolute checkout path is embedded in the historical validation contract.",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2.py::test_generated_artifacts_are_current",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "ENVIRONMENT_IDENTITY_DEFECT",
+        "post_decoupling_root_id": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+        "causal_role": "SECONDARY_CASCADE",
+        "first_exception": "Committed artifact reconstruction differs in environment-bound identities after Prompt decoupling.",
+        "evidence": "V1 rebuild binds checkout bytes for requirements.active.lock, lean-toolchain, lake-manifest.json, and .gitattributes; current identities differ from committed expectations.",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py::test_identity_closes_across_matrix_manifest_path_and_payload_contract",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "ENVIRONMENT_IDENTITY_DEFECT",
+        "post_decoupling_root_id": "ABSOLUTE_CHECKOUT_PATH_LENGTH_IDENTITY",
+        "causal_role": "PRIMARY",
+        "first_exception": "AssertionError: generated absolute path length is 263, contract requires less than 260.",
+        "evidence": "Absolute checkout path is embedded in the historical validation contract.",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result_review.py::test_generated_review_report_is_current",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "ENVIRONMENT_IDENTITY_DEFECT",
+        "post_decoupling_root_id": "LEGACY_ENVIRONMENT_BOUND_FILE_IDENTITY",
+        "causal_role": "SECONDARY_CASCADE",
+        "first_exception": "Committed artifact reconstruction differs in environment-bound identities after Prompt decoupling.",
+        "evidence": "V1 rebuild binds checkout bytes for requirements.active.lock, lean-toolchain, lake-manifest.json, and .gitattributes; current identities differ from committed expectations.",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_artifacts_are_current",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "STALE_ARTIFACT_EXPECTATION",
+        "post_decoupling_root_id": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+        "causal_role": "PRIMARY",
+        "first_exception": "ValueError: accepted selector input hash mismatch: formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
+        "evidence": "Selector expects edd86640... while the accepted repaired V2 packet is da576a72....",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_scores_all_rows_and_criteria",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "STALE_ARTIFACT_EXPECTATION",
+        "post_decoupling_root_id": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+        "causal_role": "SECONDARY_CASCADE",
+        "first_exception": "ValueError: accepted selector input hash mismatch: formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
+        "evidence": "Selector expects edd86640... while the accepted repaired V2 packet is da576a72....",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_selects_sr_stably_without_execution_readiness",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "STALE_ARTIFACT_EXPECTATION",
+        "post_decoupling_root_id": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+        "causal_role": "SECONDARY_CASCADE",
+        "first_exception": "ValueError: accepted selector input hash mismatch: formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
+        "evidence": "Selector expects edd86640... while the accepted repaired V2 packet is da576a72....",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_separates_target_and_execution_readiness",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "STALE_ARTIFACT_EXPECTATION",
+        "post_decoupling_root_id": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+        "causal_role": "SECONDARY_CASCADE",
+        "first_exception": "ValueError: accepted selector input hash mismatch: formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
+        "evidence": "Selector expects edd86640... while the accepted repaired V2 packet is da576a72....",
+        "prompt_dependency_remaining": false
+      },
+      {
+        "nodeid": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_first_unit_selector.py::test_selector_preserves_candidate_and_prompt_boundaries",
+        "prior_first_cause": "PROMPT_CHECKOUT_BYTE_IDENTITY",
+        "post_decoupling_classification": "STALE_ARTIFACT_EXPECTATION",
+        "post_decoupling_root_id": "FIRST_UNIT_SELECTOR_STALE_V2_PACKET_HASH",
+        "causal_role": "SECONDARY_CASCADE",
+        "first_exception": "ValueError: accepted selector input hash mismatch: formal/output/PILLAR-SEAM-UNIT-MAPPING-LEDGER-BLOCKER-RESPONSE-ROUTE-SELECTION-PACKET-v2.json",
+        "evidence": "Selector expects edd86640... while the accepted repaired V2 packet is da576a72....",
+        "prompt_dependency_remaining": false
+      }
+    ]
+  },
+  "reclassification_evidence": {
+    "legacy_environment_bound_files": [
+      {
+        "path": "requirements.active.lock",
+        "committed_artifact_expectation": "48788b703a7a94a051f1083f729f22c9349bbc415b46af4834f6500999c6cd4d",
+        "git_blob_sha256": "eefb37359a4d4fcbe1df8f87c6ee786974f27d8d338dd59b413d418948d7ab9a",
+        "crlf_projection_sha256": "66808ce5964f9d2fb0c0f1c0d0af190dcbdb60d0369a7462ab8c6685beb9f4e9"
+      },
+      {
+        "path": "formal/toe_formal/lean-toolchain",
+        "committed_artifact_expectation": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2",
+        "git_blob_sha256": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+        "crlf_projection_sha256": "191b7d41ec85ac86d842b357e0407e354737268702749dacbbb73175bbb939e2"
+      },
+      {
+        "path": "formal/toe_formal/lake-manifest.json",
+        "committed_artifact_expectation": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c",
+        "git_blob_sha256": "19e09b5f13d32af5353532484e6b3040d4cccdd2c8b5961ec5663d7de8b2d36b",
+        "crlf_projection_sha256": "3f17aafa88120f02af27d65b33555c4334804eb5fd08433fe27342a6dd0ec34c"
+      },
+      {
+        "path": ".gitattributes",
+        "committed_artifact_expectation": "8f1e4dfa773e52d1cc34d8c3f0798411dd3d60111c99746e883ed42e9f4f4f76",
+        "git_blob_sha256": "0d5f1f320c2ebbdc7a1918f6656e2d4df55528d61a0ef8101045f125d3627dfc",
+        "crlf_projection_sha256": "ab78ec0df69035371b1a12a2bc5c1d9464fac2e4056f0e939b6e81f526c92492"
+      }
+    ],
+    "absolute_path_length_observed": 263,
+    "absolute_path_length_contract_max_exclusive": 260,
+    "selector_expected_v2_packet_sha256": "edd86640c3d6664e27874e5e3737dfd20f3c85dd91729d74266eb296cdd20b3b",
+    "accepted_repaired_v2_packet_sha256": "da576a72df5831c27053fbbd0f28d80e20aea975ad66b5fc936ff704c889c42a",
+    "selector_v2_review_identity_matches": true
+  },
+  "focused_acceptance": {
+    "composition": {
+      "recovered_legacy_outcomes": 195,
+      "new_adjudication_guards": 8,
+      "v2_deterministic_pair": 11,
+      "total": 214
+    },
+    "lf": {
+      "prompt_worktree_sha256": "35cfeb3dcec5246d926af60afabbc23d1bbe814689d1b54ad8718e02fae924c5",
+      "passed": 214,
+      "failed": 0,
+      "errors": 0,
+      "tracked_status_after": "EMPTY",
+      "unexpected_untracked_source": "NONE",
+      "elapsed_seconds": 415.69
+    },
+    "crlf": {
+      "prompt_worktree_sha256": "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433",
+      "passed": 214,
+      "failed": 0,
+      "errors": 0,
+      "tracked_status_after": "EMPTY",
+      "unexpected_untracked_source": "NONE",
+      "elapsed_seconds": 416.1
+    }
+  },
+  "preservation": {
+    "prompt_git_blob_oid_before": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "prompt_git_blob_oid_after": "1cd7786c26ece8bf645d50f80740ef789b1c27d9",
+    "formal_output_tree_before": "77550eeadf24bd0930fd6c853c0031f7c9d66bbf",
+    "formal_output_tree_after": "77550eeadf24bd0930fd6c853c0031f7c9d66bbf",
+    "toe_formal_tree_before": "992e22e06249c15f837df9b88119d7e962961e3c",
+    "toe_formal_tree_after": "992e22e06249c15f837df9b88119d7e962961e3c"
+  },
+  "external_evidence": [
+    {
+      "path": "PROMPT_FAMILY_FROZEN_NODEIDS_v0.txt",
+      "sha256": "dd34b1a27fb3a5941889be75286c43b1e514d58795b342d7851d54498edc15b7"
+    },
+    {
+      "path": "PROMPT_FAMILY_IMPLEMENTATION_JUNIT_v0.xml",
+      "sha256": "f20dc83950610084aff5377be95acacc5193db6597bff65aa234ba5a0d9ba0c6"
+    },
+    {
+      "path": "PROMPT_FAMILY_RECOVERED_NODEIDS_v0.txt",
+      "sha256": "75c7f332b43b361828a40920ef203304c47b72ef21866c47aa9c62143466036c"
+    },
+    {
+      "path": "LF_FOCUSED_JUNIT_v0.xml",
+      "sha256": "ca537999ec635f8127e268c678c991d9ef6969e839ea1d6447cb8159737ce73c"
+    },
+    {
+      "path": "CRLF_FOCUSED_JUNIT_v0.xml",
+      "sha256": "572ec21ac06de9abca08072d9cd6d5933450b6ebafb045428ac34efa6f7a1384"
+    }
+  ],
+  "scientific_posture": "B-BLOCKED",
+  "broad_python_baseline": "NOT_REASSESSED_IN_THIS_PACKET",
+  "lean_status": "LEAN_DEPENDENCY_BOOTSTRAP_TIMEOUT_UNCHANGED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "next_cycle": "NOT_AUTOMATICALLY_AUTHORIZED"
+}

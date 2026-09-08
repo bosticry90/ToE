@@ -1,0 +1,144 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_RESULT_20260725_v0",
+  "status": "CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_IMPLEMENTED_AWAITING_INDEPENDENT_REVIEW",
+  "authority": {
+    "selection": "formal/docs/release/CURRENT_CONTROL_PLANE_PROFILE_V2_EXPOSED_ROOT_REPAIR_SELECTION_20260725_v0.json",
+    "execution_count_used": 1,
+    "automatic_successor_authority": "NONE"
+  },
+  "implementation": {
+    "branch": "codex/current-control-plane-four-root-repair-v0",
+    "commit": "a875b5538db790e7732acd8927bf53acd0615e6b",
+    "tree": "6c24fa5b8d14c92d436719f9a3c99ce97a4b2a8b"
+  },
+  "repaired_roots": [
+    {
+      "root": "ACCEPTED_LINEAGE_FIXED_BASE_NOT_VERSIONED_THROUGH_ACCEPTED_SUCCESSORS",
+      "outcomes": 3,
+      "repair": "VERSIONED_ACCEPTED_LINEAGE_V1_THROUGH_F74CE9CE",
+      "result": "5 / 5 LINEAGE GUARDS PASS",
+      "protected_invariant_manifest": "formal/docs/release/RECOVERY_ACCEPTED_LINEAGE_PROTECTED_INVARIANTS_20260725_v1.json",
+      "lineage_manifest": "formal/docs/release/RECOVERY_ACCEPTED_LINEAGE_COMPLETENESS_MANIFEST_20260725_v1.json"
+    },
+    {
+      "root": "PROMPT_REPAIR_BROAD_FORMAL_OUTPUT_SNAPSHOT_SUPERSEDED_BY_VALIDATION_PROFILE_ARTIFACTS",
+      "outcomes": 1,
+      "repair": "PRESERVE_PROMPT_AND_SCIENTIFIC_SURFACES_WHILE_PERMITTING_ACCEPTED_VALIDATION_PROFILE_OUTPUTS",
+      "result": "1 / 1 PROMPT INVARIANT GUARD PASS",
+      "supersession_record": "formal/docs/release/PROMPT_DECOUPLING_CURRENT_INVARIANT_SUPERSESSION_20260725_v0.json"
+    }
+  ],
+  "focused_current_guards": {
+    "lineage_prompt_and_profile_contracts": "16 / 16 PASS",
+    "tracked_checkout_after": "CLEAN"
+  },
+  "lean_guard_retry": {
+    "scope": "FOUR_PYTEST_LEAN_BUILD_GUARDS_ONLY",
+    "full_frozen_lean_graph_executed": false,
+    "source_or_type_error_observed": false,
+    "toolchain": {
+      "lean": "4.27.0-rc1",
+      "lean_commit": "2fcce7258eeb6e324366bc25f9058293b04b7547",
+      "lake": "5.0.0-src+2fcce72"
+    },
+    "dependency_identity": {
+      "mathlib_commit": "32d24245c7a12ded17325299fd41d412022cd3fe",
+      "cache_origin": "leanprover-community/mathlib4 Azure cache",
+      "forced_archive_refresh_count": 7728,
+      "short_path_replay_count": 7728
+    },
+    "environmental_diagnostics": [
+      {
+        "condition": "OVERLAPPING_PROFILE_LAUNCHES_SHARED_ONE_LAKE_TREE",
+        "classification": "NON_ACCEPTANCE_DEPENDENCY_CHECKOUT_CORRUPTION"
+      },
+      {
+        "condition": "COLD_SOURCE_BUILD_IN_DISPOSABLE_CHECKOUT",
+        "classification": "NON_ACCEPTANCE_PROJECTED_MULTI_HOUR_DEPENDENCY_BUILD",
+        "compiled_mathlib_oleans_before_stop": 616
+      },
+      {
+        "condition": "FIRST_CACHE_REPLAY_AFTER_DISK_EXHAUSTION",
+        "classification": "NON_ACCEPTANCE_TRUNCATED_LOCAL_CACHE_ARCHIVES"
+      },
+      {
+        "condition": "VERIFIED_CACHE_REPLAY_IN_DEEP_WINDOWS_WORKTREE",
+        "classification": "NON_ACCEPTANCE_WINDOWS_LONG_PATH_SIDECAR_REPLAY_FAILURE"
+      }
+    ],
+    "accepted_retry": {
+      "checkout": "C:/toe-lean-rv0",
+      "commit": "a875b5538db790e7732acd8927bf53acd0615e6b",
+      "tree": "6c24fa5b8d14c92d436719f9a3c99ce97a4b2a8b",
+      "result": "4 / 4 PASS",
+      "duration_seconds": 391.52,
+      "checkout_after": "CLEAN"
+    },
+    "evidence": {
+      "forced_cache_refresh_stdout": {
+        "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/lean_cache_force_refresh.stdout.log",
+        "sha256": "8076ca7836b9a662940581cae7c2127e885d250e342a67b6f3ac1670c13629c1",
+        "size_bytes": 234
+      },
+      "forced_cache_refresh_progress": {
+        "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/lean_cache_force_refresh.stderr.log",
+        "sha256": "cec3fc5e92172bd915ad64eb9cb53f32f0af787b00918ece3bec073e4d1bcb3d",
+        "size_bytes": 16666
+      },
+      "short_path_cache_stdout": {
+        "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/lean_short_path_cache_get.stdout.log",
+        "sha256": "c5449b181228948e5f6be432ab4bc5bd7c1aa4af790d9f2c7698f4149af1ff37",
+        "size_bytes": 223
+      },
+      "short_path_cache_progress": {
+        "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/lean_short_path_cache_get.stderr.log",
+        "sha256": "25142627a29ad4856836ffa9bf9dae0608c287b9d95d6b8ee61b8eee14fb45c6",
+        "size_bytes": 1994
+      },
+      "guard_stdout": {
+        "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/lean_guard_short_path_retry.stdout.log",
+        "sha256": "15a0b06e7eb8c4b2d5c11bd5343c85f3fd0257cfa89f3daf4a43a9b94dc541e4",
+        "size_bytes": 260
+      },
+      "guard_stderr": {
+        "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/lean_guard_short_path_retry.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      "guard_junit": {
+        "path": ".toe-recovery/custody-v0/recovery-validation-profile-v2/lean_guard_short_path_retry.junit.xml",
+        "sha256": "bb6f64a46322358ccff0afabaa31abd78ad1491699be782e721d3230b4f8581f",
+        "size_bytes": 893
+      }
+    }
+  },
+  "custody": {
+    "active_recovery_checkout_clean": true,
+    "short_path_retry_checkout_clean": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_changes": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_byte_preserved": true,
+    "removed_material": [
+      "GENERATED_IGNORED_LAKE_OUTPUT_FROM_INTERRUPTED_DISPOSABLE_WORKTREE",
+      "GENERATED_IGNORED_CORRUPT_LAKE_OUTPUT_FROM_ACTIVE_RECOVERY_WORKTREE",
+      "CORRUPT_REGENERABLE_MATHLIB_LOCAL_CACHE_ARCHIVES"
+    ],
+    "tracked_or_custody_artifacts_removed": 0
+  },
+  "acceptance_boundary": {
+    "current_profile_v2_rerun": "NOT_YET_PERFORMED",
+    "historical_isolation": "NOT_YET_PROVEN",
+    "complete_recovery_lineage_lean_graph": "NOT_YET_EXECUTED",
+    "dirty_main_terminal_dispositions": "NOT_YET_COMPLETE",
+    "integration_candidate": "NOT_YET_CONSTRUCTED"
+  },
+  "scientific_state": {
+    "scientific_posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": "0 / 12",
+    "qft_gr_seam": "OPEN",
+    "v2_enrollment": "NOT_AUTHORIZED",
+    "scientific_resumption": "NOT_AUTHORIZED",
+    "scientific_content_changed": false
+  }
+}

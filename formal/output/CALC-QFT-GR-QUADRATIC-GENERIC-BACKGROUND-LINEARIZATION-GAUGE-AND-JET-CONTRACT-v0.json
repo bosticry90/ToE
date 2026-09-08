@@ -1,0 +1,521 @@
+{
+  "background_classes": {
+    "accepted_equation_count_input": 64,
+    "gauge_compatible_on_shell_background": "Apply strict H=0 and the harmonic constraint after the on-shell normal form; no gauge-source coefficient survives.",
+    "off_shell_generic_jet": "Retain the accepted 64 reduced residuals; do not use field equations as substitutions.",
+    "on_shell_generic_background": "Set reduced residuals to zero only after the off-shell component Jacobian and normal form have been recorded.",
+    "stage_2_independent_inventory_verification_required": true
+  },
+  "bounded_authority": {
+    "attempt_sequence_number": 1,
+    "open_event_hash": "40acd16a141189d7542fd78cd5cceb9fb0a5e2fd6250f699ae393394bbd469c0",
+    "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_01_OPEN_v0.json",
+    "open_event_sha256": "5771b664e4ff57a72dc87d64f3ecb02da9705a5ca222f5f70e86d72758d5933e",
+    "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+    "semantic_stage_id": "STRICT_HARMONIC_GAUGE_JET_CONTRACT"
+  },
+  "calculation_id": "CALC-QFT-GR-QUADRATIC-GENERIC-BACKGROUND-LINEARIZATION-GAUGE-AND-JET-CONTRACT-v0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "claim_boundary": {
+    "component_expanded_linearization_derived": false,
+    "constraint_tangent_projector_constructed": false,
+    "exact_generic_companion_operator_derived": false,
+    "finite_jet_order_frozen": true,
+    "generic_finite_loss_established": false,
+    "local_well_posedness_established": false,
+    "quadratic_gravity_native_toe_status_claimed": false,
+    "reduced_and_metric_regularity_separated": true,
+    "rewrite_termination_and_confluence_established": true,
+    "strict_harmonic_contract_frozen": true,
+    "tracefree_atlas_complete": true
+  },
+  "consumed_inputs": {
+    "minkowski_control": {
+      "path": "formal/output/CALC-QFT-GR-QUADRATIC-EXACT-GENERIC-FROZEN-COMPANION-OPERATOR-v0.json",
+      "sha256": "750bafb46fadad7763ec574506e9e616140b0d0f1bd7697d7268fb6e72f3c682"
+    },
+    "predecessor_review": {
+      "path": "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_RESULT_REVIEW_20260728_v0.json",
+      "sha256": "2c27c06d872168765167987300dc1f5ed12e9fdd0fbb343eb1ca15362fd8299b"
+    },
+    "reduced_system": {
+      "path": "formal/output/CALC-QFT-GR-QUADRATIC-AUXILIARY-HARMONIC-REDUCED-SYSTEM-v0.json",
+      "sha256": "a0b1d73895ed9f9c92ea523117ecc17421b0b03b32736258f144cf23370f1390"
+    }
+  },
+  "execution_target": "prepare_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0",
+  "minkowski_regression": {
+    "matrix_shape": [
+      128,
+      128
+    ],
+    "metric_signature": "(-,+,+,+)",
+    "nonzero_entry_count": 224,
+    "regression_status": "EXACT_ACCEPTED_CONTROL_CUSTODY_REPRODUCED",
+    "selected_trace_chart": "TRACEFREE_CHART_PIVOT_33",
+    "sparse_entry_sha256": "5e8607c78b5020a287bbfc5448bc5e42d945828e2b0d7b1d37594b8658d0fa8a",
+    "strict_harmonic_source": "H^mu=delta H^mu=0",
+    "trace_coefficients": {
+      "off_diagonal": "0",
+      "q_00": "-1",
+      "q_11": "1",
+      "q_22": "1",
+      "q_33": "1"
+    },
+    "zero_curvature_trace_rule": "s_33=s_00-s_11-s_22"
+  },
+  "regular_background_domain": {
+    "compact_uniform_subset": [
+      "|det(gbar_mn)| >= determinant_epsilon > 0",
+      "|q_p| >= trace_epsilon > 0",
+      "||gbar||+||gbar_inverse|| <= metric_bound",
+      "||J^3 Ubar|| <= jet_bound"
+    ],
+    "excluded_controls": [
+      "rank-changing algebraic surfaces",
+      "trace-chart boundary q_p=0",
+      "beta=0",
+      "3*alpha+beta=0",
+      "Minkowski and constant-curvature special controls"
+    ],
+    "regular_open_stratum": [
+      "det(gbar_mn) != 0",
+      "beta != 0",
+      "3*alpha+beta != 0",
+      "q_p != 0 in the selected trace chart",
+      "component linearization Jacobian has locally constant rank"
+    ],
+    "uniformity_statement": "locally uniform on compact subsets of the regular stratum"
+  },
+  "regularity_contract": {
+    "combined_sufficient_metric_class": "C6",
+    "combined_sufficient_metric_perturbation_class": "C6",
+    "identity_verification_jets": {
+      "background_reduced_jet_order": 3,
+      "evolution_state": false,
+      "perturbation_reduced_jet_order": 3,
+      "purpose": "linearized Bianchi, differentiated definition, and normal-form verification only"
+    },
+    "optimality_claimed": false,
+    "original_metric_equivalence_regularity": [
+      {
+        "derivative_shift": 1,
+        "implied_metric_class": "C4",
+        "relation": "c=partial g with c in C3"
+      },
+      {
+        "derivative_shift": 2,
+        "implied_metric_class": "C5",
+        "relation": "R=scalar_curvature[g] with R in C3"
+      },
+      {
+        "derivative_shift": 2,
+        "implied_metric_class": "C5",
+        "relation": "S=RicciTF[g] with S in C3"
+      },
+      {
+        "derivative_shift": 3,
+        "implied_metric_class": "C6",
+        "relation": "r=partial R in C3 and R=scalar_curvature[g]"
+      }
+    ],
+    "reduced_variable_regularity": [
+      {
+        "background_jet_in_evolution": 2,
+        "evolution_state": true,
+        "field": "g_mn",
+        "identity_only_jet": 3,
+        "perturbation_jet_in_evolution": 2,
+        "required_class": "C3"
+      },
+      {
+        "background_jet_in_evolution": 2,
+        "evolution_state": true,
+        "field": "c_mna",
+        "identity_only_jet": 3,
+        "perturbation_jet_in_evolution": 2,
+        "required_class": "C3"
+      },
+      {
+        "background_jet_in_evolution": 2,
+        "evolution_state": true,
+        "field": "R",
+        "identity_only_jet": 3,
+        "perturbation_jet_in_evolution": 2,
+        "required_class": "C3"
+      },
+      {
+        "background_jet_in_evolution": 2,
+        "evolution_state": true,
+        "field": "r_a",
+        "identity_only_jet": 3,
+        "perturbation_jet_in_evolution": 2,
+        "required_class": "C3"
+      },
+      {
+        "background_jet_in_evolution": 2,
+        "evolution_state": true,
+        "field": "S_mn",
+        "identity_only_jet": 3,
+        "perturbation_jet_in_evolution": 2,
+        "required_class": "C3"
+      }
+    ],
+    "why_not_uniform_C3": "C3 is a reduced-variable contract; imposing c, r, R, and S as metric derivatives raises the required metric regularity."
+  },
+  "rewrite_contract": {
+    "critical_pair_inventory": [],
+    "critical_pairs_closed": true,
+    "local_confluence_basis": "Every lhs head is unique and typed; no lhs unifies with a proper subterm headed by another lhs. Phase boundaries are fixed by rewrite_precedence.",
+    "normal_form_unique": true,
+    "normalization_idempotent": true,
+    "off_shell_boundary": "R6_ON_SHELL_RESIDUAL is disabled; all 64 residuals remain.",
+    "on_shell_boundary": "R6 is enabled only after component Jacobian construction and after R1-R5 reach normal form.",
+    "rewrite_precedence": [
+      "R1_STRICT_HARMONIC_ZERO",
+      "R2_TRACE_ATLAS",
+      "R3_INVERSE_METRIC_DERIVATIVE",
+      "R4_DEFINITION_NORMALIZATION",
+      "R5_WAVE_NORMAL_DERIVATIVE",
+      "R6_ON_SHELL_RESIDUAL"
+    ],
+    "rules": [
+      {
+        "lhs_head": "GAUGE_SOURCE_JET",
+        "measure_rank": 6,
+        "rhs_heads": [],
+        "rule_id": "R1_STRICT_HARMONIC_ZERO"
+      },
+      {
+        "lhs_head": "TRACE_PIVOT_COMPONENT",
+        "measure_rank": 5,
+        "rhs_heads": [
+          "ATLAS_INDEPENDENT_COMPONENT"
+        ],
+        "rule_id": "R2_TRACE_ATLAS"
+      },
+      {
+        "lhs_head": "INVERSE_METRIC_DERIVATIVE",
+        "measure_rank": 4,
+        "rhs_heads": [
+          "METRIC_INVERSE",
+          "METRIC_DERIVATIVE_VARIABLE"
+        ],
+        "rule_id": "R3_INVERSE_METRIC_DERIVATIVE"
+      },
+      {
+        "lhs_head": "DEFINITION_DERIVATIVE",
+        "measure_rank": 3,
+        "rhs_heads": [
+          "REDUCED_DERIVATIVE_VARIABLE"
+        ],
+        "rule_id": "R4_DEFINITION_NORMALIZATION"
+      },
+      {
+        "lhs_head": "SECOND_NORMAL_DERIVATIVE",
+        "measure_rank": 2,
+        "rhs_heads": [
+          "REDUCED_RHS",
+          "SPATIAL_DERIVATIVE"
+        ],
+        "rule_id": "R5_WAVE_NORMAL_DERIVATIVE"
+      },
+      {
+        "lhs_head": "BACKGROUND_EQUATION_RESIDUAL",
+        "measure_rank": 1,
+        "rhs_heads": [],
+        "rule_id": "R6_ON_SHELL_RESIDUAL"
+      }
+    ],
+    "termination_established": true,
+    "well_founded_measure": "lexicographic multiset count of typed lhs heads ordered by measure_rank, then expression tree size"
+  },
+  "schema_id": "CALC_QFT_GR_QUADRATIC_GENERIC_BACKGROUND_LINEARIZATION_GAUGE_AND_JET_CONTRACT_v0",
+  "selected_next_target": "review_qft_gr_quadratic_generic_background_linearization_gauge_and_jet_contract_v0_result",
+  "strict_harmonic_gauge_contract": {
+    "H_mu": "0",
+    "classification": "STRICT_HARMONIC_GENERIC_BACKGROUND",
+    "constraint_additions": "ZERO",
+    "damping_terms": "ZERO",
+    "delta_H_mu": "0",
+    "gauge_source_jet_orders_zero": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "gauge_universality_claimed": false,
+    "regularizers": "ZERO"
+  },
+  "terminal_outcomes": [
+    "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE"
+  ],
+  "tracefree_atlas": {
+    "chart_overlap_transition": "sigma^(q)=T_qp(gbar)*sigma^(p), obtained by equality of the reconstructed s_mn",
+    "charts": [
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_00)e_00, A != 00",
+        "chart_id": "TRACEFREE_CHART_PIVOT_00",
+        "compact_conditioned_domain": "|q_00| >= epsilon > 0",
+        "dependent_component_rule": "s_00=-(sum_A q_A*s_A)/q_00+(Sbar^ab*h_ab)/(4*q_00)*q(gbar)",
+        "independent_components": [
+          "01",
+          "02",
+          "03",
+          "11",
+          "12",
+          "13",
+          "22",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_00 != 0",
+        "pivot_component": "00"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_01)e_01, A != 01",
+        "chart_id": "TRACEFREE_CHART_PIVOT_01",
+        "compact_conditioned_domain": "|q_01| >= epsilon > 0",
+        "dependent_component_rule": "s_01=-(sum_A q_A*s_A)/q_01+(Sbar^ab*h_ab)/(4*q_01)*q(gbar)",
+        "independent_components": [
+          "00",
+          "02",
+          "03",
+          "11",
+          "12",
+          "13",
+          "22",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_01 != 0",
+        "pivot_component": "01"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_02)e_02, A != 02",
+        "chart_id": "TRACEFREE_CHART_PIVOT_02",
+        "compact_conditioned_domain": "|q_02| >= epsilon > 0",
+        "dependent_component_rule": "s_02=-(sum_A q_A*s_A)/q_02+(Sbar^ab*h_ab)/(4*q_02)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "03",
+          "11",
+          "12",
+          "13",
+          "22",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_02 != 0",
+        "pivot_component": "02"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_03)e_03, A != 03",
+        "chart_id": "TRACEFREE_CHART_PIVOT_03",
+        "compact_conditioned_domain": "|q_03| >= epsilon > 0",
+        "dependent_component_rule": "s_03=-(sum_A q_A*s_A)/q_03+(Sbar^ab*h_ab)/(4*q_03)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "02",
+          "11",
+          "12",
+          "13",
+          "22",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_03 != 0",
+        "pivot_component": "03"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_11)e_11, A != 11",
+        "chart_id": "TRACEFREE_CHART_PIVOT_11",
+        "compact_conditioned_domain": "|q_11| >= epsilon > 0",
+        "dependent_component_rule": "s_11=-(sum_A q_A*s_A)/q_11+(Sbar^ab*h_ab)/(4*q_11)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "12",
+          "13",
+          "22",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_11 != 0",
+        "pivot_component": "11"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_12)e_12, A != 12",
+        "chart_id": "TRACEFREE_CHART_PIVOT_12",
+        "compact_conditioned_domain": "|q_12| >= epsilon > 0",
+        "dependent_component_rule": "s_12=-(sum_A q_A*s_A)/q_12+(Sbar^ab*h_ab)/(4*q_12)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "11",
+          "13",
+          "22",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_12 != 0",
+        "pivot_component": "12"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_13)e_13, A != 13",
+        "chart_id": "TRACEFREE_CHART_PIVOT_13",
+        "compact_conditioned_domain": "|q_13| >= epsilon > 0",
+        "dependent_component_rule": "s_13=-(sum_A q_A*s_A)/q_13+(Sbar^ab*h_ab)/(4*q_13)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "11",
+          "12",
+          "22",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_13 != 0",
+        "pivot_component": "13"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_22)e_22, A != 22",
+        "chart_id": "TRACEFREE_CHART_PIVOT_22",
+        "compact_conditioned_domain": "|q_22| >= epsilon > 0",
+        "dependent_component_rule": "s_22=-(sum_A q_A*s_A)/q_22+(Sbar^ab*h_ab)/(4*q_22)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "11",
+          "12",
+          "13",
+          "23",
+          "33"
+        ],
+        "open_domain": "q_22 != 0",
+        "pivot_component": "22"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_23)e_23, A != 23",
+        "chart_id": "TRACEFREE_CHART_PIVOT_23",
+        "compact_conditioned_domain": "|q_23| >= epsilon > 0",
+        "dependent_component_rule": "s_23=-(sum_A q_A*s_A)/q_23+(Sbar^ab*h_ab)/(4*q_23)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "11",
+          "12",
+          "13",
+          "22",
+          "33"
+        ],
+        "open_domain": "q_23 != 0",
+        "pivot_component": "23"
+      },
+      {
+        "basis_rule": "E_A=e_A-(q_A/q_33)e_33, A != 33",
+        "chart_id": "TRACEFREE_CHART_PIVOT_33",
+        "compact_conditioned_domain": "|q_33| >= epsilon > 0",
+        "dependent_component_rule": "s_33=-(sum_A q_A*s_A)/q_33+(Sbar^ab*h_ab)/(4*q_33)*q(gbar)",
+        "independent_components": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "11",
+          "12",
+          "13",
+          "22",
+          "23"
+        ],
+        "open_domain": "q_33 != 0",
+        "pivot_component": "33"
+      }
+    ],
+    "coverage_proof": "A nondegenerate inverse metric cannot have all ten symmetric components zero, so at least one q_p is nonzero.",
+    "linearized_trace_identity": "gbar^mn*s_mn=Sbar^rs*h_rs",
+    "overlap_invariants": [
+      "characteristic_roots",
+      "Jordan_dimensions",
+      "finite_loss_classification"
+    ],
+    "symmetric_component_order": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "11",
+      "12",
+      "13",
+      "22",
+      "23",
+      "33"
+    ],
+    "tangent_reconstruction": "s_mn=E^A_mn*sigma_A+(1/4)gbar_mn*Sbar^rs*h_rs",
+    "trace_covector_coefficients": [
+      {
+        "coefficient": "gbar^00",
+        "component": "00",
+        "multiplicity": 1
+      },
+      {
+        "coefficient": "2*gbar^01",
+        "component": "01",
+        "multiplicity": 2
+      },
+      {
+        "coefficient": "2*gbar^02",
+        "component": "02",
+        "multiplicity": 2
+      },
+      {
+        "coefficient": "2*gbar^03",
+        "component": "03",
+        "multiplicity": 2
+      },
+      {
+        "coefficient": "gbar^11",
+        "component": "11",
+        "multiplicity": 1
+      },
+      {
+        "coefficient": "2*gbar^12",
+        "component": "12",
+        "multiplicity": 2
+      },
+      {
+        "coefficient": "2*gbar^13",
+        "component": "13",
+        "multiplicity": 2
+      },
+      {
+        "coefficient": "gbar^22",
+        "component": "22",
+        "multiplicity": 1
+      },
+      {
+        "coefficient": "2*gbar^23",
+        "component": "23",
+        "multiplicity": 2
+      },
+      {
+        "coefficient": "gbar^33",
+        "component": "33",
+        "multiplicity": 1
+      }
+    ]
+  },
+  "verdict": "STRICT_HARMONIC_GAUGE_AND_JET_CONTRACT_COMPLETE"
+}

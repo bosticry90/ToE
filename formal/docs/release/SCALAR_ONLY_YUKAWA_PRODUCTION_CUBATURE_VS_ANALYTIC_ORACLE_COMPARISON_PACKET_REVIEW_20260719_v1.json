@@ -1,0 +1,429 @@
+{
+  "accepted_surfaces": {
+    "analytic_oracle": "QUALIFIED_AND_ACCEPTED",
+    "case_order_component_and_96_cell_accounting": "ACCEPTED",
+    "frozen_review_gates": "33_PRESERVED",
+    "historical_identity_preflight": "ACCEPTED_AS_EXECUTABLE",
+    "historical_mirror_source_partition": "ACCEPTED",
+    "overall_comparison_contract": "NOT_READY",
+    "resource_and_downstream_firewalls": "ACCEPTED",
+    "slow_fit_and_economic_rules": "ACCEPTED_AS_EXECUTABLE",
+    "systematic_bias_and_fingerprint_metrics": "ACCEPTED_AS_NUMERIC"
+  },
+  "authority": {
+    "authorized_comparison_execution_count": 0,
+    "consumed_packet_verdict": "PREPARED_SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_V1",
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v1.md",
+        "sha256": "42ab8162052180b58362cc5049cd7fe523aba82ee0859785b3d4f06c638f4e0f"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_20260719_v1.json",
+        "sha256": "e43867cc6d36ea5ed0ca45f01b6626e61a35a45b48acb04e732a8b089f0913d1"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1.py",
+        "sha256": "0725d3d09b7e6c4f350c1b31a5ba87feec99ecbf951946d433ba9229cd23b6ec"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1.py",
+        "sha256": "3c6f1e837473a76aa9fe9831df6f1a7fb7b127cac0abd266d20c8da856a0dac6"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketV1.lean",
+        "sha256": "ec26f5f00621eed218c8825c31c4f67f20d3ce7ad91b730c2c0bfe3c8b85e3fc"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_v1.py",
+      "sha256": "168b9240d87eb27c1f5f4047455eddfe459af26217f2cc1d77c703136a50b5fa"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_20260719_v1.md",
+      "sha256": "45edbf6e0a3304ab2da04c9116056314f4057ac0f71bca4e7da66223dd289a54"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaProductionCubatureVsAnalyticOracleComparisonPacketReviewV1.lean",
+      "sha256": "bce53355d402b57bd98ded26a06e60c00c47e06e46627a0da1c0467040d85579"
+    },
+    "performed_comparison_execution_count": 0,
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_review_v1.py",
+      "sha256": "70aa38a0a7d44a2b235e1770974f7ca26464c6596fc28fa342a7cacb8924dcca"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This review establishes only that V1 preserves the accepted surfaces but does not close mutation reachability or completion precedence reproducibly. It performs no comparison, adjudicates no cubature, repairs no packet or kernel, computes no torque, DFT, vector, Jacobian, SVD, or identifiability result, reruns no Stage A execution, and authorizes no Stage B activity.",
+  "final_attempt_disposition": {
+    "automatic_v2": "PROHIBITED",
+    "bounded_future_choices": [
+      "HISTORICAL_PATH_IDENTITY_ISOLATION_ONLY",
+      "MIRROR_ONLY_COMPARISON_WITH_HISTORICAL_CLAIMS_WITHDRAWN",
+      "DIRECT_ANALYTIC_KERNEL_REPLACEMENT",
+      "CLOSE_SYNTHETIC_TORSION_BALANCE_LANE"
+    ],
+    "comparison_execution": "NOT_AUTHORIZED",
+    "fresh_selector_required": true,
+    "silent_packet_repair": "PROHIBITED"
+  },
+  "independent_completion_precedence_audit": {
+    "duplicate_declared_behavior": "BLOCKED_INCOMPLETE_RECORD_PRECEDENCE",
+    "duplicate_outcome_unique": false,
+    "duplicate_priority2_behavior": "PRODUCTION_COMPARISON_TIMEOUT",
+    "partial_subset_classification_forbidden": true,
+    "priority2_requires_empty_scientific_label_list": true,
+    "timeout_in_scientific_label_set": true,
+    "timeout_namespace_unambiguous": false,
+    "timeout_token": "PRODUCTION_COMPARISON_TIMEOUT"
+  },
+  "independent_control_reachability_audit": {
+    "baseline_dependent_systematic_controls": [
+      {
+        "classifier_spread_max": 0.005,
+        "control_id": "C06_WEIGHT_NORMALIZATION_BIAS",
+        "detection_independent_of_scientific_baseline": false,
+        "identity": "R_MUTATED=MULTIPLIER*R_BASELINE",
+        "multiplier": 1.01,
+        "relative_spread_identity": "RELATIVE_SPREAD(R_MUTATED)=RELATIVE_SPREAD(R_BASELINE)",
+        "unknown_baseline_spread_can_prevent_required_label": true
+      },
+      {
+        "classifier_spread_max": 0.005,
+        "control_id": "C10_CONSTANT_MULTIPLICATIVE_BIAS",
+        "detection_independent_of_scientific_baseline": false,
+        "identity": "R_MUTATED=MULTIPLIER*R_BASELINE",
+        "multiplier": 1.02,
+        "relative_spread_identity": "RELATIVE_SPREAD(R_MUTATED)=RELATIVE_SPREAD(R_BASELINE)",
+        "unknown_baseline_spread_can_prevent_required_label": true
+      }
+    ],
+    "c02_routes_all_fingerprint_cases": true,
+    "c02_routes_all_fingerprint_orders": true,
+    "c02_routes_newtonian_prerequisite": false,
+    "finding": "C03 and C04 cannot reach their required four-case, three-final-order classifier predicate. C02 lacks the Newtonian fixture required by its own label. C06 and C10 preserve unknown baseline spread, so detection depends on the scientific result.",
+    "systematic_classifier_minimum_case_count": 4,
+    "systematic_classifier_required_orders": [
+      32,
+      40,
+      48
+    ],
+    "unreachable_general_defect_controls": [
+      {
+        "case_count": 2,
+        "control_id": "C03_GAP_FOR_CENTER_DISTANCE",
+        "minimum_classifier_case_count": 4,
+        "reachable": false,
+        "required_classifier_orders": [
+          32,
+          40,
+          48
+        ],
+        "required_detection": "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED_ON_CONTROL_FIXTURE",
+        "routed_orders": [
+          24,
+          48
+        ]
+      },
+      {
+        "case_count": 2,
+        "control_id": "C04_RADIUS_AS_DIAMETER",
+        "minimum_classifier_case_count": 4,
+        "reachable": false,
+        "required_classifier_orders": [
+          32,
+          40,
+          48
+        ],
+        "required_detection": "IMPLEMENTATION_OR_NORMALIZATION_DEFECT_INDICATED_ON_CONTROL_FIXTURE",
+        "routed_orders": [
+          16,
+          32
+        ]
+      }
+    ]
+  },
+  "principal_review_outcome": "BLOCKED_MUTATION_ROUTING",
+  "review_gates": {
+    "failed_gate_ids": [
+      "R34_C03_C04_REQUIRED_CLASSIFIER_LABELS_REACHABLE",
+      "R35_C02_FINGERPRINT_CONTROL_PREREQUISITES_ROUTED",
+      "R36_C06_C10_DETECTION_INDEPENDENT_OF_UNKNOWN_BASELINE",
+      "R42_DUPLICATE_RECORD_PRECEDENCE_UNIQUE",
+      "R43_TIMEOUT_OUTCOME_NAMESPACE_UNAMBIGUOUS"
+    ],
+    "failure_count": 5,
+    "gate_count": 48,
+    "pass_count": 43,
+    "rows": [
+      {
+        "finding": "five V1 artifacts hash-verified",
+        "gate_id": "R01_EXACT_V1_PACKET_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "selector artifacts frozen by packet",
+        "gate_id": "R02_SELECTOR_AUTHORITY_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "V0 artifacts frozen by packet",
+        "gate_id": "R03_V0_PACKET_CUSTODY_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "no comparison values produced",
+        "gate_id": "R04_PREPARED_STATUS_AND_NO_EXECUTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "33 accepted review gates retained",
+        "gate_id": "R05_THIRTY_THREE_ACCEPTED_GATES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "seven failed gates named",
+        "gate_id": "R06_EXACT_SEVEN_GATE_REPAIR_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "case count unchanged",
+        "gate_id": "R07_EIGHT_CASES_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "finding": "order ladder unchanged",
+        "gate_id": "R08_SIX_ORDERS_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "finding": "component channels unchanged",
+        "gate_id": "R09_TWO_COMPONENTS_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "finding": "96 source rows exact",
+        "gate_id": "R10_NINETY_SIX_CELLS_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "finding": "18+48+30 exact",
+        "gate_id": "R11_SOURCE_PARTITION_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "historical path not substituted",
+        "gate_id": "R12_HISTORICAL_YUKAWA_CALLED_DIRECTLY",
+        "status": "PASS"
+      },
+      {
+        "finding": "Newtonian historical overclaim barred",
+        "gate_id": "R13_NEWTONIAN_COMPANION_SCOPE_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "unequal-radius overclaim barred",
+        "gate_id": "R14_MIRROR_EXTENSION_SCOPE_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "finding": "case/order/component sequence explicit",
+        "gate_id": "R15_SOURCE_EXECUTION_ORDER_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "finding": "three legacy cases exact",
+        "gate_id": "R16_C00_CASES_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "identity orders exact",
+        "gate_id": "R17_C00_ORDERS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "call sequence exact",
+        "gate_id": "R18_C00_SEQUENCE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "absolute and relative tolerances exact",
+        "gate_id": "R19_C00_TOLERANCE_NUMERIC",
+        "status": "PASS"
+      },
+      {
+        "finding": "failure consequence exact",
+        "gate_id": "R20_C00_FAILURE_STOPS_SCIENCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "positive finite monotone prerequisite",
+        "gate_id": "R21_SLOW_CANDIDATE_RULE_EXECUTABLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "full and tail OLS fits exact",
+        "gate_id": "R22_SLOW_ERROR_FITS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "fit stability numeric",
+        "gate_id": "R23_SLOW_STABILITY_THRESHOLDS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "runtime fit family and threshold exact",
+        "gate_id": "R24_RUNTIME_FIT_EXECUTABLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "per-case and total thresholds exact",
+        "gate_id": "R25_ECONOMIC_RULE_EXECUTABLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "components never pooled",
+        "gate_id": "R26_SYSTEMATIC_BIAS_COMPONENT_SEPARATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "case count and spread exact",
+        "gate_id": "R27_SYSTEMATIC_BIAS_VECTOR_AND_SPREAD_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "case/order vector exact",
+        "gate_id": "R28_FINGERPRINT_VECTOR_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "distance thresholds exact",
+        "gate_id": "R29_FINGERPRINT_METRIC_AND_TOLERANCE_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "Newtonian prerequisite stated",
+        "gate_id": "R30_FINGERPRINT_PREREQUISITES_STATED",
+        "status": "PASS"
+      },
+      {
+        "finding": "ten mutation identities preserved",
+        "gate_id": "R31_TEN_V0_CONTROL_IDS_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "one preflight plus ten controls",
+        "gate_id": "R32_ELEVEN_MANDATORY_CONTROLS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "finding": "descriptive route fields present",
+        "gate_id": "R33_CONTROL_ROUTE_FIELDS_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "finding": "C03/C04 route fewer than four cases and omit required final-order triple",
+        "gate_id": "R34_C03_C04_REQUIRED_CLASSIFIER_LABELS_REACHABLE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "C02 routes Yukawa only but its required label needs eight-case Newtonian pass",
+        "gate_id": "R35_C02_FINGERPRINT_CONTROL_PREREQUISITES_ROUTED",
+        "status": "FAIL"
+      },
+      {
+        "finding": "positive scaling preserves unknown baseline ratio spread",
+        "gate_id": "R36_C06_C10_DETECTION_INDEPENDENT_OF_UNKNOWN_BASELINE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "three custody firewalls exact",
+        "gate_id": "R37_IDENTITY_AND_CUSTODY_FIREWALL_CONTROLS_PRESENT",
+        "status": "PASS"
+      },
+      {
+        "finding": "resource limits unchanged",
+        "gate_id": "R38_RESOURCE_ENVELOPE_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "every cell scope serialized",
+        "gate_id": "R39_ALL_SOURCE_ROWS_HAVE_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "full cell count required",
+        "gate_id": "R40_FULL_96_CELL_PRECONDITION",
+        "status": "PASS"
+      },
+      {
+        "finding": "all controls required",
+        "gate_id": "R41_ALL_CONTROL_PRECONDITION",
+        "status": "PASS"
+      },
+      {
+        "finding": "duplicate declares BLOCKED_INCOMPLETE_RECORD_PRECEDENCE but priority-2 declares PRODUCTION_COMPARISON_TIMEOUT",
+        "gate_id": "R42_DUPLICATE_RECORD_PRECEDENCE_UNIQUE",
+        "status": "FAIL"
+      },
+      {
+        "finding": "timeout is both a scientific label and an exclusive outcome requiring empty scientific labels",
+        "gate_id": "R43_TIMEOUT_OUTCOME_NAMESPACE_UNAMBIGUOUS",
+        "status": "FAIL"
+      },
+      {
+        "finding": "partial subsets cannot classify",
+        "gate_id": "R44_PARTIAL_CLASSIFICATION_SUPPRESSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "nine label tokens unchanged",
+        "gate_id": "R45_EXACT_NINE_LABELS_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "no downstream authority",
+        "gate_id": "R46_DOWNSTREAM_FIREWALLS_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "final automatic repair boundary honored",
+        "gate_id": "R47_AUTOMATIC_V2_PROHIBITED",
+        "status": "PASS"
+      },
+      {
+        "finding": "blocked final attempt rotates only to fresh selector",
+        "gate_id": "R48_FRESH_SELECTOR_REQUIRED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "review_id": "SCALAR_ONLY_YUKAWA_PRODUCTION_CUBATURE_VS_ANALYTIC_ORACLE_COMPARISON_PACKET_REVIEW_20260719_v1",
+  "schema_id": "toe.scalar_only_yukawa.production_cubature_vs_analytic_oracle.comparison_packet_review.v1",
+  "scope": {
+    "automatic_v2_authorized": false,
+    "blocked_final_contract_result_issued": true,
+    "comparison_contract_ready": false,
+    "comparison_execution_authorized": false,
+    "comparison_execution_performed": false,
+    "fresh_scientific_response_selector_authorized": true,
+    "independent_v1_packet_review_performed": true,
+    "jacobian_or_identifiability_authorized": false,
+    "kernel_repair_or_replacement_authorized": false,
+    "packet_repair_authorized": false,
+    "production_cubature_adjudicated": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "thirty_three_frozen_gates_preserved": true,
+    "torque_or_dft_authorized": false,
+    "v1_packet_custody_verified": true
+  },
+  "secondary_review_outcomes": [
+    "BLOCKED_INCOMPLETE_RECORD_PRECEDENCE"
+  ],
+  "selected_next_target": "select_post_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1_review_scientific_response_v0",
+  "selected_next_target_kind": "FRESH_SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_V2_REPAIR_OR_COMPARISON_EXECUTION",
+  "status": "INDEPENDENT_V1_PACKET_REVIEW_COMPLETE_BLOCKED_FINAL_AUTOMATIC_REPAIR",
+  "target": "review_scalar_only_yukawa_production_cubature_vs_analytic_oracle_comparison_packet_v1_result",
+  "verdict": "BLOCKED_PRODUCTION_COMPARISON_CONTRACT_INCOMPLETE"
+}

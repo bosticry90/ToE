@@ -1,0 +1,131 @@
+{
+  "artifact_id": "TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_STAGE_5_OPEN_AUTHORITY_v0",
+  "schema_id": "toe.ccft_v0.internal_viability_and_distinctiveness_handoff.stage_5_open_authority.v0",
+  "captured_at_utc": "2026-08-03T01:54:54Z",
+  "authority_commit_exact_path_set": [
+    "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_STAGE_5_OPEN_AUTHORITY_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_STAGE_5_OPEN_AUTHORITY_v0.json",
+    "formal/python/tests/test_toe_ccft_v0_viability_handoff_stage_5_authority.py",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0ViabilityHandoffStage5OpenAuthorityReviewV0.lean",
+    "formal/toe_formal/ToeFormal/Release/ToeCCFTV0ViabilityHandoffStage5OpenAuthorityV0.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "authority_decision": "AUTHORIZE_CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF_STAGE_5_OPEN",
+  "authorized_stage": {
+    "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+    "stage_number": 5,
+    "semantic_stage_id": "CCFT_V0_INTERNAL_VIABILITY_AND_DISTINCTIVENESS_HANDOFF",
+    "canonical_target": "assess_toe_ccft_v0_internal_viability_and_distinctiveness_v0",
+    "canonical_scope_hash": "77f37cfde12e8a243aaace9e27fafbfa4611c11bc5f30918323f414b3c51f124"
+  },
+  "evidence_bindings": [
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1",
+      "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_MANIFEST_v1.json",
+      "sha256": "e0e89f235f1f80ab6f44f5db0bfff6adbaf1fa7679f0f5198b0ef4f371728eb6"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_v0.json",
+      "sha256": "3cd01d459622de9f2bf2de13ce586150a55c5e7e3c0b2cd0e61b744a8315261a"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_RESULT_REVIEW_v0.json",
+      "sha256": "08663516a12241fd68d75e602bfdbeaffe6b9835f82fcd5315fea71970471d41"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_VALIDATION_v0",
+      "path": "formal/docs/release/TOE_CCFT_V0_PRIMARY_THEOREM_ATTACK_EXECUTION_VALIDATION_v0.json",
+      "sha256": "4a1674536d83ad2eaa15bb79ce4f9ab85311242689d94e2fd0da807fc26c30ac"
+    },
+    {
+      "artifact_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_CLOSE_v0",
+      "path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_04_CLOSE_v0.json",
+      "sha256": "45c9ea8b1a602b27593b537df652ce525cd9eab33e468d3f8efd21d81c26c987"
+    }
+  ],
+  "frozen_stage_4_result_binding": {
+    "frozen_model_id": "TOE_CCFT_V0_CP_NLSE_PERIODIC_CUBIC_SURROGATE_v0",
+    "frozen_packet_id": "CCFT_V0_GAUGE_EQUIVALENCE_AND_BACKGROUND_RESOLVED_DISPERSION_PACKET_v0",
+    "gauge_equivalence": "PROVED",
+    "unit_background_dispersion": "PROVED",
+    "zero_background_dispersion": "PROVED",
+    "known_model_equivalence": "ESTABLISHED_FOR_THE_FROZEN_V0_EQUATION",
+    "CP_FREQ_001": "HISTORICAL_CONTEXT_INSUFFICIENT",
+    "CP_FREQ_002": "VALID_SPECIAL_LIMITS",
+    "model_mutation_authorized": false,
+    "packet_mutation_authorized": false
+  },
+  "authorized_assessment_surfaces": [
+    {
+      "surface_id": "MATHEMATICAL_VIABILITY",
+      "question": "Which viability properties are established directly, inherited only after exact assumption alignment, or still unresolved?",
+      "required_boundary": "Gauge equivalence and dispersion proofs do not by themselves establish existence, uniqueness, conservation, stability, or global behavior."
+    },
+    {
+      "surface_id": "GENERIC_MODEL_EQUIVALENCE",
+      "question": "Does the exact phase bijection make the isolated frozen model equivalent to cubic defocusing NLS for its gauge-invariant dynamics?",
+      "required_boundary": "Known-model equivalence is a mathematical role classification, not physical validation."
+    },
+    {
+      "surface_id": "C_FINITE_APPROXIMATION",
+      "question": "What do the reproduced vectors, refinement evidence, and numerical gates establish about the finite approximation, and what continuum or physical adequacy claims remain unavailable?",
+      "required_boundary": "Tested numerical reproduction and convergence evidence must remain separate from a general continuum convergence theorem."
+    },
+    {
+      "surface_id": "C_IDENTIFIABILITY",
+      "question": "Can the frozen isolated model be distinguished from cubic NLS by any currently defined observable, especially phase-insensitive density, gradient, and current observables?",
+      "required_boundary": "A hypothetical phase-sensitive coupling cannot be treated as present in v0."
+    },
+    {
+      "surface_id": "C_COMPLEXITY",
+      "question": "Which frozen computations are tractable with controlled evidence, and which general complexity or predictability claims remain unproved?",
+      "required_boundary": "Efficient implementation does not establish novelty, physical relevance, or arbitrary-instance complexity."
+    },
+    {
+      "surface_id": "FUTURE_ROLE_AND_HANDOFF",
+      "question": "Should v0 be retained as a known-model-equivalent baseline or control, rejected as inconsistent, or held unresolved, and what nonautomatic future proposal may be named?",
+      "required_boundary": "No CCFT-v1 postulate, field, observable, coupling, physical bearer, or successor program may be created or opened."
+    }
+  ],
+  "required_outputs": [
+    "mathematical_viability_status",
+    "numerical_reproducibility_status",
+    "finite_approximation_identifiability_and_complexity_audit",
+    "generic_model_equivalence_audit",
+    "nonautomatic_future_handoff"
+  ],
+  "canonical_terminal_outcomes": [
+    "CCFT_V0_MATHEMATICALLY_VIABLE_DISTINCTIVE_SURROGATE",
+    "CCFT_V0_EQUIVALENT_TO_KNOWN_MODEL",
+    "CCFT_V0_INTERNALLY_INCONSISTENT",
+    "VIABILITY_OR_DISTINCTIVENESS_UNRESOLVED"
+  ],
+  "scientific_limits": {
+    "maximum_frozen_models_assessed": 1,
+    "frozen_model_mutation_authorized": false,
+    "frozen_packet_mutation_authorized": false,
+    "new_theorem_packet_or_proof_expansion_authorized": false,
+    "new_postulate_or_CCFT_v1_construction_authorized": false,
+    "external_assumption_import_without_exact_alignment_authorized": false,
+    "archive_recovery_reopening_authorized": false,
+    "physical_bearer_units_scale_preparation_or_measurement_assignment_authorized": false,
+    "matter_gravity_seam_or_master_action_work_authorized": false,
+    "empirical_promotion_authorized": false,
+    "automatic_successor_authorization": false
+  },
+  "scientific_output_at_authority": {
+    "mathematical_viability_status": "UNADJUDICATED",
+    "numerical_reproducibility_status": "UNADJUDICATED",
+    "C_FINITE_APPROXIMATION": "UNADJUDICATED",
+    "C_IDENTIFIABILITY": "UNADJUDICATED",
+    "C_COMPLEXITY": "UNADJUDICATED",
+    "generic_model_equivalence_audit": "UNADJUDICATED",
+    "future_role": "NONE_SELECTED",
+    "successor_program": "NONE_AUTHORIZED",
+    "physical_interpretation": "NONE",
+    "empirical_claim": "NONE"
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_5_OPEN_ONLY"
+}

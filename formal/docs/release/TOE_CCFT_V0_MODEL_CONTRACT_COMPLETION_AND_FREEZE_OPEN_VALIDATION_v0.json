@@ -1,0 +1,71 @@
+{
+  "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_OPEN_VALIDATION_v0",
+  "atomic_open_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_OPEN_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+    "formal/python/tools/toe_ccft_v0_model_contract_freeze_stage_authorization.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ModelContractFreezeAttemptOpen.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "attempt_sequence_number": 2,
+  "authority_decision": "AUTHORIZE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN",
+  "canonical_terminal_outcomes": [
+    "CCFT_V0_MODEL_CONTRACT_FROZEN",
+    "MODEL_CONTRACT_REQUIRES_MORE_THAN_FROZEN_POSTULATE_BUDGET",
+    "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED",
+    "REFERENCE_IMPLEMENTATION_NOT_REPRODUCIBLE"
+  ],
+  "captured_at_utc": "2026-08-02T04:51:28Z",
+  "director_wording_normalization": {
+    "BLOCKED_BY_GOVERNING_EQUATION_CONFLICT": {
+      "canonical_outcome": "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED"
+    },
+    "BLOCKED_BY_INCOMPLETE_MODEL_CONTRACT": {
+      "canonical_precedence": [
+        "MODEL_CONTRACT_REQUIRES_MORE_THAN_FROZEN_POSTULATE_BUDGET_IF_POSTULATE_COUNT_EXCEEDS_8",
+        "REFERENCE_IMPLEMENTATION_NOT_REPRODUCIBLE_IF_ONLY_IMPLEMENTATION_CUSTODY_OR_REPRODUCIBILITY_FAILS",
+        "SELECTED_ROUTE_CONTRADICTORY_OR_UNDERDEFINED_OTHERWISE"
+      ]
+    },
+    "CCFT_V0_MODEL_CONTRACT_FROZEN_WITH_NEW_POSTULATES": {
+      "canonical_outcome": "CCFT_V0_MODEL_CONTRACT_FROZEN",
+      "required_qualifier": "NEW_POSTULATE_COUNT_GREATER_THAN_ZERO_AND_EVERY_NEW_ELEMENT_LABELED_NEW_CCFT_POSTULATE"
+    }
+  },
+  "event_hash": "60b996e6d1c5eb202eff506d57357fc3a5878531a371335d2e5e2727f3dcf03a",
+  "event_path": "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_OPEN_v0.json",
+  "event_sha256": "290446ab6c9b911554678f655501598db1cb220ec4e3b00d79db6fc96dc529fa",
+  "opened_from_commit": "2d842bd118bdb09eba1b50dd157d5fac3062436e",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "registry_snapshot_hash": "9b8438e0b17001ae91253ff7b9b63d84470d2fa610429b10f43e1c98bff13004",
+  "schema_id": "toe.ccft_v0.model_contract_completion_and_freeze.open_validation.v0",
+  "scientific_output_at_open": {
+    "governing_equation_selected": false,
+    "historical_equation_conflict_preserved": true,
+    "model_constructed_or_frozen": false,
+    "new_postulates": 0,
+    "reference_implementation_frozen": false,
+    "selected_branch_from_stage_1": "CP_NLSE",
+    "stage_3_output_created": false,
+    "theorem_attempted": false,
+    "theorem_packet_prepared": false
+  },
+  "scope_hash": "b80489e0e609397bdc4b9d24c78a47f0f30578e124c67dcb47114d091e781f87",
+  "semantic_stage_id": "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE",
+  "status": "STAGE_2_ATOMIC_OPEN_READY_FOR_COMMIT",
+  "target": "complete_and_freeze_toe_ccft_v0_model_contract_v0",
+  "validation_checks": {
+    "authority_and_review_accepted": true,
+    "director_wording_normalization_is_deterministic": true,
+    "event_and_registry_projection_match": true,
+    "manifest_scope_target_and_outcomes_match": true,
+    "one_model_eight_postulate_and_provenance_controls_match": true,
+    "open_checkpoint_contains_no_model_construction_output": true,
+    "program_state_is_open": true,
+    "stage_1_result_review_and_close_bindings_match": true,
+    "stage_3_remains_unauthorized": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_id": "CURRENT_RECOVERY_VALIDATION_PROFILE_V1_SELECTION_20260725_v0",
+  "authority_source": "USER_ISSUED_CONTROLLING_RECOVERY_SPECIFICATION",
+  "accepted_reachability_adjudication": {
+    "commit": "399321320f35df521e0dad73b0d2f64664cd0a52",
+    "path": "formal/docs/release/REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "selected": "AUTHORIZE_BOUNDED_RECOVERY_VALIDATION_PROFILE_V1_IMPLEMENTATION",
+  "target": "version_current_acceptance_inventory_and_apply_accepted_obligation_reachability_v1_once",
+  "execution_count_authorized": 1,
+  "root_repair_authorized": false,
+  "historical_execution_authorized": false,
+  "lean_activity_authorized": false,
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

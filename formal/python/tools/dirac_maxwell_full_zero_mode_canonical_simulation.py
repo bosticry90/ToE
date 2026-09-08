@@ -14,6 +14,10 @@ from typing import Any
 import numpy as np
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 from formal.python.tools import dirac_maxwell_full_zero_mode_non_authoritative_pilot as numerical
 
 
@@ -45,6 +49,7 @@ MANIFEST_SCHEMA_ID = "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_MANIFEST
 REPORT_SCHEMA_ID = "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_SIMULATION_20260713_v0"
 RUN_OUTPUT_SCHEMA_ID = "DIRAC_MAXWELL_FULL_ZERO_MODE_CANONICAL_RUN_OUTPUT_v0"
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 
@@ -67,7 +72,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:

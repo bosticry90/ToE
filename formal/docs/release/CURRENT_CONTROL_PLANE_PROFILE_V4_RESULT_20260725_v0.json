@@ -1,0 +1,84 @@
+{
+  "schema_id": "CURRENT_CONTROL_PLANE_PROFILE_V4_RESULT_20260725_v0",
+  "status": "CURRENT_CONTROL_PLANE_PROFILE_V4_PASS_AWAITING_INDEPENDENT_REVIEW",
+  "authority": {
+    "selection": "formal/docs/release/CURRENT_RECOVERY_VALIDATION_PROFILE_V4_SELECTION_20260725_v0.json",
+    "execution_packet": "formal/docs/release/RECOVERY_VALIDATION_PROFILE_V4_EXECUTION_PACKET_20260725_v0.json",
+    "execution_count_used": 1,
+    "automatic_successor_authority": "NONE"
+  },
+  "accepted_input_state": {
+    "profile_commit": "c122e41c7b2b2a12e01c6d56f8d4308390b86662",
+    "lineage_repair_commit": "89d272e25886c63549dbb3b7d765750716bc9f4c",
+    "current_relative_to_commit": "89d272e25886c63549dbb3b7d765750716bc9f4c",
+    "inventory_count": 13838,
+    "inventory_sha256": "6f4872f4dfdc8c8e0aba64b742c278c6ded0dc4ca886a6bcc685a0ef0fdd1566",
+    "frozen_comparability_count": 13756
+  },
+  "profile_partition": {
+    "current_control_plane": 3626,
+    "historical_debt": 10212,
+    "adjusted_known_historical_nonpassing": 354,
+    "known_current_nonpassing_before_execution": 0,
+    "unknown_current_reachability": 0,
+    "excluded": 0,
+    "exact_partition": true
+  },
+  "execution": {
+    "checkout": "C:/toe-lean-rv0",
+    "checkout_mode": "DETACHED_SHORT_PATH",
+    "passed": 3269,
+    "skipped": 357,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 1678.10,
+    "pytest_exit_code": 0,
+    "profile_state_unchanged": true,
+    "checkout_after": "CLEAN"
+  },
+  "profile_hashes": {
+    "current_control_plane": "2f3f48c8c81db66c8efe4e1f17bdd06b2f3271667c37f1e2ac4dec640a9034f1",
+    "historical_debt": "2c2fc35258f95006a2a34783227db7d0c437bc27c8b4d17f259252c1f4beef43",
+    "obligation_registry": "f3a6a5e24b6f443c940d71f21b4e3f119c1bd13d173d8bb8bd3bca0dc9e7dcd5",
+    "reconciliation": "031fbcc3b83dc0eb5a7bfe3ad744213ac490b5680d21c1a5a37d872c2fdbadc8"
+  },
+  "evidence": {
+    "inventory": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v4/current_collected_node_ids_v4.txt",
+      "sha256": "6f4872f4dfdc8c8e0aba64b742c278c6ded0dc4ca886a6bcc685a0ef0fdd1566",
+      "size_bytes": 2310304
+    },
+    "junit": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v4/current_control_plane_v4.junit.xml",
+      "sha256": "588c9503cc52f83f4a112504980c1e27e28ae5400bec5e3178e4e6602ee47f02",
+      "size_bytes": 954607
+    },
+    "stdout": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v4/current_control_plane_v4.stdout.log",
+      "sha256": "22df64a600f17d8ee7a81f780d1d294771b81d2cdda0bc6f077cb751c476a7e0",
+      "size_bytes": 87603
+    },
+    "stderr": {
+      "path": ".toe-recovery/custody-v0/recovery-validation-profile-v4/current_control_plane_v4.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "stop_rule": {
+    "current_critical_obligations": "PASS",
+    "unknown_current_reachability": 0,
+    "remaining_current_profile_failures": 0,
+    "continue_root_level_repair_to_reduce_historical_count": false,
+    "next_required_gate": "STRUCTURAL_HISTORICAL_ISOLATION"
+  },
+  "custody": {
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_tracked_changes": 7,
+    "dirty_main_untracked_paths": 622,
+    "dirty_main_byte_preserved": true
+  },
+  "recovery_control_plane_complete": false,
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

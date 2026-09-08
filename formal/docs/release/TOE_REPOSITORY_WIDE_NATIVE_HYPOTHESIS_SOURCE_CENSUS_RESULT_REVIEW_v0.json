@@ -1,0 +1,47 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_REVIEW_v0",
+  "captured_at_utc": "2026-07-30T23:25:13Z",
+  "checks": {
+    "aggregate_hash_recomputed": true,
+    "all_eight_batch_file_hashes_recomputed": true,
+    "all_eight_semantic_batch_hashes_recomputed": true,
+    "all_source_root_snapshot_hashes_recomputed": true,
+    "all_source_roots_stable": true,
+    "batch_union_has_no_overlap_or_omission": true,
+    "claim_extraction_absent": true,
+    "duplicate_group_consistency_recomputed": true,
+    "evidence_promotion_absent": true,
+    "lineage_and_supersession_conclusions_absent": true,
+    "local_file_hashes_freshly_recomputed": true,
+    "metadata_only_content_boundary_verified": true,
+    "native_frontier_selection_absent": true,
+    "pdf_and_office_metadata_only_verified": true,
+    "reddit_excluded": true,
+    "tracked_git_blob_hashes_freshly_recomputed": true
+  },
+  "consumed_result": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_SOURCE_CENSUS_RESULT_v0",
+  "independent_recomputation": {
+    "duplicate_group_count": 421,
+    "excluded_subtree_metadata_rechecks": 44,
+    "fresh_git_blob_count": 12288,
+    "fresh_git_record_count": 12487,
+    "fresh_local_bytes_rehashed": 277253818,
+    "fresh_local_file_count": 1032,
+    "record_count": 13563
+  },
+  "nonclaim_boundary": [
+    "The review establishes source and custody inventory coverage, not repository-wide scientific claim exhaustion.",
+    "Path-keyword domain tags are nonauthoritative discovery metadata.",
+    "Exact byte duplicates are custody relationships; revision, lineage, and supersession remain Stage 2 questions.",
+    "Local archive bytes are hash-bound in this workspace but are not portable through ordinary Git.",
+    "No archived claim was adopted, promoted, reconciled, or scientifically validated.",
+    "Stage 2 remains selected but unopened."
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "review_decision": "ACCEPT_STAGE_1_SOURCE_CENSUS_WITH_LOCAL_CUSTODY_LIMITATIONS",
+  "schema_id": "toe.repository_wide_native_hypothesis_source_census.result_review.v0",
+  "semantic_stage_id": "REPOSITORY_WIDE_SOURCE_CENSUS",
+  "stage_lifecycle_result": "PASSED",
+  "terminal_outcome": "REPOSITORY_WIDE_SOURCE_CENSUS_COMPLETE_WITH_LOCAL_CUSTODY_LIMITATIONS"
+}

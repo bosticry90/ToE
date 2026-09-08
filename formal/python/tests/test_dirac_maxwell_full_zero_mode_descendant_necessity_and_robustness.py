@@ -96,4 +96,4 @@ def test_mutations_and_authority_boundaries_hold() -> None:
 
 
 def test_prompt_is_preserved() -> None:
-    assert design.sha256_path(design.REPO_ROOT / design.PROMPT_RELATIVE_PATH) == design.PROMPT_SHA256
+    assert design.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

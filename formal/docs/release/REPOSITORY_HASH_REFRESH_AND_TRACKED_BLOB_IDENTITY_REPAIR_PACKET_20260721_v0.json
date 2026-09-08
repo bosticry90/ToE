@@ -1,0 +1,130 @@
+{
+  "acceptance_criteria": {
+    "eight_token_identities": "INDIVIDUALLY_PROVEN",
+    "line_ending_dependence": "NONE",
+    "repository_facing_hash_checks": "READ_ONLY",
+    "tracked_diff_after_focused_validation": "EMPTY_RELATIVE_TO_PRE_VALIDATION_STATE",
+    "tracked_source_hashes": "GIT_BLOB_BASED",
+    "untracked_source_created_by_validation": "NONE",
+    "v2_deterministic_checks": "REPRODUCIBLE_FROM_FROZEN_COMMITTED_INPUTS",
+    "write_capable_test": "TEMPORARY_TREE_ONLY"
+  },
+  "authorized_operations": [
+    "separate check_expected_hashes from apply_updates",
+    "require explicit maintenance authorization for repository-root CLI writes",
+    "copy the four criteria artifacts and five token files to a temporary test tree",
+    "update the eight individually adjudicated stale tokens",
+    "bind V2 tracked inputs to exact Git blob bytes from a recorded frozen commit",
+    "regenerate only V2 artifacts whose identity metadata changes",
+    "run focused fresh-worktree validation and one evidence review"
+  ],
+  "captured_at_utc": "2026-07-21T21:37:34Z",
+  "identity_domains": {
+    "committed_tracked_source": {
+      "identity_type": "GIT_BLOB_SHA256",
+      "read_contract": "git cat-file blob <frozen-commit>:<path>"
+    },
+    "external_execution_evidence": {
+      "identity_type": "RAW_EVIDENCE_SHA256"
+    },
+    "generated_canonical_artifact": {
+      "identity_type": "CANONICAL_ARTIFACT_SHA256"
+    }
+  },
+  "prohibited_operations": [
+    "general repair of the remaining 459 failures and 57 errors",
+    "Lean timeout resolution",
+    "scientific calculations or scientific-content edits",
+    "Maxwell-Dirac ratification",
+    "scalar-Yukawa work",
+    "V2 enrollment",
+    "first-unit selector execution",
+    "registry rotation"
+  ],
+  "schema_id": "REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_PACKET_20260721_v0",
+  "source_commit": "2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+  "status": "AUTHORIZED_ONE_BOUNDED_IMPLEMENTATION_CYCLE",
+  "target": "prepare_repository_hash_refresh_and_tracked_blob_identity_repair_packet_v0",
+  "token_adjudications": [
+    {
+      "containing_file": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "frozen_artifact": "formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1",
+      "proposed_value": "3dddcb3e5928507fe04bb7427d39838af8363395a9d9a8f2a52480d8c031f13a",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    },
+    {
+      "containing_file": "State_of_the_Theory.md",
+      "frozen_artifact": "formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1",
+      "proposed_value": "3dddcb3e5928507fe04bb7427d39838af8363395a9d9a8f2a52480d8c031f13a",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    },
+    {
+      "containing_file": "formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md",
+      "frozen_artifact": "formal/output/gr_continuum_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "aefe5054b14554a3e3ec1607f27558002e2faab8a6e0b06bd13b90329ecf83e8",
+      "proposed_value": "3194a26af1303fe260c23b01d4cf4d6ab226de31abe30ac4cc556ff288d7cb97",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/gr_continuum_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    },
+    {
+      "containing_file": "State_of_the_Theory.md",
+      "frozen_artifact": "formal/output/gr_continuum_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "aefe5054b14554a3e3ec1607f27558002e2faab8a6e0b06bd13b90329ecf83e8",
+      "proposed_value": "3194a26af1303fe260c23b01d4cf4d6ab226de31abe30ac4cc556ff288d7cb97",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/gr_continuum_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    },
+    {
+      "containing_file": "formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md",
+      "frozen_artifact": "formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00",
+      "proposed_value": "c22c204617236a3a68ef852e13a9daac0f471061d68582835ba4c995e5d9bf71",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    },
+    {
+      "containing_file": "State_of_the_Theory.md",
+      "frozen_artifact": "formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00",
+      "proposed_value": "c22c204617236a3a68ef852e13a9daac0f471061d68582835ba4c995e5d9bf71",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    },
+    {
+      "containing_file": "formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md",
+      "frozen_artifact": "formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4",
+      "proposed_value": "7e3cdb5b36164c7394fffdb4ed7081c4a192c5f1e852278a0d4c1f58e82f5a45",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    },
+    {
+      "containing_file": "State_of_the_Theory.md",
+      "frozen_artifact": "formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json@2cccd18b9d2abe4e4730fe3c62761d2f9b9477d7",
+      "identity_type": "CANONICAL_ARTIFACT_SHA256",
+      "old_value": "51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4",
+      "proposed_value": "7e3cdb5b36164c7394fffdb4ed7081c4a192c5f1e852278a0d4c1f58e82f5a45",
+      "reason_for_mismatch": "TOKEN_STALE_RELATIVE_TO_FROZEN_CANONICAL_ARTIFACT",
+      "referenced_source": "formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json",
+      "scientific_content_impact": "NONE_IDENTITY_METADATA_ONLY"
+    }
+  ]
+}

@@ -9,6 +9,11 @@ from typing import Any
 
 import pytest
 
+from formal.python.meta.artifact_custody import (
+    ArtifactCustodyState,
+    snapshot_artifact,
+    snapshot_artifacts,
+)
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
@@ -200,7 +205,15 @@ def test_authority_promotion_registration_cli_default_is_read_only() -> None:
         REPO_ROOT / "formal" / "output" / "recompute" / "ledger_artifact_transport_under_revised_blocker.json",
         REPO_ROOT / "formal" / "output" / "recompute" / "blocker_authority_transport_surface.json",
     ]
-    before = {path: _read(path) for path in before_paths}
+    before = snapshot_artifacts(before_paths, repo_root=REPO_ROOT)
+    ruling_path = (
+        REPO_ROOT
+        / "formal"
+        / "output"
+        / "reports"
+        / "coupling_refinement_ruling_20260411_v0.json"
+    )
+    ruling_state = snapshot_artifact(ruling_path, repo_root=REPO_ROOT)
 
     env = os.environ.copy()
     env.pop(ENV_VAR, None)
@@ -213,9 +226,16 @@ def test_authority_promotion_registration_cli_default_is_read_only() -> None:
         env=env,
     )
 
-    assert completed.returncode == 0, completed.stderr
-    assert "write=False" in completed.stdout
-    assert {path: _read(path) for path in before_paths} == before
+    if ruling_state.state in {
+        ArtifactCustodyState.ABSENT,
+        ArtifactCustodyState.EXTERNAL_CUSTODY_ONLY,
+    }:
+        assert completed.returncode == 1
+        assert "Ruling report not found" in completed.stderr
+    else:
+        assert completed.returncode == 0, completed.stderr
+        assert "write=False" in completed.stdout
+    assert snapshot_artifacts(before_paths, repo_root=REPO_ROOT) == before
 
 
 def test_hygiene_tooling_tokens_are_present() -> None:

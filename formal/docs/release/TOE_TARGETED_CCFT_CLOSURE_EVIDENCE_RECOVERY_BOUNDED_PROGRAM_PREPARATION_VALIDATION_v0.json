@@ -1,0 +1,94 @@
+{
+  "artifact_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_VALIDATION_v0",
+  "schema_id": "toe.targeted_ccft_closure_evidence_recovery.bounded_program_preparation_validation.v0",
+  "captured_at_utc": "2026-08-01T03:10:00Z",
+  "atomic_proposal_commit_expected_path_count": 11,
+  "atomic_proposal_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+    "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_VALIDATION_v0.json",
+    "formal/python/tests/test_toe_post_ccft_core_recovery_development_route_selection_result.py",
+    "formal/python/tests/test_toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation.py",
+    "formal/python/tests/test_toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation_authority.py",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "focused_python_validation": {
+    "passed": 45,
+    "status": "PASSED",
+    "suites": [
+      "test_toe_post_ccft_core_recovery_development_route_selection_authority.py",
+      "test_toe_post_ccft_core_recovery_development_route_selection_result.py",
+      "test_toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation_authority.py",
+      "test_toe_targeted_ccft_closure_evidence_recovery_bounded_program_preparation.py",
+      "test_loop_control_registry_envelope_integrity_gate.py",
+      "test_lean_all_modules_aggregate_coverage_gate.py",
+      "test_repository_canonical_text_integrity_gate.py"
+    ]
+  },
+  "focused_lean_validation": {
+    "jobs": 7,
+    "modules": [
+      "ToeFormal.Derivation.ToeTargetedCCFTClosureEvidenceRecoveryBoundedProgramPreparationResultReview",
+      "ToeFormal.Derivation.CurrentTarget",
+      "ToeFormal.Release.CurrentAuthority"
+    ],
+    "status": "PASSED"
+  },
+  "full_lean_validation": {
+    "jobs": 9135,
+    "modules": 1390,
+    "status": "PASSED",
+    "target": "ToeFormalAll"
+  },
+  "deterministic_generation": {
+    "modules": 1390,
+    "scope": "committed",
+    "status": "PASSED"
+  },
+  "authority_consistency": {
+    "current_target": "prepare_toe_targeted_ccft_closure_evidence_recovery_bounded_program_v0",
+    "registry_and_evaluated_lean_agree": true,
+    "status": "PASSED"
+  },
+  "governance_validation": {
+    "proposed_program_id": "TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_V0",
+    "program_installed": false,
+    "scientific_event_created": false,
+    "scientific_attempt_count": 0,
+    "archive_search_executed": false,
+    "status": "PASSED"
+  },
+  "proposal_controls": {
+    "stage_count": 4,
+    "content_search_pass_limit": 1,
+    "repair_attempt_count": 0,
+    "maximum_deep_review_files": 96,
+    "maximum_total_deep_review_bytes": 536870912,
+    "scientific_terminal_outcome_count": 2,
+    "mandatory_construction_handoff_requires_separate_authority": true
+  },
+  "nonclaim_boundary": {
+    "archive_traversed_or_previewed": false,
+    "scientific_sources_selected": false,
+    "closure_contract_recovered": false,
+    "ccft_equation_repaired_or_selected": false,
+    "new_ccft_postulate_inserted": false,
+    "ccft_v0_constructed": false,
+    "evidence_promoted": false,
+    "program_installed": false,
+    "scientific_stage_opened": false
+  },
+  "result_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+  "result_sha256": "82e9ad6954b365228cfdfbebf018ada2176ec4e326ecff9733947c1fad4a3bf2",
+  "review_path": "formal/docs/release/TOE_TARGETED_CCFT_CLOSURE_EVIDENCE_RECOVERY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+  "review_sha256": "e79497be81d2771e6142b773da8b0b5689f3fb0bf5e8a8cb0f30942718ff0691",
+  "exhaustive_python_passage_claimed": false,
+  "legacy_authority_parser_and_freshness_debt_preserved": true,
+  "tracked_checkout_expected_clean_after_commit": true,
+  "untracked_reddit_expected_untouched": true,
+  "status": "PROGRAM_PROPOSAL_PREPARED_AND_REVIEWED_AWAITING_SEPARATE_INSTALLATION_AUTHORITY"
+}

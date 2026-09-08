@@ -57,7 +57,7 @@ def test_regen_bragg_only_is_content_stable() -> None:
     before = [p.read_text(encoding="utf-8") for p in lock_paths]
 
     # Should run without requiring any sound-lane artifacts.
-    rc = regen_main(["--bragg-only"])
+    rc = regen_main(["--bragg-only", "--validate-only"])
     assert rc == 0
 
     after = [p.read_text(encoding="utf-8") for p in lock_paths]

@@ -1,0 +1,22 @@
+{
+  "schema_id": "REPOSITORY_MISSING_ARTIFACT_EXPECTATION_ADJUDICATION_PACKET_REVIEW_20260722_v0",
+  "captured_at_utc": "2026-07-22T22:06:47Z",
+  "review_basis": "INDEPENDENT_SCOPE_ROLE_TAXONOMY_LATENT_DEPENDENCY_AND_OUTPUT_CONTAINMENT_REVIEW",
+  "checks": {
+    "accepted_reassessment_result_and_commit_bound": true,
+    "exact_222_outcome_family_bound": true,
+    "expectation_level_rows_required": true,
+    "latent_dependencies_required": true,
+    "role_taxonomy_closed_and_exactly_one_per_expectation": true,
+    "disposition_taxonomy_closed": true,
+    "nonmissing_family_member_must_be_reclassified": true,
+    "dirty_workspace_is_read_only_nonauthoritative_evidence": true,
+    "reports_directory_is_write_prohibited": true,
+    "repairs_tests_hash_refreshes_and_scientific_actions_forbidden": true,
+    "currency_outcomes_remain_separate": true,
+    "v2_registry_lean_and_first_unit_execution_unauthorized": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

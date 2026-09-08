@@ -1,0 +1,850 @@
+{
+  "authority": {
+    "bound_source_hashes": [
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v0.json",
+        "sha256": "91e401432046f07f44a4e919c2bf393ab3ac6c0e6cfab6a0bbee298f180cd6bc"
+      },
+      {
+        "relative_path": "formal/output/sr_covariance_science_increment_20260325_v0.json",
+        "sha256": "48758450fdd246698adcbe16a390151553d07eccbaec97040ca2f8056e04093c"
+      },
+      {
+        "relative_path": "formal/python/tools/rl01_relativistic_dispersion_front_door.py",
+        "sha256": "7efa03b9ae8d4ccb1b95e1357c843daba0430e74a3bf32a4904efe71a76619bc"
+      },
+      {
+        "relative_path": "formal/external_evidence/relativistic_dispersion_domain_01/rl01_reference_report.json",
+        "sha256": "887f0e32f2b9c672c8b37ae155cd3b3f9aaaa0228af94867f18050316cd80c12"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+        "sha256": "ce76ca985cfbbc7624b3cbb8cfe19a5396719203933b79a42c076b195949c93a"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_20260625_v0.json",
+        "sha256": "4828f1b901f62d2d253e2c1a1b5543c197a979f851aaa394ff0481ca7716aec6"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_20260621_v0.json",
+        "sha256": "0c8dcd2ab7becdb7f1a33a4b079472acd936ecd0fad82133009cbe9fc3ee6f91"
+      }
+    ],
+    "consumed_v0_review_verdict": "BLOCKED_INCOMPLETE_ELECTROMAGNETIC_QUANTUM_CONVENTION_CLOSURE",
+    "generator": {
+      "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_v1.py",
+      "sha256": "0794941ffe14b7e1c250a6763f1f82f6c876bece486d8d52bd9a57ce2582f8e5"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1.py",
+      "sha256": "4d8760dc8a8d78296effc77b69d8c3f9cdb5a2fc473221813dd9db32ebe18882"
+    }
+  },
+  "bidirectional_round_trips": {
+    "comparison_method": "exact comparison of frozen canonical symbolic ASTs; typography is excluded from identity",
+    "passed_count": 6,
+    "required_count": 6,
+    "rows": [
+      {
+        "equation_id": "SR_INTERVAL_INVARIANCE",
+        "forward_passed": true,
+        "forward_path": "natural -> deterministic SI restoration -> exact natural suppression",
+        "natural_canonical_ast": [
+          "eq",
+          [
+            "sub",
+            [
+              "pow",
+              "t_prime_N",
+              2
+            ],
+            [
+              "pow",
+              "x_prime",
+              2
+            ]
+          ],
+          [
+            "sub",
+            [
+              "pow",
+              "t_N",
+              2
+            ],
+            [
+              "pow",
+              "x",
+              2
+            ]
+          ]
+        ],
+        "natural_canonical_sha256": "13310972400f30274b4ef7c50f2321edf07e29ae4794c9acbe37873b090237e2",
+        "passed": true,
+        "reverse_passed": true,
+        "reverse_path": "SI -> deterministic constant suppression -> exact SI restoration",
+        "si_canonical_ast": [
+          "eq",
+          [
+            "sub",
+            [
+              "mul",
+              [
+                "pow",
+                "c",
+                2
+              ],
+              [
+                "pow",
+                "t_prime",
+                2
+              ]
+            ],
+            [
+              "pow",
+              "x_prime",
+              2
+            ]
+          ],
+          [
+            "sub",
+            [
+              "mul",
+              [
+                "pow",
+                "c",
+                2
+              ],
+              [
+                "pow",
+                "t",
+                2
+              ]
+            ],
+            [
+              "pow",
+              "x",
+              2
+            ]
+          ]
+        ],
+        "si_canonical_sha256": "e6666ff2bf70288dae844c4fbe7d3efa073dbfd43728a5dbcbcb74be86141e3d"
+      },
+      {
+        "equation_id": "SR_MASS_SHELL",
+        "forward_passed": true,
+        "forward_path": "natural -> deterministic SI restoration -> exact natural suppression",
+        "natural_canonical_ast": [
+          "eq",
+          [
+            "pow",
+            "omega_N",
+            2
+          ],
+          [
+            "add",
+            [
+              "pow",
+              "k_N",
+              2
+            ],
+            [
+              "pow",
+              "m_RL_N",
+              2
+            ]
+          ]
+        ],
+        "natural_canonical_sha256": "ba714d03200898155ad0d3ebd150ce934e146918acc658e6de3fb85c8bdf891e",
+        "passed": true,
+        "reverse_passed": true,
+        "reverse_path": "SI -> deterministic constant suppression -> exact SI restoration",
+        "si_canonical_ast": [
+          "eq",
+          [
+            "pow",
+            "E",
+            2
+          ],
+          [
+            "add",
+            [
+              "mul",
+              [
+                "pow",
+                "c",
+                2
+              ],
+              [
+                "pow",
+                "p",
+                2
+              ]
+            ],
+            [
+              "mul",
+              [
+                "pow",
+                "m",
+                2
+              ],
+              [
+                "pow",
+                "c",
+                4
+              ]
+            ]
+          ]
+        ],
+        "si_canonical_sha256": "b4feb78ac08fbcd128b8d9c5500b19a0a6a8dd28b6703d24522a0b7d429c42d4"
+      },
+      {
+        "equation_id": "CURRENT_CONSERVATION",
+        "forward_passed": true,
+        "forward_path": "natural -> deterministic SI restoration -> exact natural suppression",
+        "natural_canonical_ast": [
+          "eq",
+          [
+            "divergence",
+            "nabla_mu",
+            "J_N^mu"
+          ],
+          0
+        ],
+        "natural_canonical_sha256": "a313cb9fc9733a366133ff423abae8149a2e751ebd1c4dea04d2b91243e6d90f",
+        "passed": true,
+        "reverse_passed": true,
+        "reverse_path": "SI -> deterministic constant suppression -> exact SI restoration",
+        "si_canonical_ast": [
+          "eq",
+          [
+            "divergence",
+            "nabla_mu",
+            "J_SI^mu"
+          ],
+          0
+        ],
+        "si_canonical_sha256": "7bcac6111d281eb60c5e46a15d3c006c2fb27f6885b0e524c6b938dd3141529b"
+      },
+      {
+        "equation_id": "SOURCED_MAXWELL",
+        "forward_passed": true,
+        "forward_path": "natural -> deterministic SI restoration -> exact natural suppression",
+        "natural_canonical_ast": [
+          "eq",
+          [
+            "divergence",
+            "nabla_mu",
+            "F_N^{mu nu}"
+          ],
+          "J_N^nu"
+        ],
+        "natural_canonical_sha256": "11b3e4240337bae56e779bd87bb4d167d7b881a33d18db958ecb7fbeb0b7b0be",
+        "passed": true,
+        "reverse_passed": true,
+        "reverse_path": "SI -> deterministic constant suppression -> exact SI restoration",
+        "si_canonical_ast": [
+          "eq",
+          [
+            "divergence",
+            "nabla_mu",
+            "F_SI^{mu nu}"
+          ],
+          [
+            "mul",
+            "mu_0",
+            "J_SI^nu"
+          ]
+        ],
+        "si_canonical_sha256": "59c9dafb74387c8d5db4ef994d82c8606696a1630b6c716d7f25870d2b81f9ce"
+      },
+      {
+        "equation_id": "MATTER_STRESS_ENERGY_EXCHANGE",
+        "forward_passed": true,
+        "forward_path": "natural -> deterministic SI restoration -> exact natural suppression",
+        "natural_canonical_ast": [
+          "eq",
+          [
+            "divergence",
+            "nabla_mu",
+            "T_matter^{mu nu}"
+          ],
+          [
+            "contract",
+            "F_N^nu{}_alpha",
+            "J_N^alpha"
+          ]
+        ],
+        "natural_canonical_sha256": "9fb908cabe810ffd6cf71d42c1df423e7f1438c7139898d07a114c3b83cacae0",
+        "passed": true,
+        "reverse_passed": true,
+        "reverse_path": "SI -> deterministic constant suppression -> exact SI restoration",
+        "si_canonical_ast": [
+          "eq",
+          [
+            "divergence",
+            "nabla_mu",
+            "T_matter^{mu nu}"
+          ],
+          [
+            "contract",
+            "F_SI^nu{}_alpha",
+            "J_SI^alpha"
+          ]
+        ],
+        "si_canonical_sha256": "badb04725354203821759468dfc0b50fed1814200dc59b6c99ea278df9f170cb"
+      },
+      {
+        "equation_id": "GAUGE_STRESS_ENERGY_NORMALIZATION",
+        "forward_passed": true,
+        "forward_path": "natural -> deterministic SI restoration -> exact natural suppression",
+        "natural_canonical_ast": [
+          "eq",
+          "T_A_N_mu_nu",
+          [
+            "add",
+            [
+              "neg",
+              [
+                "contract",
+                "F_N_mu_alpha",
+                "F_N_nu{}^alpha"
+              ]
+            ],
+            [
+              "mul",
+              "1/4",
+              "g_mu_nu",
+              [
+                "contract",
+                "F_N_alpha_beta",
+                "F_N^{alpha beta}"
+              ]
+            ]
+          ]
+        ],
+        "natural_canonical_sha256": "c2fc79e7753613607f1a478919e3ec1a4a38b28cdf5323482c339a9369558483",
+        "passed": true,
+        "reverse_passed": true,
+        "reverse_path": "SI -> deterministic constant suppression -> exact SI restoration",
+        "si_canonical_ast": [
+          "eq",
+          "T_A_SI_mu_nu",
+          [
+            "mul",
+            "mu_0^-1",
+            [
+              "add",
+              [
+                "neg",
+                [
+                  "contract",
+                  "F_SI_mu_alpha",
+                  "F_SI_nu{}^alpha"
+                ]
+              ],
+              [
+                "mul",
+                "1/4",
+                "g_mu_nu",
+                [
+                  "contract",
+                  "F_SI_alpha_beta",
+                  "F_SI^{alpha beta}"
+                ]
+              ]
+            ]
+          ]
+        ],
+        "si_canonical_sha256": "115d32082c9fcf6bf2c0a456dbe74bb4331e6bbb76405523899282b1a83d2f8f"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "One convention-closure packet only. It prepares exact source bindings, canonical symbolic round trips, and negative controls but does not apply restored equations to authoritative surfaces. It creates no SR recovery, whole-action Lorentz invariance, pillar completion, seam closure, empirical validation, prediction, new physics, R13 result, migration, or comparator adoption.",
+  "coordinate_index_and_derivative_lock": {
+    "J_SI^mu": "(c rho,j_vector)",
+    "J_SI_mu": "(c rho,-j_vector)",
+    "all_coordinate_components_dimension": "L",
+    "coordinate_definition": "x^mu=(c t,x,y,z)",
+    "coordinate_order": [
+      "x^0",
+      "x^1",
+      "x^2",
+      "x^3"
+    ],
+    "eta_mu_nu": "diag(+1,-1,-1,-1)",
+    "metric_signature": "(+,-,-,-)",
+    "p^mu": "(E/c,p_vector)",
+    "p_mu": "(E/c,-p_vector)",
+    "partial^mu": "(c^-1 partial_t,-partial_x,-partial_y,-partial_z)",
+    "partial_mu": "(c^-1 partial_t,partial_x,partial_y,partial_z)",
+    "raise_lower_rule": "use eta in Minkowski coordinates; use the selected curved metric only through the explicit curved adapter"
+  },
+  "electromagnetic_tensor_closure": {
+    "F_lower_matrix_rows": [
+      [
+        "0",
+        "+E_x/c",
+        "+E_y/c",
+        "+E_z/c"
+      ],
+      [
+        "-E_x/c",
+        "0",
+        "-B_z",
+        "+B_y"
+      ],
+      [
+        "-E_y/c",
+        "+B_z",
+        "0",
+        "-B_x"
+      ],
+      [
+        "-E_z/c",
+        "-B_y",
+        "+B_x",
+        "0"
+      ]
+    ],
+    "F_upper_matrix_rows": [
+      [
+        "0",
+        "-E_x/c",
+        "-E_y/c",
+        "-E_z/c"
+      ],
+      [
+        "+E_x/c",
+        "0",
+        "-B_z",
+        "+B_y"
+      ],
+      [
+        "+E_y/c",
+        "+B_z",
+        "0",
+        "-B_x"
+      ],
+      [
+        "+E_z/c",
+        "-B_y",
+        "+B_x",
+        "0"
+      ]
+    ],
+    "dual_components": "starF^{0i}=-B^i; starF^{ij}=+epsilon_3^{ijk} E_k/c",
+    "dual_definition": "starF^{mu nu}=(1/2) varepsilon^{mu nu rho sigma} F_rho_sigma",
+    "electric_field": "E=-grad(phi)-partial_t A",
+    "executable_tensor_audit": {
+      "antisymmetry_passed": true,
+      "dual_component_audit_passed": true,
+      "method": "exact rational antisymmetry, metric-lowering, and dual contraction audit",
+      "metric_lowering_passed": true,
+      "passed": true,
+      "selected_dual_independent_components": {
+        "starF^01": {
+          "B_x": "-1"
+        },
+        "starF^02": {
+          "B_y": "-1"
+        },
+        "starF^03": {
+          "B_z": "-1"
+        },
+        "starF^12": {
+          "E_z/c": "1"
+        },
+        "starF^13": {
+          "E_y/c": "-1"
+        },
+        "starF^23": {
+          "E_x/c": "1"
+        }
+      },
+      "selected_lower_independent_components": {
+        "F_01": {
+          "E_x/c": "1"
+        },
+        "F_02": {
+          "E_y/c": "1"
+        },
+        "F_03": {
+          "E_z/c": "1"
+        },
+        "F_12": {
+          "B_z": "-1"
+        },
+        "F_13": {
+          "B_y": "1"
+        },
+        "F_23": {
+          "B_x": "-1"
+        }
+      },
+      "selected_upper_independent_components": {
+        "F^01": {
+          "E_x/c": "-1"
+        },
+        "F^02": {
+          "E_y/c": "-1"
+        },
+        "F^03": {
+          "E_z/c": "-1"
+        },
+        "F^12": {
+          "B_z": "-1"
+        },
+        "F^13": {
+          "B_y": "1"
+        },
+        "F^23": {
+          "B_x": "-1"
+        }
+      }
+    },
+    "field_definition_lower": "F_SI_mu_nu=partial_mu A_SI_nu-partial_nu A_SI_mu",
+    "field_definition_upper": "F_SI^{mu nu}=partial^mu A_SI^nu-partial^nu A_SI^mu",
+    "four_dimensional_orientation": "varepsilon^{0123}=+1 and varepsilon_0123=-1 in oriented Minkowski Cartesian coordinates",
+    "four_dimensional_tensor_rule": "varepsilon^{mu nu rho sigma}=permutation_sign(mu,nu,rho,sigma); lowering all four indices multiplies by det(eta)=-1",
+    "four_potential_contravariant": "A_SI^mu=(phi/c,A_x,A_y,A_z)",
+    "four_potential_covariant": "A_SI_mu=(phi/c,-A_x,-A_y,-A_z)",
+    "homogeneous_maxwell": "partial_mu starF^{mu nu}=0, equivalent to div B=0 and curl E+partial_t B=0",
+    "lower_components": "F_{0i}=+E_i/c; F_{i0}=-E_i/c; F_{ij}=-epsilon_3,ijk B^k",
+    "magnetic_field": "B=curl(A)",
+    "sourced_maxwell_SI": "partial_mu F_SI^{mu nu}=mu_0 J_SI^nu, equivalent to div E=rho/epsilon_0 and curl B-c^-2 partial_t E=mu_0 j",
+    "three_dimensional_epsilon": "epsilon_3^{123}=epsilon_3,123=+1 as the Euclidean spatial permutation symbol",
+    "upper_components": "F^{0i}=-E^i/c; F^{i0}=+E^i/c; F^{ij}=-epsilon_3^{ijk} B_k",
+    "vacuum_identity": "mu_0 epsilon_0 c^2=1"
+  },
+  "executable_negative_controls": {
+    "base_state_first_diagnostic": "PASS",
+    "exact_first_diagnostic_count": 8,
+    "required_count": 8,
+    "rows": [
+      {
+        "changed_field": "temporal_coordinate",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "TEMPORAL_COORDINATE_NOT_X0_EQUALS_CT",
+        "mutated_value": "x^0=t",
+        "mutation_id": "NEG_X0_EQUALS_T",
+        "observed_first_diagnostic": "TEMPORAL_COORDINATE_NOT_X0_EQUALS_CT",
+        "passed": true
+      },
+      {
+        "changed_field": "partial_0",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "PARTIAL0_MISSING_C_INVERSE",
+        "mutated_value": "partial_t",
+        "mutation_id": "NEG_PARTIAL0_MISSING_C",
+        "observed_first_diagnostic": "PARTIAL0_MISSING_C_INVERSE",
+        "passed": true
+      },
+      {
+        "changed_field": "p^0",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "FOUR_MOMENTUM_TIME_COMPONENT_NOT_E_OVER_C",
+        "mutated_value": "E",
+        "mutation_id": "NEG_P0_EQUALS_E",
+        "observed_first_diagnostic": "FOUR_MOMENTUM_TIME_COMPONENT_NOT_E_OVER_C",
+        "passed": true
+      },
+      {
+        "changed_field": "J^0",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "FOUR_CURRENT_TIME_COMPONENT_NOT_C_RHO",
+        "mutated_value": "rho",
+        "mutation_id": "NEG_J0_EQUALS_RHO",
+        "observed_first_diagnostic": "FOUR_CURRENT_TIME_COMPONENT_NOT_C_RHO",
+        "passed": true
+      },
+      {
+        "changed_field": "metric_signature",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "METRIC_SIGNATURE_MIXED_WITH_FROZEN_FORMULAS",
+        "mutated_value": "(-,+,+,+)",
+        "mutation_id": "NEG_SIGNATURE_REVERSED",
+        "observed_first_diagnostic": "METRIC_SIGNATURE_MIXED_WITH_FROZEN_FORMULAS",
+        "passed": true
+      },
+      {
+        "changed_field": "F^{0i}",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "F0I_SIGN_INCOMPATIBLE_WITH_A_AND_E_DEFINITIONS",
+        "mutated_value": "+E^i/c",
+        "mutation_id": "NEG_F0I_SIGN_REVERSED",
+        "observed_first_diagnostic": "F0I_SIGN_INCOMPATIBLE_WITH_A_AND_E_DEFINITIONS",
+        "passed": true
+      },
+      {
+        "changed_field": "sourced_maxwell_SI_prefactor",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "SOURCED_MAXWELL_SI_MISSING_MU0",
+        "mutated_value": "1",
+        "mutation_id": "NEG_MAXWELL_MISSING_MU0",
+        "observed_first_diagnostic": "SOURCED_MAXWELL_SI_MISSING_MU0",
+        "passed": true
+      },
+      {
+        "changed_field": "quantum_hbar_present",
+        "changed_field_count": 1,
+        "expected_first_diagnostic": "QUANTUM_GAUGE_NORMALIZATION_MISSING_HBAR",
+        "mutated_value": false,
+        "mutation_id": "NEG_QUANTUM_MISSING_HBAR",
+        "observed_first_diagnostic": "QUANTUM_GAUGE_NORMALIZATION_MISSING_HBAR",
+        "passed": true
+      }
+    ]
+  },
+  "flat_curved_derivative_adapter": {
+    "bounded_nonclaim": "Omega_mu/tetrad geometry is named but not derived; no tetrad-gravity or curved-QFT closure follows",
+    "connection_assumptions": [
+      "metric compatible",
+      "torsion free",
+      "Levi-Civita connection"
+    ],
+    "curved_covector": "nabla_mu V_nu=partial_mu V_nu-Gamma^lambda_mu_nu V_lambda",
+    "curved_scalar": "nabla_mu phi=partial_mu phi",
+    "curved_spinor": "nabla_spin_mu psi=partial_mu psi+Omega_mu psi",
+    "curved_tensor": "apply the Levi-Civita connection to every spacetime index",
+    "curved_vector": "nabla_mu V^nu=partial_mu V^nu+Gamma^nu_mu_lambda V^lambda",
+    "flat_inertial": "use partial_mu in selected inertial Minkowski coordinates; Christoffel and spin connection vanish in that chart/frame",
+    "gauge_plus_spin": "D_mu psi=nabla_spin_mu psi+i q_SI A_mu psi/hbar",
+    "source_adapter": "project nabla_mu sources reduce to the packet partial_mu forms only in the declared flat inertial limit with Gamma=Omega=0"
+  },
+  "hard_stop": {
+    "equation_restoration_application_authorized_now": false,
+    "independent_packet_review_required": true,
+    "migration_authorized_now": false,
+    "packet_version": 1,
+    "repository_wide_rewrite_authorized": false,
+    "successor_if_accepted": "prepare_bounded_sr_convention_restoration_application_to_six_selected_authoritative_surfaces",
+    "successor_if_blocked": "prepare_one_bounded_sr_convention_packet_repair_only_if_independent_review_identifies_a_specific_contract_defect"
+  },
+  "independent_review_acceptance_criteria": {
+    "bidirectional_round_trips": "6/6_REQUIRED",
+    "coordinate_signature_closure": "PASS_REQUIRED",
+    "electromagnetic_tensor_closure": "PASS_REQUIRED",
+    "flat_curved_derivative_adapter": "PASS_REQUIRED",
+    "levi_civita_dual_closure": "PASS_REQUIRED",
+    "migration": "NOT_EXECUTED_REQUIRED",
+    "negative_controls": "8/8_EXACT_REQUIRED",
+    "quantum_hbar_normalization": "PASS_REQUIRED",
+    "scientific_promotion": "NONE_REQUIRED",
+    "si_maxwell_closure": "PASS_REQUIRED",
+    "source_bindings": "6/6_REQUIRED",
+    "stress_energy_component_closure": "PASS_REQUIRED"
+  },
+  "migration_inventory": [
+    "SR interval/covariance surface",
+    "RL01 relativistic-dispersion surface",
+    "psi-A current-conservation surface",
+    "psi-A sourced-Maxwell surface",
+    "psi-A matter exchange surface",
+    "A gauge stress-energy surface"
+  ],
+  "quantum_hbar_normalization": {
+    "coefficient_identity": "q_star A_star = q_SI A_SI/hbar",
+    "covariant_derivative_SI": "D_mu psi=(nabla_spin_mu+i q_SI A_SI_mu/hbar)psi",
+    "covariant_derivative_natural": "D_star_mu psi=(nabla_spin_mu+i q_star A_star_mu)psi",
+    "current_identity": "J_star=q_star psibar gamma^mu psi=sqrt(mu_0/(hbar c)) J_SI for J_SI=q_SI c psibar gamma^mu psi",
+    "forward_passed": true,
+    "gauge_transform_SI": "A_mu -> A_mu+partial_mu chi; psi -> exp(-i q_SI chi/hbar) psi",
+    "gauge_transform_natural": "A_star_mu -> A_star_mu+partial_mu chi_star; psi_star -> exp(-i q_star chi_star) psi_star",
+    "natural_canonical_ast": [
+      "eq",
+      [
+        "mul",
+        [
+          "sub",
+          [
+            "mul",
+            "i",
+            "gamma^mu",
+            "D_star_mu"
+          ],
+          "m_star"
+        ],
+        "psi_star"
+      ],
+      0
+    ],
+    "object_maps": {
+      "A_star": "A_SI/sqrt(mu_0 hbar c)",
+      "F_star": "F_SI/sqrt(mu_0 hbar c)",
+      "J_star": "sqrt(mu_0/(hbar c)) J_SI",
+      "chi_star": "chi_SI/sqrt(mu_0 hbar c)",
+      "m_star": "m c/hbar",
+      "psi_star": "psi_SI with the same L^-3/2 normalization",
+      "q_star": "q_SI sqrt(mu_0 c/hbar)=q_SI/sqrt(epsilon_0 hbar c)"
+    },
+    "passed": true,
+    "phase_identity": "q_star chi_star=q_SI chi_SI/hbar",
+    "reverse_passed": true,
+    "si_canonical_ast": [
+      "eq",
+      [
+        "mul",
+        [
+          "sub",
+          [
+            "mul",
+            "i",
+            "hbar",
+            "c",
+            "gamma^mu",
+            "D_SI_mu"
+          ],
+          [
+            "mul",
+            "m",
+            "c^2"
+          ]
+        ],
+        "psi_SI"
+      ],
+      0
+    ],
+    "signed_charge_policy": "q_SI is the signed electric charge of psi"
+  },
+  "schema_id": "SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_20260717_v1",
+  "scope": {
+    "authoritative_equation_restoration_executed": false,
+    "automation_created": false,
+    "convention_closure_packet_only": true,
+    "curved_spinor_geometry_derived": false,
+    "external_comparator_activated": false,
+    "general_purpose_units_engine_built": false,
+    "historical_artifacts_modified": false,
+    "multiple_coordinate_or_signature_conventions_supported": false,
+    "multiple_electromagnetic_unit_systems_supported": false,
+    "r13_reopened": false,
+    "repository_wide_rewrite_authorized": false,
+    "scientific_equation_migration_executed": false
+  },
+  "selected_next_target": "review_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1_result",
+  "source_bindings": {
+    "required_count": 6,
+    "rows": [
+      {
+        "artifact": "formal/output/sr_covariance_science_increment_20260325_v0.json",
+        "artifact_sha256": "48758450fdd246698adcbe16a390151553d07eccbaec97040ca2f8056e04093c",
+        "binding_validated": true,
+        "claim_class": "BOUNDED_CLOSURE_EXTENSION_PINNED",
+        "convention_assumptions": [
+          "c=1",
+          "one spatial dimension",
+          "Lorentz interval surface"
+        ],
+        "equation_id": "SR_INTERVAL_INVARIANCE",
+        "exact_content_sha256": "5c60a42db38c78c7fdc6b4d1d59a893d9a1593c4fae3654f37e4ed794af5d78d",
+        "exact_source_expression": "t_prime^2 - x_prime^2 = t^2 - x^2",
+        "locator": "/closure_forms/interval_identity",
+        "proposed_si_target": "c^2 t_prime^2-x_prime^2=c^2 t^2-x^2",
+        "source_kind": "json_pointer"
+      },
+      {
+        "artifact": "formal/python/tools/rl01_relativistic_dispersion_front_door.py",
+        "artifact_sha256": "7efa03b9ae8d4ccb1b95e1357c843daba0430e74a3bf32a4904efe71a76619bc",
+        "binding_validated": true,
+        "claim_class": "FRONT_DOOR_ONLY_NO_EXTERNAL_TRUTH_CLAIM",
+        "convention_assumptions": [
+          "RL01 natural comparator",
+          "reference c=1",
+          "omega^2=c^2 k^2+m_RL^2"
+        ],
+        "corroborating_artifact": "formal/external_evidence/relativistic_dispersion_domain_01/rl01_reference_report.json",
+        "corroborating_locator": "/schema",
+        "corroborating_value": "RL/dispersion_front_door_report/v1",
+        "equation_id": "SR_MASS_SHELL",
+        "exact_content_sha256": "258482eb86a84eb41b5b15e6e3e8671f449ad19dce9e9b4ade95f0e4f3b54b2a",
+        "exact_source_expression": "omega2 = [(c * c) * (kk * kk) + (m * m) for kk in k_list]",
+        "locator": "_make_report: omega2 assignment",
+        "proposed_si_target": "E^2=p^2 c^2+m^2 c^4",
+        "source_kind": "exact_code_snippet"
+      },
+      {
+        "artifact": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+        "artifact_sha256": "ce76ca985cfbbc7624b3cbb8cfe19a5396719203933b79a42c076b195949c93a",
+        "binding_validated": true,
+        "claim_class": "BOUNDED_CURRENT_CONSERVATION_ROUTE",
+        "convention_assumptions": [
+          "curved-capable nabla_mu",
+          "selected psi-A U(1) policy",
+          "suppressed constants"
+        ],
+        "equation_id": "CURRENT_CONSERVATION",
+        "exact_content_sha256": "965e43c6d77326a187f42aaa16baad7d7d9f2885931f1c3404aa05c97430980e",
+        "exact_source_expression": "nabla_mu J^mu = 0",
+        "locator": "/current_conservation_result",
+        "proposed_si_target": "nabla_mu J_SI^mu=0",
+        "source_kind": "json_pointer"
+      },
+      {
+        "artifact": "formal/docs/release/TOE_NATIVE_PSI_A_U1_SOURCED_MAXWELL_ROUTE_PACKET_20260624_v0.json",
+        "artifact_sha256": "ce76ca985cfbbc7624b3cbb8cfe19a5396719203933b79a42c076b195949c93a",
+        "binding_validated": true,
+        "claim_class": "BOUNDED_SOURCED_GAUGE_ROUTE_NO_FULL_MAXWELL_CLOSURE",
+        "convention_assumptions": [
+          "curved-capable nabla_mu",
+          "F=dA",
+          "rationalized suppressed normalization"
+        ],
+        "equation_id": "SOURCED_MAXWELL",
+        "exact_content_sha256": "47db234ea9e9846159ffea4f004aa7ed63f3a2e981c8348c9f1678ba1410357d",
+        "exact_source_expression": "nabla_mu F^{mu nu} = J^nu",
+        "locator": "/sourced_gauge_route",
+        "proposed_si_target": "nabla_mu F_SI^{mu nu}=mu_0 J_SI^nu",
+        "source_kind": "json_pointer"
+      },
+      {
+        "artifact": "formal/docs/release/TOE_NATIVE_PSI_A_U1_MATTER_SECTOR_EXCHANGE_ROUTE_RESULT_REVIEW_20260625_v0.json",
+        "artifact_sha256": "4828f1b901f62d2d253e2c1a1b5543c197a979f851aaa394ff0481ca7716aec6",
+        "binding_validated": true,
+        "claim_class": "ACCEPTED_BOUNDED_MATTER_SIDE_EXCHANGE_ROUTE",
+        "convention_assumptions": [
+          "curved-capable nabla_mu",
+          "bounded symmetric Dirac stress route",
+          "suppressed normalization"
+        ],
+        "equation_id": "MATTER_STRESS_ENERGY_EXCHANGE",
+        "exact_content_sha256": "9853c8a471c36d6d369f45ba85a311d880bacff261a08cb34988cbe8a3becc13",
+        "exact_source_expression": "nabla_mu T_psi^{mu nu} = + F^nu{}_alpha J^alpha",
+        "locator": "/matter_sector_exchange_identity",
+        "proposed_si_target": "nabla_mu T_psi^{mu nu}=F_SI^nu{}_alpha J_SI^alpha",
+        "source_kind": "json_pointer"
+      },
+      {
+        "artifact": "formal/docs/release/TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_20260621_v0.json",
+        "artifact_sha256": "0c8dcd2ab7becdb7f1a33a4b079472acd936ecd0fad82133009cbe9fc3ee6f91",
+        "binding_validated": true,
+        "claim_class": "ACCEPTED_CONVENTION_SENSITIVE_GAUGE_STRESS_ROUTE",
+        "convention_assumptions": [
+          "(+,-,-,-)",
+          "T_mu_nu=2/sqrt(-g) delta S/delta g^{mu nu}",
+          "suppressed gauge normalization"
+        ],
+        "equation_id": "GAUGE_STRESS_ENERGY_NORMALIZATION",
+        "exact_content_sha256": "e7c2bb2aa2e4866414b5defd030ea57ed384833e19200599d43e7c0c036fcfb6",
+        "exact_source_expression": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+        "locator": "/gauge_stress_energy_route",
+        "proposed_si_target": "T_A,SI=mu_0^-1[-F_SI F_SI+(1/4)g F_SI^2]",
+        "source_kind": "json_pointer"
+      }
+    ],
+    "validated_count": 6
+  },
+  "stress_energy_component_dictionary": {
+    "T^00": "energy density",
+    "T^0i": "energy flux^i/c=c times momentum density^i",
+    "T^i0": "c times momentum density^i; equals T^0i only under the selected symmetry assumption",
+    "T^ij": "i-directed flux of j-momentum; spatial stress/momentum-flux tensor",
+    "component_dimension": "[T^{mu nu}]=J m^-3=Pa for every component under x^0=ct",
+    "gauge_tensor_SI": "T_A,SI_mu_nu=mu_0^-1[-F_mu_alpha F_nu{}^alpha+(1/4)g_mu_nu F_alpha_beta F^{alpha beta}]",
+    "selected_definition": "symmetric Hilbert stress-energy on the bounded classical matter/gauge routes",
+    "selected_exchange_SI": "nabla_mu T_matter^{mu nu}=F_SI^nu{}_alpha J_SI^alpha",
+    "symmetry_assumption": "T^{mu nu}=T^{nu mu} only for the selected symmetric Hilbert/Belinfante-improved surface; do not infer it for an arbitrary canonical tensor"
+  },
+  "target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1",
+  "verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,715 @@
+{
+  "analytic_benchmarks": [
+    {
+      "benchmark_id": "POINT_NEWTONIAN",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "benchmark_id": "POINT_YUKAWA",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "benchmark_id": "UNIFORM_SPHERE_FORM_FACTOR",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "benchmark_id": "APPARATUS_TORQUE_AND_SYMMETRY",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "authority": {
+    "consumed_response_selection_verdict": "SELECTED_DETERMINISTIC_FORWARD_MODEL_VALIDATION_PACKET_PREPARATION",
+    "frozen_response_selection_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_SYNTHETIC_FORECAST_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+        "sha256": "eecfa86d0c73cbf5e6e4630cba7c4833b0393267fd187124c56b2f0b5b57d174"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SCALAR_ONLY_YUKAWA_SYNTHETIC_FORECAST_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.json",
+        "sha256": "b43c7b5689734fb43ef5de6e56e8ff11b8a0edc606e6071cfa67fee1fb76995e"
+      },
+      {
+        "relative_path": "formal/python/tools/post_scalar_only_yukawa_synthetic_forecast_packet_review_scientific_response_selection_v0.py",
+        "sha256": "bc363ac1d787de31af27b056d71f8631f092603297b44a86952a554e83f0daf9"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_synthetic_forecast_packet_review_scientific_response_selection_v0.py",
+        "sha256": "0d0be28092a3ff0c65ccf6158ab32dde11fb36a1c415c7a2bbd40773320dac9b"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaSyntheticForecastPacketReviewScientificResponseSelectionV0.lean",
+        "sha256": "d88726bf3cfc83878a638283fa8e23bcac8a09daafa1034bfa3245ff2d757964"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0.py",
+      "sha256": "ef7da3401505dc92072a6bdabbc6a52173d03f18a903c3d2c558e1a9f0d75f96"
+    },
+    "human_packet": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260718_v0.md",
+      "sha256": "29b6051dc6a0f880eab0bc4734e304f896b45d82aecd4aeda9e3246af05aabab"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaDeterministicTorsionBalanceForwardModelValidationPacketV0.lean",
+      "sha256": "d63ac40f4aadf54e7703ae09143fa4a060b352fa4370a2030008622be9f603f7"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0.py",
+      "sha256": "31bfb665c9004ea4de3ff5aeeb5eb3da98c1568fe6b9c5923b511fa6cdcf29f4"
+    }
+  },
+  "canonical_output_classes": [
+    {
+      "item_id": "NEWTONIAN_REAL_150_VECTOR",
+      "status": "NOT_PRODUCED"
+    },
+    {
+      "item_id": "TWENTY_FIVE_YUKAWA_REAL_150_VECTORS",
+      "status": "NOT_PRODUCED"
+    },
+    {
+      "item_id": "REFERENCE_TOTAL_REAL_150_VECTOR",
+      "status": "NOT_PRODUCED"
+    },
+    {
+      "item_id": "DETERMINISTIC_PERTURBATION_RESPONSE_VECTORS",
+      "status": "NOT_PRODUCED"
+    },
+    {
+      "item_id": "JACOBIAN_SVD_RANK_CORRELATION_AND_ETA_TABLES",
+      "status": "NOT_PRODUCED"
+    }
+  ],
+  "canonical_serialization": {
+    "float_format": "SIGNED_SCIENTIFIC_17_DIGITS_AFTER_DECIMAL",
+    "hash": "SHA256",
+    "manifest": "SORTED_KEY_UTF8_JSON",
+    "ordering": "GAP_MAJOR",
+    "repeat_requirement": "BYTE_IDENTICAL",
+    "table_encoding": "UTF8_LF_CSV"
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This packet freezes one deterministic internal torsion-balance forward-model validation contract. It executes no kernel, benchmark, mutation, convergence check, Jacobian, or output; uses no noise, covariance, Monte Carlo, profile likelihood, or evidence; produces no forecast or parameter bound; and adopts no scalar branch or theory.",
+  "comparison_and_geometry": {
+    "G_SI": 6.6743e-11,
+    "all_pairs_nonoverlapping": true,
+    "attractor_lever_m": 0.03,
+    "attractor_radius_m": 0.005,
+    "density_kg_m3": 19250.0,
+    "detector_lever_m": 0.03,
+    "detector_radius_m": 0.005,
+    "fixed_A_Y": "1/3",
+    "gap_count": 25,
+    "gap_grid": "LOGSPACE_1E-4_TO_1E-2_M",
+    "lambda_grid": "LOGSPACE_1E-5_TO_1E-1_M",
+    "lambda_reference_m": 0.001,
+    "not_eotwash_reconstruction": true,
+    "positive_lambda_count": 25
+  },
+  "convergence_contract": {
+    "angular_relative_tolerance": 1e-08,
+    "angular_samples": [
+      128,
+      256,
+      512
+    ],
+    "canonical_repeat_bytes_identical": true,
+    "density_cubature_orders": [
+      8,
+      12,
+      16,
+      24
+    ],
+    "density_relative_tolerance": 1e-06,
+    "energy_derivative_relative_tolerance": 1e-08,
+    "energy_derivative_steps_rad": [
+      0.001,
+      0.0005,
+      0.00025,
+      0.000125
+    ],
+    "error_definition": "abs(y-y_ref)/max(abs(y_ref),1e-22_N_m)",
+    "fail_closed": true,
+    "force_lever_relative_tolerance": 1e-10,
+    "torque_floor_N_m": 1e-22
+  },
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "deterministic_vectors": 0,
+    "execution_controls": "0_OF_15_EXECUTED",
+    "gaussian_noise": "NONE",
+    "monte_carlo": "NONE",
+    "next_authority": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0_result",
+    "scalar_branch": "NOT_ADOPTED",
+    "stage_a_packet": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "stage_b": "DEFERRED_NOT_AUTHORIZED",
+    "work_packages": "0_OF_10_EXECUTED"
+  },
+  "deliberate_mutations": [
+    {
+      "expected_result": "DESIGNATED_CONTROL_FAILS",
+      "mutation_id": "FLIP_YUKAWA_ENERGY_SIGN"
+    },
+    {
+      "expected_result": "DESIGNATED_CONTROL_FAILS",
+      "mutation_id": "REPLACE_ONE_THIRD_BY_ONE"
+    },
+    {
+      "expected_result": "DESIGNATED_CONTROL_FAILS",
+      "mutation_id": "REMOVE_ONE_SPHERE_FORM_FACTOR"
+    },
+    {
+      "expected_result": "DESIGNATED_CONTROL_FAILS",
+      "mutation_id": "FLIP_NEGATIVE_ENERGY_DERIVATIVE_TORQUE_SIGN"
+    },
+    {
+      "expected_result": "DESIGNATED_CONTROL_FAILS",
+      "mutation_id": "DOUBLE_DFT_NORMALIZATION"
+    }
+  ],
+  "deterministic_perturbations": {
+    "count": 16,
+    "rows": [
+      {
+        "exact_map": "multiply final torque by 1+k_tau",
+        "nominal": 0.0,
+        "perturbation_id": "TORQUE_CALIBRATION",
+        "test_range": [
+          -0.02,
+          0.02
+        ],
+        "unit": "fraction"
+      },
+      {
+        "exact_map": "rho_A -> rho_A*(1+k_A)",
+        "nominal": 0.0,
+        "perturbation_id": "SOURCE_DENSITY_SCALE",
+        "test_range": [
+          -0.01,
+          0.01
+        ],
+        "unit": "fraction"
+      },
+      {
+        "exact_map": "rho_D -> rho_D*(1+k_D)",
+        "nominal": 0.0,
+        "perturbation_id": "DETECTOR_DENSITY_SCALE",
+        "test_range": [
+          -0.01,
+          0.01
+        ],
+        "unit": "fraction"
+      },
+      {
+        "exact_map": "L_D -> L_D+dL_D",
+        "nominal": 0.0,
+        "perturbation_id": "DETECTOR_LEVER_OFFSET",
+        "test_range": [
+          -0.0001,
+          0.0001
+        ],
+        "unit": "m"
+      },
+      {
+        "exact_map": "L_A -> L_A+dL_A",
+        "nominal": 0.0,
+        "perturbation_id": "ATTRACTOR_LEVER_OFFSET",
+        "test_range": [
+          -0.0001,
+          0.0001
+        ],
+        "unit": "m"
+      },
+      {
+        "exact_map": "d_j -> d_j+dd with positive-gap guard",
+        "nominal": 0.0,
+        "perturbation_id": "GAP_OFFSET",
+        "test_range": [
+          -1e-05,
+          1e-05
+        ],
+        "unit": "m"
+      },
+      {
+        "exact_map": "add dx to every attractor center x",
+        "nominal": 0.0,
+        "perturbation_id": "ATTRACTOR_AXIS_X_OFFSET",
+        "test_range": [
+          -0.0001,
+          0.0001
+        ],
+        "unit": "m"
+      },
+      {
+        "exact_map": "add dy to every attractor center y",
+        "nominal": 0.0,
+        "perturbation_id": "ATTRACTOR_AXIS_Y_OFFSET",
+        "test_range": [
+          -0.0001,
+          0.0001
+        ],
+        "unit": "m"
+      },
+      {
+        "exact_map": "evaluate geometry at theta-dtheta",
+        "nominal": 0.0,
+        "perturbation_id": "ANGULAR_ZERO_OFFSET",
+        "test_range": [
+          -0.001,
+          0.001
+        ],
+        "unit": "rad"
+      },
+      {
+        "exact_map": "z -> (I+ell*L_adjacent)*z",
+        "nominal": 0.0,
+        "perturbation_id": "HARMONIC_LEAKAGE",
+        "test_range": [
+          -0.002,
+          0.002
+        ],
+        "unit": "fraction"
+      },
+      {
+        "exact_map": "add constant to 2RE at every gap",
+        "nominal": 0.0,
+        "perturbation_id": "BACKGROUND_2RE",
+        "test_range": [
+          -1e-17,
+          1e-17
+        ],
+        "unit": "N_m"
+      },
+      {
+        "exact_map": "add constant to 2IM at every gap",
+        "nominal": 0.0,
+        "perturbation_id": "BACKGROUND_2IM",
+        "test_range": [
+          -1e-17,
+          1e-17
+        ],
+        "unit": "N_m"
+      },
+      {
+        "exact_map": "add constant to 4RE at every gap",
+        "nominal": 0.0,
+        "perturbation_id": "BACKGROUND_4RE",
+        "test_range": [
+          -1e-17,
+          1e-17
+        ],
+        "unit": "N_m"
+      },
+      {
+        "exact_map": "add constant to 4IM at every gap",
+        "nominal": 0.0,
+        "perturbation_id": "BACKGROUND_4IM",
+        "test_range": [
+          -1e-17,
+          1e-17
+        ],
+        "unit": "N_m"
+      },
+      {
+        "exact_map": "add constant to 6RE at every gap",
+        "nominal": 0.0,
+        "perturbation_id": "BACKGROUND_6RE",
+        "test_range": [
+          -1e-17,
+          1e-17
+        ],
+        "unit": "N_m"
+      },
+      {
+        "exact_map": "add constant to 6IM at every gap",
+        "nominal": 0.0,
+        "perturbation_id": "BACKGROUND_6IM",
+        "test_range": [
+          -1e-17,
+          1e-17
+        ],
+        "unit": "N_m"
+      }
+    ],
+    "stochastic_priors": "NONE",
+    "transformation_order": "GEOMETRY_DENSITY_ENERGY_TORQUE_HARMONICS_CALIBRATION_LEAKAGE_BACKGROUND"
+  },
+  "execution_controls": [
+    {
+      "item_id": "POINT_NEWTONIAN_BENCHMARK",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "POINT_YUKAWA_BENCHMARK",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "UNIFORM_SPHERE_FORM_FACTOR_BENCHMARK",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "APPARATUS_TORQUE_SYMMETRY_BENCHMARK",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "MUTATE_YUKAWA_SIGN",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "MUTATE_FIXED_AMPLITUDE",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "MUTATE_SPHERE_FORM_FACTOR",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "MUTATE_TORQUE_SIGN",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "MUTATE_DFT_NORMALIZATION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "ODD_AND_COSINE_SYMMETRY_ZEROS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "PHASE_AND_ANGLE_REVERSAL",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "FORCE_LEVER_TORQUE_CROSS_CHECK",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "ENERGY_FINITE_DIFFERENCE_TORQUE_CROSS_CHECK",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "REFINEMENT_AND_REPEATED_SERIALIZATION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "JACOBIAN_RANK_AND_SCALAR_SHAPE_IDENTIFIABILITY",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "harmonic_contract": {
+    "a_n_relation": "a_n=2*Re(c_n)",
+    "b_n_relation": "b_n=-2*Im(c_n)",
+    "coefficient": "c_n=(1/(2*pi))*integral(tau*exp(-i*n*theta),theta=0..2*pi)",
+    "discrete_coefficient": "c_n=(1/N)*sum_k(tau_k*exp(-i*n*2*pi*k/N))",
+    "ordering": "GAP_MAJOR_2RE_2IM_4RE_4IM_6RE_6IM",
+    "positive_angle": "COUNTERCLOCKWISE_ABOUT_PLUS_Z_VIEWED_FROM_PLUS_Z",
+    "positive_torque": "ABOUT_PLUS_Z",
+    "production_sample_count": 256,
+    "real_vector_length": 150,
+    "retained_harmonics": [
+      2,
+      4,
+      6
+    ],
+    "unit": "N_m",
+    "zero_angle": "ATTRACTOR_AND_DETECTOR_AXES_ALONG_PLUS_X"
+  },
+  "jacobian_identifiability_contract": {
+    "column_count": 17,
+    "column_standardization": "FROZEN_TEST_SCALE",
+    "derivative_method": "CENTERED_DIFFERENCE_WITH_HALF_STEP_CHECK_EXCEPT_EXACT_LINEAR_COLUMNS",
+    "exact_projection_residual_threshold": 1e-10,
+    "expected_exact_amplitude_degeneracy": [
+      "TORQUE_CALIBRATION",
+      "SOURCE_DENSITY_SCALE",
+      "DETECTOR_DENSITY_SCALE"
+    ],
+    "failure_outcome": "BLOCKED_PARAMETER_IDENTIFIABILITY",
+    "global_output_scale": "MAX_ABS_NEWTONIAN_COMPONENT_WITH_1E-30_N_M_FAIL_FLOOR",
+    "identifiable_eta_threshold": 0.001,
+    "indistinguishable_eta_threshold": 1e-06,
+    "minimum_contiguous_identifiable_lambda_points": 5,
+    "near_degenerate_absolute_correlation_threshold": 0.999,
+    "parameter_order": [
+      "LOG_LAMBDA",
+      "TORQUE_CALIBRATION",
+      "SOURCE_DENSITY_SCALE",
+      "DETECTOR_DENSITY_SCALE",
+      "DETECTOR_LEVER_OFFSET",
+      "ATTRACTOR_LEVER_OFFSET",
+      "GAP_OFFSET",
+      "ATTRACTOR_AXIS_X_OFFSET",
+      "ATTRACTOR_AXIS_Y_OFFSET",
+      "ANGULAR_ZERO_OFFSET",
+      "HARMONIC_LEAKAGE",
+      "BACKGROUND_2RE",
+      "BACKGROUND_2IM",
+      "BACKGROUND_4RE",
+      "BACKGROUND_4IM",
+      "BACKGROUND_6RE",
+      "BACKGROUND_6IM"
+    ],
+    "rank_relative_singular_value_threshold": 1e-10,
+    "row_count": 150
+  },
+  "packet_id": "SCALAR_ONLY_YUKAWA_DETERMINISTIC_TORSION_BALANCE_FORWARD_MODEL_VALIDATION_PACKET_20260718_v0",
+  "packet_review_outcomes": [
+    "DETERMINISTIC_FORWARD_MODEL_VALIDATION_CONTRACT_READY",
+    "BLOCKED_HARMONIC_CONVENTION_INCOMPLETE",
+    "BLOCKED_PRODUCTION_KERNEL_VALIDATION",
+    "BLOCKED_TORQUE_DERIVATIVE_CONTRACT",
+    "BLOCKED_GEOMETRY_OR_SYMMETRY_FAILURE",
+    "BLOCKED_NUMERICAL_CONVERGENCE",
+    "BLOCKED_DETERMINISTIC_NUISANCE_MAPPING",
+    "BLOCKED_PARAMETER_IDENTIFIABILITY",
+    "BLOCKED_SCOPE_OR_PROVENANCE"
+  ],
+  "preparation_controls": {
+    "control_count": 30,
+    "failure_count": 0,
+    "pass_count": 30,
+    "rows": [
+      {
+        "control_id": "EXACT_RESPONSE_SELECTION_AUTHORITY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "control_id": "STAGE_A_ONLY_SCOPE_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FIXED_ONE_THIRD_COMPARISON_PROVENANCE",
+        "status": "PASS"
+      },
+      {
+        "control_id": "APPARATUS_GEOMETRY_AND_SI_CONSTANTS_EXACT",
+        "status": "PASS"
+      },
+      {
+        "control_id": "ONE_SHARED_PRODUCTION_FUNCTION_CHAIN",
+        "status": "PASS"
+      },
+      {
+        "control_id": "STABLE_UNIFORM_SPHERE_FORM_FACTOR_EVALUATION",
+        "status": "PASS"
+      },
+      {
+        "control_id": "ANALYTIC_NEGATIVE_ENERGY_DERIVATIVE_TORQUE",
+        "status": "PASS"
+      },
+      {
+        "control_id": "TWO_INDEPENDENT_TORQUE_CROSS_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "EXACT_CONTINUOUS_AND_DISCRETE_HARMONIC_CONVENTION",
+        "status": "PASS"
+      },
+      {
+        "control_id": "REAL_150_GAP_MAJOR_VECTOR_ORDER",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FOUR_PRODUCTION_ROUTED_BENCHMARKS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FIVE_DELIBERATE_MUTATIONS_FAIL_DESIGNATED_CONTROLS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "SEVEN_SYMMETRY_PHASE_AND_SCALING_CONTROLS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "ANGULAR_REFINEMENT_AND_NEAR_ZERO_FLOOR",
+        "status": "PASS"
+      },
+      {
+        "control_id": "REDUCED_DENSITY_CUBATURE_REFINEMENT",
+        "status": "PASS"
+      },
+      {
+        "control_id": "ENERGY_DERIVATIVE_STEP_LADDER",
+        "status": "PASS"
+      },
+      {
+        "control_id": "BIT_IDENTICAL_REPEAT_SERIALIZATION",
+        "status": "PASS"
+      },
+      {
+        "control_id": "SIXTEEN_DETERMINISTIC_PERTURBATION_MAPS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "NO_STOCHASTIC_PRIORS_IN_STAGE_A",
+        "status": "PASS"
+      },
+      {
+        "control_id": "VALID_PHYSICAL_DOMAIN_GUARDS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "SEVENTEEN_COLUMN_STANDARDIZED_JACOBIAN",
+        "status": "PASS"
+      },
+      {
+        "control_id": "SVD_RANK_AND_PAIRWISE_DEGENERACY_RULES",
+        "status": "PASS"
+      },
+      {
+        "control_id": "SCALAR_SHAPE_RESIDUAL_ETA_RULE",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FIVE_CONTIGUOUS_IDENTIFIABLE_RANGE_REQUIREMENT",
+        "status": "PASS"
+      },
+      {
+        "control_id": "EXPECTED_EXACT_AMPLITUDE_DEGENERACY_DISCLOSED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "CANONICAL_CSV_JSON_AND_SHA256_CONTRACT",
+        "status": "PASS"
+      },
+      {
+        "control_id": "TEN_WORK_PACKAGES_UNEXECUTED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FIFTEEN_EXECUTION_CONTROLS_UNEXECUTED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "NINE_PACKET_REVIEW_OUTCOMES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "control_id": "NO_EXECUTION_STOCHASTIC_EMPIRICAL_OR_THEORY_ADOPTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "production_path": {
+    "benchmark_only_kernel_allowed": false,
+    "cross_checks": [
+      "DIRECT_PAIR_FORCE_LEVER_ARM",
+      "FIVE_POINT_CENTRAL_ENERGY_DERIVATIVE"
+    ],
+    "production_torque": "ANALYTIC_NEGATIVE_ENERGY_DERIVATIVE",
+    "scaled_form_factor": "H(x)=exp(-x)*F(x)=3*((x-1)+(x+1)*exp(-2*x))/(2*x^3)",
+    "shared_function_count": 6,
+    "shared_functions": [
+      "pair_distance",
+      "pair_energy_and_radial_derivative",
+      "apparatus_energy",
+      "analytic_energy_derivative_torque",
+      "discrete_harmonic_transform",
+      "real_150_vector"
+    ],
+    "small_x_series_threshold": 0.001,
+    "uniform_sphere_form_factor": "F(x)=3*(x*cosh(x)-sinh(x))/x^3"
+  },
+  "provisional_readiness": "DETERMINISTIC_FORWARD_MODEL_VALIDATION_CONTRACT_READY",
+  "schema_id": "toe.scalar_only_yukawa.deterministic_torsion_balance_forward_model_validation.packet.v0",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "analytic_torque_and_cross_checks_frozen": true,
+    "benchmark_executed": false,
+    "benchmark_mutation_and_symmetry_controls_frozen": true,
+    "canonical_serialization_frozen": true,
+    "convergence_contract_frozen": true,
+    "covariance_used": false,
+    "deterministic_execution_authorized": false,
+    "deterministic_execution_performed": false,
+    "deterministic_perturbation_maps_frozen": true,
+    "deterministic_vector_produced": false,
+    "empirical_constraint_claimed": false,
+    "exact_harmonic_convention_frozen": true,
+    "gaussian_noise_used": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": false,
+    "jacobian_computed": false,
+    "jacobian_identifiability_contract_frozen": true,
+    "monte_carlo_executed": false,
+    "mutation_executed": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "outbound_contact_authorized": false,
+    "packet_preparation_executed": true,
+    "private_data_dependency_created": false,
+    "profile_likelihood_executed": false,
+    "scalar_branch_adopted": false,
+    "sensitivity_forecast_produced": false,
+    "shared_production_kernel_frozen": true,
+    "stochastic_packet_preparation_authorized": false,
+    "synthetic_dataset_generated": false
+  },
+  "selected_next_target": "review_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_DETERMINISTIC_FORWARD_MODEL_PACKET_REVIEW_ONLY",
+  "stage_a_boundary": {
+    "covariance": "NONE",
+    "execution": "NOT_AUTHORIZED",
+    "gaussian_noise": "NONE",
+    "monte_carlo_trials": "NONE",
+    "profile_likelihood": "NONE",
+    "result_type": "DETERMINISTIC_FORWARD_MODEL_VALIDATION_CONTRACT",
+    "sensitivity_forecast": "NONE"
+  },
+  "symmetry_phase_controls": [
+    "ODD_HARMONICS_1_3_5_ZERO",
+    "NOMINAL_EVEN_COSINE_QUADRATURES_ZERO",
+    "EVEN_SINE_2_4_6_NONZERO_WHEN_IDENTIFIABLE",
+    "TORQUE_ZERO_AT_FOUR_SYMMETRY_ANGLES",
+    "ANGLE_REVERSAL_CONJUGATES_COEFFICIENTS",
+    "RIGID_PI_OVER_16_ROTATION_PHASE_LAW",
+    "NEWTONIAN_AND_YUKAWA_DISTANCE_SCALING"
+  ],
+  "target": "prepare_scalar_only_yukawa_deterministic_torsion_balance_forward_model_validation_packet_v0",
+  "verdict": "PREPARED_DETERMINISTIC_FORWARD_MODEL_VALIDATION_CONTRACT_PENDING_INDEPENDENT_REVIEW",
+  "work_packages": [
+    {
+      "item_id": "EXACT_HARMONIC_CONVENTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "SHARED_PRODUCTION_KERNEL",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "ENERGY_TO_TORQUE_CROSS_VALIDATION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "FOUR_ANALYTIC_BENCHMARKS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "APPARATUS_HARMONIC_AND_SYMMETRY_VALIDATION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "MUTATION_AND_PHASE_SIGN_CONTROLS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "NUMERICAL_CONVERGENCE",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "DETERMINISTIC_PERTURBATION_MAPS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "JACOBIAN_IDENTIFIABILITY",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "item_id": "CANONICAL_REAL_150_OUTPUT",
+      "status": "NOT_EXECUTED"
+    }
+  ]
+}

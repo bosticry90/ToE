@@ -1,0 +1,266 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_D5_RECONCILIATION_PASS_v0",
+  "pass_id": "T_FIRST_R2_ACTIVE_BNV_D5_RECONCILIATION_PASS_0002",
+  "date": "2026-08-20",
+  "status": "FIVE_NONDERIVATIVE_D5_MULTISETS_RECONCILED_TO_SIX_NONZERO_FOUR_DIMENSIONAL_CONTRACTION_FAMILIES_PENDING_GLOBAL_EOM_AND_EXTERNAL_COMPARATOR_RECONCILIATION",
+  "authority": {
+    "native_basis_derivation": "PROVISIONAL_AUTHORIZED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED",
+    "raw_inventory_complete": false,
+    "nonredundant_basis_complete": false,
+    "basis_validated": false,
+    "full_adm_calculation": "UNAUTHORIZED",
+    "matching_or_rge_execution": "UNAUTHORIZED",
+    "parameter_evaluation": "UNAUTHORIZED",
+    "literature_absence": "NOT_ESTABLISHED",
+    "novelty": "UNKNOWN"
+  },
+  "frozen_inputs": [
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d5_d6_raw_inventory_pass_0001_v0.json",
+      "sha256": "e622c3b6189c42bd51665c1e0ee1aaa8c40a42fb1298b23cff6f0f56df13a672",
+      "role": "FIVE_PROVISIONAL_NONDERIVATIVE_D5_FIELD_MULTISETS"
+    },
+    {
+      "path": "formal/m1k_semantics_v1/semantic-text/0094-9830393a494760904a0e.txt",
+      "sha256": "91bee665b3f2408e6c4a422c27d183010248d263e2d6912d51e5e99ca8b9e0fa",
+      "role": "PRIMARY_LITERATURE_COMPARATOR_FOR_TWO_LISTED_MODEL_II_D5_BNV_OPERATORS",
+      "work_id": "ARXIV:1304.6119"
+    },
+    {
+      "path": "formal/m1k_semantics_v1/semantic-text/1256-8296ad44a4fe714ca10a.txt",
+      "sha256": "350ba6c6e248fe9416d14eb228e37657f8cda5ef66c9ae07bf6a500fa751f0f4",
+      "role": "FROZEN_UNADJUDICATED_COMPARATOR_FOR_DANGEROUS_RENORMALIZABLE_THREE_LEPTOQUARK_HIGGS_QUARTIC_WARNING",
+      "work_id": "ARXIV:1708.06350"
+    },
+    {
+      "path": "formal/m1k_comprehensive_scientific_review_v4/deeper-review-execution/tranche-0117-arxiv-0710-5699.json",
+      "sha256": "be356a130f1c7c0addd536144b535341fdda8a997eccca7faf357cb61e297f30",
+      "role": "PARALLEL_PROVENANCE_TRANCHE_CHECKPOINT"
+    }
+  ],
+  "conventions": {
+    "gauge_group": "SU(3)c x SU(2)L x U(1)Y",
+    "target_scalar": "X=R2tilde=(3,2,1/6)",
+    "lorentz_scalar": "psi^T C chi for same-chirality fermions",
+    "same_chirality_exchange_identity": "chi^T C psi = psi^T C chi for anticommuting fermion fields and C^T=-C",
+    "epsilon_color": "epsilon_ABC with epsilon_123=+1",
+    "epsilon_weak": "epsilon_ij with epsilon_12=+1",
+    "hermitian_conjugates": "implicit; displayed rows use DeltaB=+1 orientation",
+    "operator_normalization": "unit coefficient for each displayed invariant tensor; final ADM normalization remains unfrozen"
+  },
+  "independent_reconstruction": {
+    "method": "EXPLICIT_ENUMERATION_OF_ALL_2_POWER_4_WEAK_INDEX_ASSIGNMENTS_AND_EXACT_INTEGER_TENSOR_RANK",
+    "implementation": "formal/python/toe/certification/strict_model1_t_first_r2_active_bnv_d5_reconciliation_pass_0002_v0.py",
+    "qq_raw_tensor_definitions": {
+      "A_ijkl": "epsilon_ij delta_kl",
+      "B_ijkl": "delta_il epsilon_jk",
+      "C_ijkl": "delta_jl epsilon_ik"
+    },
+    "qq_exact_results": {
+      "raw_rank": 2,
+      "schouten_identity": "A+B-C=0",
+      "flavor_symmetric_basis_tensor": "A",
+      "flavor_antisymmetric_basis_tensor": "B+C",
+      "basis_rank": 2
+    },
+    "qlxx_raw_tensor_definitions": {
+      "A_ijkl": "epsilon_ij epsilon_kl",
+      "B_ijkl": "epsilon_ik epsilon_jl",
+      "C_ijkl": "epsilon_il epsilon_jk"
+    },
+    "qlxx_exact_results": {
+      "raw_rank_before_identical_X_projection": 2,
+      "schouten_identity": "A-B+C=0",
+      "required_X_pair_projection": "T_ijkl-T_ijlk because epsilon_ABC is color antisymmetric and the X fields commute",
+      "projected_identities": [
+        "P(A)=2A",
+        "P(B)=A",
+        "P(C)=-A"
+      ],
+      "projected_rank": 1
+    },
+    "aggregate_result": {
+      "field_multisets_tested": 5,
+      "gauge_and_lorentz_admissible_nonzero_multisets": 5,
+      "four_dimensional_algebraic_contraction_families": 6,
+      "global_eom_independence_established": false
+    }
+  },
+  "candidate_reconciliation": [
+    {
+      "row_id": "RAW-D5-QQ-X-HDAG",
+      "classification": "OTHER__VALID_NONZERO_GAUGE_LORENTZ_MULTISET_WITH_TWO_FOUR_DIMENSIONAL_ALGEBRAIC_CONTRACTION_FAMILIES_PENDING_GLOBAL_EOM_REDUCTION",
+      "canonical_dimension": "5",
+      "hypercharge_sum": "0",
+      "delta_b": "+1",
+      "delta_l": "-1",
+      "color_structure": "epsilon_ABC q_p^A q_r^B X^C",
+      "representatives": [
+        {
+          "family_id": "D5-QQ-X-HDAG-S",
+          "operator": "epsilon_ABC epsilon_ij (q_L,p^{A i T} C q_L,r^{B j})(H_dagger_k X^{C k})",
+          "flavor_exchange": "O_pr=+O_rp",
+          "same_flavor_survives": true
+        },
+        {
+          "family_id": "D5-QQ-X-HDAG-A",
+          "operator": "epsilon_ABC (q_L,p^{A i T} C q_L,r^{B j})[H_dagger_i epsilon_jk X^{C k}+H_dagger_j epsilon_ik X^{C k}]",
+          "flavor_exchange": "O_pr=-O_rp",
+          "same_flavor_survives": false
+        }
+      ],
+      "reduction_proof": "The three raw weak contractions obey A+B-C=0.  A and B+C have exact tensor rank two.  Including the color sign and symmetric same-chirality bilinear gives A flavor-symmetric and B+C flavor-antisymmetric.",
+      "fierz_status": "NO_FOUR_FERMION_FIERZ_RELATION_EXISTS_IN_THIS_TWO_FERMION_SLICE",
+      "ibp_status": "NOT_APPLICABLE_TO_NODERIVATIVE_REPRESENTATIVES",
+      "eom_status": "DEFERRED_UNTIL_D5_DERIVATIVE_BUCKET_IS_ENUMERATED",
+      "literature_reconciliation": "NOT_PRESENT_IN_THE_TWO_OPERATOR_ARXIV_1304_6119_MODEL_II_LIST; OMISSION_REASON_NOT_ESTABLISHED; NOVELTY_NOT_CLAIMED"
+    },
+    {
+      "row_id": "RAW-D5-UD-X-HDAG",
+      "classification": "OTHER__VALID_NONZERO_GAUGE_LORENTZ_OPERATOR_WITH_ONE_FOUR_DIMENSIONAL_ALGEBRAIC_CONTRACTION_FAMILY_PENDING_GLOBAL_EOM_REDUCTION",
+      "canonical_dimension": "5",
+      "hypercharge_sum": "0",
+      "delta_b": "+1",
+      "delta_l": "-1",
+      "representatives": [
+        {
+          "family_id": "D5-UD-X-HDAG",
+          "operator": "epsilon_ABC (u_R,p^{A T} C d_R,r^B)(H_dagger_i X^{C i})",
+          "flavor_exchange": "NO_IDENTICAL_FERMION_EXCHANGE_CONSTRAINT"
+        }
+      ],
+      "reduction_proof": "Color and weak singlets are unique for the displayed field content; u_R and d_R are distinct fields and the contraction has a nonzero component witness.",
+      "fierz_status": "NO_FOUR_FERMION_FIERZ_RELATION_EXISTS_IN_THIS_TWO_FERMION_SLICE",
+      "ibp_status": "NOT_APPLICABLE_TO_NODERIVATIVE_REPRESENTATIVE",
+      "eom_status": "DEFERRED_UNTIL_D5_DERIVATIVE_BUCKET_IS_ENUMERATED",
+      "literature_reconciliation": "MATCHES_ARXIV_1304_6119_MODEL_II_OPERATOR_OII_1_UP_TO_NOTATION_AND_COEFFICIENT_NORMALIZATION"
+    },
+    {
+      "row_id": "RAW-D5-DD-X-H",
+      "classification": "OTHER__VALID_NONZERO_GAUGE_LORENTZ_OPERATOR_WITH_ONE_FLAVOR_ANTISYMMETRIC_FOUR_DIMENSIONAL_CONTRACTION_FAMILY_PENDING_GLOBAL_EOM_REDUCTION",
+      "canonical_dimension": "5",
+      "hypercharge_sum": "0",
+      "delta_b": "+1",
+      "delta_l": "-1",
+      "representatives": [
+        {
+          "family_id": "D5-DD-X-H-A",
+          "operator": "epsilon_ABC (d_R,p^{A T} C d_R,r^B)(H^i epsilon_ij X^{C j})",
+          "flavor_exchange": "O_pr=-O_rp",
+          "same_flavor_survives": false,
+          "three_generation_status": "NONZERO_FOR_p_NOT_EQUAL_r"
+        }
+      ],
+      "reduction_proof": "The same-chirality bilinear is symmetric under exchange of complete fermion slots while epsilon_ABC is antisymmetric, so the coefficient is flavor-antisymmetric.  The operator vanishes for p=r but survives for distinct flavors.",
+      "fierz_status": "NO_FOUR_FERMION_FIERZ_RELATION_EXISTS_IN_THIS_TWO_FERMION_SLICE",
+      "ibp_status": "NOT_APPLICABLE_TO_NODERIVATIVE_REPRESENTATIVE",
+      "eom_status": "DEFERRED_UNTIL_D5_DERIVATIVE_BUCKET_IS_ENUMERATED",
+      "literature_reconciliation": "NOT_PRESENT_IN_THE_TWO_OPERATOR_ARXIV_1304_6119_MODEL_II_LIST; FLAVOR_ANTISYMMETRY_DOES_NOT_KILL_THE_THREE_GENERATION_CLASS; OMISSION_REASON_NOT_ESTABLISHED; NOVELTY_NOT_CLAIMED"
+    },
+    {
+      "row_id": "RAW-D5-QL-X-X",
+      "classification": "OTHER__VALID_NONZERO_GAUGE_LORENTZ_OPERATOR_WITH_ONE_BOSE_PROJECTED_FOUR_DIMENSIONAL_CONTRACTION_FAMILY_PENDING_GLOBAL_EOM_REDUCTION",
+      "canonical_dimension": "5",
+      "hypercharge_sum": "0",
+      "delta_b": "+1",
+      "delta_l": "-1",
+      "representatives": [
+        {
+          "family_id": "D5-QL-X-X",
+          "operator": "epsilon_ABC epsilon_ij epsilon_kl (q_L,p^{A i T} C l_L,r^j)X^{B k}X^{C l}",
+          "identical_X_exchange": "NONZERO_BECAUSE_COLOR_AND_WEAK_TENSORS_ARE_BOTH_ANTISYMMETRIC"
+        }
+      ],
+      "reduction_proof": "The raw weak tensors obey A-B+C=0.  Antisymmetrizing the weak X-pair tensor as required by color epsilon gives P(A)=2A, P(B)=A, P(C)=-A and exact projected rank one.",
+      "fierz_status": "NO_FOUR_FERMION_FIERZ_RELATION_EXISTS_IN_THIS_TWO_FERMION_SLICE",
+      "ibp_status": "NOT_APPLICABLE_TO_NODERIVATIVE_REPRESENTATIVE",
+      "eom_status": "DEFERRED_UNTIL_D5_DERIVATIVE_BUCKET_IS_ENUMERATED",
+      "literature_reconciliation": "NOT_PRESENT_IN_THE_TWO_OPERATOR_ARXIV_1304_6119_MODEL_II_LIST; OMISSION_REASON_NOT_ESTABLISHED; NOVELTY_NOT_CLAIMED"
+    },
+    {
+      "row_id": "RAW-D5-UE-X-X",
+      "classification": "OTHER__VALID_NONZERO_GAUGE_LORENTZ_OPERATOR_WITH_ONE_BOSE_PROJECTED_FOUR_DIMENSIONAL_CONTRACTION_FAMILY_PENDING_GLOBAL_EOM_REDUCTION",
+      "canonical_dimension": "5",
+      "hypercharge_sum": "0",
+      "delta_b": "+1",
+      "delta_l": "-1",
+      "representatives": [
+        {
+          "family_id": "D5-UE-X-X",
+          "operator": "epsilon_ABC (u_R,p^{A T} C e_R,r)(epsilon_ij X^{B i}X^{C j})",
+          "identical_X_exchange": "NONZERO_BECAUSE_COLOR_AND_WEAK_TENSORS_ARE_BOTH_ANTISYMMETRIC"
+        }
+      ],
+      "reduction_proof": "The color-antisymmetric X pair requires the weak-antisymmetric singlet; their product is symmetric under exchange of the two commuting X fields and gives one nonzero invariant.",
+      "fierz_status": "NO_FOUR_FERMION_FIERZ_RELATION_EXISTS_IN_THIS_TWO_FERMION_SLICE",
+      "ibp_status": "NOT_APPLICABLE_TO_NODERIVATIVE_REPRESENTATIVE",
+      "eom_status": "DEFERRED_UNTIL_D5_DERIVATIVE_BUCKET_IS_ENUMERATED",
+      "literature_reconciliation": "MATCHES_ARXIV_1304_6119_MODEL_II_OPERATOR_OII_2_UP_TO_NOTATION_AND_COEFFICIENT_NORMALIZATION"
+    }
+  ],
+  "reconciliation_boundaries": {
+    "five_multisets_equal_five_operators": false,
+    "corrected_statement": "FIVE_MULTISETS_SPAN_SIX_NONZERO_FOUR_DIMENSIONAL_ALGEBRAIC_CONTRACTION_FAMILIES_IN_THE_TESTED_NONDERIVATIVE_SLICE",
+    "complete_d5_inventory": false,
+    "reason_complete_d5_inventory_is_unearned": "Derivative and field-strength buckets are not yet exhaustively screened, so EOM relations and full d5 exhaustiveness remain open.",
+    "global_nonredundant_basis": false,
+    "reason_global_nonredundancy_is_unearned": "EOM reduction is a relation across derivative and nonderivative representatives and cannot be certified from the nonderivative slice alone.",
+    "three_extra_candidates_are_new": false,
+    "reason_novelty_is_unearned": "The exact reason the two-row comparator omits the QQ, DD, and QL field multisets has not been established and literature provenance remains incomplete.",
+    "dimensional_regularization_basis": "NOT_CONSTRUCTED; FOUR_DIMENSIONAL_SCHOUTEN_AND_STATISTICS_RESULTS_DO_NOT_DEFINE_THE_EVENTUAL_EVANESCENT_BASIS"
+  },
+  "new_prerequisite_warning": {
+    "status": "OPEN_MATERIAL_ACTIVE_THEORY_CONTRACT_ISSUE",
+    "finding": "The gauge representation permits a renormalizable BNV scalar monomial schematically X X X H_dagger, for example epsilon_ABC epsilon_ij X^{A i}X^{B j}(H_dagger_k X^{C k}).",
+    "canonical_dimension": "4",
+    "hypercharge_sum": "1/6+1/6+1/6-1/2=0",
+    "baryon_number_sum_under_pass_0001_bookkeeping": "1",
+    "source_signal": "The frozen ARXIV:1708.06350 comparator explicitly warns of a dangerous quartic coupling involving three (3,2,1/6) leptoquarks and the SM Higgs that triggers tree-level proton decay.",
+    "scientific_consequence": "BASIS-0 must freeze whether this scalar-potential coupling is retained, forbidden, or fixed by the accepted Model-1 embedding before loop-closure or an ADM can be defined.",
+    "not_claimed": [
+      "THE_COUPLING_VALUE_IN_MODEL_1",
+      "THE_COMPLETE_RENORMALIZABLE_SCALAR_POTENTIAL",
+      "ANY_COUNTERTERM_OR_ADM_ENTRY"
+    ]
+  },
+  "milestones": {
+    "ACTIVE_R2_BNV_D5_NONDERIVATIVE_ALGEBRAIC_RECONCILIATION": {
+      "status": "PASSED_WITH_OPEN_GLOBAL_EOM_AND_COMPARATOR_RECONCILIATION",
+      "result": "5_MULTISETS_6_NONZERO_4D_CONTRACTION_FAMILIES"
+    },
+    "ACTIVE_R2_BNV_D5_D6_RAW_INVENTORY_COMPLETE": {
+      "status": "NOT_EARNED",
+      "reason": "D5 derivative and field-strength classes, X-containing d6 classes, conditional active-field strata, and the retained scalar potential remain open."
+    },
+    "ACTIVE_R2_BNV_D5_D6_NONREDUNDANT_BASIS_CANDIDATE": {
+      "status": "NOT_OPEN",
+      "reason": "Global EOM/IBP/Fierz reduction cannot begin before raw inventory and the active-theory contract close."
+    },
+    "ACTIVE_R2_BNV_D5_D6_BASIS_VALIDATED": {
+      "status": "NOT_OPEN",
+      "reason": "No complete independent basis reconstruction or one-loop closure proof exists."
+    }
+  },
+  "hard_nonclaims": {
+    "raw_inventory_complete": false,
+    "nonredundant_basis_claimed": false,
+    "basis_validated": false,
+    "three_comparator_unlisted_multisets_claimed_novel": false,
+    "four_dimensional_relations_equated_to_dimensional_renormalization_basis": false,
+    "adm_calculation_started": false,
+    "adm_calculation_authorized": false,
+    "kernel_entries_present": false,
+    "model1_rge_executed": false,
+    "parameter_evaluation_count": 0,
+    "physics_result": "NONE"
+  },
+  "next_native_actions": [
+    "FREEZE_THE_RETAINED_RENORMALIZABLE_COUPLING_AND_SCALAR_POTENTIAL_LEDGER_WITH_SPECIAL_ATTENTION_TO_THE_GAUGE_ALLOWED_X_CUBED_H_DAGGER_BNV_QUARTIC",
+    "ENUMERATE_THE_COMPLETE_D5_DERIVATIVE_BUCKET_AND_APPLY_IBP_EOM_RELATIONS_AGAINST_THE_SIX_NONDERIVATIVE_CONTRACTION_FAMILIES",
+    "SCREEN_THE_D5_FIELD_STRENGTH_BUCKET_AND_CERTIFY_PRESENCE_OR_ABSENCE",
+    "RECONCILE_THE_QQ_DD_AND_QL_CLASSES_AGAINST_AN_INDEPENDENT_LITERATURE_OR_HILBERT_SERIES_CLASSIFICATION_WITHOUT_NOVELTY_PREJUDGMENT",
+    "ONLY_AFTER_COMPLETE_D5_EXHAUSTIVENESS_MOVE_TO_THE_FULL_ACTIVE_FIELD_D6_INVENTORY"
+  ]
+}

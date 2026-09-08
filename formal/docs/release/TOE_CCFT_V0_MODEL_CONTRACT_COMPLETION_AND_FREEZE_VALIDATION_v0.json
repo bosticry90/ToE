@@ -1,0 +1,92 @@
+{
+  "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_VALIDATION_v0",
+  "schema_id": "toe.ccft_v0.model_contract_completion_and_freeze.validation.v0",
+  "captured_at_utc": "2026-08-02T05:32:00Z",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "semantic_stage_id": "CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE",
+  "terminal_outcome": "CCFT_V0_MODEL_CONTRACT_FROZEN",
+  "lifecycle_result": "PASSED",
+  "artifact_hashes": {
+    "result_sha256": "4f3a7031960522f91d9a1988bc4c290a56505b5f71e84e815da3bd46f21d959a",
+    "review_sha256": "c57b2a5a3649deaba3be237da014992663f62e544c898bed89cfecbd35498556",
+    "close_event_sha256": "b8a4264f23b66fb1846b7265fbd27896a9741b1df23e90ad82e3b99a787d551d",
+    "close_event_hash": "a7eb509c34cde7e0da18ec83d15dc35ddce3fdf636bc575e66032b9ac3e485b9",
+    "embedded_reference_source_sha256": "7b5e9e16737c1d76ec9e2052743bef667084461b42468495d120d43b39f95862"
+  },
+  "atomic_close_commit_expected_paths": [
+    "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_REVIEW_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_RESULT_v0.json",
+    "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_VALIDATION_v0.json",
+    "formal/docs/release/bounded_program_events/TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0_ATTEMPT_02_CLOSE_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Derivation/ToeCCFTV0ModelContractFreezeResult.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+    "formal/toe_formal/ToeFormalAll.lean"
+  ],
+  "scientific_validation": {
+    "exactly_one_cp_nlse_model_frozen": true,
+    "exact_governing_equation_and_complete_contract_present": true,
+    "governing_equation_labeled_new_ccft_postulate": true,
+    "cp_eq_002_used_only_as_bound_structural_template": true,
+    "historical_three_equation_conflict_preserved": true,
+    "no_equation_blending_or_silent_repair": true,
+    "new_postulate_count": 5,
+    "maximum_new_postulate_count": 8,
+    "postulate_budget_passed": true,
+    "component_count": 16,
+    "all_components_have_exactly_one_frozen_provenance_label": true,
+    "all_five_provenance_labels_are_used": true,
+    "reference_implementation_embedded_and_reproducible": true,
+    "constant_background_vector_passed": true,
+    "zero_coupling_linear_plane_wave_vector_passed": true,
+    "named_nonlinear_refinement_ratios_passed": true,
+    "named_discrete_norm_monitor_passed": true,
+    "continuum_solution_invariant_stability_dispersion_or_novelty_claimed": false,
+    "physical_interpretation_or_empirical_promotion_claimed": false,
+    "stage_3_authorized": false
+  },
+  "reference_implementation_validation": {
+    "environment": "Python 3.10 runner with NumPy 2.2.6; embedded source itself requires Python 3 and NumPy",
+    "constant_max_abs_error": 0.0,
+    "linear_plane_wave_relative_l2_error": 1.817240462864231e-14,
+    "mixed_refinement_ratio_64_to_128": 4.200361853161792,
+    "mixed_refinement_ratio_128_to_256": 5.00010768311071,
+    "mixed_discrete_norm_relative_drift": 7.05766567690963e-16,
+    "status": "PASS_FOR_NAMED_IMPLEMENTATION_VECTORS_ONLY"
+  },
+  "focused_python": {
+    "passed": 56,
+    "deselected": 1,
+    "deselected_assertion": "test_toe_ccft_v0_theory_construction_program_governance_installation.py::test_program_is_registered_unopened",
+    "deselection_reason": "The installation-only assertion is obsolete after valid Stage 1 and Stage 2 lifecycle events; all other selected installation, authority, registry, and governance tests passed.",
+    "custom_contract_checks": "PASS",
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "jobs": 9167,
+    "modules": 1422,
+    "status": "PASS_WITH_PREEXISTING_LINTER_WARNINGS"
+  },
+  "deterministic_generation": {
+    "module_count": 1422,
+    "scope": "committed index after exact nine-path staging",
+    "expected_scope_header_and_count_name_difference_only": false,
+    "status": "PASS"
+  },
+  "governance_validation": {
+    "registry_integrity_aliases": 227,
+    "registry_integrity_status": "PASS",
+    "event_hash_and_open_close_linkage": "PASS_PRECOMMIT",
+    "full_history_validator_precommit_result": "EXPECTED_SINGLE_FAILURE_CLOSE_EVENT_HAS_ZERO_INTRODUCTION_COMMITS",
+    "git_history_chronology": "REQUIRED_POST_COMMIT"
+  },
+  "repository_validation": {
+    "git_diff_check": "PASS",
+    "atomic_nine_path_envelope": "PASS_PRECOMMIT",
+    "tracked_checkout_after_close_commit": "REQUIRED_POST_COMMIT",
+    "reddit_status": "UNTRACKED_AND_UNTOUCHED",
+    "exhaustive_python_status": "NOT_CLAIMED"
+  },
+  "status": "STAGE_2_ATOMIC_CLOSE_PRECOMMIT_VALIDATED"
+}

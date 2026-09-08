@@ -1,0 +1,276 @@
+{
+  "authority": {
+    "consumed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "frozen_packet_artifact_count": 5,
+    "frozen_packet_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_20260718_v0.md",
+        "sha256": "ca94cb6483d60e987da5ad9edd4a7c1dd1dd94bb9e6b33f30b16847b160bb23f"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_20260718_v0.json",
+        "sha256": "70fa95ee3e09679d51e003034f925ad6ddbd963f69fd792cc53143cb446ee9fb"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_viability_and_native_relevance_packet_v0.py",
+        "sha256": "903fb5d179dbae55c655ade29a6dee7306e3f7399c912c1d417ca11909fde7d8"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_viability_and_native_relevance_packet_v0.py",
+        "sha256": "c3f7c018d7982cc24f3131c77f0e70a2e94ae59d6708531b20136db1d94465d0"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyQuadraticGravityViabilityAndNativeRelevancePacketV0.lean",
+        "sha256": "ee94b53c7afef616eb3abeaa6aec994a91b342615e76992ab20eea1983db6eed"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_viability_and_native_relevance_packet_review_v0.py",
+      "sha256": "8fda9b4d3f5dc81f7f983047a5ff6627acb3958ace85c0168ccbde7e00a9e4bb"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_PACKET_REVIEW_20260718_v0.md",
+      "sha256": "437ca6283ab7dc11affa06d155b1fd2f0616e253bfe26849697b8d8251e879e3"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_viability_and_native_relevance_packet_review_v0.py",
+      "sha256": "97d02645b17585eb5c4a6474b8f2ddedbccb2785f7f66d2f5128854ee8cfa6cd"
+    }
+  },
+  "authorized_execution": {
+    "answered_decision_question_count_now": 0,
+    "background_count_cap": 3,
+    "backgrounds_analyzed_now": 0,
+    "decision_question_count": 8,
+    "derived_scalar_tensor_obligation_count_now": 0,
+    "executed_work_package_count_now": 0,
+    "execution_count": 1,
+    "native_bridge_identified_count_now": 0,
+    "result_review_target": "review_scalar_only_quadratic_gravity_viability_and_native_relevance_v0_result",
+    "scalar_tensor_obligation_count": 8,
+    "work_package_count": 6
+  },
+  "binding_execution_rules": [
+    "Complete and record the convention translation before every literature stability comparison.",
+    "Treat R0=0 as the only vacuum constant-curvature solution of the frozen pure branch.",
+    "Do not call a background non-Minkowski unless it solves the frozen sourced equations.",
+    "Freeze an explicitly supplied covariantly conserved background source or fail closed.",
+    "Derive all eight scalar-tensor obligations under the frozen conventions.",
+    "Keep background existence, kinetic sign, tachyon absence, matter stability, and runaway timescale separate.",
+    "Derive trace coupling and state shell and frame status; infer no ToE matter action.",
+    "Distinguish finite-mass Yukawa suppression from nonlinear environmental screening.",
+    "Keep the accepted 00/0i map within linear stationary conserved-source scope.",
+    "Require all seven bridge fields and a separate seam packet for any native bridge candidate.",
+    "Report comparison viability and native relevance as independent axes.",
+    "Stop at review_scalar_only_quadratic_gravity_viability_and_native_relevance_v0_result after one execution or a localized block."
+  ],
+  "binding_matter_supported_background_rule": {
+    "curved_background_source_requirements": [
+      "EXPLICITLY_SUPPLIED_MATTER_OR_SOURCE_MODEL",
+      "BACKGROUND_COVARIANT_CONSERVATION",
+      "ON_SHELL_OR_OFF_SHELL_STATUS",
+      "JORDAN_OR_EINSTEIN_FRAME_TRACE_DEFINITION",
+      "BACKGROUND_EXISTENCE_SOLUTION"
+    ],
+    "fail_closed_outcome_if_missing": "BLOCKED_MATTER_TRACE_COUPLING_UNDEFINED",
+    "flat_source_conservation": "partial_mu T^mu_nu=0",
+    "matter_supported_analysis_executed": false,
+    "primary_source_status": "EXTERNALLY_SUPPLIED_COMPARISON_SOURCE",
+    "requirements_satisfied_now": false,
+    "toe_matter_action_inferred": false
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "The packet contract is accepted for one supplied scalar-only comparison execution with binding convention, background-existence, source, stability, screening, observable, and native-bridge rules. No viability result, native bridge, beta or alpha condition, scalar branch, gravitational principle, gravitational action, matter sector, empirical result, orbital transport, frame-dragging result, or master-action change is established or adopted.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "authorized_executions": 1,
+    "backgrounds_analyzed": "0_OF_3",
+    "beta_zero": "NOT_ADOPTED",
+    "decision_questions_answered": "0_OF_8",
+    "gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "native_scalar_bridges": 0,
+    "next_authority": "execute_scalar_only_quadratic_gravity_viability_and_native_relevance_v0",
+    "packet_review": "ACCEPTED_18_OF_18_GATES",
+    "principal_outcome": "SCALAR_ONLY_VIABILITY_CONTRACT_READY",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_tensor_obligations_derived": "0_OF_8",
+    "work_packages_executed": "0_OF_6"
+  },
+  "independent_constant_curvature_audit": {
+    "background_existence_gate_passed": true,
+    "binding_rule": "Treat the constant-curvature vacuum row as an existence/no-nonzero-root control. A non-Minkowski stability test requires an explicitly supplied matter-supported background or a fresh action target.",
+    "cosmological_constant_added": false,
+    "expanded_left_hand_side": "(1+2 alpha R0)R0-2(R0+alpha R0^2)=-R0",
+    "f_R_R0": "1+2 alpha R0",
+    "model": "f(R)=R+alpha R^2",
+    "nonzero_vacuum_de_Sitter_or_anti_de_Sitter_admitted": false,
+    "solution_set": [
+      "R0=0"
+    ],
+    "stability_analysis_executed": false,
+    "vacuum_constant_curvature_equation": "f_R(R0) R0-2 f(R0)=0"
+  },
+  "independent_convention_translation_audit": {
+    "Levi_Civita_connection_map": "Gamma_literature=Gamma_packet",
+    "Ricci_scalar_map": "R_literature=-R_packet",
+    "Riemann_one_up_convention_relation": "SAME_DERIVATIVE_ORDERING",
+    "binding_rule": "Every literature comparison must record signature, Riemann/Ricci, Box, total-action/source sign, curvature-variable, and alpha/f_RR translations before importing a stability inequality.",
+    "literature_f_RR": "2 alpha_literature=-2 alpha_packet",
+    "literature_matter_stability_condition": "f_RR_literature>0",
+    "literature_metric_signature": "(-,+,+,+)_WALD_STYLE_REFERENCE",
+    "lower_Ricci_map": "Ricci_literature=Ricci_packet",
+    "metric_map": "g_literature=-g_packet",
+    "packet_metric_signature": "(+,-,-,-)",
+    "packet_non_tachyonic_condition": "alpha_packet<0",
+    "packet_scalar_mass_squared": "-1/(6 alpha)",
+    "quadratic_coupling_map": "alpha_literature=-alpha_packet",
+    "sign_tension_resolved": true,
+    "translated_packet_condition": "alpha_packet<0",
+    "whole_equation_overall_sign_map": "MULTIPLY_TOTAL_PACKET_ACTION_BY_MINUS_ONE"
+  },
+  "principal_packet_review_outcome": "SCALAR_ONLY_VIABILITY_CONTRACT_READY",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 18,
+    "pass_count": 18,
+    "rows": [
+      {
+        "finding": "Five packet artifacts match frozen SHA-256 values and rotate to this review.",
+        "gate_id": "G1_EXACT_PACKET_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "finding": "beta=0 remains a supplied comparison restriction; alpha and the branch remain unselected.",
+        "gate_id": "G2_COMPARISON_ONLY_PROVENANCE_IMMUTABLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Finite signs, the Einstein point, decoupling, light-scalar, and singular limits remain separate.",
+        "gate_id": "G3_SIX_PARAMETER_STRATA_DISJOINT_AND_UNSELECTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "No auxiliary-field, Jordan-frame, Einstein-frame, potential, normalization, or matter-map result is preloaded.",
+        "gate_id": "G4_EIGHT_SCALAR_TENSOR_OBLIGATIONS_UNEXECUTED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The future derivation must state alpha!=0, Legendre invertibility, effective-coupling sign, conformal domain, and singular surfaces.",
+        "gate_id": "G5_INVERTIBILITY_CONFORMAL_AND_SINGULAR_DOMAINS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The literature f_RR>0 condition and packet m0^2>0 condition agree after the complete signature/action map.",
+        "gate_id": "G6_ALPHA_F_RR_CONVENTION_TRANSLATION_RESOLVED",
+        "status": "PASS"
+      },
+      {
+        "finding": "The pure branch has no nonzero vacuum constant-curvature root; no de Sitter/anti-de Sitter stability result is inferred.",
+        "gate_id": "G7_CONSTANT_CURVATURE_EXISTENCE_BEFORE_STABILITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "A non-Minkowski test may proceed only after a controlled supplied background source is frozen.",
+        "gate_id": "G8_MATTER_SUPPORTED_BACKGROUND_FAILS_CLOSED",
+        "status": "PASS"
+      },
+      {
+        "finding": "Existence, kinetic sign, tachyon absence, matter stability, and runaway timescale remain distinct.",
+        "gate_id": "G9_FIVE_STABILITY_NOTIONS_CANNOT_SUBSTITUTE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The future execution must state conservation, shell status, frame, and exact trace coupling without manufacturing ToE matter.",
+        "gate_id": "G10_MATTER_TRACE_REMAINS_SUPPLIED_AND_DERIVATION_BOUND",
+        "status": "PASS"
+      },
+      {
+        "finding": "Yukawa suppression and nonlinear environmental screening remain different findings.",
+        "gate_id": "G11_FINITE_MASS_IS_NOT_SCREENING",
+        "status": "PASS"
+      },
+      {
+        "finding": "No claim about nonlinear rotating systems, orbital observables, or data is licensed.",
+        "gate_id": "G12_00_0I_MAP_REMAINS_LINEAR_STATIONARY_ONLY",
+        "status": "PASS"
+      },
+      {
+        "finding": "No project scalar is identified; all seven mathematical fields and a separate seam packet remain mandatory.",
+        "gate_id": "G13_SEVEN_FIELD_NATIVE_BRIDGE_FIREWALL",
+        "status": "PASS"
+      },
+      {
+        "finding": "Comparison viability and ToE-native relevance remain independent reporting axes.",
+        "gate_id": "G14_VIABILITY_CANNOT_CREATE_NATIVE_RELEVANCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The packet is prepared but no scientific work package or decision question has been executed.",
+        "gate_id": "G15_SIX_PACKAGES_AND_EIGHT_QUESTIONS_REMAIN_ZERO",
+        "status": "PASS"
+      },
+      {
+        "finding": "This review issues the packet outcome only; future scientific outcomes remain unavailable.",
+        "gate_id": "G16_TWO_STAGE_OUTCOMES_EXCLUSIVE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Acceptance can rotate once to execution and then must stop for independent result review.",
+        "gate_id": "G17_ONE_EXECUTION_ONLY_AFTER_ACCEPTANCE",
+        "status": "PASS"
+      },
+      {
+        "finding": "No condition, branch, principle, action, fit, orbital result, frame-dragging result, or master-action change is selected.",
+        "gate_id": "G18_NO_ADOPTION_OR_DOWNSTREAM_PROMOTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "toe.scalar_only_quadratic_gravity_viability_and_native_relevance.packet_review.v0",
+  "scientific_oracle_spot_checks": [
+    {
+      "role": "POST_DERIVATION_SCALAR_TENSOR_EQUIVALENCE_AND_DOMAIN_ORACLE",
+      "source": "https://arxiv.org/abs/0805.1726"
+    },
+    {
+      "role": "POST_TRANSLATION_MATTER_STABILITY_ORACLE",
+      "source": "https://arxiv.org/abs/astro-ph/0610734"
+    },
+    {
+      "role": "BACKGROUND_EXISTENCE_THEN_CONSTANT_CURVATURE_STABILITY_ORACLE",
+      "source": "https://arxiv.org/abs/gr-qc/0703044"
+    },
+    {
+      "role": "FINITE_MASS_VERSUS_MODEL_DEPENDENT_SCREENING_ORACLE",
+      "source": "https://arxiv.org/abs/1002.4928"
+    }
+  ],
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "background_stability_analysis_executed": false,
+    "beta_zero_adopted": false,
+    "decision_question_answered": false,
+    "empirical_constraint_derived": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": true,
+    "master_action_mutation_authorized": false,
+    "matter_sector_selected": false,
+    "matter_trace_coupling_derived": false,
+    "metric_to_orbit_transport_authorized": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "one_scalar_only_execution_authorized": true,
+    "packet_accepted": true,
+    "scalar_branch_adopted": false,
+    "scalar_tensor_derivation_executed": false,
+    "scientific_execution_executed": false,
+    "screening_mechanism_identified": false,
+    "work_package_executed": false
+  },
+  "selected_next_target": "execute_scalar_only_quadratic_gravity_viability_and_native_relevance_v0",
+  "selected_next_target_kind": "ONE_BOUNDED_SCALAR_ONLY_COMPARISON_EXECUTION_THEN_INDEPENDENT_RESULT_REVIEW",
+  "target": "review_scalar_only_quadratic_gravity_viability_and_native_relevance_packet_v0_result",
+  "verdict": "ACCEPTED_SCALAR_ONLY_VIABILITY_CONTRACT_READY_FOR_ONE_BOUNDED_EXECUTION"
+}

@@ -1,0 +1,3912 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_BNV_DERIVATIVE_AND_SCALAR_CUBIC_ACTION_RULE_MATERIALIZATION_PASS_0068_v0",
+  "pass_id": "0068",
+  "date": "2026-08-27",
+  "status": "THE_FOUR_D_X_PHYSICAL_D6_DERIVATIVE_INSERTION_FAMILIES_AND_FIVE_SCALAR_CUBIC_FAMILIES_EXPOSED_BY_THE_COMPLETE_STATIC_PREFLIGHT_ARE_MATERIALIZED_FROM_AUTHORITATIVE_OPERATOR_AND_ACTION_DATA;_ALL_NINE_HAVE_EXACT_SECOND_RECONSTRUCTIONS;_NO_LOOP_OR_AUTHORITY_RESUMPTION_IS_PERFORMED",
+  "predecessor": {
+    "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_preflight_clean_prefix_four_topology_execution_pass_0067_v0.json",
+    "bytes": 13018,
+    "sha256": "d56e11c0186d75b5b820c60543824058d621026eed5e30b5b3edd5683382f0bc",
+    "role": "TWENTY_OF_1040_BOUNDED_PREFIX_CHECKPOINT"
+  },
+  "frozen_inputs": [
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_normalized_tensor_flavor_and_pre_eom_reduction_pass_0010_v0.json",
+      "bytes": 18829,
+      "sha256": "3d447864640648bbed12a08b02b94d28cfe718cd5ac49c79bbd184292cefc7c6",
+      "role": "NORMALIZED_DERIVATIVE_FIELD_LORENTZ_GAUGE_AND_FLAVOR_CONTRACT"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_stratum_eom_and_global_family_reduction_pass_0015_v0.json",
+      "bytes": 47029,
+      "sha256": "982da72d0ffe411fecc3a3ec337918b727ecfd908acf35e9893ac13fb37cc106",
+      "role": "PHYSICAL_D_X_QUOTIENT_SURVIVORS"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d6_component_cg_phase_and_eom_target_closure_pass_0017_v0.json",
+      "bytes": 1177464,
+      "sha256": "e86d536ce2f028c418fa8711f7cf72941afb18c15333dcf052377943cbd448f8",
+      "role": "NORMALIZED_COMPONENT_TENSOR_FINGERPRINTS"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_phase3a_executable_renormalizable_action_and_feynman_rule_contract_pass_0030_v0.json",
+      "bytes": 50014,
+      "sha256": "7277f21024000c18298ceae12b0c04e928e4fff30794c2b415a0319359623fb3",
+      "role": "AUTHORITATIVE_SCALAR_ACTION_AND_FOURIER_SIGN_CONTRACT"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_delta_component_basis_bridge_and_binding_materialization_pass_0063_v0.json",
+      "bytes": 143036,
+      "sha256": "8256f9dc7eaee1b32624122eac6e782ce5836108743c56bc9cfc954e606bf7f8",
+      "role": "DELTA_SYMMETRIC_CARTESIAN_BRIDGE"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_static_executability_preflight_pass_0066_v0.json",
+      "bytes": 1248202,
+      "sha256": "2badafd2160627f0e3c0e36eb892814d96d8cd872ae40526a0170aeb26998942",
+      "role": "COMPLETE_NINE_FAMILY_STATIC_BLOCKER_SCOPE"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_single_insertion_selection_rule_connectivity_phase_1_v0.json",
+      "bytes": 6393184,
+      "sha256": "953a43022f521f4f4e1eca5bfa720bbfcdd290b8f47d1921977a6f033c2e3edf",
+      "role": "ORDERED_SCALAR_CUBIC_SIGNATURES"
+    }
+  ],
+  "derivative_insertion_rule_families": [
+    {
+      "source_insertion_id": "D6-DER-P2P2D-QD-X-RHO3::C1",
+      "rule_id": "HDI-D6-DER-P2P2D-QD-X-RHO3-C1",
+      "ordered_fields": [
+        "qL",
+        "dR",
+        "X",
+        "rho3"
+      ],
+      "coefficient_label": "C1",
+      "authoritative_coordinate_space_operator": "C_C1*T_component*(qL sigma_mu dR)*(D^mu X)*rho3",
+      "lorentz_structure": "LEFT_RIGHT_VECTOR_BILINEAR_SIGMA_MU_CONTRACTED_WITH_D_MU_X",
+      "derivative_placement": "D_X_ONLY_PHYSICAL_QUOTIENT_SURVIVOR",
+      "fourier_convention": "phi(x)=integral exp(-i*p*x)*phi(p)",
+      "derivative_to_momentum": "D_mu_X_AT_ZERO_GAUGE_ORDER -> -i*p_X_mu",
+      "all_momenta_incoming": true,
+      "momentum_space_rule": "+C_C1*T_component*(sigma_mu)*p_X^mu",
+      "phase_derivation": "i_TIMES_L_INTERACTION_AND_D_X_TO_MINUS_i_p_X_GIVES_PLUS_ONE",
+      "hidden_factorial": "NONE_DISTINCT_FIELDS",
+      "flavor": "UNRESTRICTED_ORDERED_DISTINCT_FERMIONS",
+      "component_tensor_id": "D6-DER-P2P2D-QD-X-RHO3::COLOR_EPSILON__QX_W3__RHO3_W3",
+      "component_axis_order": [
+        "qL[1].color3",
+        "dR[1].color3",
+        "X[1].color3",
+        "qL[1].weak2",
+        "X[1].weak2",
+        "rho3[1].weak3"
+      ],
+      "component_tensor_fingerprint_sha256": "2c8def5262281fec9e2ad5dcb11e827657569933c308f37d1b5b16d6cad58736",
+      "component_nonzero_count": 36,
+      "component_tensor_entries": [
+        {
+          "index": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "-I/6"
+        }
+      ],
+      "route_A": "PASS0017_NORMALIZED_OPERATOR_COMPONENT_TENSOR_PLUS_PASS0015_D_X_QUOTIENT_SURVIVOR",
+      "route_B": "DIRECT_IRREP_NULLSPACE_CANONICAL_GAUGE_BASIS_RECONSTRUCTION_PLUS_FOURIER_DIFFERENTIATION",
+      "route_A_equals_route_B_exactly": true,
+      "rule_fingerprint_sha256": "5bd706559b4422d06bb08bd81f50cb68de41432799c89b7ff7819b1ee5b6b769"
+    },
+    {
+      "source_insertion_id": "D6-DER-P2P2D-QD-X-RHO8::C1",
+      "rule_id": "HDI-D6-DER-P2P2D-QD-X-RHO8-C1",
+      "ordered_fields": [
+        "qL",
+        "dR",
+        "X",
+        "rho8"
+      ],
+      "coefficient_label": "C1",
+      "authoritative_coordinate_space_operator": "C_C1*T_component*(qL sigma_mu dR)*(D^mu X)*rho8",
+      "lorentz_structure": "LEFT_RIGHT_VECTOR_BILINEAR_SIGMA_MU_CONTRACTED_WITH_D_MU_X",
+      "derivative_placement": "D_X_ONLY_PHYSICAL_QUOTIENT_SURVIVOR",
+      "fourier_convention": "phi(x)=integral exp(-i*p*x)*phi(p)",
+      "derivative_to_momentum": "D_mu_X_AT_ZERO_GAUGE_ORDER -> -i*p_X_mu",
+      "all_momenta_incoming": true,
+      "momentum_space_rule": "+C_C1*T_component*(sigma_mu)*p_X^mu",
+      "phase_derivation": "i_TIMES_L_INTERACTION_AND_D_X_TO_MINUS_i_p_X_GIVES_PLUS_ONE",
+      "hidden_factorial": "NONE_DISTINCT_FIELDS",
+      "flavor": "UNRESTRICTED_ORDERED_DISTINCT_FERMIONS",
+      "component_tensor_id": "D6-DER-P2P2D-QD-X-RHO8::QD_C3BAR__X_TO_C8__QX_W1",
+      "component_axis_order": [
+        "qL[1].color3",
+        "dR[1].color3",
+        "X[1].color3",
+        "rho8[1].color8",
+        "qL[1].weak2",
+        "X[1].weak2"
+      ],
+      "component_tensor_fingerprint_sha256": "42745408bcf0dd606b79bb40c7e699d7ee2c88c1593a6cd488fc785f4495e2a7",
+      "component_nonzero_count": 68,
+      "component_tensor_entries": [
+        {
+          "index": [
+            0,
+            0,
+            1,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            0,
+            1,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            0,
+            1,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            0,
+            0,
+            1,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "-I/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "I/8"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "-I/8"
+        }
+      ],
+      "route_A": "PASS0017_NORMALIZED_OPERATOR_COMPONENT_TENSOR_PLUS_PASS0015_D_X_QUOTIENT_SURVIVOR",
+      "route_B": "DIRECT_IRREP_NULLSPACE_CANONICAL_GAUGE_BASIS_RECONSTRUCTION_PLUS_FOURIER_DIFFERENTIATION",
+      "route_A_equals_route_B_exactly": true,
+      "rule_fingerprint_sha256": "0b97e44eb4092ef5f3589d001e5acadc017382da4e9ab651ae7577a197667d52"
+    },
+    {
+      "source_insertion_id": "D6-DER-P2P2D-QD-X-RHO8::C2",
+      "rule_id": "HDI-D6-DER-P2P2D-QD-X-RHO8-C2",
+      "ordered_fields": [
+        "qL",
+        "dR",
+        "X",
+        "rho8"
+      ],
+      "coefficient_label": "C2",
+      "authoritative_coordinate_space_operator": "C_C2*T_component*(qL sigma_mu dR)*(D^mu X)*rho8",
+      "lorentz_structure": "LEFT_RIGHT_VECTOR_BILINEAR_SIGMA_MU_CONTRACTED_WITH_D_MU_X",
+      "derivative_placement": "D_X_ONLY_PHYSICAL_QUOTIENT_SURVIVOR",
+      "fourier_convention": "phi(x)=integral exp(-i*p*x)*phi(p)",
+      "derivative_to_momentum": "D_mu_X_AT_ZERO_GAUGE_ORDER -> -i*p_X_mu",
+      "all_momenta_incoming": true,
+      "momentum_space_rule": "+C_C2*T_component*(sigma_mu)*p_X^mu",
+      "phase_derivation": "i_TIMES_L_INTERACTION_AND_D_X_TO_MINUS_i_p_X_GIVES_PLUS_ONE",
+      "hidden_factorial": "NONE_DISTINCT_FIELDS",
+      "flavor": "UNRESTRICTED_ORDERED_DISTINCT_FERMIONS",
+      "component_tensor_id": "D6-DER-P2P2D-QD-X-RHO8::QD_C6__X_TO_C8__QX_W1",
+      "component_axis_order": [
+        "qL[1].color3",
+        "dR[1].color3",
+        "X[1].color3",
+        "rho8[1].color8",
+        "qL[1].weak2",
+        "X[1].weak2"
+      ],
+      "component_tensor_fingerprint_sha256": "708b33ba2a890da5d741eac53fd6771cbf5ac0ed94082ad04b49d47178e961df",
+      "component_nonzero_count": 92,
+      "component_tensor_entries": [
+        {
+          "index": [
+            0,
+            0,
+            1,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            0,
+            1,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            0,
+            1,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            0,
+            1,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            1,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            0,
+            1,
+            1,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            0,
+            1,
+            1,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            0,
+            1,
+            1,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            0,
+            2,
+            2,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            0,
+            2,
+            2,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            0,
+            2,
+            2,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            0,
+            2,
+            2,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            1,
+            0,
+            0,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            1,
+            0,
+            0,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            1,
+            0,
+            0,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            1,
+            0,
+            0,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            1,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            0,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            1,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            7,
+            0,
+            1
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            7,
+            1,
+            0
+          ],
+          "coefficient": "-1/8"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            1,
+            2,
+            2,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            1,
+            2,
+            2,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            1,
+            2,
+            2,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            1,
+            2,
+            2,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            2,
+            0,
+            2,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            2,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/12"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            2,
+            1,
+            2,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            5,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            5,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            6,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            0,
+            6,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            3,
+            0,
+            1
+          ],
+          "coefficient": "-sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            3,
+            1,
+            0
+          ],
+          "coefficient": "sqrt(3)/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            4,
+            0,
+            1
+          ],
+          "coefficient": "sqrt(3)*I/24"
+        },
+        {
+          "index": [
+            2,
+            2,
+            1,
+            4,
+            1,
+            0
+          ],
+          "coefficient": "-sqrt(3)*I/24"
+        }
+      ],
+      "route_A": "PASS0017_NORMALIZED_OPERATOR_COMPONENT_TENSOR_PLUS_PASS0015_D_X_QUOTIENT_SURVIVOR",
+      "route_B": "DIRECT_IRREP_NULLSPACE_CANONICAL_GAUGE_BASIS_RECONSTRUCTION_PLUS_FOURIER_DIFFERENTIATION",
+      "route_A_equals_route_B_exactly": true,
+      "rule_fingerprint_sha256": "e9efe0153559d08a9bba8ec322343aa07212f6bb56ab58a7b98b9ec82099a16b"
+    },
+    {
+      "source_insertion_id": "D6-DER-P2P2D-QU-X-DELTADAG::C1",
+      "rule_id": "HDI-D6-DER-P2P2D-QU-X-DELTADAG-C1",
+      "ordered_fields": [
+        "qL",
+        "uR",
+        "X",
+        "Deltadag"
+      ],
+      "coefficient_label": "C1",
+      "authoritative_coordinate_space_operator": "C_C1*T_component*(qL sigma_mu uR)*(D^mu X)*Deltadag",
+      "lorentz_structure": "LEFT_RIGHT_VECTOR_BILINEAR_SIGMA_MU_CONTRACTED_WITH_D_MU_X",
+      "derivative_placement": "D_X_ONLY_PHYSICAL_QUOTIENT_SURVIVOR",
+      "fourier_convention": "phi(x)=integral exp(-i*p*x)*phi(p)",
+      "derivative_to_momentum": "D_mu_X_AT_ZERO_GAUGE_ORDER -> -i*p_X_mu",
+      "all_momenta_incoming": true,
+      "momentum_space_rule": "+C_C1*T_component*(sigma_mu)*p_X^mu",
+      "phase_derivation": "i_TIMES_L_INTERACTION_AND_D_X_TO_MINUS_i_p_X_GIVES_PLUS_ONE",
+      "hidden_factorial": "NONE_DISTINCT_FIELDS",
+      "flavor": "UNRESTRICTED_ORDERED_DISTINCT_FERMIONS",
+      "component_tensor_id": "D6-DER-P2P2D-QU-X-DELTADAG::COLOR_EPSILON__QX_W3__DELTADAG_W3",
+      "component_axis_order": [
+        "qL[1].color3",
+        "uR[1].color3",
+        "X[1].color3",
+        "qL[1].weak2",
+        "X[1].weak2",
+        "Deltadag[1].weak3"
+      ],
+      "component_tensor_fingerprint_sha256": "2c8def5262281fec9e2ad5dcb11e827657569933c308f37d1b5b16d6cad58736",
+      "component_nonzero_count": 36,
+      "component_tensor_entries": [
+        {
+          "index": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            0,
+            2,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            1,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "I/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "coefficient": "-I/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "coefficient": "1/6"
+        },
+        {
+          "index": [
+            2,
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "coefficient": "-I/6"
+        }
+      ],
+      "route_A": "PASS0017_NORMALIZED_OPERATOR_COMPONENT_TENSOR_PLUS_PASS0015_D_X_QUOTIENT_SURVIVOR",
+      "route_B": "DIRECT_IRREP_NULLSPACE_CANONICAL_GAUGE_BASIS_RECONSTRUCTION_PLUS_FOURIER_DIFFERENTIATION",
+      "route_A_equals_route_B_exactly": true,
+      "rule_fingerprint_sha256": "c9792253467c19c66744a7ca835874e8507dfd2fa081cef6e05000ac1cf67394"
+    }
+  ],
+  "scalar_cubic_rule_families": [
+    {
+      "historical_vertex_id": "VTX-KAPPA-H2-DELTADAG",
+      "rule_id": "FR-SC-H2-DELTADAG",
+      "ordered_fields": [
+        "H",
+        "H",
+        "Deltadag"
+      ],
+      "required_conditionals": [
+        "Delta"
+      ],
+      "applicable_strata": [
+        "SM_X_Delta",
+        "SM_X_rho3_Delta",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8_Delta"
+      ],
+      "source_parent_invariants": [
+        "V-C3"
+      ],
+      "exact_effective_coupling_identity": "kappa_HHDelta_star=conjugate(c3)_WITH_NO_1_OVER_2",
+      "functional_rule": "V_rule=-i*delta^3(V_direct)/delta(ordered_fields)",
+      "lagrangian_sign_and_phase": "L_interaction=-V_direct_SO_RULE_IS_MINUS_i_TIMES_STORED_TENSOR",
+      "hidden_identical_field_factorial": "NONE_IN_ACTION;_REPEATED_FUNCTIONAL_DIFFERENTIATION_GENERATES_THE_FULL_MULTIPLICITY",
+      "nonzero_component_count": 4,
+      "symmetric_basis_tensor_entries": [
+        {
+          "indices": [
+            0,
+            0,
+            0
+          ],
+          "coefficient_of_minus_i": "2*c3c"
+        },
+        {
+          "indices": [
+            0,
+            1,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*c3c"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*c3c"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            2
+          ],
+          "coefficient_of_minus_i": "2*c3c"
+        }
+      ],
+      "route_A": "DIRECT_ORDERED_FUNCTIONAL_DIFFERENTIATION_OF_AUTHORITATIVE_MATRIX_TRACE_POTENTIAL",
+      "route_B": "EXPANDED_POLYNOMIAL_MONOMIAL_COEFFICIENT_TIMES_IDENTICAL_COMPONENT_FACTORIAL",
+      "route_A_equals_route_B_exactly": true,
+      "tree_threshold_cubic_shift": "ZERO_IN_PASS0030_AUTHORIZED_D_LE_4_TREE_THRESHOLD_SCOPE",
+      "delta_bridge_contract_id": "DELTA-SYMMETRIC-TO-CANONICAL-CARTESIAN-v1",
+      "canonical_cartesian_tensor_entries": [
+        {
+          "indices": [
+            0,
+            0,
+            0
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*c3c"
+        },
+        {
+          "indices": [
+            0,
+            0,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*I*c3c"
+        },
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*c3c"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            2
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*c3c"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            0
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*c3c"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*I*c3c"
+        }
+      ],
+      "cartesian_nonzero_component_count": 6,
+      "bridge_transport_equals_direct_cartesian_matrix_construction": true,
+      "rule_fingerprint_sha256": "976655b3e9e0ff5869cc9ecb27601ab0805e776c40d350f93aaec3d190d99f8f"
+    },
+    {
+      "historical_vertex_id": "VTX-KAPPA-H2-RHO3",
+      "rule_id": "FR-SC-H2-RHO3",
+      "ordered_fields": [
+        "Hdag",
+        "H",
+        "rho3"
+      ],
+      "required_conditionals": [
+        "rho3"
+      ],
+      "applicable_strata": [
+        "SM_X_rho3",
+        "SM_X_rho3_rho8",
+        "SM_X_rho3_Delta",
+        "SM_X_rho3_rho8_Delta"
+      ],
+      "source_parent_invariants": [
+        "V-C1",
+        "V-B4"
+      ],
+      "exact_effective_coupling_identity": "kappa3H=c1-6*n*b4",
+      "functional_rule": "V_rule=-i*delta^3(V_direct)/delta(ordered_fields)",
+      "lagrangian_sign_and_phase": "L_interaction=-V_direct_SO_RULE_IS_MINUS_i_TIMES_STORED_TENSOR",
+      "hidden_identical_field_factorial": "NONE_IN_ACTION;_REPEATED_FUNCTIONAL_DIFFERENTIATION_GENERATES_THE_FULL_MULTIPLICITY",
+      "nonzero_component_count": 6,
+      "symmetric_basis_tensor_entries": [
+        {
+          "indices": [
+            0,
+            0,
+            2
+          ],
+          "coefficient_of_minus_i": "-3*b4*n + c1/2"
+        },
+        {
+          "indices": [
+            0,
+            1,
+            0
+          ],
+          "coefficient_of_minus_i": "-3*b4*n + c1/2"
+        },
+        {
+          "indices": [
+            0,
+            1,
+            1
+          ],
+          "coefficient_of_minus_i": "I*(6*b4*n - c1)/2"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            0
+          ],
+          "coefficient_of_minus_i": "-3*b4*n + c1/2"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            1
+          ],
+          "coefficient_of_minus_i": "I*(-6*b4*n + c1)/2"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            2
+          ],
+          "coefficient_of_minus_i": "3*b4*n - c1/2"
+        }
+      ],
+      "route_A": "DIRECT_ORDERED_FUNCTIONAL_DIFFERENTIATION_OF_AUTHORITATIVE_MATRIX_TRACE_POTENTIAL",
+      "route_B": "EXPANDED_POLYNOMIAL_MONOMIAL_COEFFICIENT_TIMES_IDENTICAL_COMPONENT_FACTORIAL",
+      "route_A_equals_route_B_exactly": true,
+      "tree_threshold_cubic_shift": "ZERO_IN_PASS0030_AUTHORIZED_D_LE_4_TREE_THRESHOLD_SCOPE",
+      "rule_fingerprint_sha256": "b748073c754fc7ee755a33eb06d6a054b90410a754ecc1409348e372a3e477fe"
+    },
+    {
+      "historical_vertex_id": "VTX-KAPPA-HDAG2-DELTA",
+      "rule_id": "FR-SC-HDAG2-DELTA",
+      "ordered_fields": [
+        "Hdag",
+        "Hdag",
+        "Delta"
+      ],
+      "required_conditionals": [
+        "Delta"
+      ],
+      "applicable_strata": [
+        "SM_X_Delta",
+        "SM_X_rho3_Delta",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8_Delta"
+      ],
+      "source_parent_invariants": [
+        "V-C3"
+      ],
+      "exact_effective_coupling_identity": "kappa_HHDelta=c3_WITH_NO_1_OVER_2",
+      "functional_rule": "V_rule=-i*delta^3(V_direct)/delta(ordered_fields)",
+      "lagrangian_sign_and_phase": "L_interaction=-V_direct_SO_RULE_IS_MINUS_i_TIMES_STORED_TENSOR",
+      "hidden_identical_field_factorial": "NONE_IN_ACTION;_REPEATED_FUNCTIONAL_DIFFERENTIATION_GENERATES_THE_FULL_MULTIPLICITY",
+      "nonzero_component_count": 4,
+      "symmetric_basis_tensor_entries": [
+        {
+          "indices": [
+            0,
+            0,
+            0
+          ],
+          "coefficient_of_minus_i": "2*c3"
+        },
+        {
+          "indices": [
+            0,
+            1,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*c3"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*c3"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            2
+          ],
+          "coefficient_of_minus_i": "2*c3"
+        }
+      ],
+      "route_A": "DIRECT_ORDERED_FUNCTIONAL_DIFFERENTIATION_OF_AUTHORITATIVE_MATRIX_TRACE_POTENTIAL",
+      "route_B": "EXPANDED_POLYNOMIAL_MONOMIAL_COEFFICIENT_TIMES_IDENTICAL_COMPONENT_FACTORIAL",
+      "route_A_equals_route_B_exactly": true,
+      "tree_threshold_cubic_shift": "ZERO_IN_PASS0030_AUTHORIZED_D_LE_4_TREE_THRESHOLD_SCOPE",
+      "delta_bridge_contract_id": "DELTA-SYMMETRIC-TO-CANONICAL-CARTESIAN-v1",
+      "canonical_cartesian_tensor_entries": [
+        {
+          "indices": [
+            0,
+            0,
+            0
+          ],
+          "coefficient_of_minus_i": "sqrt(2)*c3"
+        },
+        {
+          "indices": [
+            0,
+            0,
+            1
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*I*c3"
+        },
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*c3"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            2
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*c3"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            0
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*c3"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            1
+          ],
+          "coefficient_of_minus_i": "-sqrt(2)*I*c3"
+        }
+      ],
+      "cartesian_nonzero_component_count": 6,
+      "bridge_transport_equals_direct_cartesian_matrix_construction": true,
+      "rule_fingerprint_sha256": "a57802db2d45430f23dcd54f35efb336c9fe66d0966adef98da05f474c7020fe"
+    },
+    {
+      "historical_vertex_id": "VTX-KAPPA-RHO8-3",
+      "rule_id": "FR-SC-RHO8-3",
+      "ordered_fields": [
+        "rho8",
+        "rho8",
+        "rho8"
+      ],
+      "required_conditionals": [
+        "rho8"
+      ],
+      "applicable_strata": [
+        "SM_X_rho8",
+        "SM_X_rho3_rho8",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8_Delta"
+      ],
+      "source_parent_invariants": [
+        "V-SIGMA-CUBIC",
+        "V-SIGMA-Q4-2"
+      ],
+      "exact_effective_coupling_identity": "kappa_rho8=cSigma/2+6*n*bSigma_MULTIPLYING_dABC_AFTER_DIFFERENTIATION",
+      "functional_rule": "V_rule=-i*delta^3(V_direct)/delta(ordered_fields)",
+      "lagrangian_sign_and_phase": "L_interaction=-V_direct_SO_RULE_IS_MINUS_i_TIMES_STORED_TENSOR",
+      "hidden_identical_field_factorial": "NONE_IN_ACTION;_REPEATED_FUNCTIONAL_DIFFERENTIATION_GENERATES_THE_FULL_MULTIPLICITY",
+      "nonzero_component_count": 58,
+      "symmetric_basis_tensor_entries": [
+        {
+          "indices": [
+            0,
+            0,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            0,
+            3,
+            5
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            0,
+            4,
+            6
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            0,
+            5,
+            3
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            0,
+            6,
+            4
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            0,
+            7,
+            0
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            1,
+            1,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            1,
+            3,
+            6
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            1,
+            4,
+            5
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            1,
+            5,
+            4
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            1,
+            6,
+            3
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            1,
+            7,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            2,
+            2,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            2,
+            3,
+            3
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            2,
+            4,
+            4
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            2,
+            5,
+            5
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            2,
+            6,
+            6
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            2,
+            7,
+            2
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            3,
+            0,
+            5
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            3,
+            1,
+            6
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            3,
+            2,
+            3
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            3,
+            3,
+            2
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            3,
+            3,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            3,
+            5,
+            0
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            3,
+            6,
+            1
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            3,
+            7,
+            3
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            4,
+            0,
+            6
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            4,
+            1,
+            5
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            4,
+            2,
+            4
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            4,
+            4,
+            2
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            4,
+            4,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            4,
+            5,
+            1
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            4,
+            6,
+            0
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            4,
+            7,
+            4
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            5,
+            0,
+            3
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            5,
+            1,
+            4
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            5,
+            2,
+            5
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            5,
+            3,
+            0
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            5,
+            4,
+            1
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            5,
+            5,
+            2
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            5,
+            5,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            5,
+            7,
+            5
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            6,
+            0,
+            4
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            6,
+            1,
+            3
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            6,
+            2,
+            6
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            6,
+            3,
+            1
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            6,
+            4,
+            0
+          ],
+          "coefficient_of_minus_i": "3*bSigma*n + cSigma/4"
+        },
+        {
+          "indices": [
+            6,
+            6,
+            2
+          ],
+          "coefficient_of_minus_i": "-3*bSigma*n - cSigma/4"
+        },
+        {
+          "indices": [
+            6,
+            6,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            6,
+            7,
+            6
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            7,
+            0,
+            0
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            7,
+            1,
+            1
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            7,
+            2,
+            2
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(12*bSigma*n + cSigma)/6"
+        },
+        {
+          "indices": [
+            7,
+            3,
+            3
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            7,
+            4,
+            4
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            7,
+            5,
+            5
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            7,
+            6,
+            6
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-bSigma*n - cSigma/12)"
+        },
+        {
+          "indices": [
+            7,
+            7,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-12*bSigma*n - cSigma)/6"
+        }
+      ],
+      "route_A": "DIRECT_ORDERED_FUNCTIONAL_DIFFERENTIATION_OF_AUTHORITATIVE_MATRIX_TRACE_POTENTIAL",
+      "route_B": "EXPANDED_POLYNOMIAL_MONOMIAL_COEFFICIENT_TIMES_IDENTICAL_COMPONENT_FACTORIAL",
+      "route_A_equals_route_B_exactly": true,
+      "tree_threshold_cubic_shift": "ZERO_IN_PASS0030_AUTHORIZED_D_LE_4_TREE_THRESHOLD_SCOPE",
+      "rule_fingerprint_sha256": "fe4b7e8b8e411a459d4ad27f08cd62232e284b2b13baeee1ccf7ab733c4b7ca4"
+    },
+    {
+      "historical_vertex_id": "VTX-KAPPA-X2-RHO8",
+      "rule_id": "FR-SC-X2-RHO8",
+      "ordered_fields": [
+        "Xdag",
+        "X",
+        "rho8"
+      ],
+      "required_conditionals": [
+        "rho8"
+      ],
+      "applicable_strata": [
+        "SM_X_rho8",
+        "SM_X_rho3_rho8",
+        "SM_X_rho8_Delta",
+        "SM_X_rho3_rho8_Delta"
+      ],
+      "source_parent_invariants": [
+        "V-C2",
+        "V-B6",
+        "V-B7"
+      ],
+      "exact_effective_coupling_identity": "kappa8X=c2/2+2*n*b6-3*n*b7",
+      "functional_rule": "V_rule=-i*delta^3(V_direct)/delta(ordered_fields)",
+      "lagrangian_sign_and_phase": "L_interaction=-V_direct_SO_RULE_IS_MINUS_i_TIMES_STORED_TENSOR",
+      "hidden_identical_field_factorial": "NONE_IN_ACTION;_REPEATED_FUNCTIONAL_DIFFERENTIATION_GENERATES_THE_FULL_MULTIPLICITY",
+      "nonzero_component_count": 34,
+      "symmetric_basis_tensor_entries": [
+        {
+          "indices": [
+            0,
+            0,
+            2
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            0,
+            0,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(4*b6*n - 6*b7*n + c2)/12"
+        },
+        {
+          "indices": [
+            0,
+            2,
+            0
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            0,
+            2,
+            1
+          ],
+          "coefficient_of_minus_i": "I*(-4*b6*n + 6*b7*n - c2)/4"
+        },
+        {
+          "indices": [
+            0,
+            4,
+            3
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            0,
+            4,
+            4
+          ],
+          "coefficient_of_minus_i": "I*(-4*b6*n + 6*b7*n - c2)/4"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            0
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            1,
+            0,
+            1
+          ],
+          "coefficient_of_minus_i": "I*(4*b6*n - 6*b7*n + c2)/4"
+        },
+        {
+          "indices": [
+            1,
+            2,
+            2
+          ],
+          "coefficient_of_minus_i": "-b6*n + 3*b7*n/2 - c2/4"
+        },
+        {
+          "indices": [
+            1,
+            2,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(4*b6*n - 6*b7*n + c2)/12"
+        },
+        {
+          "indices": [
+            1,
+            4,
+            5
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            1,
+            4,
+            6
+          ],
+          "coefficient_of_minus_i": "I*(-4*b6*n + 6*b7*n - c2)/4"
+        },
+        {
+          "indices": [
+            2,
+            0,
+            3
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            2,
+            0,
+            4
+          ],
+          "coefficient_of_minus_i": "I*(4*b6*n - 6*b7*n + c2)/4"
+        },
+        {
+          "indices": [
+            2,
+            2,
+            5
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            2,
+            2,
+            6
+          ],
+          "coefficient_of_minus_i": "I*(4*b6*n - 6*b7*n + c2)/4"
+        },
+        {
+          "indices": [
+            2,
+            4,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-4*b6*n + 6*b7*n - c2)/6"
+        },
+        {
+          "indices": [
+            3,
+            1,
+            2
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            3,
+            1,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(4*b6*n - 6*b7*n + c2)/12"
+        },
+        {
+          "indices": [
+            3,
+            3,
+            0
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            3,
+            3,
+            1
+          ],
+          "coefficient_of_minus_i": "I*(-4*b6*n + 6*b7*n - c2)/4"
+        },
+        {
+          "indices": [
+            3,
+            5,
+            3
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            3,
+            5,
+            4
+          ],
+          "coefficient_of_minus_i": "I*(-4*b6*n + 6*b7*n - c2)/4"
+        },
+        {
+          "indices": [
+            4,
+            1,
+            0
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            4,
+            1,
+            1
+          ],
+          "coefficient_of_minus_i": "I*(4*b6*n - 6*b7*n + c2)/4"
+        },
+        {
+          "indices": [
+            4,
+            3,
+            2
+          ],
+          "coefficient_of_minus_i": "-b6*n + 3*b7*n/2 - c2/4"
+        },
+        {
+          "indices": [
+            4,
+            3,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(4*b6*n - 6*b7*n + c2)/12"
+        },
+        {
+          "indices": [
+            4,
+            5,
+            5
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6
+          ],
+          "coefficient_of_minus_i": "I*(-4*b6*n + 6*b7*n - c2)/4"
+        },
+        {
+          "indices": [
+            5,
+            1,
+            3
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            5,
+            1,
+            4
+          ],
+          "coefficient_of_minus_i": "I*(4*b6*n - 6*b7*n + c2)/4"
+        },
+        {
+          "indices": [
+            5,
+            3,
+            5
+          ],
+          "coefficient_of_minus_i": "b6*n - 3*b7*n/2 + c2/4"
+        },
+        {
+          "indices": [
+            5,
+            3,
+            6
+          ],
+          "coefficient_of_minus_i": "I*(4*b6*n - 6*b7*n + c2)/4"
+        },
+        {
+          "indices": [
+            5,
+            5,
+            7
+          ],
+          "coefficient_of_minus_i": "sqrt(3)*(-4*b6*n + 6*b7*n - c2)/6"
+        }
+      ],
+      "route_A": "DIRECT_ORDERED_FUNCTIONAL_DIFFERENTIATION_OF_AUTHORITATIVE_MATRIX_TRACE_POTENTIAL",
+      "route_B": "EXPANDED_POLYNOMIAL_MONOMIAL_COEFFICIENT_TIMES_IDENTICAL_COMPONENT_FACTORIAL",
+      "route_A_equals_route_B_exactly": true,
+      "tree_threshold_cubic_shift": "ZERO_IN_PASS0030_AUTHORIZED_D_LE_4_TREE_THRESHOLD_SCOPE",
+      "rule_fingerprint_sha256": "546216588803fdf1ac27592b608902a3a18ec546f0108aaf227fcd4d2ee6bf67"
+    }
+  ],
+  "acceptance": {
+    "missing_derivative_families_entering": 4,
+    "materialized_derivative_families": 4,
+    "missing_scalar_cubic_families_entering": 5,
+    "materialized_scalar_cubic_families": 5,
+    "all_nine_independently_reconstructed": true,
+    "exact_reconstruction_disagreements": 0,
+    "floating_point_comparisons": 0
+  },
+  "authority": {
+    "nine_rule_family_materialization": "COMPLETE",
+    "complete_frontier_repreflight": "AUTHORIZED_NEXT_NOT_EXECUTED_HERE",
+    "bulk_phase3": "PAUSED_PENDING_REPREFLIGHT_AUDIT_CONTROL_REPLAY_AND_SEPARATE_DECISION",
+    "global_closure": false,
+    "ADM_authorized": false,
+    "double_d5_to_d6_closure": "BLOCKED"
+  },
+  "hard_nonclaims": [
+    "NO_TOPOLOGY_AFTER_THE_FOUR_ROW_PASS0067_PREFIX_IS_EVALUATED",
+    "MATERIALIZED_RULES_DO_NOT_GUARANTEE_INTEGRAND_OR_CLOSURE_SUCCESS",
+    "NO_ADM_ENTRY_IS_INFERRED",
+    "NO_STORAGE_CANDIDATE_IS_DELETED_OR_MUTATED"
+  ],
+  "next_authorized_action": "INDEPENDENTLY_AUDIT_THE_NINE_FAMILIES_WITH_MUTATIONS;_RERUN_AN_EXHAUSTIVE_ALL_DEPENDENCY_ZERO_INTEGRAL_PREFLIGHT_FROM_SCRATCH_OVER_ALL_1020_PENDING_ROWS;_REPLAY_20_CANONICAL_PLUS_ONE_AUXILIARY_CONTROLS;_THEN_MAKE_A_SEPARATE_RESUMPTION_DECISION",
+  "document_fingerprint_sha256": "ddc48a91083c9ab91b6125916f1a199fb367d081904ae1a928ede3c41e49928f"
+}

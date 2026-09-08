@@ -1,0 +1,38 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "bounded_reconciliation_selected": true,
+    "physical_principal_block_execution_authorized": false,
+    "preserved_descendant_adoption_authorized": false,
+    "source_and_frozen_theory_packet_preparation_authorized": true,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "all_preserved_descendants_remain_non_authoritative": true,
+    "base_registry_target_is_exact": true,
+    "bounded_route_is_selected": true,
+    "fresh_path_starts_at_source_packet": true,
+    "handoff_was_unselected": true,
+    "no_scientific_result_is_manufactured": true,
+    "selection_bytes_are_bound": true,
+    "yukawa_and_replay_prohibitions_are_explicit": true
+  },
+  "failed_checks": [],
+  "review_target": "review_post_maintenance_scientific_reconciliation_route_selection_v0_result",
+  "reviewed_selection": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_BOUNDED_RECONCILIATION_SELECTION_20260728_v0.json",
+    "sha256": "b89137dc1e14a8750575a5ba78f4395811fa80f85f4050f626ba31de85d5f283"
+  },
+  "reviewer_independence": {
+    "imports_selection_generator": false,
+    "recomputes_base_registry_target": true,
+    "recomputes_handoff_hash": true,
+    "trusts_selection_combined_pass_flag": false
+  },
+  "schema_id": "QFT_GR_QUADRATIC_HYPERBOLICITY_BOUNDED_RECONCILIATION_SELECTION_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0",
+  "selected_next_target_kind": "qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_preparation",
+  "selected_route": "BOUNDED_RECONCILIATION_OR_REPLAY",
+  "verdict": "ACCEPT_BOUNDED_RECONCILIATION_SOURCE_PACKET_PREPARATION_ONLY"
+}

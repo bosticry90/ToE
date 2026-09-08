@@ -1,0 +1,149 @@
+{
+  "admissible_primary_sources": [
+    {
+      "authors": [
+        "Farid Thaalba",
+        "Fernando Abalos",
+        "Miguel Bezares"
+      ],
+      "claim_boundary": "Independently reproduce the quadratic physical spin-2 pencil and its defective repeated roots; do not import the source conclusion as the ToE result.",
+      "locators": [
+        "equations 25-28",
+        "physical spin-2 block discussion",
+        "discussion of adapted norms and derivative loss"
+      ],
+      "role": "PRIMARY_CURRENT_PHYSICAL_PRINCIPAL_BLOCK_REFERENCE",
+      "source_id": "ARXIV_2607_11879_V1",
+      "submitted": "2026-07-13",
+      "title": "Higher-derivative gravitational effective field theories are generically weakly hyperbolic",
+      "url": "https://arxiv.org/abs/2607.11879"
+    },
+    {
+      "authors": [
+        "J. Osorio Morales",
+        "O. P. Santillan"
+      ],
+      "claim_boundary": "Use the harmonic/auxiliary formulation and C-infinity existence results as a comparator. Do not treat its Proposition 9 continuous-dependence statement, identified there as a conjecture, as an established Sobolev estimate.",
+      "locators": [
+        "Theorem 1",
+        "Theorem 2",
+        "Proposition 9 (Conjecture)"
+      ],
+      "role": "HISTORICAL_SMOOTH_EXISTENCE_COMPARATOR",
+      "source_id": "ARXIV_1811_07869_V4",
+      "title": "About the Cauchy problem in Stelle's quadratic gravity",
+      "url": "https://arxiv.org/abs/1811.07869"
+    },
+    {
+      "author": "David R. Noakes",
+      "claim_boundary": "Use as historical formulation context, not as a substitute for a same-order uniform symmetrizer.",
+      "doi": "10.1063/1.525906",
+      "journal": "Journal of Mathematical Physics 24, 1846 (1983)",
+      "role": "HISTORICAL_HARMONIC_REDUCTION_COMPARATOR",
+      "source_id": "NOAKES_1983_JMP_24_1846",
+      "title": "The initial value formulation of higher derivative gravity",
+      "url": "https://pubs.aip.org/aip/jmp/article/24/7/1846/226302/The-initial-value-formulation-of-higher-derivative"
+    },
+    {
+      "authors": [
+        "Pau Figueras",
+        "Aaron Held",
+        "Áron D. Kovács"
+      ],
+      "claim_boundary": "Regularizing terms and fiducial massive modes are outside the frozen unregularized theory and cannot establish its physical strong hyperbolicity.",
+      "role": "EXCLUDED_REGULARIZED_FORMULATION_COMPARATOR",
+      "source_id": "ARXIV_2407_08775_V1",
+      "title": "Well-posed initial value formulation of general effective field theories of gravity",
+      "url": "https://arxiv.org/abs/2407.08775"
+    }
+  ],
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "consumed_selection_review": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_HYPERBOLICITY_BOUNDED_RECONCILIATION_SELECTION_RESULT_REVIEW_20260728_v0.json",
+    "selected_route": "BOUNDED_RECONCILIATION_OR_REPLAY",
+    "sha256": "7064721bf28130550d871741eea72d3948e29f1e45838b65532f52172386a600"
+  },
+  "frozen_conventions": {
+    "box_symbol": "g^mu_nu ell_mu ell_nu = 1-lambda^2",
+    "metric_signature": "(-,+,+,+)",
+    "physical_subspace": "Two transverse-traceless spin-2 polarizations orthogonal to n and k.",
+    "principal_covector": "ell_mu = lambda n_mu + k_mu with n.n=-1, k.k=1, n.k=0",
+    "ricci": "R_sigma_nu = R^rho_{ sigma rho nu}",
+    "riemann": "R^rho_{ sigma mu nu} = partial_mu Gamma^rho_{nu sigma} - partial_nu Gamma^rho_{mu sigma} + Gamma^rho_{mu lambda} Gamma^lambda_{nu sigma} - Gamma^rho_{nu lambda} Gamma^lambda_{mu sigma}"
+  },
+  "frozen_theory": {
+    "action_density": "sqrt(-g) [c_R R + c_Lambda + alpha R^2 + beta R_mn R^mn] + source",
+    "coefficient_domains": {
+      "G_Stelle": [
+        "beta != 0",
+        "3 alpha + beta != 0",
+        "c_R != 0"
+      ],
+      "G_principal": [
+        "beta != 0",
+        "3 alpha + beta != 0"
+      ],
+      "spin2_obstruction_minimal_domain": [
+        "beta != 0"
+      ]
+    },
+    "coefficient_mapping_to_arxiv_2607_11879": {
+      "paper_alpha0": "ToE beta up to the overall nonzero action normalization",
+      "paper_beta0": "-ToE alpha up to the overall nonzero action normalization",
+      "principal_pencil_scaling": "Any nonzero constant multiple is equivalent for roots and multiplicities."
+    },
+    "dimension": 4,
+    "lower_order_at_fourth_order_principal_level": [
+      "c_R R",
+      "c_Lambda"
+    ]
+  },
+  "not_yet_authorized": [
+    "Nonlinear auxiliary/harmonic formulation execution.",
+    "Standard Sobolev energy estimate execution.",
+    "Adapted derivative-loss energy estimate execution.",
+    "Source extension.",
+    "Maxwell-Dirac secondary calculation."
+  ],
+  "phase_a_authorized_calculation": {
+    "required_outputs": [
+      "Fourth-order physical transverse-traceless principal block.",
+      "Matrix pencil for arbitrary nonzero spatial covector.",
+      "Algebraic and geometric multiplicities at lambda = +/-1.",
+      "Strong- and symmetric-hyperbolicity conclusions.",
+      "Gauge/constraint invariance boundary of the physical block.",
+      "Coefficient-stratum controls."
+    ],
+    "target": "derive_qft_gr_quadratic_physical_spin2_principal_block_v0"
+  },
+  "preparation_target": "prepare_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0",
+  "preserved_candidate_input": {
+    "admissible_use": "Candidate equations, conventions, and constraint inventory requiring independent rederivation and rebinding.",
+    "byte_size": 5818,
+    "classification": "PRESERVED_NOT_ADOPTED",
+    "commit": "e785b98d",
+    "git_blob_oid": "4351a53e0a582f5ccdd23d6aa80ee5372bda9e6f",
+    "path": "formal/science_capsules/qft_gr_full_higher_derivative_constraint_set_initial_data_v0/derivation/full_higher_derivative_constraint_set_initial_data_domain.md",
+    "scientific_authority_conferred": false,
+    "sha256": "2a3a3af211ab2c82ceb72e0c8505d3558954d1e14a5d187180b59250b637fb16"
+  },
+  "prohibitions": [
+    "No perturbative order reduction presented as the frozen theory.",
+    "No artificial dissipation used as a continuum proof.",
+    "No regulator field counted as an original physical mode.",
+    "No fiducial massive mode used to claim unregularized hyperbolicity.",
+    "No symmetry-reduced result used as generic 3+1 proof.",
+    "No numerical stability substituted for a principal-symbol proof.",
+    "No smooth existence result labeled strong hyperbolicity without a uniform symmetrizer.",
+    "No Yukawa execution or rerun."
+  ],
+  "schema_id": "QFT_GR_QUADRATIC_HYPERBOLICITY_ADMISSIBLE_SOURCE_AND_FROZEN_THEORY_PACKET_20260728_v0",
+  "selected_next_target": "review_qft_gr_quadratic_hyperbolicity_admissible_source_and_frozen_theory_packet_v0_result",
+  "source_scope": {
+    "dynamical_hyperbolic_matter": "LATER_SEPARATE_PACKET",
+    "first_extension": "Prescribed smooth conserved T_mn with no new fourth-order metric or matter derivatives.",
+    "phase_a": "VACUUM",
+    "semiclassical_nonlocal_or_state_dependent_source": "EXCLUDED_UNTIL_SEPARATE_SOURCE_ADMISSIBILITY_REVIEW"
+  },
+  "verdict": "FROZEN_VACUUM_THEORY_AND_ADMISSIBLE_SOURCES_PREPARED_FOR_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,546 @@
+{
+  "acquisition_terminal_outcomes": {
+    "multiple_subordinate_findings_allowed": true,
+    "one_principal_outcome_required": true,
+    "outcome_count": 9,
+    "rows": [
+      {
+        "condition": "all six inventory items independently reach COMPLETE",
+        "outcome": "SUPPLEMENT_ACQUIRED_AND_COMPLETE",
+        "principal": true
+      },
+      {
+        "condition": "observation vector or row mapping fails completeness",
+        "outcome": "SUPPLEMENT_ACQUIRED_BUT_OBSERVATION_VECTOR_INCOMPLETE",
+        "principal": false
+      },
+      {
+        "condition": "numerical uncertainty or correlation model is incomplete",
+        "outcome": "SUPPLEMENT_ACQUIRED_BUT_COVARIANCE_INCOMPLETE",
+        "principal": false
+      },
+      {
+        "condition": "any one of five nuisance contracts remains underdefined",
+        "outcome": "SUPPLEMENT_ACQUIRED_BUT_NUISANCE_PRIORS_INCOMPLETE",
+        "principal": false
+      },
+      {
+        "condition": "three-harmonic torque predictions cannot be computed independently",
+        "outcome": "SUPPLEMENT_ACQUIRED_BUT_FORWARD_MODEL_INCOMPLETE",
+        "principal": false
+      },
+      {
+        "condition": "boundary-aware exclusion calibration cannot be reproduced",
+        "outcome": "SUPPLEMENT_ACQUIRED_BUT_COVERAGE_PROCEDURE_INCOMPLETE",
+        "principal": false
+      },
+      {
+        "condition": "legitimate bytes are obtained but cannot be opened or parsed within the bounded route",
+        "outcome": "SUPPLEMENT_IDENTIFIED_BUT_NOT_INGESTIBLE",
+        "principal": true
+      },
+      {
+        "condition": "non-contact authenticated sources are exhausted with decision-bearing omissions",
+        "outcome": "AUTHORS_OR_CUSTODIAN_CONTACT_REQUIRED",
+        "principal": true
+      },
+      {
+        "condition": "bounded legitimate acquisition terminates without an available next source",
+        "outcome": "PRIMARY_EVIDENCE_NOT_OBTAINABLE_WITHIN_BOUNDED_ROUTE",
+        "principal": true
+      }
+    ]
+  },
+  "authority": {
+    "consumed_selection_gate_count": 15,
+    "consumed_selection_verdict": "SELECTED_TARGETED_EOTWASH_PRIMARY_EVIDENCE_ACQUISITION_PACKET_PREPARATION",
+    "frozen_selection_artifact_count": 5,
+    "frozen_selection_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+        "sha256": "312a8f3b1067035f6ce59b20c1aa1bde5d7c1f565bd13c843177b5bb08058330"
+      },
+      {
+        "relative_path": "formal/docs/release/POST_SCALAR_ONLY_QUADRATIC_GRAVITY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.json",
+        "sha256": "9a51d494d257344d214d248a7af4874cd7bdf45949f6665047ff01342dbdc7b9"
+      },
+      {
+        "relative_path": "formal/python/tools/post_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_scientific_response_selection_v0.py",
+        "sha256": "7428993ea205e342fc223375740357231b3b3eedea0e8feeb110ae29f7024645"
+      },
+      {
+        "relative_path": "formal/python/tests/test_post_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_review_scientific_response_selection_v0.py",
+        "sha256": "79d827c1ff1e7454daa948ba44267289e64408bbe1bd0bcf71697ebd514a0cca"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyQuadraticGravityRangeAndWeakFieldConstraintPacketReviewScientificResponseSelectionV0.lean",
+        "sha256": "77972eecd866c216ace2e1b05270342d58279ea3e4310afb69145f971d28f31a"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0.py",
+      "sha256": "9db05478025f170b175fda6fc4aee95afe0578a68cc0997c73585184d0f29fcb"
+    },
+    "human_packet": {
+      "relative_path": "formal/docs/lanes/EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_PACKET_20260718_v0.md",
+      "sha256": "345a407a317ebd1967a72c3582a186b51d3347a1017d50d77325ba14db49510c"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0.py",
+      "sha256": "64fef151c14fd5cafe28fa4c671f8577d40c423364d199717f8012fd6c9153b4"
+    }
+  },
+  "bounded_acquisition_protocol": {
+    "access_control_circumvention_allowed": false,
+    "author_contact_status": "NOT_AUTHORIZED_TERMINAL_OUTCOME_ONLY",
+    "failed_ingestion_definition": "bytes cannot be opened or parsed with the declared file type after two documented non-destructive ingestion attempts",
+    "interactive_manual_download_status": "REQUIRES_ACCEPTED_PACKET_REVIEW_AND_EXPLICIT_EXECUTION_AUTHORITY",
+    "maximum_alternative_authenticated_mirrors": 2,
+    "maximum_attempts_per_concrete_url": 2,
+    "maximum_interactive_manual_download_sessions": 1,
+    "maximum_non_contact_source_tiers": 5,
+    "maximum_total_retrieval_attempts": 8,
+    "status": "PREPARED_NOT_AUTHORIZED_FOR_EXECUTION",
+    "stop_rule": "stop after eight total retrieval attempts, exhaustion of five non-contact source tiers, or the first terminal principal outcome"
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Preparation only of a finite, legitimate Eot-Wash 2020 primary-evidence custody acquisition protocol. No supplement or evidence file is downloaded, acquired, opened, ingested, verified, or declared complete; no access control is bypassed; no author or custodian is contacted; no synthetic forecast or published-limit reinterpretation is authorized; no likelihood, scalar-range or alpha bound, branch adoption, native scalar bridge, native gravitational principle, gravitational action, orbital result, frame-dragging result, or master-action change is computed, selected, claimed, or authorized.",
+  "content_verification_contract": {
+    "binding_rule": "A file can be acquired and ingested while every scientific inventory item remains incomplete.",
+    "partial_results_allowed": true,
+    "principal_status_count": 1,
+    "subordinate_finding_cap": 6,
+    "subordinate_finding_count_unbounded": false,
+    "supplement_receipt_is_success": false,
+    "verification_unit": "ONE_REQUIRED_EVIDENCE_ITEM"
+  },
+  "current_posture": {
+    "acquisition_packet": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "alpha": "NOT_SELECTED",
+    "author_contact": "NOT_AUTHORIZED",
+    "coverage_procedure": "NOT_EXECUTABLE",
+    "forward_model": "NOT_EXECUTABLE",
+    "gravitational_action": "NOT_SELECTED",
+    "likelihood": "NOT_EXECUTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "next_authority": "review_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0_result",
+    "required_evidence_items": "0_OF_6_COMPLETE",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_range_bound": "NONE",
+    "supplement_acquisition": "NOT_STARTED"
+  },
+  "custody_contract": {
+    "current_acquired_object_count": 0,
+    "current_complete_item_count": 0,
+    "current_ingested_object_count": 0,
+    "current_verified_item_count": 0,
+    "file_presence_implies_completeness": false,
+    "ordered_states": [
+      "IDENTIFIED",
+      "ACQUIRED",
+      "INGESTED",
+      "VERIFIED",
+      "COMPLETE"
+    ],
+    "required_field_count": 12,
+    "required_fields": [
+      "source_location",
+      "acquisition_method",
+      "acquisition_timestamp_utc",
+      "original_filename",
+      "file_type",
+      "file_size_bytes",
+      "sha256",
+      "publisher_or_custodian_identity",
+      "license_or_access_conditions",
+      "content_description",
+      "ingestion_result",
+      "completeness_status"
+    ],
+    "state_count": 5,
+    "state_meanings": {
+      "ACQUIRED": "legitimate bytes were obtained and recorded",
+      "COMPLETE": "every required field for that inventory item is available",
+      "IDENTIFIED": "the object is known to exist or is expected at a canonical identifier",
+      "INGESTED": "the contents were successfully opened and parsed",
+      "VERIFIED": "content was matched to one exact inventory requirement"
+    },
+    "state_skipping_allowed": false
+  },
+  "experiment_boundary": {
+    "acquisition_objective": "place the exact evidence, nuisance contract, apparatus-to-torque model, and boundary-coverage procedure into verified project custody",
+    "arxiv": "https://arxiv.org/abs/2002.11761",
+    "doi": "10.1103/PhysRevLett.124.101101",
+    "experiment": "EOTWASH_2020_SHORT_RANGE_ISL_TORSION_BALANCE",
+    "experiment_scientifically_suitable": true,
+    "fixed_signal": "A_Y=1/3",
+    "independent_likelihood_executable_now": false
+  },
+  "forward_model_sufficiency_test": {
+    "baseline_tolerance_to_be_frozen_in_future_likelihood_packet": true,
+    "obligation_count": 6,
+    "obligations": [
+      "compute the authors' Newtonian prediction",
+      "compute all three torque harmonics at all 95 settings",
+      "propagate all five nuisance parameters through the model",
+      "compute the fixed A_Y=1/3 Yukawa contribution for arbitrary tested lambda0",
+      "reproduce the exact observation ordering",
+      "construct the complete residual vector used by the likelihood"
+    ],
+    "published_newtonian_baseline": "chi_squared=275.0 for nu=285, P=0.654",
+    "published_newtonian_baseline_required_before_scalar": true,
+    "status": "PREPARED_NOT_EXECUTED"
+  },
+  "packet_id": "EOTWASH_2020_YUKAWA_PRIMARY_EVIDENCE_CUSTODY_ACQUISITION_PACKET_20260718_v0",
+  "packet_review_outcomes": [
+    "PRIMARY_EVIDENCE_ACQUISITION_CONTRACT_READY",
+    "BLOCKED_EVIDENCE_INVENTORY_UNDERINCLUSIVE",
+    "BLOCKED_SOURCE_HIERARCHY_OR_PROVENANCE_UNSAFE",
+    "BLOCKED_CUSTODY_COMPLETENESS_CONFLATION",
+    "BLOCKED_ACQUISITION_SCOPE_OPEN_ENDED",
+    "BLOCKED_CONTACT_OR_DOWNLOAD_PREAUTHORIZED"
+  ],
+  "parallel_computational_lanes": {
+    "binding_claim_separation": [
+      "synthetic injection recovery tests a simulated-data pipeline",
+      "idealized apparatus forecasts are theoretical computational results",
+      "published-limit translation is supplied empirical evidence",
+      "independent reproduction requires real primary evidence and an executable model"
+    ],
+    "independent_real_data_reanalysis": "REMAINS_BLOCKED",
+    "new_measurement_program": "NOT_AUTHORIZED",
+    "supplied_published_constraint_reinterpretation": "SCIENTIFICALLY_VALUABLE_FRESH_AUTHORITY_REQUIRED",
+    "synthetic_forward_model_and_sensitivity_forecast": "SCIENTIFICALLY_VALUABLE_FRESH_AUTHORITY_REQUIRED"
+  },
+  "preparation_controls": {
+    "control_count": 24,
+    "failure_count": 0,
+    "pass_count": 24,
+    "rows": [
+      {
+        "control_id": "EXACT_SELECTION_AUTHORITY_AND_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "control_id": "EXACT_SIX_ITEM_EVIDENCE_INVENTORY",
+        "status": "PASS"
+      },
+      {
+        "control_id": "OBSERVATION_VECTOR_REQUIRES_PHYSICAL_ROW_MAPPING",
+        "status": "PASS"
+      },
+      {
+        "control_id": "UNCERTAINTY_AND_COVARIANCE_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FIVE_NUISANCE_CONTRACTS_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "EXTENDED_SOURCE_FORWARD_MODEL_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "BOUNDARY_COVERAGE_PROCEDURE_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FINITE_PRIMARY_SOURCE_HIERARCHY",
+        "status": "PASS"
+      },
+      {
+        "control_id": "THIRD_PARTY_AND_PLOT_SUBSTITUTIONS_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "control_id": "TWELVE_FIELD_CUSTODY_RECORD_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FIVE_CUSTODY_STATES_ORDERED_AND_NONSUBSTITUTABLE",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FILE_PRESENCE_CANNOT_CREATE_SCIENTIFIC_COMPLETENESS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "CONTENT_LEVEL_VERIFICATION_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FORWARD_MODEL_SUFFICIENCY_TEST_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "control_id": "STATISTICAL_SUFFICIENCY_TEST_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "control_id": "NEWTONIAN_BASELINE_BEFORE_SCALAR_USE",
+        "status": "PASS"
+      },
+      {
+        "control_id": "FINITE_ATTEMPT_AND_MIRROR_LIMITS",
+        "status": "PASS"
+      },
+      {
+        "control_id": "AUTHOR_CONTACT_SEPARATE_AUTHORITY",
+        "status": "PASS"
+      },
+      {
+        "control_id": "NO_DOWNLOAD_OR_ACQUISITION_DURING_PREPARATION",
+        "status": "PASS"
+      },
+      {
+        "control_id": "NO_LIKELIHOOD_OR_PUBLISHED_CURVE_BOUND",
+        "status": "PASS"
+      },
+      {
+        "control_id": "PARTIAL_FINDINGS_AND_ONE_PRINCIPAL_STATUS_SUPPORTED",
+        "status": "PASS"
+      },
+      {
+        "control_id": "SYNTHETIC_AND_SUPPLIED_REINTERPRETATION_LANES_SEPARATE",
+        "status": "PASS"
+      },
+      {
+        "control_id": "NO_ALPHA_BRANCH_PRINCIPLE_OR_ACTION_ADOPTION",
+        "status": "PASS"
+      },
+      {
+        "control_id": "ROTATION_ONLY_TO_INDEPENDENT_PACKET_REVIEW",
+        "status": "PASS"
+      }
+    ]
+  },
+  "required_evidence_inventory": {
+    "complete_item_count": 0,
+    "item_count": 6,
+    "rows": [
+      {
+        "complete": false,
+        "current_state": "IDENTIFIED_EXPECTED_NOT_ACQUIRED",
+        "expected_count": 285,
+        "expected_shape": "95 settings x 3 harmonics",
+        "item_id": "OBSERVATION_TORQUE_VECTOR",
+        "required_fields": [
+          "all 95 experimental setting identifiers",
+          "18 omega torque at every setting",
+          "54 omega torque at every setting",
+          "120 omega torque at every setting",
+          "measurement units",
+          "row identifiers and ordering",
+          "data-selection or exclusion flags"
+        ],
+        "required_operation": "construct the exact published observation and residual vector"
+      },
+      {
+        "complete": false,
+        "current_state": "IDENTIFIED_EXPECTED_NOT_ACQUIRED",
+        "item_id": "DISPLACEMENT_AND_CONFIGURATION_METADATA",
+        "required_fields": [
+          "x y s displacement metadata for every setting",
+          "detector and attractor configuration identifiers",
+          "alignment and rotation-phase conventions",
+          "ordering key matching the torque vector",
+          "data cuts or configuration exclusions"
+        ],
+        "required_operation": "evaluate each model prediction at the correct physical configuration"
+      },
+      {
+        "complete": false,
+        "current_state": "IDENTIFIED_EXPECTED_NOT_ACQUIRED",
+        "item_id": "UNCERTAINTY_AND_COVARIANCE_MODEL",
+        "required_fields": [
+          "pointwise statistical uncertainties",
+          "correlated systematic uncertainties",
+          "covariance matrix or equivalent generative error model",
+          "block structure across settings or harmonics",
+          "regularization and conditioning rules",
+          "units and ordering matching the observation vector"
+        ],
+        "required_operation": "weight residuals and reproduce the effective information content"
+      },
+      {
+        "complete": false,
+        "current_state": "IDENTIFIED_EXPECTED_NOT_ACQUIRED",
+        "expected_count": 5,
+        "item_id": "FIVE_NUISANCE_PRIOR_CONTRACTS",
+        "parameter_ids": [
+          "x0",
+          "y0",
+          "s0",
+          "surface_roughness",
+          "gamma"
+        ],
+        "required_fields": [
+          "identity and physical meaning",
+          "prior or constraint form",
+          "central value and width",
+          "cross-parameter covariance or declared independence",
+          "profiling marginalization or fixing rule",
+          "parameter bounds",
+          "exact forward-model entry point"
+        ],
+        "required_operation": "profile the five published geometry and calibration nuisances"
+      },
+      {
+        "complete": false,
+        "current_state": "IDENTIFIED_EXPECTED_NOT_ACQUIRED",
+        "item_id": "EXTENDED_SOURCE_TORQUE_FORWARD_MODEL",
+        "required_fields": [
+          "detector and attractor density patterns",
+          "material densities and thicknesses",
+          "relative positions and alignment conventions",
+          "harmonic definitions and phase conventions",
+          "numerical integration or Fourier-Bessel procedure",
+          "calibration and transfer factors",
+          "Newtonian baseline implementation",
+          "Yukawa implementation for arbitrary lambda0 and fixed A_Y=1/3"
+        ],
+        "required_operation": "compute the three predicted torque harmonics at all 95 settings"
+      },
+      {
+        "complete": false,
+        "current_state": "IDENTIFIED_EXPECTED_NOT_ACQUIRED",
+        "item_id": "BOUNDARY_COVERAGE_PROCEDURE",
+        "required_fields": [
+          "test statistic",
+          "null and alternative parameterization",
+          "nuisance profiling procedure",
+          "pseudoexperiment or Monte Carlo design if used",
+          "simulation count and critical-value construction if used",
+          "lambda0 to zero boundary treatment",
+          "interpolation rule",
+          "random-seed or reproducibility policy"
+        ],
+        "required_operation": "calibrate valid exclusion coverage at the Einstein boundary"
+      }
+    ]
+  },
+  "schema_id": "toe.eotwash_2020_yukawa_primary_evidence_custody_acquisition.packet.v0",
+  "scope": {
+    "access_control_circumvented": false,
+    "acquisition_execution_authorized": false,
+    "alpha_sign_or_value_adopted": false,
+    "author_or_custodian_contact_authorized": false,
+    "author_or_custodian_contact_executed": false,
+    "beta_zero_adopted": false,
+    "coverage_calibration_executable": false,
+    "evidence_file_ingested": false,
+    "forward_model_executable": false,
+    "frame_dragging_resumed": false,
+    "gravitational_action_selected": false,
+    "independent_packet_review_executed": false,
+    "likelihood_evaluated": false,
+    "likelihood_execution_authorized": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "numerical_alpha_bound_computed": false,
+    "numerical_lambda_bound_computed": false,
+    "orbital_or_light_propagation_analysis_executed": false,
+    "packet_preparation_executed": true,
+    "primary_evidence_contract_complete": false,
+    "scalar_branch_adopted": false,
+    "supplement_downloaded_or_acquired": false,
+    "supplied_constraint_reinterpretation_authorized": false,
+    "synthetic_forward_model_lane_authorized": false
+  },
+  "selected_next_target": "review_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0_result",
+  "selected_next_target_kind": "INDEPENDENT_ACQUISITION_PACKET_REVIEW_ONLY_NO_DOWNLOAD_CONTACT_OR_FIT",
+  "source_hierarchy": {
+    "contact_source_count": 1,
+    "forbidden_substitutions": [
+      "plot digitization",
+      "screenshots",
+      "secondary reviews",
+      "values inferred from dissertation prose",
+      "generic apparatus reconstruction",
+      "unverified file-sharing mirrors"
+    ],
+    "non_contact_source_count": 5,
+    "rows": [
+      {
+        "current_status": "IDENTIFIED_EXPECTED_URL_CONTENT_NOT_ACQUIRED",
+        "identifier": "https://link.aps.org/supplemental/10.1103/PhysRevLett.124.101101",
+        "may_execute_now": false,
+        "priority": 1,
+        "source_class": "OFFICIAL_PUBLISHER_SUPPLEMENT",
+        "source_id": "APS_OFFICIAL_SUPPLEMENTAL_DEPOSIT"
+      },
+      {
+        "current_status": "IDENTIFIED_METADATA_ONLY",
+        "identifier": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.124.101101",
+        "may_execute_now": false,
+        "priority": 2,
+        "source_class": "OFFICIAL_JOURNAL_RECORD",
+        "source_id": "APS_ARTICLE_ATTACHMENTS_AND_DATA_LINKS"
+      },
+      {
+        "current_status": "NOT_YET_IDENTIFIED",
+        "identifier": "TO_BE_IDENTIFIED_DURING_AUTHORIZED_ACQUISITION",
+        "may_execute_now": false,
+        "priority": 3,
+        "source_class": "AUTHOR_MAINTAINED_INSTITUTIONAL_ARCHIVE",
+        "source_id": "EOTWASH_OR_UW_AUTHOR_MAINTAINED_ARCHIVE"
+      },
+      {
+        "current_status": "IDENTIFIED_SUPPORTING_NOT_PRIMARY_NUMERICAL_SUBSTITUTE",
+        "identifier": "https://digital.lib.washington.edu/researchworks/items/971237d1-100a-41ae-9027-d1bbce8cf315/full",
+        "may_execute_now": false,
+        "priority": 4,
+        "source_class": "UNIVERSITY_REPOSITORY_SUPPORTING_METHODS",
+        "source_id": "UW_RESEARCHWORKS_RECORD"
+      },
+      {
+        "current_status": "NOT_YET_IDENTIFIED",
+        "identifier": "TO_BE_IDENTIFIED_WITH_PROVENANCE",
+        "may_execute_now": false,
+        "priority": 5,
+        "source_class": "AUTHENTICATED_INSTITUTIONAL_MIRROR",
+        "source_id": "VERIFIED_PUBLISHER_OR_LAB_ARCHIVE_MIRROR"
+      },
+      {
+        "current_status": "NOT_AUTHORIZED_TERMINAL_OUTCOME_ONLY",
+        "identifier": "NO_CONTACT_TARGET_SELECTED",
+        "may_execute_now": false,
+        "priority": 6,
+        "source_class": "EXTERNAL_COMMUNICATION_REQUIRING_SEPARATE_AUTHORITY",
+        "source_id": "AUTHOR_OR_DATA_CUSTODIAN_CONTACT"
+      }
+    ],
+    "source_count": 6
+  },
+  "sources": [
+    {
+      "role": "PRIMARY_EXPERIMENT_AND_SUPPLEMENT_POINTER",
+      "source": "https://arxiv.org/abs/2002.11761"
+    },
+    {
+      "role": "OFFICIAL_APS_SUPPLEMENT_DEPOSIT_POLICY",
+      "source": "https://journals.aps.org/prl/authors"
+    },
+    {
+      "role": "SUPPORTING_METHODS_DISSERTATION_ONLY",
+      "source": "https://digital.lib.washington.edu/researchworks/items/971237d1-100a-41ae-9027-d1bbce8cf315/full"
+    }
+  ],
+  "statistical_sufficiency_test": {
+    "all_files_present_can_substitute_for_baseline_reproduction": false,
+    "obligation_count": 5,
+    "obligations": [
+      "specify the complete likelihood or exact equivalent statistic without guessing",
+      "reproduce the standard-physics baseline fit",
+      "reproduce the five-nuisance profiling rule",
+      "specify and validate boundary-aware confidence calibration",
+      "reproduce the authors' reported standard-physics result within a frozen tolerance"
+    ],
+    "status": "PREPARED_NOT_EXECUTED"
+  },
+  "target": "prepare_eotwash_2020_yukawa_primary_evidence_custody_acquisition_packet_v0",
+  "verdict": "PREPARED_PRIMARY_EVIDENCE_ACQUISITION_CONTRACT_PENDING_INDEPENDENT_REVIEW"
+}

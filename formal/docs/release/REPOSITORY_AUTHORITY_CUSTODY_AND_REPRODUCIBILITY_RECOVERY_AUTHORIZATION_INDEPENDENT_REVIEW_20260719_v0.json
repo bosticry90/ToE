@@ -1,0 +1,25 @@
+{
+  "accepted": true,
+  "checks": {
+    "no_scientific_registry_mutation": true,
+    "phase_a_is_read_only": true,
+    "phase_b_requires_phase_a_review": true,
+    "phase_c_requires_fresh_clone": true,
+    "phase_order_is_frozen": true,
+    "prior_sharding_lane_deferred_not_retired": true,
+    "registry_evidence_unchanged": true,
+    "registry_target_unchanged": true,
+    "scientific_execution_frozen": true,
+    "scientific_resumption_not_automatic": true,
+    "selector_targets_recovery_maintenance_only": true,
+    "v2_regeneration_prohibited": true
+  },
+  "packet_sha256": "40a679242878094a260e25da13fb9d6dedd0547dc22f34a44a003e482ed15c86",
+  "schema_id": "REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_AUTHORIZATION_INDEPENDENT_REVIEW_20260719_v0",
+  "scientific_execution_authorized": false,
+  "scientific_target_rotated": false,
+  "selected_next_action": "activate_repository_authority_custody_and_reproducibility_recovery_maintenance_authority_v0",
+  "selector_sha256": "86559f62112166fd12941793beae5fad24783155fa6edd0b89ff87e64c2f39d0",
+  "status": "RECOVERY_MAINTENANCE_AUTHORITY_READY_FOR_PHASE_A",
+  "verdict": "ACCEPT"
+}

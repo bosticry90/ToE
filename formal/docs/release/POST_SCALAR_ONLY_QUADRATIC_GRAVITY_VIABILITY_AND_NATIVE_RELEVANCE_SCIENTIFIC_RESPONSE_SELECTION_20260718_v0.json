@@ -1,0 +1,469 @@
+{
+  "authority": {
+    "consumed_result_review_verdict": "ACCEPTED_BOUNDED_SCALAR_ONLY_COMPARISON_RESULT",
+    "consumed_review_gate_count": 18,
+    "frozen_result_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_RESULT_REVIEW_20260718_v0.md",
+        "sha256": "83251dcff6410749736a353bc1798fea57ce889b019b8dcedb44fa9517e9dc26"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_RESULT_REVIEW_20260718_v0.json",
+        "sha256": "278c9ad0d765891c92b6bfca2c5d50993c3d9ecee200657f44ac772d3f5057e9"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_viability_and_native_relevance_result_review_v0.py",
+        "sha256": "66d09b7cc3ce2443f32c5b019575d5a34fe4872bf90c06ef7d46e412a6dd7fee"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_viability_and_native_relevance_result_review_v0.py",
+        "sha256": "436a0895111d8874951555ab02d3e4844e5f248b193bad031a0576f4fbaeb7ff"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyQuadraticGravityViabilityAndNativeRelevanceResultReviewV0.lean",
+        "sha256": "346e9c42238e7ff741afb4d8b9ab00bac060fad337e643aee7a43efc765701e8"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_quadratic_gravity_viability_and_native_relevance_scientific_response_selection_v0.py",
+      "sha256": "acbcf53f9718300d77af042f228fe586c6465a5a84cc01397fe8c66c7b921e9a"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0.md",
+      "sha256": "3e7b98d0e4b65e3beeb49e7833d0a1dc8ee288825184394f1655a603765546cf"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_quadratic_gravity_viability_and_native_relevance_scientific_response_selection_v0.py",
+      "sha256": "0d2dc4749ec131c76f70fbac6dac4931466fccf1101025cfca2940ca209413d8"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "claim_ceiling": "Scientific-response selection and packet-preparation authorization only. No beta=0 law, alpha value or bound, scalar branch, R+alpha R^2 action, native scalar bridge, native principle, matter sector, dataset, empirical result, minimal-mode condition, orbital result, frame-dragging result, V2 cell, or master-action change is selected, computed, established, or authorized here.",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "beta_zero": "COMPARISON_RESTRICTION_ONLY",
+    "gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "native_scalar_bridges": 0,
+    "next_authority": "prepare_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0",
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_only_result": "COMPLETED_AND_ACCEPTED",
+    "selected_packet_prepared": false,
+    "selected_response": "PREPARE_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET"
+  },
+  "post_selection_oracles": [
+    {
+      "role": "METRIC_F_R_VIABILITY_AND_CONSTRAINT_ORACLE",
+      "source": "https://arxiv.org/abs/0805.1726"
+    },
+    {
+      "role": "LOCAL_GRAVITY_AND_SCREENING_ORACLE",
+      "source": "https://arxiv.org/abs/1002.4928"
+    },
+    {
+      "role": "PROSPECTIVE_SOLAR_SYSTEM_YUKAWA_OBSERVABLE_ORACLE",
+      "source": "https://arxiv.org/abs/2305.06752"
+    }
+  ],
+  "preparation_gates": {
+    "failure_count": 0,
+    "gate_count": 14,
+    "pass_count": 14,
+    "rows": [
+      {
+        "gate_id": "ACCEPTED_SCALAR_RESULT_CUSTODY_AND_TARGET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_FOUR_AUTHORIZED_ROUTES_COMPARED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "BOUNDED_VIABILITY_AND_ZERO_NATIVE_BRIDGES_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_BETA_ALPHA_BRANCH_OR_ACTION_ADOPTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PHENOMENOLOGY_REMAINS_COMPARISON_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "YUKAWA_RANGE_MAP_RETAINED_WITHOUT_PARAMETER_SELECTION",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_SCREENING_OR_EMPIRICAL_RESULT_PRELOADED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_DATASET_OR_NUMERICAL_BOUND_SELECTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "AT_MOST_TWO_OBSERVABLE_CLASSES_IN_FUTURE_PACKET",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SOURCE_UNITS_UNCERTAINTY_AND_COVARIANCE_OBLIGATIONS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "OTHER_THREE_ROUTES_DEFERRED_NOT_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RANKING_CRITERIA_AND_SCORES_EXPLICIT",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "WINNER_STABLE_UNDER_24_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PACKET_PREPARATION_ONLY_WITH_INDEPENDENT_REVIEW_STOP",
+        "status": "PASS"
+      }
+    ]
+  },
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "disposition": "SELECTED_FOR_PACKET_PREPARATION_ONLY",
+        "kind": "COMPARISON_PHENOMENOLOGY_PACKET_PREPARATION_ONLY",
+        "scientific_endpoint": "Determine whether the fixed-strength finite-range scalar response has a bounded observationally allowed comparison region, without selecting alpha or adopting the branch.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "direct_use_of_accepted_scalar_result": 5,
+          "immediate_empirical_discriminability": 5,
+          "information_gain_about_branch_viability": 5,
+          "information_gain_about_missing_native_principle": 3,
+          "non_circularity": 5,
+          "stopping_rule_precision": 5
+        },
+        "target": "prepare_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0",
+        "weighted_score": 119
+      },
+      {
+        "candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "DOWNSTREAM_COMPARISON_TRANSPORT",
+        "scientific_endpoint": "Complete supplied metric-to-orbit transport while retaining the accepted absence of a direct scalar stationary 0i correction.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "direct_use_of_accepted_scalar_result": 4,
+          "immediate_empirical_discriminability": 4,
+          "information_gain_about_branch_viability": 3,
+          "information_gain_about_missing_native_principle": 1,
+          "non_circularity": 5,
+          "stopping_rule_precision": 5
+        },
+        "target": "prepare_supplied_scalar_comparison_0i_to_orbit_packet_v0",
+        "weighted_score": 97
+      },
+      {
+        "candidate_id": "NATIVE_SCALAR_POSTULATE_REQUIREMENTS",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "NATIVE_PRINCIPLE_REQUIREMENTS_ANALYSIS",
+        "scientific_endpoint": "Determine what explanatory and falsifiable obligations a genuine ToE-native scalar postulate would need to satisfy.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 4,
+          "direct_use_of_accepted_scalar_result": 4,
+          "immediate_empirical_discriminability": 1,
+          "information_gain_about_branch_viability": 2,
+          "information_gain_about_missing_native_principle": 5,
+          "non_circularity": 3,
+          "stopping_rule_precision": 4
+        },
+        "target": "prepare_native_gravitational_scalar_postulate_requirements_packet_v0",
+        "weighted_score": 82
+      },
+      {
+        "candidate_id": "MINIMAL_MODE_REQUIREMENTS",
+        "disposition": "DEFERRED_NOT_REJECTED",
+        "kind": "MINIMAL_SPECTRUM_REQUIREMENTS_ANALYSIS",
+        "scientific_endpoint": "Test whether minimal gravitational mode content can be justified without assuming the Einstein spectrum it would select.",
+        "scores": {
+          "authority_clarity": 5,
+          "boundedness": 4,
+          "direct_use_of_accepted_scalar_result": 3,
+          "immediate_empirical_discriminability": 1,
+          "information_gain_about_branch_viability": 2,
+          "information_gain_about_missing_native_principle": 5,
+          "non_circularity": 2,
+          "stopping_rule_precision": 4
+        },
+        "target": "prepare_minimal_mode_gravitational_requirements_packet_v0",
+        "weighted_score": 75
+      }
+    ],
+    "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+    "runner_up_score": 97,
+    "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+    "selected_score": 119
+  },
+  "retained_scalar_comparison": {
+    "Yukawa_relative_strength": "1/3 IN_FROZEN_POINT_SOURCE_MODEL",
+    "intrinsic_environmental_screening": "NOT_IDENTIFIED",
+    "mass_squared": "m0^2=-1/(6 alpha)",
+    "native_scalar_bridge_count": 0,
+    "packet_non_tachyonic_stratum": "alpha<0 NOT_SELECTED",
+    "range": "lambda0=1/m0=sqrt(-6 alpha)",
+    "stationary_point_source_response": "h00=-(2GM/(c^2 r))[1+(1/3)exp(-r/lambda0)]",
+    "status": "SUPPLIED_COMPARISON_SUBFAMILY_NOT_ADOPTED"
+  },
+  "schema_id": "POST_SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_SCIENTIFIC_RESPONSE_SELECTION_20260718_v0",
+  "scope": {
+    "alpha_selected": false,
+    "authoritative_V2_population_authorized": false,
+    "beta_zero_adopted": false,
+    "dataset_selected": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "master_action_mutated": false,
+    "matter_sector_selected": false,
+    "minimal_mode_condition_adopted": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "new_postulate_proposed_or_authorized": false,
+    "numerical_bound_computed": false,
+    "orbital_transport_authorized": false,
+    "phenomenology_execution_authorized": false,
+    "range_and_weak_field_packet_preparation_authorized": true,
+    "range_and_weak_field_packet_prepared_now": false,
+    "scalar_branch_adopted": false,
+    "scientific_response_selection_executed": true
+  },
+  "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+  "selected_next_target": "prepare_scalar_only_quadratic_gravity_range_and_weak_field_constraint_packet_v0",
+  "selected_next_target_kind": "PREPARATION_ONLY_COMPARISON_PHENOMENOLOGY_NO_PARAMETER_OR_ACTION_SELECTION",
+  "selected_packet_contract": {
+    "candidate_observable_classes_not_yet_selected": [
+      "INVERSE_SQUARE_OR_FIFTH_FORCE_RANGE_TEST",
+      "SOLAR_SYSTEM_WEAK_FIELD_TEST"
+    ],
+    "dataset_selected_now": false,
+    "execution_authorized": false,
+    "independent_packet_review_required": true,
+    "numerical_alpha_or_mass_bound_computed_now": false,
+    "observable_class_cap": 2,
+    "required_obligations": [
+      "exact alpha-mass-range and SI convention map",
+      "accepted Yukawa coefficient and source-domain verification",
+      "at most two independent observable classes",
+      "primary-source data identity and custody",
+      "units uncertainties nuisance parameters and covariance",
+      "likelihood or exclusion rule frozen before execution",
+      "Einstein and infinite-mass controls",
+      "one bounded execution followed by independent result review"
+    ],
+    "status": "COMPARISON_PHENOMENOLOGY_PREPARATION_ONLY"
+  },
+  "selection_policy": {
+    "candidate_count": 4,
+    "criterion_count": 8,
+    "criterion_scale": "0..5_RESEARCH_PRIORITY_NOT_TRUTH_PROBABILITY",
+    "maximum_weighted_score": 125,
+    "weights": {
+      "authority_clarity": 2,
+      "boundedness": 3,
+      "direct_use_of_accepted_scalar_result": 4,
+      "immediate_empirical_discriminability": 4,
+      "information_gain_about_branch_viability": 4,
+      "information_gain_about_missing_native_principle": 3,
+      "non_circularity": 3,
+      "stopping_rule_precision": 2
+    }
+  },
+  "selection_rationale": [
+    "directly tests the accepted unscreened finite-range scalar response",
+    "uses an exact mass-range map without selecting alpha",
+    "can determine whether the comparison branch has meaningful empirical room",
+    "produces a bounded constraint rather than a native theory claim",
+    "precedes postulate design with empirical exposure",
+    "is more scalar-relevant than stationary 0i orbital transport at accepted order"
+  ],
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 14,
+    "rows": [
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 81,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 99,
+        "variant": "omit_direct_use_of_accepted_scalar_result"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 81,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 99,
+        "variant": "omit_immediate_empirical_discriminability"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 85,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 99,
+        "variant": "omit_information_gain_about_branch_viability"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 94,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 110,
+        "variant": "omit_information_gain_about_missing_native_principle"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 82,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 104,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 82,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 104,
+        "variant": "omit_non_circularity"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 87,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 109,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 87,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 109,
+        "variant": "omit_stopping_rule_precision"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 93,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 114,
+        "variant": "direct_use_of_accepted_scalar_result_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 101,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 124,
+        "variant": "direct_use_of_accepted_scalar_result_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 93,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 114,
+        "variant": "immediate_empirical_discriminability_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 101,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 124,
+        "variant": "immediate_empirical_discriminability_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 94,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 114,
+        "variant": "information_gain_about_branch_viability_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 100,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 124,
+        "variant": "information_gain_about_branch_viability_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 96,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 116,
+        "variant": "information_gain_about_missing_native_principle_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 98,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 122,
+        "variant": "information_gain_about_missing_native_principle_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 92,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 114,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 102,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 124,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 92,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 114,
+        "variant": "non_circularity_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 102,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 124,
+        "variant": "non_circularity_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 92,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 114,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 102,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 124,
+        "variant": "authority_clarity_+1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 92,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 114,
+        "variant": "stopping_rule_precision_-1"
+      },
+      {
+        "runner_up_candidate_id": "SUPPLIED_0I_TO_ORBIT_COMPARATOR",
+        "runner_up_score": 102,
+        "selected_candidate_id": "BOUND_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_PHENOMENOLOGY",
+        "selected_score": 124,
+        "variant": "stopping_rule_precision_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 24
+  },
+  "target": "select_post_scalar_only_quadratic_gravity_viability_and_native_relevance_scientific_response_v0",
+  "verdict": "SELECTED_SCALAR_ONLY_RANGE_AND_WEAK_FIELD_CONSTRAINT_PACKET_PREPARATION"
+}

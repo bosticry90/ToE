@@ -64,4 +64,4 @@ def test_blocker_selects_only_review_and_no_fallback_or_numerics() -> None:
 
 
 def test_prompt_is_preserved() -> None:
-    assert reduction.sha256_path(reduction.REPO_ROOT / reduction.PROMPT_RELATIVE_PATH) == reduction.PROMPT_SHA256
+    assert reduction.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

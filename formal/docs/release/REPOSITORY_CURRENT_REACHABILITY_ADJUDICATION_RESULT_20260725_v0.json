@@ -1,0 +1,81 @@
+{
+  "schema_id": "REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T05:52:00Z",
+  "status": "CURRENT_REACHABILITY_ADJUDICATION_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_base": {
+    "commit": "43ce70246dea33ae691b7f1506e1d10af963e3e3",
+    "staging_repair_review": "formal/docs/release/REPOSITORY_PILLAR_V1_STAGING_IDENTITY_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0.json"
+  },
+  "implementation": {
+    "commit": "12ef90d238ef11be04774c2b22619ac33b1e1aef",
+    "tree": "02c3dacff6a4eed2a0953a8df2c5eaa8acced09a",
+    "tool": {
+      "path": "formal/python/tools/recovery_current_reachability_adjudication.py",
+      "sha256": "760d2a3c7aa6351c4ede95210ff7b52d22d4d4d13f1b8bca2f3629c20b8264aa"
+    }
+  },
+  "authorization": {
+    "selection": {
+      "path": "formal/docs/release/CURRENT_RECOVERY_CURRENT_REACHABILITY_ADJUDICATION_SELECTION_20260725_v0.json",
+      "sha256": "089d8dfb390c5b44283d17917410be27d8bcd47c8c3870f30dbf3698b7a7732f"
+    },
+    "packet": {
+      "path": "formal/docs/release/REPOSITORY_CURRENT_REACHABILITY_ADJUDICATION_PACKET_20260725_v0.json",
+      "sha256": "b059ef2437b610d81cab3cba84ac319c2ea8af5ad9512c97ac481602504bb9df"
+    },
+    "execution_count_consumed": 1,
+    "successor_authority": "NONE"
+  },
+  "evidence": {
+    "authority_roots": {
+      "path": "formal/docs/release/CURRENT_AUTHORITY_REACHABILITY_ROOTS_20260725_v0.json",
+      "sha256": "6b6cbefae93dde6044fa2e7fec58c9f62a2a4fcad72a757a86506cc3218652c2"
+    },
+    "ledger": {
+      "path": "formal/output/validation_profiles/CURRENT_REACHABILITY_ADJUDICATION_LEDGER_20260725_v0.json",
+      "sha256": "9ab56e681756614dd8141a9ead69d864ac25702a86ea81c058827867bf6229eb",
+      "rows": 126
+    }
+  },
+  "adjudication": {
+    "unknown_current_reachability_before": 102,
+    "previously_heuristic_current_nonpassing_reconsidered": 24,
+    "current_repair_required": 4,
+    "historical_quarantine_candidates": 89,
+    "unratified_post_registry_quarantine_candidates": 33,
+    "unknown_current_reachability_after": 0,
+    "current_repair_obligations": [
+      "NONPASSING-00145",
+      "NONPASSING-00147",
+      "NONPASSING-02535",
+      "NONPASSING-09138"
+    ]
+  },
+  "independent_detached_probe": {
+    "checkout": "current-reachability-adjudication-review-v0",
+    "head": "12ef90d238ef11be04774c2b22619ac33b1e1aef",
+    "tree": "02c3dacff6a4eed2a0953a8df2c5eaa8acced09a",
+    "ledger_check": "PASS",
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "errors": 0,
+    "checkout_after": "CLEAN"
+  },
+  "boundaries": {
+    "profile_membership_changed": false,
+    "historical_isolation_proven": false,
+    "current_roots_repaired": 0,
+    "tests_modified": 0,
+    "artifacts_regenerated": 0,
+    "registry_or_v2_changed": 0,
+    "scientific_content_changed": 0,
+    "lean_activity": 0,
+    "automatic_successor": false
+  },
+  "terminal_outcome": "CURRENT_REACHABILITY_ADJUDICATION_COMPLETE_FOUR_CURRENT_REPAIRS_REQUIRED",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_REACHABILITY_CLASSIFICATION_ONLY"
+}

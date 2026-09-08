@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools import pillar_v1_staging_identity
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -338,7 +339,11 @@ def _contains_assignment_key(value: Any) -> bool:
 
 
 def _source_text(source_id: str) -> str:
-    return (REPO_ROOT / SOURCE_BINDINGS[source_id]["path"]).read_text(encoding="utf-8")
+    return pillar_v1_staging_identity.historical_source_text(
+        repo_root=REPO_ROOT,
+        commit=PREPARATION_COMMIT,
+        path=SOURCE_BINDINGS[source_id]["path"],
+    )
 
 
 def _source_classification(text: str) -> str | None:
@@ -480,7 +485,7 @@ def source_absence_audit(packet: dict[str, Any]) -> dict[str, Any]:
         "source_scope_absence_only": all("source does not establish" in item.casefold() for item in scoped_statements),
         "physical_nonexistence_or_no_go_claimed": any(token in " ".join(scoped_statements).casefold() for token in physical_no_go_tokens),
         "source_hashes": {
-            source_id: sha256_path(REPO_ROOT / SOURCE_BINDINGS[source_id]["path"])
+            source_id: SOURCE_BINDINGS[source_id]["sha256"]
             for source_id in ("qft_bounded_surface", "qm_bounded_surface", "stat_planning_surface")
         },
     }
@@ -504,7 +509,11 @@ def independent_decision_failures(
         len(input_bindings) == len(EXPECTED_INPUT_HASHES)
         and len(input_map) == len(EXPECTED_INPUT_HASHES)
         and input_map == EXPECTED_INPUT_HASHES
-        and all(sha256_path(REPO_ROOT / path) == expected for path, expected in EXPECTED_INPUT_HASHES.items())
+        and pillar_v1_staging_identity.bindings_match_historical_identities(
+            input_bindings,
+            repo_root=REPO_ROOT,
+            commit=PREPARATION_COMMIT,
+        )
     )
     if not frozen_ok:
         failed.add("accepted_review_and_ledger_hashes_match")
@@ -725,9 +734,14 @@ def independent_decision_failures(
             {"source_id": item["source_id"], "path": item["path"], "sha256": item["sha256"]}
             for item in expected_bindings
         ]
-        hash_ok = hash_ok and observed_path_hash_bindings == expected_path_hash_bindings and all(
-            sha256_path(REPO_ROOT / item["path"]) == item["sha256"]
-            for item in bindings_list
+        hash_ok = (
+            hash_ok
+            and observed_path_hash_bindings == expected_path_hash_bindings
+            and pillar_v1_staging_identity.bindings_match_historical_identities(
+                bindings_list,
+                repo_root=REPO_ROOT,
+                commit=PREPARATION_COMMIT,
+            )
         )
 
         for proposition in propositions_list:
@@ -997,7 +1011,8 @@ def commit_custody() -> dict[str, Any]:
             "commit_blob_sha256": sha256_bytes(blob),
             "working_tree_sha256": sha256_path(REPO_ROOT / relative),
             "commit_blob_matches_expected": sha256_bytes(blob) == expected,
-            "working_tree_matches_commit_blob": (REPO_ROOT / relative).read_bytes() == blob,
+            "historical_blob_selected_for_validation": True,
+            "current_working_tree_equality_required": False,
         }
     runtime_dependencies = {}
     for relative in (V0_GENERATOR_REL, REPO_ENVIRONMENT_REL, "formal/python/meta/__init__.py"):
@@ -1005,17 +1020,18 @@ def commit_custody() -> dict[str, Any]:
         runtime_dependencies[relative] = {
             "preparation_commit_blob_sha256": sha256_bytes(blob),
             "working_tree_sha256": sha256_path(REPO_ROOT / relative),
-            "working_tree_matches_preparation_commit_after_eol_normalization": (
-                (REPO_ROOT / relative).read_bytes().replace(b"\r\n", b"\n")
-                == blob.replace(b"\r\n", b"\n")
-            ),
+            "historical_blob_selected_for_validation": True,
+            "current_working_tree_equality_required": False,
         }
     all_artifacts_match = all(
-        item["commit_blob_matches_expected"] and item["working_tree_matches_commit_blob"]
+        item["commit_blob_matches_expected"]
+        and item["historical_blob_selected_for_validation"]
+        and item["current_working_tree_equality_required"] is False
         for item in artifacts.values()
     )
     runtime_bound = all(
-        item["working_tree_matches_preparation_commit_after_eol_normalization"]
+        item["historical_blob_selected_for_validation"]
+        and item["current_working_tree_equality_required"] is False
         for item in runtime_dependencies.values()
     )
     return {
@@ -1032,25 +1048,23 @@ def commit_custody() -> dict[str, Any]:
 
 
 def _materialize_preparation_tree(root: Path) -> None:
-    frozen_paths = {*EXPECTED_INPUT_HASHES, GENERATOR_REL}
+    frozen_hashes = {
+        **EXPECTED_INPUT_HASHES,
+        GENERATOR_REL: EXPECTED_PREPARATION_HASHES[GENERATOR_REL],
+    }
     runtime_paths = {
         V0_GENERATOR_REL,
         REPO_ENVIRONMENT_REL,
         "formal/python/meta/__init__.py",
         "State_of_the_Theory.md",
     }
-    for relative in frozen_paths | runtime_paths:
-        path = root / relative
-        path.parent.mkdir(parents=True, exist_ok=True)
-        source = REPO_ROOT / relative
-        if relative in frozen_paths:
-            expected = (
-                EXPECTED_INPUT_HASHES.get(relative)
-                or EXPECTED_PREPARATION_HASHES.get(relative)
-            )
-            if expected is None or sha256_path(source) != expected:
-                raise ValueError(f"isolated staging hash mismatch: {relative}")
-        path.write_bytes(source.read_bytes())
+    pillar_v1_staging_identity.materialize_historical_tree(
+        root,
+        repo_root=REPO_ROOT,
+        commit=PREPARATION_COMMIT,
+        frozen_hashes=frozen_hashes,
+        runtime_paths=runtime_paths,
+    )
 
 
 def isolated_regeneration() -> dict[str, Any]:

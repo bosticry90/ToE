@@ -1,0 +1,72 @@
+{
+  "schema_id": "EXTERNAL_RELATED_WORK_AND_METHODS_INTAKE_20260717_v0",
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "status": "PREPARED_NONLIVE_NONCLAIM",
+  "registered_action_count": 5,
+  "new_active_lane_count": 0,
+  "theorem_discharge_count": 0,
+  "scientific_status_change_count": 0,
+  "artifacts": {
+    "related_work_and_benchmarks": "formal/docs/lanes/EXTERNAL_RELATED_WORK_AND_BENCHMARK_INTAKE_20260717_v0.md",
+    "ai_theorem_sprint_protocol": "formal/docs/paper/AI_THEOREM_SPRINT_PROTOCOL_v0.md",
+    "future_specialized_methods_registry": "formal/docs/paper/FUTURE_SPECIALIZED_METHODS_REGISTRY_v0.md"
+  },
+  "registered_actions": [
+    {
+      "action_id": "REGISTER_FLIBE_FRAGMENTATION_COMPUTATIONAL_SEAM_CASE_STUDY",
+      "entry_id": "COMPUTATIONAL-SEAM-FLIBE-FRAGMENTATION-CASE-STUDY",
+      "status": "RELATED_WORK_CASE_STUDY_NONCLAIM",
+      "source": "https://arxiv.org/abs/2606.30402"
+    },
+    {
+      "action_id": "ADOPT_BOUNDED_AI_THEOREM_SPRINT_PROTOCOL",
+      "entry_id": "AI_THEOREM_SPRINT_PROTOCOL_v0",
+      "status": "AVAILABLE_NONLIVE_METHOD_PROTOCOL",
+      "source": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_prompt.pdf"
+    },
+    {
+      "action_id": "REGISTER_GR_WEAK_ROTATING_SOURCE_BENCHMARK",
+      "entry_id": "GR-WEAK-ROTATING-SOURCE-BENCHMARK",
+      "status": "DORMANT_UNTIL_GR_LANE_INTENTIONALLY_SELECTED",
+      "source": "https://www.nature.com/articles/s41586-026-10715-0"
+    },
+    {
+      "action_id": "REGISTER_QM_GEOMETRY_NONLINEAR_MECHANICAL_RESPONSE_BENCHMARK",
+      "entry_id": "QM-GEOMETRY-TO-NONLINEAR-MECHANICAL-RESPONSE",
+      "status": "DORMANT_UNTIL_QM_STAT_EFFECTIVE_MATTER_OR_NONLINEAR_RESPONSE_IS_SELECTED",
+      "source": "https://journals.aps.org/prl/abstract/10.1103/jg6l-gzfr"
+    },
+    {
+      "action_id": "REGISTER_ANALOG_FLOQUET_QUBO_SOLVER",
+      "entry_id": "ANALOG_FLOQUET_QUBO_SOLVER",
+      "status": "FUTURE_SPECIALIZED_TOOL_CANDIDATE",
+      "source": "https://journals.aps.org/prx/abstract/10.1103/kgfb-5g2w"
+    }
+  ],
+  "source_verification": {
+    "primary_source_count": 7,
+    "unverified_lean_project_claim_imported": false,
+    "external_proof_recorded_as_refereed": false,
+    "external_proof_recorded_as_independently_accepted": false
+  },
+  "preserved_boundaries": {
+    "toe_validated": false,
+    "ccft_validated": false,
+    "master_action_promoted": false,
+    "pillar_closed": false,
+    "seam_closed": false,
+    "blocker_moved": false,
+    "phase2_authorized": false,
+    "simulation_authorized": false,
+    "r13_reconciliation_reopened": false
+  },
+  "r13_posture": {
+    "reconciliation_lane_terminated": true,
+    "terminal_classification": "NOT_ASSIGNED_PRETERMINAL",
+    "H_A_through_H_E": "NOT_EVALUATED",
+    "root_mechanism": "UNRESOLVED_EVIDENCE_SEMANTICS_BLOCK",
+    "robustness": "NUMERICALLY_BLOCKED"
+  },
+  "claim_ceiling": "Non-live external related-work, benchmark, theorem-sprint protocol, and future-method registration only. No ToE validation, CCFT validation, master-action promotion, theorem discharge, blocker movement, pillar or seam closure, Phase 2 authorization, simulation authorization, R13 reopen, or empirical support claim."
+}
+

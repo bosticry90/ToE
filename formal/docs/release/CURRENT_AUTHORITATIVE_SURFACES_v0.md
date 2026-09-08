@@ -10,6 +10,61 @@ Purpose:
 - Provide a human-facing index for the current live authority chain.
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
+Current scientific checkpoint (2026-07-30):
+- Scientific authority remains `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` `current_projection_v0.current_target`.
+- The exact scientific target is `prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0`.
+- Bounded program `QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0` attempt 1 is `CLOSED/PASSED` on semantic stage `STRICT_HARMONIC_GAUGE_JET_CONTRACT`.
+- Attempt 2 is `CLOSED/PASSED` on semantic stage `COMPONENT_EXPANDED_LINEARIZATION`; its immutable OPEN and CLOSE events bind the accepted component artifact and independent review.
+- Attempt 3 is `CLOSED/BLOCKED` on semantic stage `EXACT_FROZEN_COMPANION_OPERATOR`. Its immutable result proves that the Stage 2 leaves do not determine a unique generic off-constraint 128-state wave-slot map and that all ten trace charts retain dependent spin jets. The zero-repair rule prohibits Stages 4–5 and makes the role gate mandatory.
+- The mandatory role gate is accepted: `toe_role=REFERENCE_CONTROL_ONLY` and `control_result=UNRESOLVED_AFTER_BOUNDED_ATTEMPT`. Program B is terminal and no further quadratic target is authorized.
+- The current dependency surface applies two non-advancing qualifications: Stage 1 is `GAUGE_ATLAS_AND_JET_CONTRACT_STRUCTURALLY_PRESERVED` with `REWRITE_CONFLUENCE_NOT_EXECUTABLY_ESTABLISHED`; Stage 2 is `GENERIC_COMPONENT_DAG_STRUCTURALLY_COMPLETE` with `ALGEBRAIC_CERTIFICATION_INCOMPLETE`. Original bytes and terminal outcomes remain unchanged.
+- Program N Stage 1 attempt 1 is `CLOSED/BLOCKED`. No accepted CCFT-to-relativistic-real-scalar map exists; the `phi` and `chi` independent `Z2` gates are also unjustified. Zero repair requires immediate v0 closeout and prohibits Stages 2–5.
+- Program N v0 is now terminal after its mandatory closeout: one stage was attempted, four were never opened, no portal action or sandbox was constructed, and no automatic v1 is authorized.
+- The selected native-coherence program is installed with five stages, zero repairs, no subsidiary scientific targets, and a mandatory bounded exit.
+- Its separately authorized Stage 1 attempt is `CLOSED/PASSED` at `CONTROLLED_COHERENCE_CLAIM_INVENTORY`. The accepted source-bound inventory has 13 claim records and six preserved conflict classes.
+- Stage 2 is `CLOSED/BLOCKED` at `COHERENCE_OPERATIONAL_DEFINITION_TEST`. The sole eligible claim, `COH-CLAIM-001`, lacks all nine required operational elements and is classified `COHERENCE_CLAIM_INSUFFICIENTLY_OPERATIONAL`.
+- The mandatory exit is complete. The program result is `EXISTING_COHERENCE_CLAIMS_INSUFFICIENTLY_DEFINED`; Stages 3–5 remain unattempted; no repair, substitute representation, calculation, native model, or automatic successor is authorized.
+- The closeout is now scope-qualified without reopening it: its 13 authorized sources were insufficient, while archive-wide and repository-wide evidence sufficiency remain untested. No CCFT validation or rejection follows.
+- A five-stage, zero-repair repository-wide native-hypothesis evidence-census program is installed under bounded governance but remains unopened. It has zero attempts, no Stage 1 authority, and no scientific output. A future separately authorized Stage 1 would use broad metadata discovery followed by provenance/relevance gates; installation itself adopts no archive material and selects no representation, action, seam, observable, or hypothesis.
+- The proposal explicitly binds `archive/ToE_Project` and `archive/ToE_Project_Starter_2025-09-24` as read-only Stage 1 inputs. Both are absent from the legacy 7,331-file archive index and therefore require canonical reindexing after separate installation and Stage 1 authority; their claims remain unadjudicated and no archive content is adopted here.
+- The installed immutable manifest preserves all prepared semantic-stage IDs and `close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0`. It freezes numerical deep-review/parser budgets, two-pass root mutation detection, deterministic selection and overflow disclosure, passive-content safety, committed-blob/local-byte identity separation, versioned index/cache rules, atomic CLOSE batching, lifecycle mappings, and post-census-only promotion. Exact ignore rules prevent wholesale staging of the two local roots and custody bundles. Installation generated no index/cache and executed no census.
+- Indexing/performance maintenance is complete on generated nonauthoritative inputs. The versioned scanner, cache invalidation, final hash verification, source-root mutation comparison, passive parser limits, link/reparse fail-closed handling, and deterministic eight-batch aggregation passed. `KNOWN_EXHAUSTIVE_FAILURES_DO_NOT_REACH_CENSUS_DEPENDENCIES` is established only as a bounded dependency-impact result; exhaustive Python passage is not established. Stage 1 remains unauthorized and unopened.
+- Exhaustive Python passage remains unestablished. The last reported exhaustive result is `14,739 passed, 147 failed, 10 errors, 598 skipped`; focused validation covers the current preparation and authority surfaces without converting that debt into a pass.
+- `formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean` and `formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean` are evaluated named mirrors and must equal the registry target.
+- Bounded reconciliation/replay was selected prospectively; the July 13–19 and post-recovery descendants remain preserved but not automatically adopted.
+- Phase A independently reproduced the physical spin-2 pencil `-beta (lambda^2 - 1)^2 I_2`; its two light-cone roots each have algebraic multiplicity four and geometric multiplicity two. The accepted conclusion is `GENERIC_STRONG_HYPERBOLICITY_REFUTED`.
+- The exact vacuum generalized-harmonic system has now been derived for `U=(g_mn,R,r_a,c_mna,S_mn)`, with `r_a=partial_a R` and `c_mna=partial_a g_mn`. Its trace/trace-free kinetic map has determinant `2 beta (3 alpha + beta)`, so the reduction is invertible exactly in the frozen generic principal sector.
+- Algebraic equivalence to the fourth-order metric equation is accepted only on the complete gauge, definition, trace, divergence, integrability, Hamiltonian, and momentum constraint surface. An arbitrary auxiliary solution is not an original metric solution.
+- The zero-addition off-constraint extension now has a finite homogeneous constraint hierarchy. Its normalized independent subsidiary pencil is `(1-lambda^2) I_69`, so that subsystem has a complete light-cone basis; translating its equality back to the metric formulation consumes one additional metric derivative.
+- The full adapted auxiliary pencil normalizes to `(1-lambda^2) I_64`, but the metric-equivalence grading is triangular and defective. At either light-cone root it has algebraic multiplicity 64, geometric multiplicity 50, and Jordan counts `(size 3,size 2,size 1)=(4,6,40)`. Eliminating the auxiliary spin-2 field recovers `-beta(1-lambda^2)^2 I_2`.
+- The accepted energy preparation ledgers every chain. The 14 missing eigenvectors split into 2 physical TT, 8 length-three reconstruction, and 4 non-TT length-two deficiencies. The equivalence-map shift is one derivative, but the frozen propagator loss remains unresolved between one and two.
+- The accepted pure-principal 128-state companion gives zero auxiliary loss, quadratic-frequency unrestricted metric-equivalence growth away from `2alpha+beta=0`, and linear-frequency physical TT growth. Its block-order graph has no positive return cycle, but that screen is not the exact generic background-jet subprincipal operator.
+- The exact-operator attempt supplies a complete placeholder-free Minkowski control matrix with 224 nonzero entries. It does not close the generic operator: `Q^H`, the tensor-box remainder, differentiated right-hand sides, the prescribed gauge-source jet, and the independent on-shell background jet remain unexpanded.
+- The component-linearization execution fails closed: the accepted metric-dependent `H(x,g)` source is only `C2`, but the differentiated metric block needs a third `H` jet; the generic rank-nine trace-free tangent chart and nonredundant on-shell substitution order are also unfrozen. The Minkowski control remains preserved but was not rederived from a generic form.
+- The strict-harmonic contract freezes `H=delta H=0`, all gauge-source jets through order three to zero, a ten-chart conditioned trace-free atlas, separate reduced `C3` and sufficient metric-equivalence `C6` ledgers, and a declared acyclic decreasing rewrite order. Complete overlap enumeration, confluence, unique normalization, and idempotence are not executably established.
+- The bounded Stage 2 result structurally closes a 3,950-node component dependency graph and records the `10+1+4+40+9=64` equation inventory in every trace chart. Its stored Minkowski-control relation is preserved, but entrywise generic-DAG specialization and the generic Bianchi, trace, divergence, and integrability identities were not independently recomputed.
+- The bounded Stage 3 result is `GENERIC_BACKGROUND_OPERATOR_NOT_CLOSED`. It preserves the Minkowski control, claims no generic operator or spectrum, creates no repair target, and advances only to the mandatory quadratic role gate.
+- Resolve non-scientific maintenance history through `formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_POINTER_v0.json`, which points to completed v4. Its scientific-target field confirms that the canonical-text maintenance cycle did not rotate scientific authority.
+- Older maintenance references below are retained checkpoint history and do not override the current maintenance pointer.
+
+Current live control state:
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+PREVIOUS_LIVE_NEXT_TARGET_v0: close_toe_native_coherence_ontology_and_representation_v0_after_bounded_result_v0
+ACTIVE_LANE_v0: prepare_toe_repository_wide_native_hypothesis_evidence_census_bounded_program_v0
+CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
+CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeRepositoryWideNativeHypothesisEvidenceCensusBoundedProgramPreparationResultReview.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_20260730_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_BOUNDED_PROGRAM_PROPOSAL_PREPARED
+CURRENT_LIVE_TARGET_STRICT_OUTCOME_v0: PROPOSAL_ONLY_NOT_INSTALLED_AUTHORIZED_OR_OPEN_NO_ARCHIVE_ADOPTION_HYPOTHESIS_PROMOTION_FIELD_ACTION_SEAM_OBSERVABLE_OR_AUTOMATIC_SUCCESSOR
+CURRENT_LIVE_TARGET_KIND_v0: toe_repository_wide_native_hypothesis_evidence_census_bounded_program_preparation_v0
+CURRENT_BOUNDED_PROGRAM_ID_v0: NONE_NEW_PROGRAM_INSTALLED
+CURRENT_BOUNDED_PROGRAM_STATE_v0: NONE_NEW_PROGRAM_INSTALLED
+CURRENT_TARGET_PHASE_v0: PROGRAM_PROPOSAL_PREPARED_AWAITING_SEPARATE_AUTHORITY
+CURRENT_BOUNDED_ATTEMPT_NUMBER_v0: 0
+LAST_CLOSED_BOUNDED_SEMANTIC_STAGE_v0: COHERENCE_OPERATIONAL_DEFINITION_TEST
+LAST_BOUNDED_TERMINAL_RESULT_v0: BLOCKED
+
 Current integrity corrections:
 - `formal/docs/release/SCALAR_ROUTE_SUBMISSION_CHECKPOINT_REFERENTIAL_INTEGRITY_CORRECTION_20260711_v0.json`
 - The candidate, readiness, and downstream external-package checkpoints remain byte-preserved. Their missing contribution-classification dependency is not treated as complete, and no submission or publication authorization follows from those historical readiness tokens.

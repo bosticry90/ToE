@@ -1,0 +1,1940 @@
+{
+  "schema_id": "STRICT_MODEL1_T_FIRST_R2_ACTIVE_PHASE3A_EXECUTABLE_RENORMALIZABLE_ACTION_AND_FEYNMAN_RULE_CONTRACT_PASS_0030_v0",
+  "pass_id": "PASS_0030_PHASE3A_EXECUTABLE_RENORMALIZABLE_ACTION_AND_FEYNMAN_RULE_CONTRACT",
+  "date": "2026-08-24",
+  "status": "THE_UNBROKEN_EIGHT_STRATUM_RENORMALIZABLE_MODEL1_ACTION_NOW_HAS_AN_EXECUTABLE_GAUGE_KINETIC_COVARIANT_DERIVATIVE_BACKGROUND_GAUGE_FIXING_GHOST_YUKAWA_AND_SCALAR_SOURCE_CONTRACT;_ALL_PHASE1_MATTER_GAUGE_SIGNATURES_HAVE_ACTION_DERIVED_RULES_AND_THE_YD_ORIENTATION_DEFECT_IS_EXPLICITLY_SUPERSEDED;_NO_LOOP_IS_EVALUATED_IN_THIS_PASS",
+  "authority": {
+    "executable_renormalizable_action_contract_complete": true,
+    "feynman_rule_contract_complete_for_the_four_control_inputs": true,
+    "phase3a_four_control_uv_replay": "AUTHORIZED_NEXT_NOT_EXECUTED_HERE",
+    "bulk_phase3_rollout_authorized": false,
+    "single_insertion_one_loop_counterterm_space_closed": false,
+    "D6_basis_one_loop_closed": false,
+    "ADM_authorized": false,
+    "double_d5_to_d6_closure": "BLOCKED",
+    "kernel": "OPEN",
+    "kernel_provenance": "UNDECIDED"
+  },
+  "frozen_inputs": [
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_phase3a_regulated_integrand_contract_and_control_replay_pass_0029_v0.json",
+      "bytes": 17740,
+      "sha256": "723a529d1a7b3c8f66b1a6c069105b4fd98c5c1aa0efb9807297cd04df52c6bb",
+      "role": "FAIL_CLOSED_PREDECESSOR"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_one_loop_renormalization_convention_contract_phase_0_v0.json",
+      "bytes": 17100,
+      "sha256": "5efee72ec111483c022af97be30ae63e5235b3feda5e986c9172412522612269",
+      "role": "REGULATED_SCHEME_CONTRACT"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_single_insertion_selection_rule_connectivity_phase_1_v0.json",
+      "bytes": 6393184,
+      "sha256": "953a43022f521f4f4e1eca5bfa720bbfcdd290b8f47d1921977a6f033c2e3edf",
+      "role": "STRUCTURAL_VERTEX_SIGNATURES"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d5_eom_reduction_pass_0004_v0.json",
+      "bytes": 9994,
+      "sha256": "e6965b1ce7e4a1e5f2ea17574476722261f7432f371d8487e794cd7634e96b8f",
+      "role": "CANONICAL_COMPONENT_YUKAWA_ORIENTATION_AND_EOM"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_renormalizable_interaction_census_and_eom_closure_pass_0011_v0.json",
+      "bytes": 20728,
+      "sha256": "3f9b764f33af66c4be6d0193ee22dd447cf19a71484fd78bd141d3545e64ee12",
+      "role": "RENORMALIZABLE_INTERACTION_DOMAIN"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_parent_to_component_scalar_projector_pass_0012_v0.json",
+      "bytes": 15084,
+      "sha256": "ff046e5839b2beba1aab6174a04d9398da2f0c5054847dff2ff0eaa3620108d8",
+      "role": "EXACT_NINETEEN_INVARIANT_COMPONENT_POTENTIAL"
+    },
+    {
+      "path": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_gut_entry_scalar_threshold_matching_pass_0014_v0.json",
+      "bytes": 19152,
+      "sha256": "9ad1679ed43abecc5061fafae230eb0047febae659ee92351253dee35aaa5021",
+      "role": "TREE_LEVEL_WILSONIAN_SCALAR_DICTIONARY"
+    },
+    {
+      "path": "formal/python/toe/certification/strict_model1_d6_component_cg_v0.py",
+      "bytes": 34130,
+      "sha256": "27ea0e37f042eb3861c26c59074827e15cbd608a9295956a6937ed9857e545ca",
+      "role": "EXACT_GENERATOR_AND_COMPONENT_TENSOR_IMPLEMENTATION"
+    }
+  ],
+  "space_time_and_fourier_contract": {
+    "metric": "diag(+1,-1,-1,-1)_WITH_d_DIMENSIONAL_BMHV_CONTINUATION",
+    "fourier_transform": "Phi(x)=Integral[d^d p/(2*pi)^d]*exp(-i*p*x)*Phi(p)",
+    "derivative_rule": "partial_mu_Phi_TO_-i*p_mu*Phi",
+    "all_vertex_momenta": "INCOMING_AND_SUM_TO_ZERO",
+    "path_integral_phase": "exp(+i*S)",
+    "covariant_derivative": "D_mu=partial_mu-i*g3*G_mu^a*T3_R^a-i*g2*W_mu^I*T2_R^I-i*g1*Y_R*B_mu",
+    "field_strength": "F_a,munu=partial_mu*A_a,nu-partial_nu*A_a,mu+g_a*f_a^{ABC}*A_a,mu^B*A_a,nu^C"
+  },
+  "field_registry": [
+    {
+      "field": "qL",
+      "kind": "LEFT_WEYL",
+      "su3": "FUNDAMENTAL_3",
+      "su2": "FUNDAMENTAL_2",
+      "hypercharge": "1/6",
+      "conditional": null
+    },
+    {
+      "field": "uR",
+      "kind": "RIGHT_WEYL",
+      "su3": "FUNDAMENTAL_3",
+      "su2": "SINGLET_1",
+      "hypercharge": "2/3",
+      "conditional": null
+    },
+    {
+      "field": "dR",
+      "kind": "RIGHT_WEYL",
+      "su3": "FUNDAMENTAL_3",
+      "su2": "SINGLET_1",
+      "hypercharge": "-1/3",
+      "conditional": null
+    },
+    {
+      "field": "lL",
+      "kind": "LEFT_WEYL",
+      "su3": "SINGLET_1",
+      "su2": "FUNDAMENTAL_2",
+      "hypercharge": "-1/2",
+      "conditional": null
+    },
+    {
+      "field": "eR",
+      "kind": "RIGHT_WEYL",
+      "su3": "SINGLET_1",
+      "su2": "SINGLET_1",
+      "hypercharge": "-1",
+      "conditional": null
+    },
+    {
+      "field": "H",
+      "kind": "COMPLEX_SCALAR",
+      "su3": "SINGLET_1",
+      "su2": "FUNDAMENTAL_2",
+      "hypercharge": "1/2",
+      "conditional": null
+    },
+    {
+      "field": "X",
+      "kind": "COMPLEX_SCALAR",
+      "su3": "FUNDAMENTAL_3",
+      "su2": "FUNDAMENTAL_2",
+      "hypercharge": "1/6",
+      "conditional": null
+    },
+    {
+      "field": "rho3",
+      "kind": "REAL_SCALAR",
+      "su3": "SINGLET_1",
+      "su2": "ADJOINT_3",
+      "hypercharge": "0",
+      "conditional": "rho3"
+    },
+    {
+      "field": "rho8",
+      "kind": "REAL_SCALAR",
+      "su3": "ADJOINT_8",
+      "su2": "SINGLET_1",
+      "hypercharge": "0",
+      "conditional": "rho8"
+    },
+    {
+      "field": "Delta",
+      "kind": "COMPLEX_SCALAR",
+      "su3": "SINGLET_1",
+      "su2": "ADJOINT_3",
+      "hypercharge": "1",
+      "conditional": "Delta"
+    }
+  ],
+  "generator_registry": {
+    "normalization": "Tr(T_R^a*T_R^b)=delta_ab/2_IN_THE_FUNDAMENTAL",
+    "commutator": "[T^a,T^b]=i*f^{abc}*T^c",
+    "SU3_fundamental": [
+      [
+        [
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "-I/2",
+          "0"
+        ],
+        [
+          "I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "-I/2"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "I/2",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "1/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-I/2"
+        ],
+        [
+          "0",
+          "I/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "sqrt(3)/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "sqrt(3)/6",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-sqrt(3)/3"
+        ]
+      ]
+    ],
+    "SU3_adjoint": [
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-I",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "I",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "I",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-I",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "-I",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "I",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(3)*I/2"
+        ],
+        [
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "sqrt(3)*I/2",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "sqrt(3)*I/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-sqrt(3)*I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0"
+        ],
+        [
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(3)*I/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "sqrt(3)*I/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "I/2",
+          "0",
+          "0"
+        ],
+        [
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-I/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "sqrt(3)*I/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(3)*I/2",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(3)*I/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "sqrt(3)*I/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(3)*I/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "sqrt(3)*I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    ],
+    "SU2_fundamental": [
+      [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "-I/2"
+        ],
+        [
+          "I/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "-1/2"
+        ]
+      ]
+    ],
+    "SU2_adjoint": [
+      [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-I"
+        ],
+        [
+          "0",
+          "I",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "I"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-I",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "-I",
+          "0"
+        ],
+        [
+          "I",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    ],
+    "U1": "Y_R*identity_R_WITH_THE_FIELD_HYPERCHARGES_IN_FIELD_REGISTRY",
+    "fundamental_and_adjoint_lie_algebras_verified_exactly": true
+  },
+  "executable_action": {
+    "gauge_kinetic": "L_gauge=-1/4*G^a_munu*G_a^munu-1/4*W^I_munu*W_I^munu-1/4*B_munu*B^munu",
+    "fermion_kinetic": "sum_f i*bar(f)*gamma^mu*D_mu*f",
+    "complex_scalar_kinetic": "(D_mu*H)dag*(D^mu*H)+(D_mu*X)dag*(D^mu*X)+(D_mu*Delta)dag*(D^mu*Delta)_WHEN_ACTIVE",
+    "real_scalar_kinetic": "1/2*(D_mu*rho3)^I*(D^mu*rho3)^I+1/2*(D_mu*rho8)^a*(D^mu*rho8)^a_WHEN_ACTIVE",
+    "yukawa_terms": [
+      {
+        "action_term_id": "YUK-DOWN",
+        "lagrangian": "-bar(q_L)_p^i*(Y_d)_{pr}*H_i*d_R,r+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "dR",
+            "H",
+            "barqL"
+          ],
+          "factor": "-i*(Y_d)_{pr}"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "bardR",
+            "Hdag",
+            "qL"
+          ],
+          "factor": "-i*(Y_d_dagger)_{rp}"
+        }
+      },
+      {
+        "action_term_id": "YUK-UP",
+        "lagrangian": "-bar(q_L)_p^i*(Y_u)_{pr}*tilde(H)_i*u_R,r+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "uR",
+            "Hdag",
+            "barqL"
+          ],
+          "factor": "-i*(Y_u)_{pr}*epsilon_weak"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "baruR",
+            "H",
+            "qL"
+          ],
+          "factor": "-i*(Y_u_dagger)_{rp}*epsilon_weak"
+        }
+      },
+      {
+        "action_term_id": "YUK-LEPTON",
+        "lagrangian": "-bar(l_L)_p^i*(Y_e)_{pr}*H_i*e_R,r+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "eR",
+            "H",
+            "barlL"
+          ],
+          "factor": "-i*(Y_e)_{pr}"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "bareR",
+            "Hdag",
+            "lL"
+          ],
+          "factor": "-i*(Y_e_dagger)_{rp}"
+        }
+      },
+      {
+        "action_term_id": "YUK-X-DL",
+        "lagrangian": "-bar(d_R)_p*(Y_X)_{pt}*X^i*epsilon_ij*l_L,t^j+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "bardR",
+            "X",
+            "lL"
+          ],
+          "factor": "-i*(Y_X)_{pt}*epsilon_ij"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "dR",
+            "Xdag",
+            "barlL"
+          ],
+          "factor": "-i*(Y_X_dagger)_{tp}*epsilon^ij"
+        }
+      },
+      {
+        "action_term_id": "YUK-DELTA-LL",
+        "lagrangian": "-(1/2)*l_L,p^T*C*(Y_Delta)_{pt}*i_sigma2*Delta*l_L,t+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "lL",
+            "lL",
+            "Delta"
+          ],
+          "factor": "-i*Y_Delta*SYMMETRIC_WEAK_TRIPLET_TENSOR"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "barlL",
+            "barlL",
+            "Deltadag"
+          ],
+          "factor": "-i*Y_Delta_dagger*HC_TRIPLET_TENSOR"
+        }
+      }
+    ],
+    "scalar_potential": {
+      "lagrangian_sign": "L_scalar_interaction=-V_eff",
+      "direct_component_action": [
+        {
+          "parent_invariant_id": "V-SIGMA-MASS",
+          "source_weight": "-muSigma2/2",
+          "exact_retained_projection": "30*n^2+tr(A^2)+tr(B^2)"
+        },
+        {
+          "parent_invariant_id": "V-SIGMA-CUBIC",
+          "source_weight": "cSigma/3",
+          "exact_retained_projection": "-30*n^3+6*n*tr(A^2)-9*n*tr(B^2)+tr(A^3)"
+        },
+        {
+          "parent_invariant_id": "V-SIGMA-Q4-1",
+          "source_weight": "aSigma/4",
+          "exact_retained_projection": "(30*n^2+tr(A^2)+tr(B^2))^2"
+        },
+        {
+          "parent_invariant_id": "V-SIGMA-Q4-2",
+          "source_weight": "bSigma/2",
+          "exact_retained_projection": "210*n^4+24*n^2*tr(A^2)+54*n^2*tr(B^2)+8*n*tr(A^3)+tr(A^4)+tr(B^4)"
+        },
+        {
+          "parent_invariant_id": "V-PSI-MASS",
+          "source_weight": "-muPsi2/2",
+          "exact_retained_projection": "Hdag*H"
+        },
+        {
+          "parent_invariant_id": "V-PSI-Q4",
+          "source_weight": "aPsi/4",
+          "exact_retained_projection": "(Hdag*H)^2"
+        },
+        {
+          "parent_invariant_id": "V-PHI-MASS",
+          "source_weight": "-muPhi2/2",
+          "exact_retained_projection": "tr(Xdag*X)+tr(Ddag*D)"
+        },
+        {
+          "parent_invariant_id": "V-PHI-Q4-1",
+          "source_weight": "aPhi/4",
+          "exact_retained_projection": "(tr(Xdag*X)+tr(Ddag*D))^2"
+        },
+        {
+          "parent_invariant_id": "V-PHI-Q4-2",
+          "source_weight": "bPhi/2",
+          "exact_retained_projection": "1/4*tr((Xstar*XT)^2)+1/4*tr((Xdag*X)^2)+tr(Xstar*D*Ddag*XT)+tr(Xdag*X*Ddag*D)+tr((Ddag*D)^2)"
+        },
+        {
+          "parent_invariant_id": "V-C1",
+          "source_weight": "c1",
+          "exact_retained_projection": "-3*n*(Hdag*H)+Hdag*B*H"
+        },
+        {
+          "parent_invariant_id": "V-C2",
+          "source_weight": "c2",
+          "exact_retained_projection": "-n/2*tr(Xdag*X)-3*n*tr(Ddag*D)+1/2*tr(Xdag*A*X)+1/2*tr(Xdag*X*BT)+tr(Ddag*B*D)"
+        },
+        {
+          "parent_invariant_id": "V-C3",
+          "source_weight": "c3",
+          "exact_retained_projection": "HstarT*D*Hstar+h.c."
+        },
+        {
+          "parent_invariant_id": "V-B1",
+          "source_weight": "b1",
+          "exact_retained_projection": "(tr(Xdag*X)+tr(Ddag*D))*(30*n^2+tr(A^2)+tr(B^2))"
+        },
+        {
+          "parent_invariant_id": "V-B2",
+          "source_weight": "b2",
+          "exact_retained_projection": "(Hdag*H)*(30*n^2+tr(A^2)+tr(B^2))"
+        },
+        {
+          "parent_invariant_id": "V-B3",
+          "source_weight": "b3",
+          "exact_retained_projection": "(Hdag*H)*(tr(Xdag*X)+tr(Ddag*D))"
+        },
+        {
+          "parent_invariant_id": "V-B4",
+          "source_weight": "b4",
+          "exact_retained_projection": "9*n^2*(Hdag*H)-6*n*(Hdag*B*H)+Hdag*B^2*H"
+        },
+        {
+          "parent_invariant_id": "V-B5",
+          "source_weight": "b5",
+          "exact_retained_projection": "Hdag*(1/2*XT*Xstar+D*Ddag)*H"
+        },
+        {
+          "parent_invariant_id": "V-B6",
+          "source_weight": "b6",
+          "exact_retained_projection": "13/2*n^2*tr(Xdag*X)+9*n^2*tr(Ddag*D)+2*n*tr(Xdag*A*X)-3*n*tr(Xdag*X*BT)-6*n*tr(Ddag*B*D)+1/2*tr(Xdag*A^2*X)+1/2*tr(Xdag*X*(B^2)T)+tr(Ddag*B^2*D)"
+        },
+        {
+          "parent_invariant_id": "V-B7",
+          "source_weight": "b7",
+          "exact_retained_projection": "-6*n^2*tr(Xdag*X)+9*n^2*tr(Ddag*D)-3*n*tr(Xdag*A*X)+2*n*tr(Xdag*X*BT)-3*n*(tr(Ddag*B*D)+tr(Ddag*D*BT))+tr(Xdag*A*X*BT)+tr(Ddag*B*D*BT)"
+        }
+      ],
+      "direct_action_definition": "V_direct=sum_a source_weight[a]*exact_retained_projection[a]",
+      "eight_exact_masks": [
+        {
+          "stratum_id": "SM_X_CORE",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [],
+          "exact_mask": {
+            "B": "SET_EXACTLY_TO_ZERO",
+            "A": "SET_EXACTLY_TO_ZERO",
+            "D": "SET_EXACTLY_TO_ZERO"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        },
+        {
+          "stratum_id": "SM_X_Delta",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [
+            "Delta"
+          ],
+          "exact_mask": {
+            "D": "KEEP",
+            "B": "SET_EXACTLY_TO_ZERO",
+            "A": "SET_EXACTLY_TO_ZERO"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        },
+        {
+          "stratum_id": "SM_X_rho3",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [
+            "rho3"
+          ],
+          "exact_mask": {
+            "B": "KEEP",
+            "A": "SET_EXACTLY_TO_ZERO",
+            "D": "SET_EXACTLY_TO_ZERO"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        },
+        {
+          "stratum_id": "SM_X_rho8",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [
+            "rho8"
+          ],
+          "exact_mask": {
+            "A": "KEEP",
+            "B": "SET_EXACTLY_TO_ZERO",
+            "D": "SET_EXACTLY_TO_ZERO"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        },
+        {
+          "stratum_id": "SM_X_rho3_Delta",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [
+            "rho3",
+            "Delta"
+          ],
+          "exact_mask": {
+            "B": "KEEP",
+            "D": "KEEP",
+            "A": "SET_EXACTLY_TO_ZERO"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        },
+        {
+          "stratum_id": "SM_X_rho3_rho8",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [
+            "rho3",
+            "rho8"
+          ],
+          "exact_mask": {
+            "A": "KEEP",
+            "B": "KEEP",
+            "D": "SET_EXACTLY_TO_ZERO"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        },
+        {
+          "stratum_id": "SM_X_rho8_Delta",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [
+            "rho8",
+            "Delta"
+          ],
+          "exact_mask": {
+            "A": "KEEP",
+            "D": "KEEP",
+            "B": "SET_EXACTLY_TO_ZERO"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        },
+        {
+          "stratum_id": "SM_X_rho3_rho8_Delta",
+          "mandatory_fields": [
+            "ALL_SM_FIELDS",
+            "H",
+            "X"
+          ],
+          "conditional_active_fields": [
+            "rho3",
+            "rho8",
+            "Delta"
+          ],
+          "exact_mask": {
+            "A": "KEEP",
+            "B": "KEEP",
+            "D": "KEEP"
+          },
+          "potential_definition": "apply_exact_mask_to_sum_over_19_source_weight_times_parent_projection",
+          "independently_recoded_potential": false
+        }
+      ],
+      "tree_level_entry_threshold_dictionary": {
+        "compact_definition": "V_entry_sigma=P_sigma(V_direct)+DeltaV_T+DeltaV_rho1_masked+DeltaV_conditional_removed_fields_from_pass_0013",
+        "T_shifted_component_class": "HX_CROSSED_PORTAL_QUARTIC_ONLY",
+        "rho1_shifted_component_classes": "ALL_SELF_AND_PAIRWISE_PORTAL_QUARTICS_OBTAINED_BY_EXPANDING_THE_SINGLE_PARENT_CORRELATED_K_d2_SQUARE",
+        "tree_level_mass_or_cubic_deltas_feeding_pass_0013": "ZERO_WITHIN_THIS_D_LE_4_SCALAR_SCOPE_BECAUSE_T_AND_RHO1_SOURCES_BEGIN_AT_LIGHT_DEGREE_TWO_AND_S_HAS_NO_SUCH_SOURCE",
+        "fake_independent_EFT_couplings_created": false,
+        "tree_level_renormalizable_scalar_dictionary_complete_within_authorized_scope": true,
+        "complete_Wilsonian_action_including_gauge_derivative_loop_and_higher_dimensional_terms": false
+      },
+      "all_scalar_rules_must_be_derived_from_these_rows": true
+    },
+    "mass_terms": "THE_QUADRATIC_ROWS_OF_THE_SAME_WILSONIAN_STRATUM_POTENTIAL_DEFINE_PROPAGATOR_MASSES;_UV_CONTROL_PACKETS_MAY_USE_THE_PHASE0_COMMON_AUXILIARY_MASS_ONLY_AS_DECLARED_IR_REARRANGEMENT"
+  },
+  "background_field_gauge_fixing_and_ghost_action": {
+    "split": "A_mu^a=bar_A_mu^a+a_mu^a_FOR_EACH_GAUGE_FACTOR",
+    "background_covariant_derivative": "bar_D_mu^{ab}=delta^{ab}*partial_mu+g*f^{acb}*bar_A_mu^c",
+    "gauge_fixing_function": "F^a=bar_D^mu_ab*a_mu^b",
+    "lagrangian": "L_gf=-sum_factor(F^a*F^a)/(2*xi_factor)",
+    "faddeev_popov": "L_ghost=-bar(c)^a*bar_D^mu_ab*D_mu^{bc}[bar_A+a]*c^c",
+    "abelian_ghost": "FREE_AND_DECOUPLED",
+    "goldstone_terms": "NONE_IN_THIS_UNBROKEN_ZERO_SCALAR_VEV_UV_EXTRACTION_SCOPE",
+    "brst_auxiliary_registry_status": "ZERO_ANTICIPATED_ROWS_REMAINS_PROVISIONAL_UNTIL_GAUGE_UV_REPLAY"
+  },
+  "propagator_registry": [
+    {
+      "id": "PROP-FERMION",
+      "rule": "+i*slash(k)/(k^2-m_f^2+i*0)",
+      "orientation": "FROM_fermion_TO_barfermion"
+    },
+    {
+      "id": "PROP-COMPLEX-SCALAR",
+      "rule": "+i*delta_R/(k^2-m_phi^2+i*0)",
+      "orientation": "FROM_phi_TO_phidag"
+    },
+    {
+      "id": "PROP-REAL-SCALAR",
+      "rule": "+i*delta_R/(k^2-m_rho^2+i*0)",
+      "orientation": "UNORIENTED_REAL_LINE"
+    },
+    {
+      "id": "PROP-QUANTUM-GAUGE",
+      "rule": "-i*delta_ab*(g_munu-(1-xi)*k_mu*k_nu/(k^2+i*0))/(k^2+i*0)",
+      "background_status": "QUANTUM_INTERNAL_FIELD"
+    },
+    {
+      "id": "PROP-GHOST",
+      "rule": "+i*delta_ab/(k^2+i*0)",
+      "closed_ghost_loop_sign": "MINUS_ONE"
+    }
+  ],
+  "feynman_rule_registry": {
+    "gauge_matter_three_point": [
+      {
+        "rule_id": "FR-qL-G1",
+        "source_action_term": "KINETIC-qL",
+        "functional_derivative_order": [
+          "barqL",
+          "qL",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*gamma^mu*T_1/6",
+        "generator_representation": "1/6",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-qL-G2",
+        "source_action_term": "KINETIC-qL",
+        "functional_derivative_order": [
+          "barqL",
+          "qL",
+          "G2"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g2*gamma^mu*T_FUNDAMENTAL_2",
+        "generator_representation": "FUNDAMENTAL_2",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-qL-G3",
+        "source_action_term": "KINETIC-qL",
+        "functional_derivative_order": [
+          "barqL",
+          "qL",
+          "G3"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g3*gamma^mu*T_FUNDAMENTAL_3",
+        "generator_representation": "FUNDAMENTAL_3",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-uR-G1",
+        "source_action_term": "KINETIC-uR",
+        "functional_derivative_order": [
+          "baruR",
+          "uR",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*gamma^mu*T_2/3",
+        "generator_representation": "2/3",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-uR-G3",
+        "source_action_term": "KINETIC-uR",
+        "functional_derivative_order": [
+          "baruR",
+          "uR",
+          "G3"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g3*gamma^mu*T_FUNDAMENTAL_3",
+        "generator_representation": "FUNDAMENTAL_3",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-dR-G1",
+        "source_action_term": "KINETIC-dR",
+        "functional_derivative_order": [
+          "bardR",
+          "dR",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*gamma^mu*T_-1/3",
+        "generator_representation": "-1/3",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-dR-G3",
+        "source_action_term": "KINETIC-dR",
+        "functional_derivative_order": [
+          "bardR",
+          "dR",
+          "G3"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g3*gamma^mu*T_FUNDAMENTAL_3",
+        "generator_representation": "FUNDAMENTAL_3",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-lL-G1",
+        "source_action_term": "KINETIC-lL",
+        "functional_derivative_order": [
+          "barlL",
+          "lL",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*gamma^mu*T_-1/2",
+        "generator_representation": "-1/2",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-lL-G2",
+        "source_action_term": "KINETIC-lL",
+        "functional_derivative_order": [
+          "barlL",
+          "lL",
+          "G2"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g2*gamma^mu*T_FUNDAMENTAL_2",
+        "generator_representation": "FUNDAMENTAL_2",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-eR-G1",
+        "source_action_term": "KINETIC-eR",
+        "functional_derivative_order": [
+          "bareR",
+          "eR",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "FERMION_FERMION_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*gamma^mu*T_-1",
+        "generator_representation": "-1",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-H-G1",
+        "source_action_term": "KINETIC-H",
+        "functional_derivative_order": [
+          "Hdag",
+          "H",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "COMPLEX_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*(p_H-p_Hdag)^mu*T_1/2",
+        "generator_representation": "1/2",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-H-G2",
+        "source_action_term": "KINETIC-H",
+        "functional_derivative_order": [
+          "Hdag",
+          "H",
+          "G2"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "COMPLEX_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+i*g2*(p_H-p_Hdag)^mu*T_FUNDAMENTAL_2",
+        "generator_representation": "FUNDAMENTAL_2",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-X-G1",
+        "source_action_term": "KINETIC-X",
+        "functional_derivative_order": [
+          "Xdag",
+          "X",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "COMPLEX_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*(p_X-p_Xdag)^mu*T_1/6",
+        "generator_representation": "1/6",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-X-G2",
+        "source_action_term": "KINETIC-X",
+        "functional_derivative_order": [
+          "Xdag",
+          "X",
+          "G2"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "COMPLEX_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+i*g2*(p_X-p_Xdag)^mu*T_FUNDAMENTAL_2",
+        "generator_representation": "FUNDAMENTAL_2",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-X-G3",
+        "source_action_term": "KINETIC-X",
+        "functional_derivative_order": [
+          "Xdag",
+          "X",
+          "G3"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "COMPLEX_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+i*g3*(p_X-p_Xdag)^mu*T_FUNDAMENTAL_3",
+        "generator_representation": "FUNDAMENTAL_3",
+        "required_conditional": null
+      },
+      {
+        "rule_id": "FR-rho3-G2",
+        "source_action_term": "KINETIC-rho3",
+        "functional_derivative_order": [
+          "rho3",
+          "rho3",
+          "G2"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "REAL_ADJOINT_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+g2*f_adjoint*(p_1-p_2)^mu",
+        "generator_representation": "ADJOINT_3",
+        "required_conditional": "rho3"
+      },
+      {
+        "rule_id": "FR-rho8-G3",
+        "source_action_term": "KINETIC-rho8",
+        "functional_derivative_order": [
+          "rho8",
+          "rho8",
+          "G3"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "REAL_ADJOINT_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+g3*f_adjoint*(p_1-p_2)^mu",
+        "generator_representation": "ADJOINT_8",
+        "required_conditional": "rho8"
+      },
+      {
+        "rule_id": "FR-Delta-G1",
+        "source_action_term": "KINETIC-Delta",
+        "functional_derivative_order": [
+          "Deltadag",
+          "Delta",
+          "G1"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "COMPLEX_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+i*g1*(p_Delta-p_Deltadag)^mu*T_1",
+        "generator_representation": "1",
+        "required_conditional": "Delta"
+      },
+      {
+        "rule_id": "FR-Delta-G2",
+        "source_action_term": "KINETIC-Delta",
+        "functional_derivative_order": [
+          "Deltadag",
+          "Delta",
+          "G2"
+        ],
+        "all_momenta_incoming": true,
+        "rule_kind": "COMPLEX_SCALAR_SCALAR_QUANTUM_GAUGE",
+        "exact_rule": "+i*g2*(p_Delta-p_Deltadag)^mu*T_ADJOINT_3",
+        "generator_representation": "ADJOINT_3",
+        "required_conditional": "Delta"
+      }
+    ],
+    "yukawa": [
+      {
+        "action_term_id": "YUK-DOWN",
+        "lagrangian": "-bar(q_L)_p^i*(Y_d)_{pr}*H_i*d_R,r+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "dR",
+            "H",
+            "barqL"
+          ],
+          "factor": "-i*(Y_d)_{pr}"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "bardR",
+            "Hdag",
+            "qL"
+          ],
+          "factor": "-i*(Y_d_dagger)_{rp}"
+        }
+      },
+      {
+        "action_term_id": "YUK-UP",
+        "lagrangian": "-bar(q_L)_p^i*(Y_u)_{pr}*tilde(H)_i*u_R,r+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "uR",
+            "Hdag",
+            "barqL"
+          ],
+          "factor": "-i*(Y_u)_{pr}*epsilon_weak"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "baruR",
+            "H",
+            "qL"
+          ],
+          "factor": "-i*(Y_u_dagger)_{rp}*epsilon_weak"
+        }
+      },
+      {
+        "action_term_id": "YUK-LEPTON",
+        "lagrangian": "-bar(l_L)_p^i*(Y_e)_{pr}*H_i*e_R,r+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "eR",
+            "H",
+            "barlL"
+          ],
+          "factor": "-i*(Y_e)_{pr}"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "bareR",
+            "Hdag",
+            "lL"
+          ],
+          "factor": "-i*(Y_e_dagger)_{rp}"
+        }
+      },
+      {
+        "action_term_id": "YUK-X-DL",
+        "lagrangian": "-bar(d_R)_p*(Y_X)_{pt}*X^i*epsilon_ij*l_L,t^j+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "bardR",
+            "X",
+            "lL"
+          ],
+          "factor": "-i*(Y_X)_{pt}*epsilon_ij"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "dR",
+            "Xdag",
+            "barlL"
+          ],
+          "factor": "-i*(Y_X_dagger)_{tp}*epsilon^ij"
+        }
+      },
+      {
+        "action_term_id": "YUK-DELTA-LL",
+        "lagrangian": "-(1/2)*l_L,p^T*C*(Y_Delta)_{pt}*i_sigma2*Delta*l_L,t+h.c.",
+        "ordered_rule": {
+          "fields": [
+            "lL",
+            "lL",
+            "Delta"
+          ],
+          "factor": "-i*Y_Delta*SYMMETRIC_WEAK_TRIPLET_TENSOR"
+        },
+        "hermitian_rule": {
+          "fields": [
+            "barlL",
+            "barlL",
+            "Deltadag"
+          ],
+          "factor": "-i*Y_Delta_dagger*HC_TRIPLET_TENSOR"
+        }
+      }
+    ],
+    "control_scalar_cubic": [
+      {
+        "rule_id": "FR-Xdag-X-rho3",
+        "source_potential_term": "kappa3X*tr(Xdag*X*B^T)",
+        "source_lineage": [
+          "V-C2",
+          "V-B6",
+          "V-B7",
+          "PASS0014_ZERO_UPSTREAM_CUBIC_SHIFT"
+        ],
+        "kappa3X": "c2/2-3*n*b6+2*n*b7",
+        "functional_derivative_order": [
+          "Xdag_Ai",
+          "X_Bj",
+          "rho3_I"
+        ],
+        "exact_rule": "-i*kappa3X*delta_A_B*(tau_I^T/2)_i_j"
+      }
+    ],
+    "derivation_rule": "RULE=i_TIMES_THE_LEFT_GRASSMANN_RIGHT_BOSON_FUNCTIONAL_DERIVATIVE_OF_L_INT_WITH_FOURIER_DERIVATIVE_PARTIAL_MU_TO_MINUS_i_p_mu",
+    "no_handwritten_override_permitted": true
+  },
+  "functional_derivative_and_sign_algorithm": {
+    "bosons": "COMMUTING_LEFT_DERIVATIVES_IN_THE_DISPLAYED_RULE_FIELD_ORDER",
+    "fermions": "LEFT_GRASSMANN_DERIVATIVES_WITH_CANONICAL_FIELD_ORDER_barred_then_unbarred_then_lexicographic_species_flavor_component",
+    "fermion_permutation_sign": "PARITY_OF_THE_PERMUTATION_FROM_ACTION_ORDER_TO_RULE_ORDER",
+    "closed_fermion_loop": "MULTIPLY_BY_MINUS_ONE_PER_CLOSED_FERMION_CYCLE",
+    "identical_field_factor": "GENERATED_BY_REPEATED_FUNCTIONAL_DIFFERENTIATION_NOT_ADDED_BY_HAND",
+    "vertex_factor": "i_TIMES_THE_COMPLETE_FOURIER_TRANSFORMED_FUNCTIONAL_DERIVATIVE_OF_L_int"
+  },
+  "executable_bmhv_rewrite_contract": {
+    "metric_split": "g^{mu nu}=bar_g^{mu nu}+hat_g^{mu nu}",
+    "gamma_split": "gamma^mu=bar_gamma^mu+hat_gamma^mu",
+    "ordered_rewrite_rules": [
+      "bar_g*hat_g_TO_0",
+      "bar_gamma^mu*bar_gamma^nu+bar_gamma^nu*bar_gamma^mu_TO_2*bar_g^munu",
+      "hat_gamma^mu*hat_gamma^nu+hat_gamma^nu*hat_gamma^mu_TO_2*hat_g^munu",
+      "bar_gamma^mu*hat_gamma^nu_TO_-hat_gamma^nu*bar_gamma^mu",
+      "gamma5*bar_gamma^mu_TO_-bar_gamma^mu*gamma5",
+      "gamma5*hat_gamma^mu_TO_+hat_gamma^mu*gamma5",
+      "hat_g^mu_mu_TO_-2*epsilon",
+      "bar_g^mu_mu_TO_4",
+      "P_L_OR_P_R_TO_RIGHTMOST_READING_POINT"
+    ],
+    "normal_form": "HAT_GAMMAS_FIRST_THEN_BAR_GAMMAS_WITH_P_L_OR_P_R_AT_THE_RIGHTMOST_DECLARED_READING_POINT",
+    "evanescent_definition": "E[T]=T-lift(P4(T))",
+    "epsilon_times_physical_terms": "RETAIN_FOR_FINITE_RESTORATION_BUT_EXCLUDE_FROM_THE_SIMPLE_UV_POLE_RESIDUAL",
+    "naive_gamma5_anticommutation": "PROHIBITED"
+  },
+  "yd_orientation_resolution": {
+    "authoritative_lagrangian_source": "formal/tooling/scientific_compute/model1_installation_preparation/t_first_r2_active_bnv_d5_eom_reduction_pass_0004_v0.json",
+    "lagrangian": "-bar(q_L)_p^i*(Y_d)_{pr}*H_i*d_R,r+h.c.",
+    "derived_ordered_rule": {
+      "fields": [
+        "dR",
+        "H",
+        "barqL"
+      ],
+      "coupling": "Y_d",
+      "factor": "-i*(Y_d)_{pr}"
+    },
+    "derived_hc_rule": {
+      "fields": [
+        "bardR",
+        "Hdag",
+        "qL"
+      ],
+      "coupling": "Y_d_dagger",
+      "factor": "-i*(Y_d_dagger)_{rp}"
+    },
+    "historical_phase1_row": {
+      "vertex_id": "VTX-YD-HC",
+      "fields": [
+        "dR",
+        "H",
+        "barqL"
+      ],
+      "coupling_spurion": "Y_d*",
+      "coupling_mass_dimension": 0,
+      "parent_or_active_ledger_provenance": [
+        "Y-ACTIVE-SM-DOWN"
+      ],
+      "required_conditionals": []
+    },
+    "disposition": "PHASE1_Y_D_STAR_LABEL_FOR_dR_H_barqL_IS_SUPERSEDED_FOR_PHASE3_INTEGRAND_CONSTRUCTION;_THE_TOPOLOGY_GRAPH_IS_UNCHANGED_BUT_ITS_COUPLING_MONOMIAL_IS_Y_d",
+    "resolved_by_action_derivative_not_by_control_fit": true
+  },
+  "phase1_gauge_action_token_resolution": {
+    "historical_token": "FROZEN_GAUGE_KINETIC_ACTION",
+    "historical_signature_count": 19,
+    "action_derived_signature_count": 19,
+    "missing_phase1_signatures": [],
+    "resolution": "ALL_HISTORICAL_MATTER_GAUGE_SIGNATURES_NOW_BIND_TO_THE_EXECUTABLE_COVARIANT_DERIVATIVE_AND_EXACT_REPRESENTATION_GENERATORS"
+  },
+  "control_input_readiness": {
+    "gauge_control": "ACTION_PROPAGATORS_G1_VERTICES_XI1_AND_BMHV_RULES_FROZEN",
+    "evanescent_control": "ACTION_G1_VERTICES_RAW_TWO_GAMMA_BMHV_NORMAL_FORM_AND_AUXILIARY_DEFINITION_FROZEN",
+    "redundant_control": "Y_D_ORIENTATION_PROPAGATORS_FUNCTIONAL_DERIVATIVE_AND_FOURIER_MOMENTUM_RULE_FROZEN",
+    "conditional_rho3_control": "KAPPA3X_LINEAGE_COMPONENT_VERTEX_AND_REAL_COMPLEX_SCALAR_PROPAGATORS_FROZEN",
+    "four_control_replay_may_now_attempt_unique_integrand_construction": true
+  },
+  "scientific_result": {
+    "statement": "THE_DANGLING_GAUGE_ACTION_TOKEN_AND_THE_YD_CONJUGATION_AMBIGUITY_IDENTIFIED_BY_PASS0029_ARE_CLOSED_BY_ONE_EXECUTABLE_UNBROKEN_GAUGE_FIXED_COMPONENT_ACTION_AND_ACTION_DERIVED_RULE_CONTRACT",
+    "uv_poles_evaluated": 0,
+    "phase3_progress_remains": "2/1040"
+  },
+  "hard_nonclaims": [
+    "NO_NEW_UV_POLE_IN_THIS_PASS",
+    "NO_FOUR_CONTROL_SUCCESS_INFERRED_FROM_INPUT_COMPLETION",
+    "NO_COUNTERTERM_SPACE_CLOSURE",
+    "NO_ADM_ENTRY_OR_ASSEMBLY",
+    "NO_BULK_PHASE3_ROLLOUT",
+    "NO_DOUBLE_D5_TO_D6_WORK",
+    "NO_MODEL1_PARAMETER_OR_VIABILITY_RESULT"
+  ],
+  "next_authorized_action": "RERUN_EXACTLY_THE_SAME_GAUGE_EVANESCENT_REDUNDANT_AND_CONDITIONAL_RHO3_CONTROLS_USING_TWO_INDEPENDENT_INTEGRAND_CONSTRUCTORS;_REQUIRE_EXACT_UV_POLES_AND_ZERO_RESIDUAL_PROJECTIONS;_DO_NOT_ADD_TOPOLOGIES_OR_ASSEMBLE_AN_ADM",
+  "document_fingerprint_sha256": "f440256478de9350245a3d0ce7ebfb0bb757e8a3212aa4457013a47765e44a5b"
+}

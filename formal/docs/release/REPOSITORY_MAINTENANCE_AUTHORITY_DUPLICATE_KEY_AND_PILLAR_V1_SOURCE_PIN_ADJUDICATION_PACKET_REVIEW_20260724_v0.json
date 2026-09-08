@@ -1,0 +1,22 @@
+{
+  "captured_at_utc": "2026-07-25T01:41:32Z",
+  "checks": {
+    "accepted_410_outcome_reassessment_and_commit_bound": true,
+    "ambiguous_current_authority_document_frozen_and_not_used_as_cycle_authority": true,
+    "automatic_successor_forbidden": true,
+    "current_historical_and_review_time_roles_distinguished": true,
+    "dirty_main_mutation_forbidden": true,
+    "independent_result_review_required": true,
+    "root_a_and_root_b_separately_adjudicated": true,
+    "root_a_byte_position_provenance_authorization_and_consumer_analysis_required": true,
+    "root_b_exact_39_outcome_historical_and_current_identity_analysis_required": true,
+    "test_tool_authority_json_historical_record_scientific_registry_v2_and_lean_mutations_forbidden": true
+  },
+  "review_basis": "INDEPENDENT_LINEAGE_ROOT_SEPARATION_AUTHORITY_CONTAINMENT_IDENTITY_ROLE_SCOPE_AND_NONMUTATION_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_PACKET_20260724_v0.json",
+    "sha256": "914203227014693657eab2af1adbd247070cf7974e234b67117598f2e8fb01fa"
+  },
+  "schema_id": "REPOSITORY_MAINTENANCE_AUTHORITY_DUPLICATE_KEY_AND_PILLAR_V1_SOURCE_PIN_ADJUDICATION_PACKET_REVIEW_20260724_v0",
+  "verdict": "ACCEPT"
+}

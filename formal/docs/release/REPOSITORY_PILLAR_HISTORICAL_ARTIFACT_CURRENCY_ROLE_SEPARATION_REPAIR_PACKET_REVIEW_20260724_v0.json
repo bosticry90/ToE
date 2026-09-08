@@ -1,0 +1,26 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_REVIEW_20260724_v0",
+  "captured_at_utc": "2026-07-24T22:54:52Z",
+  "review_basis": "INDEPENDENT_LINEAGE_ROLE_CONTRACT_HISTORICAL_PRESERVATION_SCOPE_CONTAINMENT_AND_ACCEPTANCE_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_HISTORICAL_ARTIFACT_CURRENCY_ROLE_SEPARATION_REPAIR_PACKET_20260724_v0.json",
+    "sha256": "d08e87cbfe9a67ab18aa0bddd141b0bf09282b185f23fe7c6bba0800b4b810eb"
+  },
+  "checks": {
+    "accepted_adjudication_and_exact_commit_bound": true,
+    "exact_16_outcome_and_17_binding_family_bound": true,
+    "all_five_required_temporal_and_authority_roles_declared": true,
+    "historical_registry_git_blob_identity_declared": true,
+    "five_review_time_generator_pins_preserved": true,
+    "ten_historical_compendium_pins_preserved": true,
+    "current_compendium_identity_separate_and_canonical": true,
+    "review_time_authority_preserved_without_live_equality": true,
+    "one_shared_fail_closed_resolver_required": true,
+    "historical_packet_review_generator_and_artifact_modification_forbidden": true,
+    "lf_crlf_and_detached_review_validation_required": true,
+    "adjacent_failure_family_lean_registry_v2_and_scientific_actions_forbidden": true,
+    "baseline_reassessment_forbidden": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

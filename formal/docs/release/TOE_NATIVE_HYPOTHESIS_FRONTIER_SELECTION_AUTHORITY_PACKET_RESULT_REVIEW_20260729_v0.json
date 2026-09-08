@@ -1,0 +1,25 @@
+{
+  "accepted": true,
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "checks": {
+    "exactly_one_decision": true,
+    "four_candidate_paths": true,
+    "native_surrogate_remains_closed_at_stage_one": true,
+    "no_program_installation": true,
+    "no_scientific_calculation": true,
+    "quadratic_program_remains_closed_control": true,
+    "required_decision_outputs_present": true,
+    "selector_only": true,
+    "zero_repair": true
+  },
+  "closed_programs_reopened": false,
+  "failed_checks": [],
+  "new_program_installed": false,
+  "reviewed_authority": {
+    "path": "formal/docs/release/TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_20260729_v0.json",
+    "sha256": "95624cb21044e916578080cd14d359a3a77b218f21faf557ce912c4112d538c0"
+  },
+  "schema_id": "TOE_NATIVE_HYPOTHESIS_FRONTIER_SELECTION_AUTHORITY_PACKET_RESULT_REVIEW_20260729_v0",
+  "selected_next_target": "select_next_native_toe_hypothesis_for_bounded_adjudication_v0",
+  "verdict": "NATIVE_HYPOTHESIS_FRONTIER_SELECTOR_AUTHORITY_ACCEPTED_ONE_DECISION_ONLY_NO_PROGRAM_INSTALLATION_OR_PHYSICS_EXECUTION"
+}

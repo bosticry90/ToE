@@ -1,0 +1,19 @@
+{
+  "schema_id": "EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_SELECTION_20260723_v0",
+  "captured_at_utc": "2026-07-23T03:11:43Z",
+  "options": [
+    "AUTHORIZE_BOUNDED_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW",
+    "PRESERVE_QFT_ROUTE_ADJUDICATION_RESULT_AND_DEFER_RECOVERY"
+  ],
+  "selected": "AUTHORIZE_BOUNDED_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW",
+  "target": "prepare_repository_em_route_source_pin_provenance_and_authority_review_packet_v0",
+  "selection_basis": "The accepted QFT route identity-domain adjudication decomposed the 67 consumer outcomes into four mismatched identities and established that the EM pin is the only identity not reconstructible from any reachable Git blob or its LF/CRLF representations. A bounded provenance and authority review must precede any route-table identity repair.",
+  "controlling_result": {
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260723_v0.json",
+    "sha256": "aa26118dabb54b6e0009bedd6c5a108df7ed6f013c6cd9d6c1f859d455947568",
+    "commit": "e1219237d083bdd6fe1805a3b36c853814b73725"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

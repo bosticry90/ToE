@@ -1,0 +1,118 @@
+{
+  "schema_id": "RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_RESULT_20260725_v0",
+  "captured_at_utc": "2026-07-25T04:14:16Z",
+  "status": "RECOVERY_OBLIGATION_PROFILES_CONSTRUCTED_CURRENT_PROFILE_COVERAGE_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_base": {
+    "commit": "a15320d1ea0f029b47598afcca136790c2361971",
+    "staging_adjudication_review": "formal/docs/release/REPOSITORY_POST_PILLAR_V1_STAGING_IDENTITY_ADJUDICATION_RESULT_REVIEW_20260725_v0.json"
+  },
+  "generation_state": {
+    "current_relative_to_commit": "bdf9a46692faa0423259eab004948dd225f3f017",
+    "current_acceptance_inventory": {
+      "path": "formal/docs/release/CURRENT_ACCEPTANCE_INVENTORY_20260725_v1.json",
+      "count": 13826,
+      "sha256": "dd796f71a319becc838a625faa6ec26e96a37389dece4b714801b7aae3a6667b"
+    },
+    "frozen_comparability_inventory": {
+      "path": "formal/docs/release/FROZEN_COMPARABILITY_INVENTORY_20260725_v0.json",
+      "count": 13756,
+      "sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf"
+    }
+  },
+  "authorization": {
+    "selection": {
+      "path": "formal/docs/release/CURRENT_RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_SELECTION_20260725_v0.json",
+      "sha256": "b7526a9bdab8680e354c89634c102d66604b169376e564336e9fa67cc33d088e"
+    },
+    "packet": {
+      "path": "formal/docs/release/RECOVERY_OBLIGATION_PROFILE_CONSTRUCTION_PACKET_20260725_v0.json",
+      "sha256": "f5cc8d75e94c13dba1423a1e8bd8c033f0b489efd1dc79e96f33a9f84f139894"
+    },
+    "successor_authority": "NONE"
+  },
+  "profile_machinery": {
+    "generator": {
+      "path": "formal/python/tools/recovery_validation_profiles.py",
+      "sha256": "a6f26a4383b6e83739218fd4173739f541fe5611f0ed2c18f9d386d3d60d87fb"
+    },
+    "runner": {
+      "path": "formal/python/tools/recovery_profile_runner.py",
+      "sha256": "e30d4805887e1d00675f9c14b4139817f9f702ec563777f5bfe625bfba72feaa"
+    },
+    "criticality": [
+      "CURRENT_AUTHORITY",
+      "CURRENT_REPRODUCIBILITY"
+    ],
+    "profiles_generated_before_execution": true,
+    "membership_hash_pinned": true,
+    "tests_may_change_membership": false,
+    "dynamic_demotion": false
+  },
+  "artifacts": {
+    "obligation_registry": {
+      "path": "formal/output/validation_profiles/RECOVERY_OBLIGATION_REGISTRY_20260725_v0.json",
+      "sha256": "0f9dcc69d86cac446f988dfcc30c96809f68cb67ae26e0435961a845c2be618a",
+      "obligations": 3991
+    },
+    "current_control_plane": {
+      "path": "formal/output/validation_profiles/CURRENT_CONTROL_PLANE_PROFILE_20260725_v0.json",
+      "sha256": "4ac26a4a1058aa03d0286d2116abd167bfa5329f15f870f6c72f412535f148b6",
+      "nodeids": 3748,
+      "known_nonpassing": 139,
+      "required_verdict": "PASS"
+    },
+    "historical_debt": {
+      "path": "formal/output/validation_profiles/HISTORICAL_DEBT_PROFILE_20260725_v0.json",
+      "sha256": "55774b33c51291649ade3d5dbb80674ddf41903563fa302b0b0d1e2f71fc0741",
+      "nodeids": 10078,
+      "known_nonpassing": 231,
+      "permitted_verdict": "COMPLETE_WITH_RECORDED_FAILURES"
+    },
+    "reconciliation": {
+      "path": "formal/output/validation_profiles/VALIDATION_PROFILE_RECONCILIATION_20260725_v0.json",
+      "sha256": "9f9ac80d0714e658aae23210ad92c53860c789782410b7ba5b2e554eb6d37644",
+      "intersection": 0,
+      "unassigned": 0,
+      "excluded": 0,
+      "exact_partition": true
+    }
+  },
+  "classification": {
+    "adjusted_nonpassing_after_accepted_recoveries": 370,
+    "current_control_plane_known_nonpassing": 139,
+    "historical_debt_known_nonpassing": 231,
+    "historical_fixture_or_contract_debt": 181,
+    "historical_provenance_blocked": 36,
+    "historical_obsolete": 1,
+    "unratified_post_registry": 13,
+    "unknown_current_reachability_obligations": 102,
+    "unknown_current_reachability_disposition": "BLOCKING_IN_CURRENT_CONTROL_PLANE"
+  },
+  "invariants": {
+    "failure_can_cause_profile_demotion": false,
+    "unknown_reachability_can_be_quarantined": false,
+    "mixed_role_tests_execute_in_current_profile": true,
+    "every_collected_test_has_one_execution_profile": true,
+    "all_new_guards_are_in_current_acceptance_inventory": true,
+    "historical_profile_isolation_proven": false
+  },
+  "terminal_outcome": "RECOVERY_BLOCKED_CURRENT_PROFILE_COVERAGE",
+  "blockers": [
+    "139_CURRENT_CONTROL_PLANE_KNOWN_NONPASSING",
+    "102_UNKNOWN_CURRENT_REACHABILITY_OBLIGATIONS_REQUIRE_ADJUDICATION",
+    "HISTORICAL_STRUCTURAL_ISOLATION_NOT_YET_PROVEN"
+  ],
+  "scope": {
+    "test_outcomes_changed": false,
+    "roots_repaired": 0,
+    "historical_quarantine_executed": false,
+    "registry_or_v2_changed": 0,
+    "scientific_content_changed": 0,
+    "lean_activity": 0,
+    "automatic_successor": false
+  },
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "required_next_action": "INDEPENDENT_REVIEW_OF_PROFILE_MEMBERSHIP_AND_COVERAGE_ONLY"
+}

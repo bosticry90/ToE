@@ -1,0 +1,72 @@
+{
+  "audited_repository": {
+    "commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "evidence_only": true,
+    "full_suite_rerun_authorized": false,
+    "path": "C:/Users/psboy/Documents/ToE"
+  },
+  "frozen_scientific_authority": {
+    "blocked_seams": 5,
+    "blocked_unit_seam_rows": 12,
+    "current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PillarSeamUnitMappingLedgerBlockerResponseRouteSelectionPacketV1ResultReview.lean",
+    "current_target_kind": "pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "current_target_outcome": "PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_V1_RESULT_REVIEW_B_BLOCKED_SOURCE_AUTHORITY_CLASS_ATTRIBUTION_MISMATCH",
+    "current_target_report": "formal/docs/release/PILLAR_SEAM_UNIT_MAPPING_LEDGER_BLOCKER_RESPONSE_ROUTE_SELECTION_PACKET_RESULT_REVIEW_20260712_v1.json",
+    "current_target_strict_outcome": "B_BLOCKED_PRESERVES_TWELVE_ROUTE_MAP_NO_PACKET_ACCEPTANCE_NO_BLOCKER_RESOLUTION_GUARDRAIL_NO_DIMENSIONAL_CLOSURE_NO_PILLAR_COMPLETION_NO_SEAM_ADMISSIBILITY_NO_LEVEL4_OR5_NO_PHYSICAL_CALIBRATION_NO_CROSS_SECTOR_COUPLING_VALIDATION_NO_CK_ACTION_EMBEDDING_NO_CCFT_NO_MASTER_ACTION_PROMOTION",
+    "empirical_validation_established": false,
+    "master_action_promoted": false,
+    "phase_2_authorized": false,
+    "posture": "B-BLOCKED",
+    "resolved_unit_seam_rows": 0,
+    "source": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+    "source_sha256": "5ac0cc1b2f1b38ed6e134e063a192cf11dcbbce6a9f069ec14ce6bd479131506"
+  },
+  "maintenance_authority": "REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_PACKET_v0",
+  "maintenance_target": "prepare_repository_authority_custody_and_reproducibility_recovery_packet_v0",
+  "phases": [
+    {
+      "may_modify_audited_worktree": false,
+      "name": "READ_ONLY_EVIDENCE_ACQUISITION",
+      "phase": "A",
+      "successor_requires_independent_acceptance": true
+    },
+    {
+      "may_start_before_phase_a_acceptance": false,
+      "name": "CONTROL_PLANE_AND_VALIDATION_REPAIR",
+      "phase": "B",
+      "scientific_status_changes_authorized": false
+    },
+    {
+      "must_run_in_fresh_clone": true,
+      "name": "CLEAN_REPRODUCIBILITY_AND_PROVENANCE_ADJUDICATION",
+      "phase": "C",
+      "scientific_resumption_authorized_by_completion": false
+    }
+  ],
+  "prohibitions": [
+    "NO_SCIENTIFIC_TARGET_ROTATION",
+    "NO_UNIT_OR_SEAM_ROW_CHANGE",
+    "NO_ROUTE_MAP_ACCEPTANCE",
+    "NO_MASTER_ACTION_PROMOTION",
+    "NO_EMPIRICAL_CLAIM",
+    "NO_V2_REGENERATION",
+    "NO_FIRST_UNIT_SELECTOR_EXECUTION",
+    "NO_SCALAR_YUKAWA_EXECUTION",
+    "NO_MAXWELL_DIRAC_EXECUTION",
+    "NO_STAGE_A_OR_STAGE_B_EXECUTION"
+  ],
+  "schema_id": "REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_PACKET_20260719_v0",
+  "selector": {
+    "path": "formal/docs/release/REPOSITORY_AUTHORITY_CUSTODY_AND_REPRODUCIBILITY_RECOVERY_MAINTENANCE_ROUTE_SELECTION_20260719_v0.json",
+    "sha256": "86559f62112166fd12941793beae5fad24783155fa6edd0b89ff87e64c2f39d0"
+  },
+  "status": "PREPARED_PENDING_INDEPENDENT_AUTHORIZATION_REVIEW",
+  "terminal_outcomes": [
+    "RECOVERY_READY_FOR_GOVERNED_SCIENTIFIC_RESUMPTION",
+    "RECOVERY_BLOCKED_CUSTODY_GAP",
+    "RECOVERY_BLOCKED_AUTHORITY_PROVENANCE",
+    "RECOVERY_BLOCKED_CLEAN_VALIDATION",
+    "RECOVERY_BLOCKED_TOOLCHAIN_REPRODUCIBILITY"
+  ]
+}

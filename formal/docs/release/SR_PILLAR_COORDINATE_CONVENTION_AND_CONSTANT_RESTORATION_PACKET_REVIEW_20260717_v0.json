@@ -1,0 +1,286 @@
+{
+  "blocking_findings": {
+    "all_confirmed": true,
+    "count": 7,
+    "findings": [
+      {
+        "confirmed": true,
+        "evidence": "A^mu_SI=(phi/c,A) is recorded, but A_mu, the defining sign/order of F^{mu nu}, F^{0i}/F^{ij}, and the three- and four-dimensional Levi-Civita orientation are not fixed.",
+        "finding_id": "F_TENSOR_COMPONENT_AND_LEVI_CIVITA_CONVENTION_UNSPECIFIED",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "hbar is explicitly not applied; no dimensionful Dirac equation or D_mu convention fixes q, hbar, c, A_mu, and J=q psibar gamma psi under the selected SI/natural field rescaling.",
+        "finding_id": "QUANTUM_GAUGE_HBAR_AND_CURRENT_NORMALIZATION_UNSPECIFIED",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "The packet declares invertibility and verifies dimensions, but no one of the six equations has an executable SI-to-natural-to-SI identity check.",
+        "finding_id": "BIDIRECTIONAL_EQUATION_ROUND_TRIPS_NOT_EXECUTED",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "All eight controls are labels without executed outcomes or registered diagnostics; p^0=E, lost-hbar, and incorrect-T^0i defects are absent.",
+        "finding_id": "NEGATIVE_CONTROLS_DECLARED_NOT_EXECUTED_AND_INCOMPLETE",
+        "materiality": "BLOCKING",
+        "required_missing_controls": [
+          "REJECT_p0_EQUALS_E_INSTEAD_OF_E_OVER_c",
+          "REJECT_DIMENSIONFUL_GAUGE_DERIVATIVE_WITHOUT_hbar",
+          "REJECT_T0i_WITH_INCORRECT_COMPONENT_DIMENSION_OR_MEANING"
+        ]
+      },
+      {
+        "confirmed": true,
+        "evidence": "T^00 and T^0i are described, but T^i0=c times momentum density and T^ij as stress/momentum flux are not fixed.",
+        "finding_id": "STRESS_ENERGY_COMPONENT_SEMANTICS_INCOMPLETE",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "The six rows do not bind exact authoritative paths and JSON fields; the mass-shell row has no identified authoritative source surface.",
+        "finding_id": "REPRESENTATIVE_EQUATION_SOURCE_BINDINGS_INCOMPLETE",
+        "materiality": "BLOCKING"
+      },
+      {
+        "confirmed": true,
+        "evidence": "The bound psi-A sources use nabla_mu on curved backgrounds, while the representative packet uses partial_mu in flat SR without a declared adapter.",
+        "finding_id": "FLAT_CURVED_DERIVATIVE_ADAPTER_UNSPECIFIED",
+        "materiality": "BLOCKING"
+      }
+    ]
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Independent packet review only. The review reproduces six dimensional checks and the declared c/mu_0 scaling algebra, but blocks packet acceptance and all equation application or migration. It establishes no SR recovery, Lorentz invariance of the master action, pillar completion, seam closure, physical validation, prediction, new physics, R13 result, or comparator adoption.",
+  "first_diagnostic": "F_TENSOR_COMPONENT_AND_LEVI_CIVITA_CONVENTION_UNSPECIFIED",
+  "hard_stop": {
+    "application_authorized": false,
+    "migration_authorized": false,
+    "next_action": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1",
+    "packet_accepted": false,
+    "review_complete": true,
+    "successor_scope": "ONE_BOUNDED_v1_PACKET_ONLY"
+  },
+  "retained_findings": {
+    "J_0_component_policy": "J^0 = c rho",
+    "all_coordinate_components_have_dimension_L": true,
+    "bounded_assessment": "The coordinate/signature baseline and declared c/mu_0 rescaling are worth retaining in v1; the block does not reverse those findings.",
+    "dimension_audit": {
+      "base_vectors_match_independent_expectations": true,
+      "bounded_finding": "DIMENSIONAL_CLOSURE_REPRODUCED_6_OF_6",
+      "check_count": 6,
+      "checks": [
+        {
+          "check_id": "INTERVAL_TERMS_HAVE_LENGTH_SQUARED",
+          "expected": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "left": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "passed": true,
+          "right": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "check_id": "MASS_SHELL_TERMS_MATCH",
+          "expected": [
+            2,
+            2,
+            -2,
+            0
+          ],
+          "left": [
+            2,
+            2,
+            -2,
+            0
+          ],
+          "passed": true,
+          "right": [
+            2,
+            2,
+            -2,
+            0
+          ]
+        },
+        {
+          "check_id": "CONTINUITY_TERMS_MATCH",
+          "expected": [
+            0,
+            -3,
+            -1,
+            1
+          ],
+          "left": [
+            0,
+            -3,
+            -1,
+            1
+          ],
+          "passed": true,
+          "right": [
+            0,
+            -3,
+            -1,
+            1
+          ]
+        },
+        {
+          "check_id": "SOURCED_MAXWELL_SI_TERMS_MATCH",
+          "expected": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "left": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "passed": true,
+          "right": [
+            1,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "check_id": "STRESS_EXCHANGE_SI_TERMS_MATCH",
+          "expected": [
+            1,
+            -2,
+            -2,
+            0
+          ],
+          "left": [
+            1,
+            -2,
+            -2,
+            0
+          ],
+          "passed": true,
+          "right": [
+            1,
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "check_id": "VACUUM_CONSTANT_IDENTITY_IS_DIMENSIONLESS",
+          "expected": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "left": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "passed": true,
+          "right": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "method": "independent M,L,T,Q vector reconstruction without importing the packet generator",
+      "passed_check_count": 6
+    },
+    "electromagnetic_scaling_audit": {
+      "bounded_finding": "DECLARED_C_MU0_RESCALING_ALGEBRA_REPRODUCED",
+      "exact_declared_object_map_reproduced": true,
+      "exchange_product_mu0_exponent": {
+        "F_N_times_J_N": "-1/2 + 1/2 = 0",
+        "passed": true
+      },
+      "gauge_stress_mu0_exponent": {
+        "F_N_squared": "-1",
+        "passed": true,
+        "restored_prefactor": "mu_0^-1"
+      },
+      "sourced_maxwell_mu0_exponent": {
+        "natural_left_F_exponent": "-1/2",
+        "natural_right_J_exponent": "+1/2",
+        "passed": true,
+        "restored_equation": "partial_mu F_SI^{mu nu} = mu_0 J_SI^nu"
+      }
+    },
+    "metric_signature": "(+,-,-,-)",
+    "p_0_component_policy": "p^0 = E/c",
+    "partial_0_equals_c_inverse_partial_t": true,
+    "restoration_target": "SI",
+    "temporal_coordinate": "x^0 = c t"
+  },
+  "review_authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_20260717_v0.json",
+        "sha256": "a109ffb9742e80c7cafcfde0ca4627ef87644f8906a87418bb89f7fac5b027a8"
+      },
+      {
+        "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_v0.py",
+        "sha256": "2f6aa787eca902ae9401799e2d4bb70380703913104fa2674d1c2614ebf2c5fb"
+      },
+      {
+        "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_v0.py",
+        "sha256": "abe6738904e6f006abfedd70358a176c363d7391b808ffab18d0d9f663197515"
+      }
+    ],
+    "review_test": {
+      "relative_path": "formal/python/tests/test_sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v0.py",
+      "sha256": "d602a95bffe7b8716aace54a942d59d275b4f9d46f08397afa725599d3289dfe"
+    },
+    "reviewer": {
+      "relative_path": "formal/python/tools/sr_pillar_coordinate_convention_and_constant_restoration_packet_review_v0.py",
+      "sha256": "8d5501b4d9332b1ba00e37327fcd6aed46ebd95abc434e2da21df0e4bf2bc6dd"
+    }
+  },
+  "schema_id": "SR_PILLAR_COORDINATE_CONVENTION_AND_CONSTANT_RESTORATION_PACKET_REVIEW_20260717_v0",
+  "scope_and_authorization": {
+    "automation_created": false,
+    "external_comparator_activated": false,
+    "historical_artifacts_modified": false,
+    "only_bounded_v1_packet_preparation_authorized": true,
+    "packet_v0_accepted": false,
+    "r13_reopened": false,
+    "repository_wide_migration_authorized": false,
+    "scientific_equation_migration_executed": false,
+    "six_surface_application_authorized": false
+  },
+  "selected_next_target": "prepare_sr_pillar_coordinate_convention_and_constant_restoration_packet_v1",
+  "target": "review_sr_pillar_coordinate_convention_and_constant_restoration_packet_v0_result",
+  "v1_contract": [
+    "fix A^mu, A_mu, F^{mu nu}=partial^mu A^nu-partial^nu A^mu (or one explicit alternative), F^{0i}, F^{ij}, and the three- and four-dimensional Levi-Civita orientation under (+,-,-,-)",
+    "fix one complete dimensionful Dirac/gauge convention for i hbar c gamma^mu D_mu-m c^2 and D_mu, including q, hbar, c, A_mu, and the induced mapping of J^mu=q psibar gamma^mu psi; otherwise explicitly exclude psi-made currents from the six-surface application",
+    "bind each representative equation to an exact authoritative path and field, including an authoritative mass-shell surface",
+    "declare the flat partial_mu versus curved nabla_mu adapter wherever a bound source is curved",
+    "execute and record SI-to-natural-to-SI and natural-to-SI-to-natural identity checks for all six equations",
+    "replace negative-control labels with executed mutations, expected diagnostics, observed diagnostics, and pass/fail results",
+    "add executed p^0=E, lost-hbar, and incorrect-T^0i negative controls",
+    "complete T^{00}, T^{0i}, T^{i0}, and T^{ij} component meanings and units",
+    "preserve packet-only scope, immutable historical artifacts, R13 closure, dormant comparators, and all nonclaims"
+  ],
+  "verdict": "BLOCKED_INCOMPLETE_ELECTROMAGNETIC_QUANTUM_CONVENTION_CLOSURE"
+}

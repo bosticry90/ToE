@@ -1,0 +1,27 @@
+{
+  "artifact_id": "TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN_AUTHORITY_REVIEW_v0",
+  "schema_id": "toe.ccft_v0.model_contract_completion_and_freeze.stage_2_open_authority_review.v0",
+  "captured_at_utc": "2026-08-02T04:46:46Z",
+  "authority_path": "formal/docs/release/TOE_CCFT_V0_MODEL_CONTRACT_COMPLETION_AND_FREEZE_STAGE_2_OPEN_AUTHORITY_v0.json",
+  "authority_sha256": "1eb5a91816d5bfeaeaf63ad70ae4246099da8d509bae66cf69f810fc28319ab9",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "stage_number": 2,
+  "accepted": true,
+  "checks": {
+    "stage_1_cp_nlse_selection_is_immutable_and_bound": true,
+    "manifest_stage_target_scope_and_terminal_vocabulary_match": true,
+    "director_wording_normalization_is_deterministic": true,
+    "new_postulates_are_authorized_only_with_explicit_provenance": true,
+    "one_model_eight_postulate_and_one_equation_caps_are_bound": true,
+    "source_branch_new_equation_and_honest_block_routes_are_distinct": true,
+    "historical_equation_blending_and_silent_repair_are_prohibited": true,
+    "complete_data_parameter_failure_comparator_and_implementation_contract_is_required": true,
+    "theorem_packet_and_theorem_execution_remain_prohibited": true,
+    "physical_promotion_remains_prohibited": true,
+    "stage_3_remains_unauthorized": true,
+    "authority_contains_no_equation_postulate_or_model": true
+  },
+  "decision": "ACCEPT_STAGE_2_OPEN_AUTHORITY_AWAIT_IMMUTABLE_OPEN_EVENT",
+  "stage_3_authorized": false,
+  "status": "PASS"
+}

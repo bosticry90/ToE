@@ -1,0 +1,15 @@
+{
+  "event_type": "ATTEMPT_CLOSE",
+  "event_sequence_number": 10,
+  "attempt_sequence_number": 5,
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "open_event_hash": "a79db55c2367fe8ecd9b984e0657b7431eb6d3d6419a453d079134c4da351b40",
+  "result_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_v0.json",
+  "result_artifact_hash": "8f29a6d5912478a2143f751fcbb9aa817a097acc79d274bd825865dfa2e43821",
+  "review_artifact_path": "formal/docs/release/TOE_GRAVITATIONAL_ACTION_FAMILY_ELIGIBILITY_HANDOFF_RESULT_REVIEW_v0.json",
+  "review_artifact_hash": "ccb55f8dfcd5986158f1dc133e1e3ec0fa1adb783376881638f32653ea318b45",
+  "terminal_result": "PASSED",
+  "previous_event_hash": "a79db55c2367fe8ecd9b984e0657b7431eb6d3d6419a453d079134c4da351b40",
+  "closed_from_commit": "b7783bc54ce69b7bb12bc2af34c84f06329e389c",
+  "event_hash": "6bf13523c89c86a9be135a024b4fbf3b06729255cacb284a13d00e4622afebce"
+}

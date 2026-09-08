@@ -1,0 +1,133 @@
+{
+  "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_DECISION_PACKET_v0",
+  "assumptions_requiring_director_approval": [
+    {
+      "plain_meaning": "The modeled state repeats at both ends of a line segment.",
+      "reason": "This is the strongest recovered CP-NLSE domain contract.",
+      "risk": "Results need not apply to isolated, infinite, or wall-bounded systems.",
+      "source_status": "SOURCE_RECOVERED",
+      "technical_assumption": "Periodic one-dimensional spatial domain for a CP-NLSE v0"
+    },
+    {
+      "plain_meaning": "The model evolves density-like, velocity-like, rotor, and curvature variables without claiming a microscopic derivation.",
+      "reason": "It preserves the distinctive recovered structure.",
+      "risk": "Mathematical closure would not establish physical ontology or LSDA emergence.",
+      "source_status": "SOURCE_RECOVERED_WITH_MISSING_PHYSICAL_INTERPRETATION",
+      "technical_assumption": "Phenomenological four-field LCRD-v3 state"
+    }
+  ],
+  "director_decision_required": true,
+  "model_or_postulate_created": false,
+  "option_selected": "NONE",
+  "options": [
+    {
+      "distinctiveness_risk": "HIGH_RISK_OF_GENERIC_NLSE_EQUIVALENCE",
+      "first_theorem_grade_question": "Given the frozen CP-NLSE equation and background, which interaction-dependent dispersion relation follows, and are the preserved squared and additive formulas compatible, special limits, or contradictory?",
+      "mathematical_workload": "MODERATE_AFTER_EQUATION_DECISION",
+      "new_postulates_required": [
+        "select or replace one governing nonlinear equation",
+        "resolve or postulate the nonlinear dispersion contract",
+        "parameter ranges",
+        "admissible initial data",
+        "invariant and failure contract",
+        "reference implementation contract"
+      ],
+      "option_id": "OPTION_A",
+      "plain_language_case": "Shortest route to an executable surrogate because the numerical scaffolding and periodic setting are strongest.",
+      "reject_result": "No selected equation is internally consistent with the frozen data and reduction contracts.",
+      "remaining_contradictions": [
+        "three incompatible governing-equation records",
+        "squared-versus-additive interaction-frequency conflict"
+      ],
+      "source_recovered": [
+        "one-dimensional periodic domain",
+        "periodic boundary conditions",
+        "numerical and diagnostic scaffolding from prior bounded review"
+      ],
+      "support_result": "A consistent branch-dependent dispersion is derived and produces a closed next theorem target.",
+      "title": "Nonlinear CP-NLSE minimal computational core",
+      "weaken_result": "The equation reduces to a generic known nonlinear-wave model or its claimed invariant fails."
+    },
+    {
+      "distinctiveness_risk": "LOWER_GENERICITY_RISK_HIGHER_POSTULATE_BURDEN",
+      "first_theorem_grade_question": "After the missing data and normalization are explicitly supplied, do the recovered four-field equations form a closed evolution system with preserved constraints, or can a counterexample show underdetermination?",
+      "mathematical_workload": "HIGH_BUT_MORE_DISTINCTIVE",
+      "new_postulates_required": [
+        "admissible initial and boundary data",
+        "normalization",
+        "complete parameter ranges",
+        "nu_code meaning",
+        "implementation contract",
+        "failure and invariant rules"
+      ],
+      "option_id": "OPTION_B",
+      "plain_language_case": "Preserves the most distinctive recovered CCFT-like rotor-curvature structure.",
+      "reject_result": "The system remains underdetermined or internally inconsistent under every bounded completion considered.",
+      "remaining_contradictions": [
+        "no variational derivation",
+        "no accepted LSDA coarse-graining map",
+        "physical units and bearer absent"
+      ],
+      "source_recovered": [
+        "state tuple (rho,u,R,K)",
+        "Q_rotor=c1 R_x+c2 K_xx",
+        "rotor-curvature evolution couplings"
+      ],
+      "support_result": "The four-field system closes and yields a well-defined evolution problem.",
+      "title": "LCRD-v3 minimal phenomenological core",
+      "weaken_result": "Closure exists only after multiple arbitrary constitutive assumptions or is equivalent to a known hydrodynamic model."
+    },
+    {
+      "distinctiveness_risk": "DIFFUSES_VERTICAL_COMPLETION",
+      "first_theorem_grade_question": "Which candidate reaches a decisive mathematical result under the smaller postulate burden?",
+      "mathematical_workload": "VERY_HIGH_AND_DUPLICATIVE",
+      "new_postulates_required": [
+        "two complete model contracts",
+        "two implementations",
+        "two theorem packets",
+        "explicit no-combination rule"
+      ],
+      "option_id": "OPTION_C",
+      "plain_language_case": "Avoids premature preference while forbidding an unsupported combined wave-rotor model.",
+      "reject_result": "Neither candidate closes within the frozen construction budget.",
+      "remaining_contradictions": [
+        "all branch-specific blockers remain"
+      ],
+      "source_recovered": [
+        "all CP-NLSE and LCRD-v3 contracts remain lineage-separated"
+      ],
+      "support_result": "Both candidates close independently and can be compared without mixing assumptions.",
+      "title": "Retain two independent v0 candidates",
+      "weaken_result": "Only one candidate closes, making the second an unnecessary parallel burden."
+    },
+    {
+      "distinctiveness_risk": "MAY_DELAY_EXECUTABLE_MODEL_INDEFINITELY",
+      "first_theorem_grade_question": "Can a proposed foundational principle impose a nontrivial restriction that selects or excludes a branch without assuming its equations?",
+      "mathematical_workload": "LOW_IMMEDIATE_HIGH_FOUNDATIONAL_UNCERTAINTY",
+      "new_postulates_required": [
+        "one explicit foundational CCFT principle before branch mechanics"
+      ],
+      "option_id": "OPTION_D",
+      "plain_language_case": "Stops model completion if choosing either branch would obscure the missing physical or architectural principle.",
+      "reject_result": "No bounded foundational postulate has decision value for the candidate branches.",
+      "remaining_contradictions": [
+        "branch conflicts and operational gaps remain unresolved"
+      ],
+      "source_recovered": [
+        "four contracts remain preserved without forcing a model"
+      ],
+      "support_result": "One principle sharply constrains the allowable model class.",
+      "title": "Neither branch ready without a foundational postulate",
+      "weaken_result": "The proposed principle is only an evaluation rule or restatement of known physics."
+    }
+  ],
+  "packet_status": "PREPARED_FOR_FUTURE_STAGE_1_REVIEW_NO_OPTION_SELECTED",
+  "plain_language_unresolved_issue": "The archive supplied four useful contracts but no complete CCFT model. A director must choose which branch, if any, should receive explicit new postulates and become the first frozen CCFT-v0 hypothesis.",
+  "rebuttable_preparation_recommendation": {
+    "recommendation": "Use CP-NLSE as the shortest candidate for a first computational surrogate while retaining LCRD-v3 as the stronger distinctive alternative; do not select either until Stage 1 director review.",
+    "selected_option": "NONE",
+    "why_other_questions_wait": "Existence, conservation, stability, and novelty questions depend on a frozen governing model and provenance-labeled assumptions."
+  },
+  "schema_id": "toe.ccft_v0.research_director_decision_packet.v0",
+  "why_it_matters": "Dispersion, conservation, existence, stability, and novelty results are meaningless until one exact model contract is frozen. Combining incompatible or incomplete branches would make later theorems apply to no well-defined theory."
+}

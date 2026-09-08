@@ -1,0 +1,188 @@
+{
+  "accepted_base_commit": "aab55ab80ffdac7d74b2349aed774fd5faab1509",
+  "authorization_commit": "eba8a7eb3d99340a2425e8ff5bfe73c959a6760a",
+  "branch": "codex/post-qft-route-identity-repair-baseline-reassessment-v0",
+  "broad_python_baseline": "REPRODUCIBLY_RED_AND_EXHAUSTIVELY_RECLUSTERED",
+  "captured_at_utc": "2026-07-24T00:49:41Z",
+  "comparability": {
+    "added_guards_executed_in_frozen_reassessment": false,
+    "current_collected_added_guards": 17,
+    "current_collected_common_with_frozen_inventory": 13756,
+    "current_collected_inventory_count": 13773,
+    "current_collected_removed_ids": 0,
+    "frozen_execution_inventory_count": 13756,
+    "frozen_execution_inventory_sha256": "5c475435973983d726b52bff79a1684ee56e6122e5af9ed63ea7fbff19750caf",
+    "junit_ids_and_order_exactly_frozen": true
+  },
+  "custody": {
+    "all_reassessment_outputs_resolved_under_toe_recovery": true,
+    "dirty_main_existing_regular_file_bytes_unchanged": true,
+    "dirty_main_head": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "dirty_main_preserved_missing_tracked_deletions": 3,
+    "dirty_main_status_path_set_unchanged": true,
+    "dirty_main_total_dirty_paths": 629,
+    "dirty_main_touched_by_reassessment": false,
+    "dirty_main_tracked_modifications": 7,
+    "dirty_main_untracked_files": 622,
+    "maintenance_output_root": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0"
+  },
+  "delta_from_post_aggregate_baseline": {
+    "current_nonpassing": 462,
+    "net_nonpassing_reduction": 64,
+    "newly_nonpassing": 4,
+    "persistent_nonpassing": 458,
+    "prior_nonpassing": 526,
+    "recovered_prior_nonpassing": 68,
+    "status_transitions_within_persistent_nonpassing": 0
+  },
+  "execution": {
+    "elapsed_seconds": 8360.905999999988,
+    "errors": 57,
+    "failed": 405,
+    "finished_utc": "2026-07-24T00:45:33.837366+00:00",
+    "nonpassing": 462,
+    "passed": 12696,
+    "pytest_exit_code": 1,
+    "skipped": 598,
+    "started_utc": "2026-07-23T22:26:12.923469+00:00",
+    "tests": 13756,
+    "tracked_status_after": "EMPTY",
+    "unexpected_untracked_source": "NONE",
+    "validation_behavior": "READ_ONLY"
+  },
+  "exhaustive_accounting": {
+    "family_outcome_sum": 462,
+    "first_cause_clusters": 313,
+    "highest_leverage_remaining_concentrated_root": {
+      "family": "equation_compendium_hash",
+      "outcomes": 50,
+      "root_id": "EQUATION_COMPENDIUM_BOUNDARY_HASH_DRIFT"
+    },
+    "highest_leverage_remaining_family": "missing_artifacts",
+    "highest_leverage_remaining_family_outcomes": 218,
+    "thirteen_custody_currency_outcomes_remain_independently_classified": true,
+    "unclassified_outcomes": 0
+  },
+  "external_evidence": [
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_AGGREGATE_CURRENT_COLLECTION_COMPARABILITY_v0.json",
+      "sha256": "8e04f42fc2535957675f2f14d189842df652142280faf7b8e2ed54ec3ae5fbc7"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/post_aggregate_mapped_frozen_nonlean_junit_v0.xml",
+      "sha256": "fa53a9c2fa309ecdd32c9e96b929dc94222e850c713a910d9f38975d4cecbb3b"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/post_aggregate_mapped_frozen_nonlean_pytest_v0.log",
+      "sha256": "f841aa742da3d9b08906c1f355aac17cb8372bfc2644611a3bbd78dfa9de8c9f"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_OUTCOME_DELTA_v0.json",
+      "sha256": "967c42d3257386d28d244e23377b2014b0aa4790b258a2bf43fb2d7ce5ad0e81"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_OUTCOME_ENTRIES_v0.json",
+      "sha256": "eca51c9e15c909b165efa2bff2e78cb7086a5b454b973a4a1b58364adf71d795"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_MISSING_EXPECTATION_STATUS_v0.json",
+      "sha256": "471d241775c8fbd9c69b124e1ab502d7c74f084ff0896d36d612bf88df89f134"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_FIRST_CAUSE_CLUSTERS_v0.json",
+      "sha256": "69a1c483973554b8c7c4e883cdfb1f9457df0402ef3063f0f5c5b3b52a94cefe"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/POST_QFT_ROUTE_BASELINE_REASSESSMENT_EXECUTION_MANIFEST_v0.json",
+      "sha256": "c37e773b0379e5060a7459fad158a508ce1087db1ce3254bf4bf74d5db8ea20e"
+    },
+    {
+      "path": ".toe-recovery/custody-v0/post-qft-route-identity-repair-baseline-reassessment-v0/build_post_qft_route_analysis_v0.py",
+      "sha256": "c2e755762be87d65c8eed36a976f6d244435e8b76f747d9074d68d245a2df188"
+    }
+  ],
+  "interaction_outcomes": {
+    "newly_nonpassing": {
+      "count": 4,
+      "interpretation": "Four downstream historical packet-result-review assertions still compare the modified v0 loader's current file SHA-256 with its intentionally preserved historical generator pin.",
+      "root_family": "pillar_ledger_staging_selector",
+      "root_id": "PILLAR_ARTIFACT_CURRENCY_DRIFT"
+    },
+    "recovered_beyond_qft_route_family": {
+      "count": 1,
+      "interpretation": "The existing fresh-subprocess deterministic regeneration outcome recovered as a beneficial interaction with preserved historical generator identity.",
+      "nodeid": "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_result_review.py::test_two_fresh_subprocess_regenerations_are_byte_exact_and_nonrewriting"
+    }
+  },
+  "lean_status": "UNCHANGED_NOT_EXECUTED_IN_THIS_CYCLE",
+  "missing_artifact_expectation_status": {
+    "automatic_fixture_scaling_authorized": false,
+    "current_family_outcomes": 218,
+    "family_changed_by_qft_route_repair": false,
+    "fixture_candidates": 181,
+    "provenance_blocked": 36,
+    "stale_non_missing_hash_expectation": 1
+  },
+  "qft_route_family_status": {
+    "focused_outcomes_previously_recovered": 67,
+    "frozen_inventory_outcomes_recovered": 67,
+    "new_qft_route_family_outcomes": 0,
+    "remaining_qft_route_family_outcomes": 0,
+    "status": "REMOVED_FROM_MEASURED_NONPASSING_BASELINE"
+  },
+  "remaining_first_cause_families": [
+    {
+      "family": "missing_artifacts",
+      "outcomes": 218
+    },
+    {
+      "family": "other_packet_contract",
+      "outcomes": 65
+    },
+    {
+      "family": "pillar_ledger_staging_selector",
+      "outcomes": 61
+    },
+    {
+      "family": "other_artifact_currency",
+      "includes_independently_classified_post_decoupling_source_custody_drift": 13,
+      "outcomes": 50
+    },
+    {
+      "family": "equation_compendium_hash",
+      "outcomes": 50
+    },
+    {
+      "family": "authority_expectations",
+      "outcomes": 8
+    },
+    {
+      "family": "environment_or_path_identity",
+      "outcomes": 6
+    },
+    {
+      "family": "other_committed_assertions",
+      "outcomes": 4
+    }
+  ],
+  "required_next_action": "INDEPENDENT_REVIEW_OF_THIS_REASSESSMENT_RESULT_ONLY",
+  "resolved_unit_seam_rows": "0/12",
+  "result": "POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_COMPLETE_STILL_BLOCKED_AWAITING_INDEPENDENT_REVIEW",
+  "schema_id": "REPOSITORY_POST_QFT_ROUTE_IDENTITY_REPAIR_BASELINE_REASSESSMENT_RESULT_20260724_v0",
+  "scientific_posture": "B-BLOCKED",
+  "scientific_resumption": "NOT_AUTHORIZED",
+  "scope": {
+    "automatic_successor_cycle": false,
+    "diagnostic_only": true,
+    "fixture_conversion_scaled": false,
+    "lean_activity": false,
+    "repair_performed": false,
+    "reports_or_fixtures_created_in_source_tree": false,
+    "same_frozen_non_lean_test_inventory": true,
+    "scientific_activity": false,
+    "scientific_resumption_authorized": false,
+    "tests_identities_or_generators_modified": false,
+    "v2_enrollment_authorized": false
+  },
+  "v2_enrollment": "NOT_AUTHORIZED"
+}

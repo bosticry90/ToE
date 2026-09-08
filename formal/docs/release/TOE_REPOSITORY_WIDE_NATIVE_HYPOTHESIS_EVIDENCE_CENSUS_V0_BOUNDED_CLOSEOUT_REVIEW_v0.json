@@ -1,0 +1,40 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_REVIEW_v0",
+  "automatic_successor_selected": false,
+  "captured_at_utc": "2026-07-31T09:00:00Z",
+  "checks": {
+    "all_five_attempts_are_closed_and_passed": true,
+    "bounded_review_completion_is_not_claim_exhaustion": true,
+    "candidate_action_and_native_gravitational_action_remain_unselected": true,
+    "canonical_evidence_promotion_remains_zero": true,
+    "event_chain_has_five_matched_open_close_pairs": true,
+    "frontier_selection_and_one_prerequisite_are_preserved": true,
+    "gravitational_survey_remains_unauthorized_and_unopened": true,
+    "mandatory_exit_completed": true,
+    "no_blocked_stage_or_repair_attempt_exists": true,
+    "no_scientific_successor_is_automatically_opened": true,
+    "program_is_terminal": true,
+    "stage_5_result_and_review_hashes_are_preserved": true
+  },
+  "failed_checks": [],
+  "program_terminal": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+    "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34"
+  },
+  "schema_id": "toe.repository_wide_native_hypothesis_evidence_census.bounded_closeout_review.v0",
+  "scientific_success_claimed": false,
+  "terminal_status": {
+    "bounded_review": "COMPLETE_FOR_THE_BOUNDED_REVIEW",
+    "canonical_evidence_promoted": false,
+    "claim_exhaustion": "REPOSITORY_CLAIM_EXHAUSTION_NOT_ESTABLISHED",
+    "mandatory_exit": "COMPLETED",
+    "native_gravitational_action": "NONE_ESTABLISHED",
+    "program": "CLOSED_AFTER_MANDATORY_EXIT",
+    "selected_frontier": "HYP_TOE_NATIVE_GRAVITATIONAL_PRINCIPLE_ACTION_SELECTION_v0",
+    "selected_frontier_readiness": "AFTER_ONE_PREREQUISITE",
+    "successor_program": "NONE_AUTHORIZED_OR_OPENED"
+  },
+  "verdict": "ACCEPT_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_TERMINAL_CLOSEOUT_NO_PROMOTION_ACTION_SELECTION_OR_AUTOMATIC_SUCCESSOR"
+}

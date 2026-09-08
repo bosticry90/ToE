@@ -1,0 +1,204 @@
+{
+  "schema_id": "JULY_16_19_REPOSITORY_INTEGRATION_AND_LIVE_AUTHORITY_REPAIR_EXECUTION_RESULT_REVIEW_20260727_v0",
+  "captured_at_utc": "2026-07-27T00:00:00Z",
+  "review_target": "review_july_16_19_repository_integration_and_live_authority_repair_execution_result_v0",
+  "consumed_maintenance_target": "execute_july_16_19_repository_integration_and_live_authority_repair_v0",
+  "verdict": "ACCEPTED_MAINTENANCE_INTEGRATION_COMPLETE_SCIENTIFIC_RECONCILIATION_PENDING",
+  "implementation_tip": {
+    "branch": "codex/july-16-19-restructured-reconciliation",
+    "commit": "593a64cdf1f54302f9da1479dad039689e66ffba",
+    "tree": "41eb253888b64ee8e86ca2e39ddac05c7b830a08",
+    "binding_rule": "This review binds the validated implementation tip. Closeout records may follow without changing the reviewed scientific or maintenance implementation bytes."
+  },
+  "protected_lineages": {
+    "source": {
+      "tag": "preservation/july-16-19-source-5aeb74ae",
+      "commit": "5aeb74ae46db2c397da40be0286287a5a63d5642",
+      "role": "PRESERVED_SOURCE_NOT_FUTURE_TRUNK"
+    },
+    "restructured_baseline": {
+      "tag": "preservation/restructured-baseline-a099c686",
+      "commit": "a099c6867493d48a7aaba2f79bf2e29ecbf2cfd3",
+      "role": "AUTHORITATIVE_RESTRUCTURED_RECONCILIATION_BASE"
+    },
+    "post_recovery_scientific_lineage": {
+      "tag": "preservation/post-recovery-scientific-lineage-e785b98d",
+      "commit": "e785b98d8aa9bc7c755e5b6767706bcd29d285a6",
+      "role": "PRESERVED_SEPARATELY_PENDING_SCIENTIFIC_ADJUDICATION"
+    }
+  },
+  "history_accounting": {
+    "recorded_base_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "origin_main_at_review": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+    "restructured_commits_after_recorded_base": 143,
+    "reconciliation_commits_after_restructured_baseline_at_implementation_tip": 47,
+    "total_commits_ahead_of_origin_main_at_implementation_tip": 190,
+    "commits_behind_origin_main_at_implementation_tip": 0,
+    "merge_commits_after_restructured_baseline_at_implementation_tip": 0,
+    "source_commits_requiring_disposition": 44,
+    "source_commits_with_recorded_disposition": 44,
+    "blind_merge_used": false,
+    "restructured_architecture_prevailed": true,
+    "only_intended_commits_accounted_for": true,
+    "unexplained_merges_rebases_or_foreign_commits": false
+  },
+  "custody": {
+    "external_custody_root": "C:/Users/psboy/Documents/ToE-custody/20260727T220205Z",
+    "dirty_checkout_extant_archive": {
+      "filename": "toe_dirty_checkout_extant_files.zip",
+      "sha256": "83c634813cad11de1a8d0389ef9de32526c291b609d498d8c7d6118becfa2902"
+    },
+    "deleted_tracked_base_archive": {
+      "filename": "toe_deleted_tracked_base_files.zip",
+      "sha256": "efd53a7cf7f6d84095e4bb5931c65bb16bc3aca4c03ca250a5d8a936b0a03e58"
+    },
+    "manifest": {
+      "filename": "custody_manifest.json",
+      "sha256": "5ef2a369f40e37b41d6bad5dc1e1f442bc0f8344811386fdf27acadfc5c4ae39"
+    },
+    "external_eotwash_bytes_disposition": "IGNORED_EXTERNAL_CUSTODY_NOT_COMMITTED"
+  },
+  "committed_reconciliation_records": {
+    "classification": {
+      "path": "formal/docs/release/JULY_16_19_DIRTY_CHECKOUT_TRANCHE_CLASSIFICATION_20260727_v0.json",
+      "sha256": "df127d02604fe0324be380db4b45f6f1a75bc034871675072a0746ccf571a81f",
+      "classified_paths": 629
+    },
+    "source_commit_disposition": {
+      "path": "formal/docs/release/JULY_16_19_RESTRUCTURED_RECONCILIATION_SOURCE_COMMIT_DISPOSITION_20260727_v0.json",
+      "sha256": "cd65551a7de3cf68de60a60039f6fcf92ca9842d0c3a61ec99ae36b832b4c115"
+    },
+    "divergent_lineage_inventory": {
+      "path": "formal/docs/release/JULY_16_19_RESTRUCTURED_RECONCILIATION_DIVERGENT_LINEAGE_INVENTORY_20260727_v0.json",
+      "sha256": "8186c8e4d430e14d419327b35118f2e1a2ba3e9a439a3729873cc3bc8cece5f8"
+    },
+    "front_door_disposition": {
+      "path": "formal/docs/release/REPOSITORY_FRONT_DOOR_LINK_DISPOSITION_20260727_v0.json",
+      "sha256": "19b4de63c4b1a55e2b55a5abe359de4b42f095cc8872b643536432c41d2dd4aa",
+      "explained_baseline_relative_deletions": [
+        "MAXWELL_DIRAC_ROBUSTNESS_SUMMARY.md",
+        "PUBLIC_OVERVIEW.md",
+        "TECHNICAL_REPOSITORY_GUIDE.md"
+      ]
+    },
+    "historical_cross_reference_debt": {
+      "path": "formal/output/validation_profiles/HISTORICAL_CROSS_REFERENCE_DEBT_20260727_v1.json",
+      "sha256": "2422330ee34eef76ceb1fa7c561183dfcb84d20c97bc49165031fd4695614b25",
+      "reference_resolution_domain": "COMMITTED_GIT_PATHS_ONLY",
+      "historical_missing_references": 497,
+      "current_missing_references": 0
+    }
+  },
+  "validation": {
+    "immutable_current_control_profile_v9": {
+      "profile": "CURRENT_CONTROL_PLANE_PROFILE_20260725_v9",
+      "implementation_tip": "593a64cdf1f54302f9da1479dad039689e66ffba",
+      "nodeid_count": 3644,
+      "passed": 3287,
+      "skipped": 357,
+      "failed": 0,
+      "pytest_exit_code": 0,
+      "elapsed_seconds": 2236.54585647583,
+      "junit_sha256": "5d9b652986e5c53efade7da030399c3024522967f307d0509ba7493e5fdf1be0",
+      "result_sha256": "d85559ce4f6ceaec5c9e79a002f4846276e935e061bf1b8947607c418a47546e",
+      "stdout_sha256": "72718aec98f6cd1ac63c2ffc0f8c621bbdf1bed68231ea1b484a83fff7738d08",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runner_sha256": "f8d985ae7c33badd14744c78523c4188f904bff9ab21d15b3bcfc3023e4e45e9",
+      "verdict": "PASS"
+    },
+    "split_tranche_profile": {
+      "profile": "JULY_16_19_RECONCILED_TRANCHE_VALIDATION_PROFILE_RESULT_20260727_v0",
+      "implementation_tip": "593a64cdf1f54302f9da1479dad039689e66ffba",
+      "module_count": 125,
+      "nodeid_count": 1463,
+      "current_overlay_nodeid_count": 52,
+      "current_overlay_failed": 0,
+      "current_overlay_verdict": "PASS",
+      "historical_overlay_nodeid_count": 1411,
+      "historical_overlay_recorded_nonpassing_count": 137,
+      "historical_overlay_verdict": "COMPLETE_WITH_RECORDED_FAILURES",
+      "historical_overlay_current_verdict_influence": "NONE",
+      "pytest_exit_code": 1,
+      "elapsed_seconds": 342.18453884124756,
+      "junit_sha256": "f43a19c703715f6c8e6536ec70ec2f2c632508abb417ec92a654b1241558487a",
+      "result_sha256": "f7737fa91f0a9f6a123f06bf70fbfd55d27f9ddbb41215778f19412376f34acd",
+      "stdout_sha256": "869a4eec665a112a7756d77e9462ad4ca6c90b7b699b9936b98eae25ffa7cb7d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runner_sha256": "a13e264af105efd5f44b9430a082e0202369e32192f85ad5e50eba73df304f77",
+      "interpretation": "The nonzero aggregate exit records preserved historical stage-state failures and has no influence on the passing current maintenance overlay."
+    },
+    "full_lean_build": {
+      "command": "python -m formal.python.tools.lean_bounded_lake --jobs 1 --target ToeFormal --target ToeFormalAll",
+      "implementation_tip": "593a64cdf1f54302f9da1479dad039689e66ffba",
+      "exit_code": 0,
+      "elapsed_seconds": 36.40594506263733,
+      "log_sha256": "f60a08afcb0eb8878e0e3df5400d28ff3eec48a5e91486f7744c26588decef5a",
+      "result_sha256": "5877d104b2ec58b345d035482a197ddc5e14918c02cf51c9855110797da1a979",
+      "runner_sha256": "3f0d2564bc2103969e6da109faf716c2659a233c1483956603bb7ea426427ce8",
+      "verdict": "PASS_WITH_NONFATAL_STYLE_WARNINGS"
+    },
+    "fresh_detached_clean_checkout": {
+      "implementation_tip": "593a64cdf1f54302f9da1479dad039689e66ffba",
+      "head_matches": true,
+      "clean_before": true,
+      "clean_after": true,
+      "focused_tests_passed": 65,
+      "historical_cross_reference_check_passed": true,
+      "aggregate_check_passed": true,
+      "scientific_authority_check_passed": true,
+      "git_diff_check_passed": true,
+      "result_sha256": "1db24b64b5946290049b341630acdb3b3b11f05df25476263288cf0a92a4138e",
+      "log_sha256": "7e61d06533142f4f89b5df9db33db054806c98f268a3d20879ae3fc498972a4b",
+      "runner_sha256": "2ec0eafdb923edadacd2f3b5e3d7889c0581e54f9d554b2833e160f8b0581136",
+      "verdict": "PASS"
+    },
+    "aggregate_generation": {
+      "committed_modules_at_implementation_tip": 1241,
+      "verdict": "PASS"
+    },
+    "scientific_authority_consistency": {
+      "registry_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+      "lean_current_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+      "lean_current_authority_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+      "exact_named_value_comparison_passed": true,
+      "select_target_regression_passed": true,
+      "verdict": "PASS"
+    },
+    "git_diff_check": {
+      "verdict": "PASS"
+    },
+    "worktree_at_implementation_tip": {
+      "index_clean": true,
+      "working_tree_clean": true
+    }
+  },
+  "front_door_and_deletion_review": {
+    "baseline_relative_tracked_deletions": 3,
+    "unexplained_tracked_deletions": 0,
+    "readme_entry_links_resolve": true,
+    "canonical_status_and_authority_links_resolve": true,
+    "public_recap_and_release_entry_paths_resolve": true
+  },
+  "scientific_firewall": {
+    "canonical_scientific_target": "prepare_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_packet_v2",
+    "scientific_target_rotated": false,
+    "july_16_19_packet_chain_scientifically_adopted": false,
+    "post_recovery_scientific_lineage_adopted": false,
+    "post_recovery_scientific_lineage_rejected": false,
+    "new_physics_authorized": false,
+    "yukawa_execution_or_rerun_authorized": false,
+    "pipe_repair_and_rerun_authorized": false,
+    "preserved_observations_validation_use_authorized": false,
+    "terminal_yukawa_selector_authorized": false,
+    "production_or_validation_claim_authorized": false
+  },
+  "closeout": {
+    "maintenance_execution_complete": true,
+    "maintenance_result_accepted": true,
+    "automatic_maintenance_successor": null,
+    "scientific_reconciliation_required": true,
+    "scientific_reconciliation_status": "PENDING_SEPARATE_SCIENTIFIC_AUTHORITY",
+    "permitted_next_record": "NONEXECUTING_ORDERED_ADOPTION_OR_BOUNDED_RECONCILIATION_REPLAY_DECISION_HANDOFF",
+    "scientific_authority_advance_authorized_by_this_review": false
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schema_id": "REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_20260723_v0",
+  "captured_at_utc": "2026-07-23T21:36:45Z",
+  "target": "implement_repository_qft_route_evidence_identity_domain_repair_v0_once",
+  "status": "AUTHORIZED_ONE_BOUNDED_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR",
+  "accepted_lineage": {
+    "commit": "693760bf39910e054e22a22d69ef12206f0abbe0",
+    "identity_adjudication_review": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_HASH_IDENTITY_DOMAIN_ADJUDICATION_RESULT_REVIEW_20260723_v0.json",
+    "identity_adjudication_review_sha256": "aa26118dabb54b6e0009bedd6c5a108df7ed6f013c6cd9d6c1f859d455947568",
+    "em_provenance_review": "formal/docs/release/REPOSITORY_EM_ROUTE_SOURCE_PIN_PROVENANCE_AND_AUTHORITY_REVIEW_RESULT_REVIEW_20260723_v0.json",
+    "em_provenance_review_sha256": "f0e184bd99fd26f6bcfbe8363b387ca5fe08d3fb85034d16b25ae247176d1cf8",
+    "accepted_frozen_identity_repair_review": "formal/docs/release/REPOSITORY_HASH_REFRESH_AND_TRACKED_BLOB_IDENTITY_REPAIR_RESULT_REVIEW_20260721_v0.json",
+    "accepted_frozen_identity_repair_review_sha256": "2ad83053fdeb578a3b5e733e453cc0f87389b78c31de8262175fdf69831246d4"
+  },
+  "bound_family": {
+    "baseline_nonpassing": 526,
+    "target_outcomes": 67,
+    "consumer_files": [
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
+      "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py"
+    ],
+    "shared_v0_loader": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
+    "shared_v1_loader": "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py",
+    "route_identity_count": 9
+  },
+  "required_identity_contract": {
+    "frozen_commit": "7c624b5b479e2e2a450fd38777d88b1d08a02c25",
+    "identity_counts": {
+      "FROZEN_GIT_BLOB_SHA256": 8,
+      "CANONICAL_ARTIFACT_SHA256": 1
+    },
+    "em_identity": {
+      "path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "identity_type": "FROZEN_GIT_BLOB_SHA256",
+      "git_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+      "sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c"
+    },
+    "scalar_result_review_identity_type": "CANONICAL_ARTIFACT_SHA256",
+    "checkout_bytes_authoritative": false,
+    "one_reviewed_identity_resolver": true
+  },
+  "historical_preservation": {
+    "v0_pins_preserved": true,
+    "v1_pins_preserved": true,
+    "historical_release_packets_preserved": true,
+    "historical_output_packets_and_manifests_preserved": true,
+    "historical_lean_mirror_preserved": true,
+    "historical_pin_values_must_not_be_rewritten": true
+  },
+  "permitted_implementation": [
+    "add one versioned current nine-entry typed identity contract",
+    "add one reviewed identity-domain resolver",
+    "route the v0 and v1 shared loader paths through the typed resolver without changing historical pin constants",
+    "make the minimum exact edits to the two 67-outcome consumer test files needed to assert the current typed contract",
+    "add narrowly scoped resolver or contract tests if required",
+    "validate all 67 mapped outcomes in focused, fresh LF, and fresh actual-CRLF checkouts",
+    "write implementation, validation, result, and independent-review governance records"
+  ],
+  "permitted_tracked_implementation_paths": [
+    "formal/docs/release/QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_CONTRACT_20260723_v0.json",
+    "formal/python/tools/qft_route_evidence_identity.py",
+    "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
+    "formal/python/tools/pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py",
+    "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection.py",
+    "formal/python/tests/test_pillar_seam_unit_mapping_ledger_blocker_response_route_selection_v1.py",
+    "formal/python/tests/test_qft_route_evidence_identity_domain_contract.py",
+    "formal/docs/release/CURRENT_MAINTENANCE_AUTHORITY_v0.json",
+    "formal/docs/release/QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_SELECTION_20260723_v0.json",
+    "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_20260723_v0.json",
+    "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_REVIEW_20260723_v0.json",
+    "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_20260723_v0.json",
+    "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_RESULT_REVIEW_20260723_v0.json"
+  ],
+  "authorized_cycle": {
+    "repair_implementations": 1,
+    "independent_result_reviews": 1,
+    "typed_contract_additions": 1,
+    "identity_resolver_additions": 1,
+    "historical_pin_modifications": 0,
+    "underlying_source_or_artifact_modifications": 0,
+    "scientific_modifications": 0,
+    "registry_or_v2_actions": 0,
+    "lean_actions": 0,
+    "unrelated_baseline_actions": 0,
+    "automatic_successor_actions": 0
+  },
+  "acceptance_requirements": {
+    "nine_route_identities_explicitly_typed": true,
+    "frozen_git_blob_identities": 8,
+    "canonical_artifact_identities": 1,
+    "historical_pins_preserved": true,
+    "em_current_identity_sha256": "0a977bd478e39141cc7d198b706bad46f9e468305fa7586c2ea410b3c742d63c",
+    "em_current_identity_blob_oid": "c255a820200746ea428e1db8f91f7e5e059ff1e7",
+    "focused_67_outcomes": "PASS_OR_EXPLICITLY_RECLASSIFIED",
+    "fresh_lf_checkout": "PASS_AND_CLEAN",
+    "fresh_actual_crlf_checkout": "PASS_AND_CLEAN",
+    "tracked_validation_mutations": 0,
+    "scientific_or_authority_state_changes": 0,
+    "v2_enrolled": false,
+    "independent_review_required": true
+  },
+  "prohibited_actions": [
+    "rewriting any historical v0 or v1 pin",
+    "changing any of the nine underlying source or artifact contents",
+    "enrolling V2",
+    "altering the registry target",
+    "accepting the route map",
+    "resolving any pillar or seam row",
+    "changing scientific formulas or outputs",
+    "incorporating later Maxwell-Dirac work",
+    "resuming scalar-Yukawa work",
+    "performing Lean validation",
+    "addressing unrelated baseline families",
+    "running a broad baseline reassessment",
+    "automatic successor cycle"
+  ],
+  "output_containment": {
+    "authorized_root": ".toe-recovery/custody-v0/qft-route-evidence-identity-domain-repair-v0",
+    "canonical_worktree_writes": "EXACT_PERMITTED_PATHS_ONLY",
+    "dirty_main_reads": "CUSTODY_VERIFICATION_ONLY",
+    "dirty_main_writes": "PROHIBITED"
+  },
+  "scientific_posture": "B-BLOCKED",
+  "resolved_unit_seam_rows": "0/12",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

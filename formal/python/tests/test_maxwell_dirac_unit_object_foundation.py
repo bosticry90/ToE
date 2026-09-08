@@ -73,4 +73,4 @@ def test_foundation_preserves_nonclaims_and_prompt() -> None:
     assert "no stable classical fermionic matter theory" in packet["nonclaims"]
     assert packet["boundary"]["C_k_audit_only"] is True
     assert packet["boundary"]["master_action_promoted"] is False
-    assert foundation.sha256_path(foundation.REPO_ROOT / foundation.PROMPT_RELATIVE_PATH) == foundation.PROMPT_SHA256
+    assert foundation.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

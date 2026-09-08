@@ -1,0 +1,26 @@
+{
+  "schema_id": "REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_REVIEW_20260723_v0",
+  "captured_at_utc": "2026-07-23T21:36:45Z",
+  "review_basis": "INDEPENDENT_LINEAGE_NINE_IDENTITY_DOMAIN_HISTORICAL_PRESERVATION_PATH_SCOPE_VALIDATION_AND_NONSCIENTIFIC_BOUNDARY_REVIEW",
+  "reviewed_packet": {
+    "path": "formal/docs/release/REPOSITORY_QFT_ROUTE_EVIDENCE_IDENTITY_DOMAIN_REPAIR_PACKET_20260723_v0.json",
+    "sha256": "129d76912662442c2d494bb9670a1cebaaf6168515cb3f3d7bd29169f034e55a"
+  },
+  "checks": {
+    "accepted_qft_identity_adjudication_bound": true,
+    "accepted_em_rebinding_justification_bound": true,
+    "accepted_frozen_blob_identity_repair_bound": true,
+    "exact_67_outcome_two_consumer_family_bound": true,
+    "nine_entry_type_cardinality_is_eight_git_blob_plus_one_canonical_artifact": true,
+    "em_blob_oid_and_sha256_exactly_bound": true,
+    "one_versioned_contract_and_one_resolver_limit_present": true,
+    "historical_v0_v1_pins_outputs_packets_and_lean_mirror_protected": true,
+    "underlying_nine_source_and_artifact_contents_protected": true,
+    "tracked_write_paths_exhaustively_allowlisted": true,
+    "lf_and_actual_crlf_clean_validation_required": true,
+    "route_map_registry_v2_pillar_seam_science_scalar_maxwell_dirac_and_lean_actions_forbidden": true,
+    "independent_result_review_required": true,
+    "automatic_successor_forbidden": true
+  },
+  "verdict": "ACCEPT"
+}

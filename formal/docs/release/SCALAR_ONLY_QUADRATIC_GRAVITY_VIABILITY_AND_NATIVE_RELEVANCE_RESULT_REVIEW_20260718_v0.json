@@ -1,0 +1,275 @@
+{
+  "accepted_bounded_claim": {
+    "arbitrary_background_or_nonlinear_claim": false,
+    "comparison_viability": "SUPPORTED_ON_MINKOWSKI_AND_ONE_SUPPLIED_CONSTANT_DENSITY_MAXIMALLY_SYMMETRIC_BACKGROUND_AT_LINEAR_SCALAR_ORDER",
+    "dynamical_matter_stability_claim": false,
+    "empirical_viability_claim": false,
+    "matter_trace": "TRACEFUL_SOURCE_DIRECT; EXACTLY_TRACELESS_SUPPLIED_CLASSICAL_SOURCE_ZERO_AT_LINEAR_ORDER",
+    "native_bridge_count": 0,
+    "native_relevance": "NOT_IDENTIFIED",
+    "non_tachyonic_packet_stratum": "alpha<0",
+    "scalar_tensor_domain": "alpha!=0 AND Phi>0",
+    "screening": "FINITE_MASS_SUPPRESSION_ONLY_IN_FIXED_SOURCE_DOMAIN"
+  },
+  "authority": {
+    "consumed_execution_verdict": "COMPLETE_BOUNDED_SCALAR_ONLY_COMPARISON_PENDING_INDEPENDENT_REVIEW",
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_20260718_v0.md",
+        "sha256": "60ba3eafc097f8bf5797e732a4d764429348264b04fc29492a39097d0c51b765"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_20260718_v0.json",
+        "sha256": "a3c31696dcc3999ab8c42e1fa8276f9e1b551af725d8111f917c9122ae0f648f"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_viability_and_native_relevance_v0.py",
+        "sha256": "a178006131e034b1814a2537316539b5d500a640aaa02aef7325e96e8c447bc1"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_viability_and_native_relevance_v0.py",
+        "sha256": "4b7a9c28b691de7f173ac9a2123e31ef78dc654f4d574b0d4aaf2da3594aea3f"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyQuadraticGravityViabilityAndNativeRelevanceV0.lean",
+        "sha256": "e5eebcd7d00afa372e46c5f2ceb52ae71a3ad04714f901c4c19ee22ef0629957"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/scalar_only_quadratic_gravity_viability_and_native_relevance_result_review_v0.py",
+      "sha256": "66d09b7cc3ce2443f32c5b019575d5a34fe4872bf90c06ef7d46e412a6dd7fee"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_RESULT_REVIEW_20260718_v0.md",
+      "sha256": "83251dcff6410749736a353bc1798fea57ce889b019b8dcedb44fa9517e9dc26"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_scalar_only_quadratic_gravity_viability_and_native_relevance_result_review_v0.py",
+      "sha256": "436a0895111d8874951555ab02d3e4844e5f248b193bad031a0576f4fbaeb7ff"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "current_posture": {
+    "alpha": "NOT_SELECTED",
+    "beta_zero": "COMPARISON_RESTRICTION_ONLY",
+    "comparison_viability": "BOUNDEDLY_SUPPORTED",
+    "gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED",
+    "native_relevance": "NOT_ESTABLISHED",
+    "native_scalar_bridges": 0,
+    "scalar_branch": "NOT_ADOPTED",
+    "scalar_only_execution": "COMPLETED_ONCE",
+    "scalar_only_result": "ACCEPTED_18_OF_18_GATES"
+  },
+  "independent_reproduction": {
+    "backgrounds": {
+      "Minkowski": {
+        "Phi0": 1,
+        "R0": 0,
+        "passed": true,
+        "source": 0,
+        "tadpole": 0
+      },
+      "pure_vacuum_constant_curvature": {
+        "equation": "-R0",
+        "only_root": "R0=0",
+        "passed": true
+      },
+      "supplied_constant_density": {
+        "Phi0": "-8*alpha*kappa*rho + 1",
+        "conservation": "nabla_mu T^mu_nu=0 for constant rho by metric compatibility",
+        "delta_T_for_fixed_rho": 0,
+        "full_tensor_lhs_coefficient": "-R0/4",
+        "passed": true,
+        "scalar_perturbation": "(Box_bar+m0^2)delta R=0",
+        "solution": "R0=-4 kappa rho",
+        "source_action_variation": "delta S_rho=-(1/(2c)) integral sqrt(-g) rho g_mu_nu delta g^mu_nu",
+        "stress_tensor": "T_mu_nu=rho g_mu_nu",
+        "tensor_equation_residual": "0",
+        "trace": "T=4 rho",
+        "trace_equation_residual": "0"
+      }
+    },
+    "convention_and_matter_stability": {
+      "R_literature": "-R_packet",
+      "alpha_literature": "-alpha_packet",
+      "alpha_packet_negative_f_RR_literature": "2*a",
+      "alpha_packet_negative_mass_squared": "1/(6*a)",
+      "f_RR_literature": "-2 alpha_packet",
+      "fixed_source_curvature_perturbation": "(Box_bar+m0^2)delta R=(kappa/(6 alpha))delta T",
+      "passed": true,
+      "qualification": "bounded supplied-source curvature-mode stability only; no dynamical-matter stability claim"
+    },
+    "metric_and_trace": {
+      "Box_R_coefficient": "6*alpha",
+      "algebraic_trace": "-R",
+      "exact_trace_equation": "-R+6 alpha Box R=kappa T",
+      "f_R": "2*R*alpha + 1",
+      "f_RR_packet": "2*alpha",
+      "passed": true,
+      "scalar_mass_squared": "-1/(6*alpha)"
+    },
+    "scalar_tensor": {
+      "Jordan_U": "(Phi - 1)**2/(4*alpha)",
+      "Legendre_variable": "Phi=1+2 alpha chi",
+      "auxiliary_equation": "2*alpha*(R - chi)",
+      "canonical_scalar": "varphi=sqrt(3/(2 kappa)) ln Phi",
+      "conformal_domain": "Phi>0",
+      "equivalence_domain": "alpha!=0",
+      "inverse_map": "chi=(Phi-1)/(2 alpha)",
+      "matter_coupling": "A=Phi^-1/2; d ln A/dvarphi=-sqrt(kappa/6)",
+      "passed": true,
+      "physical_potential": "-[1/(8 kappa alpha)](1-exp(-sqrt(2 kappa/3)varphi))^2",
+      "potential_mass_squared_at_minimum": "-1/(6*alpha)"
+    },
+    "trace_and_screening": {
+      "coupling_environment_derivative_fixed_source": 0,
+      "exact_trace_operator": "(Box+m0^2)R=(kappa/(6 alpha))T",
+      "exactly_traceless_classical_source": "NO_DIRECT_LINEAR_SCALAR_EXCITATION",
+      "mass_environment_derivative_fixed_source": 0,
+      "passed": true,
+      "principal_screening_finding": "FINITE_MASS_SUPPRESSION_ONLY",
+      "qualification": "does not cover anomalies, mass terms, curved-background trace generation, or self-consistent nonlinear matter backreaction"
+    }
+  },
+  "post_reproduction_oracles": [
+    {
+      "role": "METRIC_F_R_SCALAR_TENSOR_EQUIVALENCE_ORACLE",
+      "source": "https://arxiv.org/abs/0805.1726"
+    },
+    {
+      "role": "METRIC_F_RR_MATTER_STABILITY_SIGN_ORACLE",
+      "source": "https://arxiv.org/abs/astro-ph/0610734"
+    },
+    {
+      "role": "CONSTANT_CURVATURE_EXISTENCE_AND_STABILITY_ORACLE",
+      "source": "https://arxiv.org/abs/gr-qc/0703044"
+    },
+    {
+      "role": "MODEL_DEPENDENT_SCREENING_AND_LOCAL_CONSTRAINT_ORACLE",
+      "source": "https://arxiv.org/abs/1002.4928"
+    }
+  ],
+  "principal_review_outcome": "SCALAR_BRANCH_COMPARISON_VIABLE_NATIVE_RELEVANCE_UNESTABLISHED",
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 18,
+    "pass_count": 18,
+    "rows": [
+      {
+        "finding": "Five frozen execution artifacts match and exactly one run was consumed.",
+        "gate_id": "G1_EXECUTION_CUSTODY_AND_AUTHORITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "Independent f(R) variation trace reproduces -R+6 alpha Box R=kappa T.",
+        "gate_id": "G2_METRIC_AND_TRACE_EQUATIONS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Packet alpha<0 gives both m0^2>0 and translated f_RR_literature>0.",
+        "gate_id": "G3_SCALAR_MASS_AND_SIGN_TRANSLATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "Auxiliary equation, inverse map, and Jordan potential reproduce with alpha!=0.",
+        "gate_id": "G4_AUXILIARY_AND_LEGENDRE_MAP",
+        "status": "PASS"
+      },
+      {
+        "finding": "Canonical normalization and translated potential curvature reproduce the trace mass.",
+        "gate_id": "G5_CONFORMAL_DOMAIN_NORMALIZATION_AND_POTENTIAL",
+        "status": "PASS"
+      },
+      {
+        "finding": "Minkowski solves the source-free equation with Phi0=1 and no tadpole.",
+        "gate_id": "G6_MINKOWSKI_BACKGROUND",
+        "status": "PASS"
+      },
+      {
+        "finding": "The pure vacuum algebraic condition admits only R0=0.",
+        "gate_id": "G7_PURE_VACUUM_CONSTANT_CURVATURE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The supplied source variation, trace, and conservation law reproduce.",
+        "gate_id": "G8_SUPPLIED_SOURCE_VARIATION_AND_CONSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "The complete tensor equation reduces to -R0/4=kappa rho; the R^2 terms cancel.",
+        "gate_id": "G9_COMPLETE_TENSOR_BACKGROUND_EQUATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "For alpha<0 and rho>=0, Phi0>0 and the fixed-trace scalar perturbation is non-tachyonic.",
+        "gate_id": "G10_BACKGROUND_CONFORMAL_DOMAIN_AND_SCALAR_MODE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Matter stability is reproduced only for the supplied fixed-source curvature mode, not inferred as complete dynamical-matter stability.",
+        "gate_id": "G11_BOUNDED_MATTER_CURVATURE_STABILITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "The no-source statement is restricted to an exactly traceless supplied classical source at linear order.",
+        "gate_id": "G12_EXACT_TRACE_COUPLING_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The exact fixed-source operator has constant mass and coupling; only Yukawa suppression is established.",
+        "gate_id": "G13_SCREENING_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "The accepted scalar-sensitive 00 and scalar-zero direct stationary 0i map is not extended to nonlinear rotating systems.",
+        "gate_id": "G14_RETAINED_00_0I_SCOPE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Noninvertible and invalid conformal surfaces fail closed; no alpha value is selected.",
+        "gate_id": "G15_PARAMETER_AND_FRAME_DOMAINS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Each audited surface fails FIELD_DEFINITION first; later resemblance does not override the failure.",
+        "gate_id": "G16_NATIVE_BRIDGE_FAILURES",
+        "status": "PASS"
+      },
+      {
+        "finding": "No branch, parameter, principle, matter sector, action, or downstream observable is adopted.",
+        "gate_id": "G17_NO_HIDDEN_ADOPTION",
+        "status": "PASS"
+      },
+      {
+        "finding": "The bounded two-axis result is accepted and authority rotates only to scientific-response selection.",
+        "gate_id": "G18_PRINCIPAL_RESULT_AND_STOP",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "SCALAR_ONLY_QUADRATIC_GRAVITY_VIABILITY_AND_NATIVE_RELEVANCE_RESULT_REVIEW_20260718_v0",
+  "scope": {
+    "alpha_sign_or_value_adopted": false,
+    "arbitrary_background_stability_claimed": false,
+    "beta_zero_adopted": false,
+    "bounded_comparison_result_accepted": true,
+    "empirical_fitting_authorized": false,
+    "frame_dragging_reopened": false,
+    "gravitational_action_selected": false,
+    "independent_result_review_executed": true,
+    "master_action_mutation_authorized": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "native_scalar_bridge_identified": false,
+    "nonlinear_stability_claimed": false,
+    "orbital_transport_authorized": false,
+    "scalar_branch_adopted": false,
+    "scientific_response_selection_authorized": true,
+    "scientific_response_selection_executed": false
+  },
+  "selected_next_target": "select_post_scalar_only_quadratic_gravity_viability_and_native_relevance_scientific_response_v0",
+  "selected_next_target_kind": "SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_BRANCH_OR_ACTION_ADOPTION",
+  "target": "review_scalar_only_quadratic_gravity_viability_and_native_relevance_v0_result",
+  "verdict": "ACCEPTED_BOUNDED_SCALAR_ONLY_COMPARISON_RESULT"
+}

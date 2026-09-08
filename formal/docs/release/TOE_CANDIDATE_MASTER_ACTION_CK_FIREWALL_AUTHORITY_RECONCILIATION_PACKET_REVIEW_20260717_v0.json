@@ -1,0 +1,269 @@
+{
+  "aggregate_organizing_surface_review": {
+    "action_embedding_or_variation_authorized": false,
+    "all_C_k_families_admissibility_only": true,
+    "master_action_status": "WORKING_FORM_NONCANONICAL_NONPROMOTED_ORGANIZING_SURFACE",
+    "rows": [
+      {
+        "finding": "ALL_CK_FAMILIES_ADMISSIBILITY_ONLY_AND_MASTER_ACTION_REMAINS_WORKING_FORM_NONCANONICAL_NONPROMOTED_ORGANIZING_SURFACE",
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "source_id": "MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_RESULT_REVIEW"
+      },
+      {
+        "finding": "ORGANIZING_SURFACE_BOUNDARY_PRESERVED_AND_GAP_REVIEW_SELECTED_INSTEAD_OF_ACTION_VARIATION",
+        "relative_path": "formal/docs/release/MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_20260626_v0.json",
+        "source_id": "MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS"
+      },
+      {
+        "finding": "NO_SAFE_CK_ACTION_EMBEDDING_AND_MASTER_ACTION_REMAINS_WORKING_FORM_NONCANONICAL_NONPROMOTED_ORGANIZING_SURFACE",
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "source_id": "MASTER_ACTION_CK_FAMILY_GAP_REVIEW_RESULT_REVIEW"
+      }
+    ],
+    "source_count": 3,
+    "status": "PASS"
+  },
+  "answer": "NO_TERM_DELETION_AUTHORIZED_BUT_V0_IS_LIMITED_TO_SCHEMATIC_ORGANIZING_SURFACE_STATUS",
+  "authority": {
+    "frozen_inputs": [
+      {
+        "relative_path": "formal/docs/release/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_RESPONSE_SELECTION_20260717_v0.json",
+        "sha256": "916daaa79809a0f7d9ca993e78504b41c995a8c2a0204b94c22d863ff302dac7"
+      },
+      {
+        "relative_path": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+        "sha256": "23aa11c3784da178097eef8ed7c32f9decf4db038a611e4a16364b9bed2db867"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "78aea408a5cf0838a63cd13d73e2c07ed716f2d2863daefe11eccfd7c0582860"
+      },
+      {
+        "relative_path": "formal/docs/release/PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "b114e5b8764182a6b166eae9aac1a3b9dee3604cc0fe15f24321657b2e9bd48e"
+      },
+      {
+        "relative_path": "formal/docs/release/PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json",
+        "sha256": "6dfacff078b2ace3b4652aff027f38bd28b2a75916bdb45389dddb1272073c86"
+      },
+      {
+        "relative_path": "formal/docs/release/PHI_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260619_v0.json",
+        "sha256": "a5c8b0542f6e06193886e3c9d9e64d261a560d0e3fbbf545a9d3498fb51435ee"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260622_v0.json",
+        "sha256": "6fa377fb1da03ba4c9f4dc5928a63f3d8eb9f8c07470e00a478520b4e759fedf"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260622_v0.json",
+        "sha256": "2e8043663f6781564c2c6f31fade5161142ffa22a86bbcd06d85b7f640c0cd11"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260623_v0.json",
+        "sha256": "20f82fd70a0139ec709d57b6bc02119246229491a1207b15883339353fedfca3"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_CEXCHANGE_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260625_v0.json",
+        "sha256": "122943f1fbf55720ee78b1d9df662f499cefe91c625f0b6ffe1a595b2a581c16"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_SURFACE_SELECTION_AFTER_CK_FAMILY_STATUS_SYNTHESIS_20260626_v0.json",
+        "sha256": "54eae29c2e3567a10b0c1b9163b40c1b5db0d5dcc32ec7ba4f1e5e0f95d099a1"
+      },
+      {
+        "relative_path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_GAP_REVIEW_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+        "sha256": "836adb2246561d9873ebefa7281ed7d76a3f9973dcf87b0a7cd2b70fcbc819a7"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md",
+        "sha256": "664abff716240aa93443578864f83e39c7d62ee483bf3698d924992419a0e9f8"
+      },
+      {
+        "relative_path": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+        "sha256": "b491ab9f0b93f56cdcb705b568a24dd65ed5d52980c37741f09bbc1dab511a5d"
+      },
+      {
+        "relative_path": "formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md",
+        "sha256": "5d33980b6668e17bbabb86ca162680d517030a98541583956f382e2a82ce37b7"
+      },
+      {
+        "relative_path": "formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md",
+        "sha256": "f08adcd5dd4b91f05fcc1469152170d26074b903adf928f92438ea898453aa85"
+      },
+      {
+        "relative_path": "formal/docs/lanes/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_20260717_v0.md",
+        "sha256": "59d325ce8412c799508b13dfebfc5a93ad6a86f62102cdf1ce43b59734519523"
+      },
+      {
+        "relative_path": "formal/docs/release/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_20260717_v0.json",
+        "sha256": "9e7e30a3967f3d77c1b348c18e30a97418e851a2d791f5abf061b4bf6c7db9ec"
+      },
+      {
+        "relative_path": "formal/python/tools/toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0.py",
+        "sha256": "d87eae3170390dea1642bd3c21799ed68803043d72505dcdaa0c1b89d6103458"
+      },
+      {
+        "relative_path": "formal/python/tests/test_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0.py",
+        "sha256": "10219a01f4e1dbb42956983d3c6c863bca893a711bac17225fe9118e6dd95193"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ToeCandidateMasterActionCKFirewallAuthorityReconciliationPacketV0.lean",
+        "sha256": "b7bc6bee1beb14fb0f02a0709777ea6a3280c85796adbe8f979397185eaf071d"
+      },
+      {
+        "relative_path": "formal/docs/lanes/TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_REVIEW_20260717_v0.md",
+        "sha256": "bc7bae0bf6b1d4e5167968e7d2d3687d02d754a4d309921fb44c4032e9d1ccd1"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_review_v0.py",
+      "sha256": "c7e4165c246cd12ca2e0ad5df27c2669dda10aa926d68f9a56b78fa636606782"
+    },
+    "reviewed_packet_id": "TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_20260717_v0",
+    "reviewed_packet_verdict": "PREPARED_PENDING_INDEPENDENT_REVIEW",
+    "test": {
+      "relative_path": "formal/python/tests/test_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_review_v0.py",
+      "sha256": "e3725dbbb2815d199c293211d628ca6dd739056d999d768127e64db1702734a4"
+    }
+  },
+  "authority_rule_application": {
+    "rows": [
+      {
+        "result": "BLOCKS_PROMOTION_BUT_DOES_NOT_AMEND_V0",
+        "rule_id": "TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0"
+      },
+      {
+        "result": "FAILS_CLOSED_ON_CONTRADICTION_BUT_DOES_NOT_DELETE_TERM",
+        "rule_id": "PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0"
+      },
+      {
+        "result": "EXPLICIT_PATH_REQUIRED_BUT_DIRECT_SCOPE_DOES_NOT_COVER_ACTION",
+        "rule_id": "DEPRECATED_GATE_RETIREMENT_POLICY_v0"
+      },
+      {
+        "result": "RESEARCH_MODE_CANNOT_MUTATE_AUTHORITY_AND_RULE_DOES_NOT_ADJUDICATE_TERM",
+        "rule_id": "RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0"
+      }
+    ],
+    "rule_authorizes_executable_action_claim": false,
+    "rule_authorizes_historical_mutation": false,
+    "rule_authorizes_successor_creation": false,
+    "rule_count": 4
+  },
+  "captured_at_utc": "2026-07-17T00:00:00Z",
+  "claim_ceiling": "Independent authority review only. No existing authority removes the C_k term or creates a successor. V0 remains a schematic working-form organizing surface, and no executable native continuum action is currently defined. No action mutation, C_k dynamics, variation, tensor field equation, GR recovery, promotion, empirical result, or automation is created.",
+  "downstream_gates": {
+    "Dirac_variation": "CLOSED_NOT_EVALUATED",
+    "Rep32_relationship": "CLOSED_NOT_EVALUATED",
+    "boundary_sufficiency": "CLOSED_NOT_EVALUATED",
+    "dimensions_and_constants": "CLOSED_NOT_EVALUATED",
+    "gravitomagnetic_recovery": "BLOCKED_FIELD_EQUATION_SURFACE_FAILURE",
+    "statistical_sector": "CLOSED_NOT_EVALUATED",
+    "stress_energy_generation": "CLOSED_NOT_EVALUATED",
+    "tensor_field_equation": "CLOSED_NOT_DERIVED",
+    "tetrad_and_spin_connection": "CLOSED_NOT_EVALUATED"
+  },
+  "explicit_supersession_review": {
+    "applicable_existing_rule_amends_v0": false,
+    "displayed_term_withdrawn_or_removed": false,
+    "historical_action_named_as_superseded": false,
+    "manual_scope_review_found_explicit_supersession": false,
+    "reproduced_scan_match_count": 0,
+    "status": "NOT_ESTABLISHED",
+    "successor_registered_and_linked": false
+  },
+  "historical_action_review": {
+    "classification": "P_POLICY_WORKING_FORM_NONCANONICAL_UNPROMOTED",
+    "complete_C_k_multiplier_variation_contract": false,
+    "contains_displayed_C_k_multiplier_term": true,
+    "contains_stationarity_condition": true,
+    "historical_bytes_preserved": true,
+    "source_id": "TOE_CANDIDATE_MASTER_ACTION_v0",
+    "term_deleted_declared_inactive_or_projected": false,
+    "working_form_only_self_classification": true
+  },
+  "outcome_adjudication": {
+    "allowed_outcome_count": 4,
+    "rows": [
+      {
+        "outcome": "CK_FIREWALL_EXPLICITLY_SUPERSEDES_ACTION_TERM",
+        "reason": "NO_EXPLICIT_OR_RULE_BASED_SUPERSESSION_PATH",
+        "status": "REJECTED"
+      },
+      {
+        "outcome": "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY",
+        "reason": "SELF_LIMITED_WORKING_FORM_PLUS_ACCEPTED_AGGREGATE_ORGANIZING_SURFACE_STATUS",
+        "status": "SELECTED"
+      },
+      {
+        "outcome": "CK_DYNAMICAL_EMBEDDING_REQUIRES_NEW_THEORY_SELECTION",
+        "reason": "CURRENT_RECORD_DOES_NOT_LICENSE_DISPLAYED_TERM_AS_EXECUTABLE_DYNAMICS",
+        "status": "NOT_SELECTED"
+      },
+      {
+        "outcome": "BLOCKED_AUTHORITY_PRECEDENCE_UNRESOLVED",
+        "reason": "PRECEDENCE_UNRESOLVED_BUT_MAXIMUM_PRESENT_STATUS_IS_ALREADY_SCHEMATIC_ONLY",
+        "status": "NOT_SELECTED"
+      }
+    ],
+    "selected_outcome_count": 1
+  },
+  "primary_diagnostic": "NO_EXECUTABLE_NATIVE_CONTINUUM_ACTION_AUTHORITY",
+  "retained_status": {
+    "C_k": "ADMISSIBILITY_AUDIT_ONLY_UNDER_CURRENT_ACCEPTED_POLICY",
+    "bounded_discrete_Newton_Poisson_GR": "RETAINED",
+    "gravitomagnetic_route": "BLOCKED_FIELD_EQUATION_SURFACE_FAILURE",
+    "historical_v0": "SCHEMATIC_WORKING_FORM_ORGANIZING_SURFACE",
+    "native_executable_continuum_action": "NOT_YET_DEFINED",
+    "successor_action": "NOT_CREATED_NOT_PREPARED"
+  },
+  "review_question": "Do existing authority records resolve the C_k action/firewall conflict, or is a fresh theory decision required before defining a successor action?",
+  "schema_id": "TOE_CANDIDATE_MASTER_ACTION_CK_FIREWALL_AUTHORITY_RECONCILIATION_PACKET_REVIEW_20260717_v0",
+  "scope": {
+    "C_k_dynamical_route_selected": false,
+    "C_k_embedded_or_varied": false,
+    "Einstein_equation_imported_or_derived": false,
+    "GR_pillar_completed": false,
+    "automation_created": false,
+    "empirical_analysis_executed": false,
+    "gravitomagnetic_calculation_executed": false,
+    "historical_action_mutated": false,
+    "independent_review_executed": true,
+    "lambda_k_set_to_zero": false,
+    "master_action_promoted": false,
+    "metric_tetrad_or_spin_variation_executed": false,
+    "precedence_supersession_declared": false,
+    "repository_migration_executed": false,
+    "seam_closed": false,
+    "simulation_executed": false,
+    "standard_GR_comparator_activated": false,
+    "stress_energy_calculated": false,
+    "successor_action_created": false,
+    "successor_action_prepared": false
+  },
+  "selected_next_target": "select_next_scientific_target_with_native_continuum_action_not_defined",
+  "selected_next_target_kind": "FRESH_SCIENTIFIC_TARGET_SELECTION_ONLY",
+  "source_scope_review": {
+    "aggregate_source_count": 3,
+    "authority_rule_count": 4,
+    "chronology_used_as_precedence": false,
+    "downstream_scientific_convenience_used": false,
+    "firewall_source_count": 11,
+    "historical_action_source_count": 1,
+    "local_or_option_index_source_count": 8,
+    "status": "PASS"
+  },
+  "target": "review_toe_candidate_master_action_ck_firewall_authority_reconciliation_packet_v0_result",
+  "terminal_reasoning": {
+    "selected": "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY",
+    "why_not_dynamical_embedding": "The accepted record does not license the displayed term as current executable dynamics; opening that route would be a new theory choice.",
+    "why_not_explicit_supersession": "No accepted source or applicable existing rule removes the term, amends v0, or registers a successor.",
+    "why_not_unresolved_precedence": "The record does not resolve deletion precedence, but it does resolve the maximum present status as schematic and non-executable.",
+    "why_schematic_only": "V0 is self-limited to a noncanonical working form, and three accepted aggregate records retain it as an organizing surface while refusing C_k embedding and variation."
+  },
+  "verdict": "MASTER_ACTION_REMAINS_SCHEMATIC_ONLY"
+}

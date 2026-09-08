@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -35,6 +39,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "e128a71881a56be1a089781dac2defa3aee25975ed2589d99c2f0319be963088",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 
@@ -57,7 +62,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -157,7 +162,7 @@ def build_review_report() -> dict[str, Any]:
         "solver_and_threshold_rules_are_proportionate_and_non_circular": pilot["solver_rule"].startswith("solver error <=0.01") and pilot["canonical_threshold_rule"].startswith("twice the maximum corresponding pilot residual"),
         "canonical_observable_inventory_covers_descendant_channels": "phi2 and phi3 wave residuals" in packet["canonical_observables"] and "three local exchange residuals" in packet["canonical_observables"],
         "only_non_authoritative_pilot_execution_is_authorized": packet["post_acceptance_target"] == ACCEPTED_TARGET and boundary["canonical_execution_authorized"] is False and boundary["result_claimed"] is False,
-        "claim_nonclaims_nonpromotion_and_Prompt_boundaries_hold": "no canonical numerical result yet" in packet["nonclaims"] and boundary["C_k_audit_only"] is True and boundary["CCFT_resumed"] is False and boundary["master_action_promoted"] is False and sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256,
+        "claim_nonclaims_nonpromotion_and_Prompt_boundaries_hold": "no canonical numerical result yet" in packet["nonclaims"] and boundary["C_k_audit_only"] is True and boundary["CCFT_resumed"] is False and boundary["master_action_promoted"] is False and prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE),
     }
     ordered = [{"decision_id": item, "passed": decisions[item]} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

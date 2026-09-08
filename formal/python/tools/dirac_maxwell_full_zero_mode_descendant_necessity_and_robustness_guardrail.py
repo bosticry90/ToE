@@ -11,6 +11,10 @@ from pathlib import Path
 from typing import Any, Callable
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 from formal.python.tools import dirac_maxwell_full_zero_mode_non_authoritative_pilot as numerical
 
 
@@ -47,6 +51,7 @@ INPUT_HASHES = {
     NUMERICAL_IMPLEMENTATION_RELATIVE_PATH: "11939b0db25a72825fe3cd16162c325bf90e562864b40f59ae1fc92f1a646fc1",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 
@@ -69,7 +74,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -104,7 +109,7 @@ def load_authority() -> dict[str, dict[str, Any]]:
         and canonical.get("authority_rotation", {}).get("bounded_scientific_result_accepted") is True
     ):
         raise ValueError("accepted canonical E-REPRO result is not bound")
-    if sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) != PROMPT_SHA256:
+    if not prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE):
         raise ValueError("Prompt.txt changed")
     return sources
 

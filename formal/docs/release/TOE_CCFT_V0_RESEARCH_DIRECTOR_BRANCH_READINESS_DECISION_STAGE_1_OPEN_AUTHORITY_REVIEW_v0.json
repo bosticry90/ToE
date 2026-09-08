@@ -1,0 +1,24 @@
+{
+  "artifact_id": "TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_STAGE_1_OPEN_AUTHORITY_REVIEW_v0",
+  "schema_id": "toe.ccft_v0.research_director_branch_readiness_decision.stage_1_open_authority_review.v0",
+  "captured_at_utc": "2026-08-02T04:15:40Z",
+  "authority_path": "formal/docs/release/TOE_CCFT_V0_RESEARCH_DIRECTOR_BRANCH_READINESS_DECISION_STAGE_1_OPEN_AUTHORITY_v0.json",
+  "authority_sha256": "0ed2a4616c8a93b8cfec82ec9af7131798db74f514d02c7b3c9d787a25bc541d",
+  "program_id": "TOE_CCFT_V0_THEORY_CONSTRUCTION_AND_THEOREM_DISCOVERY_V0",
+  "stage_number": 1,
+  "accepted": true,
+  "checks": {
+    "program_is_installed_unopened": true,
+    "manifest_stage_and_scope_hash_match": true,
+    "research_director_packet_binding_reproduces": true,
+    "four_canonical_outcomes_are_frozen": true,
+    "director_wording_is_normalized_without_manifest_mutation": true,
+    "two_candidate_and_no_branch_results_block_single_model_program": true,
+    "authority_contains_no_branch_selection": true,
+    "equation_postulate_model_and_theorem_work_remain_prohibited": true,
+    "stage_2_remains_unauthorized": true
+  },
+  "decision": "ACCEPT_STAGE_1_OPEN_AUTHORITY_AWAIT_IMMUTABLE_OPEN_EVENT",
+  "stage_2_authorized": false,
+  "status": "PASS"
+}

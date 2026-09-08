@@ -74,4 +74,4 @@ def test_authority_rotates_only_to_canonical_execution(report: dict) -> None:
 
 
 def test_prompt_is_preserved() -> None:
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

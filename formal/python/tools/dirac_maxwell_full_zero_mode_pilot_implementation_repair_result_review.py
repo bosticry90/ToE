@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -36,6 +40,7 @@ EXPECTED_HASHES = {
     PREPARATION_REPORT_RELATIVE_PATH: "30a2a5dfd58d0a912970f10142d6645e845cf50d6544ae3d71cb9adf684e30b1",
 }
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 PROMPT_SHA256 = "2bc6996ea28e96c50e688ed3d30ee24808af411a244eb594aad89ff80fda8433"
 
 
@@ -58,7 +63,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -142,7 +147,7 @@ def build_review_report() -> dict[str, Any]:
         "v0_blocker_remains_preserved": packet["defect"]["evidence_identity_defect"] is True and packet["defect"]["duplicate_legacy_run_ids"] == audit["duplicate_legacy_run_ids"],
         "only_versioned_pilot_v1_is_authorized_after_acceptance": packet["post_acceptance_target"] == ACCEPTED_TARGET and boundary["pilot_v1_authorized_before_review"] is False,
         "canonical_parameters_thresholds_execution_and_claim_remain_unauthorized": boundary["canonical_parameters_frozen"] is False and boundary["canonical_thresholds_frozen"] is False and boundary["canonical_execution_authorized"] is False and boundary["scientific_result_claimed"] is False,
-        "Prompt_and_nonpromotion_boundaries_hold": sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) == PROMPT_SHA256 and "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim" in packet["nonclaims"],
+        "Prompt_and_nonpromotion_boundaries_hold": prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE) and "no pillar completion, seam closure, C_k dynamics, CCFT, master-action promotion, or repository-wide green claim" in packet["nonclaims"],
     }
     ordered = [{"decision_id": item, "passed": bool(decisions[item])} for item in DECISION_IDS]
     failed = [item["decision_id"] for item in ordered if not item["passed"]]

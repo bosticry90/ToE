@@ -1,0 +1,58 @@
+{
+  "accepted": true,
+  "artifact_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_RESULT_REVIEW_v0",
+  "attempted_stage_count": 0,
+  "captured_at_utc": "2026-07-31T21:50:00Z",
+  "checks": {
+    "all_five_canonical_stage_ids_targets_and_scope_hashes_match_the_prepared_proposal": true,
+    "authorized_stage_count_is_five": true,
+    "bounded_program_history_reconstructs_from_immutable_manifests_and_events": true,
+    "current_scientific_target_is_preserved": true,
+    "installation_commit_has_the_exact_manifest_bound_ten_path_envelope": true,
+    "installation_commit_parent_matches_installed_from_commit": true,
+    "mandatory_exit_target_is_preserved": true,
+    "manifest_hash_and_all_scope_hashes_reproduce": true,
+    "no_ccft_model_core_representation_action_seam_or_observable_was_selected": true,
+    "no_open_or_close_event_was_created": true,
+    "no_scientific_output_or_evidence_promotion_was_created": true,
+    "registry_projects_zero_attempts_and_unopened_state": true,
+    "repair_attempt_count_is_zero": true,
+    "result_state_mapping_workload_caps_source_scope_and_passive_content_rules_are_frozen": true
+  },
+  "ccft_action_or_evolution_law_constructed": false,
+  "ccft_mathematical_core_recovered": false,
+  "ccft_model_or_physical_claim_established": false,
+  "ccft_representation_or_field_selected": false,
+  "ccft_seam_observable_or_discriminator_selected": false,
+  "evidence_promoted": false,
+  "exhaustive_python_passage_established": false,
+  "installation_commit": "6b9b9b16418d5e709870d4079918abad53b8526a",
+  "manifest": {
+    "manifest_hash": "a4ea23f9b98265e60ecff1df450d2dfb0ea7631fe1bd71ef73bc5e594f4b11f5",
+    "path": "formal/docs/release/bounded_program_manifests/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0_MANIFEST_v1.json",
+    "sha256": "12824e836f1f687317649b02d204dde17f01a074cb7818f46353e4fbd97469be"
+  },
+  "next_permitted_decision": "AUTHORIZE_CCFT_SOURCE_BOUND_MATHEMATICAL_INVENTORY_STAGE_1_OPEN",
+  "next_prohibited_work": [
+    "Stage_1_execution_without_separate_scientific_authority",
+    "CCFT_source_inventory_or_scientific_review",
+    "operational_coherence_definition_or_physical_claim",
+    "representation_field_action_or_evolution_law_selection",
+    "matter_gravity_or_scale_seam_selection",
+    "observable_discriminator_or_empirical_claim",
+    "canonical_evidence_or_master_action_promotion",
+    "automatic_successor_authorization"
+  ],
+  "operational_coherence_definition_established": false,
+  "program_id": "TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_V0",
+  "program_state": "UNOPENED",
+  "reviewed_installation": {
+    "path": "formal/docs/release/TOE_CCFT_NATIVE_MATHEMATICAL_CORE_AND_OPERATIONALIZATION_PROGRAM_GOVERNANCE_INSTALLATION_v0.json",
+    "sha256": "f3fbdeade720896c2a6bbeaafb85eba870d0db25001ff88d5c746bb15098248a"
+  },
+  "schema_id": "toe.ccft_native_mathematical_core_and_operationalization.program_governance_installation_review.v0",
+  "scientific_execution_authorized": false,
+  "scientific_output_created": false,
+  "stage_1_opened": false,
+  "status": "INSTALLATION_ACCEPTED_PROGRAM_UNOPENED_NO_SCIENTIFIC_RESULT"
+}

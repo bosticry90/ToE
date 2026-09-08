@@ -1,0 +1,349 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_RESULT_v0",
+  "captured_at_utc": "2026-07-31T13:03:42Z",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+  "attempt_sequence_number": 1,
+  "scientific_target": "inventory_toe_native_gravitational_requirements_v0",
+  "scope_hash": "297276852be0fed5e7dafdb9a90a3dc26a2807665665dbefc69dd8572b31fb19",
+  "open_event": {
+    "path": "formal/docs/release/bounded_program_events/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0_ATTEMPT_01_OPEN_v0.json",
+    "sha256": "1cf552890812c910c127edb9fec50f0595571999b790834a0538696f0111989d"
+  },
+  "terminal_outcome": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY_COMPLETE_WITH_CONFLICTS",
+  "lifecycle_result": "PASSED",
+  "scientific_conclusion": "All ten preserved requirement rows have source-bound meanings and statement classes. The inventory is complete for the authorized evidence, but it contains scope assumptions, imported known-physics baselines, conditional testability, and unresolved selection-power limitations. These conflicts and limitations must remain visible when action families are inventoried and compared later.",
+  "authorized_input_bindings": [
+    {
+      "artifact_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0",
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_20260718_v0.json",
+      "sha256": "9dcc6df5a5844aecfff6e50c6ad8b67e7f8bac9411bd8c282f5d876d2ac44634"
+    },
+    {
+      "artifact_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0",
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v0.json",
+      "sha256": "c7cbf6997b5414a83524a82c105e33e44426dd07f5b2a703d3f68e123795fa9c"
+    },
+    {
+      "artifact_id": "NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2",
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_REQUIREMENTS_AND_ACTION_SELECTION_PACKET_REVIEW_20260718_v2.json",
+      "sha256": "1faacbd470ef5feed6aebb4dfad34e2e5a9214fa2e31a79d57c375a08f4d9051"
+    },
+    {
+      "artifact_id": "TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0",
+      "path": "formal/docs/release/TOE_POST_CENSUS_NATIVE_FRONTIER_DECISION_RESULT_v0.json",
+      "sha256": "58602db2ff2ffaa6820c68ab80f55985c50f106be3b9c5a934dba696c615f4d5"
+    },
+    {
+      "artifact_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0",
+      "path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_BOUNDED_CLOSEOUT_RESULT_v0.json",
+      "sha256": "3a4e4e046638f601714a813245607dc1af370a154edcf566cce8af55c3d25a34"
+    },
+    {
+      "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0",
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_v0.json",
+      "sha256": "28789fd7edb3be5c23ed2a2a783c786f623ecae3dfdee72cac5f57050f1900be"
+    },
+    {
+      "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0",
+      "path": "formal/docs/release/TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_BOUNDED_PROGRAM_PREPARATION_RESULT_REVIEW_v0.json",
+      "sha256": "a1f7a0827a0931ac0a0c3cc59235d56d431cffde7ff6ef2875f2b031eb042dc3"
+    }
+  ],
+  "underlying_source_bindings": [
+    {
+      "path": "formal/docs/release/MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0.json",
+      "sha256": "2031bc50487bdcd07c5a18dcf2fcdddb611337b5150fbbf416b0d6ab0b9d86d4",
+      "requirement_ids": ["R1_DIMENSION", "R2_METRIC_ONLY", "R3_LOCALITY", "R4_DIFF_COVARIANCE", "R6_LOCAL_VARIATION", "R7_SOURCE_COMPATIBILITY", "R8_NEWTON_POISSON", "R9_MOMENTUM_CURRENT"]
+    },
+    {
+      "path": "formal/docs/release/MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0.json",
+      "sha256": "3d148464b39d50ae052866516d30bd3f167e1b80d276f56f593fc698f9e6734d",
+      "requirement_ids": ["R5_CK_FIREWALL"]
+    },
+    {
+      "path": "formal/docs/release/TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0.json",
+      "sha256": "fdadf7cb74401fd1d994841c9dbbbce5f6333e86d967d0aa349ed8987c183e8f",
+      "requirement_ids": ["R7_SOURCE_COMPATIBILITY"]
+    },
+    {
+      "path": "formal/docs/release/QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json",
+      "sha256": "7232643ab971c1f647421c81bb52ef37f0a636262bc172d3fffc73ed1c6a4d54",
+      "requirement_ids": ["R7_SOURCE_COMPATIBILITY"]
+    },
+    {
+      "path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+      "sha256": "b2519245872eaed3d874c25836ce355cca9e3bc0f11914e806a74c691f8d14da",
+      "requirement_ids": ["R8_NEWTON_POISSON"]
+    },
+    {
+      "path": "formal/docs/release/GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0.json",
+      "sha256": "de305a72dc522fe807c037bbe7980d96e3308d0547645ccb9939d1889720d987",
+      "requirement_ids": ["R9_MOMENTUM_CURRENT"]
+    },
+    {
+      "path": "formal/docs/release/NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0.json",
+      "sha256": "e2468ea98384383654efe73dd054f5149beb6d4a62db45123109d962999dea66",
+      "requirement_ids": ["R10_STABILITY_NO_FIT"]
+    }
+  ],
+  "statement_class_vocabulary": [
+    "ACCEPTED_PROJECT_REQUIREMENT",
+    "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+    "RETAINED_RECOVERY_OBLIGATION",
+    "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION",
+    "NEW_PROPOSED_POSTULATE",
+    "UNRESOLVED_AUTHORITY_STATUS"
+  ],
+  "requirement_ledger": [
+    {
+      "requirement_id": "R1_DIMENSION",
+      "controlled_meaning": "The bounded candidate survey is restricted to a four-dimensional continuum target.",
+      "statement_class": "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+      "origin_class": "IMPORTED_STANDARD_CONTINUUM_BASELINE_USED_AS_PROJECT_SCOPE",
+      "obligation_status": "MANDATORY_INSIDE_FROZEN_ENVELOPE_NOT_A_NATIVE_DERIVATION",
+      "mathematical_content": "dim(M) = 4",
+      "physical_motivation": "Match the intended four-dimensional continuum gravity sector and known-physics comparison surface.",
+      "scale_and_domain": "Continuum spacetime; all scales considered by the bounded local metric-action survey.",
+      "units_status": "NOT_APPLICABLE_DIMENSION_COUNT",
+      "symmetry_status": "NO_ADDITIONAL_SYMMETRY_FIXED_BY_THIS_ROW",
+      "dependencies": ["MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0"],
+      "testability_status": "TESTABLE_AS_SCOPE_MEMBERSHIP_CHECK",
+      "selection_power": "EXCLUDES_NON_FOUR_DIMENSIONAL_FAMILIES_BUT_SELECTS_NO_INVARIANT",
+      "conflicts_or_limits": ["The source freezes four dimensions for evaluation but does not derive four-dimensionality from a native ToE principle."],
+      "supporting_or_blocking_calculations": []
+    },
+    {
+      "requirement_id": "R2_METRIC_ONLY",
+      "controlled_meaning": "The bounded candidate survey admits one gravitational metric variable and no additional gravitational field content.",
+      "statement_class": "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+      "origin_class": "PROJECT_MINIMAL_SCOPE_ASSUMPTION",
+      "obligation_status": "MANDATORY_INSIDE_FROZEN_ENVELOPE_NOT_A_REFUTATION_OF_BROADER_THEORIES",
+      "mathematical_content": "gravitational field content = {g_mu_nu}",
+      "physical_motivation": "Keep the first native-gravity comparison minimal and prevent unbounded field invention.",
+      "scale_and_domain": "Local continuum metric-action candidates.",
+      "units_status": "METRIC_CONVENTION_DEPENDS_ON_LATER_ACTION_PACKET",
+      "symmetry_status": "ONE_METRIC_FIELD_CONTENT_RESTRICTION",
+      "dependencies": ["MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0"],
+      "testability_status": "TESTABLE_AS_FIELD_CONTENT_CHECK",
+      "selection_power": "EXCLUDES_SCALAR_TENSOR_VECTOR_TENSOR_AND_MULTIMETRIC_FAMILIES_FROM_THIS_V0_ENVELOPE",
+      "conflicts_or_limits": ["An excluded family is outside this survey scope; its exclusion is not scientific refutation."],
+      "supporting_or_blocking_calculations": []
+    },
+    {
+      "requirement_id": "R3_LOCALITY",
+      "controlled_meaning": "The bounded route compares actions built from local scalar densities.",
+      "statement_class": "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION",
+      "origin_class": "IMPORTED_LOCAL_FIELD_THEORY_BASELINE_USED_AS_PROJECT_SCOPE",
+      "obligation_status": "MANDATORY_INSIDE_FROZEN_ENVELOPE_PROVISIONAL_AS_NATIVE_PRINCIPLE",
+      "mathematical_content": "S_g is the integral of a local scalar density on M.",
+      "physical_motivation": "Permit a conventional local variational and Cauchy analysis within a bounded first survey.",
+      "scale_and_domain": "Local classical continuum theory.",
+      "units_status": "ACTION_DENSITY_UNITS_REQUIRED_ONLY_AFTER_A_CANDIDATE_TERM_IS_SPECIFIED",
+      "symmetry_status": "LOCALITY_REQUIRED_DIFF_COVARIANCE_SEPARATE",
+      "dependencies": ["MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0"],
+      "testability_status": "TESTABLE_AS_ACTION_FORM_CHECK",
+      "selection_power": "EXCLUDES_NONLOCAL_ACTIONS_FROM_V0_BUT_DOES_NOT_CHOOSE_A_LOCAL_INVARIANT",
+      "conflicts_or_limits": ["The source explicitly does not derive locality from a distinctive native ToE principle."],
+      "supporting_or_blocking_calculations": []
+    },
+    {
+      "requirement_id": "R4_DIFF_COVARIANCE",
+      "controlled_meaning": "An evaluated candidate must define a diffeomorphism-covariant scalar action.",
+      "statement_class": "ACCEPTED_PROJECT_REQUIREMENT",
+      "origin_class": "STANDARD_GRAVITATIONAL_SYMMETRY_BASELINE_ACCEPTED_FOR_PROJECT_EVALUATION",
+      "obligation_status": "MANDATORY_FOR_EVALUATED_CANDIDATES",
+      "mathematical_content": "The action is coordinate independent and built from covariant objects.",
+      "physical_motivation": "Preserve coordinate independence and the intended gravitational gauge structure.",
+      "scale_and_domain": "Local continuum gravitational action.",
+      "units_status": "NOT_A_DIMENSIONAL_CONDITION",
+      "symmetry_status": "DIFFEOMORPHISM_COVARIANCE_REQUIRED",
+      "dependencies": ["MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0"],
+      "testability_status": "TESTABLE_AS_FORMAL_INVARIANCE_CHECK",
+      "selection_power": "EXCLUDES_NONCOVARIANT_CANDIDATES_BUT_DOES_NOT_ESTABLISH_ACTION_UNIQUENESS",
+      "conflicts_or_limits": ["Covariance is shared by many inequivalent actions and is not by itself a native selection principle."],
+      "supporting_or_blocking_calculations": []
+    },
+    {
+      "requirement_id": "R5_CK_FIREWALL",
+      "controlled_meaning": "C_k objects remain external admissibility checks and must not be embedded, varied, multiplied into, or used as penalties in the gravitational action.",
+      "statement_class": "ACCEPTED_PROJECT_REQUIREMENT",
+      "origin_class": "NATIVE_PROJECT_ARCHITECTURE_POLICY",
+      "obligation_status": "MANDATORY_GLOBAL_PROJECT_FIREWALL",
+      "mathematical_content": "No C_k multiplier, penalty, functional embedding, or variation appears in S_g.",
+      "physical_motivation": "Prevent logical, bridge, source, exchange, and transport admissibility rules from being silently converted into dynamical laws.",
+      "scale_and_domain": "All candidate gravitational actions and master-action relations.",
+      "units_status": "NO_ACTION_COEFFICIENT_OR_UNITS_ASSIGNED_TO_C_K",
+      "symmetry_status": "NOT_A_SPACETIME_SYMMETRY_REQUIREMENT",
+      "dependencies": ["MASTER_ACTION_CK_FAMILY_STATUS_SYNTHESIS_AFTER_PHI_A_AND_PSI_A_RESULT_REVIEW_20260626_v0"],
+      "testability_status": "TESTABLE_AS_ARCHITECTURAL_FIREWALL",
+      "selection_power": "EXCLUDES_C_K_DYNAMIC_EMBEDDINGS_BUT_SELECTS_NO_REMAINING_ACTION",
+      "conflicts_or_limits": ["This is the clearest project-native requirement, but it is an admissibility boundary rather than a physical gravitational principle."],
+      "supporting_or_blocking_calculations": []
+    },
+    {
+      "requirement_id": "R6_LOCAL_VARIATION",
+      "controlled_meaning": "The survey's bulk variational comparison uses smooth compactly supported local metric variations.",
+      "statement_class": "ACCEPTED_PROJECT_REQUIREMENT",
+      "origin_class": "STANDARD_VARIATIONAL_BASELINE_ACCEPTED_AS_PROJECT_REVIEW_CONTRACT",
+      "obligation_status": "MANDATORY_FOR_LOCAL_BULK_COMPARISON_ONLY",
+      "mathematical_content": "delta g is smooth with compact support in Omega compactly contained in M.",
+      "physical_motivation": "Separate local Euler-Lagrange content from unresolved global boundary and asymptotic terms.",
+      "scale_and_domain": "Local bulk variation; global boundary theory excluded.",
+      "units_status": "VARIATION_HAS_THE_METRIC_CONVENTION_OF_THE_LATER_CANDIDATE",
+      "symmetry_status": "VARIATION_MUST_RESPECT_THE_SELECTED_METRIC_FIELD_SCOPE",
+      "dependencies": ["MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0"],
+      "testability_status": "TESTABLE_AS_VARIATIONAL_DOMAIN_CHECK",
+      "selection_power": "STANDARDIZES_COMPARISON_BUT_DOES_NOT_SELECT_AN_ACTION",
+      "conflicts_or_limits": ["Passing this row proves no global boundary variational principle."],
+      "supporting_or_blocking_calculations": []
+    },
+    {
+      "requirement_id": "R7_SOURCE_COMPATIBILITY",
+      "controlled_meaning": "A source-coupled candidate must admit variational matter stress-energy and be compatible with the corresponding conservation identity.",
+      "statement_class": "ACCEPTED_PROJECT_REQUIREMENT",
+      "origin_class": "STANDARD_VARIATIONAL_SOURCE_BASELINE_WITH_PROJECT_SEAM_DEPENDENCY",
+      "obligation_status": "MANDATORY_FOR_SOURCE_COUPLED_CANDIDATES_CONDITIONALLY_TESTABLE",
+      "mathematical_content": "T_mu_nu = -(2/sqrt(-g)) delta S_m / delta g^mu_nu, with conservation compatibility under the selected conventions.",
+      "physical_motivation": "Ensure that matter sources arise from a controlled action and can consistently couple to the gravitational equations.",
+      "scale_and_domain": "Classical or effective source-coupled continuum gravity; quantum sourcing not closed.",
+      "units_status": "REQUIRES_A_FROZEN_MATTER_ACTION_AND_GRAVITATIONAL_CONVENTION",
+      "symmetry_status": "MATTER_ACTION_DIFF_COVARIANCE_REQUIRED_FOR_THE_STANDARD_IDENTITY_ROUTE",
+      "dependencies": ["MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0", "TOE_NATIVE_PSI_A_U1_STRESS_ENERGY_DEFINITION_POLICY_RESULT_REVIEW_20260624_v0", "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0"],
+      "testability_status": "BLOCKED_UNTIL_MATTER_ACTION_AND_SOURCE_SUBCLASS_ARE_SELECTED",
+      "selection_power": "CAN_REJECT_INCOMPATIBLE_SOURCE_COUPLINGS_BUT_CURRENTLY_CANNOT_DISCRIMINATE_ACTION_FAMILIES",
+      "conflicts_or_limits": ["The current matter field content and Lagrangian are unselected.", "The retained Dirac stress-energy object is a policy candidate and was not derived by metric or tetrad variation.", "QFT-GR source closure is not established."],
+      "supporting_or_blocking_calculations": ["No accepted matter-action variation or total stress-energy conservation proof is available in the bound evidence."]
+    },
+    {
+      "requirement_id": "R8_NEWTON_POISSON",
+      "controlled_meaning": "A future viable candidate must recover the bounded Newton-Poisson surface in the stationary weak-field 00 sector.",
+      "statement_class": "RETAINED_RECOVERY_OBLIGATION",
+      "origin_class": "KNOWN_PHYSICS_RECOVERY_BASELINE",
+      "obligation_status": "MANDATORY_FOR_FUTURE_RECOVERY_NOT_A_NATIVE_POSTULATE",
+      "mathematical_content": "The appropriate weak-field stationary limit must reduce to the project-bound Poisson target.",
+      "physical_motivation": "Recover the established low-energy gravitational limit.",
+      "scale_and_domain": "Stationary weak-field Newtonian regime.",
+      "units_status": "BOUND_TO_EXISTING_WEAK_FIELD_POISSON_CONVENTIONS_PENDING_CANDIDATE_CONVERSION",
+      "symmetry_status": "STATIONARY_WEAK_FIELD_SPECIALIZATION",
+      "dependencies": ["WeakFieldPoissonLimit.lean", "MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0"],
+      "testability_status": "TESTABLE_AFTER_A_CANDIDATE_FIELD_EQUATION_AND_CONVENTION_MAP_EXIST",
+      "selection_power": "CAN_ELIMINATE_FAILED_LOW_ENERGY_LIMITS_BUT_IS_SHARED_BY_MANY_ACTIONS",
+      "conflicts_or_limits": ["The existing bounded Poisson result is a recovery target, not a uniqueness theorem or a derivation of a native action."],
+      "supporting_or_blocking_calculations": ["A bounded weak-field Poisson surface exists in Lean; no candidate-action-to-Poisson derivation is performed in this stage."]
+    },
+    {
+      "requirement_id": "R9_MOMENTUM_CURRENT",
+      "controlled_meaning": "A future viable candidate must represent conserved T_0i momentum-current sourcing and recover the corresponding stationary weak-field 0i response.",
+      "statement_class": "RETAINED_RECOVERY_OBLIGATION",
+      "origin_class": "KNOWN_PHYSICS_GRAVITOMAGNETIC_RECOVERY_BASELINE",
+      "obligation_status": "MANDATORY_FOR_FUTURE_GRAVITOMAGNETIC_RECOVERY_CURRENTLY_BLOCKED_UPSTREAM",
+      "mathematical_content": "The candidate's 0i sector must couple to momentum current and support the intended rotating-source weak-field limit.",
+      "physical_motivation": "Recover frame-dragging or gravitomagnetic response to rotating matter.",
+      "scale_and_domain": "Stationary weak-field rotating-source regime.",
+      "units_status": "REQUIRES_CANDIDATE_FIELD_EQUATIONS_SOURCE_NORMALIZATION_AND_CONVENTION_MAP",
+      "symmetry_status": "STATIONARY_ROTATING_WEAK_FIELD_SPECIALIZATION",
+      "dependencies": ["GR_WEAK_ROTATING_SOURCE_GRAVITOMAGNETIC_RECOVERY_PACKET_REVIEW_20260717_v0", "MINIMAL_NATIVE_CONTINUUM_GRAVITATIONAL_SECTOR_CONTRACT_PACKET_20260717_v0"],
+      "testability_status": "BLOCKED_BY_MISSING_CONTINUUM_TENSOR_FIELD_EQUATION",
+      "selection_power": "POTENTIAL_FUTURE_RECOVERY_FILTER_NOT_YET_EXECUTABLE",
+      "conflicts_or_limits": ["Independent review found FIELD_EQUATION_SURFACE_FAILURE before the rotating-source recovery could begin.", "No standard-GR refutation or candidate comparison follows from that block."],
+      "supporting_or_blocking_calculations": ["The rotating-source recovery was not executed because the project surface did not supply the required continuum tensor equation."]
+    },
+    {
+      "requirement_id": "R10_STABILITY_NO_FIT",
+      "controlled_meaning": "After a candidate exists, it must exhibit acceptable weak-field stability and recover required coefficients without fitting them to force agreement.",
+      "statement_class": "ACCEPTED_PROJECT_REQUIREMENT",
+      "origin_class": "PROJECT_SELECTED_EVALUATION_OBLIGATION_BUILT_FROM_STANDARD_SCIENTIFIC_CRITERIA",
+      "obligation_status": "MANDATORY_AFTER_A_CANDIDATE_EXISTS_THRESHOLDS_NOT_YET_FROZEN",
+      "mathematical_content": "Candidate perturbations and recovery coefficients must satisfy a later frozen stability and no-fit comparison contract.",
+      "physical_motivation": "Reject dynamically pathological theories and prevent retrospective parameter tuning from masquerading as recovery.",
+      "scale_and_domain": "Candidate-dependent weak-field and recovery regimes.",
+      "units_status": "CANDIDATE_AND_OBSERVABLE_DEPENDENT",
+      "symmetry_status": "NO_NEW_SYMMETRY_SELECTED",
+      "dependencies": ["NATIVE_GRAVITATIONAL_PRINCIPLE_RESPONSE_SELECTION_20260718_v0"],
+      "testability_status": "BLOCKED_UNTIL_A_CANDIDATE_AND_NUMERICAL_ACCEPTANCE_THRESHOLDS_EXIST",
+      "selection_power": "POTENTIALLY_DISCRIMINATING_AFTER_CANDIDATE_CONSTRUCTION_NOT_A_PRESELECTION_PREMISE",
+      "conflicts_or_limits": ["The source authorizes preparation of a bounded evaluation lane but supplies no candidate-specific stability norm or acceptance threshold.", "No-fit is a governance/evaluation rule, not a derived native gravitational principle."],
+      "supporting_or_blocking_calculations": []
+    }
+  ],
+  "statement_class_counts": {
+    "ACCEPTED_PROJECT_REQUIREMENT": 5,
+    "FROZEN_EVALUATION_ENVELOPE_ASSUMPTION": 3,
+    "RETAINED_RECOVERY_OBLIGATION": 2,
+    "SUPPLIED_STANDARD_PHYSICS_ASSUMPTION": 0,
+    "NEW_PROPOSED_POSTULATE": 0,
+    "UNRESOLVED_AUTHORITY_STATUS": 0
+  },
+  "testability_summary": {
+    "immediately_testable_as_scope_or_formal_checks": 6,
+    "conditionally_testable_after_missing_downstream_inputs": 4,
+    "requirements_that_by_themselves_select_a_unique_action": 0,
+    "requirements_with_distinctively_native_architectural_content": 1
+  },
+  "conflict_supersession_and_missing_definition_ledger": [
+    {
+      "finding_id": "REQ-CONFLICT-001",
+      "requirements": ["R1_DIMENSION", "R2_METRIC_ONLY", "R3_LOCALITY"],
+      "status": "SCOPE_ASSUMPTIONS_NOT_NATIVE_DERIVATIONS",
+      "effect": "They may bound this survey but may not be reported as principles derived by the ToE."
+    },
+    {
+      "finding_id": "REQ-CONFLICT-002",
+      "requirements": ["R4_DIFF_COVARIANCE", "R6_LOCAL_VARIATION", "R8_NEWTON_POISSON", "R9_MOMENTUM_CURRENT", "R10_STABILITY_NO_FIT"],
+      "status": "STANDARD_OR_METHODOLOGICAL_BASELINES_NOT_DISTINCTIVE_NATIVE_CONTENT",
+      "effect": "Passing them is necessary or useful but cannot by itself identify a uniquely native ToE action."
+    },
+    {
+      "finding_id": "REQ-CONFLICT-003",
+      "requirements": ["R5_CK_FIREWALL"],
+      "status": "NATIVE_ARCHITECTURAL_POLICY_WITHOUT_POSITIVE_ACTION_SELECTION_POWER",
+      "effect": "It prohibits C_k dynamical embedding but does not determine what gravitational invariant remains."
+    },
+    {
+      "finding_id": "REQ-CONFLICT-004",
+      "requirements": ["R7_SOURCE_COMPATIBILITY"],
+      "status": "TESTABILITY_BLOCKED_BY_MISSING_MATTER_ACTION",
+      "effect": "No family may be credited with full source/seam compatibility until a matter action and convention are selected and varied."
+    },
+    {
+      "finding_id": "REQ-CONFLICT-005",
+      "requirements": ["R9_MOMENTUM_CURRENT"],
+      "status": "RECOVERY_DERIVATION_BLOCKED_UPSTREAM",
+      "effect": "The rotating-source requirement is retained, but the present evidence contains no executable continuum field-equation recovery."
+    },
+    {
+      "finding_id": "REQ-CONFLICT-006",
+      "requirements": ["R10_STABILITY_NO_FIT"],
+      "status": "CANDIDATE_SPECIFIC_NORM_AND_THRESHOLDS_UNDEFINED",
+      "effect": "The obligation cannot become a pass/fail family judgment until a candidate and frozen quantitative criteria exist."
+    },
+    {
+      "finding_id": "REQ-CONFLICT-007",
+      "requirements": ["R1_DIMENSION", "R2_METRIC_ONLY", "R3_LOCALITY", "R4_DIFF_COVARIANCE", "R5_CK_FIREWALL", "R6_LOCAL_VARIATION", "R7_SOURCE_COMPATIBILITY", "R8_NEWTON_POISSON", "R9_MOMENTUM_CURRENT", "R10_STABILITY_NO_FIT"],
+      "status": "PRIOR_AUTOMATED_SELECTION_CERTIFICATION_SUPERSEDED_BY_STRICTER_NONSELF_ATTESTATION_REVIEW",
+      "effect": "The prior action-selection matrix remains 0/70 and cannot be used as proof that any family passed a requirement."
+    }
+  ],
+  "selection_boundary": {
+    "action_families_compared": false,
+    "candidate_compatibility_judgments_made": false,
+    "native_gravitational_principle_selected": false,
+    "gravitational_action_selected": false,
+    "canonical_evidence_promoted": false,
+    "gravitational_calculation_executed": false,
+    "stage_2_authorized": false,
+    "stage_2_opened": false
+  },
+  "selected_next_target": "inventory_toe_candidate_gravitational_action_families_v0",
+  "selected_next_target_status": "SELECTED_BUT_NOT_AUTHORIZED",
+  "nonclaim_boundary": [
+    "This result inventories and classifies ten preserved requirement rows; it does not prove that any row is a true law of nature.",
+    "No action family is compared, ranked, selected, adopted, or promoted.",
+    "The three frozen-envelope assumptions bound v0 and do not refute theories outside that envelope.",
+    "Known-physics recovery and mathematical-consistency requirements are not uniquely native ToE principles.",
+    "The C_k firewall is a native architectural policy, not a positive gravitational dynamics law.",
+    "No gravitational equation is varied and no physical calculation is executed.",
+    "Stage 2 remains selected but requires a separate authority decision and immutable OPEN event."
+  ]
+}

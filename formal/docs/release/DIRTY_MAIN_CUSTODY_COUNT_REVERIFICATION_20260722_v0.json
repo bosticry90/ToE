@@ -1,0 +1,32 @@
+{
+  "audited_commit": "75af1d110a57df26344ca151ccd26b9f5c1f7736",
+  "branch": "main",
+  "captured_at_utc": "2026-07-22T01:52:45Z",
+  "commands": [
+    "git status --porcelain=v1",
+    "git status --porcelain=v1 | Measure-Object",
+    "git ls-files --others --exclude-standard | Measure-Object",
+    "git status --porcelain=v1 --untracked-files=no"
+  ],
+  "counts": {
+    "default_porcelain_rows_with_collapsed_untracked_directories": 571,
+    "total_dirty_paths": 629,
+    "tracked_dirty_paths": 7,
+    "untracked_files": 622
+  },
+  "custody_manifest": {
+    "path": ".toe-recovery/custody-v0/DIRTY_WORKTREE_CUSTODY_MANIFEST_v0.json",
+    "sha256": "4b4e5ebe0874287e7ea753bb64c2174b845bec4f5225a54d4ab962e83d5a2224"
+  },
+  "path_set_comparison": {
+    "live_total_equals_manifest_total": true,
+    "tracked_path_additions": 0,
+    "tracked_path_removals": 0,
+    "tracked_status_mismatches": 0,
+    "untracked_path_additions": 0,
+    "untracked_path_removals": 0
+  },
+  "resolution": "The earlier statement of 629 untracked files was a transcription error. The verified state is seven tracked dirty paths plus 622 untracked files, totaling 629 dirty paths.",
+  "schema_id": "DIRTY_MAIN_CUSTODY_COUNT_REVERIFICATION_20260722_v0",
+  "status": "CUSTODY_PATH_SET_EXACTLY_PRESERVED"
+}

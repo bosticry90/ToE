@@ -1,0 +1,29 @@
+{
+  "artifact_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_PROGRAM_GOVERNANCE_INSTALLATION_VALIDATION_v0",
+  "broad_legacy_authority_consistency_test": "KNOWN_PARSER_COVERAGE_DEBT_NOT_CLAIMED_AS_PASS",
+  "bounded_program_git_history_validation": "PASS",
+  "captured_at_utc": "2026-07-31T13:00:00Z",
+  "deterministic_aggregate_generation": {
+    "committed_installation_checkpoint": "PASS",
+    "module_count_after_review": 1333
+  },
+  "exhaustive_python_passage_established": false,
+  "focused_python": {
+    "passed": 51,
+    "status": "PASS"
+  },
+  "full_lean_aggregate": {
+    "jobs": 9078,
+    "modules": 1333,
+    "status": "PASS"
+  },
+  "git_diff_check": "PASS",
+  "installation_commit": "e30e5364804772004e9225f2c4233830273db74e",
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "program_state": "UNOPENED",
+  "reddit_status": "UNTRACKED_UNTOUCHED",
+  "schema_id": "toe.native_gravitational_requirements_and_candidate_action_family_survey.program_governance_installation_validation.v0",
+  "scientific_stage_opened": false,
+  "tracked_checkout_expected_after_review_commit": "CLEAN",
+  "validation_scope": "INSTALLATION_AND_INDEPENDENT_REVIEW_ONLY"
+}

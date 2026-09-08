@@ -1,0 +1,40 @@
+{
+  "accepted": true,
+  "authority_rotation": {
+    "adapted_norm_theorem_execution_authorized": false,
+    "auxiliary_harmonic_reduced_system_derivation_authorized": true,
+    "preserved_descendant_adoption_authorized": false,
+    "source_extension_authorized": false,
+    "yukawa_work_authorized": false
+  },
+  "captured_at_utc": "2026-07-28T00:00:00Z",
+  "checks": {
+    "accepted_phase_a_is_byte_bound": true,
+    "all_definition_gauge_and_geometric_constraints_are_listed": true,
+    "derivative_loss_is_a_candidate_not_a_result": true,
+    "excluded_work_remains_excluded": true,
+    "iteration_and_constraint_obligations_are_explicit": true,
+    "metric_equation_is_generalized_harmonic_wave": true,
+    "next_execution_is_reduced_system_only": true,
+    "packet_target_matches_authority": true,
+    "standard_and_adapted_norms_are_not_conflated": true,
+    "terminal_outcomes_are_non_overlapping": true,
+    "trace_equation_has_generic_scalar_coefficient": true,
+    "trace_free_equation_has_hessian_coupling": true
+  },
+  "failed_checks": [],
+  "review_target": "review_qft_gr_quadratic_auxiliary_harmonic_adapted_norm_well_posedness_packet_v0_result",
+  "reviewed_packet": {
+    "path": "formal/docs/release/QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_20260728_v0.json",
+    "sha256": "055afb1ba4636743fb81f501c62422983df370b2734d12bb222b131ce6b27b30"
+  },
+  "reviewer_independence": {
+    "imports_packet_generator": false,
+    "rechecks_constraint_inventory": true,
+    "rechecks_norm_claim_boundaries": true,
+    "rechecks_trace_and_trace_free_coefficients": true
+  },
+  "schema_id": "QFT_GR_QUADRATIC_AUXILIARY_HARMONIC_ADAPTED_NORM_WELL_POSEDNESS_PACKET_RESULT_REVIEW_20260728_v0",
+  "selected_next_target": "derive_qft_gr_quadratic_auxiliary_harmonic_reduced_system_v0",
+  "verdict": "ACCEPT_AUXILIARY_HARMONIC_PACKET_AUTHORIZE_REDUCED_SYSTEM_ONLY"
+}

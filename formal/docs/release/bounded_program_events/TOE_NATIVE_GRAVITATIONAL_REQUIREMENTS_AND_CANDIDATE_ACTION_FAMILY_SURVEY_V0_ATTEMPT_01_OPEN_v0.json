@@ -1,0 +1,13 @@
+{
+  "attempt_sequence_number": 1,
+  "event_hash": "1923f7662b72f713d6182a94e4f3973ef381e995e7aed9881b2f604fbfea9a23",
+  "event_sequence_number": 1,
+  "event_type": "ATTEMPT_OPEN",
+  "opened_from_commit": "8669a803dcacb025e71d5b8ad33b1b9dcb4f5371",
+  "previous_event_hash": null,
+  "program_id": "TOE_NATIVE_GRAVITATIONAL_REQUIREMENTS_AND_CANDIDATE_ACTION_FAMILY_SURVEY_V0",
+  "registry_snapshot_hash": "290d303c08c674e5ce52928f64c777d9acfc91ce6a2f1634c50c4bb3ed64ce01",
+  "scope_hash": "297276852be0fed5e7dafdb9a90a3dc26a2807665665dbefc69dd8572b31fb19",
+  "semantic_stage_id": "NATIVE_GRAVITATIONAL_REQUIREMENT_INVENTORY",
+  "target": "inventory_toe_native_gravitational_requirements_v0"
+}

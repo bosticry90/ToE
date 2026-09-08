@@ -1,0 +1,30 @@
+{
+  "artifact_id": "QFT_GR_QUADRATIC_STAGE_3_CANONICAL_TARGET_IDENTIFIER_CORRECTION_20260729_v0",
+  "bounded_program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "captured_at_utc": "2026-07-29T00:00:00Z",
+  "classification": "GOVERNANCE_ONLY_CANONICAL_IDENTIFIER_CORRECTION",
+  "correction": {
+    "canonical_stage_target": "derive_qft_gr_quadratic_exact_generic_frozen_companion_operator_v1",
+    "closed_review_selected_target": "derive_qft_gr_quadratic_exact_frozen_companion_operator_v1",
+    "difference": "The closed review omitted the registry stage definition's generic token.",
+    "semantic_stage_id": "EXACT_FROZEN_COMPANION_OPERATOR",
+    "stage_number": 3
+  },
+  "custody": {
+    "closed_review_mutated": false,
+    "event_history_rewritten": false,
+    "open_event_hash": "8d9e78caf322ecc6e17875099b92441d2c3752df9d0a21bc5c40d34270cb4c40",
+    "open_event_path": "formal/docs/release/bounded_program_events/QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0_ATTEMPT_03_OPEN_v0.json",
+    "scope_hash": "4be3cf0d115145eef2057e96c02ed9215908b2cc18f65a469308237e6c92775d"
+  },
+  "nonclaim_boundary": {
+    "additional_scientific_attempt_created": false,
+    "repair_attempt_created": false,
+    "scientific_scope_changed": false,
+    "stage_2_result_changed": false,
+    "stage_3_scientific_output_created": false,
+    "subsidiary_scientific_target_created": false
+  },
+  "outcome": "CANONICAL_STAGE_3_IDENTIFIER_RESTORED_BEFORE_SCIENTIFIC_PRODUCTION",
+  "schema_id": "toe.qft_gr_quadratic_stage_3_canonical_target_identifier_correction.v0"
+}

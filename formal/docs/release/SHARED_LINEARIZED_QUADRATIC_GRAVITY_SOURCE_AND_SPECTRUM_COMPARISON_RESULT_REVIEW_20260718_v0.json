@@ -1,0 +1,278 @@
+{
+  "accepted_bounded_claim": {
+    "arbitrary_background_or_nonlinear_claim": false,
+    "domain": "4D_LOCAL_METRIC_MINKOWSKI_CONSERVED_EXTERNAL_SOURCE",
+    "linearized_equation": "(1+beta Box)G^L+(2 alpha+beta)(eta Box-partial partial)R^L=kappa T",
+    "massive_scalar": "m0^2=-1/[2(3 alpha+beta)]; POSITIVE_ISOLATED_OR_PROJECTOR_RESOLVED_RESIDUE",
+    "massive_spin_2": "m2^2=1/beta; NEGATIVE_ISOLATED_OR_PROJECTOR_RESOLVED_RESIDUE",
+    "massless_spin_2": "PRESENT_POSITIVE_REFERENCE",
+    "stationary_00": "MASSLESS_PLUS_SCALAR_PLUS_ADDITIONAL_SPIN_2",
+    "stationary_0i": "MASSLESS_PLUS_ADDITIONAL_SPIN_2; SCALAR_ZERO"
+  },
+  "authority": {
+    "consumed_execution_verdict": "COMPLETE_BOUNDED_COMPARISON_PENDING_INDEPENDENT_REVIEW",
+    "frozen_execution_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_20260718_v0.md",
+        "sha256": "1785336469c0d0397ea065e5d9f161222ac28b0585ebafa46e5b52edf5fd61f3"
+      },
+      {
+        "relative_path": "formal/docs/release/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_20260718_v0.json",
+        "sha256": "a72fdb6c18ab0d73fae1604e81f22702562bd223b89bd45d5c59e4e885aa7142"
+      },
+      {
+        "relative_path": "formal/python/tools/shared_linearized_quadratic_gravity_source_and_spectrum_comparison_v0.py",
+        "sha256": "13d51478d243f1d51755f255a4575e4fe1e7809463b157fc2e094201817e73db"
+      },
+      {
+        "relative_path": "formal/python/tests/test_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_v0.py",
+        "sha256": "85aa99f2e23aadfafdf4f01c0a88671fc5a16a9e95713639c9a4b07c763cc45d"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/SharedLinearizedQuadraticGravitySourceAndSpectrumComparisonV0.lean",
+        "sha256": "75b7b3d7b44649b6fe2ea03d27c22af6e3df3a9335ac3473e8952f2a486e19b8"
+      }
+    ],
+    "generator": {
+      "relative_path": "formal/python/tools/shared_linearized_quadratic_gravity_source_and_spectrum_comparison_result_review_v0.py",
+      "sha256": "28af172dfe7ffcfa3bbc6a1d74bd4f097f75ec675aa7699148511ff58e2a88da"
+    },
+    "human_review": {
+      "relative_path": "formal/docs/lanes/SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_RESULT_REVIEW_20260718_v0.md",
+      "sha256": "95f113c409ae2f4733c1eae90f26f3d3c0aa0bbdce33b7e2ae62c88f236398da"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_result_review_v0.py",
+      "sha256": "71cbe7dd1137491595d232e25c449fa2528d4efb1ffac60d9d466f20e041bca8"
+    }
+  },
+  "captured_at_utc": "2026-07-18T00:00:00Z",
+  "current_posture": {
+    "comparison_action": "SUPPLIED_COMPARISON_ONLY",
+    "comparison_execution": "COMPLETED_ONCE",
+    "comparison_result": "ACCEPTED_16_OF_16_GATES",
+    "frame_dragging": "NOT_RESUMED",
+    "native_gravitational_action": "NOT_SELECTED",
+    "native_gravitational_principle": "NOT_IDENTIFIED"
+  },
+  "independent_reproduction": {
+    "background": {
+      "Euler_tensor": 0,
+      "curvature": 0,
+      "curvature_derivatives": 0,
+      "linear_tadpole": 0,
+      "passed": true,
+      "source": 0
+    },
+    "coincident_mass": {
+      "P2_P0s_product": 0,
+      "Sigma": "-beta/2",
+      "channel_diagonalizable": true,
+      "condition": "2 alpha+beta=0; beta!=0",
+      "higher_order_pole_present": false,
+      "m0_squared": "1/beta",
+      "m2_squared": "1/beta",
+      "massive_numerator": "-P2+(1/2)P0s",
+      "passed": true,
+      "pole_order": 1
+    },
+    "exact_variation_trace": {
+      "R2_Box_R_coefficient": 6,
+      "R2_algebraic_trace": 0,
+      "Ricci2_Box_R_coefficient": 2,
+      "Ricci2_curvature_square_trace": 0,
+      "combined_trace": "-R+2(3 alpha+beta)Box R=kappa T",
+      "passed": true
+    },
+    "linearized_ricci_squared_identity": {
+      "decomposed": "Box G^L_mu_nu+(eta_mu_nu Box-partial_mu partial_nu)R^L",
+      "direct": "Box R^L_mu_nu-partial_mu partial_nu R^L+(eta_mu_nu/2)Box R^L",
+      "passed": true
+    },
+    "partial_fraction_identities": {
+      "passed": true,
+      "scalar": "-1/[2k^2(1+2 Sigma k^2)]=-1/(2k^2)+1/[2(k^2+1/(2 Sigma))]",
+      "spin_2": "1/[k^2(1-beta k^2)]=1/k^2-1/(k^2-1/beta)"
+    },
+    "physical_eigenvalues": {
+      "passed": true,
+      "scalar": "k^2(1+2 Sigma k^2)",
+      "spin_2": "-(k^2/2)(1-beta k^2)"
+    },
+    "point_source_coefficients": {
+      "massive_spin_2": "-4/3",
+      "massless": "1",
+      "scalar": "1/3"
+    },
+    "point_source_passed": true,
+    "projector_scalar_block": {
+      "determinant": "-(k^4/4)(1+2 Sigma k^2)",
+      "identity_denominator": [
+        "1",
+        "2"
+      ],
+      "passed": true,
+      "product_polynomials": {
+        "00": [
+          "1",
+          "2"
+        ],
+        "01": [
+          "0",
+          "0"
+        ],
+        "10": [
+          "0",
+          "0"
+        ],
+        "11": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    "source_normalization": {
+      "coefficient": "8 pi G/c^4",
+      "passed": true,
+      "sign": "POSITIVE",
+      "stationarity": "A_EH E_mu_nu-(1/(2c))T_mu_nu=0"
+    },
+    "stationary_current": {
+      "P0s_0i_contraction": 0,
+      "P2_0i_contraction_on_conserved_source": 1,
+      "passed": true,
+      "position_space_kernel": "-2 kappa(K0-Km2)T_0i",
+      "theta_0i": 0
+    }
+  },
+  "post_reproduction_oracles": [
+    {
+      "role": "MODE_CONTENT_AND_FLAT_SPIN_2_GHOST_ORACLE",
+      "source": "https://arxiv.org/abs/hep-th/9509142"
+    },
+    {
+      "role": "TWO_SCALE_WEAK_FIELD_AND_GAUSS_BONNET_ORACLE",
+      "source": "https://arxiv.org/abs/1007.1917"
+    },
+    {
+      "role": "ANALYTIC_F_R_RICCI_SCALAR_MODE_ORACLE",
+      "source": "https://arxiv.org/abs/1104.0819"
+    }
+  ],
+  "review_gates": {
+    "failure_count": 0,
+    "gate_count": 16,
+    "pass_count": 16,
+    "rows": [
+      {
+        "finding": "Five execution artifacts match frozen SHA-256 values.",
+        "gate_id": "G1_EXECUTION_CUSTODY_AND_AUTHORITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "Exact zero-source substitution gives zero Euler tensor and tadpole.",
+        "gate_id": "G2_MINKOWSKI_BACKGROUND_AND_TADPOLE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Independent R^2 variation and trace agree.",
+        "gate_id": "G3_R2_VARIATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "Independent Ricci-squared variation and trace agree.",
+        "gate_id": "G4_RICCI_SQUARED_VARIATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "Linearized operator and identically conserved structure agree.",
+        "gate_id": "G5_LINEARIZED_EQUATION_AND_BIANCHI",
+        "status": "PASS"
+      },
+      {
+        "finding": "Source variation gives positive 8 pi G/c^4 and requires conservation.",
+        "gate_id": "G6_SOURCE_SIGN_COEFFICIENT_AND_CONSERVATION",
+        "status": "PASS"
+      },
+      {
+        "finding": "Independent scalar-block multiplication and physical eigenvalues agree.",
+        "gate_id": "G7_COMPLETE_PROJECTOR_INVERSE",
+        "status": "PASS"
+      },
+      {
+        "finding": "Longitudinal terms vanish only after conserved-source saturation.",
+        "gate_id": "G8_SATURATION_AND_PARTIAL_FRACTIONS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Scalar positive and additional spin-2 negative channel residues reproduce.",
+        "gate_id": "G9_ISOLATED_RESIDUES",
+        "status": "PASS"
+      },
+      {
+        "finding": "Fourier inversion reproduces 1, 1/3, and -4/3.",
+        "gate_id": "G10_STATIC_00_KERNEL",
+        "status": "PASS"
+      },
+      {
+        "finding": "theta_0i=0 eliminates the scalar and the shared current kernel agrees.",
+        "gate_id": "G11_STATIC_0I_AND_SCALAR_DECOUPLING",
+        "status": "PASS"
+      },
+      {
+        "finding": "The 1/(4 pi r), covariant T_0i, and overall signs reproduce.",
+        "gate_id": "G12_FOURIER_SOURCE_INDEX_AND_OVERALL_SIGNS",
+        "status": "PASS"
+      },
+      {
+        "finding": "Generic, absent-mode, Einstein, tachyonic, and limiting interpretations are separated.",
+        "gate_id": "G13_PARAMETER_STRATA",
+        "status": "PASS"
+      },
+      {
+        "finding": "Orthogonal projectors resolve the coincident simple pole without a Jordan block.",
+        "gate_id": "G14_COINCIDENT_MASS_DIAGONALIZABILITY",
+        "status": "PASS"
+      },
+      {
+        "finding": "All controls share the operator path; literature remains an oracle.",
+        "gate_id": "G15_SHARED_CONTROLS_AND_POST_DERIVATION_ORACLES",
+        "status": "PASS"
+      },
+      {
+        "finding": "Acceptance preserves comparison-only status and stops before downstream work.",
+        "gate_id": "G16_COMPARISON_ONLY_CLAIM_AND_STOP",
+        "status": "PASS"
+      }
+    ]
+  },
+  "schema_id": "SHARED_LINEARIZED_QUADRATIC_GRAVITY_SOURCE_AND_SPECTRUM_COMPARISON_RESULT_REVIEW_20260718_v0",
+  "scientific_implications_for_response_selection": [
+    "A native principle would need to control or exclude the additional massive spin-2 ghost.",
+    "It would need to determine whether an additional scalar is absent, heavy, screened, or allowed.",
+    "It would need to account for the stationary momentum-current response structure.",
+    "It would need to explain the long-range survival of the massless Einstein sector."
+  ],
+  "scope": {
+    "alpha_or_beta_selected": false,
+    "arbitrary_background_spectrum_claimed": false,
+    "authoritative_V2_population_authorized": false,
+    "comparison_action_selected": false,
+    "comparison_result_accepted": true,
+    "empirical_fitting_authorized": false,
+    "frame_dragging_reopened": false,
+    "independent_result_review_executed": true,
+    "master_action_mutation_authorized": false,
+    "matter_sector_selected": false,
+    "native_gravitational_principle_identified": false,
+    "new_postulate_authorized": false,
+    "nonlinear_stability_claimed": false,
+    "orbital_precession_authorized": false,
+    "scientific_response_selection_authorized": true,
+    "scientific_response_selection_executed": false
+  },
+  "selected_next_target": "select_post_quadratic_gravity_comparison_scientific_response_v0",
+  "selected_next_target_kind": "SCIENTIFIC_RESPONSE_SELECTION_ONLY_NO_THEORY_ADOPTION",
+  "target": "review_shared_linearized_quadratic_gravity_source_and_spectrum_comparison_v0_result",
+  "verdict": "ACCEPTED_BOUNDED_SHARED_LINEARIZED_QUADRATIC_GRAVITY_COMPARISON_RESULT"
+}

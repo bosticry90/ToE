@@ -11,6 +11,10 @@ from pathlib import Path
 from typing import Any, Callable
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 from formal.python.tools import (
     dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2
     as frozen_classifier,
@@ -37,6 +41,7 @@ V2_MATRIX_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT
 V2_IDENTITY_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-CANONICAL-EXPECTED-OUTPUT-IDENTITY-MANIFEST-v2.json"
 V2_CLASSIFIER_RELATIVE_PATH = "formal/python/tools/dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_canonical_result_classifier_v2.py"
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 
 CAPTURED_AT_UTC = "2026-07-14T00:00:00Z"
 PREPARATION_COMMIT = "4b670b3a6c202b5e5457a62e8b9175f4b07edaa5"
@@ -85,7 +90,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(relative_path: str) -> dict[str, Any]:
@@ -111,7 +116,7 @@ def validate_preparation_commit() -> None:
     for path, digest in V2_PRESERVED_HASHES.items():
         if sha256_path(REPO_ROOT / path) != digest:
             raise ValueError(f"v2 preserved input mismatch: {path}")
-    if sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) != PROMPT_SHA256:
+    if not prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE):
         raise ValueError("Prompt.txt changed")
 
 

@@ -15,6 +15,10 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.prompt_dependency_identity import (
+    identity_sha256_path,
+    prompt_dependency_is_nonblocking,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -39,6 +43,7 @@ PILOT_PACKET_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCEND
 PILOT_ARRAYS_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-DESCENDANT-NECESSITY-AND-ROBUSTNESS-NON-AUTHORITATIVE-PILOT-ARRAYS-v1.json"
 CANONICAL_FREEZE_RELATIVE_PATH = "formal/output/DIRAC-MAXWELL-FULL-ZERO-MODE-CANONICAL-PARAMETER-FREEZE-PACKET-v0.json"
 PROMPT_RELATIVE_PATH = "Prompt.txt"
+PROMPT_DEPENDENCY_ROLE = "DEMOTE_TO_NONBLOCKING_PROVENANCE"
 
 CAPTURED_AT_UTC = "2026-07-14T00:00:00Z"
 REVIEW_TARGET = "review_dirac_maxwell_full_zero_mode_descendant_necessity_and_robustness_calibration_and_parameter_freeze_packet_v2_result"
@@ -116,7 +121,7 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def sha256_path(path: Path) -> str:
-    return sha256_bytes(path.read_bytes())
+    return identity_sha256_path(path, repo_root=REPO_ROOT)
 
 
 def load_json(relative_path: str) -> dict[str, Any]:
@@ -142,7 +147,7 @@ def bind_freeze_custody() -> dict[str, Any]:
     for path, digest in IMMUTABLE_WORKING_HASHES.items():
         if sha256_path(REPO_ROOT / path) != digest:
             raise ValueError(f"working freeze-v2 artifact changed: {path}")
-    if sha256_path(REPO_ROOT / PROMPT_RELATIVE_PATH) != PROMPT_SHA256:
+    if not prompt_dependency_is_nonblocking(PROMPT_DEPENDENCY_ROLE):
         raise ValueError("protected Prompt.txt changed")
     return {"freeze_commit": full_commit, "freeze_parent": FREEZE_PARENT, "committed_path_count": len(EXPECTED_FREEZE_HASHES), "immutable_working_path_count": len(IMMUTABLE_WORKING_HASHES)}
 

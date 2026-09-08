@@ -1,0 +1,95 @@
+{
+  "schema_id": "VerifiedCalculatorLinuxEgressDeniedExecutionResultV4",
+  "as_of": "2026-09-05",
+  "attempt": {
+    "disposition": "INCONCLUSIVE",
+    "qualification_earned": false,
+    "isolation_boundary_established": true,
+    "source_custody_gate_passed": true,
+    "failure_stage": "AUTHORITY_ATTACHMENT_CUSTODY_AFTER_EXACT_VERIFICATION_PATH",
+    "failure_code": "C03_RV_AUTHORITY_RECORD_IDENTITY",
+    "failure_detail": "formal/tooling/scientific_compute/model1_installation_preparation/route_c03_terminal_adjudication_pass_0275_v0/terminal_adjudication.json",
+    "classification_reason": "The 25-file source-custody manifest and initial egress-denial gates passed. Control flow advanced through candidate construction, the 207-node trusted evaluation, Julia and Lean routes, and challenge verification before failing while loading a required scientific-authority attachment record that was absent from the clean checkout. Because no complete result/bundle was emitted and a required artifact was missing, the run is INCONCLUSIVE rather than a Linux scientific mismatch or PASS.",
+    "qualification_driver_entered": true,
+    "complete_result_emitted": false,
+    "fallback_connected_execution_used": false
+  },
+  "network_isolation_observation": {
+    "initial_state_file_sha256": "682f4964c3324ad981c321472d836e3bc65196d4e096a4116568a89cc2c259c9",
+    "socket_interfaces": [
+      "lo"
+    ],
+    "proc_net_dev_interfaces": [
+      "lo"
+    ],
+    "usable_ipv4_default_routes": [],
+    "usable_ipv6_default_routes": [],
+    "active_probe_results": [
+      "1.1.1.1:443=ENETUNREACH",
+      "8.8.8.8:53=ENETUNREACH"
+    ]
+  },
+  "github": {
+    "pull_request": 2,
+    "pull_request_url": "https://github.com/bosticry90/ToE/pull/2",
+    "workflow_run_id": 34010749703,
+    "workflow_run_url": "https://github.com/bosticry90/ToE/actions/runs/34010749703",
+    "job_id": 101426019965,
+    "job_url": "https://github.com/bosticry90/ToE/actions/runs/34010749703/job/101426019965",
+    "source_commit": "48438494e59f63beb8e0b659b63b97ffffe84776",
+    "pull_request_merge_commit": "9846b102782639002998b691a0847c17ce8dc982",
+    "started_at_utc": "2026-09-06T04:08:40Z",
+    "completed_at_utc": "2026-09-06T04:24:42Z"
+  },
+  "frozen_reference": {
+    "bundle_hash": "93691fa8f8793bb343ccebd0b1a92c15618b25a7f56e71f67ebaa7cff771471f",
+    "dependency_closure_hash": "5f08deda84148b2ac4249de4b44b914fd27c6274a127762017d614d5282cd204",
+    "modified": false
+  },
+  "provisioning": {
+    "completed": true,
+    "captured_at_utc": "2026-09-06T04:20:12.670649Z",
+    "manifest_hash": "72f2da1821ed7fc6d681570c900bafc2db62408afdc0c1d7c079d93816838574",
+    "manifest_sha256": "4c4c52c7b36dbda27856be2e1699d7aa2943865984a92ae2034f7a5cd5863fc9",
+    "source_custody_artifacts": 25,
+    "source_custody_passed": true
+  },
+  "preserved_artifact": {
+    "github_artifact_id": 9982569831,
+    "github_artifact_name": "verified-calculator-linux-egress-denied-v4-9846b102782639002998b691a0847c17ce8dc982",
+    "github_artifact_size_bytes": 16402,
+    "archive_sha256": "aa5c4cc1e92c32c860f1071df190557a8a0c85602454edc0d84036182c4e1257",
+    "local_explicit_preservation_path": "formal/output/verified_calculator_linux_egress_denied_run_34010749703/artifact.zip",
+    "files": {
+      "attempt.json": "da657eabf409cca2a1618b483e443c0c159a777057949f07fa7539bd9abd28b2",
+      "execution.stderr.log": "8cf040fc165bd71fba8c48dcc9717dd7123d7485eb11b66c2d668d62e82adaaa",
+      "execution_exit_code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "failure.json": "fa30552526d4a10ba4324d3ce0750f36790008d28eb582aa9b8eac98b2dc5628",
+      "initial_network_state.json": "682f4964c3324ad981c321472d836e3bc65196d4e096a4116568a89cc2c259c9",
+      "provisioning.json": "4c4c52c7b36dbda27856be2e1699d7aa2943865984a92ae2034f7a5cd5863fc9",
+      "result.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "workflow_disposition.json": "a8e849427db08e540c26fea29c70488b0f1c9f1a676e7abc05233ac9ed571918"
+    }
+  },
+  "authority_custody_defect": {
+    "required_authority_records": 3,
+    "git_tracked_before_repair": 0,
+    "git_untracked_before_repair": 3,
+    "all_local_bytes_match_preexisting_expected_hashes": true,
+    "expected_hashes": [
+      "6156ec809a79c5384f2d2332c9d48b447b4b91ad747ec52ad6088995bae5d5c2",
+      "682476eb2bd8a05ffd5b5ff813d27c0aad597d04d1653e1362419ada2f9c6d76",
+      "6141848d32b22fc7dc50aeb2a34ffc08982cd68468106aed145032bf753ecafd"
+    ]
+  },
+  "repair_lineage": {
+    "required": true,
+    "next_test_id": "C03_RV_EXACT_LINUX_KERNEL_EGRESS_DENIED_REPRODUCTION_v5",
+    "repair_scope": "Commit the three pre-existing hash-matching authority records byte-for-byte. Expand the clean-commit and in-namespace custody gate from 25 source files to the complete 28-file source-plus-authority runtime corpus.",
+    "reference_packet_repair_required": false
+  },
+  "result_record_hash": "ca4bb8b69e20b7e6a9f4d4eac35db72fe7685fe0bbc561042c7c4eadb92aca28",
+  "scientific_promotion": false,
+  "product_v1_release": false,
+  "production_activation": false
+}

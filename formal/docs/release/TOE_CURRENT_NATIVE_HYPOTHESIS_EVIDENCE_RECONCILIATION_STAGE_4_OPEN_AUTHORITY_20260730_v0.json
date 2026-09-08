@@ -1,0 +1,125 @@
+{
+  "artifact_id": "TOE_CURRENT_NATIVE_HYPOTHESIS_EVIDENCE_RECONCILIATION_STAGE_4_OPEN_AUTHORITY_20260730_v0",
+  "authorized_stage": {
+    "canonical_scope_hash": "fd9d77680cd0ff775aac0cc4f48d061abced26c3515245fe608522c7f36a8b19",
+    "canonical_target": "reconcile_toe_current_native_hypothesis_evidence_v0",
+    "semantic_stage_id": "CURRENT_HYPOTHESIS_RECONCILIATION",
+    "stage_number": 4
+  },
+  "captured_at_utc": "2026-07-31T00:00:00Z",
+  "candidate_chain_contract": [
+    "source_claim",
+    "physical_assumption",
+    "mathematical_object",
+    "action_term_or_evolution_rule",
+    "derivation_or_calculation",
+    "result",
+    "pillar_or_seam",
+    "possible_observable",
+    "authority_and_evidence_status"
+  ],
+  "candidate_promotion_contract": {
+    "canonical_mutation_authorized": false,
+    "dossier_generation_only": true,
+    "independent_review_required_for_each_dossier": true,
+    "promotion_decision_authorized": false,
+    "portable_custody_required_before_future_promotion": true
+  },
+  "deterministic_reconciliation_rules": {
+    "conflict_resolution_by_frequency_permitted": false,
+    "edge_identity": "SOURCE_AND_TARGET_CLAIM_IDS_PLUS_RELATION_TYPE_PLUS_EVIDENCE_RECORD_HASH",
+    "manual_semantic_merge_permitted": false,
+    "repetition_counts_as_independent_support": false,
+    "semantic_duplicate_candidates_remain_distinct": true,
+    "source_authority_and_lineage_status_preserved": true,
+    "truth_adjudication_permitted": false,
+    "unreviewed_overflow_may_not_be_inferred": true
+  },
+  "edge_vocabulary": [
+    "SUPPORTS",
+    "CONTRADICTS",
+    "REFINES",
+    "SUPERSEDES",
+    "DEPENDS_ON",
+    "SEMANTIC_DUPLICATE_CANDIDATE",
+    "USES_INCOMPATIBLE_ASSUMPTIONS",
+    "HAS_MATHEMATICAL_SUPPORT",
+    "HAS_CONCEPTUAL_SUPPORT_ONLY",
+    "REMAINS_OPERATIONALLY_UNDEFINED"
+  ],
+  "mandatory_exit_conditions": {
+    "blocked_or_failed": "CLOSE_ATTEMPT_4_AND_SELECT_close_toe_repository_wide_native_hypothesis_evidence_census_v0_after_bounded_result_v0",
+    "pass": "CLOSE_ATTEMPT_4_AND_SELECT_STAGE_5_TARGET_WITHOUT_OPENING_STAGE_5",
+    "repair_or_subsidiary_target_permitted": false
+  },
+  "nonclaim_boundary": [
+    "Stage 4 reconciles relationships among bounded source-bound claims; it does not decide that any claim is true.",
+    "Support, mathematical backing, conceptual backing, conflict, refinement, and supersession edges are evidence annotations rather than canonical adoption.",
+    "Repetition, document volume, and semantic similarity do not increase independent evidentiary strength.",
+    "A PROMOTION_CANDIDATE dossier is not a promotion decision and cannot mutate current canonical evidence.",
+    "The 2,673 extracted claims derive from a bounded 640-source review with 12,923 custody records outside deep review; repository-wide claim exhaustion remains unestablished.",
+    "No representation, field, master action, pillar closure, seam closure, observable, empirical result, or native frontier may be selected.",
+    "No Stage 5 OPEN is authorized."
+  ],
+  "program_id": "TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0",
+  "prohibited_outputs": [
+    "scientific truth adjudication",
+    "canonical evidence promotion or archive adoption",
+    "repository-wide claim exhaustion",
+    "conflict resolution by popularity or repetition",
+    "automatic semantic merging",
+    "field or representation selection",
+    "master-action construction or selection",
+    "pillar or seam closure",
+    "native frontier selection",
+    "empirical validation",
+    "automatic Stage 5 OPEN",
+    "same-stage repair, retry, prerequisite, or subsidiary scientific target"
+  ],
+  "required_stage_outputs": [
+    "native_hypothesis_graph",
+    "support_conflict_dependency_and_supersession_edges",
+    "mathematical_backing_and_missing_definition_ledger",
+    "candidate_canonical_promotion_dossiers",
+    "independent_review_for_each_proposed_promotion",
+    "unresolved_relationship_and_bounded_overflow_ledger",
+    "independent result review and validation record",
+    "one immutable CLOSE event"
+  ],
+  "schema_id": "toe.current_native_hypothesis_evidence_reconciliation.stage_4_open_authority.v0",
+  "scientific_execution_authorized": "ATOMIC_STAGE_4_OPEN_THEN_BOUNDED_CURRENT_HYPOTHESIS_RECONCILIATION_ONLY",
+  "stage_3_input_binding": {
+    "claim_count": 2673,
+    "close_event_hash": "82dcf21785a749f92f42c23651beec44151e4fb1924cf43eb23040c798961a17",
+    "close_event_path": "formal/docs/release/bounded_program_events/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_EVIDENCE_CENSUS_V0_ATTEMPT_03_CLOSE_v0.json",
+    "close_event_sha256": "2ab2c0f14fcadf627dbba53b15d1557095b3cff82eef4e87853aa0ba87b3f8fd",
+    "exact_content_alias_count": 28,
+    "result_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_v0.json",
+    "result_review_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_RESULT_REVIEW_v0.json",
+    "result_review_sha256": "242d912f58c556257651df934f27e518f873b4ee8198eadaac16555fc7fe09da",
+    "result_sha256": "21c03f3f66115d866fac1fa57c09b51a358f7870c3c0cf4b0b0391b7126390d3",
+    "selected_source_count": 640,
+    "source_count_outside_bounded_selection": 12923,
+    "source_with_claim_count": 408,
+    "terminal_outcome": "BOUNDED_DEEP_REVIEW_COMPLETE_WITH_UNREVIEWED_OVERFLOW",
+    "unique_text_source_count": 611,
+    "validation_path": "formal/docs/release/TOE_REPOSITORY_WIDE_NATIVE_HYPOTHESIS_CLAIM_EXTRACTION_VALIDATION_v0.json",
+    "validation_sha256": "ad92b84fc54ddaa2c28450d889ccff69f284809016318791f057bbd0679106eb"
+  },
+  "status": "SCIENTIFIC_AUTHORITY_GRANTED_FOR_ATOMIC_STAGE_4_OPEN_ONLY",
+  "terminal_outcomes": [
+    "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE",
+    "CURRENT_HYPOTHESIS_RECONCILIATION_COMPLETE_WITH_CONFLICTS",
+    "CURRENT_HYPOTHESIS_RECONCILIATION_BLOCKED"
+  ],
+  "workload_limits": {
+    "input_claim_count": 2673,
+    "maximum_candidate_promotion_dossiers": 128,
+    "maximum_claims_per_reconciliation_cluster": 64,
+    "maximum_graph_edges": 16384,
+    "maximum_graph_nodes": 4096,
+    "maximum_independent_promotion_reviews": 128,
+    "maximum_unresolved_relationships": 2048,
+    "source_count_outside_bounded_review": 12923
+  }
+}

@@ -1,0 +1,657 @@
+{
+  "authority": {
+    "consumed_review_verdict": "ACCEPTED_EXPLORATORY_IMPLEMENTATION_SERIALIZATION_FAILURE",
+    "frozen_review_artifacts": [
+      {
+        "relative_path": "formal/docs/lanes/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_REVIEW_20260719_v0.md",
+        "sha256": "8a25dfee32a67a960efb36217de7b45ca6da3134af58526b127be5eee3be75c8"
+      },
+      {
+        "relative_path": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_EXECUTION_RESULT_REVIEW_20260719_v0.json",
+        "sha256": "ebb8ead3b8ad64e7ddc106e86309764fb9084533132638b6eaf70e046f5e200a"
+      },
+      {
+        "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_execution_result_review_v0.py",
+        "sha256": "586ad278f1819e4a4d0904c61bda6f1be174f1ff526eff24ef9cf8dc8f76f5c1"
+      },
+      {
+        "relative_path": "formal/python/tests/test_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_execution_result_review_v0.py",
+        "sha256": "a6587f52ee964831eadbbd9cae9f118a40332b847bda7471aa5d72d058fb3688"
+      },
+      {
+        "relative_path": "formal/toe_formal/ToeFormal/Derivation/ScalarOnlyYukawaAnalyticSphereKernelExploratorySandboxExecutionResultReviewV0.lean",
+        "sha256": "9115aaf011cd0734c59129457b4375ca3d37f0c2e4a58c0d185830384aea8bb2"
+      }
+    ],
+    "frozen_v0_sandbox_source": {
+      "relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0.py",
+      "sha256": "27a32f540465ed78cb2094629033a4aa30e3142c1f75aa113fc88eb10c7563ae"
+    },
+    "generator": {
+      "relative_path": "formal/python/tools/post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0_execution_result_review_scientific_response_selection_v0.py",
+      "sha256": "00f884e3cfc3fdb8375ee3ea0116a0d5ec481aa390c2b572cb358bf85ddfcd25"
+    },
+    "human_selection": {
+      "relative_path": "formal/docs/lanes/POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V0_EXECUTION_RESULT_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0.md",
+      "sha256": "252337381081ea2d058722533fb8f85f0d9a18eb450413018beec8fbb22c91b0"
+    },
+    "lean": {
+      "relative_path": "formal/toe_formal/ToeFormal/Derivation/PostScalarOnlyYukawaAnalyticSphereKernelExploratorySandboxV0ExecutionResultReviewScientificResponseSelectionV0.lean",
+      "sha256": "1817e62a39277eee84335f070b415c484fb6255e2b9b9f3264ea0515f23b1c4a"
+    },
+    "test": {
+      "relative_path": "formal/python/tests/test_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0_execution_result_review_scientific_response_selection_v0.py",
+      "sha256": "669745fabd0436d7ac3d60d069e6e660a38975e16f1d3c8ff1534afa8b609bd7"
+    }
+  },
+  "captured_at_utc": "2026-07-19T00:00:00Z",
+  "claim_ceiling": "This selector authorizes exactly one final versioned non-production and non-adjudicative sandbox implementation and execution, limited to the frozen serialization, real-aggregate control, atomic-preservation, version, hash, and custody corrections. It does not implement or execute V1 in this selection, reconstruct V0 transient values, qualify or refute the candidate kernel, adjudicate cubature, change production, perform shadow qualification, rerun Stage A, compute torque, DFT, vector, Jacobian, SVD, or identifiability, authorize Stage B, or permit a scientific or empirical claim.",
+  "current_posture": {
+    "analytic_sphere_oracle": "QUALIFIED_AND_ACCEPTED",
+    "historical_cubature": "UNADJUDICATED_RETIRED_FROM_DECISION_BEARING_USE",
+    "next_authority": "execute_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1_once",
+    "production": "UNCHANGED_NOT_AUTHORIZED",
+    "stage_a": "NOT_REOPENED",
+    "stage_b": "NOT_AUTHORIZED",
+    "v0_sandbox_result": "ACCEPTED_SERIALIZATION_FAILURE_NO_SCIENTIFIC_RESULT",
+    "v1_sandbox": "FINAL_ONE_SHOT_IMPLEMENTATION_AND_EXECUTION_AUTHORIZED"
+  },
+  "forbidden_during_v1": [
+    "EDIT_ANALYTIC_FORMULAS_EVALUATORS_CASES_REFERENCES_OR_TOLERANCES",
+    "EDIT_PROBES_MUTATIONS_PREDICATES_ADJUDICATORS_SCANNER_OR_WORKLOAD",
+    "PERMISSIVE_DEFAULT_STRING_OR_UNKNOWN_OBJECT_COERCION",
+    "RECONSTRUCT_OR_PROMOTE_V0_TRANSIENT_VALUES",
+    "IMPORT_MODIFY_OR_DISPATCH_THROUGH_PRODUCTION_KERNEL",
+    "CALL_OR_ADJUDICATE_HISTORICAL_CUBATURE",
+    "SHADOW_QUALIFICATION_ADOPTION_OR_ROLLBACK",
+    "TORQUE_DFT_REAL150_JACOBIAN_SVD_IDENTIFIABILITY_STAGE_A_OR_STAGE_B",
+    "SCIENTIFIC_EMPIRICAL_OR_PRODUCTION_CLAIM"
+  ],
+  "ranking": {
+    "rows": [
+      {
+        "candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "disposition": "SELECTED_FINAL_ONE_SHOT_SERIALIZATION_CORRECTED_SANDBOX_V1",
+        "route": "AUTHORIZE_FINAL_SERIALIZATION_CORRECTED_NON_DECISION_BEARING_SANDBOX_IMPLEMENTATION_V1",
+        "scores": {
+          "accepted_oracle_leverage": 5,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "contract_explicitness": 5,
+          "localized_defect_fit": 5,
+          "production_safety": 5,
+          "reversibility": 5,
+          "scientific_surface_freeze": 5,
+          "serialization_closure": 5,
+          "terminality": 5
+        },
+        "target": "execute_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1_once",
+        "weighted_score": 270
+      },
+      {
+        "candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "disposition": "RUNNER_UP_SAFE_BUT_ABANDONS_PROPORTIONATE_FINAL_ATTEMPT",
+        "route": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "scores": {
+          "accepted_oracle_leverage": 2,
+          "authority_clarity": 5,
+          "boundedness": 5,
+          "computational_economy": 5,
+          "contract_explicitness": 5,
+          "localized_defect_fit": 0,
+          "production_safety": 5,
+          "reversibility": 3,
+          "scientific_surface_freeze": 5,
+          "serialization_closure": 0,
+          "terminality": 5
+        },
+        "target": "retire_or_defer_scalar_only_yukawa_analytic_replacement_lane_v0",
+        "weighted_score": 195
+      }
+    ],
+    "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+    "runner_up_score": 195,
+    "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+    "selected_score": 270,
+    "winning_margin": 75
+  },
+  "real_path_serialization_control": {
+    "all_live_decimal_locations_populated": true,
+    "atomic_commit_pipeline": [
+      "CONSTRUCT_COMPLETE_AGGREGATE",
+      "RECURSIVELY_NORMALIZE",
+      "RECURSIVELY_VALIDATE_SCHEMA",
+      "CANONICALLY_ENCODE_UTF8",
+      "WRITE_TEMPORARY_FILE",
+      "FLUSH_AND_FSYNC",
+      "STRICT_PARSE_SCHEMA_AND_HASH_VERIFY_TEMPORARY_FILE",
+      "ATOMIC_RENAME_TO_CANONICAL_DESTINATION",
+      "STRICT_PARSE_SCHEMA_AND_HASH_VERIFY_CANONICAL_FILE"
+    ],
+    "complete_final_aggregate_shape_included": true,
+    "failure_consumes_execution_and_fails_closed": true,
+    "nested_adjudication_records_included": true,
+    "post_normalization_decimal_count_required": 0,
+    "post_normalization_unknown_object_count_required": 0,
+    "runs_before_decision_bearing_calculations": true,
+    "same_atomic_writer_as_real_result": true,
+    "same_canonical_encoder_as_real_result": true,
+    "same_finalization_path_as_real_result": true,
+    "same_recursive_normalizer_as_real_result": true,
+    "same_recursive_schema_validator_as_real_result": true,
+    "same_strict_parser_and_hash_verifier_as_real_result": true,
+    "schema_complete_synthetic_final_aggregate": true
+  },
+  "review_interpretation": {
+    "analytic_oracle_remains_qualified": true,
+    "contract_ambiguous": false,
+    "historical_cubature_adjudicated": false,
+    "implementation_defect_localized": true,
+    "principal_outcome": "VALIDATION_INFRASTRUCTURE_IMPLEMENTATION_FAILED_CANONICAL_SERIALIZATION",
+    "review_failure_count": 0,
+    "review_pass_count": 40,
+    "review_verdict": "ACCEPTED_EXPLORATORY_IMPLEMENTATION_SERIALIZATION_FAILURE",
+    "sandbox_kernel_qualified_or_refuted": false,
+    "synthetic_control_integration_gap_localized": true,
+    "transient_value_reconstruction_authorized": false,
+    "transient_values_admissible": false
+  },
+  "schema_id": "toe.post_scalar_only_yukawa.analytic_sphere_kernel.exploratory_sandbox_v0_execution_result_review.scientific_response_selection.v0",
+  "scope": {
+    "accepted_failure_review_frozen": true,
+    "additional_infrastructure_prerequisite_authorized": false,
+    "additional_repair_chain_authorized": false,
+    "automatic_v2_authorized": false,
+    "final_v1_sandbox_implementation_authorized": true,
+    "historical_cubature_adjudication_authorized": false,
+    "historical_cubature_call_authorized": false,
+    "jacobian_or_identifiability_authorized": false,
+    "one_v1_sandbox_execution_authorized": true,
+    "production_change_authorized": false,
+    "real_150_vector_authorized": false,
+    "scientific_claim_authorized": false,
+    "scientific_response_selection_executed": true,
+    "shadow_qualification_authorized": false,
+    "stage_a_rerun_authorized": false,
+    "stage_b_authorized": false,
+    "torque_or_dft_authorized": false,
+    "v1_sandbox_executed_now": false,
+    "v1_sandbox_implemented_now": false
+  },
+  "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+  "selected_next_target": "execute_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1_once",
+  "selected_next_target_kind": "ONE_FINAL_VERSIONED_SERIALIZATION_CORRECTED_NON_PRODUCTION_NON_ADJUDICATIVE_SANDBOX_IMPLEMENTATION_AND_EXECUTION",
+  "selected_route": "AUTHORIZE_FINAL_SERIALIZATION_CORRECTED_NON_DECISION_BEARING_SANDBOX_IMPLEMENTATION_V1",
+  "selection_gates": {
+    "failure_count": 0,
+    "gate_count": 35,
+    "pass_count": 35,
+    "rows": [
+      {
+        "gate_id": "EXACT_ACCEPTED_FAILURE_REVIEW_AUTHORITY_AND_HASH_CUSTODY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FORTY_OF_FORTY_ACCEPTED_REVIEW_GATES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "IMPLEMENTATION_FAILURE_ATTRIBUTION_PRESERVED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTRACT_AMBIGUITY_NOT_ESTABLISHED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ANALYTIC_ORACLE_REMAINS_QUALIFIED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SANDBOX_KERNEL_REMAINS_NEITHER_QUALIFIED_NOR_REFUTED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "TRANSIENT_VALUES_REMAIN_NONADMISSIBLE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_TWO_OPTION_POST_FAILURE_SELECTOR",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_THIRD_ROUTE_OR_AUTOMATIC_REPAIR",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FINAL_V1_WINS_ALL_THIRTY_THREE_SENSITIVITY_VARIANTS",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "V0_SOURCE_SHA256_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_SEVEN_PERMITTED_CHANGE_CLASSES",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACT_THIRTEEN_FROZEN_SCIENTIFIC_SURFACES",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "FORMULAS_EVALUATORS_CASES_REFERENCES_AND_TOLERANCES_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PROBES_MUTATIONS_PREDICATES_ADJUDICATORS_AND_SCANNER_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RUNTIME_WORKLOAD_INTERFACE_AND_PRECEDENCE_FROZEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PERMISSIVE_JSON_DEFAULT_STR_FORBIDDEN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "RECURSIVE_DECIMAL_NORMALIZER_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "UNKNOWN_OBJECT_AND_NONFINITE_REJECTION_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NORMALIZED_OBJECT_RECURSIVE_SCHEMA_VALIDATION_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_DECIMAL_OR_NONJSON_OBJECT_MAY_REMAIN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "REAL_NESTED_ADJUDICATION_RECORD_CONTROL_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "COMPLETE_FINAL_AGGREGATE_CONTROL_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CONTROL_USES_EXACT_REAL_FINALIZATION_PATH",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "ATOMIC_TEMP_WRITE_FSYNC_VERIFY_AND_RENAME_REQUIRED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "EXACTLY_ONE_V1_EXECUTION_AUTHORIZED",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_AUTOMATIC_V2_OR_THIRD_SANDBOX",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_ADDITIONAL_SERIALIZATION_REPAIR_CHAIN",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_ADDITIONAL_INFRASTRUCTURE_PREREQUISITE",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "PRESERVATION_FAILURE_FORCES_RETIRE_OR_DEFER_ONLY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "COMPLETE_RESULT_STOPS_FOR_INDEPENDENT_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_PRODUCTION_CUBATURE_SHADOW_STAGE_A_OR_STAGE_B",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "NO_TORQUE_DFT_REAL150_JACOBIAN_SVD_OR_IDENTIFIABILITY",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "SELECTION_ONLY_NO_V1_IMPLEMENTATION_OR_EXECUTION_NOW",
+        "status": "PASS"
+      },
+      {
+        "gate_id": "CURRENT_AUTHORITY_ROTATES_TO_FINAL_ONE_SHOT_V1_SANDBOX",
+        "status": "PASS"
+      }
+    ]
+  },
+  "selection_id": "POST_SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V0_EXECUTION_RESULT_REVIEW_SCIENTIFIC_RESPONSE_SELECTION_20260719_v0",
+  "selection_policy": {
+    "candidate_count": 2,
+    "criteria_weights": {
+      "accepted_oracle_leverage": 5,
+      "authority_clarity": 5,
+      "boundedness": 5,
+      "computational_economy": 4,
+      "contract_explicitness": 5,
+      "localized_defect_fit": 5,
+      "production_safety": 5,
+      "reversibility": 5,
+      "scientific_surface_freeze": 5,
+      "serialization_closure": 5,
+      "terminality": 5
+    },
+    "criterion_count": 11,
+    "criterion_scale": "0_TO_5_PRIORITY_SCORE_NOT_TRUTH_PROBABILITY",
+    "options_exact": [
+      "AUTHORIZE_FINAL_SERIALIZATION_CORRECTED_NON_DECISION_BEARING_SANDBOX_IMPLEMENTATION_V1",
+      "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE"
+    ],
+    "tie_break_rule": "LEXICOGRAPHIC_CANDIDATE_ID"
+  },
+  "sensitivity_analysis": {
+    "minimum_winning_margin": 50,
+    "rows": [
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 195,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_localized_defect_fit"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 185,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_accepted_oracle_leverage"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 170,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_contract_explicitness"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 170,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_scientific_surface_freeze"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 195,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_serialization_closure"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 170,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_boundedness"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 170,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_production_safety"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 170,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_terminality"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 175,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 250,
+        "variant": "omit_computational_economy"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 180,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_reversibility"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 170,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 245,
+        "variant": "omit_authority_clarity"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 195,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "localized_defect_fit_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 195,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "localized_defect_fit_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 193,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "accepted_oracle_leverage_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 197,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "accepted_oracle_leverage_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "contract_explicitness_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 200,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "contract_explicitness_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "scientific_surface_freeze_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 200,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "scientific_surface_freeze_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 195,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "serialization_closure_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 195,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "serialization_closure_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "boundedness_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 200,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "boundedness_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "production_safety_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 200,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "production_safety_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "terminality_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 200,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "terminality_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "computational_economy_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 200,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "computational_economy_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 192,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "reversibility_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 198,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "reversibility_+1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 190,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 265,
+        "variant": "authority_clarity_-1"
+      },
+      {
+        "runner_up_candidate_id": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE",
+        "runner_up_score": 200,
+        "selected_candidate_id": "ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_V1_FINAL_ONCE",
+        "selected_score": 275,
+        "variant": "authority_clarity_+1"
+      }
+    ],
+    "selected_candidate_stable_in_all_variants": true,
+    "variant_count": 33
+  },
+  "target": "select_post_scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0_execution_result_review_scientific_response_v0",
+  "terminal_boundary": {
+    "additional_infrastructure_prerequisite_authorized": false,
+    "additional_repair_chain_authorized": false,
+    "authorized_v1_execution_count": 1,
+    "automatic_v2_authorized": false,
+    "complete_preserved_negative_successor": "INDEPENDENT_FAILURE_REVIEW_THEN_FRESH_SUBSTANTIVE_LANE_SELECTOR",
+    "complete_result_successor": "INDEPENDENT_EXPLORATORY_RESULT_REVIEW_ONLY",
+    "preservation_failure_successor": "RETIRE_OR_DEFER_ANALYTIC_REPLACEMENT_LANE_ONLY",
+    "production_advancement_automatic": false,
+    "third_sandbox_attempt_authorized": false
+  },
+  "v1_change_contract": {
+    "base_v0_source_relative_path": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v0.py",
+    "base_v0_source_sha256": "27a32f540465ed78cb2094629033a4aa30e3142c1f75aa113fc88eb10c7563ae",
+    "frozen_scientific_surfaces": [
+      "ANALYTIC_NEWTONIAN_AND_YUKAWA_FORMULAS",
+      "SMALL_DIRECT_AND_SCALED_EVALUATOR_BRANCHES",
+      "EIGHT_REGRESSION_CASE_INPUTS_AND_EXPECTED_VALUES",
+      "ENERGY_AND_RADIAL_DERIVATIVE_REFERENCES",
+      "ABSOLUTE_AND_RELATIVE_TOLERANCES",
+      "THIRTEEN_BOUNDARY_AND_LIMIT_PROBES",
+      "TWELVE_MUTATIONS_AND_INJECTION_POINTS",
+      "TYPED_PREDICATES_AND_ADJUDICATORS",
+      "DEPENDENCY_SCANNER_CONTRACT",
+      "TEN_THOUSAND_CALL_RUNTIME_WORKLOAD",
+      "SCALAR_ARRAY_COMPONENT_HOOK_AND_FAILURE_INTERFACE_SEMANTICS",
+      "CLASSIFICATION_AND_INCOMPLETE_RUN_PRECEDENCE",
+      "RESOURCE_ENVELOPE_AND_PRODUCTION_FIREWALLS"
+    ],
+    "frozen_surface_audit_required_before_decision_bearing_work": true,
+    "mandatory_result_labels": [
+      "EXPLORATORY_IMPLEMENTATION_RESULT",
+      "NON_PRODUCTION",
+      "NON_ADJUDICATIVE",
+      "NO_SCIENTIFIC_CLAIM"
+    ],
+    "nonfinite_numbers_fail_closed": true,
+    "permissive_json_default_forbidden": true,
+    "permitted_change_classes": [
+      "RECURSIVE_DECIMAL_TO_FROZEN_CANONICAL_STRING_NORMALIZATION",
+      "REAL_NESTED_ADJUDICATION_AND_COMPLETE_AGGREGATE_SERIALIZATION_CONTROL",
+      "STRICT_UNKNOWN_OBJECT_AND_NONFINITE_REJECTION",
+      "RECURSIVE_NORMALIZED_AGGREGATE_SCHEMA_VALIDATION",
+      "CANONICAL_UTF8_ENCODING_AND_STRICT_ROUND_TRIP_VERIFICATION",
+      "ATOMIC_WRITE_FLUSH_FSYNC_PARSE_SCHEMA_HASH_VERIFY_AND_RENAME",
+      "V1_IDENTIFIERS_FILENAMES_HASHES_CUSTODY_AND_NARROW_HELPER_WIRING"
+    ],
+    "resource_envelope_unchanged": {
+      "synthetic_infrastructure_stage_memory_mib": 256,
+      "synthetic_infrastructure_stage_timeout_seconds": 60,
+      "total_memory_mib": 1024,
+      "total_timeout_seconds": 300
+    },
+    "source_diff_outside_permitted_classes_fails_closed": true,
+    "status": "FINAL_V1_IMPLEMENTATION_AND_EXECUTION_AUTHORIZED_NOT_PERFORMED",
+    "unknown_object_types_fail_closed": true,
+    "v0_and_v1_source_hashes_required_in_result": true,
+    "v1_implementation_location": "formal/python/tools/scalar_only_yukawa_analytic_sphere_kernel_exploratory_sandbox_v1.py",
+    "v1_result_location": "formal/docs/release/SCALAR_ONLY_YUKAWA_ANALYTIC_SPHERE_KERNEL_EXPLORATORY_SANDBOX_20260719_v1.json"
+  },
+  "verdict": "SELECTED_FINAL_SERIALIZATION_CORRECTED_NON_DECISION_BEARING_SANDBOX_V1_EXECUTION"
+}

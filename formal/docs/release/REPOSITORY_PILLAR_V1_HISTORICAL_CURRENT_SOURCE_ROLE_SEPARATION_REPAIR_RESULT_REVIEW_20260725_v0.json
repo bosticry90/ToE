@@ -1,0 +1,53 @@
+{
+  "schema_id": "REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_RESULT_REVIEW_20260725_v0",
+  "captured_at_utc": "2026-07-25T03:41:54Z",
+  "status": "PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_ACCEPTED",
+  "accepted": true,
+  "reviewed_result": {
+    "path": "formal/docs/release/REPOSITORY_PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_RESULT_20260725_v0.json",
+    "sha256": "65f1b2ac48a6e162f79cc26daee34289de2254b497beb66473fa776b1ce66ec4",
+    "implementation_commit": "1d26e9569940b09e38ed2fb84baca49549c64a5b",
+    "implementation_tree": "58fd572efca860c3e025cba4dc63b0442116a0d1"
+  },
+  "independent_detached_review": {
+    "checkout": "pillar-v1-role-repair-review-v0",
+    "head": "1d26e9569940b09e38ed2fb84baca49549c64a5b",
+    "tree": "58fd572efca860c3e025cba4dc63b0442116a0d1",
+    "tests": 48,
+    "passed": 48,
+    "failed": 0,
+    "errors": 0,
+    "checkout_after": "CLEAN"
+  },
+  "findings": {
+    "v1_historical_review_source_pin": "PRESERVED",
+    "current_review_source_identity": "VERSIONED_COMMIT_RELATIVE_GIT_BLOB",
+    "current_generator_identity": "VERSIONED_COMMIT_RELATIVE_GIT_BLOB",
+    "historical_to_current_equality_requirement": "REMOVED",
+    "corruption_controls": "PRESERVED_AND_PASSING",
+    "affected_outcomes": "39 / 39 PASS",
+    "masked_secondary_roots": 0,
+    "historical_review_changed": false,
+    "scientific_content_changed": false
+  },
+  "checkout_matrix": {
+    "implementation": "48 / 48 PASS_AND_CLEAN",
+    "fresh_lf": "44 / 44 PASS_AND_CLEAN",
+    "actual_crlf_working_bytes": "44 / 44 PASS_THEN_RESTORED_CLEAN",
+    "detached_review": "48 / 48 PASS_AND_CLEAN"
+  },
+  "scope": {
+    "baseline_reassessment_performed": false,
+    "staging_identity_adjudication_performed": false,
+    "maintenance_authority_changed": false,
+    "registry_rotated": false,
+    "v2_enrolled": false,
+    "lean_activity": false,
+    "automatic_successor": false
+  },
+  "terminal_result": "PILLAR_V1_HISTORICAL_CURRENT_SOURCE_ROLE_SEPARATION_REPAIR_ACCEPTED",
+  "successor_authority": "NONE",
+  "scientific_posture": "B-BLOCKED",
+  "v2_enrollment": "NOT_AUTHORIZED",
+  "scientific_resumption": "NOT_AUTHORIZED"
+}

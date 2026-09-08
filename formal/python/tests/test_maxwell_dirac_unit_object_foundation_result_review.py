@@ -31,4 +31,4 @@ def test_foundation_review_authorizes_only_analytic_reduction() -> None:
     assert rotation["analytic_reduction_preparation_authorized"] is True
     assert rotation["numerical_guardrail_authorized"] is False
     assert rotation["Maxwell_Dirac_result_claimed"] is False
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"

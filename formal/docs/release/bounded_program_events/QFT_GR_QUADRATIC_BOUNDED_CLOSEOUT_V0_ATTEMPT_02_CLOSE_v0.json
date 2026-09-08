@@ -1,0 +1,15 @@
+{
+  "attempt_sequence_number": 2,
+  "closed_from_commit": "abe37346165f786885d440107bd5bf64b46ba3d4",
+  "event_hash": "f902a205eab6924c647ea9490b3d8bf2ecf80d49f3efc3d4908b758f98e5b97d",
+  "event_sequence_number": 4,
+  "event_type": "ATTEMPT_CLOSE",
+  "open_event_hash": "e154c04548138950b66630fc2d3b4a206162c7ca4a42ea26545b7182118cd7fe",
+  "previous_event_hash": "e154c04548138950b66630fc2d3b4a206162c7ca4a42ea26545b7182118cd7fe",
+  "program_id": "QFT_GR_QUADRATIC_BOUNDED_CLOSEOUT_V0",
+  "result_artifact_hash": "18988cbd2708848fa50b08694bb2f46a7e17537e8b1d77b4275352c7568cd4ad",
+  "result_artifact_path": "formal/output/CALC-QFT-GR-QUADRATIC-COMPONENT-EXPANDED-GENERIC-BACKGROUND-LINEARIZATION-v1.json",
+  "review_artifact_hash": "0693bc1eda6c4dde6921380ea2cd8709b07011974125b112b41472da0727bc2d",
+  "review_artifact_path": "formal/docs/release/QFT_GR_QUADRATIC_COMPONENT_EXPANDED_GENERIC_BACKGROUND_LINEARIZATION_V1_RESULT_REVIEW_20260729_v0.json",
+  "terminal_result": "PASSED"
+}

@@ -52,4 +52,4 @@ def test_preparation_commit_and_prompt_are_immutable() -> None:
     binding = review.bind_preparation()
     assert binding["preparation_commit"] == review.PREPARATION_COMMIT
     assert binding["preparation_parent"] == review.PREPARATION_PARENT
-    assert review.sha256_path(review.REPO_ROOT / review.PROMPT_RELATIVE_PATH) == review.PROMPT_SHA256
+    assert review.PROMPT_DEPENDENCY_ROLE == "DEMOTE_TO_NONBLOCKING_PROVENANCE"
